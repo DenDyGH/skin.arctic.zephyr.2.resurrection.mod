@@ -5,11 +5,11 @@
 
 *You can install it via repository to provide automatic updates*
 - Download repository: [repository.heppen](https://github.com/nfm886/repository.heppen/raw/main/repository.heppen.zip)
-- Install it via Kodi file-manager
+- Or install it via Kodi file-manager
 	- add source: https://nfm886.github.io/repository.heppen
 
 *or install it manually (updates should be installed manually)*
-- [skin.arctic.zephyr.2.heppen.mod](https://github.com/nfm886/skin.arctic.zephyr.2.heppen.mod/archive/refs/heads/master.zip)
+- [skin.arctic.zephyr.2.heppen.mod](https://github.com/nfm886/skin.arctic.zephyr.2.heppen.mod/archive/refs/heads/main.zip)
 
 # License
 
