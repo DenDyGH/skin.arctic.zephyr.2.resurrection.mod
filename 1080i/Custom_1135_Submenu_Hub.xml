@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="1135">
+    <defaultcontrol always="true">302</defaultcontrol>
+    <onload>SetProperty(Header_Center_Text,$LOCALIZE[1034])</onload>
+    <onload>SetProperty(Header_Left_Text,$INFO[Window(Home).Property(leftHeader)])</onload>
+    <controls>
+
+        <control type="list" id="301">
+            <itemlayout />
+            <focusedlayout />
+            <content>
+                <item>
+                    <property name="submenuVisibility">$INFO[Window(Home).Property(submenuVisibility)]</property>
+                    <property name="widgetPath">$INFO[Window(Home).Property(widgetPath)]</property>
+                    <property name="widgetTarget">$INFO[Window(Home).Property(widgetTarget)]</property>
+                    <property name="widgetName">$INFO[Window(Home).Property(widgetName)]</property>
+                    <property name="widgetName.backgroundWidget">$INFO[Window(Home).Property(widgetName.backgroundWidget)]</property>
+                    <property name="widgetAspect">$INFO[Window(Home).Property(widgetAspect)]</property>
+                </item>
+            </content>
+        </control>
+        
+        <include>Global_Background</include>
+        <include>Topbar</include>
+
+        <control type="group">
+            <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
+            <include>Animation_FadeInOut</include>
+            <include>View_Group</include>
+            <include content="Home_Hub_Widget">
+                <onup condition="!Skin.HasSetting(SubmenuOnly) | [Skin.HasSetting(HomeMulti) + Skin.HasSetting(HomeMultiHorizontal)]">Back</onup>
+                <ondown>5610</ondown>
+            </include>
+        </control>
+
+        <include>Object_PlotOverlay</include>
+    </controls>
+</window>

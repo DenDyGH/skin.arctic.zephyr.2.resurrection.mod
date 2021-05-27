@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Home_Menu_Template">
+        <param name="id" default="301" />
+        <param name="font" default="font_topbar" />
+        <definition>
+            <control type="grouplist">
+                <left>-15</left>
+                <itemgap>menu_itemgap</itemgap>
+                <height>70</height>
+                <orientation>horizontal</orientation>
+                <visible>Window.IsVisible(Home) + !$EXP[Exp_InfoVisible]</visible>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="image">
+                    <visible>Container($PARAM[id]).HasPrevious</visible>
+                    <centertop>55%</centertop>
+                    <width>24</width>
+                    <height>24</height>
+                    <texture flipx="false" colordiffuse="main_fg_30">buttons/spin-left.png</texture>
+                </control>
+                <include content="Home_Menu_Item">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="visible" value="Integer.IsGreater(Container($PARAM[id]).NumItems,0)" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="pos" value="0" />
+                </include>
+                <include content="Home_Menu_Item">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="visible" value="Integer.IsGreater(Container($PARAM[id]).NumItems,1)" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="pos" value="1" />
+                </include>
+                <include content="Home_Menu_Item">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="visible" value="Integer.IsGreater(Container($PARAM[id]).NumItems,2)" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="pos" value="2" />
+                </include>
+                <include content="Home_Menu_Item">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="visible" value="Integer.IsGreater(Container($PARAM[id]).NumItems,3)" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="pos" value="3" />
+                </include>
+                <include content="Home_Menu_Item">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="visible" value="Integer.IsGreater(Container($PARAM[id]).NumItems,4)" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="pos" value="4" />
+                </include>
+                <include content="Home_Menu_Item">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="visible" value="Integer.IsGreater(Container($PARAM[id]).NumItems,5)" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="pos" value="5" />
+                </include>
+                <include content="Home_Menu_Item">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="visible" value="Integer.IsGreater(Container($PARAM[id]).NumItems,6)" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="pos" value="6" />
+                </include>
+                <include content="Home_Menu_Item">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="visible" value="Integer.IsGreater(Container($PARAM[id]).NumItems,7)" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="pos" value="7" />
+                </include>
+                <control type="image">
+                    <visible>Container($PARAM[id]).HasNext</visible>
+                    <centertop>55%</centertop>
+                    <width>24</width>
+                    <height>24</height>
+                    <texture flipx="true" colordiffuse="main_fg_30">buttons/spin-left.png</texture>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Home_Menu">
+        <control type="group">
+            <top>55</top>
+            <left>view_pad</left>
+            <include>Animation_Home_MenuFlip</include>
+            <visible>!Control.HasFocus(302) | !Skin.HasSetting(HomeMultiHorizontal) | !Skin.HasSetting(HomeMulti)</visible>
+            <control type="group">
+                <left>15</left>
+                <animation effect="slide" start="0" end="-120" condition="!Container(301).OnScrollNext" reversible="false" time="200" tween="quadratic">Conditional</animation>
+                <animation effect="slide" start="0" end="120" condition="!Container(301).OnScrollPrevious" reversible="false" time="200" tween="quadratic">Conditional</animation>
+                <include>Home_Menu_Template</include>
+            </control>
+        </control>
+    </include>
+
+    <include name="Home_Submenu">
+        <control type="group">
+            <top>55</top>
+            <left>view_pad</left>
+            <include>Animation_Home_MenuFlip</include>
+            <visible>Control.HasFocus(302)</visible>
+            <control type="group">
+                <left>15</left>
+                <animation effect="slide" start="0" end="-120" condition="!Container(302).OnScrollNext" reversible="false" time="200" tween="quadratic">Conditional</animation>
+                <animation effect="slide" start="0" end="120" condition="!Container(302).OnScrollPrevious" reversible="false" time="200" tween="quadratic">Conditional</animation>
+                <include content="Home_Menu_Template">
+                    <param name="id" value="302" />
+                    <param name="font" value="font_submenu" />
+                </include>
+            </control>
+        </control>
+    </include>
+
+    <include name="Home_Menu_Item">
+        <control type="button">
+            <width>auto</width>
+            <align>left</align>
+            <height>70</height>
+            <font>$PARAM[font]_small</font>
+            <focusedcolor>main_fg_30</focusedcolor>
+            <selectedcolor>main_fg_30</selectedcolor>
+            <textcolor>main_fg_30</textcolor>
+            <onfocus>SetFocus($PARAM[id],$PARAM[pos])</onfocus>
+            <onclick>$INFO[Container($PARAM[id]).ListItemPosition($PARAM[pos]).Property(path)]</onclick>
+            <texturefocus />
+            <texturenofocus />
+            <textoffsetx>0</textoffsetx>
+            <label>$INFO[Container($PARAM[id]).ListItemPosition($PARAM[pos]).Label]</label>
+            <visible>!String.IsEqual(Container($PARAM[id]).ListItemPosition($PARAM[pos]).Label,Container($PARAM[id]).ListItem.Label)</visible>
+            <visible>$PARAM[visible]</visible>
+        </control>
+        <control type="button">
+            <width>auto</width>
+            <align>left</align>
+            <height>70</height>
+            <font>$PARAM[font]</font>
+            <focusedcolor>main_fg_100</focusedcolor>
+            <selectedcolor>main_fg_100</selectedcolor>
+            <textcolor>main_fg_100</textcolor>
+            <onfocus>SetFocus($PARAM[id],$PARAM[pos])</onfocus>
+            <onclick>$INFO[Container($PARAM[id]).ListItemPosition($PARAM[pos]).Property(path)]</onclick>
+            <texturenofocus />
+            <texturefocus />
+            <textoffsetx>0</textoffsetx>
+            <animation effect="fade" start="100" end="30" condition="!Control.HasFocus($PARAM[id]) + Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeMulti) + !Control.HasFocus(98$PARAM[id]$PARAM[pos])">Conditional</animation>
+            <label>$INFO[Container($PARAM[id]).ListItemPosition($PARAM[pos]).Label]</label>
+            <visible>String.IsEqual(Container($PARAM[id]).ListItemPosition($PARAM[pos]).Label,Container($PARAM[id]).ListItem.Label)</visible>
+            <visible>$PARAM[visible]</visible>
+        </control>
+    </include>
+
+    <include name="Home_Simple_Movement">
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + !Skin.HasSetting(SubmenuOnly)">SetProperty(submenuVisibility,$INFO[Container(301).ListItem.Property(submenuVisibility)],home)</ondown>
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + !Skin.HasSetting(SubmenuOnly)">SetProperty(leftHeader,$INFO[Container(301).ListItem.Label],home)</ondown>
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + !Skin.HasSetting(SubmenuOnly)">SetProperty(widgetName,$INFO[Container(301).ListItem.Property(widgetName)],home)</ondown>
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + !Skin.HasSetting(SubmenuOnly)">SetProperty(widgetName.backgroundWidget,$INFO[Container(301).ListItem.Property(widgetName.backgroundWidget)],home)</ondown>
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + !Skin.HasSetting(SubmenuOnly)">SetProperty(widgetPath,$INFO[Container(301).ListItem.Property(widgetPath)],home)</ondown>
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + !Skin.HasSetting(SubmenuOnly)">SetProperty(widgetTarget,$INFO[Container(301).ListItem.Property(widgetTarget)],home)</ondown>
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + !Skin.HasSetting(SubmenuOnly)">SetProperty(widgetAspect,$INFO[Container(301).ListItem.Property(widgetAspect)],home)</ondown>
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + !Skin.HasSetting(SubmenuOnly)">ActivateWindow(1135)</ondown>
+        <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + Skin.HasSetting(SubmenuOnly)">302</ondown>
+        <onup condition="!Player.HasVideo | !Skin.HasSetting(global.showvideo)">5600</onup>
+        <onup condition="Player.HasVideo + Skin.HasSetting(global.showvideo)">noop</onup>
+        <onfocus>SetProperty(SkinHelper.WidgetContainer,5600,Home)</onfocus>
+        <onfocus>SetProperty(ListItemHelper.WidgetContainerId,5600,Home)</onfocus>
+        <onfocus>ClearProperty(WidgetFocus)</onfocus>
+
+        <onleft condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + Control.IsVisible(9999)">9999</onleft>
+        <onleft condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + !Control.IsVisible(9999)">301</onleft>
+        <onright condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + Control.IsVisible(9999)">9999</onright>
+        <onright condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + !Control.IsVisible(9999)">301</onright>
+    </include>
+
+    <include name="Home_Simple">        
+        <!-- Global Widget -->
+        <include>skinshortcuts-template-global</include>
+
+        <!-- Background -->
+        <control type="multiimage" id="7975">
+            <left>-2160</left>
+            <width>1</width>
+            <height>1</height>
+            <include>Defs_TimePerImage</include>
+            <randomize>true</randomize>
+            <fadetime>600</fadetime>
+            <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
+            <visible>System.HasAddon(script.colorbox)</visible>
+            <visible>Skin.HasSetting(EnableBlur)</visible>
+        </control>
+        <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
+        <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
+        <control type="multiimage">
+            <include>Defs_TimePerImage</include>
+            <randomize>true</randomize>
+            <width>1920</width>
+            <height>1080</height>
+            <aspectratio>scale</aspectratio>
+            <fadetime>600</fadetime>
+            <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+            <visible>$EXP[Exp_GlobalBackground]</visible>
+            <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+            <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+        </control>
+
+        <control type="image">
+            <right>view_pad</right>
+            <top>view_pad</top>
+            <width>300</width>
+            <aspectratio align="right" aligny="top">keep</aspectratio>
+            <texture background="true">$VAR[Image_Home_Clearlogo]</texture>
+            <visible>$EXP[Exp_GlobalBackground]</visible>
+            <visible>!Control.HasFocus(5610)</visible>
+            <fadetime>200</fadetime>
+            <visible>[String.IsEmpty(Skin.String(HomeBackgroundImage)) + String.IsEmpty(Container(301).ListItem.Property(Background)) + String.IsEmpty(Container(301).ListItem.Property(backgroundPlaylist))] | Control.HasFocus(5600)</visible>
+        </control>
+
+        <control type="group">
+            <top>900</top>
+            <height>1080</height>
+            <animation effect="slide" start="0" end="0,-615" time="350" tween="quadratic" easing="out" condition="Control.HasFocus(5610) | String.IsEqual(Window(Home).Property(WidgetFocus),5610)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,-285" time="350" tween="quadratic" easing="out" condition="Control.HasFocus(5610) | Control.HasFocus(302)">Conditional</animation>
+
+            <animation effect="slide" start="0" end="0,-275" time="250" tween="quadratic" easing="out" condition="Control.HasFocus(5600)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,-625" time="300" tween="quadratic" easing="out" condition="Control.HasFocus(5600) + $EXP[Exp_InfoVisible]">Conditional</animation>
+
+
+            <animation effect="slide" start="0" end="0,-900" time="300" tween="quadratic" condition="!Control.HasFocus(5610) + !Control.HasFocus(5600) + !Control.HasFocus(302) + !Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.Next(VideoFullScreen.xml) + !Window.Next(MusicVisualisation.xml)">WindowClose</animation>
+            <animation effect="slide" start="0" end="0,-615" time="300" tween="quadratic" condition="Control.HasFocus(302) + !String.IsEqual(Window(Home).Property(WidgetFocus),5610) + ![Window.Next(VideoFullScreen.xml) | Window.Next(MusicVisualisation.xml)]">WindowClose</animation>
+            <animation effect="slide" start="0" end="0,-625" time="300" tween="quadratic" condition="Control.HasFocus(5600) + ![Window.Next(VideoFullScreen.xml) | Window.Next(MusicVisualisation.xml)]">WindowClose</animation>
+
+            <animation effect="slide" start="0" end="0,180" time="300" tween="quadratic" condition="![Control.HasFocus(5610) | Control.HasFocus(302) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)] + [Window.Next(VideoFullScreen.xml) | Window.Next(MusicVisualisation.xml)]">WindowClose</animation>
+            <animation effect="slide" start="0" end="0,465" time="300" tween="quadratic" condition="Control.HasFocus(302) + !String.IsEqual(Window(Home).Property(WidgetFocus),5610) + [Window.Next(VideoFullScreen.xml) | Window.Next(MusicVisualisation.xml)]">WindowClose</animation>
+
+            <animation effect="slide" end="0" start="0,-900" time="300" tween="quadratic" condition="![Control.HasFocus(5610) | Control.HasFocus(302) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)] + ![Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)]">WindowOpen</animation>
+            <animation effect="slide" end="0" start="0,-615" time="300" tween="quadratic" condition="Control.HasFocus(302) + !String.IsEqual(Window(Home).Property(WidgetFocus),5610) + ![Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)]">WindowOpen</animation>
+
+            <animation effect="slide" end="0" start="0,180" time="300" tween="quadratic" condition="![Control.HasFocus(5610) | Control.HasFocus(302) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)] + [Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)]">WindowOpen</animation>
+            <animation effect="slide" end="0" start="0,465" time="300" tween="quadratic" condition="Control.HasFocus(302) + !String.IsEqual(Window(Home).Property(WidgetFocus),5610) + [Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)]">WindowOpen</animation>
+            <!-- Back Panel -->
+            <control type="image">
+                <texture colordiffuse="HomePanel">common/bg.jpg</texture>
+            </control>
+            <!-- Topbar For Submenu or Widget -->
+            <control type="group">
+                <visible>[Control.HasFocus(5610) | Control.HasFocus(302)] + !$EXP[Exp_InfoVisible]</visible>
+                <animation effect="fade" time="200" start="100" end="0">Hidden</animation>
+                <animation effect="fade" time="200" start="0" end="100">Visible</animation>
+                <include content="Topbar">
+                    <param name="info_hide" value="false" />
+                </include>
+            </control>
+            <!-- Fake Topbar for Transition Animation -->
+            <control type="group">
+                <animation effect="fade" start="0" end="100" time="200">WindowClose</animation>
+                <animation effect="fade" start="100" end="0" time="200">WindowOpen</animation>
+                <include content="Topbar">
+                    <param name="info_hide" value="false" />
+                </include>
+            </control>
+            <!-- Menubar -->
+            <control type="group">
+                <animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(302) | Control.HasFocus(5600) | Control.HasFocus(5610)" reversible="false">Conditional</animation>
+                <animation effect="fade" start="0" end="100" time="200" condition="![Control.HasFocus(302) | Control.HasFocus(5600) | Control.HasFocus(5610)]" reversible="false">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+                <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+                <include>Defs_InfoDialog_Visible</include>
+                <include condition="Skin.HasSetting(HomeIcons)">Home_Horizontal_Icons</include>
+                <include condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(HomeTextAutoWidth)">Home_Horizontal_Text</include>
+                <include condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth)">Home_Horizontal_Fixed</include>
+                <control type="group">
+                    <top>30</top>
+                    <height>view_bottom</height>
+                    <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
+                    <include>Animation_FadeInOut</include>
+                    <include content="Topbar_Right">
+                        <param name="fgcolor" value="main_fg" />
+                    </include>
+                </control>
+            </control>
+            <!-- Up Widget -->
+            <control type="group">
+                <animation effect="fade" start="100" end="0" time="350" tween="cubic" easing="inout" condition="!Control.HasFocus(5600)">Conditional</animation>
+                <include>Defs_InfoDialog_Visible</include>
+                <control type="grouplist">
+                    <top>75</top>
+                    <bottom>0</bottom>
+                    <left>400</left>
+                    <right>400</right>
+                    <orientation>vertical</orientation>
+                    <itemgap>10</itemgap>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <control type="label">
+                        <align>center</align>
+                        <font>font_byline</font>
+                        <textcolor>main_fg_70</textcolor>
+                        <label fallback="31105">$INFO[Container(301).ListItem.Property(widgetName.backgroundWidget)]</label>
+                        <height>30</height>
+                    </control>
+                    <control type="label">
+                        <top>30</top>
+                        <aligny>top</aligny>
+                        <align>center</align>
+                        <font>font_title</font>
+                        <textcolor>main_fg_100</textcolor>
+                        <label>$INFO[Container(5600).ListItem.Label,[B],[/B]]</label>
+                        <height>85</height>
+                    </control>
+                    <control type="label">
+                        <align>center</align>
+                        <aligny>top</aligny>
+                        <font>font_tiny</font>
+                        <textcolor>main_fg_70</textcolor>
+                        <label>$INFO[Container(5600).ListItem.Genre]</label>
+                        <height>67</height>
+                    </control>
+                    <!-- <include content="Object_Icon_Ratings">
+                        <param name="id" value="5600" />
+                    </include> -->
+                    <!-- Check if we're using SkinHelper or ListHelper -->
+                    <include content="Object_Icon_Ratings" condition="!System.HasAddon(service.listitem.helper)">
+                        <param name="id" value="5600" />
+                    </include>
+                    <include content="Object_Icon_Ratings" condition="System.HasAddon(service.listitem.helper)">
+                        <param name="id" value="5600" />
+                        <param name="metacritic_prop" value="Window(Home).Property(ListItemHelper.rating.metacritic.percent)" />
+                        <param name="imdb_prop" value="Window(home).Property(ListItemHelper.rating.imdb)" />
+                        <param name="rt_prop" value="Window(Home).Property(ListItemHelper.rating.rottentomatoes.percent)" />
+                        <param name="rt_audience_prop" value="Window(Home).Property(ListItemHelper.rating.rottentomatoes.audience)" />
+                        <param name="oscar_prop" value="Window(Home).Property(ListItemHelper.awards)" />
+                    </include>
+                </control>
+            </control>
+            <!-- Down Widget -->
+            <control type="group">
+                <control type="group">
+                    <include content="View_Group">
+                        <param name="animation" value="Animation_Common_Home" />
+                    </include>
+                    <animation effect="fade" condition="![Control.HasFocus(5610) | Control.HasFocus(302)]" time="350" tween="cubic" easing="inout" start="100" end="0">Conditional</animation>
+                
+                    <include content="Home_Hub_Widget">
+                        <param name="widget" value="true" />
+                        <param name="widgetvisibility" value="String.IsEqual(Window(Home).Property(WidgetFocus),5610)" />
+                        <onback>301</onback>
+                        <onup condition="String.IsEmpty(Window(Home).Property(WidgetFocus))">301</onup>
+                        <onup condition="!String.IsEmpty(Window(Home).Property(WidgetFocus))">ClearProperty(WidgetFocus,Home)</onup>
+                        <ondown condition="!String.IsEqual(Window(Home).Property(WidgetFocus),5610) + Integer.IsGreater(Container(5610).NumItems,0)">SetProperty(WidgetFocus,5610,Home)</ondown>
+                        <ondown condition="String.IsEqual(Window(Home).Property(WidgetFocus),5610) + Integer.IsGreater(Container(5610).NumItems,0)">5610</ondown>
+                    </include>
+
+                </control>
+            </control>
+        </control>
+    </include>
+
+    <include name="Home_Hub_Widget">
+        <param name="widget" default="true" />
+        <param name="widgetvisibility" default="true" />
+        <definition>
+            <control type="panel" id="302">
+                <nested />
+                <scrolltime tween="quadratic">400</scrolltime>
+                <include content="View_TopItems">
+                    <param name="id" value="302" />
+                </include>
+                <content><include>skinshortcuts-submenu</include></content>
+            </control>
+
+            <control type="group">
+                <animation effect="fade" start="100" end="0" delay="200" time="200" condition="!$PARAM[widgetvisibility]">Conditional</animation>
+                <control type="group">
+                    <top>337.5</top>
+                    <left>-15</left>
+                    <include content="View_Cast_Toplabel">
+                        <param name="groupid" value="7510" />
+                        <param name="id" value="5610" />
+                        <param name="label" value="$VAR[Label_WidgetName]" />
+                        <visible>$PARAM[widget]</visible>
+                    </include>
+                </control>
+                <include condition="$PARAM[widget]">skinshortcuts-template-spotlight-mainmenu</include>
+                <include condition="$PARAM[widget]">skinshortcuts-template-spotlight-submenu</include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Home_Multi_Vertical">
+        <include>Global_Background</include>
+        <include content="Topbar">
+            <param name="visible" value="ControlGroup(3000).HasFocus()" />
+        </include>
+        <control type="group">
+            <top>view_top</top>
+            <include>Animation_FadeIn_Delay</include>
+            <visible>ControlGroup(3000).HasFocus()</visible>
+            <visible>!$EXP[Exp_ShowPlotOverlay]</visible>
+            <include>Defs_InfoDialog_Visible</include>
+            <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+            <include content="Object_Info_Arrows">
+                <param name="id" value="3000" />
+            </include>
+        </control>
+        <control type="group">
+            <animation effect="slide" start="0" end="-257.14" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100)">Conditional</animation>
+            <animation effect="slide" start="0" end="-380" time="200" condition="Control.HasFocus(6000)">Conditional</animation>
+            <control type="group">
+                <include>Animation_Right</include>
+                <control type="group">
+                    <left>380</left>
+                    <right>-380</right>
+                    <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+                    <include>Weather</include>
+                </control>
+                <control type="group">
+                    <animation effect="slide" start="0" end="257.14" time="0" condition="true">Conditional</animation>
+                    <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)</visible>
+                    <include content="View_Settings">
+                        <param name="hideonwindowopen" value="false" />
+                    </include>
+                </control>
+            </control>
+
+        <control type="group">
+            <left>240</left>
+            <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]</visible>
+            <include>PVRRecordingWidgets</include>
+        </control>
+
+            <control type="group">
+                <include content="View_Group">
+                    <param name="animation" value="Defs_Null" />
+                </include>
+                <control type="grouplist">
+                    <top>-15</top>
+                    <width>2500</width>
+                    <left>-30</left>
+                    <bottom>-15</bottom>
+                    <orientation>horizontal</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>0</itemgap>
+                    <control type="group" id="300">
+                        <width>257.14</width>
+                        <left>15</left>
+                        <top>-7</top>
+                        <bottom>7</bottom>
+                        <control type="group">
+                            <width>257.14</width>
+                            <control type="button" id="3002">
+                                <onup>SetFocus(302,999,absolute)</onup>
+                                <ondown>SetFocus(302,0,absolute)</ondown>
+                                <right>40</right>
+                                <onleft>301</onleft>
+                                <onright>301</onright>
+                                <onback>301</onback>
+                                <font>font_topbar</font>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <textcolor>main_fg_30</textcolor>
+                                <focusedcolor>main_fg_100</focusedcolor>
+                                <textoffsetx>0</textoffsetx>
+                                <texturefocus />
+                                <texturenofocus />
+                                <label>$INFO[Container(301).ListItem.Label]</label>
+                                <onclick>$INFO[Container(301).ListItem.Property(path)]</onclick>
+                                <height>item_list_height</height>
+                                <include>Animation_Left</include>
+                                <visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(3002)</visible>
+                            </control>
+                            <control type="panel" id="302">
+                                <include>Animation_Left</include>
+                                <visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(3002)</visible>
+                                <onup>3002</onup>
+                                <ondown>3002</ondown>
+                                <onleft>301</onleft>
+                                <onright>301</onright>
+                                <onback>301</onback>
+                                <include>Defs_InfoDialog_Visible</include>
+                                <left>0</left>
+                                <animation effect="fade" start="100" end="0" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100) | Control.HasFocus(6000)">Conditional</animation>
+                                <top>item_list_height</top>
+                                <width>257.14</width>
+                                <onright>3000</onright>
+                                <orientation>vertical</orientation>                
+                                <itemlayout width="257.14" height="item_list_height">
+                                    <control type="label">
+                                        <right>40</right>
+                                        <font>font_submenu_small</font>
+                                        <align>right</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>main_fg_30</textcolor>
+                                        <label>$INFO[ListItem.Label]</label>
+                                    </control>
+                                </itemlayout>
+                                <focusedlayout width="257.14" height="item_list_height">
+                                    <control type="label">
+                                        <right>40</right>
+                                        <font>font_submenu</font>
+                                        <align>right</align>
+                                        <aligny>center</aligny>
+                                        <textcolor>main_fg_100</textcolor>
+                                        <label>$INFO[ListItem.Label]</label>
+                                    </control>
+                                </focusedlayout>
+                                <content><include>skinshortcuts-submenu</include></content>
+                            </control>
+                        </control>
+                        <control type="panel" id="301">
+                            <visible allowhiddenfocus="true">![Control.HasFocus(302) | Control.HasFocus(3002)]</visible>
+                            <include>Animation_Left</include>
+                            <include>Defs_InfoDialog_Visible</include>
+                            <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(submenuVisibility,$INFO[Container(301).ListItem.Property(submenuVisibility)],home)</onleft>
+                            <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(leftHeader,$INFO[Container(301).ListItem.Label],home)</onleft>
+                            <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetName,$INFO[Container(301).ListItem.Property(widgetName)],home)</onleft>
+                            <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetName.backgroundWidget,$INFO[Container(301).ListItem.Property(widgetName.backgroundWidget)],home)</onleft>
+                            <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetPath,$INFO[Container(301).ListItem.Property(widgetPath)],home)</onleft>
+                            <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetTarget,$INFO[Container(301).ListItem.Property(widgetTarget)],home)</onleft>
+                            <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetAspect,$INFO[Container(301).ListItem.Property(widgetAspect)],home)</onleft>
+                            <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">ActivateWindow(1135)</onleft>
+                            <onleft condition="Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetFocus(302,0)</onleft>
+                            <animation effect="fade" start="100" end="0" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100) | Control.HasFocus(6000)">Conditional</animation>
+                            <top>0</top>
+                            <onright condition="!String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">3000</onright>
+                            <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Settings)">5000</onright>
+                            <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">6000</onright>
+                            <width>257.14</width>
+                            <orientation>vertical</orientation>                
+                            <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons)">
+                                <control type="label">
+                                    <right>40</right>
+                                    <font>font_topbar_small</font>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>main_fg_30</textcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                </control>
+                            </itemlayout>
+                            <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons)">
+                                <control type="label">
+                                    <right>40</right>
+                                    <font>font_topbar</font>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>main_fg_100</textcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                </control>
+                            </focusedlayout>
+
+                            <itemlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons)">
+                                <control type="image">
+                                    <centertop>53%</centertop>
+                                    <height>64</height>
+                                    <right>0</right>
+                                    <aspectratio>keep</aspectratio>
+                                    <width>item_list_height</width>
+                                    <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
+                                </control>
+                                <control type="label">
+                                    <right>80</right>
+                                    <font>font_topbar_small</font>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>main_fg_30</textcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                </control>
+                            </itemlayout>
+                            <focusedlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons)">
+                                <control type="image">
+                                    <centertop>53%</centertop>
+                                    <height>64</height>
+                                    <right>0</right>
+                                    <aspectratio>keep</aspectratio>
+                                    <width>item_list_height</width>
+                                    <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
+                                </control>
+                                <control type="label">
+                                    <right>80</right>
+                                    <font>font_topbar</font>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>main_fg_100</textcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                </control>
+                            </focusedlayout>
+                            <content><include>skinshortcuts-mainmenu</include></content>
+                        </control>
+                    </control>
+                    
+                    <control type="group" id="99300">
+                        <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
+                        <height>view_height</height>
+                        <width>1800</width>
+                        <include>Animation_Right</include>
+                        <include>Defs_InfoDialog_Visible</include>
+                        <control type="grouplist" id="3000">
+                            <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+                            <top>-5</top>
+                            <onup>301</onup>
+                            <ondown>301</ondown>
+                            <onleft>301</onleft>
+                            <scrolltime tween="quadratic">400</scrolltime>
+                            <height>view_height</height>
+                            <width>1800</width>
+                            <orientation>vertical</orientation>
+                            <itemgap>-52</itemgap>
+                            <usecontrolcoords>true</usecontrolcoords>
+                            <control type="group" id="7999"><height>0</height></control>
+                            <include>skinshortcuts-template-vertical-submenu</include>
+                            <include>skinshortcuts-template-vertical-main</include>
+                        </control>
+                        <control type="group">
+                            <visible>Integer.IsEqual(Container(3000).NumItems,1)</visible>
+                            <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+                            <visible>![String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]]</visible>
+                            <top>432.5</top>
+                            <left>15</left>
+                            <right>15</right>
+                            <bottom>0</bottom>
+                            <control type="group">
+                                <top>15</top>
+                                <visible>ControlGroup(3000).HasFocus()</visible>
+                                <include content="View_52_Showcase_Aura_Info">
+                                    <param name="font" value="font_title" />
+                                    <param name="plotheight" value="160" />
+                                    <param name="titleheight" value="60" />
+                                </include>
+                            </control>
+                            <control type="group">
+                                <width>1500</width>
+                                <visible>!ControlGroup(3000).HasFocus()</visible>
+                                <visible>!Control.IsVisible(993100)</visible>
+                                <include>skinshortcuts-template-vertical-info</include>
+                            </control>
+                            <control type="group">
+                                <width>1500</width>
+                                <visible>!ControlGroup(3000).HasFocus()</visible>
+                                <visible>Control.IsVisible(993100)</visible>
+                                <include content="Home_Vertical_Info">
+                                    <param name="font" value="font_title" />
+                                    <param name="plotheight" value="160" />
+                                    <param name="titleheight" value="60" />
+                                    <param name="id" value="993100" />
+                                    <param name="uid" value="993" />
+                                </include>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+
+    <include name="Home_Hidden_Submenu">
+        <control type="list" id="302">
+            <ondown>301</ondown>
+            <onup>301</onup>
+            <onback>301</onback>
+            <height>10</height>
+            <top>-20</top>
+            <orientation>horizontal</orientation>
+            <width>800</width>
+            <itemlayout width="100" />
+            <focusedlayout width="100" />
+            <content><include>skinshortcuts-submenu</include></content>
+        </control>
+    </include>
+
+    <include name="Home_Horizontal_Text">
+        <include condition="Skin.HasSetting(HomeMulti)">Home_Hidden_Submenu</include>
+        <control type="list" id="301">
+            <include condition="Skin.HasSetting(HomeMulti)">Home_Multi_Movement</include>
+            <include condition="!Skin.HasSetting(HomeMulti)">Home_Simple_Movement</include>
+            <orientation>horizontal</orientation>
+            <height>10</height>
+            <bottom>-100</bottom>
+            <width>800</width>
+            <itemlayout width="100" />
+            <focusedlayout width="100" />
+            <content><include>skinshortcuts-mainmenu</include></content>
+        </control>
+        <include>Home_Menu</include>
+        <include condition="Skin.HasSetting(HomeMulti)">Home_Submenu</include>
+    </include>
+
+    <include name="Home_Horizontal_Fixed_List">
+        <control type="list" id="$PARAM[id]">
+            <nested />
+            <top>0</top>
+            <left>70</left>
+            <right>-70</right>
+            <orientation>horizontal</orientation>
+            <visible>Window.IsVisible(Home) + !$EXP[Exp_InfoVisible]</visible>
+            <itemlayout width="200" height="70">
+                <control type="label">
+                    <left>5</left>
+                    <right>5</right>
+                    <label>$INFO[ListItem.Label]</label>
+                    <align>center</align>
+                    <height>70</height>
+                    <font>$PARAM[font]_small</font>
+                    <textcolor>main_fg_30</textcolor>
+                </control>
+            </itemlayout>
+            <focusedlayout width="200" height="70">
+                <control type="label">
+                    <left>5</left>
+                    <right>5</right>
+                    <label>$INFO[ListItem.Label]</label>
+                    <align>center</align>
+                    <height>70</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>main_fg_100</textcolor>
+                    <visible>Control.HasFocus($PARAM[id])</visible>
+                </control>
+                <control type="label">
+                    <left>5</left>
+                    <right>5</right>
+                    <label>$INFO[ListItem.Label]</label>
+                    <align>center</align>
+                    <height>70</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>main_fg_30</textcolor>
+                    <visible>!Control.HasFocus($PARAM[id])</visible>
+                </control>
+            </focusedlayout>
+        </control>
+    </include>
+
+    <include name="Home_CornerIcon_Template">
+        <control type="button" id="9999">
+            <left>-18</left>
+            <height>70</height>
+            <width>70</width>
+            <onleft>SetFocus(301,9999,absolute)</onleft>
+            <onright>SetFocus(301,0,absolute)</onright>
+            <aspectratio>keep</aspectratio>
+            <texturenofocus colordiffuse="main_fg_30">$PARAM[icon]</texturenofocus>
+            <texturefocus colordiffuse="main_fg_100">$PARAM[icon]</texturefocus>
+            <onfocus>ClearProperty(WidgetFocus,Home)</onfocus>
+            <visible>![[!Control.HasFocus(302) + Container(301).HasPrevious] | [Control.HasFocus(302) + Container(302).HasPrevious]]</visible>
+            <visible>!Control.HasFocus(302)</visible>
+            <nested />
+        </control>
+    </include>
+
+    <include name="Home_CornerIcon">
+        <include content="Home_CornerIcon_Template" condition="String.IsEmpty(Skin.String(CornerIcon))">
+            <param name="icon" value="special://skin/extras/icons/search.png" />
+            <onclick>Skin.Reset(SearchTerm)</onclick>
+            <onclick>Skin.SetString(SearchTerm)</onclick>
+            <onclick>ActivateWindow(1138)</onclick>
+        </include>
+        <include content="Home_CornerIcon_Template" condition="String.IsEqual(Skin.String(CornerIcon),Settings)">
+            <param name="icon" value="special://skin/extras/icons/settings.png" />
+            <onclick>ActivateWindow(settings)</onclick>
+        </include>
+        <include content="Home_CornerIcon_Template" condition="String.IsEqual(Skin.String(CornerIcon),Power)">
+            <param name="icon" value="special://skin/extras/icons/power.png" />
+            <onclick>ActivateWindow(shutdownmenu)</onclick>
+        </include>
+        <control type="image">
+            <left>-18</left>
+            <height>70</height>
+            <width>70</width>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="main_fg_30">special://skin/extras/icons/home.png</texture>
+            <visible>![[!Control.HasFocus(302) + Container(301).HasPrevious] | [Control.HasFocus(302) + Container(302).HasPrevious]]</visible>
+            <visible>!Control.HasFocus(302)</visible>
+            <visible>String.IsEqual(Skin.String(CornerIcon),Home)</visible>
+        </control>
+        <control type="image">
+            <left>-18</left>
+            <height>70</height>
+            <width>70</width>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="main_fg_30">$INFO[Container(301).ListItem.Icon]</texture>
+            <visible>![[!Control.HasFocus(302) + Container(301).HasPrevious] | [Control.HasFocus(302) + Container(302).HasPrevious]]</visible>
+            <visible>Control.HasFocus(302)</visible>
+        </control>
+    </include>
+
+    <include name="Home_Width_Clock"><width>1200</width></include>
+    <include name="Home_Width_NoClock"><width>1620</width></include>
+
+    <include name="Home_Horizontal_Fixed">
+        <control type="group">
+            <top>55</top>
+            <left>view_pad</left>
+            <control type="group">
+                <height>70</height>
+                <include condition="!Skin.HasSetting(DisableClock)">Home_Width_Clock</include>
+                <include condition="Skin.HasSetting(DisableClock)">Home_Width_NoClock</include>
+                <visible>!$EXP[Exp_InfoVisible]</visible>
+                <include>Home_CornerIcon</include>
+                <control type="image">
+                    <left>3</left>
+                    <visible>[!Control.HasFocus(302) + Container(301).HasPrevious] | [Control.HasFocus(302) + Container(302).HasPrevious]</visible>
+                    <centertop>55%</centertop>
+                    <width>24</width>
+                    <height>24</height>
+                    <texture flipx="false" colordiffuse="main_fg_30">buttons/spin-left.png</texture>
+                </control>
+                <control type="image">
+                    <right>-134</right>
+                    <visible>[!Control.HasFocus(302) + Container(301).HasNext] | [Control.HasFocus(302) + Container(302).HasNext]</visible>
+                    <centertop>55%</centertop>
+                    <width>24</width>
+                    <height>24</height>
+                    <texture flipx="true" colordiffuse="main_fg_30">buttons/spin-left.png</texture>
+                </control>
+                <include content="Home_Horizontal_Fixed_List">
+                    <param name="id" value="301" />
+                    <param name="font" value="font_topbar" />
+                    <include content="Animation_Home_MenuFlip_Conditional">
+                        <param name="condition" value="[!Control.HasFocus(302) | !Skin.HasSetting(HomeMultiHorizontal) | !Skin.HasSetting(HomeMulti)]" />
+                    </include>
+                    <include condition="Skin.HasSetting(HomeMulti)">Home_Multi_Movement</include>
+                    <include condition="!Skin.HasSetting(HomeMulti)">Home_Simple_Movement</include>
+                    <content><include>skinshortcuts-mainmenu</include></content>
+                </include>
+                <include content="Home_Horizontal_Fixed_List" condition="Skin.HasSetting(HomeMulti)">
+                    <param name="id" value="302" />
+                    <param name="font" value="font_submenu" />
+                    <include content="Animation_Home_MenuFlip_Conditional">
+                        <param name="condition" value="Control.HasFocus(302)" />
+                    </include>
+                    <onup>301</onup>
+                    <ondown>301</ondown>
+                    <onback>301</onback>
+                    <content><include>skinshortcuts-submenu</include></content>
+                </include>
+            </control>
+        </control>
+    </include>
+
+    <include name="Home_Horizontal_Icons_Submenu">
+        <control type="list" id="302">
+            <ondown>301</ondown>
+            <onup>301</onup>
+            <onback>301</onback>
+            <include content="Topbar_Menu_Layout">
+                <param name="id" value="302" />
+            </include>
+            <content><include>skinshortcuts-submenu</include></content>
+        </control>
+    </include>
+
+    <include name="Home_Horizontal_Icons">
+        <control type="group">
+            <include>Defs_InfoDialog_Visible</include>
+            <control type="group">
+                <top>30</top>
+                <control type="group">
+                    <height>120</height>
+                    <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
+                    <include>Animation_FadeInOut</include>
+                    <control type="grouplist">
+                        <visible>!Skin.HasSetting(DisableHeader)</visible>
+                        <top>0</top>
+                        <include>Animation_FadeInOut</include>
+                        <itemgap>0</itemgap>
+                        <left>view_pad</left>
+                        <align>left</align>
+                        <orientation>horizontal</orientation>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <control type="label">
+                            <aligny>center</aligny>
+                            <width max="1140">auto</width>
+                            <font>font_topbar</font>
+                            <textcolor>main_fg_100</textcolor>
+                            <label>$INFO[Container(301).ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <aligny>center</aligny>
+                            <width max="1140">auto</width>
+                            <font>font_topbar</font>
+                            <textcolor>main_fg_100</textcolor>
+                            <label>$INFO[Container(302).ListItem.Label, - ,]</label>
+                            <visible>Control.HasFocus(302)</visible>
+                            <visible>Skin.HasSetting(HomeMulti)</visible>
+                        </control>
+                    </control>
+                </control>
+            </control>
+            <include condition="Skin.HasSetting(HomeMulti)">Home_Horizontal_Icons_Submenu</include>
+            <control type="list" id="301">
+                <include condition="Skin.HasSetting(HomeMulti)">Home_Multi_Movement</include>
+                <include condition="!Skin.HasSetting(HomeMulti)">Home_Simple_Movement</include>
+                <include content="Topbar_Menu_Layout">
+                    <param name="id" value="301" />
+                    <param name="visible" value="!Control.HasFocus(302)" />
+                </include>
+                <content><include>skinshortcuts-mainmenu</include></content>
+            </control>
+        </control>
+    </include>
+
+    <include name="Home_Multi_Movement">
+        <onup condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(submenuVisibility,$INFO[Container(301).ListItem.Property(submenuVisibility)],home)</onup>
+        <onup condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(leftHeader,$INFO[Container(301).ListItem.Label],home)</onup>
+        <onup condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetName,$INFO[Container(301).ListItem.Property(widgetName)],home)</onup>
+        <onup condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetName.backgroundWidget,$INFO[Container(301).ListItem.Property(widgetName.backgroundWidget)],home)</onup>
+        <onup condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetPath,$INFO[Container(301).ListItem.Property(widgetPath)],home)</onup>
+        <onup condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetTarget,$INFO[Container(301).ListItem.Property(widgetTarget)],home)</onup>
+        <onup condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetAspect,$INFO[Container(301).ListItem.Property(widgetAspect)],home)</onup>
+        <onup condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">ActivateWindow(1135)</onup>
+
+        <onup condition="Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">302</onup>
+
+        <ondown condition="!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)">3000</ondown>
+        <ondown condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)">5000</ondown>
+        <ondown condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)">6000</ondown>
+        <onfocus>ClearProperty(WidgetFocus,Home)</onfocus>
+
+        <onleft condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + Control.IsVisible(9999)">9999</onleft>
+        <onleft condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + !Control.IsVisible(9999)">301</onleft>
+        <onright condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + Control.IsVisible(9999)">9999</onright>
+        <onright condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + !Control.IsVisible(9999)">301</onright>
+    </include>
+
+    <include name="Home_Multi_Horizontal">
+        <include>Global_Background</include>
+        <include condition="Skin.HasSetting(HomeIcons)">Home_Horizontal_Icons</include>
+        <control type="group">
+            <top>30</top>
+            <include>Defs_InfoDialog_Visible</include>
+            <control type="group">
+                <height>120</height>
+                <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
+                <include>Animation_FadeInOut</include>
+                <include content="Topbar_Right">
+                    <param name="fgcolor" value="main_fg" />
+                </include>
+            </control>
+        </control>
+        <include condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(HomeTextAutoWidth)">Home_Horizontal_Text</include>
+        <include condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth)">Home_Horizontal_Fixed</include>
+        <control type="group">
+            <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) | Control.HasFocus(9999)</visible>
+            <visible>Weather.IsFetched</visible>
+            <include>Weather</include>
+        </control>
+
+        <control type="group">
+            <include>Animation_Common</include>
+            <control type="group">
+                <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !Control.HasFocus(9999)</visible>
+                <include content="View_Settings">
+                    <param name="hideonwindowopen" value="false" />
+                </include>
+            </control>
+        </control>
+
+        <control type="group">
+            <left>-24</left>
+            <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]</visible>
+            <include>PVRTVRecordingWidget</include>
+        </control>
+
+        <control type="group">
+            <top>view_top</top>
+            <visible>!$EXP[Exp_ShowPlotOverlay]</visible>
+            <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+            <include>Defs_InfoDialog_Visible</include>
+            <include content="Object_Info_Arrows">
+                <param name="id" value="3000" />
+            </include>
+        </control>
+        <control type="group">
+            <include>View_Group</include>
+            <control type="group">
+                <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
+                <top>-15</top>
+                <right>-15</right>
+                <left>-15</left>
+                <bottom>-15</bottom>
+                <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !Control.HasFocus(9999)</visible>
+                <control type="grouplist" id="3000">
+                    <top>-5</top>
+                    <onup>301</onup>
+                    <ondown>noop</ondown>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <height>view_height</height>
+                    <width>1800</width>
+                    <orientation>vertical</orientation>
+                    <itemgap>-52</itemgap>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <control type="group" id="7999"><height>0</height></control>
+                    <include>skinshortcuts-template-vertical-submenu</include>
+                    <include>skinshortcuts-template-vertical-main</include>
+                </control>
+                <control type="group">
+                    <visible>Integer.IsEqual(Container(3000).NumItems,1)</visible>
+                    <visible>![String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]]</visible>
+                    <top>432.5</top>
+                    <left>15</left>
+                    <right>15</right>
+                    <bottom>0</bottom>
+                    <control type="group">
+                        <top>15</top>
+                        <visible>ControlGroup(3000).HasFocus()</visible>
+                        <include content="View_52_Showcase_Aura_Info">
+                            <param name="font" value="font_title" />
+                            <param name="plotheight" value="160" />
+                            <param name="titleheight" value="60" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <visible>!ControlGroup(3000).HasFocus()</visible>
+                        <visible>!Control.IsVisible(993100)</visible>
+                        <include>skinshortcuts-template-vertical-info</include>
+                    </control>
+                    <control type="group">
+                        <visible>!ControlGroup(3000).HasFocus()</visible>
+                        <visible>Control.IsVisible(993100)</visible>
+                        <include content="Home_Vertical_Info">
+                            <param name="font" value="font_title" />
+                            <param name="plotheight" value="160" />
+                            <param name="titleheight" value="60" />
+                            <param name="id" value="993100" />
+                            <param name="uid" value="993" />
+                        </include>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+
+    <include name="Home_Vertical_Info">
+        <param name="plotheight" default="120" />
+        <definition>
+            <control type="grouplist">
+                <nested />
+                <animation effect="fade" end="50" condition="true">Conditional</animation>
+                <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Title)</visible>
+                <orientation>vertical</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <itemgap>0</itemgap>
+                <include content="Object_Info_Title">
+                    <param name="label" value="$INFO[Container($PARAM[id]).ListItem.Title]" />
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="titleheight" value="$PARAM[titleheight]" />
+                </include>
+                <include content="Object_Info_Line">
+                    <param name="container" value="Container($PARAM[id])." />
+                    <param name="uid" value="$PARAM[uid]" />
+                </include>
+                <control type="group">
+                    <top>-5</top>
+                    <height>75</height>
+                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
+                    <visible>!Skin.HasSetting(NumericStarRating)</visible>
+                    <control type="group">
+                        <left>-14</left>
+                        <visible>String.IsEmpty(Container($PARAM[id]).ListItem.UserRating)</visible>
+                        <include content="Object_StarRating">
+                            <param name="rating_prop" value="Container($PARAM[id]).ListItem.Rating" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <left>-14</left>
+                        <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.UserRating)</visible>
+                        <include content="Object_StarRating">
+                            <param name="rating_prop" value="Container($PARAM[id]).ListItem.UserRating" />
+                        </include>
+                    </control>
+                </control>
+                <control type="group">
+                    <top>-5</top>
+                    <height>75</height>
+                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
+                    <visible>Skin.HasSetting(NumericStarRating)</visible>
+                    <control type="group">
+                        <left>-14</left>
+                        <top>24</top>
+                        <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Rating)</visible>
+                        <control type="image">
+                            <width>64</width>
+                            <height>64</height>
+                            <texture colordiffuse="main_fg_100">flags/star10.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>61</left>
+                            <textcolor>main_fg_70</textcolor>
+                            <top>19</top>
+                            <width>auto</width>
+                            <height>28</height>
+                            <align>right</align>
+                            <font>font_tiny</font>
+                            <label>$INFO[Container($PARAM[id]).ListItem.Rating,,   ]</label>
+                        </control>
+                    </control>
+                </control>
+                <include content="Object_Info_Plot">
+                    <param name="label" value="$INFO[Container($PARAM[id]).ListItem.Plot]" />
+                    <param name="maxheight" value="$PARAM[plotheight]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+</includes>
+

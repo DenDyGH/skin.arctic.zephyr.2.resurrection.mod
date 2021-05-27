@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window">
+    <defaultcontrol always="true">570</defaultcontrol>
+    <views>570</views>
+    <controls>
+        <include>Global_Background</include>
+        <include>Topbar</include>
+        <include condition="!Window.Previous(home)">View_Settings</include>
+        <control type="image">
+            <animation type="WindowOpen" reversible="false" condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(SkinSettings.xml) + !Window.Previous(SettingsProfile.xml) + !Window.Previous(SettingsSystemInfo.xml)">
+                <effect type="fade" start="0" end="100" time="300" delay="0"/>
+            </animation>
+            <include>Dimensions_Fullscreen</include>
+            <texture border="2">common/black-back.png</texture>
+        </control>
+        <control type="group">
+            <include content="Dialog_Standard_Group">
+                <param name="width" value="1336" />
+                <param name="height" value="930" />
+            </include>
+            <animation type="Conditional" reversible="false" condition="!Container(570).IsUpdating">
+                <effect type="fade" start="0" end="100" time="300" delay="150"/>
+                <effect type="slide" start="0,-200" end="0" center="auto" tween="cubic" easing="out" time="450" delay="150"/>
+            </animation>
+            <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(570).IsUpdating">Conditional</animation>
+            <animation type="Visible" reversible="false">
+                <effect type="fade" start="0" end="100" time="300" delay="150"/>
+                <effect type="slide" start="0,-200" end="0" center="auto" tween="cubic" easing="out" time="450" delay="150"/>
+            </animation>
+            <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+            <control type="label">
+                <include>Dialog_Standard_Header</include>
+                <label>$LOCALIZE[14111]</label>
+            </control>
+
+            <include content="Dialog_Standard_List">
+                <param name="id" value="570" />
+                <param name="itemheight" value="item_biglist_height" />
+                <param name="list_style" value="Dialog_Standard_List_Itemlayout_Complex" />
+                <param name="onup" value="570" />
+                <param name="ondown" value="570" />
+                <param name="onright" value="9001" />
+                <param name="onleft" value="9001" />
+            </include>
+
+            <!-- Buttons -->
+            <control type="grouplist" id="9001">
+                <include>Dialog_Standard_Right_Group</include>
+                <onleft>570</onleft>
+                <onright>570</onright>
+                <control type="button" id="9002">
+                    <label>$LOCALIZE[15067]</label>
+                    <onclick>Close</onclick>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <control type="togglebutton" id="4">
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    <label>$LOCALIZE[31374]: $LOCALIZE[584]</label>
+                    <altlabel>$LOCALIZE[31374]: $LOCALIZE[585]</altlabel>
+                </control>
+                <control type="button" id="20">
+                    <label>$LOCALIZE[192]</label>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <control type="button" id="21">
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <control type="radiobutton" id="22">
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    <radioposx>290</radioposx>
+                </control>
+            </control>
+            <include>Dialog_Separator_Right</include>
+        </control>
+    </controls>
+</window>

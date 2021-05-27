@@ -1,0 +1,82 @@
+# Kodi Media Center language file
+# Addon Name: Arctic Zephyr 2
+# Addon id: skin.arctic.zephyr.2
+# Addon Provider: jurialmunkey
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en-US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31027"
+msgid "Customise power menu"
+msgstr "Customize power menu"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31073"
+msgid "This category contains settings to customise the highlight and selection-box colors used in the skin."
+msgstr "This category contains settings to customize the highlight and selection-box colors used in the skin."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31074"
+msgid "This category contains settings to customise what is displayed in information dialogs and library views."
+msgstr "This category contains settings to customize what is displayed in information dialogs and library views."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31075"
+msgid "This category contains settings to customise what is displayed when playing music or video fullscreen."
+msgstr "This category contains settings to customize what is displayed when playing music or video fullscreen."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31076"
+msgid "This category contains settings to customise what is displayed in the PVR."
+msgstr "This category contains settings to customize what is displayed in the PVR."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31078"
+msgid "This category allows you to view$COMMA install and customise add-ons supported by Arctic Zephyr 2."
+msgstr "This category allows you to view$COMMA install and customize add-ons supported by Arctic Zephyr 2."
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31087"
+msgid "Display colour overlay"
+msgstr "Display color overlay"
+
+msgctxt "#31109"
+msgid "Customise home menu"
+msgstr "Customize home menu"
+
+msgctxt "#31119"
+msgid "Display visualisation behind slideshow"
+msgstr "Display visualization behind slideshow"
+
+#: /1080i/MusicOSD.xml
+msgctxt "#31131"
+msgid "Colour overlay"
+msgstr "Color overlay"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31158"
+msgid "Automatically open visualisation after starting a song"
+msgstr "Automatically open visualization after starting a song"
+
+msgctxt "#31172"
+msgid "Display music visualisation in background"
+msgstr "Display music visualization in background"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31188"
+msgid "Automatically switch colour theme based on time (Light 6am - Dark 6pm)"
+msgstr "Automatically switch color theme based on time (Light 6am - Dark 6pm)"
+
+msgctxt "#31286"
+msgid "Highlight colour"
+msgstr "Highlight color"
+
+#: /1080i/Startup.xml
+msgctxt "#31349"
+msgid "Initialising Skin"
+msgstr "Initializing Skin"

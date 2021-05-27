@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="0">
+    <defaultcontrol always="false">301</defaultcontrol>
+    <onload condition="Skin.HasSetting(ThemeSwitcher) + System.Time(06:00,18:00) + !String.IsEqual(Skin.CurrentColourTheme,SKINDEFAULT)">RunScript(script.skin.helper.service,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT)</onload>
+    <onload condition="Skin.HasSetting(ThemeSwitcher) + !System.Time(06:00,18:00) + !String.IsEqual(Skin.CurrentColourTheme,Dark)">RunScript(script.skin.helper.service,action=setkodisetting,setting=lookandfeel.skincolors,value=Dark)</onload>
+
+    <onload>SetProperty(ListItemHelper.WidgetContainerWindowName,home,home)</onload>
+
+    <onunload condition="!Control.HasFocus(301) + [Window.Next(VideoFullScreen.xml) | Window.Next(MusicVisualisation.xml)]">SetFocus(301)</onunload>
+    <onload condition="Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)">SetFocus(301)</onload>
+    
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=301&amp;levels=1&amp;group=mainmenu|powermenu|searchmenu)</onload>
+    
+    <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
+
+    <onunload>ClearProperty(SkinHelper.WidgetContainer,Home)</onunload>
+    <onunload>ClearProperty(ListItemHelper.WidgetContainerId,Home)</onunload>
+
+    <controls>
+        <control type="button" id="6000">
+            <description>Weather Jump</description>
+            <include>Defs_Hidden_Button</include>
+            <onup>301</onup>
+            <ondown>301</ondown>
+            <onleft>301</onleft>
+            <onright>301</onright>
+            <onback>301</onback>
+            <onclick>ActivateWindow(Weather)</onclick>
+        </control>
+        <control type="list" id="9989">
+            <description>hidden container for widget count</description>
+            <posx>-20</posx>
+            <posy>-20</posy>
+            <width>1</width>
+            <height>1</height>
+            <visible>true</visible>
+            <onup>50</onup>
+            <ondown>50</ondown>
+            <onleft>50</onleft>
+            <onright>50</onright>
+            <itemlayout width="1" height="1">
+            </itemlayout>
+            <focusedlayout height="1" width="1">
+            </focusedlayout>
+            <content><include>skinshortcuts-submenu-1</include></content>
+        </control>
+        <control type="list" id="9988">
+            <description>hidden container for playlist background</description>
+            <posx>-20</posx>
+            <posy>-20</posy>
+            <width>1</width>
+            <height>1</height>
+            <visible>true</visible>
+            <onup>50</onup>
+            <ondown>50</ondown>
+            <onleft>50</onleft>
+            <onright>50</onright>
+            <include content="Defs_AutoScroll">
+                <param name="condition" value="true" />
+            </include>
+            <itemlayout width="1" height="1">
+            </itemlayout>
+            <focusedlayout height="1" width="1">
+            </focusedlayout>
+            <content>$INFO[Container(301).ListItem.Property(backgroundPlaylist)]</content>
+        </control>
+
+        <control type="group">
+            <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
+            <include>Animation_FadeInOut</include>
+            <include condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Vertical</include>
+            <include condition="Skin.HasSetting(HomeMulti) + Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Horizontal</include>
+            <include condition="!Skin.HasSetting(HomeMulti)">Home_Simple</include>
+        </control>
+        <include>Object_PlotOverlay</include>
+
+        <!-- Splash -->
+        <control type="image" description="Background">
+            <include>Dimensions_Fullscreen</include>
+            <texture colordiffuse="Background">common/bg.jpg</texture>
+            <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
+            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+            <animation effect="fade" start="100" end="0" delay="600" time="600" tween="quadratic">Hidden</animation>
+        </control>
+        <control type="label">
+            <description>Loading</description>
+            <include>Dimensions_Fullscreen</include>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR][CR][COLOR=main_fg_30]heppen[/COLOR] [COLOR=$VAR[ColorHighlight]]Mods[/COLOR]</label>
+            <font>font_splash</font>
+            <textcolor>main_fg_100</textcolor>
+            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+            <animation effect="fade" start="100" end="0" delay="0" time="600" tween="quadratic">Hidden</animation>
+            <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+        <control type="group">
+            <top>800</top>
+            <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
+            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+            <animation effect="fade" start="100" end="0" time="600" tween="quadratic">Hidden</animation>
+            <include content="Defs_BusySpinner">
+                <param name="label" value="$LOCALIZE[31349]..." />
+            </include>
+        </control>
+
+    </controls>
+</window>

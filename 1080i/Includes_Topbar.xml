@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <!-- ====== -->
+    <!-- Common -->
+    <!-- ====== -->
+    
+
+    <include name="Topbar">
+        <param name="visible" default="true" />
+        <param name="info_hide" default="true" />
+        <param name="fgcolor" default="main_fg" />
+        <definition>
+            <control type="group">
+                <top>30</top>
+                <include condition="$PARAM[info_hide]">Defs_InfoDialog_Visible</include>
+                <control type="group">
+                    <height>120</height>
+                    <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
+                    <include>Animation_FadeInOut</include>
+                    <include content="Topbar_Left">
+                        <param name="fgcolor" value="$PARAM[fgcolor]" />
+                    </include>
+                    <include content="Topbar_Center">
+                        <param name="visible" value="$PARAM[visible]" />
+                        <param name="fgcolor" value="$PARAM[fgcolor]" />
+                    </include>
+                    <include content="Topbar_Right">
+                        <param name="fgcolor" value="$PARAM[fgcolor]" />
+                    </include>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Topbar_Left">
+        <control type="grouplist">
+            <visible>!Skin.HasSetting(DisableHeader)</visible>
+            <top>0</top>
+            <include>Animation_FadeInOut</include>
+            <itemgap>0</itemgap>
+            <left>view_pad</left>
+            <align>left</align>
+            <orientation>horizontal</orientation>
+            <usecontrolcoords>true</usecontrolcoords>
+            <control type="label">
+                <aligny>center</aligny>
+                <width max="1140">auto</width>
+                <font>font_topbar</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$VAR[Label_Header_Content]</label>
+                <visible>!Control.HasFocus(300) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)</visible>
+            </control>
+            <control type="label">
+                <aligny>center</aligny>
+                <width max="1140">auto</width>
+                <font>font_topbar</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[Container(300).ListItem.Label]</label>
+                <visible>Control.HasFocus(300) + ![Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)]</visible>
+            </control>
+        </control>
+    </include>
+
+    <include name="Topbar_Center">
+        <control type="label">
+            <visible>$PARAM[visible]</visible>
+            <visible>!Skin.HasSetting(DisableCenter)</visible>
+            <aligny>center</aligny>
+            <align>center</align>
+            <font>font_byline</font>
+            <width>1200</width>
+            <centerleft>50%</centerleft>
+            <textcolor>$PARAM[fgcolor]_70</textcolor>
+            <label>$VAR[Label_Header_Center]</label>
+            <include>Animation_FadeInOut</include>
+            <visible>!Control.HasFocus(300) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)</visible>
+            <visible>!Skin.HasSetting(EnableClearlogo)</visible>
+        </control>
+        <control type="label">
+            <visible>$PARAM[visible]</visible>
+            <visible>!Skin.HasSetting(DisableCenter)</visible>
+            <aligny>center</aligny>
+            <align>center</align>
+            <font>font_byline</font>
+            <width>1200</width>
+            <centerleft>50%</centerleft>
+            <textcolor>$PARAM[fgcolor]_70</textcolor>
+            <label>$VAR[Label_Header_Center]</label>
+            <visible>!Control.HasFocus(300) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)</visible>
+            <visible>[Skin.HasSetting(EnableClearlogo) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
+        </control>
+        <control type="image">
+            <visible>$PARAM[visible]</visible>
+            <visible>Skin.HasSetting(EnableClearlogo)</visible>
+            <texture background="true">$VAR[Image_TopBar_ClearLogo]</texture>
+            <aspectratio align="center" aligny="center">keep</aspectratio>
+            <width>350</width>
+            <height>80%</height>
+            <centertop>50%</centertop>
+            <centerleft>50%</centerleft>
+            <visible>!Control.HasFocus(300) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)</visible>
+        </control>
+    </include>
+
+    <include name="Topbar_Right">
+        <control type="grouplist">
+            <visible>!Skin.HasSetting(DisableClock) + !Skin.HasSetting(EnableShowItemCount)</visible>
+            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">Conditional</animation>
+            <right>view_pad</right>
+            <align>right</align>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <width>700</width>
+            <usecontrolcoords>true</usecontrolcoords>
+            <control type="group">
+                <width>64</width>
+                <control type="image">
+                    <centertop>50%</centertop>
+                    <height>40</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="$PARAM[fgcolor]_100">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
+                </control>
+                <visible>Weather.IsFetched</visible>
+                <visible>![Control.HasFocus(60) | Control.HasFocus(62)]</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[Weather.Temperature]</label>
+                <visible>Weather.IsFetched</visible>
+                <visible>![Control.HasFocus(60) | Control.HasFocus(62)]</visible>
+            </control>
+            <control type="label">
+                <visible>![Control.HasFocus(60) | Control.HasFocus(62)]</visible>
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
+                <label>  |  </label>
+                <visible>!String.IsEmpty(Weather.Temperature)</visible>
+                <visible>Weather.IsFetched</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[System.Time]</label>
+                <visible>![Control.HasFocus(60) | Control.HasFocus(62)]</visible>
+            </control>
+            <control type="label">
+                <visible>[Control.HasFocus(60) | Control.HasFocus(62)]</visible>
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[Container.NumItems,, $LOCALIZE[31101]]</label>
+            </control>
+            <control type="label">
+                <visible>[Control.HasFocus(60) | Control.HasFocus(62)]</visible>
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
+                <label>  |  </label>
+            </control>
+            <control type="label">
+                <visible>[Control.HasFocus(60) | Control.HasFocus(62)]</visible>
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[Container.CurrentPage,$LOCALIZE[31391] , $LOCALIZE[20163] ]$INFO[Container.NumPages]</label>
+            </control>
+        </control>
+        <control type="grouplist">
+            <visible>!Skin.HasSetting(DisableClock)  + Skin.HasSetting(EnableShowItemCount)</visible>
+            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">Conditional</animation>
+            <right>view_pad</right>
+            <align>right</align>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <width>700</width>
+            <usecontrolcoords>true</usecontrolcoords>
+            <control type="group">
+                <width>64</width>
+                <control type="image">
+                    <centertop>50%</centertop>
+                    <height>40</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="$PARAM[fgcolor]_100">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
+                </control>
+                <visible>Weather.IsFetched</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[Weather.Temperature]</label>
+                <visible>Weather.IsFetched</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
+                <label>  |  </label>
+                <visible>!String.IsEmpty(Weather.Temperature)</visible>
+                <visible>Weather.IsFetched</visible>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[System.Time]</label>
+            </control>
+        </control>
+        <control type="grouplist">
+            <include>Defs_InfoDialog_Visible</include>
+            <visible>!String.IsEmpty(Container.NumItems) + Skin.HasSetting(EnableShowItemCount)</visible>
+            <animation effect="slide" start="0,0" end="0,45" time="200" tween="sine" condition="!Skin.HasSetting(DisableClock)">Conditional</animation>
+            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">Conditional</animation>
+            <right>view_pad</right>
+            <align>right</align>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <width>700</width>
+            <usecontrolcoords>true</usecontrolcoords>
+            <control type="label">
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[Container.NumItems,, $LOCALIZE[31101]]</label>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
+                <label>  |  </label>
+            </control>
+            <control type="label">
+                <width>auto</width>
+                <font>font_small</font>
+                <textcolor>$PARAM[fgcolor]_100</textcolor>
+                <label>$INFO[Container.CurrentPage,$LOCALIZE[31391] , $LOCALIZE[20163] ]$INFO[Container.NumPages]</label>
+            </control>
+        </control>
+    </include>    
+    <include name="Topbar_Menu_Layout">
+        <param name="visible" default="false" />
+        <param name="id" default="300" />
+        <definition>
+            <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout" reversible="false">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="350" tween="cubic" easing="inout" reversible="false">Hidden</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,11)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,10)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,9)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,8)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,7)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,6)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,4)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,2)">Conditional</animation>
+            <animation effect="slide" end="40" condition="Integer.IsLess(Container($PARAM[id]).NumItems,1)">Conditional</animation>
+            <visible allowhiddenfocus="true">Control.HasFocus($PARAM[id]) | $PARAM[visible]</visible>
+            <width>880</width>
+            <focusposition>5</focusposition>
+            <movement>5</movement>
+            <centerleft>50%</centerleft>
+            <orientation>horizontal</orientation>
+            <top>55</top>
+            <height>120</height>
+            <itemlayout width="80" height="70">
+                <control type="image">
+                    <centerleft>50%</centerleft>
+                    <width>70</width>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
+                </control>
+            </itemlayout>
+            <focusedlayout width="80" height="70">
+                <control type="group">
+                    <centerleft>50%</centerleft>
+                    <width>70</width>
+                    <control type="image">
+                        <visible>Control.HasFocus($PARAM[id])</visible>
+                        <texture colordiffuse="main_fg_100">common/white.png</texture>
+                        <bottom>0</bottom>
+                        <height>6</height>
+                    </control>
+                    <control type="image">
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
+                    </control>
+                </control>
+            </focusedlayout>
+        </definition>
+    </include>
+
+</includes>

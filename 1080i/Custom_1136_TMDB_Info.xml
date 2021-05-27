@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="1136">
+    <defaultcontrol always="true">9999</defaultcontrol>
+    <controls>
+        <include>Global_Background</include>
+        <include>Topbar</include>
+        <control type="list" id="9999">
+            <width>1</width>
+            <height>1</height>
+            <left>-1000</left>
+            <top>-1000</top>
+            <itemlayout />
+            <focusedlayout />
+            <content limit="1" target="videos">$INFO[Window(Home).Property(TMDbHelper.Path.Current)]</content>
+        </control>
+
+        <control type="group">
+            <visible>Container(9999).IsUpdating</visible>
+            <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+            <include>Animation_FadeInOut</include>
+            <include>Dialog_Busy</include>
+        </control>
+
+    </controls>
+</window>

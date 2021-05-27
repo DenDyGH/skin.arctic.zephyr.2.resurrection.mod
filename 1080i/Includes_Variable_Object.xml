@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="Object_Variable_Font">
+        <param name="std" default="" />
+        <param name="alt" default="" />
+        <param name="usealt" default="false" />
+        <definition>
+            <include content="Object_Font" condition="!$PARAM[usealt]">
+                <param name="item" value="$PARAM[std]" />
+            </include>
+            <include content="Object_Font" condition="$PARAM[usealt]">
+                <param name="item" value="$PARAM[alt]" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="Object_Variable_TextColor">
+        <param name="std" default="" />
+        <param name="alt" default="" />
+        <param name="usealt" default="false" />
+        <definition>
+            <include content="Object_TextColor" condition="!$PARAM[usealt]">
+                <param name="item" value="$PARAM[std]" />
+            </include>
+            <include content="Object_TextColor" condition="$PARAM[usealt]">
+                <param name="item" value="$PARAM[alt]" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="Object_Variable_Width">
+        <param name="std" default="" />
+        <param name="alt" default="" />
+        <param name="usealt" default="false" />
+        <definition>
+            <include content="Object_Width" condition="!$PARAM[usealt]">
+                <param name="item" value="$PARAM[std]" />
+            </include>
+            <include content="Object_Width" condition="$PARAM[usealt]">
+                <param name="item" value="$PARAM[alt]" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="Object_Variable_Height">
+        <param name="std" default="" />
+        <param name="alt" default="" />
+        <param name="usealt" default="false" />
+        <definition>
+            <include content="Object_Height" condition="!$PARAM[usealt]">
+                <param name="item" value="$PARAM[std]" />
+            </include>
+            <include content="Object_Height" condition="$PARAM[usealt]">
+                <param name="item" value="$PARAM[alt]" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="Object_Font">
+        <definition>
+            <font>$PARAM[item]</font>
+        </definition>
+    </include>
+
+    <include name="Object_TextColor">
+        <definition>
+            <textcolor>$PARAM[item]</textcolor>
+        </definition>
+    </include>
+
+    <include name="Object_Width">
+        <definition>
+            <width>$PARAM[item]</width>
+        </definition>
+    </include>
+
+    <include name="Object_Height">
+        <definition>
+            <height>$PARAM[item]</height>
+        </definition>
+    </include>
+
+</includes>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="104">
+    <zorder>10</zorder>
+    <controls>
+        <!-- <control type="image">
+            <include>Defs_ShadowBack_Fullscreen</include>
+            <visible>!Player.Muted</visible>
+        </control> -->
+        <control type="group">
+            
+            <include>Animation_FadeIn_Slide</include>
+            <!-- Volume bar -->
+            <control type="group">
+                <height>view_top</height>
+                <left>view_pad</left>
+                <right>view_pad</right>
+                <control type="image" description="Back">
+                    <right>-16</right>
+                    <centertop>50%</centertop>
+                    <width>100</width>
+                    <height>100</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture>dialog/loading-back.png</texture>
+                    <colordiffuse>$VAR[Defs_Volume_Colordiffuse]</colordiffuse>
+                    <animation effect="fade" end="70" condition="true">Conditional</animation>
+                    <visible>!Player.Muted</visible>
+                </control>
+                <control type="image">
+                    <right>-16</right>
+                    <centertop>50%</centertop>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture colordiffuse="$VAR[ColorHighlight]">$INFO[Control.GetLabel(1),progress/circle/p,.png]</texture>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                </control>
+                <control type="image" description="Back">
+                    <right>-16</right>
+                    <centertop>50%</centertop>
+                    <width>100</width>
+                    <height>100</height>
+                    <bordersize>24</bordersize>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture colordiffuse="$VAR[Defs_Volume_Colordiffuse]">special://skin/extras/icons/volume.png</texture>
+                    <visible>!Player.Muted</visible>
+                </control>
+                <control type="image" description="Back">
+                    <right>-16</right>
+                    <centertop>50%</centertop>
+                    <width>100</width>
+                    <height>100</height>
+                    <bordersize>28</bordersize>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture colordiffuse="$VAR[Defs_Volume_Colordiffuse]">buttons/mute.png</texture>
+                    <visible>Player.Muted</visible>
+                </control>
+            </control>
+        </control>
+
+        <control type="progress" id="1">
+            <description>progress control</description>
+            <left>104</left>
+            <right>24</right>
+            <bottom>24</bottom>
+            <height>8</height>
+            <texturebg colordiffuse="dialog_bg_12">osd/progress-bg.png</texturebg>
+            <info>Player.Volume</info>
+            <visible>false</visible>
+        </control>
+
+    </controls>
+
+</window>

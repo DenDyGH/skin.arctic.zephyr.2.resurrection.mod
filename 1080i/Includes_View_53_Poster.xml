@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="View_53_Poster">
+        <control type="group">
+            <visible>Control.IsVisible(53)</visible>
+            <include>Defs_InfoDialog_Visible</include>
+            <include>Animation_Common</include>
+            <control type="group">
+                <include content="View_540_Platform_Icon">
+                    <param name="top" value="690" />
+                    <param name="right" value="80" />
+                </include>
+                <control type="grouplist">
+                    <visible>!ListItem.IsParentFolder</visible>
+                    <left>660</left>
+                    <top>690</top>
+                    <right>view_pad</right>
+                    <orientation>vertical</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>0</itemgap>
+                    <control type="label">
+                        <label>$VAR[Label_List_Title]</label>
+                        <height>60</height>
+                        <aligny>top</aligny>
+                        <textcolor>main_fg_100</textcolor>
+                        <font>font_title</font>
+                    </control>
+                    <include condition="!$EXP[Exp_IsPluginAdvancedLauncher]">Object_Info_Line</include>
+                    <include condition="$EXP[Exp_IsPluginAdvancedLauncher]">View_540_ROM_Details</include>
+                    <control type="textbox">
+                        <top>20</top>
+                        <label fallback="19055">$VAR[Label_Plot]</label>
+                        <height>120</height>
+                        <aligny>top</aligny>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>font_plotbox</font>
+                    </control>
+                </control>
+            </control>
+            
+            <control type="fixedlist" id="53">
+                <left>-328</left>
+                <width>2500</width>
+                <focusposition>2</focusposition>
+                <preloaditems>0</preloaditems>
+                <include>View_Horizontal_Movement</include>
+                <orientation>horizontal</orientation>
+                <pagecontrol>62</pagecontrol>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[Exp_IsPluginAdvancedLauncher]</visible>
+                <viewtype label="$LOCALIZE[31262]">bigicon</viewtype>
+                <include content="View_Forced">
+                    <param name="string" value="$LOCALIZE[31262]" />
+                </include>
+                <itemlayout width="337">
+                    <control type="group">
+                        <top>view_top</top>
+                        <width>view_poster_width</width>
+                        <height>view_poster_height</height>
+                        <centerleft>0%</centerleft>
+                        <animation effect="Conditional" condition="true">
+                            <effect type="zoom" end="55" time="0" center="auto,275" />
+                        </animation>
+                        <include content="View_50_Poster">
+                            <param name="left" value="0" />
+                            <param name="height" value="view_poster_height" />
+                            <param name="width" value="view_poster_width" />
+                            <param name="diffuse" value="diffuse/poster-big.png" />
+                            <param name="fadetime" value="0" />
+                        </include>
+                        <control type="group">
+                            <top>-15</top>
+                            <include>View_WatchedOverlay</include>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="337">
+                    <control type="group">
+                        <animation condition="Container(53).OnNext | Container(53).OnPrevious" effect="zoom" start="55" end="100" delay="0" time="350" tween="sine" easing="out" center="auto,275">Focus</animation>
+                        <animation condition="Container(53).OnNext | Container(53).OnPrevious" effect="zoom" start="100" end="55" delay="0" time="250" tween="sine" easing="out" center="auto,275">UnFocus</animation>
+                        <top>view_top</top>
+                        <width>view_poster_width</width>
+                        <height>view_poster_height</height>
+                        <centerleft>0%</centerleft>
+                        <include content="View_50_Poster">
+                            <param name="left" value="0" />
+                            <param name="height" value="view_poster_height" />
+                            <param name="width" value="view_poster_width" />
+                            <param name="diffuse" value="diffuse/poster-big.png" />
+                            <param name="fadetime" value="0" />
+                        </include>
+                        <control type="group">
+                            <top>-15</top>
+                            <include>View_WatchedOverlay</include>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <!-- <control type="image">
+                <texture colordiffuse="bfffffff">common/white.png</texture>
+                <width>40</width>
+                <right>380</right>
+            </control> -->
+        </control>
+    </include>
+</includes>
+

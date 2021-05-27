@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="134">
+    <defaultcontrol always="true">450</defaultcontrol>
+
+
+    <controls>
+
+        <include>Global_Overlay</include>
+
+        <control type="group">
+            <width>1530</width>
+            <height>890</height>
+            <include>Dialog_Standard_Group</include>
+
+            <!-- Header -->
+            <control type="label" id="1">
+                <include>Dialog_Standard_Header</include>
+                <label>1036</label>
+            </control>
+
+            <control type="panel" id="450">
+                <top>90</top>
+                <left>15</left>
+                <right>15</right>
+                <bottom>15</bottom>
+                <orientation>vertical</orientation>
+
+                <itemlayout height="390" width="300">
+                    <control type="group">
+                        <control type="group">
+                            <bottom>90</bottom>
+                            <include content="Object_Geometric">
+                                <param name="diffuse" value="diffuse/square.png" />
+                            </include>
+                            
+                            <include content="Object_Poster">
+                                <param name="icon" value="$PARAM[icon]" />
+                                <param name="aspectratio" value="$PARAM[aspectratio]" />
+                                <param name="bordersize" value="$PARAM[bordersize]" />
+                                <param name="diffuse" value="$PARAM[diffuse]" />
+                            </include>
+                            <control type="image">
+                                <bordersize>15</bordersize>
+                                <aspectratio scalediffuse="false">keep</aspectratio>
+                                <texture diffuse="diffuse/square.png">$INFO[ListItem.Icon]</texture>
+                            </control>
+                        </control>
+                        <control type="textbox">
+                            <left>20</left>
+                            <right>20</right>
+                            <bottom>25</bottom>
+                            <height>68</height>
+                            <align>center</align>
+                            <font>font_tiny</font>
+                            <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, ,]</label>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="390" width="300">
+                    <control type="group">
+                        <control type="group">
+                            <bottom>90</bottom>
+                            <include content="Object_Geometric">
+                                <param name="diffuse" value="diffuse/square.png" />
+                            </include>
+                            
+                            <include content="Object_Poster">
+                                <param name="icon" value="$PARAM[icon]" />
+                                <param name="aspectratio" value="$PARAM[aspectratio]" />
+                                <param name="bordersize" value="$PARAM[bordersize]" />
+                                <param name="diffuse" value="$PARAM[diffuse]" />
+                            </include>
+                            <control type="image">
+                                <bordersize>15</bordersize>
+                                <aspectratio scalediffuse="false">keep</aspectratio>
+                                <texture diffuse="diffuse/square.png">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <include content="View_Selectbox">
+                                <param name="colordiffuse" value="$VAR[ColorHighlight]" />
+                            </include>
+                        </control>
+                        <control type="textbox">
+                            <left>20</left>
+                            <right>20</right>
+                            <bottom>25</bottom>
+                            <height>68</height>
+                            <align>center</align>
+                            <font>font_tiny</font>
+                            <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, ,]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+
+        </control>
+
+    </controls>
+
+</window>

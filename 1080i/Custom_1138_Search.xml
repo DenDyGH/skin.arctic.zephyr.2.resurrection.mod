@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="1138">
+    <defaultcontrol always="true">5600</defaultcontrol>
+    <onload>SetProperty(Header_Center_Text,$LOCALIZE[31045] &quot;$INFO[Skin.String(SearchTerm)]&quot;)</onload>
+    <onload>SetProperty(Header_Left_Text,$LOCALIZE[137])</onload>
+    <onload condition="String.IsEmpty(Skin.String(SearchTerm))">Back</onload>
+    <controls>
+        <include>Global_Background</include>
+        <include>Topbar</include>
+        
+        <control type="group">
+            <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
+            <include>Animation_FadeInOut</include>
+            <include>View_Group</include>
+            <control type="grouplist" id="5600">
+                <left>-15</left>
+                <top>-20</top>
+                <right>-25</right>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <onup>300</onup>
+                <ondown>6000</ondown>
+                <height>view_height</height>
+                <orientation>vertical</orientation>
+                <itemgap>-52</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="group" id="7599"><height>0</height></control>
+
+                <include>skinshortcuts-template-search</include>
+
+            </control>
+        </control>
+
+        <include>Object_PlotOverlay</include>
+    </controls>
+</window>

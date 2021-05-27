@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="120">
+    <onload condition="!Player.PauseEnabled">SetFocus(15)</onload>
+    <onload condition="Player.PauseEnabled">SetFocus(14)</onload>
+    <controls>
+        <control type="group">
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="grouplist" id="9000">
+                <include>OSD_MusicPosition</include>
+                <itemgap>32</itemgap>
+                <orientation>horizontal</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <include>OSD_Controls</include>
+            </control>
+        </control>
+
+        <control type="slider">
+            <bottom>58</bottom>
+            <left>398</left>
+            <height>24</height>
+            <width>564</width>
+            <texturesliderbar/>
+            <textureslidernib/>
+            <textureslidernibfocus/>
+            <info>Player.Progress</info>
+            <action>seek</action>
+        </control>
+
+        <include content="OSD_Menu_List">
+            <param name="content" value="Items_OSD_MusicVis" />
+            <param name="height" value="662" />
+            <param name="id" value="3112" />
+            <param name="label" value="$LOCALIZE[33063]" />
+            <param name="position" value="80,60" />
+        </include>
+
+    </controls>
+
+</window>

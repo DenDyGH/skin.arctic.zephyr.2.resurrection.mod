@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <menucontrol>300</menucontrol>
+    <background>0</background>
+    <defaultcontrol always="true">500</defaultcontrol>
+    <views>500</views>
+    <controls>
+        <include>Global_Background</include>
+        <include>Topbar</include>
+        <include>View_500_List_Square</include>
+
+        <control type="list" id="300">
+            <ondown>500</ondown>
+            <include>Topbar_Menu_Layout</include>
+            <include>Items_PVRQuickJump</include>
+            <include>Items_View</include>
+        </control>
+
+        <include>Defs_Options_StandardButtons</include>
+        <control type="button" id="28">
+            <description>Groups</description>
+            <include>Defs_Hidden_Button</include>
+        </control>
+    </controls>
+</window>

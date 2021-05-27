@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="146">
+    <defaultcontrol always="true">300</defaultcontrol>
+    <controls>
+
+        <!-- Top Info -->
+        <control type="group">
+            <animation effect="fade" condition="Window.IsVisible(Home.xml)" time="1" delay="350" start="0" end="100">WindowOpen</animation>
+            <include content="Topbar">
+                <param name="info_hide" value="false" />
+            </include>
+        </control>
+        
+        <!-- Main Group -->
+        <control type="group">
+            <top>view_top</top>
+            <left>view_pad</left>
+            <right>view_pad</right>
+            <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
+            <include>Animation_FadeInOut</include>
+            <control type="grouplist" id="9000">
+                <top>-15</top>
+                <left>-15</left>
+                <right>-15</right>
+                <height>view_height</height>
+                <orientation>vertical</orientation>
+                <itemgap>0</itemgap>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <control type="group" id="3000">
+                    <height>view_height</height>
+                    <control type="group">
+                        <top>15</top>
+                        <left>15</left>
+                        <right>15</right>
+                        <height>view_list_height</height>
+                        <!-- Poster -->
+                        <control type="group">
+                            <include>Animation_Left_Delay</include>
+                            <include content="View_50_Poster">
+                                <param name="include" value="Defs_Null" />
+                                <param name="visible" value="true" />
+                                <param name="height" value="654" />
+                                <param name="width" value="654" />
+                                <param name="aspectratio" value="keep" />
+                                <param name="diffuse" value="diffuse/square-big.png" />
+                            </include>
+                            <include>View_50_Info</include>
+                        </control>
+
+                        <!-- Info -->
+                        <control type="group">
+                            <top>-15</top>
+                            <left>669</left>
+                            <include>Animation_Right_Delay</include>
+                            <control type="grouplist">
+                                <orientation>vertical</orientation>
+                                <usecontrolcoords>true</usecontrolcoords>
+                                <itemgap>0</itemgap>
+                                <include content="Object_Info_Title">
+                                    <param name="label" value="$VAR[Label_MainTitle]" />
+                                </include>
+                                <include content="Object_Info_Line_Label">
+                                    <param name="label" value="$VAR[Label_SubTitle]" />
+                                    <param name="textcolor" value="$VAR[ColorHighlight]" />
+                                    <param name="divider" value="false" />
+                                </include>
+                                <control type="group">
+                                    <height>230</height>
+                                    <visible>Integer.IsGreater(Container(50).NumItems,0)</visible>
+                                </control>
+                                <control type="grouplist">
+                                    <visible>Integer.IsGreater(Container(50).NumItems,0)</visible>
+                                    <height>360</height>
+                                    <orientation>vertical</orientation>
+                                    <usecontrolcoords>true</usecontrolcoords>
+                                    <itemgap>0</itemgap>
+                                    <include content="Object_Info_Plot">
+                                        <param name="maxheight" value="160" />
+                                    </include>
+                                    <include>Object_Info_Details_Addons</include>
+                                </control>
+                                <control type="grouplist">
+                                    <visible>!Integer.IsGreater(Container(50).NumItems,0)</visible>
+                                    <height>600</height>
+                                    <orientation>vertical</orientation>
+                                    <usecontrolcoords>true</usecontrolcoords>
+                                    <itemgap>0</itemgap>
+                                    <include content="Object_Info_Plot">
+                                        <param name="maxheight" value="400" />
+                                    </include>
+                                    <include>Object_Info_Details_Addons</include>
+                                </control>
+                            </control>
+                            <include content="View_51_Wall_Container">
+                                <param name="controllayout" value="View_Cast" />
+                                <param name="id" value="50" />
+                                <param name="height" value="item_cast_height" />
+                                <param name="orientation" value="horizontal" />
+                                <param name="itemwidth" value="377" />
+                                <param name="iconheight" value="220" />
+                                <param name="diffuse" value="diffuse/landscape-wall.png" />
+                                <param name="labelinclude" value="Defs_Null" />
+                                <param name="icon" value="$INFO[ListItem.Icon]" />
+                                <param name="visible" value="Integer.IsGreater(Container(50).NumItems,0) | Container(50).IsUpdating" />
+                                <ondown>300</ondown>
+                                <onup>9601</onup>
+                                <onright>noop</onright>
+                                <onleft>noop</onleft>
+                                <top>140</top>
+                                <left>-15</left>
+                                <right>-25</right>
+                            </include>
+                            <control type="grouplist" id="300">
+                                <onup>50</onup>
+                                <include>Defs_ButtonList</include>
+                                <!-- use -->
+                                <include content="Object_Info_Button">
+                                    <param name="id" value="12" />
+                                    <param name="groupid" value="8012" />
+                                    <param name="label" value="$INFO[Control.GetLabel(12)]" />
+                                    <param name="icon" value="special://skin/extras/icons/play3.png" />
+                                    <param name="visible" value="Control.IsEnabled(12)" />
+                                </include>
+
+                                <!-- enable /disable -->
+                                <include content="Object_Info_Button">
+                                    <param name="id" value="7" />
+                                    <param name="groupid" value="8007" />
+                                    <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+                                    <param name="label" value="$VAR[Label_AddonInfo_Enable]" />
+                                    <param name="icon" value="$VAR[Image_AddonInfo_Enable]" />
+                                    <param name="visible" value="Control.IsEnabled(7) + !Skin.HasSetting(KioskMode)" />
+                                </include>
+
+                                <!-- install / uninstall -->
+                                <include content="Object_Info_Button">
+                                    <param name="id" value="6" />
+                                    <param name="groupid" value="8006" />
+                                    <param name="usealtwidth" value="$EXP[FontSetIsMediumOrLarger]" />
+                                    <param name="altwidth" value="130" />
+                                    <param name="label" value="$INFO[Control.GetLabel(6)]" />
+                                    <param name="icon" value="$VAR[Image_AddonInfo_Install]" />
+                                    <param name="visible" value="Control.IsEnabled(6) + !Skin.HasSetting(KioskMode)" />
+                                </include>
+
+                                <!-- Update -->
+                                <include content="Object_Info_Button">
+                                    <param name="id" value="8" />
+                                    <param name="groupid" value="8008" />
+                                    <param name="label" value="$LOCALIZE[24069]" />
+                                    <param name="icon" value="special://skin/extras/icons/update.png" />
+                                    <param name="visible" value="Control.IsEnabled(8) + !Skin.HasSetting(KioskMode)" />
+                                    <onfocus>SetProperty(FilePath,1,Home)</onfocus>
+                                    <onunfocus>ClearProperty(FilePath,Home)</onunfocus>
+                                </include>
+
+                                <!-- Settings -->
+                                <include content="Object_Info_Button">
+                                    <param name="id" value="9" />
+                                    <param name="groupid" value="8009" />
+                                    <param name="label" value="$LOCALIZE[5]" />
+                                    <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+                                    <param name="icon" value="special://skin/extras/icons/settings.png" />
+                                    <param name="visible" value="Control.IsEnabled(9) + !Skin.HasSetting(KioskMode)" />
+                                </include>
+
+                                <!-- Dependencies -->
+                                <include content="Object_Info_Button">
+                                    <param name="id" value="10" />
+                                    <param name="groupid" value="8010" />
+                                    <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+                                    <param name="label" value="Depends" />
+                                    <param name="icon" value="special://skin/extras/icons/dependencies.png" />
+                                    <param name="visible" value="Control.IsEnabled(10) + !Skin.HasSetting(KioskMode)" />
+                                </include>
+
+                                <!-- Auto Up -->
+                                <include content="Object_Info_Button">
+                                    <param name="id" value="13" />
+                                    <param name="groupid" value="8013" />
+                                    <param name="width" value="auto" />
+                                    <param name="label" value="$INFO[Control.GetLabel(13)]" />
+                                    <param name="icon" value="$VAR[Image_AutoUpdate]" />
+                                    <param name="controltype" value="radiobutton" />
+                                    <param name="visible" value="Control.IsEnabled(13) + !Skin.HasSetting(KioskMode)" />
+                                </include>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </control>
+
+       
+        <include>Object_PlotOverlay</include>
+        
+        
+    </controls>
+
+</window>
