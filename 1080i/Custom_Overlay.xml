@@ -4,7 +4,7 @@
     <visible>!Window.IsVisible(startup)</visible>
     <controls>
 
-        <control type="group">
+        <!-- <control type="group">
             <visible>Skin.HasSetting(DebugInfo)</visible>
             <control type="image">
                 <left>view_pad</left>
@@ -41,7 +41,7 @@
                 <height>1</height>
                 <texture colordiffuse="red">common/white.png</texture>
             </control>
-            <!-- <control type="image">
+            <control type="image">
                 <centertop>50%</centertop>
                 <height>1</height>
                 <texture colordiffuse="red">common/white.png</texture>
@@ -50,8 +50,8 @@
                 <centerleft>50%</centerleft>
                 <width>1</width>
                 <texture colordiffuse="red">common/white.png</texture>
-            </control> -->
-        </control>
+            </control>
+        </control> -->
 
         <!-- Window/Dialog debug -->
 

@@ -19,6 +19,8 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
+    0.1.5
+        - added button to easy turning on/off debugging info
     0.1.4
         - little changes in LiveTV OSD
     0.1.3

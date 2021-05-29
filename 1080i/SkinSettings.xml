@@ -876,6 +876,22 @@
                         <onclick>Skin.ToggleSetting(MinimalBusyLoader)</onclick>
                     </control>
 
+                    <!-- Debugging -->
+
+                    <control type="label" id="19782" description="LABEL">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9007)</visible>
+                        <include>Dialog_Standard_HintLabel</include>
+                        <label>Debugging</label>
+                    </control>
+
+                    <control type="radiobutton" id="9908" description="Debugging">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9007)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>Debugging</label>
+                        <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
+                        <selected>Skin.HasSetting(DebugInfo)</selected>
+                    </control>
+
                     <!-- ============ -->
                     <!-- Dependencies -->
                     <!-- ============ -->
