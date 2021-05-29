@@ -298,7 +298,7 @@
                         <aligny>top</aligny>
                         <textcolor>panel_fg_100</textcolor>
                         <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[VideoPlayer.ChannelName]</label>
+                        <label>$INFO[VideoPlayer.ChannelNumberLabel] &#8226; $INFO[VideoPlayer.ChannelName]</label>
                     </control>
                     <control type="label">
                         <font>font_button</font>
@@ -306,7 +306,7 @@
                         <align>right</align>
                         <textcolor>panel_fg_100</textcolor>
                         <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
+                        <label>$INFO[System.Time] - $INFO[VideoPlayer.EndTime]</label>
                     </control>
                     <control type="label">
                         <font>font_title_small</font>
