@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.heppen.mod" name="Arctic Zephyr 2 Mod (heppen)" provider-name="jurialmunkey, pkscout, nfm886" version="0.1.2">
+<addon id="skin.arctic.zephyr.2.heppen.mod" name="Arctic Zephyr 2 Mod (heppen)" provider-name="jurialmunkey, pkscout, nfm886" version="0.1.3">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
         <import addon="script.image.resource.select" version="3.0.2" /> <!-- not this -->
         <import addon="plugin.program.autocompletion" version="2.0.0" />
+        <import addon="script.embuary.info" version="0.0.1"/>
+        <import addon="script.embuary.helper" version="1.2.14"/>
         <import addon="plugin.video.themoviedb.helper" version="2.4.36" />
         <import addon="resource.images.studios.white" version="0.0.24" />
         <import addon="resource.images.moviegenreicons.transparent" version="0.0.6" />
@@ -17,6 +19,8 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
+    0.1.3
+        - temporary fix for youtube videos from DialogVideoInfo
     0.1.2
         - enabled minimal busy loader for Home view
     0.1.1

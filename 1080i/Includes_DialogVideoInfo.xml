@@ -295,7 +295,7 @@
                             <param name="labelinclude" value="View_Cast_Video_Label" />
                             <param name="icon" value="$INFO[ListItem.Icon]" />
                             <onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
-                            <onclick>PlayMedia($INFO[Container(5049).ListItem.FileNameAndPath])</onclick>
+                            <onclick>RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')</onclick>
                             <include>Defs_InfoList_OnBack</include>
                             <content limit="25" target="videos" sortby="file">$VAR[Info_Youtube]</content>
                             <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)</visible>
