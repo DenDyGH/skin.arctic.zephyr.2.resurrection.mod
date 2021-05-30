@@ -146,8 +146,7 @@
 
                     <control type="image" id="19181">
                         <description>Skin Sign</description>
-                        <left>400</left>
-                        <right>400</right>
+                        <centerleft>50%</centerleft>
                         <width>450</width>
                         <height>400</height>
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
