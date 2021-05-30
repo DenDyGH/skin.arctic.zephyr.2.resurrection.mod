@@ -3,7 +3,7 @@
     <include>Defs_Settings_OnLoad</include>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=301&amp;levels=1&amp;group=mainmenu|powermenu|searchmenu)</onunload>
     <onunload condition="System.HasAddon(script.colorbox)">SetProperty(NINE_manual_set,"var=main,set=$INFO[Skin.String(colorbox_main)]|var=comp,set=$INFO[Skin.String(colorbox_comp)]|var=quality,set=$INFO[Skin.String(colorbox_quality)]|var=blursize,set=$INFO[Skin.String(colorbox_blursize)]|var=bitsize,set=$INFO[Skin.String(colorbox_bitsize)]|var=pixelsize,set=$INFO[Skin.String(colorbox_pixelsize)]|var=black,set=$INFO[Skin.String(colorbox_black)]|var=white,set=$INFO[Skin.String(colorbox_white)]|var=blend,set=$INFO[Skin.String(colorbox_blend)]|var=desat,set=$INFO[Skin.String(colorbox_desat)]",home)</onunload> 
-    <onload condition="String.IsEmpty(Window.Property(CurrentFocus))">SetProperty(CurrentFocus,$NUMBER[9001])</onload>
+    <onload condition="String.IsEmpty(Window.Property(CurrentFocus))">SetProperty(CurrentFocus,$NUMBER[9150])</onload>
     <controls>
 
         <include>Global_Background</include>
@@ -12,12 +12,12 @@
             <include>Dialog_Settings_Group</include>
     
             <include content="Defs_Settings_Changer">
-                <onright>8999</onright>
+                <onright>9000</onright>
             </include>
 
             <control type="group">
                 <left>item_list_height</left>
-                <control type="grouplist" id="8999">
+                <control type="grouplist" id="9000">
                     <description>button area</description>
                     <left>0</left>
                     <top>39</top>
@@ -26,9 +26,9 @@
                     <itemgap>0</itemgap>
                     <onright>9999</onright>
                     <include>Defs_Settings_OnLeft</include>
-                    <control type="togglebutton" id="9000" description="Home">
-                        <onfocus>SetProperty(CurrentFocus,$NUMBER[9000])</onfocus>
-                        <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9000)</usealttexture>
+                    <control type="togglebutton" id="9150" description="Home">
+                        <onfocus>SetProperty(CurrentFocus,$NUMBER[9150])</onfocus>
+                        <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9150)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
@@ -145,13 +145,13 @@
                     <!-- Debugging -->
 
                     <control type="label" id="19181" description="LABEL">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9000)</visible>
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
                         <include>Dialog_Standard_HintLabel</include>
                         <label>Debugging</label>
                     </control>
 
-                    <control type="radiobutton" id="9000" description="Debugging">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9000)</visible>
+                    <control type="radiobutton" id="19150" description="Debugging">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>Debugging</label>
                         <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
