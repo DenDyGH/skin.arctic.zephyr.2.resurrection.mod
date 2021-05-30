@@ -12,12 +12,12 @@
             <include>Dialog_Settings_Group</include>
     
             <include content="Defs_Settings_Changer">
-                <onright>9000</onright>
+                <onright>8999</onright>
             </include>
 
             <control type="group">
                 <left>item_list_height</left>
-                <control type="grouplist" id="9000">
+                <control type="grouplist" id="8999">
                     <description>button area</description>
                     <left>0</left>
                     <top>39</top>
@@ -26,6 +26,15 @@
                     <itemgap>0</itemgap>
                     <onright>9999</onright>
                     <include>Defs_Settings_OnLeft</include>
+                    <control type="togglebutton" id="9000" description="Home">
+                        <onfocus>SetProperty(CurrentFocus,$NUMBER[9000])</onfocus>
+                        <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9000)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
+                        <width>550</width>
+                        <include>Defs_Settings_Button</include>
+                        <label>Arctic Zephyr 2 - H. Mods</label>
+                        <altlabel>[COLOR=Selected]Arctic Zephyr 2 - H. Mods[/COLOR]</altlabel>
+                    </control>
                     <control type="togglebutton" id="9001" description="Home">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9001])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9001)</usealttexture>
@@ -128,9 +137,31 @@
                     <ondown>9999</ondown>
                     <pagecontrol>61</pagecontrol>
                     <usecontrolcoords>true</usecontrolcoords>
+                    
+                    <!-- ========================= -->
+                    <!-- Arctic Zephyr 2 - H. Mods -->
+                    <!-- ========================= -->
+
+                    <!-- Debugging -->
+
+                    <control type="label" id="19181" description="LABEL">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9000)</visible>
+                        <include>Dialog_Standard_HintLabel</include>
+                        <label>Debugging</label>
+                    </control>
+
+                    <control type="radiobutton" id="9000" description="Debugging">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9000)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>Debugging</label>
+                        <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
+                        <selected>Skin.HasSetting(DebugInfo)</selected>
+                    </control>
+
                     <!-- ==== -->
                     <!-- Home -->
                     <!-- ==== -->
+
                     <control type="label" id="19181" description="LABEL">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible>
                         <include>Dialog_Standard_HintLabel</include>
@@ -230,11 +261,10 @@
                         <onclick>Skin.ToggleSetting(DisableAutoScrollWidgets)</onclick>
                     </control>
 
-                    
-
                     <!-- ========== -->
                     <!-- Background -->
                     <!-- ========== -->
+
                     <control type="label" id="19281" description="LABEL">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
                         <include>Dialog_Standard_HintLabel</include>
@@ -454,6 +484,7 @@
                     <!-- ======= -->
                     <!-- Library -->
                     <!-- ======= -->
+
                     <control type="label" id="19483" description="LABEL">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9004)</visible>
                         <include>Dialog_Standard_HintLabel</include>
@@ -874,22 +905,6 @@
                         <label>$LOCALIZE[31108]</label>
                         <selected>Skin.HasSetting(MinimalBusyLoader)</selected>
                         <onclick>Skin.ToggleSetting(MinimalBusyLoader)</onclick>
-                    </control>
-
-                    <!-- Debugging -->
-
-                    <control type="label" id="19782" description="LABEL">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9007)</visible>
-                        <include>Dialog_Standard_HintLabel</include>
-                        <label>Debugging</label>
-                    </control>
-
-                    <control type="radiobutton" id="9908" description="Debugging">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9007)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>Debugging</label>
-                        <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
-                        <selected>Skin.HasSetting(DebugInfo)</selected>
                     </control>
 
                     <!-- ============ -->

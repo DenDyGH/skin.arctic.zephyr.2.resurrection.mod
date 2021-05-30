@@ -20,6 +20,8 @@
     <extension point="xbmc.addon.metadata">
         <news>
     0.1.5
+        - moved debugging button to new section
+        - added new section to settings page
         - added button to easy turning on/off debugging info
     0.1.4
         - little changes in LiveTV OSD
