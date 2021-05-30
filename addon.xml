@@ -19,6 +19,8 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
+    0.1.8
+        - small fixes
     0.1.7
         - filled debugging settings with image and description
     0.1.6

@@ -32,8 +32,8 @@
                         <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
-                        <label>Arctic Zephyr 2 - H. Mods</label>
-                        <altlabel>[COLOR=Selected]Arctic Zephyr 2 - H. Mods[/COLOR]</altlabel>
+                        <label>Arctic Zephyr 2</label>
+                        <altlabel>[COLOR=Selected]Arctic Zephyr 2[/COLOR]</altlabel>
                     </control>
                     <control type="togglebutton" id="9001" description="Home">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9001])</onfocus>
