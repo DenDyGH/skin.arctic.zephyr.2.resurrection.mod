@@ -144,7 +144,38 @@
 
                     <!-- Debugging -->
 
+                    <control type="image" id="19181">
+                        <description>Skin Sign</description>
+                        <left>400</left>
+                        <right>400</right>
+                        <width>450</width>
+                        <height>400</height>
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
+                        <colordiffuse>FFFFFFFF</colordiffuse>
+                        <fadetime>200</fadetime>
+                        <texture border="5">../sign.png</texture>
+                        <bordersize>5</bordersize>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+
+                    <control type="label" id="19181">
+                        <description>Skin description</description>
+                        <left>80</left>
+                        <right>80</right>
+                        <top>60</top>
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[30038]</label>
+                        <haspath>false</haspath>
+                        <font>font14</font>
+                        <wrapmultiline>true</wrapmultiline>
+                        <scrollspeed>50</scrollspeed>
+                        <scrollsuffix> - </scrollsuffix>
+                  </control>
+
                     <control type="label" id="19181" description="LABEL">
+                        <top>120</top>
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
                         <include>Dialog_Standard_HintLabel</include>
                         <label>Debugging</label>
