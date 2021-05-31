@@ -1,3 +1,5 @@
+0.2.0
+    - fix for artist slideshow in MusicVisualisation.xml view
 0.1.9
     - added small busy spinner for reloading widgets
 0.1.8
