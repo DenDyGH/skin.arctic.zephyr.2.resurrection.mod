@@ -297,7 +297,7 @@
                 <param name="groupid" value="$PYTHON[int(mainmenuid)]$PYTHON[int(id) + 7500]" />
                 <param name="id" value="$PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]" />
                 <param name="label" value="$SKINSHORTCUTS[widgetName]" />
-                <param name="spinner-visible" value="String.IsEmpty(Container($PARAM[$PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]]).ListItem.Label)" />
+                <param name="spinner-visible" value="true" />
                 <visible>String.IsEqual(Container(301).ListItem.Property(id),$SKINSHORTCUTS[mainmenuid])</visible>
             </include>
             <include content="Object_Widget_Spotlight" condition="!Skin.HasSetting(FixedWidgets)">
