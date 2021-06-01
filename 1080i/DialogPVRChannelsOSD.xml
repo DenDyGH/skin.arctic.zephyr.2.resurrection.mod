@@ -79,7 +79,7 @@
                                 <aligny>top</aligny>
                                 <textcolor>panel_fg_100</textcolor>
                                 <selectedcolor>panel_fg_100</selectedcolor>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$INFO[VideoPlayer.ChannelNumberLabel] &#8226; $INFO[ListItem.Label]</label>
                             </control>
                             <control type="label">
                                 <font>font_title_mini</font>
@@ -141,7 +141,7 @@
                                 <aligny>top</aligny>
                                 <textcolor>panel_fg_100</textcolor>
                                 <selectedcolor>panel_fg_100</selectedcolor>
-                                <label>$LOCALIZE[31184]</label>
+                                <label>$INFO[VideoPlayer.ChannelNumberLabel] &#8226; $LOCALIZE[31184]</label>
                                 <visible>!ListItem.IsPlaying</visible>
                             </control>
                             <control type="label">
@@ -149,7 +149,7 @@
                                 <aligny>top</aligny>
                                 <textcolor>panel_fg_100</textcolor>
                                 <selectedcolor>panel_fg_100</selectedcolor>
-                                <label>$LOCALIZE[31114]</label>
+                                <label>$INFO[VideoPlayer.ChannelNumberLabel] &#8226; $LOCALIZE[31114]</label>
                                 <visible>ListItem.IsPlaying</visible>
                             </control>
                             <control type="label">
