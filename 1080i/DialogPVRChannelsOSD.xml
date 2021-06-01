@@ -2,6 +2,32 @@
 <window>
     <defaultcontrol always="true">11</defaultcontrol>
     <controls>
+
+        <!-- show current channels group -->
+        <control type="group">
+            <left>80</left>
+            <width>994</width>
+            <height>76</height>
+            <top>-4</top>
+            <control type="image">
+                <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
+                <animation effect="fade" end="85" condition="true">Conditional</animation>
+            </control>
+            <control type="group">
+                <left>30</left>
+                <right>30</right>
+                <top>20</top>
+                <bottom>20</bottom>
+                <control type="label">
+                    <font>font_title_mini</font>
+                    <align>right</align>
+                    <textcolor>panel_fg_100</textcolor>
+                    <selectedcolor>panel_fg_100</selectedcolor>
+                    <label>$INFO[VideoPlayer.ChannelGroup]</label>
+                </control>
+            </control>
+        </control>
+
         <control type="group">
             <left>view_pad</left>
             <right>view_pad</right>
