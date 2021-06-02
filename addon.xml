@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.heppen.mod" name="Arctic Zephyr 2 Mod (heppen)" provider-name="jurialmunkey, pkscout, nfm886" version="0.2.1">
+<addon id="skin.arctic.zephyr.2.heppen.mod" name="Arctic Zephyr 2 Mod (heppen)" provider-name="jurialmunkey, pkscout, nfm886" version="0.2.2">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -20,6 +20,9 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
+    0.2.2
+        - fixed ratings in DialogVideoInfo.xml view
+        - added channel numbers to DialogPVRChannelsOSD view
     0.2.1
         - another fix for artist slideshow in MusicVisualisation.xml view
         - show current channels group in DialogPVRChannelsOSD view

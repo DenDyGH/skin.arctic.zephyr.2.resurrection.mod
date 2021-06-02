@@ -1,3 +1,6 @@
+0.2.2
+    - fixed ratings in DialogVideoInfo.xml view
+    - added channel numbers to DialogPVRChannelsOSD view
 0.2.1
     - another fix for artist slideshow in MusicVisualisation.xml view
     - show current channels group in DialogPVRChannelsOSD view
