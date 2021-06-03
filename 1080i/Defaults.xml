@@ -339,4 +339,33 @@
         </font>
     </include>
 
+    <include name="Defaults_ArialFonts">
+        <!-- Plot Font -->
+        <font>
+            <name>font_plotbox</name>
+            <filename>arial.ttf</filename>
+            <size>30</size>
+            <aspect>0.9</aspect>
+        </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>arial.ttf</filename>
+            <size>26</size>
+            <aspect>0.9</aspect>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>arial.ttf</filename>
+            <aspect>0.9</aspect>
+            <size>48</size>
+            <linespacing>1.4</linespacing>
+        </font>
+
+        <font>
+            <name>font_info_display</name>
+            <filename>arialbd.ttf</filename>
+            <size>64</size>
+        </font>
+    </include>
+
 </includes>
