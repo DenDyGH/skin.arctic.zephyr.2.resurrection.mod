@@ -65,4 +65,10 @@
         <icon>special://skin/extras/icons/settings.png</icon>
         <action>ActivateWindow(Settings)</action>
     </shortcut>
+    <shortcut>
+        <label>13012</label>
+        <label2>Common Shortcut</label2>
+        <icon>special://skin/extras/icons/power.png</icon>
+        <action>Quit()</action>
+    </shortcut>
 </shortcuts>
