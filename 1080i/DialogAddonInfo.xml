@@ -146,13 +146,12 @@
 
                                 <!-- Update -->
                                 <include content="Object_Info_Button">
-                                    <param name="id" value="8" />
+                                    <param name="id" value="2" />
                                     <param name="groupid" value="8008" />
-                                    <param name="label" value="$LOCALIZE[24069]" />
+                                    <param name="label" value="$LOCALIZE[24138]" />
                                     <param name="icon" value="special://skin/extras/icons/update.png" />
-                                    <param name="visible" value="Control.IsEnabled(8) + !Skin.HasSetting(KioskMode)" />
-                                    <onfocus>SetProperty(FilePath,1,Home)</onfocus>
-                                    <onunfocus>ClearProperty(FilePath,Home)</onunfocus>
+                                    <param name="visible" value="Control.IsEnabled(2) + !Skin.HasSetting(KioskMode)" />
+                                    <onclick>SendClick(8)</onclick>
                                 </include>
 
                                 <!-- Settings -->
