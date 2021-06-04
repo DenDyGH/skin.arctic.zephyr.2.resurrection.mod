@@ -1,3 +1,8 @@
+0.2.5
+    - fixed ratings in DialogVideoInfo
+    - added "power menu" entry to main menu on initial setup
+    - reduced height of manage dialog window in DialogVideoInfo.xml
+    - fixed update button in addon info window
 0.2.4
     - rolled back ratings fixes to avoid performance regress
     - updated images
