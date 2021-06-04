@@ -498,7 +498,6 @@
                 <height>100</height>
                 <top>0</top>
                 <onfocus>SetProperty(SkinHelper.WidgetContainer,5600,Home)</onfocus>
-                <onfocus>SetProperty(ListItemHelper.WidgetContainerId,5600,Home)</onfocus>
                 <onup>301</onup>
                 <ondown>301</ondown>
                 <onback>301</onback>
