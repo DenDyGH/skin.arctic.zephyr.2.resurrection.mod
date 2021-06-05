@@ -1,3 +1,5 @@
+0.2.6
+    - moved epg button in video osd view
 0.2.5
     - fixed ratings in DialogVideoInfo
     - added "power menu" entry to main menu on initial setup
