@@ -55,7 +55,7 @@
 
     <variable name="Label_Player_Plot">
         <value condition="!String.IsEmpty(VideoPlayer.Plot)">$INFO[VideoPlayer.Plot]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Plot))">$INFO[Window(Home).Property(SkinHelper.Player.Plot)]</value>
+        <!-- <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Plot))">$INFO[Window(Home).Property(SkinHelper.Player.Plot)]</value> -->
     </variable>
 
     <variable name="Label_SkinSettings_HomeLayout">

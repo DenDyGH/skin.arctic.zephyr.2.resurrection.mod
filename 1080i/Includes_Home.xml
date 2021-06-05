@@ -160,7 +160,7 @@
         <ondown condition="Integer.IsGreater(Container(302).NumItems,0) + Skin.HasSetting(SubmenuOnly)">302</ondown>
         <onup condition="!Player.HasVideo | !Skin.HasSetting(global.showvideo)">5600</onup>
         <onup condition="Player.HasVideo + Skin.HasSetting(global.showvideo)">noop</onup>
-        <onfocus>SetProperty(SkinHelper.WidgetContainer,5600,Home)</onfocus>
+        <onfocus>SetProperty(TMDbHelper.WidgetContainer,5600,Home)</onfocus>
         <onfocus>ClearProperty(WidgetFocus)</onfocus>
 
         <onleft condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + Control.IsVisible(9999)">9999</onleft>
