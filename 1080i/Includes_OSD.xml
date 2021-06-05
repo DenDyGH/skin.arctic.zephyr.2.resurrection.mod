@@ -542,11 +542,11 @@
                                 <left>256</left>
                                 <visible>!Pvr.IsPlayingTv</visible>
                                 <animation effect="slide" end="-256" condition="Skin.HasSetting(DisableStarRating)">Conditional</animation>
-                                <include content="Object_OSD_Ratings">
+                                <!-- <include content="Object_OSD_Ratings">
                                     <param name="align" value="left" />
                                     <param name="imdbvotes" value="false" />
                                     <param name="colordiffuse" value="panel_fg" />
-                                </include>
+                                </include> -->
                             </control>
                             <control type="label">
                                 <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]... ,]</label>
