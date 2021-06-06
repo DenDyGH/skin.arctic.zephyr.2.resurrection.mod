@@ -51,7 +51,7 @@
                 <include>Defs_BusySpinner</include>
             </control>
 
-            <control type="grouplist" id="9000">
+            <!-- <control type="grouplist" id="9000">
                 <description>Control Area</description>
                 <right>20</right>
                 <width>680</width>
@@ -159,8 +159,8 @@
                         <onright>9299</onright>
                         <width>335</width>
                         <label>$LOCALIZE[409]</label>
-                        <!-- <onclick condition="String.IsEqual(Skin.String(colorbox_effect),twotone) | String.IsEqual(Skin.String(colorbox_effect),posterize) | String.IsEqual(Skin.String(colorbox_effect),desaturate) | String.IsEqual(Skin.String(colorbox_effect),dataglitch) | String.IsEqual(Skin.String(colorbox_effect),pixelate)">Skin.SetString(colorbox_quality,1)</onclick>
-                        <onclick condition="![String.IsEqual(Skin.String(colorbox_effect),twotone) | String.IsEqual(Skin.String(colorbox_effect),posterize) | String.IsEqual(Skin.String(colorbox_effect),desaturate) | String.IsEqual(Skin.String(colorbox_effect),dataglitch) | String.IsEqual(Skin.String(colorbox_effect),pixelate)]">Skin.SetString(colorbox_quality,4)</onclick> -->
+                        <onclick condition="String.IsEqual(Skin.String(colorbox_effect),twotone) | String.IsEqual(Skin.String(colorbox_effect),posterize) | String.IsEqual(Skin.String(colorbox_effect),desaturate) | String.IsEqual(Skin.String(colorbox_effect),dataglitch) | String.IsEqual(Skin.String(colorbox_effect),pixelate)">Skin.SetString(colorbox_quality,1)</onclick>
+                        <onclick condition="![String.IsEqual(Skin.String(colorbox_effect),twotone) | String.IsEqual(Skin.String(colorbox_effect),posterize) | String.IsEqual(Skin.String(colorbox_effect),desaturate) | String.IsEqual(Skin.String(colorbox_effect),dataglitch) | String.IsEqual(Skin.String(colorbox_effect),pixelate)]">Skin.SetString(colorbox_quality,4)</onclick>
                         <onclick>Skin.SetString(colorbox_effect,blur)</onclick>
                         <onclick>Skin.SetString(colorbox_quality,4)</onclick>
                         <onclick>Skin.SetString(colorbox_blend,100)</onclick>
@@ -186,7 +186,7 @@
                         <include>Dialog_Standard_ListButton</include>
                     </control>
                 </control>
-            </control>
+            </control> -->
 
             <control type="grouplist">
                 <description>Control Area</description>
