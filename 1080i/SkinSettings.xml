@@ -2,7 +2,7 @@
     <defaultcontrol always="true">300</defaultcontrol>
     <include>Defs_Settings_OnLoad</include>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=301&amp;levels=1&amp;group=mainmenu|powermenu|searchmenu)</onunload>
-    <onunload condition="System.HasAddon(script.colorbox)">SetProperty(NINE_manual_set,"var=main,set=$INFO[Skin.String(colorbox_main)]|var=comp,set=$INFO[Skin.String(colorbox_comp)]|var=quality,set=$INFO[Skin.String(colorbox_quality)]|var=blursize,set=$INFO[Skin.String(colorbox_blursize)]|var=bitsize,set=$INFO[Skin.String(colorbox_bitsize)]|var=pixelsize,set=$INFO[Skin.String(colorbox_pixelsize)]|var=black,set=$INFO[Skin.String(colorbox_black)]|var=white,set=$INFO[Skin.String(colorbox_white)]|var=blend,set=$INFO[Skin.String(colorbox_blend)]|var=desat,set=$INFO[Skin.String(colorbox_desat)]",home)</onunload> 
+    <!-- <onunload condition="System.HasAddon(script.colorbox)">SetProperty(NINE_manual_set,"var=main,set=$INFO[Skin.String(colorbox_main)]|var=comp,set=$INFO[Skin.String(colorbox_comp)]|var=quality,set=$INFO[Skin.String(colorbox_quality)]|var=blursize,set=$INFO[Skin.String(colorbox_blursize)]|var=bitsize,set=$INFO[Skin.String(colorbox_bitsize)]|var=pixelsize,set=$INFO[Skin.String(colorbox_pixelsize)]|var=black,set=$INFO[Skin.String(colorbox_black)]|var=white,set=$INFO[Skin.String(colorbox_white)]|var=blend,set=$INFO[Skin.String(colorbox_blend)]|var=desat,set=$INFO[Skin.String(colorbox_desat)]",home)</onunload>  -->
     <onload condition="String.IsEmpty(Window.Property(CurrentFocus))">SetProperty(CurrentFocus,$NUMBER[9150])</onload>
     <controls>
 
@@ -309,7 +309,7 @@
                         <onclick>Skin.ToggleSetting(NoFanart)</onclick>
                     </control>
 
-                    <control type="radiobutton" id="19202" description="Blur background fanart">
+                    <!-- <control type="radiobutton" id="19202" description="Blur background fanart">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31275]</label>
@@ -345,7 +345,7 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31060]</label>
                         <onclick>ActivateWindow(1116)</onclick>
-                    </control>
+                    </control> -->
 
                     <control type="button" id="19204" description="Set Fallback Image">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
@@ -1010,7 +1010,7 @@
                         <selected>System.HasAddon(script.toolbox)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
-                    <control type="radiobutton" id="19808">
+                    <!-- <control type="radiobutton" id="19808">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>script.colorbox</label>
                         <label2>$INFO[System.AddonVersion(script.colorbox)]        </label2>
@@ -1018,7 +1018,7 @@
                         <onclick condition="!System.HasAddon(script.colorbox)">InstallAddon(script.colorbox)</onclick>
                         <selected>System.HasAddon(script.colorbox)</selected>
                         <include>Defs_Settings_Button</include>
-                    </control>
+                    </control> -->
                     <control type="radiobutton" id="19809">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>plugin.video.themoviedb.helper</label>

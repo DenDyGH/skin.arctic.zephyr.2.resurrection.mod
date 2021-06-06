@@ -64,7 +64,7 @@
     </include>
 
     <include name="Global_Background">
-        <control type="multiimage" id="7975">
+        <!-- <control type="multiimage" id="7975">
             <left>-2160</left>
             <width>1</width>
             <height>1</height>
@@ -74,7 +74,7 @@
             <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
             <visible>System.HasAddon(script.colorbox)</visible>
             <visible>Skin.HasSetting(EnableBlur)</visible>
-        </control>
+        </control> -->
         <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
         <include condition="!Skin.HasSetting(global.showvideo)">Global_Videowindow_Hidden</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
