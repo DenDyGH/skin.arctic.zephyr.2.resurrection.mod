@@ -237,29 +237,29 @@
         <value condition="System.HasAddon(plugin.video.themoviedb.helper) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),2 Oscar)">x2</value>
         <value condition="System.HasAddon(plugin.video.themoviedb.helper) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),1 Oscar)">x1</value>
         
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),20 Oscar)">x20</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),19 Oscar)">x19</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),18 Oscar)">x18</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),17 Oscar)">x17</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),16 Oscar)">x16</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),15 Oscar)">x15</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),14 Oscar)">x14</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),13 Oscar)">x13</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),12 Oscar)">x12</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),11 Oscar)">x11</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),10 Oscar)">x10</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),9 Oscar)">x9</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),8 Oscar)">x8</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),7 Oscar)">x7</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),6 Oscar)">x6</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),5 Oscar)">x5</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),4 Oscar)">x4</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),3 Oscar)">x3</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),2 Oscar)">x2</value>
-        <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Awards),1 Oscar)">x1</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),20 Oscar)">x20</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),19 Oscar)">x19</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),18 Oscar)">x18</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),17 Oscar)">x17</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),16 Oscar)">x16</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),15 Oscar)">x15</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),14 Oscar)">x14</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),13 Oscar)">x13</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),12 Oscar)">x12</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),11 Oscar)">x11</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),10 Oscar)">x10</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),9 Oscar)">x9</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),8 Oscar)">x8</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),7 Oscar)">x7</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),6 Oscar)">x6</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),5 Oscar)">x5</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),4 Oscar)">x4</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),3 Oscar)">x3</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),2 Oscar)">x2</value>
+        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),1 Oscar)">x1</value>
     </variable>
 
-    <variable name="Label_OSD_Oscars">
+    <!-- <variable name="Label_OSD_Oscars">
         <value condition="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),20 Oscar)">x20</value>
         <value condition="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),19 Oscar)">x19</value>
         <value condition="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),18 Oscar)">x18</value>
@@ -280,7 +280,7 @@
         <value condition="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),3 Oscar)">x3</value>
         <value condition="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),2 Oscar)">x2</value>
         <value condition="String.Contains(Window(Home).Property(SkinHelper.Player.Awards),1 Oscar)">x1</value>
-    </variable>
+    </variable> -->
 
     <variable name="Label_Filtered">
         <value condition="Container.Filtered">$LOCALIZE[16041]</value>
@@ -391,8 +391,8 @@
     <variable name="Label_OverlayTitle">
         <value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
         <value condition="!String.IsEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Title))">$INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Label))">$INFO[Window(Home).Property(SkinHelper.ListItem.Label)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Title))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Label))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Label)]</value>
         <value>$LOCALIZE[31380]</value>
     </variable>
 
@@ -400,7 +400,7 @@
         <value condition="!String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(ListItem.AddonDisclaimer) | !String.IsEmpty(ListItem.AddonNews)">$INFO[ListItem.AddonDisclaimer,[B]$LOCALIZE[24052][/B][CR],[CR][CR]]$INFO[ListItem.AddonDescription,[B]$LOCALIZE[21821][/B][CR],[CR][CR]]$INFO[ListItem.AddonNews,[B]$LOCALIZE[31303][/B][CR],[CR][CR]]</value>
         <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Plot]</value>
         <value condition="Window.IsVisible(Home) + [!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.AddonDescription)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.AddonDisclaimer)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.AddonNews))]">$INFO[Window(Home).Property(SkinHelper.ListItem.AddonDisclaimer),[B]$LOCALIZE[24052][/B][CR],[CR][CR]]$INFO[Window(Home).Property(SkinHelper.ListItem.AddonDescription),[B]$LOCALIZE[21821][/B][CR],[CR][CR]]$INFO[Window(Home).Property(SkinHelper.ListItem.AddonNews),[B]$LOCALIZE[31303][/B][CR],[CR][CR]]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Tagline),[B],[/B][CR]]$INFO[Window(Home).Property(SkinHelper.ListItem.Artist),[B],[/B][CR]]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Plot))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Tagline),[B],[/B][CR]]$INFO[Window(Home).Property(SkinHelper.ListItem.Artist),[B],[/B][CR]]$INFO[Window(Home).Property(TMDbHelper.ListItem.Plot)]</value>
         <value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Artist,[B],[/B][CR]]$VAR[Label_Plot]</value>
     </variable>
     
@@ -411,7 +411,7 @@
         <value condition="!String.IsEmpty(ListItem.AddonNews)">$INFO[ListItem.AddonNews]</value>
         <value condition="!String.IsEmpty(ListItem.PlotOutline) + Skin.HasSetting(PlotOutline)">$INFO[ListItem.PlotOutline]</value>
         <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Plot))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Plot)]</value>
     </variable>
 
     <variable name="Label_PlayerStatus">
