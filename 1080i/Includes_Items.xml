@@ -602,13 +602,13 @@
                 <visible>!Skin.HasSetting(KioskMode)</visible>
             </item>
             <!-- Extra Fanart -->
-            <item>
+            <!-- <item>
                 <label>$VAR[Label_ExtraFanart]</label>
                 <icon>special://skin/extras/icons/filebox.png</icon>
                 <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
                 <visible>Control.IsEnabled(6005)</visible>
                 <visible>!Skin.HasSetting(KioskMode)</visible>
-            </item>
+            </item> -->
 
             <!-- Settings -->
             <item>

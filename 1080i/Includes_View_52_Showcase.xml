@@ -32,7 +32,7 @@
                     <aligny>top</aligny>
                     <font>font_tiny</font>
                     <textcolor>$VAR[ColorHighlight]</textcolor>
-                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),[COLOR=main_fg_100],[/COLOR]  |  ]$VAR[Label_Duration,[COLOR=main_fg_100],[/COLOR]  |  ]$VAR[Label_Sets_Count,[COLOR=main_fg_100],[/COLOR]]</label>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),[COLOR=main_fg_100],[/COLOR]  |  ]$VAR[Label_Duration,[COLOR=main_fg_100],[/COLOR]]</label>
                     <height>60</height>
                     <visible>ListItem.IsCollection</visible>
                 </control>

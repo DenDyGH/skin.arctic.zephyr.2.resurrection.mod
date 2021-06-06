@@ -621,13 +621,13 @@
                         <onclick>ReloadSkin()</onclick>
                     </control>
 
-                    <control type="radiobutton" id="19401">
+                    <!-- <control type="radiobutton" id="19401">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9004)</visible>
                         <label>$LOCALIZE[31022]</label>
                         <include>Defs_Settings_Button</include>
                         <selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
                         <onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
-                    </control>
+                    </control> -->
 
                     <!-- ================= -->
                     <!-- Video / Music OSD -->
@@ -684,14 +684,14 @@
                         <onclick>Skin.ToggleSetting(OSDSubtitleSettings)</onclick>
                     </control>
 
-                    <control type="button" id="19506" description="Close OSD Auto">
+                    <!-- <control type="button" id="19506" description="Close OSD Auto">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31386]</label>
                         <label2>$INFO[Skin.String(SkinHelper.AutoCloseVideoOSD)]</label2>
                         <onclick condition="!String.IsEmpty(SkinHelper.AutoCloseVideoOSD)">Skin.Reset(SkinHelper.AutoCloseVideoOSD)</onclick>
                         <onclick condition="String.IsEmpty(SkinHelper.AutoCloseVideoOSD)">Skin.SetNumeric(SkinHelper.AutoCloseVideoOSD)</onclick>
-                    </control>
+                    </control> -->
 
                     <control type="label" id="19507" description="LABEL MUSIC OSD">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
@@ -766,14 +766,14 @@
                         <selected>Skin.HasSetting(AutoMusicVis)</selected>
                         <onclick>Skin.ToggleSetting(AutoMusicVis)</onclick>
                     </control>
-                    <control type="button" id="19517" description="Close OSD Auto">
+                    <!-- <control type="button" id="19517" description="Close OSD Auto">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31386]</label>
                         <label2>$INFO[Skin.String(SkinHelper.AutoCloseMusicOSD)]</label2>
                         <onclick condition="!String.IsEmpty(SkinHelper.AutoCloseMusicOSD)">Skin.Reset(SkinHelper.AutoCloseMusicOSD)</onclick>
                         <onclick condition="String.IsEmpty(SkinHelper.AutoCloseMusicOSD)">Skin.SetNumeric(SkinHelper.AutoCloseMusicOSD)</onclick>
-                    </control>
+                    </control> -->
                     <control type="radiobutton" id="19518" description="Use long music osd">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
                         <include>Defs_Settings_Button</include>

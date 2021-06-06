@@ -12,7 +12,7 @@
     
     <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
 
-    <onunload>ClearProperty(SkinHelper.WidgetContainer,Home)</onunload>
+    <!-- <onunload>ClearProperty(SkinHelper.WidgetContainer,Home)</onunload> -->
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
 
     <controls>
