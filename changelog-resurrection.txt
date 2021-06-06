@@ -1,3 +1,11 @@
+0.3.0
+    - rebranding from "heppen mod" to "arctic zephyr 2 resurrection"
+    - removed unused settings
+    - more fixes for ratings
+    - removed colorbox dependencies
+    - cleanups from code that did not works
+    - disabled extrafanart button
+    - switched from skinhelper to tmdbhelper
 0.2.6
     - moved epg button in video osd view
 0.2.5

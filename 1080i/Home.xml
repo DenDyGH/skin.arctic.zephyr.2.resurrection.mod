@@ -86,7 +86,7 @@
             <include>Dimensions_Fullscreen</include>
             <align>center</align>
             <aligny>center</aligny>
-            <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR][CR][COLOR=main_fg_30]heppen[/COLOR] [COLOR=$VAR[ColorHighlight]]Mods[/COLOR]</label>
+            <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR][CR][COLOR=$VAR[ColorHighlight]]Resurrection[/COLOR]</label>
             <font>font_splash</font>
             <textcolor>main_fg_100</textcolor>
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.heppen.mod" name="Arctic Zephyr 2 Mod (heppen)" provider-name="jurialmunkey, pkscout, nfm886" version="0.2.6">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic Zephyr 2 Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.3.0">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -20,6 +20,14 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
+    0.3.0
+        - rebranding from "heppen mod" to "arctic zephyr 2 resurrection"
+        - removed unused settings
+        - more fixes for ratings
+        - removed colorbox dependencies
+        - cleanups from code that did not works
+        - disabled extrafanart button
+        - switched from skinhelper to tmdbhelper
     0.2.6
         - moved epg button in video osd view
     0.2.5
@@ -81,7 +89,7 @@
         <summary lang="ru">Опрятный, минималистичный, элегантный, простой, светлый.</summary>
         
         <description lang="en">This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations.</description>
-        <description lang="pl">Jasna modyfikacja skórki Arctic Zephyr 2 edytowana przez heppena. Arctic Zephyr 2 jest minimalistyczną i prostą skórką stworzoną przez jurialmunkey, przystosowana do działania z Kodi 19 Matrix przez pkscout. Została zaprojektowana tak, żeby użytkownik mógł skupić się na tym co najważniejsze, czyli konsumpcji mediów. W opozycji do jasnej wariacji, skrórka zawiera także wiele ciemnych wariacji.</description>
+        <description lang="pl">Jest to modyfikacja skórki Arctic Zephyr 2 autorstwa heppen. Arctic Zephyr 2 jest minimalistyczną skórką stworzoną przez jurialmunkey i zmodowaną do pracy z Kodi 19 Matrix przez pkscout. Skórka została zaprojektowana jako prosta, aby użytkownik mógł skupić się na swojej zawartości multimedialnej. Oprócz domyślnego jasnego schematu kolorów, skórka zawiera również kilka ciemniejszych wariantów.</description>
         <platform>all</platform>
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
         <forum />
