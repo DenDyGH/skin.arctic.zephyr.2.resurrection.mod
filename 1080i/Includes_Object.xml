@@ -345,7 +345,7 @@
                     </include>
                 </focusedlayout>
 
-                <itemlayout width="item_smalllandscape_width" height="item_row_height" condition="false">
+                <itemlayout width="item_smalllandscape_width" height="item_row_height" condition="$PARAM[smalllandscapecondition]">
                     <include content="View_51_Wall_Itemlayout">
                         <param name="iconheight" value="item_icon_height" />
                         <param name="icononlyheight" value="item_smalllandscape_iconheight" />
@@ -358,7 +358,7 @@
                         <param name="id" value="$PARAM[id]" />
                     </include>
                 </itemlayout>
-                <focusedlayout width="item_smalllandscape_width" height="item_row_height" condition="false">
+                <focusedlayout width="item_smalllandscape_width" height="item_row_height" condition="$PARAM[smalllandscapecondition]">
                     <include content="View_51_Wall_Itemlayout">
                         <param name="selectbox" value="true" />
                         <param name="iconheight" value="item_icon_height" />
