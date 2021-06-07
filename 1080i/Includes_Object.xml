@@ -1307,6 +1307,7 @@
     </include>
 
     <include name="Object_Icon_Ratings">
+        <param name="trakt_prop" default="Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)" />
         <param name="metacritic_prop" default="Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)" />
         <param name="imdb_prop" default="Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)" />
         <param name="rt_prop" default="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)" />
@@ -1346,14 +1347,14 @@
                 <control type="group">
                     <width>64</width>
                     <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)</visible>
-                    <visible>!String.IsEmpty($PARAM[metacritic_prop])</visible>
+                    <visible>!String.IsEmpty($PARAM[trakt_prop])</visible>
                     <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
                     <control type="image">
                         <top>0</top>
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/metacritic.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/trakt.png</texture>
                     </control>
                     <control type="label">
                         <textcolor>main_fg_70</textcolor>
@@ -1362,7 +1363,7 @@
                         <height>28</height>
                         <align>center</align>
                         <font>font_tiny_bold</font>
-                        <label>$INFO[$PARAM[metacritic_prop]]</label>
+                        <label>$INFO[$PARAM[trakt_prop]]</label>
                     </control>
                 </control>
                 <control type="group">
@@ -1385,6 +1386,28 @@
                         <align>center</align>
                         <font>font_tiny_bold</font>
                         <label>$INFO[$PARAM[tmdb_prop]]</label>
+                    </control>
+                </control>
+                <control type="group">
+                    <width>64</width>
+                    <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)</visible>
+                    <visible>!String.IsEmpty($PARAM[metacritic_prop])</visible>
+                    <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
+                    <control type="image">
+                        <top>0</top>
+                        <centerleft>50%</centerleft>
+                        <width>32</width>
+                        <height>32</height>
+                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/metacritic.png</texture>
+                    </control>
+                    <control type="label">
+                        <textcolor>main_fg_70</textcolor>
+                        <top>40</top>
+                        <width>auto</width>
+                        <height>28</height>
+                        <align>center</align>
+                        <font>font_tiny_bold</font>
+                        <label>$INFO[$PARAM[metacritic_prop]]</label>
                     </control>
                 </control>
                 <control type="group">
@@ -2071,6 +2094,7 @@
         <param name="imdb" default="true" />
         <param name="tmdb" default="true" />
         <param name="tvdb" default="true" />
+        <param name="trakt" default="true" />
         <param name="metacritic" default="true" />
         <param name="oscars" default="true" />
         <param name="numericstarrating" default="Skin.HasSetting(NumericStarRating) + !Skin.HasSetting(DisableStarRating)" />
@@ -2152,10 +2176,10 @@
                     <top>0</top>
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/metacritic.png</texture>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
-                    <visible>$PARAM[metacritic]</visible>
-                    <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
+                    <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/trakt.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
+                    <visible>$PARAM[trakt]</visible>
+                    <visible>!Skin.HasSetting(Ratings.Trakt)</visible>
                 </control>
                 <control type="label">
                     <textcolor>main_fg_70</textcolor>
@@ -2164,10 +2188,10 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating), ,%   ]</label>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
-                    <visible>$PARAM[metacritic]</visible>
-                    <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
+                    <visible>$PARAM[trakt]</visible>
+                    <visible>!Skin.HasSetting(Ratings.Trakt)</visible>
                 </control>
                 <control type="image">
                     <top>0</top>
@@ -2189,6 +2213,27 @@
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
                     <visible>$PARAM[tmdb]</visible>
                     <visible>Skin.HasSetting(Ratings.TheMovieDB)</visible>
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/metacritic.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
+                    <visible>$PARAM[metacritic]</visible>
+                    <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>font_tiny</font>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
+                    <visible>$PARAM[metacritic]</visible>
+                    <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
                 </control>
 
                 <control type="image">
