@@ -4,6 +4,13 @@
     <onload condition="!Player.PauseEnabled">SetFocus(15)</onload>
     <onload condition="Player.PauseEnabled">SetFocus(14)</onload>
     <controls>
+
+        <control type="button" id="99220">
+            <include>Defs_Hidden_Button</include>
+            <onfocus>SetFocus(15)</onfocus>
+            <onfocus condition="Window.IsVisible(musicosd)">Action(Close)</onfocus>
+        </control>
+
         <control type="group">
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
