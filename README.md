@@ -1,4 +1,4 @@
-# Arctic Zephyr 2 Resurrection Mod
+# Arctic: Zephyr 2 - Resurrection Mod
 *This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations.*
 
 # Installation & Updates
