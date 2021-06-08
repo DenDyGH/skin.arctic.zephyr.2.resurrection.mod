@@ -2264,7 +2264,7 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/popcorn.png</texture>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes.UserMeter))</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
                     <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
                     <visible>$PARAM[usermeter]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
@@ -2274,7 +2274,7 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/spilt.png</texture>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes.UserMeter))</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
                     <visible>!Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
                     <visible>$PARAM[usermeter]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
@@ -2286,8 +2286,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes.UserMeter), ,%   ]</label>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes.UserMeter))</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
                     <visible>$PARAM[usermeter]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>

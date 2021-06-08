@@ -89,7 +89,7 @@
                 <width>1920</width>
                 <height>1080</height>
                 <aspectratio>scale</aspectratio>
-                <include condition="Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)">Defs_Global_Fade_Blur</include>
+                <include condition="Skin.HasSetting(TMDbHelper.EnableBlur)">Defs_Global_Fade_Blur</include>
                 <fadetime>600</fadetime>
                 <animation effect="fade" start="45" end="15" time="300" reversible="false" condition="![[Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation>
                 <animation effect="fade" end="45" start="15" delay="600" time="600" reversible="false" condition="[Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation>

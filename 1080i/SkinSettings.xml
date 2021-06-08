@@ -309,6 +309,14 @@
                         <onclick>Skin.ToggleSetting(NoFanart)</onclick>
                     </control>
 
+                    <!-- <control type="radiobutton" id="19202" description="Blur background">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31275]</label>
+                        <selected>Skin.HasSetting(TMDbHelper.EnableBlur)</selected>
+                        <onclick>Skin.ToggleSetting(TMDbHelper.EnableBlur)</onclick>
+                    </control> -->
+
                     <!-- <control type="radiobutton" id="19202" description="Blur background fanart">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
                         <include>Defs_Settings_Button</include>
