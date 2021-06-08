@@ -7,6 +7,13 @@
     <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode))">ClearProperty(OSDViewMode,Home)</onload>
     <onunload>ClearProperty(OSDInfo,Home)</onunload>
     <controls>
+
+        <control type="button" id="99220">
+            <include>Defs_Hidden_Button</include>
+            <onfocus>SetFocus(15)</onfocus>
+            <onfocus condition="Window.IsVisible(videoosd)">Action(Close)</onfocus>
+        </control>
+
         <control type="button">
             <description>background close area</description>
             <left>0</left>

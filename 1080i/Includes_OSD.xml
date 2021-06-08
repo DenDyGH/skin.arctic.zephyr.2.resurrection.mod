@@ -895,6 +895,18 @@
         </control>
     </include>
 
+    <include name="OSD_Button_OnFocus">
+        <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+        <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+        <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31117])">AlarmClock(osd_timeout,SetFocus(99220),00:10,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31122])">AlarmClock(osd_timeout,SetFocus(99220),00:12,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31123])">AlarmClock(osd_timeout,SetFocus(99220),00:15,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31124])">AlarmClock(osd_timeout,SetFocus(99220),00:20,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31125])">AlarmClock(osd_timeout,SetFocus(99220),00:30,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31126])">AlarmClock(osd_timeout,SetFocus(99220),01:00,silent)</onfocus>
+        <onunfocus>CancelAlarm(osd_timeout,true)</onunfocus>
+    </include>
 
     <include name="OSD_Controls">
 
@@ -917,6 +929,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
         </control>
 
         <control type="button" id="12">
@@ -932,6 +945,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
         </control>
 
         <control type="button" id="13">
@@ -947,6 +961,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
         </control>
 
         <control type="togglebutton" id="14">
@@ -968,6 +983,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
         </control>
 
         <control type="button" id="15">
@@ -983,6 +999,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
         </control>
 
         <control type="button" id="16">
@@ -998,6 +1015,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
         </control>
 
         <control type="button" id="17">
@@ -1013,6 +1031,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
         </control>
         <!-- <control type="button" id="39">
             <centertop>50%</centertop>
@@ -1045,6 +1064,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>VideoPlayer.Content(livetv)</visible>
         </control>
@@ -1070,6 +1090,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
         </control>
@@ -1089,6 +1110,7 @@
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/audio-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
             <onclick>AudioNextLanguage</onclick>
+            <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
         </control>
@@ -1116,6 +1138,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(livetv)</visible>
         </control>
@@ -1134,6 +1157,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <onclick>PlayerControl(Repeat)</onclick>
             <visible>Window.IsVisible(musicosd)</visible>
             <visible>!Playlist.IsRepeatOne + !Playlist.IsRepeat</visible>
@@ -1153,6 +1177,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <onclick>PlayerControl(Repeat)</onclick>
             <visible>Window.IsVisible(musicosd)</visible>
             <visible>Playlist.IsRepeatOne</visible>
@@ -1172,6 +1197,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <onclick>PlayerControl(Repeat)</onclick>
             <visible>Window.IsVisible(musicosd)</visible>
             <visible>Playlist.IsRepeat</visible>
@@ -1191,6 +1217,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <onclick>PlayerControl(Random)</onclick>
             <visible>Window.IsVisible(musicosd)</visible>
         </control>
@@ -1208,6 +1235,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(musicosd)</visible>
         </control>
         <control type="button" id="25">
@@ -1268,6 +1296,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(livetv)</visible>
         </control>
@@ -1284,6 +1313,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(musicosd)</visible>
             <visible>!VideoPlayer.Content(livetv)</visible>
             <visible>String.IsEmpty(Window(Home).Property(culrc.running))</visible>
