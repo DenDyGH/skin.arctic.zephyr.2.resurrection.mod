@@ -246,6 +246,15 @@
                 <onclick>SetFocus(50)</onclick>
             </include>
             <include content="Object_Info_Button">
+                <param name="id" value="8151" />
+                <param name="groupid" value="8051" />
+                <param name="label" value="Trakt" />
+                <param name="icon" value="special://skin/extras/icons/trakttv.png" />
+                <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(window(home).property(tmdbhelper.listitem.tmdb_id))] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" />
+                <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[Info_Param_Type],cache_refresh)</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(tmdbhelper.listitem.tmdb_id)],$VAR[Info_Param_Type],cache_refresh)</onclick>
+            </include>
+            <include content="Object_Info_Button">
                 <param name="id" value="7" />
                 <param name="groupid" value="8007" />
                 <param name="label" value="Rating" />
