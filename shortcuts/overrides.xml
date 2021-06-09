@@ -412,6 +412,9 @@
                 <shortcut widget="MusicSources" label="$LOCALIZE[31302]" icon="DefaultMusicSongs.png" widgetTarget="music">sources://music/</shortcut>
                 <shortcut widget="PictureSources" label="$LOCALIZE[31304]" icon="DefaultPicture.png" widgetTarget="pictures">sources://pictures/</shortcut>
             </node>
+            <node label="$LOCALIZE[1036]">
+                <shortcut widget="VideoSources" label="$LOCALIZE[1036]" icon="special://skin/extras/icons/favourites2.png" widgetTarget="video">favourites://</shortcut>
+            </node>
         </node>
         <shortcut label="$LOCALIZE[31182]" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,smartshortcuts,pvr</shortcut>
         <shortcut label="32107" condition="!System.HasAddon(script.skin.helper.service)">::INSTALL::script.skin.helper.service</shortcut>
