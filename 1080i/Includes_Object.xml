@@ -1348,7 +1348,7 @@
                     <width>64</width>
                     <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)</visible>
                     <visible>!String.IsEmpty($PARAM[trakt_prop])</visible>
-                    <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
+                    <visible>!Skin.HasSetting(Ratings.Trakt)</visible>
                     <control type="image">
                         <top>0</top>
                         <centerleft>50%</centerleft>
