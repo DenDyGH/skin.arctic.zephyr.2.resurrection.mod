@@ -30,8 +30,17 @@
                     <label>$LOCALIZE[31007]</label>
                     <radioposx>730</radioposx>
                     <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(DisableExtendedInfo)</onclick>
-                    <selected>!Skin.HasSetting(DisableExtendedInfo)</selected>
+                    <onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">InstallAddon(plugin.video.themoviedb.helper)</onclick>
+                    <onclick>Skin.ToggleSetting(EnableExtendedInfo)</onclick>
+                    <selected>Skin.HasSetting(EnableExtendedInfo)</selected>
+                </control>
+                <control type="radiobutton" id="9017">
+                    <label>Crew</label>
+                    <radioposx>730</radioposx>
+                    <include>Dialog_Standard_Button</include>
+                    <onclick>Skin.ToggleSetting(DisableInfoListCrew)</onclick>
+                    <selected>!Skin.HasSetting(DisableInfoListCrew)</selected>
+                    <enable>Skin.HasSetting(EnableExtendedInfo)</enable>
                 </control>
                 <control type="radiobutton" id="9002">
                     <label>$LOCALIZE[31006]</label>
@@ -46,6 +55,15 @@
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListSimilar)</onclick>
                     <selected>!Skin.HasSetting(DisableInfoListSimilar)</selected>
+                    <enable>Skin.HasSetting(EnableExtendedInfo)</enable>
+                </control>
+                <control type="radiobutton" id="9018">
+                    <label>$LOCALIZE[31252]</label>
+                    <radioposx>730</radioposx>
+                    <include>Dialog_Standard_Button</include>
+                    <onclick>Skin.ToggleSetting(DisableInfoListRecommended)</onclick>
+                    <selected>!Skin.HasSetting(DisableInfoListRecommended)</selected>
+                    <enable>Skin.HasSetting(EnableExtendedInfo)</enable>
                 </control>
                 <control type="radiobutton" id="9004">
                     <label>$LOCALIZE[20339]</label>
@@ -95,6 +113,14 @@
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListYouTube)</onclick>
                     <selected>!Skin.HasSetting(DisableInfoListYouTube)</selected>
+                </control>
+                <control type="radiobutton" id="9019">
+                    <label>$LOCALIZE[31232]</label>
+                    <radioposx>730</radioposx>
+                    <include>Dialog_Standard_Button</include>
+                    <onclick>Skin.ToggleSetting(DisableInfoListPosters)</onclick>
+                    <selected>!Skin.HasSetting(DisableInfoListPosters)</selected>
+                    <enable>Skin.HasSetting(EnableExtendedInfo)</enable>
                 </control>
             </control>
 
