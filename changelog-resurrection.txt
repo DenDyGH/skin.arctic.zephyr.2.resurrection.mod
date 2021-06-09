@@ -1,3 +1,14 @@
+0.3.3
+    - removed embuary addons from dependency
+    - some optimization
+    - added button to manage trakt.tv list from DialogVideoInfo view
+    - added possibility to set favourites as a widget
+    - fix for trakt ratings
+0.3.2
+    - fix for rottentomatoes usermeter
+    - Hungarian lang added (thanks to @frodo19)
+    - moved auto close osd after delay button to general options
+    - added auto close osd control after delay
 0.3.1
     - removed references to unused addons
     - added trakt.tv ratings
