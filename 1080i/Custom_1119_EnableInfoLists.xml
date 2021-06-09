@@ -58,7 +58,7 @@
                     <enable>Skin.HasSetting(EnableExtendedInfo)</enable>
                 </control>
                 <control type="radiobutton" id="9018">
-                    <label>$LOCALIZE[31252]</label>
+                    <label>$LOCALIZE[30042]</label>
                     <radioposx>730</radioposx>
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListRecommended)</onclick>
@@ -115,7 +115,7 @@
                     <selected>!Skin.HasSetting(DisableInfoListYouTube)</selected>
                 </control>
                 <control type="radiobutton" id="9019">
-                    <label>$LOCALIZE[31232]</label>
+                    <label>$LOCALIZE[30043]</label>
                     <radioposx>730</radioposx>
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListPosters)</onclick>

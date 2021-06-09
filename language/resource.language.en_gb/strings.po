@@ -1529,12 +1529,17 @@ msgctxt "#30040"
 msgid "Restore to defaults"
 msgstr ""
 
+#: /1080i/Includes_Info.xml
+msgctxt "#30041"
+msgid "Watchlist"
+msgstr ""
+
 #: /1080i/Custom_1119_EnableInfoLists.xml
-msgctxt "#31252"
+msgctxt "#30042"
 msgid "Recommended"
 msgstr ""
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
-msgctxt "#31232"
+msgctxt "#30043"
 msgid "Posters"
 msgstr ""
