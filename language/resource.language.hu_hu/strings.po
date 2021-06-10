@@ -1563,9 +1563,74 @@ msgstr "Widget mozgatás"
 #: /1080i/SkinSettings.xml
 msgctxt "#30049"
 msgid "Auto-scroll single widgets"
-msgstr "Widget auto scroll"
+msgstr "Widget auto görgetés"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30050"
 msgid "Other"
 msgstr "Egyéb"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30051"
+msgid "Vertical menu | Multiple widgets"
+msgstr "Függőleges menü | Többszörös widgetek"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30052"
+msgid "Horizontal menu | Multiple widgets"
+msgstr "Vízszintes menü | Többszörös widgetek"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30053"
+msgid "Icons + Text"
+msgstr "Ikonok + Szöveg"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30054"
+msgid "Text"
+msgstr "Szöveg"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30055"
+msgid "Icons"
+msgstr "Ikonok"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30056"
+msgid "Auto-width Text"
+msgstr "Automatikus szélességű szöveg"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30057"
+msgid "Fixed-width Text"
+msgstr "Fix szélességű szöveg"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30058"
+msgid "Fixed"
+msgstr "Fixált"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30059"
+msgid "Default"
+msgstr "Alap"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30060"
+msgid "Search"
+msgstr "Keresés"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30061"
+msgid "Basic"
+msgstr "Alap"
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#30062"
+msgid "Customize Widgets"
+msgstr "Widgetek testreszabása"
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#30063"
+msgid "Default search items"
+msgstr "Alap kereső elemek"
