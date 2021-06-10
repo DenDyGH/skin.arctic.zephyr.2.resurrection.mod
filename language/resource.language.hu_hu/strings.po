@@ -1242,6 +1242,11 @@ msgctxt "#31311"
 msgid "Rate Song"
 msgstr "Dal pontozása"
 
+#: /1080i/Includes_View.xml
+msgctxt "#31312"
+msgid "Management"
+msgstr "Kezelés"
+
 #: /1080i/SkinSettings.xml
 msgctxt "#31314"
 msgid "Automatically display music video info at beginning and end of clip"
@@ -1517,7 +1522,7 @@ msgstr "Következő rész [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COL
 #: /1080i/SkinSettings.xml
 msgctxt "#30038"
 msgid "This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations."
-msgstr "Ez az Arctic Zephyr 2 módosítása heppentől.Az Arctic Zephyr 2 egy minimalista felszín, amelyet a jurialmunkey hozott létre, és pkscout módosította a Kodi 19 Matrixhoz. A felszínt úgy tervezték, hogy egyszerű legyen, hogy a felhasználó a médiatartalmukra koncentrálhasson. Az alapértelmezett világos színvilág mellett a felszín sötétebb variációt is tartalmaz."
+msgstr "Ez az Arctic Zephyr 2 módosítása heppentől. Az Arctic Zephyr 2 egy minimalista felszín, amelyet jurialmunkey hozott létre, és pkscout módosította a Kodi 19 Matrixhoz. A felszínt úgy tervezték, hogy egyszerű legyen, hogy a felhasználó a médiatartalmakra koncentrálhasson. Az alapértelmezett világos színvilág mellett a felszín sötétebb variációt is tartalmaz."
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30039"
@@ -1528,3 +1533,39 @@ msgstr "Visszaállítás"
 msgctxt "#30040"
 msgid "Restore to defaults"
 msgstr "Alapbeállításokra visszaállít"
+
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30044"
+msgid "Debugging"
+msgstr "Felszín hibakereső mód"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30045"
+msgid "Home layout"
+msgstr "Főmenü elrendezés"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30046"
+msgid "Menu style"
+msgstr "Menü stílus"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30047"
+msgid "Corner icon"
+msgstr "Sarok ikon"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30048"
+msgid "Widget movement"
+msgstr "Widget mozgatás"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30049"
+msgid "Auto-scroll single widgets"
+msgstr "Widget auto scroll"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30050"
+msgid "Other"
+msgstr "Egyéb"
