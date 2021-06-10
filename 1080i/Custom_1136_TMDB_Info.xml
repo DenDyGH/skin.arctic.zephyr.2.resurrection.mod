@@ -9,17 +9,15 @@
             <height>1</height>
             <left>-1000</left>
             <top>-1000</top>
-            <itemlayout />
-            <focusedlayout />
-            <content limit="1" target="videos">$INFO[Window(Home).Property(TMDbHelper.Path.Current)]</content>
+                <itemlayout />
+                <focusedlayout />
+                <content target="videos">$INFO[Window(Home).Property(TMDbHelper.Path.Current)]</content>
         </control>
-
         <control type="group">
             <visible>Container(9999).IsUpdating</visible>
-            <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+            <visible>!$EXP[Exp_InfoVisible]</visible>
             <include>Animation_FadeInOut</include>
             <include>Dialog_Busy</include>
         </control>
-
     </controls>
 </window>
