@@ -1242,6 +1242,11 @@ msgctxt "#31311"
 msgid "Rate Song"
 msgstr ""
 
+#: /1080i/Includes_View.xml
+msgctxt "#31312"
+msgid "Management"
+msgstr ""
+
 #: /1080i/SkinSettings.xml
 msgctxt "#31314"
 msgid "Automatically display music video info at beginning and end of clip"
@@ -1542,4 +1547,39 @@ msgstr ""
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30043"
 msgid "Posters"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30044"
+msgid "Debugging"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30045"
+msgid "Home layout"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30046"
+msgid "Menu style"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30047"
+msgid "Corner icon"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30048"
+msgid "Widget movement"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30049"
+msgid "Auto-scroll single widgets"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30050"
+msgid "Other"
 msgstr ""
