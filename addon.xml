@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.3.3">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.3.4">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -18,6 +18,18 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
+    0.3.4
+        - temporary disabled youtube videos from DialogVideoInfo
+        - added 3 and 5 seconds as an option in auto close osd
+        - removed skin helper from widgets
+        - code cleanup
+        - moved info from studio to bottom
+        - fixed some themoviedb helper errors
+        - added Coreelec specific playerprocessinfos
+        - added playerprocesinfo button to video OSD
+        - some optimalizations and tweaks for DialogVideoInfo
+        - changes to extendedinfo
+        - updated language strings
     0.3.3
         - removed embuary addons from dependency
         - some optimization
@@ -102,7 +114,7 @@
         <summary lang="ru">Опрятный, минималистичный, элегантный, простой, светлый.</summary>
         
         <description lang="en">This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations.</description>
-        <description lang="pl">Jest to modyfikacja skórki Arctic Zephyr 2 autorstwa heppen. Arctic Zephyr 2 jest minimalistyczną skórką stworzoną przez jurialmunkey i zmodowaną do pracy z Kodi 19 Matrix przez pkscout. Skórka została zaprojektowana jako prosta, aby użytkownik mógł skupić się na swojej zawartości multimedialnej. Oprócz domyślnego jasnego schematu kolorów, skórka zawiera również kilka ciemniejszych wariantów.</description>
+        <description lang="pl">Jest to modyfikacja skórki Arctic Zephyr 2 autorstwa heppen. Arctic Zephyr 2 jest minimalistyczną skórką stworzoną przez jurialmunkey i zmodowaną do pracy z Kodi 19 Matrix przez pkscout. Skórka została zaprojektowana jako prosta, aby użytkownik mógł skupić się na swojej zawartości multimedialnej. Oprócz domyślnego jasnego schematu kolorów, skórka zawiera również kilka ciemniejszych wariantów.</description>    
         <platform>all</platform>
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
         <forum />
