@@ -113,6 +113,7 @@
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListYouTube)</onclick>
                     <selected>!Skin.HasSetting(DisableInfoListYouTube)</selected>
+                    <enable>false</enable>
                 </control>
                 <control type="radiobutton" id="9019">
                     <label>$LOCALIZE[30043]</label>
