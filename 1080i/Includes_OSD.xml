@@ -1253,6 +1253,20 @@
             <onup>SetFocus(3112,9)</onup>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
         </control>
+        <control type="button" id="414">
+            <centertop>50%</centertop>
+            <description>Playerprocessinfo</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">DefaultAddonScreensaver.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">DefaultAddonScreensaver.png</texturenofocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onclick>ActivateWindow(playerprocessinfo)</onclick>
+            <visible>Window.IsVisible(videoosd)</visible>
+        </control>
         <control type="button" id="40">
             <centertop>50%</centertop>
             <description>Settings</description>
