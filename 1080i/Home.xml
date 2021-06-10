@@ -78,25 +78,38 @@
             <texture colordiffuse="Background">common/bg.jpg</texture>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
-            <animation effect="fade" start="100" end="0" delay="600" time="600" tween="quadratic">Hidden</animation>
+            <animation effect="fade" start="100" end="0" delay="1000" time="1000" tween="cubic">Hidden</animation>
         </control>
         <control type="label">
             <description>Loading</description>
             <include>Dimensions_Fullscreen</include>
             <align>center</align>
             <aligny>center</aligny>
-            <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR][CR][COLOR=$VAR[ColorHighlight]]Resurrection[/COLOR]</label>
+            <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR]</label>
             <font>font_splash</font>
             <textcolor>main_fg_100</textcolor>
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
-            <animation effect="fade" start="100" end="0" delay="0" time="600" tween="quadratic">Hidden</animation>
+            <animation effect="slide" start="0" end="-1600" delay="0" time="1000" tween="cubic">Hidden</animation>
+            <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+        <control type="label">
+            <description>Loading</description>
+            <top>150</top>
+            <left>370</left>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>[COLOR=$VAR[ColorHighlight]]Resurrection[/COLOR]</label>
+            <font>font_splash</font>
+            <textcolor>main_fg_100</textcolor>
+            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+            <animation effect="slide" start="0" end="1600" delay="0" time="1000" tween="cubic">Hidden</animation>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
         </control>
         <control type="group">
             <top>800</top>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
-            <animation effect="fade" start="100" end="0" time="600" tween="quadratic">Hidden</animation>
+            <animation effect="fade" start="100" end="0" time="1000" tween="cubic">Hidden</animation>
             <include content="Defs_BusySpinner">
                 <param name="label" value="$LOCALIZE[31349]..." />
             </include>
