@@ -108,7 +108,7 @@
     </variable>
 
     <include name="Defs_InfoList_OnBack">
-        <onback condition="Skin.HasSetting(DisableExtendedInfo)">SetFocus(50)</onback>
+        <onback condition="!Skin.HasSetting(EnableExtendedInfo)">SetFocus(50)</onback>
         <onback>SetFocus(5000)</onback>
         <onback>300</onback>
     </include>
@@ -116,7 +116,7 @@
     <include name="Defs_InfoList_OnClick">
         <param name="prevent_del" default="prevent_del" />
         <definition>
-            <onclick condition="Skin.HasSetting(DisableExtendedInfo)">SetFocus(50)</onclick>
+            <onclick condition="!Skin.HasSetting(EnableExtendedInfo)">SetFocus(50)</onclick>
             <onclick>SetFocus(5000)</onclick>
             <onclick>SetFocus(300)</onclick>
             <onclick condition="String.IsEmpty(ListItem.DBID) | [!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,tvshow)]">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.FolderPath],call_auto=1136)</onclick>
