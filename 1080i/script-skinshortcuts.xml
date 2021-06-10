@@ -29,7 +29,7 @@
                 <font>font_small_bold</font>
                 <align>left</align>
                 <textcolor>dialog_fg_70</textcolor>
-                <label>Customize Widgets</label>
+                <label>$LOCALIZE[30062]</label>
                 <visible>[String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)]</visible>
             </control>
 
@@ -210,7 +210,7 @@
                 </control>
 
                 <control type="button" id="307" description="Action">
-                    <label>31267</label>
+                    <label>$LOCALIZE[31267]</label>
                     <label2>$INFO[Container(211).ListItem.Property(Path)]</label2>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                     <include>Dialog_Standard_Button</include>
@@ -219,7 +219,7 @@
                 </control>
 
                 <control type="button" id="4101" description="Choose Search Item">
-                    <label>Default search items</label>
+                    <label>$LOCALIZE[30063]</label>
                     <onclick>SetProperty(custom-grouping,customsearchdefaultitems)</onclick>
                     <onclick>SendClick(401)</onclick>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
@@ -228,7 +228,7 @@
                 </control>
 
                 <control type="button" id="3007" description="Action">
-                    <label>31267</label>
+                    <label>$LOCALIZE[31267]</label>
                     <label2>$INFO[Container(211).ListItem.Property(Path)]</label2>
                     <onclick>SetProperty(custom-grouping,customsearch)</onclick>
                     <onclick>SendClick(307)</onclick>
@@ -258,14 +258,14 @@
                 </control>
 
                 <control type="button" id="305" description="Label">
-                    <label>31268</label>
+                    <label>$LOCALIZE[31268]</label>
                     <label2>$INFO[Container(211).ListItem.Label]</label2>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                     <include>Dialog_Standard_Button</include>
                 </control>
 
                 <control type="button" id="306" description="Icon">
-                    <label>31181</label>
+                    <label>$LOCALIZE[31181]</label>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                     <include>Dialog_Standard_Button</include>
                     <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
@@ -353,7 +353,7 @@
                 </control>
 
                 <control type="button" id="310" description="Background">
-                    <label>31110</label>
+                    <label>$LOCALIZE[31110]</label>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
