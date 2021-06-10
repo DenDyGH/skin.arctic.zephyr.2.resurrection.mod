@@ -31,6 +31,44 @@
                 <include content="Object_ShadowSpot_Label">
                     <param name="label" value="[COLOR panel_fg_100]$LOCALIZE[460]:[/COLOR] $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]" />
                 </include>
+                <include content="Object_ShadowSpot_Label">
+                    <param name="label" value="$INFO[System.CpuUsage,[COLOR panel_fg_100]$LOCALIZE[13271][/COLOR] ,       ][COLOR panel_fg_100]RAM:[/COLOR] $INFO[system.memory(used)] / $INFO[system.memory(total)] - $INFO[System.Memory(used.percent)]" />
+                </include>
+            </include>
+        </include>
+        
+        <include content="Object_ShadowSpot_Group">
+            <param name="width" value="1500" />
+            <param name="height" value="450" />
+            <param name="left" value="1300" />
+            <visible>!VideoPlayer.Content(livetv)</visible>
+            <visible>System.HasAddon(service.coreelec.settings)</visible>
+            <include content="Object_ShadowSpot_Grouplist">
+                <include content="Object_ShadowSpot_Label">
+                    <param name="label" value="" />
+                    <param name="font" value="font_small_bold" />
+                    <param name="textcolor" value="panel_fg_100" />
+                    <param name="height" value="50" />
+                    <param name="top" value="-10" />
+                </include>
+                <include content="Object_ShadowSpot_Label">
+                    <param name="label" value="$INFO[Player.Process(amlogic.displaymode),[COLOR panel_fg_100]Display mode: [/COLOR] ] " />
+                </include>
+                <include content="Object_ShadowSpot_Label">
+                    <param name="label" value="$INFO[Player.Process(amlogic.eoft_gamut),[COLOR panel_fg_100]Eotf&Gamut: [/COLOR] ]" />
+                </include>
+                <include content="Object_ShadowSpot_Label">
+                    <param name="label" value="$INFO[Player.Process(amlogic.pixformat),[COLOR panel_fg_100]Colour Depth: [/COLOR] ]" />
+                </include>
+                <include content="Object_ShadowSpot_Label">
+                    <param name="label" value="[COLOR panel_fg_100]Soc Temp: [/COLOR] $INFO[System.CPUTemperature]" />
+                </include>
+                <include content="Object_ShadowSpot_Label">
+                    <param name="label" value="[COLOR panel_fg_100]CPU Frequency: [/COLOR] $INFO[System.CpuFrequency]" />
+                </include>
+                  <include content="Object_ShadowSpot_Label">
+                    <param name="label" value="[COLOR panel_fg_100]System FPS: [/COLOR] $INFO[System.FPS] FPS" />
+                </include>
             </include>
         </include>
 
