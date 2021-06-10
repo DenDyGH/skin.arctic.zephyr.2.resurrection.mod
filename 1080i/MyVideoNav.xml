@@ -68,12 +68,6 @@
             <label>653</label>
             <include>Defs_Hidden_Button</include>
         </control>
-        <!-- <control type="button" id="6005">
-            <description>Extra fanart</description>
-            <label>$VAR[Label_ExtraFanart]</label>
-            <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
-            <include>Defs_Hidden_Button</include>
-        </control> -->
 
     </controls>
 </window>

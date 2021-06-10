@@ -1192,12 +1192,6 @@
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,album)" />
                 </include>
-                <!-- <include content="Object_Info_Line_Label">
-                    <param name="id" value="$PARAM[uid]10" />
-                    <param name="label" value="$INFO[Window(Home).Property(SkinHelper.ListItem.WatchedCount),, $LOCALIZE[20163] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Count),, [LOWERCASE]$LOCALIZE[16102][/LOWERCASE]]" />
-                    <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,set)" />
-                </include> -->
                 
                 <!-- Next Aired -->
                 <include content="Object_Info_Line_Label">
