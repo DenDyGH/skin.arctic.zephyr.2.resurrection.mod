@@ -772,7 +772,7 @@
                     <top>0</top>
                     <left>0</left>
                     <width>auto</width>
-                    <label>Management</label>
+                    <label>$LOCALIZE[31312]</label>
                     <aligny>center</aligny>
                     <textcolor>main_fg_100</textcolor>
                     <font>font_tiny_bold</font>
@@ -784,7 +784,7 @@
                     <top>0</top>
                     <left>0</left>
                     <width>auto</width>
-                    <label>Management</label>
+                    <label>$LOCALIZE[31312]</label>
                     <aligny>center</aligny>
                     <textcolor>main_fg_30</textcolor>
                     <font>font_tiny_bold</font>
@@ -833,7 +833,7 @@
                         <top>-52</top>
                         <left>0</left>
                         <width>auto</width>
-                        <label>Settings</label>
+                        <label>$LOCALIZE[5]</label>
                         <aligny>center</aligny>
                         <textcolor>main_fg_100</textcolor>
                         <font>font_tiny_bold</font>
@@ -845,7 +845,7 @@
                         <top>-52</top>
                         <left>0</left>
                         <width>auto</width>
-                        <label>Settings</label>
+                        <label>$LOCALIZE[5]</label>
                         <aligny>center</aligny>
                         <textcolor>main_fg_30</textcolor>
                         <font>font_tiny_bold</font>
