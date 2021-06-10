@@ -1648,3 +1648,13 @@ msgstr ""
 msgctxt "#30063"
 msgid "Default search items"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30064"
+msgid "3 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30065"
+msgid "5 seconds"
+msgstr ""
