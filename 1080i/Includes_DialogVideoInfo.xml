@@ -15,7 +15,6 @@
                 <height>view_height</height>
                 <orientation>vertical</orientation>
                 <itemgap>0</itemgap>
-                <scrolltime tween="quadratic">400</scrolltime>
                 <control type="group" id="3000">
                     <height>view_height</height>
                     <control type="group">
@@ -56,7 +55,7 @@
                     <height>view_height</height>
                     <control type="grouplist" id="4100">
                         <top>-5</top>
-                        <scrolltime tween="quadratic">400</scrolltime>
+    
                         <onup>300</onup>
                         <ondown>6000</ondown>
                         <height>view_height</height>
@@ -302,7 +301,7 @@
                             <param name="diffuse" value="diffuse/landscape-wall.png" />
                             <param name="labelinclude" value="View_Cast_Video_Label" />
                             <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
+                            <onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1136)</onclick>
                             <onclick>PlayMedia($INFO[Container(5049).ListItem.FileNameAndPath])</onclick>
                             <include>Defs_InfoList_OnBack</include>
                             <content limit="10" target="videos" sortby="file">$VAR[Info_Youtube]</content>
@@ -445,7 +444,7 @@
                     <height>view_height</height>
                     <control type="grouplist" id="4100">
                         <top>-5</top>
-                        <scrolltime tween="quadratic">400</scrolltime>
+    
                         <onup>3100</onup>
                         <ondown>6000</ondown>
                         <height>view_height</height>
