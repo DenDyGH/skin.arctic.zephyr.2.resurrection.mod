@@ -196,25 +196,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper/?info=crew&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</content>
                         </include>
-
-                        <!-- Studio -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListStudio)" />
-                            <param name="id" value="5005" />
-                            <param name="groupid" value="7505" />
-                            <param name="label" value="$INFO[ListItem.Studio,$LOCALIZE[31053] ,]" />
-                            <include>Defs_InfoList_OnClick</include>
-                            <include>Defs_InfoList_OnBack</include>
-                            <visible>!String.IsEmpty(ListItem.Studio)</visible>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;with_companies=$INFO[Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID)]&amp;with_id=True&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
-                            <content limit="10" target="videos" condition="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)] + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;with_networks=$INFO[Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID)]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;with_id=True&amp;nextpage=false</content>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + !Window.IsVisible(DialogVideoInfo.xml) + !String.IsEmpty(Window(Home).Property(ListItem.studio.0))">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Window(Home).Property(ListItem.studio.0)]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie)">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Studio]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,tvshow) + !Window.IsVisible(DialogVideoInfo.xml) + !String.IsEmpty(Window(Home).Property(ListItem.studio.0))">videodb://tvshows/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Window(Home).Property(ListItem.studio.0)]%22%5d%7d%5d%7d%2c%22type%22%3a%22tvshows%22%7d</content>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,tvshow)">videodb://tvshows/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Studio]%22%5d%7d%5d%7d%2c%22type%22%3a%22tvshows%22%7d</content>
-                        </include>
                         
-
                         <!-- Extras -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="!Skin.HasSetting(DisableInfoListExtras)" />
@@ -294,6 +276,23 @@
                             <visible>String.IsEqual(ListItem.DBTYPE,movie) + Integer.IsGreater(Container(50).NumItems,0)</visible>
                             <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=discover&amp;type=$VAR[tmdb_type]&amp;with_cast=$INFO[Container(50).ListItemAbsolute(0).Label]$INFO[Container(50).ListItemAbsolute(1).Label, / ,]$INFO[Container(50).ListItemAbsolute(2).Label, / ,]&amp;with_separator=OR&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
                             <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(0).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(1).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(2).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(3).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(4).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(5).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(6).Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
+                        </include>
+
+                        <!-- Studio -->
+                        <include content="Info_Widget_Poster">
+                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListStudio)" />
+                            <param name="id" value="5005" />
+                            <param name="groupid" value="7505" />
+                            <param name="label" value="$INFO[ListItem.Studio,$LOCALIZE[31053] ,]" />
+                            <include>Defs_InfoList_OnClick</include>
+                            <include>Defs_InfoList_OnBack</include>
+                            <visible>!String.IsEmpty(ListItem.Studio)</visible>
+                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;with_companies=$INFO[Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID)]&amp;with_id=True&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
+                            <content limit="10" target="videos" condition="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)] + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;with_networks=$INFO[Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID)]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;with_id=True&amp;nextpage=false</content>
+                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + !Window.IsVisible(DialogVideoInfo.xml) + !String.IsEmpty(Window(Home).Property(ListItem.studio.0))">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Window(Home).Property(ListItem.studio.0)]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
+                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie)">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Studio]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
+                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,tvshow) + !Window.IsVisible(DialogVideoInfo.xml) + !String.IsEmpty(Window(Home).Property(ListItem.studio.0))">videodb://tvshows/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Window(Home).Property(ListItem.studio.0)]%22%5d%7d%5d%7d%2c%22type%22%3a%22tvshows%22%7d</content>
+                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,tvshow)">videodb://tvshows/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Studio]%22%5d%7d%5d%7d%2c%22type%22%3a%22tvshows%22%7d</content>
                         </include>
 
                         <!-- Youtube -->
