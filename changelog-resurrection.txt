@@ -1,3 +1,9 @@
+0.3.5
+    - disabled update addon button
+    - some improvements for info-dialog list
+    - added settings for choosing focus frame border size
+    - added year to be displayed after movie title in widget on home screen
+    - tuned splash screen animations
 0.3.4
     - temporary disabled youtube videos from DialogVideoInfo
     - added 3 and 5 seconds as an option in auto close osd

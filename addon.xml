@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.3.4">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.3.5">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -18,6 +18,12 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
+    0.3.5
+        - disabled update addon button
+        - some improvements for info-dialog list
+        - added settings for choosing focus frame border size
+        - added year to be displayed after movie title in widget on home screen
+        - tuned splash screen animations
     0.3.4
         - temporary disabled youtube videos from DialogVideoInfo
         - added 3 and 5 seconds as an option in auto close osd
