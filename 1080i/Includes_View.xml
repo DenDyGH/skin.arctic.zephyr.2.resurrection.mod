@@ -437,6 +437,7 @@
                         <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
                         <visible>!String.StartsWith(ListItem.FolderPath,favourites://)</visible>
                         <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
+                        <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Year)</visible>
                         <visible>!$PARAM[uselabel2]</visible>
                     </control>
                     <control type="group">
