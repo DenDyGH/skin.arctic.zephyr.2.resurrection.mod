@@ -1011,7 +1011,8 @@
                                 <top>10</top>
                                 <height>280</height>
                                 <visible>Control.HasFocus(11)</visible>
-                                <include>View_Selectbox</include>
+                                <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Bold)">View_Selectbox_Bold</include>
+                                <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Thin)">View_Selectbox_Thin</include>
                             </control>
                             <control type="label">
                                 <textcolor>panel_fg_100</textcolor>

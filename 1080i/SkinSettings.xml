@@ -871,6 +871,26 @@
                     <!-- Furniture -->
                     <!-- ============= -->
 
+                    <control type="label" id="19783" description="LABEL">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9007)</visible>
+                        <include>Dialog_Standard_HintLabel</include>
+                        <label>$LOCALIZE[31146]</label>
+                    </control>
+
+                    <control type="button" id="19707" description="Focus border size">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9007)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[30066]</label>
+                        <label2>$INFO[Skin.String(FocusBorderSize)]</label2>
+
+                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30067])</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30067]))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30068])</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30068]))</onclick>
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=Focus border size)</onclick>
+                    </control>
+
                     <control type="label" id="19781" description="LABEL">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9007)</visible>
                         <include>Dialog_Standard_HintLabel</include>

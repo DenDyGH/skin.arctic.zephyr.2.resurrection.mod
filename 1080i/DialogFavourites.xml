@@ -76,7 +76,10 @@
                                 <aspectratio scalediffuse="false">keep</aspectratio>
                                 <texture diffuse="diffuse/square.png">$INFO[ListItem.Icon]</texture>
                             </control>
-                            <include content="View_Selectbox">
+                            <include content="View_Selectbox_Bold" condition="Skin.String(FocusBorderSize, Bold)">
+                                <param name="colordiffuse" value="$VAR[ColorHighlight]" />
+                            </include>
+                            <include content="View_Selectbox_Thin" condition="Skin.String(FocusBorderSize, Thin)">
                                 <param name="colordiffuse" value="$VAR[ColorHighlight]" />
                             </include>
                         </control>

@@ -83,7 +83,8 @@
                 </control>
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[id])</visible>
-                    <include condition="$PARAM[selectbox]">View_Selectbox</include>
+                    <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Bold)">View_Selectbox_Bold</include>
+                    <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Thin)">View_Selectbox_Thin</include>
                 </control>
             </control>
             
@@ -764,7 +765,10 @@
                     <param name="diffuse" value="$PARAM[diffuse]" />
                     <control type="group">
                         <visible>Control.HasFocus($PARAM[id])</visible>
-                        <include content="View_Selectbox">
+                        <include condition="Skin.String(FocusBorderSize, Bold)" content="View_Selectbox_Bold">
+                            <param name="overlay" value="false" />
+                        </include>
+                        <include condition="Skin.String(FocusBorderSize, Thin)" content="View_Selectbox_Thin">
                             <param name="overlay" value="false" />
                         </include>
                     </control>
@@ -990,7 +994,7 @@
         <visible>!ListItem.IsCollection</visible>
     </include>
 
-    <include name="View_Selectbox">
+    <include name="View_Selectbox_Bold">
         <param name="overlay" default="true" />
         <param name="pad" default="-7" />
         <param name="colordiffuse" default="$VAR[ColorHighlight2]" />
@@ -1010,6 +1014,33 @@
                         <bordersize>15</bordersize>
                         <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
                         <texture border="20" colordiffuse="$PARAM[colordiffuse]">common/selectbox.png</texture>
+                    </control>
+                </control>
+                <include condition="$PARAM[overlay]">View_WatchedOverlay_Focus</include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="View_Selectbox_Thin">
+        <param name="overlay" default="true" />
+        <param name="pad" default="0" />
+        <param name="colordiffuse" default="$VAR[ColorHighlight2]" />
+        <param name="focusbounce" default="true" />
+        <definition>
+            <control type="group">
+                <animation type="Focus" condition="$PARAM[focusbounce]">
+                    <effect type="zoom" start="96.5" end="100" time="150" tween="sine" easing="inout" center="auto"/>
+                    <effect type="fade" start="20" end="100" time="150" tween="back" easing="out"/>
+                </animation>
+                <control type="group">
+                    <left>$PARAM[pad]</left>
+                    <top>$PARAM[pad]</top>
+                    <right>$PARAM[pad]</right>
+                    <bottom>$PARAM[pad]</bottom>
+                    <control type="image">
+                        <bordersize>15</bordersize>
+                        <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+                        <texture border="20" colordiffuse="$PARAM[colordiffuse]">common/selectbox2.png</texture>
                     </control>
                 </control>
                 <include condition="$PARAM[overlay]">View_WatchedOverlay_Focus</include>
