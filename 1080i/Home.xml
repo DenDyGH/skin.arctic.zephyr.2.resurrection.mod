@@ -11,7 +11,7 @@
     <onload condition="System.HasAddon(plugin.video.youtube)">Skin.SetBool(DisableInfoListYouTube)</onload>
 
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetString(FocusBorderSize, Bold)</onload>
-    <onload condition="!Skin.HasSetting(FocsuBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
+    <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
 
     <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
 
