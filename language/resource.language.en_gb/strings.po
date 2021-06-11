@@ -1673,3 +1673,13 @@ msgstr ""
 msgctxt "#30068"
 msgid "Thin"
 msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30070"
+msgid "Films from the Year"
+msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30071"
+msgid "By genre"
+msgstr ""

@@ -118,7 +118,7 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Set) | ListItem.IsCollection</visible>
-                            <visible>!Skin.HasSetting(DisableInfoListSets)</visible>
+                            <visible>Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets)</visible>
                             <content limit="10" target="videos" sortby="year" sortorder="ascending" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper) + !String.IsEmpty(ListItem.Set)">plugin://plugin.video.themoviedb.helper/?info=collection&amp;type=$VAR[tmdb_type]&amp;query=$INFO[ListItem.Set]&amp;nextpage=false</content>
                             <content limit="10" target="videos" sortby="year" sortorder="ascending" condition="ListItem.IsCollection + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper) + !String.IsEmpty(ListItem.Title)">plugin://plugin.video.themoviedb.helper/?info=collection&amp;type=$VAR[tmdb_type]&amp;query=$INFO[ListItem.Title]&amp;nextpage=false</content>
                             <content limit="10" target="videos" sortby="year" sortorder="ascending" condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.SetID,videodb://movies/sets/,/]</content>
@@ -160,7 +160,7 @@
                         </include>
                         <!-- Seasons -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListSeasons)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListSeasons)" />
                             <param name="id" value="5008" />
                             <param name="groupid" value="7508" />
                             <param name="label" value="Seasons" />
@@ -174,7 +174,7 @@
                         </include>
                         <!-- Director -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListDirector)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListDirector)" />
                             <param name="id" value="5004" />
                             <param name="groupid" value="7504" />
                             <param name="label" value="$INFO[ListItem.Director,$LOCALIZE[31052] ,]" />
@@ -187,7 +187,7 @@
                         </include>
                         <!-- Crew -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListCrew)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListCrew)" />
                             <param name="id" value="5011" />
                             <param name="groupid" value="7511" />
                             <param name="label" value="Crew" />
@@ -199,7 +199,7 @@
                         
                         <!-- Extras -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListExtras)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListExtras)" />
                             <param name="id" value="5048" />
                             <param name="groupid" value="7548" />
                             <param name="label" value="$LOCALIZE[31056]" />
@@ -219,7 +219,7 @@
 
                         <!-- Recommended -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListRecommended)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListRecommended)" />
                             <param name="id" value="5002" />
                             <param name="groupid" value="7502" />
                             <param name="label" value="Recommended" />
@@ -229,7 +229,7 @@
                         </include>
                         <!-- Similar -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListSimilar)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListSimilar)" />
                             <param name="id" value="5003" />
                             <param name="groupid" value="7503" />
                             <param name="label" value="$INFO[ListItem.Title,$LOCALIZE[31051] ,]" />
@@ -241,7 +241,7 @@
 
                         <!-- Year -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListYear)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListYear)" />
                             <param name="id" value="5006" />
                             <param name="groupid" value="7506" />
                             <param name="label" value="$INFO[ListItem.Year,$LOCALIZE[31053] ,]" />
@@ -255,7 +255,7 @@
                         </include>
                         <!-- Genre -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListGenre)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListGenre)" />
                             <param name="id" value="5007" />
                             <param name="groupid" value="7507" />
                             <param name="label" value="$INFO[ListItem.Genre]" />
@@ -267,7 +267,7 @@
 
                         <!-- Cast Stars In -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListCastFeature)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListCastFeature)" />
                             <param name="id" value="5009" />
                             <param name="groupid" value="7509" />
                             <param name="label" value="$LOCALIZE[31055]" />
@@ -280,7 +280,7 @@
 
                         <!-- Studio -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListStudio)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListStudio)" />
                             <param name="id" value="5005" />
                             <param name="groupid" value="7505" />
                             <param name="label" value="$INFO[ListItem.Studio,$LOCALIZE[31053] ,]" />
@@ -297,7 +297,7 @@
 
                         <!-- Youtube -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="System.HasAddon(plugin.video.youtube) + !Skin.HasSetting(DisableInfoListYouTube)" />
+                            <param name="includecondition" value="System.HasAddon(plugin.video.youtube) + Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListYouTube)" />
                             <param name="id" value="5049" />
                             <param name="groupid" value="7549" />
                             <param name="label" value="$LOCALIZE[31141]" />
@@ -318,7 +318,7 @@
                         
                         <!-- Posters -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListPosters)" />
+                            <param name="includecondition" value="Skin.HasSetting(EnableExtendedInfo) + !Skin.HasSetting(DisableInfoListPosters)" />
                             <param name="id" value="5059" />
                             <param name="groupid" value="7559" />
                             <param name="label" value="Posters" />
