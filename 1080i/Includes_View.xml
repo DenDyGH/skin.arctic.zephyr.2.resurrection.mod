@@ -424,6 +424,21 @@
                         <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
                         <visible>!$PARAM[uselabel2]</visible>
                     </control>
+                    <control type="label">
+                        <top>20</top>
+                        <width>auto</width>
+                        <label>($INFO[Container($PARAM[id]).ListItem.Year])</label>
+                        <aligny>center</aligny>
+                        <textcolor>main_fg_100</textcolor>
+                        <font>font_tiny</font>
+                        <height>24</height>
+                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
+                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
+                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                        <visible>!String.StartsWith(ListItem.FolderPath,favourites://)</visible>
+                        <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
+                        <visible>!$PARAM[uselabel2]</visible>
+                    </control>
                     <control type="group">
                         <include>Defs_SmallBusySpinner</include>
                         <top>8</top>
@@ -1018,4 +1033,3 @@
     </include>
 
 </includes>
-
