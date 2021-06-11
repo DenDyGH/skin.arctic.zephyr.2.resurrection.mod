@@ -427,7 +427,7 @@
                     <control type="label">
                         <top>20</top>
                         <width>auto</width>
-                        <label>($INFO[Container($PARAM[id]).ListItem.Year])</label>
+                        <label>$INFO[Container($PARAM[id]).ListItem.Year, (,)]</label>
                         <aligny>center</aligny>
                         <textcolor>main_fg_100</textcolor>
                         <font>font_tiny</font>
@@ -436,7 +436,6 @@
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
                         <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
                         <visible>!String.StartsWith(ListItem.FolderPath,favourites://)</visible>
-                        <visible>!$EXP[Exp_InfoVisible]</visible>
                         <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
                         <visible>!$PARAM[uselabel2]</visible>
                     </control>
