@@ -120,7 +120,7 @@
 
         <!-- Default -->
         <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
-        <value>special://skin/extras/backgrounds/mountains3.jpg</value>
+        <value>special://skin/extras/backgrounds/default2.jpg</value>
     </variable>
 
     <variable name="Global_Background_Image_NoFanart">
