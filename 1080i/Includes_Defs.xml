@@ -2,7 +2,7 @@
 <includes>
 
     <include name="Defs_Global_Fade_Blur">
-        <fadetime>3000</fadetime>
+        <fadetime>600</fadetime>
     </include>
 
     <variable name="Defs_SettingsPanel_NF">
