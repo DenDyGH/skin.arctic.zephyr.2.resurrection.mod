@@ -1638,3 +1638,18 @@ msgstr "Automatycznie przewijaj widgety"
 msgctxt "#30066"
 msgid "Choose between focus border sizes"
 msgstr "Wybierz pomiędzy rozmiarami obramowania"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30072"
+msgid "Crew"
+msgstr "Zespół"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30042"
+msgid "Recommended"
+msgstr "Rekomendacje"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30043"
+msgid "Posters"
+msgstr "Plakaty"

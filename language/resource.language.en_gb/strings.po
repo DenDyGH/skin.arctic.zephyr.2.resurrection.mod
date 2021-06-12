@@ -1683,3 +1683,8 @@ msgstr ""
 msgctxt "#30071"
 msgid "By genre"
 msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30072"
+msgid "Crew"
+msgstr ""
