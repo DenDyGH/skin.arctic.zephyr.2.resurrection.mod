@@ -174,17 +174,7 @@
         <include>skinshortcuts-template-global</include>
 
         <!-- Background -->
-        <!-- <control type="multiimage" id="7975">
-            <left>-2160</left>
-            <width>1</width>
-            <height>1</height>
-            <include>Defs_TimePerImage</include>
-            <randomize>true</randomize>
-            <fadetime>600</fadetime>
-            <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
-            <visible>System.HasAddon(script.colorbox)</visible>
-            <visible>Skin.HasSetting(EnableBlur)</visible>
-        </control> -->
+
         <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
         <control type="multiimage">
