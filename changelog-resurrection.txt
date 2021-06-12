@@ -1,3 +1,10 @@
+0.3.6
+    - added setup wizard for initial setup skin after installation (may not appear for now...)
+    - updated some language strings
+    - added Polish language translation
+    - small overlay opacity tweaks
+    - added option to enable blur for background
+    - enabled local informations in info-dialog
 0.3.5
     - disabled update addon button
     - some improvements for info-dialog list

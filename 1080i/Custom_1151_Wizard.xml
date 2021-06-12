@@ -2,10 +2,9 @@
 <!-- Foundation -->
 <window type="dialog" id="1151">
     <defaultcontrol always="true">9001</defaultcontrol>
-    <onunload>Skin.SetBool(TMDbHelper.DisablePersonStats)</onunload>
-    <onunload>Skin.SetBool(SkinInit)</onunload>
+    <!-- <onunload>Skin.SetBool(TMDbHelper.DisablePersonStats)</onunload> -->
+    <!-- <onunload>Skin.SetBool(SkinInit)</onunload> -->
     <controls>
-        <!-- <include>Home_Splash</include> -->
         <include>Global_Overlay</include>
         <control type="group">
             <include content="Dialog_Standard_Group">
@@ -139,6 +138,7 @@
                     <itemgap>0</itemgap>
                     <control type="button" id="8001" description="Close">
                         <label>$LOCALIZE[186]</label>
+                        <onclick>Skin.SetBool(SkinInit)</onclick>
                         <onclick>Close</onclick>
                         <include>Dialog_Standard_Right_Buttons</include>
                     </control>
