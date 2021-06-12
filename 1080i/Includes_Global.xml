@@ -90,8 +90,8 @@
                 <aspectratio>scale</aspectratio>
                 <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
                 <fadetime>600</fadetime>
-                <animation effect="fade" start="45" end="15" time="200" reversible="false" condition="![[Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation>
-                <animation effect="fade" end="45" start="35" delay="50" time="200" reversible="false" condition="[Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation>
+                <animation effect="fade" start="15" end="25" reversible="false" condition="![[Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation>
+                <animation effect="fade" start="25" end="15" reversible="false" condition="[Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
