@@ -1306,7 +1306,7 @@
         <param name="imdb_prop" default="Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)" />
         <param name="rt_prop" default="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)" />
         <param name="oscar_prop" default="Window(Home).Property(TMDbHelper.ListItem.Awards)" />
-        <!-- <param name="rt_audience_prop" default="Window(Home).Property(ListItemHelper.rating.rottentomatoes.audience)" /> -->
+        <param name="rt_audience_prop" default="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)" />
         <param name="tvdb_prop" default="Window(Home).Property(TMDbHelper.ListItem.Rating.TVDB)" />
         <param name="tmdb_prop" default="Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating)" />
         <param name="top250_prop" default="Window(Home).Property(TMDbHelper.ListItem.Top250)" />
@@ -1563,7 +1563,7 @@
                         <label>$INFO[$PARAM[rt_prop]]</label>
                     </control>
                 </control>
-                <!-- <control type="group">
+                <control type="group">
                     <width>64</width>
                     <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)</visible>
                     <visible>!String.IsEmpty($PARAM[rt_audience_prop])</visible>
@@ -1593,7 +1593,7 @@
                         <font>font_tiny_bold</font>
                         <label>$INFO[$PARAM[rt_audience_prop]]</label>
                     </control>
-                </control> -->
+                </control>
             </control>
         </definition>
     </include>

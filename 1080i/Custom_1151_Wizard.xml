@@ -2,8 +2,8 @@
 <!-- Foundation -->
 <window type="dialog" id="1151">
     <defaultcontrol always="true">9001</defaultcontrol>
-    <!-- <onunload>Skin.SetBool(TMDbHelper.DisablePersonStats)</onunload> -->
-    <!-- <onunload>Skin.SetBool(SkinInit)</onunload> -->
+    <onunload>Skin.SetBool(TMDbHelper.DisablePersonStats)</onunload>
+    <onunload>Skin.SetBool(SkinInit)</onunload>
     <controls>
         <include>Global_Overlay</include>
         <control type="group">
@@ -31,6 +31,11 @@
                 </control>
                 <control type="group">
                     <top>320</top>
+                    <include content="Defs_Settings_Gradient">
+                        <param name="id" value="9000" />
+                        <height>item_list_height</height>
+                        <visible>ControlGroup(9000).HasFocus()</visible>
+                    </include>
 
                     <control type="grouplist" id="9000">
                         <onright>61</onright>
@@ -133,7 +138,6 @@
                     <itemgap>0</itemgap>
                     <control type="button" id="8001" description="Close">
                         <label>$LOCALIZE[186]</label>
-                        <onclick>Skin.SetBool(SkinInit)</onclick>
                         <onclick>Close</onclick>
                         <include>Dialog_Standard_Right_Buttons</include>
                     </control>

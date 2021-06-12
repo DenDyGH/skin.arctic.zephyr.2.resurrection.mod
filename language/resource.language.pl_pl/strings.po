@@ -1668,3 +1668,18 @@ msgstr "Włącz rozmycie tła (może mieć wpływ na wydajność)"
 msgctxt "#30075"
 msgid "This is a setup wizard. He is guide you through some basic settings you would like to set :)[CR]Keep in mind, some of this settings may impact on performance, so choose carefully what you want to use. After that, you should be ready to go.[CR][CR]Enjoy using Arctic: Zephyr 2 - Resurrection."
 msgstr "To jest kreator konfiguracji. Przeprowadzi Cię on przez kilka podstawowych ustawień, które chciałbyś ustawić :)[CR]Miej na uwadze, że niektóre z tych ustawień mogą mieć wpływ na wydajność, więc wybierz ostrożnie, co chcesz ustawić.[CR][CR]Miłego korzystania z Arctic: Zephyr 2 - Resurrection."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30076"
+msgid "Initialising Services"
+msgstr "Initializowanie serwisów"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30077"
+msgid "Initialising Shortcuts"
+msgstr "Initializowanie skrótów"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30078"
+msgid "Finished Initialising Skin"
+msgstr "Zakończono initializowanie skórki"

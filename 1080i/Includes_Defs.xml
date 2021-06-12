@@ -107,6 +107,29 @@
         <value>main_fg_100</value>
     </variable>
 
+    <include name="Defs_Settings_Gradient">
+        <control type="group">
+            <nested />
+            <animation effect="fade" start="0" end="100" time="1">Visible</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,0)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,1)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,2)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,3)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,4)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,5)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,6)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,7)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,8)">Conditional</animation>
+            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,9)">Conditional</animation>
+            <control type="image">
+                <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+            </control>
+            <control type="image">
+                <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+            </control>
+        </control>
+    </include>
+
     <include name="Defs_InfoList_OnBack">
         <onback condition="!Skin.HasSetting(EnableExtendedInfo)">SetFocus(50)</onback>
         <onback>SetFocus(5000)</onback>

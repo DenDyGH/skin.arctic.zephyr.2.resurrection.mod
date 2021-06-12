@@ -1703,3 +1703,18 @@ msgstr ""
 msgctxt "#30075"
 msgid "This is a setup wizard. He is guide you through some basic settings you would like to set :)[CR]Keep in mind, some of this settings may impact on performance, so choose carefully what you want to use. After that, you should be ready to go.[CR][CR]Enjoy using Arctic: Zephyr 2 - Resurrection."
 msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30076"
+msgid "Initialising Services"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30077"
+msgid "Initialising Shortcuts"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30078"
+msgid "Finished Initialising Skin"
+msgstr ""

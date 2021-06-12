@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_Splash">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ServiceStarted)) + !Skin.HasSetting(DisableTMDbHelperSplash)">$LOCALIZE[31306]...</value>
+        <value condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Window.IsVisible(1151)">$LOCALIZE[31349]...</value>
+        <value condition="Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating">$LOCALIZE[30077]...</value>
+        <value>$LOCALIZE[30078]</value>
+    </variable>
+
     <variable name="Label_PVRGuide_Title">
         <value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
         <value condition="!String.IsEmpty(ListItem.ChannelName)">$INFO[ListItem.ChannelName]</value>
