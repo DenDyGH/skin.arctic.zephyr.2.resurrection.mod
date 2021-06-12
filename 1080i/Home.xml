@@ -13,8 +13,11 @@
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetString(FocusBorderSize, Bold)</onload>
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
 
-    <!-- <onload condition="Skin.HasSetting(TMDbHelper.EnableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload> -->
-    <!-- <onload condition="Skin.HasSetting(TMDbHelper.EnableBlur)">SetProperty(TMDbHelper.Blur.SourceImage,$VAR[Global_Background_Image],Home)</onload> -->
+    <onload condition="!Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.Fallback,$VAR[Global_Background_Image_NoFanart],Home)</onload>
+    <onload condition="Skin.HasSetting(NoFanart) + !Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.SourceImage,Art(fallback),Home)</onload>
+    <onload condition="!Skin.HasSetting(NoFanart) + !Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.SourceImage,poster,Home)</onload>
+    <onload condition="Skin.HasSetting(DisableBlur)">Skin.Reset(TMDbHelper.EnableBlur)</onload>
+    <onload condition="!Skin.HasSetting(DisableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
 
     <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
 

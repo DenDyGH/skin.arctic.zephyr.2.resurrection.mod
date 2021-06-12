@@ -64,17 +64,16 @@
     </include>
 
     <include name="Global_Background">
-        <!-- <control type="multiimage" id="7975">
+        <control type="image" id="7975">
             <left>-2160</left>
             <width>1</width>
             <height>1</height>
             <include>Defs_TimePerImage</include>
             <randomize>true</randomize>
             <fadetime>600</fadetime>
-            <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
-            <visible>System.HasAddon(script.colorbox)</visible>
-            <visible>Skin.HasSetting(EnableBlur)</visible>
-        </control> -->
+            <imagepath background="true">$VAR[Global_Background_ImageBlur_Var]</imagepath>
+            <visible>!Skin.HasSetting(DisableBlur)</visible>
+        </control>
         <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
         <include condition="!Skin.HasSetting(global.showvideo)">Global_Videowindow_Hidden</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
@@ -89,10 +88,10 @@
                 <width>1920</width>
                 <height>1080</height>
                 <aspectratio>scale</aspectratio>
-                <include condition="Skin.HasSetting(TMDbHelper.EnableBlur)">Defs_Global_Fade_Blur</include>
+                <include condition="Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
                 <fadetime>600</fadetime>
-                <animation effect="fade" start="45" end="15" time="300" reversible="false" condition="![[Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation>
-                <animation effect="fade" end="45" start="15" delay="600" time="600" reversible="false" condition="[Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation>
+                <animation effect="fade" start="70" end="35" time="300" reversible="false" condition="![[Skin.HasSetting(DisableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(DisableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation>
+                <animation effect="fade" end="70" start="35" delay="200" time="600" reversible="false" condition="[Skin.HasSetting(DisableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(DisableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
@@ -103,6 +102,11 @@
         <include>Object_Languages</include>
     </include>
 
+    <variable name="Global_Background_Image_NoFanart_Fallback">
+        <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
+        <value>$VAR[Global_Background_Image_Var]</value>
+    </variable>
+
     <variable name="Global_Background_Image_NoFanart">
         <value condition="[Window.IsVisible(home) | Window.IsVisible(1135)] + !String.IsEmpty(Container(301).ListItem.Property(backgroundPlaylist))">$INFO[Container(9988).ListItem.Art(fanart)]</value>
         <value condition="[Window.IsVisible(home) | Window.IsVisible(1135)] + !String.IsEmpty(Container(301).ListItem.Property(Background))">$INFO[Container(301).ListItem.Property(Background)]</value>
@@ -112,16 +116,38 @@
 
     <variable name="Global_Background_Image">
         <value condition="Skin.HasSetting(NoFanart)">$VAR[Global_Background_Image_NoFanart]</value>
-        <value condition="Skin.HasSetting(TMDbHelper.EnableBlur) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
-        <value condition="Skin.HasSetting(TMDbHelper.EnableBlur) + [Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+        <value condition="Skin.HasSetting(DisableBlur) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+        <value condition="Skin.HasSetting(DisableBlur) + [Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+        <value condition="!Skin.HasSetting(DisableBlur)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value> <!-- fix this line to enable fanart when blur is disabled -->
         <value>$VAR[Global_Background_Image_Var]</value>
     </variable>
 
+    <variable name="Global_Background_ImageBlur_Var">
+        <!-- Parent Folder -->
+        <value condition="Skin.HasSetting(NoFanart) | ListItem.IsParentFolder">$VAR[Global_Background_Image_NoFanart]</value>
+
+        <!-- Season View Episodes List -->
+        <value condition="Control.HasFocus(530) + !String.IsEmpty(Container(530).ListItem.Art(season.poster))">$INFO[Container(530).ListItem.Art(season.poster)]</value>
+
+        <!-- General Artwork -->
+        <value condition="!String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>
+        <value condition="!String.IsEmpty(Container.ListItem.Art(tvshow.poster))">$INFO[Container.ListItem.Art(tvshow.poster)]</value>
+        <value condition="!String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
+        <value condition="!String.IsEmpty(Container.ListItem.Art(thumb)) + !String.IsEqual(Container.ListItem.Art(thumb),Container.ListItem.ActualIcon)">$INFO[Container.ListItem.Art(thumb)]</value>
+
+        <!-- Pictures -->
+        <value condition="Window.IsVisible(MyPics.xml) + !String.IsEmpty(ListItem.FileNameAndPath)">$INFO[ListItem.FileNameAndPath]</value>
+
+        <!-- Default -->
+        <!-- <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value> -->
+    </variable>
+
     <variable name="Global_Background_Image_Var">
-        <value condition="Skin.HasSetting(TMDbHelper.EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>
-        <value condition="Skin.HasSetting(TMDbHelper.EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
-        <value condition="Skin.HasSetting(TMDbHelper.EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(tvshow.poster))">$INFO[Container.ListItem.Art(tvshow.poster)]</value>
-        <value condition="Skin.HasSetting(TMDbHelper.EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(thumb)) + !String.StartsWith(Container.ListItem.Art(thumb),special://skin/extras/icons/) + !String.StartsWith(Container.ListItem.Art(thumb),Default)">$INFO[Container.ListItem.Art(thumb)]</value>
+        <value condition="Skin.HasSetting(DisableBlur)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
+        <value condition="!Skin.HasSetting(DisableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>
+        <value condition="!Skin.HasSetting(DisableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
+        <value condition="!Skin.HasSetting(DisableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(tvshow.poster))">$INFO[Container.ListItem.Art(tvshow.poster)]</value>
+        <value condition="!Skin.HasSetting(DisableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(thumb)) + !String.StartsWith(Container.ListItem.Art(thumb),special://skin/extras/icons/) + !String.StartsWith(Container.ListItem.Art(thumb),Default)">$INFO[Container.ListItem.Art(thumb)]</value>
 
         <!-- Next up -->
         <value condition="Window.IsVisible(script-nextup-notification-PostPlayInfo.xml)">$INFO[Window.Property(background)]</value>
