@@ -19,11 +19,11 @@
     <onload condition="Skin.HasSetting(DisableBlur)">Skin.Reset(TMDbHelper.EnableBlur)</onload>
     <onload condition="!Skin.HasSetting(DisableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
 
-    <onload condition="!Skin.HasSetting(SkinInit)">ActivateWindow(1151)</onload>
-
     <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
 
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
+
+    <onload condition="Skin.HasSetting(SkinInit)">ActivateWindow(1151)</onload>
 
     <controls>
         <control type="button" id="6000">
