@@ -1688,3 +1688,18 @@ msgstr ""
 msgctxt "#30072"
 msgid "Crew"
 msgstr ""
+
+#: /1080i/Custom_1151_Wizard.xml
+msgctxt "#30073"
+msgid "Enable ratings for movies/tv shows"
+msgstr ""
+
+#: /1080i/Custom_1151_Wizard.xml
+msgctxt "#30074"
+msgid "Enable blur (may impact on performance)"
+msgstr ""
+
+#: /1080i/Custom_1151_Wizard.xml
+msgctxt "#30075"
+msgid "This is a setup wizard. He is guide you through some basic settings you would like to set :)[CR]Keep in mind, some of this settings may impact on performance, so choose carefully what you want to use. After that, you should be ready to go.[CR][CR]Enjoy using Arctic: Zephyr 2 - Resurrection."
+msgstr ""

@@ -19,6 +19,8 @@
     <onload condition="Skin.HasSetting(DisableBlur)">Skin.Reset(TMDbHelper.EnableBlur)</onload>
     <onload condition="!Skin.HasSetting(DisableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
 
+    <onload condition="!Skin.HasSetting(SkinInit)">ActivateWindow(1151)</onload>
+
     <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
 
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
@@ -117,7 +119,7 @@
         <control type="group">
             <top>800</top>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
-            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
             <animation effect="fade" start="100" end="0" time="1000" tween="cubic">Hidden</animation>
             <include content="Defs_BusySpinner">
                 <param name="label" value="$LOCALIZE[31349]..." />

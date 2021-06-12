@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1151">
+    <defaultcontrol always="true">9001</defaultcontrol>
+    <onunload>Skin.SetBool(TMDbHelper.DisablePersonStats)</onunload>
+    <onunload>Skin.SetBool(SkinInit)</onunload>
+    <controls>
+        <!-- <include>Home_Splash</include> -->
+        <include>Global_Overlay</include>
+        <control type="group">
+            <include content="Dialog_Standard_Group">
+                <param name="width" value="1200" />
+                <param name="height" value="880" />
+            </include>
+
+            <control type="label">
+                <description>Header Label</description>
+                <label>Welcome in Arctic: Zephyr 2 - Resurrection</label>
+                <include>Dialog_Standard_Header</include>
+            </control>
+
+
+            <control type="group">
+                <top>dialog_top</top>
+                <right>dialog_side_grouplist</right>
+                <control type="textbox">
+                    <left>30</left>
+                    <right>30</right>
+                    <font>font_plotbox</font>
+                    <textcolor>dialog_fg_70</textcolor>
+                    <label>$LOCALIZE[30075]</label>
+                </control>
+                <control type="group">
+                    <top>320</top>
+                    <include content="Defs_Settings_Gradient">
+                        <param name="id" value="9000" />
+                        <height>item_list_height</height>
+                        <visible>ControlGroup(9000).HasFocus()</visible>
+                    </include>
+
+                    <control type="grouplist" id="9000">
+                        <onright>61</onright>
+                        <description>Control Area</description>
+                        <itemgap>0</itemgap>
+                        <pagecontrol>61</pagecontrol>
+                        <orientation>vertical</orientation>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <control type="button" id="9001" description="Color Highlight">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31286]</label>
+                            <label2>$INFO[Skin.String(focuscolor.name)]</label2>
+                            <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+                            <onclick>RunScript(script.skin.helper.colorpicker,skinstring=focuscolor.name)</onclick>
+                        </control>
+                        <control type="button" id="9002" description="Home Layout">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[30045]</label>
+                            <label2>$VAR[Label_SkinSettings_HomeLayout]</label2>
+                            <onclick condition="!Skin.HasSetting(HomeMulti)">Skin.SetBool(HomeMulti)</onclick>
+                            <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.SetBool(HomeMultiHorizontal)</onclick>
+                            <onclick condition="Skin.HasSetting(HomeMulti) + Skin.HasSetting(HomeMultiHorizontal)">Skin.Reset(HomeMulti)</onclick>
+                            <onclick condition="Skin.HasSetting(HomeMulti) + Skin.HasSetting(HomeMultiHorizontal)">Skin.Reset(HomeMultiHorizontal)</onclick>
+                            <onclick>ReloadSkin()</onclick>
+                        </control>
+                        <control type="button" id="9003" description="Menu Style">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[30046]</label>
+                            <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
+    
+                            <!-- If vertical just toggle icons -->
+                            <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.ToggleSetting(HomeIcons)</onclick>
+    
+                            <!-- If not vertical toggle both -->
+                            <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + !Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeTextAutoWidth)</onclick>
+                            <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeIcons)</onclick>
+                            <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeTextAutoWidth)</onclick>
+                            <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeIcons)</onclick>
+                        </control>
+                        <control type="button" id="9004" description="Set Fallback Image">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31150]</label>
+                            <label2>$INFO[Skin.String(fanart.fallback)]</label2>
+                            <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+                            <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(fanart.fallback))</onclick>
+                            <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
+                            <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(fanart.fallback))</onclick>
+                            <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31150])</onclick>
+                        </control>
+                        <control type="radiobutton" id="9005" description="Enable blur">
+                            <radioposx>740</radioposx>
+                            <include>Dialog_Standard_Button</include>
+                            <label>$LOCALIZE[30074]</label>
+                            <onclick>Skin.ToggleSetting(DisableBlur)</onclick>
+                            <selected>!Skin.HasSetting(DisableBlur)</selected>
+                        </control>
+                        <control type="button" id="9006" description="Focus border size">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[30066]</label>
+                            <label2>$INFO[Skin.String(FocusBorderSize)]</label2>
+    
+                            <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+                            <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30067])</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30067]))</onclick>
+                            <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30068])</onclick>
+                            <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30068]))</onclick>
+                            <onclick>RunScript(script.toolbox,info=selectdialog,header=Focus border size)</onclick>
+                        </control>
+                        <control type="radiobutton" id="9007" description="Enable ratings online">
+                            <radioposx>740</radioposx>
+                            <include>Dialog_Standard_Button</include>
+                            <label>$LOCALIZE[30073]</label>
+                            <onclick condition="!Skin.HasSetting(EnableExtendedInfo)">Skin.SetBool(EnableExtendedInfo)</onclick>
+                            <onclick condition="Skin.HasSetting(EnableExtendedInfo)">Skin.Reset(EnableExtendedInfo)</onclick>
+                            <onclick>Skin.ToggleSetting(TMDbHelper.Service)</onclick>
+                            <selected>Skin.HasSetting(EnableExtendedInfo)</selected>
+                        </control>
+                        <control type="radiobutton" id="9008" description="Minimal Busy Loader">
+                            <radioposx>740</radioposx>
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31108]</label>
+                            <onclick>Skin.ToggleSetting(MinimalBusyLoader)</onclick>
+                            <selected>Skin.HasSetting(MinimalBusyLoader)</selected>
+                        </control>
+                    </control>
+                </control>
+            </control>
+
+            <include content="Dialog_Scrollbar">
+                <param name="onleft" value="9000" />
+            </include>
+
+
+            <control type="group">
+                <include>Dialog_Standard_Right_Group</include>
+                <control type="grouplist" id="8000">
+                    <onleft>61</onleft>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <control type="button" id="8001" description="Close">
+                        <label>$LOCALIZE[186]</label>
+                        <onclick>Close</onclick>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>
