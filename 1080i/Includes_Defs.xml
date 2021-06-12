@@ -107,7 +107,7 @@
         <value>main_fg_100</value>
     </variable>
 
-    <include name="Defs_Settings_Gradient">
+    <!-- <include name="Defs_Settings_Gradient">
         <control type="group">
             <nested />
             <animation effect="fade" start="0" end="100" time="1">Visible</animation>
@@ -128,7 +128,7 @@
                 <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
             </control>
         </control>
-    </include>
+    </include> -->
 
     <include name="Defs_InfoList_OnBack">
         <onback condition="!Skin.HasSetting(EnableExtendedInfo)">SetFocus(50)</onback>
