@@ -47,7 +47,6 @@
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListSets)</onclick>
                     <selected>!Skin.HasSetting(DisableInfoListSets)</selected>
-                    <enable>Skin.HasSetting(EnableExtendedInfo)</enable>
                 </control>
                 <control type="radiobutton" id="9006">
                     <label>$LOCALIZE[31136]</label>
@@ -63,7 +62,6 @@
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListSeasons)</onclick>
                     <selected>!Skin.HasSetting(DisableInfoListSeasons)</selected>
-                    <enable>Skin.HasSetting(EnableExtendedInfo)</enable>
                 </control>
                 <control type="radiobutton" id="9004">
                     <label>$LOCALIZE[20339]</label>
@@ -71,7 +69,6 @@
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListDirector)</onclick>
                     <selected>!Skin.HasSetting(DisableInfoListDirector)</selected>
-                    <enable>Skin.HasSetting(EnableExtendedInfo)</enable>
                 </control>
                 <control type="radiobutton" id="9017">
                     <label>Crew</label>
