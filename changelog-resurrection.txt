@@ -1,3 +1,5 @@
+0.3.7
+    - fixed first setup wizard may not appear
 0.3.6
     - added setup wizard for initial setup skin after installation (may not appear for now...)
     - updated some language strings
