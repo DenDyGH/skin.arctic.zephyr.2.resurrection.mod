@@ -1,3 +1,6 @@
+0.3.8
+    - fixed scrolling back when you are in last option in settings
+    - some tweaks to 4k rips source flags
 0.3.7
     - fixed first setup wizard may not appear
 0.3.6
