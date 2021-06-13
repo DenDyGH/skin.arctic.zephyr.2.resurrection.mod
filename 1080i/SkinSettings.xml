@@ -143,7 +143,7 @@
 
                     <!-- Debugging -->
 
-                    <control type="image" id="19181">
+                    <control type="image" id="19182">
                         <description>Skin Sign</description>
                         <centerleft>50%</centerleft>
                         <width>450</width>
@@ -156,7 +156,7 @@
                         <aspectratio>keep</aspectratio>
                     </control>
 
-                    <control type="label" id="19181">
+                    <control type="label" id="19183">
                         <description>Skin description</description>
                         <left>80</left>
                         <right>80</right>
@@ -172,7 +172,7 @@
                         <scrollsuffix> - </scrollsuffix>
                   </control>
 
-                    <control type="label" id="19181" description="LABEL">
+                    <control type="label" id="19185" description="LABEL">
                         <top>120</top>
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
                         <include>Dialog_Standard_HintLabel</include>
