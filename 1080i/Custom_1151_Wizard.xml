@@ -3,7 +3,9 @@
 <window type="dialog" id="1151">
     <defaultcontrol always="true">9001</defaultcontrol>
     <onunload>Skin.SetBool(TMDbHelper.DisablePersonStats)</onunload>
-    <onunload>Skin.SetBool(SkinInit)</onunload>
+    <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetString(FocusBorderSize, Bold)</onload>
+    <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
+    <!-- <onunload>Skin.SetBool(SkinInit)</onunload> -->
     <controls>
         <include>Global_Overlay</include>
         <control type="group">
@@ -97,7 +99,7 @@
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[30066]</label>
                             <label2>$INFO[Skin.String(FocusBorderSize)]</label2>
-    
+
                             <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
                             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30067])</onclick>
                             <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30067]))</onclick>
@@ -138,6 +140,7 @@
                     <itemgap>0</itemgap>
                     <control type="button" id="8001" description="Close">
                         <label>$LOCALIZE[186]</label>
+                        <onclick>Skin.SetBool(SkinWizard)</onclick>
                         <onclick>Close</onclick>
                         <include>Dialog_Standard_Right_Buttons</include>
                     </control>

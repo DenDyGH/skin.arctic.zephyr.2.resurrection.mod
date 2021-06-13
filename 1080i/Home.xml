@@ -3,28 +3,24 @@
 <window id="0">
     <defaultcontrol always="false">301</defaultcontrol>
 
-    <onunload condition="!Control.HasFocus(301) + [Window.Next(VideoFullScreen.xml) | Window.Next(MusicVisualisation.xml)]">SetFocus(301)</onunload>
-    <onload condition="Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)">SetFocus(301)</onload>
-    
+    <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(refocus,SetFocus(301),00:01,silent,false)</onload>
+    <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
+
     <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=301&amp;levels=1&amp;group=mainmenu|powermenu|searchmenu)</onload>
     
-    <onload condition="System.HasAddon(plugin.video.youtube)">Skin.SetBool(DisableInfoListYouTube)</onload>
+    <onunload condition="!Control.HasFocus(301) + [Window.Next(VideoFullScreen.xml) | Window.Next(MusicVisualisation.xml)]">SetFocus(301)</onunload>
+    <onload condition="Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)">SetFocus(301)</onload>
 
-    <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetString(FocusBorderSize, Bold)</onload>
-    <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
+    <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
+    <onload condition="!Skin.HasSetting(SkinWizard)">ActivateWindow(1151)</onload>
+
+    <onload condition="System.HasAddon(plugin.video.youtube)">Skin.SetBool(DisableInfoListYouTube)</onload>
 
     <onload condition="!Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.Fallback,$VAR[Global_Background_Image_NoFanart],Home)</onload>
     <onload condition="Skin.HasSetting(NoFanart) + !Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.SourceImage,Art(fallback),Home)</onload>
     <onload condition="!Skin.HasSetting(NoFanart) + !Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.SourceImage,poster,Home)</onload>
     <onload condition="Skin.HasSetting(DisableBlur)">Skin.Reset(TMDbHelper.EnableBlur)</onload>
     <onload condition="!Skin.HasSetting(DisableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
-
-    <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(refocus,SetFocus(301),00:01,silent,false)</onload>
-    <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
-
-    <onload condition="Skin.HasSetting(SkinInit)">ActivateWindow(1151)</onload>
-
-    <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
 
     <controls>
         <control type="button" id="6000">
@@ -89,7 +85,7 @@
             <include>Dimensions_Fullscreen</include>
             <texture colordiffuse="Background">common/bg.jpg</texture>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
-            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
             <animation effect="fade" start="100" end="0" delay="1000" time="1000" tween="cubic">Hidden</animation>
         </control>
         <control type="label">
@@ -100,7 +96,7 @@
             <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR]</label>
             <font>font_splash</font>
             <textcolor>main_fg_100</textcolor>
-            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
             <animation effect="slide" start="0" end="-1600" delay="0" time="1000" tween="cubic">Hidden</animation>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
         </control>
@@ -113,7 +109,7 @@
             <label>[COLOR=$VAR[ColorHighlight]]Resurrection[/COLOR]</label>
             <font>font_splash</font>
             <textcolor>main_fg_100</textcolor>
-            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+            <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
             <animation effect="slide" start="0" end="1600" delay="0" time="1000" tween="cubic">Hidden</animation>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
         </control>
