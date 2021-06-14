@@ -28,7 +28,7 @@
             <include>Animation_FadeInOut</include>
             <include>View_Group</include>
             <include content="Home_Hub_Widget">
-                <onup condition="!Skin.HasSetting(SubmenuOnly) | [[Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeMultiHorizontal)]">Back</onup>
+                <onup condition="!Skin.HasSetting(SubmenuOnly) | [Skin.HasSetting(HomeMulti) + Skin.HasSetting(HomeMultiHorizontal)]">Back</onup>
                 <ondown>5610</ondown>
             </include>
         </control>

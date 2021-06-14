@@ -82,7 +82,7 @@
             <top>55</top>
             <left>view_pad</left>
             <include>Animation_Home_MenuFlip</include>
-            <visible>!Control.HasFocus(302) | !Skin.HasSetting(HomeMultiHorizontal) | ![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]</visible>
+            <visible>!Control.HasFocus(302) | !Skin.HasSetting(HomeMultiHorizontal) | !Skin.HasSetting(HomeMulti)</visible>
             <control type="group">
                 <left>15</left>
                 <animation effect="slide" start="0" end="-120" condition="!Container(301).OnScrollNext" reversible="false" time="200" tween="quadratic">Conditional</animation>
@@ -141,7 +141,7 @@
             <texturenofocus />
             <texturefocus />
             <textoffsetx>0</textoffsetx>
-            <animation effect="fade" start="100" end="30" condition="!Control.HasFocus($PARAM[id]) + Skin.HasSetting(HomeMultiHorizontal) + [Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)] + !Control.HasFocus(98$PARAM[id]$PARAM[pos])">Conditional</animation>
+            <animation effect="fade" start="100" end="30" condition="!Control.HasFocus($PARAM[id]) + Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeMulti) + !Control.HasFocus(98$PARAM[id]$PARAM[pos])">Conditional</animation>
             <label>$INFO[Container($PARAM[id]).ListItemPosition($PARAM[pos]).Label]</label>
             <visible>String.IsEqual(Container($PARAM[id]).ListItemPosition($PARAM[pos]).Label,Container($PARAM[id]).ListItem.Label)</visible>
             <visible>$PARAM[visible]</visible>
@@ -394,7 +394,9 @@
             <bottom>432.5</bottom>
             <control type="group">
                 <top>15</top>
+                <width>1200</width>
                 <visible>ControlGroup(3000).HasFocus()</visible>
+                <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
                 <include content="View_52_Showcase_Aura_Info">
                     <param name="font" value="font_title" />
                     <param name="plotheight" value="160" />
@@ -402,13 +404,13 @@
                 </include>
             </control>
             <control type="group">
-                <width>1600</width>
+                <width>1200</width>
                 <visible>!ControlGroup(3000).HasFocus()</visible>
                 <visible>!Control.IsVisible(993100)</visible>
                 <include>skinshortcuts-template-vertical-info</include>
             </control>
             <control type="group">
-                <width>1600</width>
+                <width>1200</width>
                 <visible>!ControlGroup(3000).HasFocus()</visible>
                 <visible>Control.IsVisible(993100)</visible>
                 <include content="Home_Vertical_Info">
@@ -606,7 +608,7 @@
                         </control>
                     </control>
                     
-                    <control type="group" id="99300">
+                    <control type="group" id="99301">
                         <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
                         <height>412.5</height>
                         <width>1800</width>
@@ -915,10 +917,10 @@
     </include>
 
     <include name="Home_Horizontal_Text">
-        <include condition="Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)">Home_Hidden_Submenu</include>
+        <include condition="Skin.HasSetting(HomeMulti)">Home_Hidden_Submenu</include>
         <control type="list" id="301">
-            <include condition="Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Movement</include>
-            <include condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]">Home_Simple_Movement</include>
+            <include condition="Skin.HasSetting(HomeMulti)">Home_Multi_Movement</include>
+            <include condition="!Skin.HasSetting(HomeMulti)">Home_Simple_Movement</include>
             <orientation>horizontal</orientation>
             <height>10</height>
             <bottom>-100</bottom>
@@ -928,7 +930,7 @@
             <content><include>skinshortcuts-mainmenu</include></content>
         </control>
         <include>Home_Menu</include>
-        <include condition="Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)">Home_Submenu</include>
+        <include condition="Skin.HasSetting(HomeMulti)">Home_Submenu</include>
     </include>
 
     <include name="Home_Horizontal_Fixed_List">
@@ -1061,13 +1063,13 @@
                     <param name="id" value="301" />
                     <param name="font" value="font_topbar" />
                     <include content="Animation_Home_MenuFlip_Conditional">
-                        <param name="condition" value="[!Control.HasFocus(302) | !Skin.HasSetting(HomeMultiHorizontal) | ![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]]" />
+                        <param name="condition" value="[!Control.HasFocus(302) | !Skin.HasSetting(HomeMultiHorizontal) | !Skin.HasSetting(HomeMulti)]" />
                     </include>
-                    <include condition="Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Movement</include>
-                    <include condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]">Home_Simple_Movement</include>
+                    <include condition="Skin.HasSetting(HomeMulti)">Home_Multi_Movement</include>
+                    <include condition="!Skin.HasSetting(HomeMulti)">Home_Simple_Movement</include>
                     <content><include>skinshortcuts-mainmenu</include></content>
                 </include>
-                <include content="Home_Horizontal_Fixed_List" condition="Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)">
+                <include content="Home_Horizontal_Fixed_List" condition="Skin.HasSetting(HomeMulti)">
                     <param name="id" value="302" />
                     <param name="font" value="font_submenu" />
                     <include content="Animation_Home_MenuFlip_Conditional">
@@ -1126,15 +1128,15 @@
                             <textcolor>main_fg_100</textcolor>
                             <label>$INFO[Container(302).ListItem.Label, - ,]</label>
                             <visible>Control.HasFocus(302)</visible>
-                            <visible>Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)</visible>
+                            <visible>Skin.HasSetting(HomeMulti)</visible>
                         </control>
                     </control>
                 </control>
             </control>
-            <include condition="Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)">Home_Horizontal_Icons_Submenu</include>
+            <include condition="Skin.HasSetting(HomeMulti)">Home_Horizontal_Icons_Submenu</include>
             <control type="list" id="301">
-                <include condition="Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Movement</include>
-                <include condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]">Home_Simple_Movement</include>
+                <include condition="Skin.HasSetting(HomeMulti)">Home_Multi_Movement</include>
+                <include condition="!Skin.HasSetting(HomeMulti)">Home_Simple_Movement</include>
                 <include content="Topbar_Menu_Layout">
                     <param name="id" value="301" />
                     <param name="visible" value="!Control.HasFocus(302)" />
