@@ -69,20 +69,20 @@
                             <onclick>SetProperty(Dialog.4.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeMulti) || Skin.SetBool(HomeBasic))</onclick>
                             <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[30045])</onclick>
                         </control>
-                        <control type="button" id="9003" description="Menu Style">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[30046]</label>
-                            <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
+                        <!-- <control type="button" id="9003" description="Menu Style"> -->
+                            <!-- <include>Defs_Settings_Button</include> -->
+                            <!-- <label>$LOCALIZE[30046]</label> -->
+                            <!-- <label2>$VAR[Label_SkinSettings_MenuStyle]</label2> -->
 
                             <!-- If vertical just toggle icons -->
-                            <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.ToggleSetting(HomeIcons)</onclick>
+                            <!-- <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.ToggleSetting(HomeIcons)</onclick> -->
 
                             <!-- If not vertical toggle both -->
-                            <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + !Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeTextAutoWidth)</onclick>
-                            <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeIcons)</onclick>
-                            <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeTextAutoWidth)</onclick>
-                            <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeIcons)</onclick>
-                        </control>
+                            <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + !Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeTextAutoWidth)</onclick> -->
+                            <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeIcons)</onclick> -->
+                            <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeTextAutoWidth)</onclick> -->
+                            <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeIcons)</onclick> -->
+                        <!-- </control> -->
                         <control type="button" id="9004" description="Set Fallback Image">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31150]</label>
