@@ -1,3 +1,8 @@
+0.3.9
+    - introducing new home layout - netflix style
+    - Hungarian language updated
+    - small fix for rt usermeter flag
+    - reenabled youtube videos for tests
 0.3.8
     - fixed scrolling back when you are in last option in settings
     - some tweaks to 4k rips source flags
