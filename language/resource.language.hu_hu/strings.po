@@ -143,7 +143,7 @@ msgstr "Kodek ikonok"
 #: /1080i/SkinSettings.xml
 msgctxt "#31026"
 msgid "Library location"
-msgstr "Médiatár helye"
+msgstr "Menü neve balra fennt"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31027"
@@ -228,7 +228,7 @@ msgstr "Színész név szerint"
 #: /1080i/Custom_1138_Search.xml
 msgctxt "#31043"
 msgid "By Directors Named"
-msgstr "Rendezõ név szerint"
+msgstr "Rendező név szerint"
 
 #: /1080i/Custom_1138_Search.xml
 msgctxt "#31044"
@@ -737,7 +737,7 @@ msgstr "Fejléc"
 #: /1080i/SkinSettings.xml
 msgctxt "#31148"
 msgid "Section name"
-msgstr "Szakasz név"
+msgstr "Almenü név középen"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31149"
@@ -1608,7 +1608,7 @@ msgstr "Fix szélességű szöveg"
 #: /1080i/Includes_Labels.xml
 msgctxt "#30058"
 msgid "Fixed"
-msgstr "Fixált"
+msgstr "Rögzített"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30059"
@@ -1633,4 +1633,75 @@ msgstr "Widgetek testreszabása"
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#30063"
 msgid "Default search items"
-msgstr "Alap kereső elemek"
+msgstr "Alapértelmezett keresési elemek"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30064"
+msgid "3 seconds"
+msgstr "3 másodperc"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30065"
+msgid "5 seconds"
+msgstr "5 másodperc"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30066"
+msgid "Choose between focus border sizes"
+msgstr "Fókuszált keret méret kiválasztás"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30067"
+msgid "Bold"
+msgstr "Vastag"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30068"
+msgid "Thin"
+msgstr "Keskeny"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30070"
+msgid "Films from the Year"
+msgstr "Az Év filmjei"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30071"
+msgid "By genre"
+msgstr "Műfaj szerint"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30072"
+msgid "Crew"
+msgstr "Stáb"
+
+#: /1080i/Custom_1151_Wizard.xml
+msgctxt "#30073"
+msgid "Enable ratings for movies/tv shows"
+msgstr "Pontozás engedélyezése, filmek/sorozatok-nál"
+
+#: /1080i/Custom_1151_Wizard.xml
+msgctxt "#30074"
+msgid "Enable blur (may impact on performance)"
+msgstr "Elmosás engedélyezése (a teljesítményre hatással lehet)"
+
+#: /1080i/Custom_1151_Wizard.xml
+msgctxt "#30075"
+msgid "This is a setup wizard. He is guide you through some basic settings you would like to set :)[CR]Keep in mind, some of this settings may impact on performance, so choose carefully what you want to use. After that, you should be ready to go.[CR][CR]Enjoy using Arctic: Zephyr 2 - Resurrection."
+msgstr "Ez egy varázsló végigvezeti Önt néhány alapvető beállításon, amelyet be szeretne állítani :) [CR]Ne feledje, hogy ezek a beállítások némelyike befolyásolhatja a teljesítményt, ezért gondosan válassza ki, mit szeretne használni. Ezt követően készen áll az indításra.[CR][CR]Élvezze az Arctic Zephyr 2 - Resurrention-t."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30076"
+msgid "Initialising Services"
+msgstr "Szolgáltatások beállítása"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30077"
+msgid "Initialising Shortcuts"
+msgstr "Parancsikonok beállítása"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30078"
+msgid "Finished Initialising Skin"
+msgstr "Felszín beállítások befejezve"
+
