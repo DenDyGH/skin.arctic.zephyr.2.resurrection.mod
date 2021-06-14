@@ -105,7 +105,7 @@
     <include name="Topbar_Right">
         <control type="grouplist">
             <visible>!Skin.HasSetting(DisableClock) + !Skin.HasSetting(EnableShowItemCount)</visible>
-            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">Conditional</animation>
+            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + ![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]]">Conditional</animation>
             <right>view_pad</right>
             <align>right</align>
             <orientation>horizontal</orientation>
@@ -171,7 +171,7 @@
         </control>
         <control type="grouplist">
             <visible>!Skin.HasSetting(DisableClock)  + Skin.HasSetting(EnableShowItemCount)</visible>
-            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">Conditional</animation>
+            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + ![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]]">Conditional</animation>
             <right>view_pad</right>
             <align>right</align>
             <orientation>horizontal</orientation>
@@ -214,7 +214,7 @@
             <include>Defs_InfoDialog_Visible</include>
             <visible>!String.IsEmpty(Container.NumItems) + Skin.HasSetting(EnableShowItemCount)</visible>
             <animation effect="slide" start="0,0" end="0,45" time="200" tween="sine" condition="!Skin.HasSetting(DisableClock)">Conditional</animation>
-            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">Conditional</animation>
+            <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + ![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]]">Conditional</animation>
             <right>view_pad</right>
             <align>right</align>
             <orientation>horizontal</orientation>

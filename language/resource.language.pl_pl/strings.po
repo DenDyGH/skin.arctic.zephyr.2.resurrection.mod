@@ -1683,3 +1683,8 @@ msgstr "Initializowanie skrótów"
 msgctxt "#30078"
 msgid "Finished Initialising Skin"
 msgstr "Zakończono initializowanie skórki"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30079"
+msgid "Netflix style | Multiple widgets"
+msgstr "Styl Netfliksowy | Wiele widgetów"

@@ -22,7 +22,7 @@
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
             <texture colordiffuse="HomePanel">common/bg.jpg</texture>
-            <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [Skin.HasSetting(HomeMulti) | $EXP[Exp_InfoVisible]]]</visible>
+            <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [[Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)] | $EXP[Exp_InfoVisible]]]</visible>
         </control>
     </include>
 
@@ -133,7 +133,7 @@
 
     <variable name="Global_Background_Image">
         <value condition="Skin.HasSetting(NoFanart)">$VAR[Global_Background_Image_NoFanart]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+        <value condition="Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo) + ![Window.IsVisible(Home) + ![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
         <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
         <value condition="!Skin.HasSetting(DisableBlur)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="Skin.HasSetting(NoFanart)">$VAR[Global_Background_Image_NoFanart]</value>
@@ -141,10 +141,10 @@
     </variable>
 
     <variable name="Global_Background_Image_Var">
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(tvshow.poster))">$INFO[Container.ListItem.Art(tvshow.poster)]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(thumb)) + !String.StartsWith(Container.ListItem.Art(thumb),special://skin/extras/icons/) + !String.StartsWith(Container.ListItem.Art(thumb),Default)">$INFO[Container.ListItem.Art(thumb)]</value>
+        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | [Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>
+        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | [Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
+        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | [Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(tvshow.poster))">$INFO[Container.ListItem.Art(tvshow.poster)]</value>
+        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | [Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)]] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(thumb)) + !String.StartsWith(Container.ListItem.Art(thumb),special://skin/extras/icons/) + !String.StartsWith(Container.ListItem.Art(thumb),Default)">$INFO[Container.ListItem.Art(thumb)]</value>
 
         <!-- Next up -->
         <value condition="Window.IsVisible(script-nextup-notification-PostPlayInfo.xml)">$INFO[Window.Property(background)]</value>
@@ -168,10 +168,10 @@
         <value condition="[Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)] + [Control.HasFocus(215) | Control.HasFocus(8215)] + !String.IsEmpty(Container(215).ListItem.Property(Fanart))">$INFO[Container(215).ListItem.Property(Fanart)]</value>
 
         <!-- Settings Widget -->
-        <value condition="Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [String.IsEqual(Container(9989).ListItem.Property(list),Settings) | String.IsEqual(Container(301).ListItem.Property(widget),Settings)]">$VAR[Global_Background_Image_NoFanart]</value>
+        <value condition="Window.IsVisible(Home) + [Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)] + [String.IsEqual(Container(9989).ListItem.Property(list),Settings) | String.IsEqual(Container(301).ListItem.Property(widget),Settings)]">$VAR[Global_Background_Image_NoFanart]</value>
 
         <!-- Weather -->
-        <value condition="[Window.IsVisible(weather) | [Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti) + String.IsEqual(Container(301).ListItem.Property(widget),Weather)] | [Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [Control.HasFocus(9999) | String.IsEqual(Container(9989).ListItem.Property(list),Weather)]]] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,/]</value>     
+        <value condition="[Window.IsVisible(weather) | [Window.IsVisible(Home) + ![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)] + String.IsEqual(Container(301).ListItem.Property(widget),Weather)] | [Window.IsVisible(Home) + [Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal)] + [Control.HasFocus(9999) | String.IsEqual(Container(9989).ListItem.Property(list),Weather)]]] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,/]</value>     
 
 
         <!-- Fanart -->

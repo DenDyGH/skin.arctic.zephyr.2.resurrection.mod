@@ -1718,3 +1718,8 @@ msgstr ""
 msgctxt "#30078"
 msgid "Finished Initialising Skin"
 msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30079"
+msgid "Netflix style | Multiple widgets"
+msgstr ""
