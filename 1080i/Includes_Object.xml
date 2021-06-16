@@ -160,7 +160,7 @@
                     <centertop>50%</centertop>
                     <width>24</width>
                     <height>24</height>
-                    <texture colordiffuse="main_fg_90">$PARAM[icon]</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$PARAM[icon]</texture>
                 </control>
                 <control type="label">
                     <centertop>50%</centertop>
@@ -254,7 +254,7 @@
                     <align>center</align>
                     <label>$INFO[Player.CacheLevel]</label>
                     <font>font_statusbar</font>
-                    <textcolor>main_fg_100</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <visible>Player.Caching</visible>
                 </control>
             </control>
@@ -474,7 +474,7 @@
                 <left>0</left>
                 <bottom>0</bottom>
                 <bordersize>20</bordersize>
-                <texture colordiffuse="$PARAM[fgcolor]_100">$INFO[ListItem.Icon]</texture>
+                <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.Icon]</texture>
                 <aspectratio aligny="center" align="right">keep</aspectratio>
                 <visible>Skin.HasSetting(PVRGuide.ColorDiffuse)</visible>
             </control>
@@ -494,7 +494,7 @@
                 <left>0</left>
                 <bottom>0</bottom>
                 <bordersize>20</bordersize>
-                <texture colordiffuse="$PARAM[fgcolor]_100">common/circle.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(color.primary)]">common/circle.png</texture>
                 <aspectratio aligny="center" align="right">keep</aspectratio>
                 <visible>String.IsEmpty(ListItem.Icon) | String.StartsWith(ListItem.Icon,special://xbmc/addons/pvr.demo/)</visible>
             </control>
@@ -546,7 +546,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">flags/monochrome/other/3D.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/other/3D.png</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>ListItem.IsStereoscopic</visible>
                 </control>
@@ -564,7 +564,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">flags/monochrome/other/HDR.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/other/HDR.png</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>String.Contains(ListItem.FileNameAndPath,HDR)</visible>
                 </control>
@@ -582,7 +582,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">$VAR[Image_RipSource]</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$VAR[Image_RipSource]</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77881))</visible>
                 </control>
@@ -600,7 +600,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">$INFO[ListItem.VideoResolution,flags/monochrome/resolution/,.png]</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.VideoResolution,flags/monochrome/resolution/,.png]</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77882))</visible>
                 </control>
@@ -618,7 +618,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">$INFO[ListItem.VideoCodec,flags/monochrome/source/,.png]</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.VideoCodec,flags/monochrome/source/,.png]</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77883))</visible>
                 </control>
@@ -636,7 +636,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">$INFO[ListItem.VideoAspect,flags/monochrome/aspectratio/,.png]</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.VideoAspect,flags/monochrome/aspectratio/,.png]</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77884))</visible>
                 </control>
@@ -654,7 +654,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">$VAR[Image_AudioCodec]</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$VAR[Image_AudioCodec]</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77885))</visible>
                 </control>
@@ -673,7 +673,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">$INFO[ListItem.AudioChannels,flags/monochrome/channels/,.png]</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.AudioChannels,flags/monochrome/channels/,.png]</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77886))</visible>
                 </control>
@@ -717,7 +717,7 @@
             <top>5</top>
             <height>24</height>
             <width>24</width>
-            <texture colordiffuse="main_fg_90">flags/video.png</texture>
+            <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/video.png</texture>
             <visible>Skin.HasSetting(DisableCodecs)</visible>
             <visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
             <visible>!Skin.HasSetting(Tags.DisableCodecs)</visible>
@@ -739,7 +739,7 @@
             <top>5</top>
             <height>24</height>
             <width>24</width>
-            <texture colordiffuse="main_fg_90">flags/audio.png</texture>
+            <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/audio.png</texture>
             <visible>Skin.HasSetting(DisableCodecs)</visible>
             <visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
             <visible>!Skin.HasSetting(Tags.DisableCodecs)</visible>
@@ -762,7 +762,7 @@
             <top>5</top>
             <height>24</height>
             <width>24</width>
-            <texture colordiffuse="main_fg_90">flags/language.png</texture>
+            <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/language.png</texture>
             <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
             <visible>!Skin.HasSetting(Tags.DisableLanguages)</visible>
         </control>
@@ -783,7 +783,7 @@
             <top>5</top>
             <height>24</height>
             <width>24</width>
-            <texture colordiffuse="main_fg_90">flags/subtitles.png</texture>
+            <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/subtitles.png</texture>
             <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
             <visible>!Skin.HasSetting(Tags.DisableLanguages)</visible>
         </control>
@@ -804,7 +804,7 @@
             <top>5</top>
             <height>24</height>
             <width>24</width>
-            <texture colordiffuse="main_fg_90">flags/lang.png</texture>
+            <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/lang.png</texture>
             <visible>!String.IsEmpty(ListItem.Country)</visible>
             <visible>!Skin.HasSetting(Tags.DisableCountries)</visible>
         </control>
@@ -825,7 +825,7 @@
             <top>5</top>
             <height>24</height>
             <width>24</width>
-            <texture colordiffuse="main_fg_90">flags/studio.png</texture>
+            <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/studio.png</texture>
             <visible>!String.IsEmpty(ListItem.Studio)</visible>
             <visible>!Skin.HasSetting(Tags.DisableStudios)</visible>
         </control>
@@ -1024,7 +1024,7 @@
                     <top>41</top>
                     <left>260</left>
                     <include content="Object_Ratings_Content" condition="!Skin.HasSetting(DisableStarRating) + !Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="main_fg_100" />
+                        <param name="colordiffuse" value="$INFO[Skin.String(color.primary)]" />
                         <param name="align" value="left" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
                         <param name="top250" value="$PARAM[top250]" />
@@ -1035,7 +1035,7 @@
                     <top>41</top>
                     <left>0</left>
                     <include content="Object_Ratings_Content" condition="Skin.HasSetting(DisableStarRating) | Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="main_fg_100" />
+                        <param name="colordiffuse" value="$INFO[Skin.String(color.primary)]" />
                         <param name="align" value="left" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
                         <param name="top250" value="$PARAM[top250]" />
@@ -1088,7 +1088,7 @@
         <param name="label" default="$VAR[Label_InfoLine_01]" />
         <param name="hdsd" default="Skin.HasSetting(Hide_Codecs)" />
         <param name="nextaired" default="true" />
-        <param name="textcolor" default="main_fg_100" />
+        <param name="textcolor" default="$INFO[Skin.String(color.primary)]" />
         <param name="container" default="" />
         <param name="uid" default="661" />
         <definition>
@@ -1208,7 +1208,7 @@
         <param name="label" default="$INFO[ListItem.Label]" />
         <param name="font" default="font_title_large" />
         <param name="titleheight" default="80" />
-        <param name="textcolor" default="main_fg_100" />
+        <param name="textcolor" default="$INFO[Skin.String(color.primary)]" />
         <definition>
             <control type="label">
                 <label>$PARAM[label]</label>
@@ -1326,10 +1326,10 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/oscar.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/oscar.png</texture>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1348,10 +1348,10 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/trakt.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/trakt.png</texture>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1370,10 +1370,10 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/tmdb.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/tmdb.png</texture>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1392,10 +1392,10 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/metacritic.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/metacritic.png</texture>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1413,10 +1413,10 @@
                         <centerleft>50%</centerleft>
                         <width>52</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/imdbtop250.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/imdbtop250.png</texture>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1426,7 +1426,7 @@
                         <visible>String.IsEmpty($PARAM[top250_prop])</visible>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1445,10 +1445,10 @@
                         <centerleft>50%</centerleft>
                         <width>52</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/imdb.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/imdb.png</texture>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1467,10 +1467,10 @@
                         <centerleft>50%</centerleft>
                         <width>64</width>
                         <height>64</height>
-                        <texture colordiffuse="main_fg_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1490,10 +1490,10 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/tvdb.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/tvdb.png</texture>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1511,7 +1511,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/user_rating.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/user_rating.png</texture>
                         <visible>Integer.IsGreater(Container($PARAM[id]).ListItem.UserRating,5)</visible>
                     </control>
                     <control type="image">
@@ -1519,11 +1519,11 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100" flipy="true">flags/monochrome/ratings/user_rating.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]" flipy="true">flags/monochrome/ratings/user_rating.png</texture>
                         <visible>!Integer.IsGreater(Container($PARAM[id]).ListItem.UserRating,5)</visible>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1542,7 +1542,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/rtrotten.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/rtrotten.png</texture>
                         <visible>!Integer.IsGreater($PARAM[rt_prop],59)</visible>
                     </control>
                     <control type="image">
@@ -1550,11 +1550,11 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/rtfresh.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/rtfresh.png</texture>
                         <visible>Integer.IsGreater($PARAM[rt_prop],59)</visible>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1573,7 +1573,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/popcorn_spilt.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/popcorn_spilt.png</texture>
                         <visible>!Integer.IsGreater($PARAM[rt_audience_prop],59)</visible>
                     </control>
                     <control type="image">
@@ -1581,11 +1581,11 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/monochrome/ratings/popcorn.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/monochrome/ratings/popcorn.png</texture>
                         <visible>Integer.IsGreater($PARAM[rt_audience_prop],59)</visible>
                     </control>
                     <control type="label">
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                         <top>40</top>
                         <width>auto</width>
                         <height>28</height>
@@ -1612,7 +1612,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>font_tiny_bold</font>
-                    <textcolor>main_fg_100</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <label>$PARAM[name]</label>
                     <height>$PARAM[height]</height>
                 </control>
@@ -1644,7 +1644,7 @@
                 <height>60</height>
                 <visible>$PARAM[visible]</visible>
                 <control type="image">
-                    <texture colordiffuse="main_fg_100">$PARAM[icon]</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$PARAM[icon]</texture>
                     <visible>Control.HasFocus($PARAM[id])</visible>
                 </control>
                 <control type="image">
@@ -1674,8 +1674,8 @@
                 </include>
                 <align>left</align>
                 <label>$PARAM[label]</label>
-                <textcolor>main_fg_100</textcolor>
-                <focusedcolor>main_fg_100</focusedcolor>
+                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <focusedcolor>$INFO[Skin.String(color.primary)]</focusedcolor>
                 <font>font_info_buttons</font>
                 <visible>Control.HasFocus($PARAM[id])</visible>
                 <visible>$PARAM[visible]</visible>
@@ -1764,31 +1764,31 @@
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star5.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],0)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star5.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],2)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star5.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],4)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star5.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],6)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star5.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],8)">Conditional</animation>
                     </control>
                 </control>
@@ -1801,31 +1801,31 @@
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],1)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],3)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],5)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],7)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],9)">Conditional</animation>
                     </control>
                 </control>
@@ -1883,31 +1883,31 @@
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],0)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],1)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],2)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],3)">Conditional</animation>
                     </control>
                     <control type="image">
                         <height>64</height>
                         <width>64</width>
-                        <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
+                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],4)">Conditional</animation>
                     </control>
                 </control>
@@ -1949,34 +1949,34 @@
                 <control type="label">
                     <label>$INFO[$PARAM[listitem]EpgEventTitle]$INFO[$PARAM[listitem]EpisodeName, - ,]</label>
                     <aligny>top</aligny>
-                    <textcolor>main_fg_100</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <font>font_title</font>
                     <visible>!String.IsEmpty($PARAM[listitem]EpgEventTitle)</visible>
                 </control>
                 <control type="label">
                     <label>$INFO[$PARAM[listitem]Title]</label>
                     <aligny>top</aligny>
-                    <textcolor>main_fg_100</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <font>font_title</font>
                     <visible>String.IsEmpty($PARAM[listitem]EpgEventTitle) + !String.IsEmpty($PARAM[listitem]Title)</visible>
                 </control>
                 <control type="label">
                     <label>$INFO[$PARAM[listitem]Label]</label>
                     <aligny>top</aligny>
-                    <textcolor>main_fg_100</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <font>font_title</font>
                     <visible>String.IsEmpty($PARAM[listitem]EpgEventTitle) + String.IsEmpty($PARAM[listitem]Title) + !String.IsEmpty($PARAM[listitem]Label)</visible>
                 </control>
                 <control type="label">
                     <label>$INFO[ListItem.ChannelName]</label>
                     <aligny>top</aligny>
-                    <textcolor>main_fg_100</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <font>font_title</font>
                     <visible>String.IsEmpty($PARAM[listitem]EpgEventTitle) + String.IsEmpty($PARAM[listitem]Title) + String.IsEmpty($PARAM[listitem]Label)</visible>
                 </control>
             </control>
             <control type="label">
-                <label>$INFO[ListItem.ChannelName,[COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]Genre,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]StartTime,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]EndTime,[COLOR=main_fg_100] - ,[/COLOR]]</label>
+                <label>$INFO[ListItem.ChannelName,[COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]$INFO[$PARAM[listitem]Genre,  |  [COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]$INFO[$PARAM[listitem]StartTime,  |  [COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]$INFO[$PARAM[listitem]EndTime,[COLOR=$INFO[Skin.String(color.primary)]] - ,[/COLOR]]</label>
                 <height>60</height>
                 <aligny>top</aligny>
                 <textcolor>$VAR[ColorHighlight]</textcolor>
@@ -2114,7 +2114,7 @@
                 </control>
                 <control type="label">
                     <left>-11</left>
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2134,7 +2134,7 @@
                     <visible>!String.IsEmpty(ListItem.UserRating)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2155,7 +2155,7 @@
                     <visible>!Skin.HasSetting(Ratings.Oscars)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2176,7 +2176,7 @@
                     <visible>!Skin.HasSetting(Ratings.Trakt)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2197,7 +2197,7 @@
                     <visible>Skin.HasSetting(Ratings.TheMovieDB)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2218,7 +2218,7 @@
                     <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2240,7 +2240,7 @@
                     <visible>!Skin.HasSetting(Ratings.TVDB)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2274,7 +2274,7 @@
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2314,7 +2314,7 @@
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2335,7 +2335,7 @@
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2348,7 +2348,7 @@
                     <visible>$PARAM[imdbvotes]</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2361,7 +2361,7 @@
                     <visible>!$PARAM[imdbvotes]</visible>
                 </control>
                 <control type="label">
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2403,7 +2403,7 @@
                     <top>0</top>
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/oscar.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/oscar.png</texture>
                     <visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
                     <visible>$PARAM[oscars]</visible>
                     <visible>!Skin.HasSetting(Ratings.Oscars)</visible>
@@ -2424,7 +2424,7 @@
                     <top>0</top>
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/metacritic.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/metacritic.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
                     <visible>$PARAM[metacritic]</visible>
                     <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
@@ -2446,7 +2446,7 @@
                     <top>0</top>
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/tvdb.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/tvdb.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TVDB))</visible>
                     <visible>$PARAM[tvdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.TVDB)</visible>
@@ -2469,7 +2469,7 @@
                     <top>0</top>
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/popcorn.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/popcorn.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
                     <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
                     <visible>$PARAM[usermeter]</visible>
@@ -2479,7 +2479,7 @@
                     <top>0</top>
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/popcorn_spilt.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/popcorn_spilt.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
                     <visible>!Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
                     <visible>$PARAM[usermeter]</visible>
@@ -2500,7 +2500,7 @@
                 <control type="image">
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/rtrotten.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/rtrotten.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
                     <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),0) + !Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59)</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
@@ -2509,7 +2509,7 @@
                 <control type="image">
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/rtfresh.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/rtfresh.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
                     <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59) + !Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
@@ -2518,8 +2518,8 @@
                 <control type="image" description="remove the rtfresh texture line for certified logo">
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/rtfresh.png</texture>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/certified.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/rtfresh.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/certified.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
                     <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
@@ -2541,7 +2541,7 @@
                     <top>1</top>
                     <width>52</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]_100">flags/$PARAM[directory]/ratings/imdb.png</texture>
+                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/$PARAM[directory]/ratings/imdb.png</texture>
                     <visible>!String.IsEmpty(Player.RatingAndVotes) | !String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)) | [Window.IsVisible(DialogVideoInfo.xml) + !String.IsEmpty(Player.Rating)]</visible>
                     <visible>$PARAM[imdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
@@ -2667,7 +2667,7 @@
             <onleft>50</onleft>
             <texturesliderbackground colordiffuse="main_fg_12" border="4">common/white.png</texturesliderbackground>
             <texturesliderbar colordiffuse="main_fg_30" border="4">scrollbar/scrollv.png</texturesliderbar>
-            <texturesliderbarfocus colordiffuse="main_fg_100" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
+            <texturesliderbarfocus colordiffuse="$INFO[Skin.String(color.primary)]" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
             <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
             <visible>![String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
             <include>Animation_FadeIn</include>
@@ -2781,7 +2781,7 @@
             <label>[B]$PARAM[label][/B]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>main_fg_100</textcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <font>font_tiny_bold</font>
             <visible>String.IsEqual(ListItem.SortLetter,$PARAM[label])</visible>
         </control>
@@ -2804,7 +2804,7 @@
             <label>[B]#[/B]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>main_fg_100</textcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <font>font_tiny_bold</font>
             <visible>$EXP[Exp_SortLetterIsNumber]</visible>
         </control>
@@ -2824,7 +2824,7 @@
             <visible>$PARAM[visible]</visible>
             <texturesliderbackground colordiffuse="main_fg_12" border="4">common/white.png</texturesliderbackground>
             <texturesliderbar colordiffuse="main_fg_30" border="4">scrollbar/scrollv.png</texturesliderbar>
-            <texturesliderbarfocus colordiffuse="main_fg_100" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
+            <texturesliderbarfocus colordiffuse="$INFO[Skin.String(color.primary)]" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
             <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(62)">Conditional</animation>
             <visible>![String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
             <include>Animation_FadeIn</include>
@@ -2933,7 +2933,7 @@
     </include>
 
     <include name="Object_DoubleArrow_Up">
-        <param name="colordiffuse" default="main_fg_100" />
+        <param name="colordiffuse" default="$INFO[Skin.String(color.primary)]" />
         <definition>
             <control type="image">
                 <width>16</width>
@@ -2953,7 +2953,7 @@
     </include>
 
     <include name="Object_DoubleArrow_Down">
-        <param name="colordiffuse" default="main_fg_100" />
+        <param name="colordiffuse" default="$INFO[Skin.String(color.primary)]" />
         <definition>
             <control type="image">
                 <width>16</width>
@@ -3041,7 +3041,7 @@
                             <right>0</right>
                             <height>45</height>
                             <font>font_overlay_title</font>
-                            <textcolor>main_fg_100</textcolor>
+                            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                             <label>$VAR[Label_OverlayTitle]</label>
                         </control>
 
@@ -3112,7 +3112,7 @@
                     <param name="texture" value="common/buttonshadow-fo.png" />
                     <param name="icon" value="$PARAM[icon]" />
                     <param name="colordiffuse-icon" value="main_bg_90" />
-                    <param name="colordiffuse-texture" value="main_fg_100" />
+                    <param name="colordiffuse-texture" value="$INFO[Skin.String(color.primary)]" />
                 </include>
                 <include content="Object_IconicButton_Left">
                     <param name="visible" value="!Control.HasFocus($PARAM[id])" />
@@ -3130,7 +3130,7 @@
                 <onup>9601</onup>
                 <height>90</height>
                 <texturenofocus border="0,24,0,24" flipx="true" colordiffuse="main_fg_12">common/buttonshadow-mid-nf.png</texturenofocus>
-                <texturefocus border="0,24,0,24" flipx="true" colordiffuse="main_fg_100">common/buttonshadow-mid-fo.png</texturefocus>
+                <texturefocus border="0,24,0,24" flipx="true" colordiffuse="$INFO[Skin.String(color.primary)]">common/buttonshadow-mid-fo.png</texturefocus>
                 <font>font_info_buttons</font>
                 <label>$PARAM[label]</label>
                 <textoffsetx>0</textoffsetx>
@@ -3146,7 +3146,7 @@
                 <include content="Object_IconicButton_Right">
                     <param name="visible" value="Control.HasFocus($PARAM[id])" />
                     <param name="texture" value="common/buttonshadow-fo.png" />
-                    <param name="colordiffuse-texture" value="main_fg_100" />
+                    <param name="colordiffuse-texture" value="$INFO[Skin.String(color.primary)]" />
                 </include>
                 <include content="Object_IconicButton_Right">
                     <param name="visible" value="!Control.HasFocus($PARAM[id])" />

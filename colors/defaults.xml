@@ -15,6 +15,9 @@
 
     <color name="main_half">4d9f9f9f</color>
 
+    <!-- Main netflix dark -->
+    <color name="main_fg_nfd_100">ffbdc3c7</color>
+
     <!-- Dialogs -->
     <color name="dialog_bg_100">FFcccccc</color>
     <color name="dialog_bg_70">B3cccccc</color>

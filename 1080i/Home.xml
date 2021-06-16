@@ -21,7 +21,9 @@
     <onload condition="!Skin.HasSetting(DisableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
 
     <!-- Load Basic home menu layout as default if no value is set -->
-    <onload condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal) | Skin.HasSetting(HomeBasic)]">Skin.SetBool(HomeBasic)</onload>
+    <onload condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiNetflixDark) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal) | Skin.HasSetting(HomeBasic)]">Skin.SetBool(HomeBasic)</onload>
+    <!-- Set default colors if no color is set -->
+    <onload condition="String.IsEmpty(Skin.String(color.primary))">Skin.SetString(color.primary, main_fg_100)</onload>
 
     <controls>
         <control type="button" id="6000">
@@ -76,6 +78,7 @@
             <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
             <include>Animation_FadeInOut</include>
             <include condition="Skin.HasSetting(HomeMultiNetflix)">Home_Multi_Netflix</include>
+            <include condition="Skin.HasSetting(HomeMultiNetflixDark)">Home_Multi_Netflix_Dark</include>
             <include condition="Skin.HasSetting(HomeMultiVertical)">Home_Multi_Vertical</include>
             <include condition="Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Horizontal</include>
             <include condition="Skin.HasSetting(HomeBasic)">Home_Simple</include>

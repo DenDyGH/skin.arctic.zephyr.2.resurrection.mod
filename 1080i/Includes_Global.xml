@@ -96,7 +96,43 @@
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>!Skin.HasSetting(HomeMultiNetflixDark)</visible>
             </control>
+            <control type="multiimage">
+                <include>Defs_TimePerImage</include>
+                <randomize>true</randomize>
+                <width>2160</width>
+                <!-- <height>1080</height> -->
+                <aspectratio>scale</aspectratio>
+                <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+                <fadetime>600</fadetime>
+                <!-- <animation effect="fade" start="45" end="15" reversible="false" condition="Skin.HasSetting(EnableBlur) | ![[!Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation> -->
+                <!-- <animation effect="fade" start="60" end="45" reversible="false" condition="!Skin.HasSetting(EnableBlur) | [!Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation> -->
+                <!-- <animation effect="fade" start="10" end="30" reversible="false" condition="Skin.HasSetting(DisableBlur)">Conditional</animation> -->
+                <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+                <!-- <colordiffuse>ffffffff</colordiffuse> -->
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>Skin.HasSetting(HomeMultiNetflixDark)</visible>
+            </control>
+            <control type="multiimage">
+                <include>Defs_TimePerImage</include>
+                <randomize>true</randomize>
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>scale</aspectratio>
+                <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+                <fadetime>600</fadetime>
+                <!-- <animation effect="fade" start="45" end="15" reversible="false" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(Settings.xml) | Window.IsActive(AddonBrowser.xml)">Conditional</animation> -->
+                <!-- <animation effect="fade" start="60" end="45" reversible="false" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(Settings.xml) | Window.IsActive(AddonBrowser.xml)">Conditional</animation> -->
+                
+                <!-- <animation effect="fade" start="10" end="30" reversible="true" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(Settings.xml) | Window.IsActive(AddonBrowser.xml)">Conditional</animation> -->
+                <imagepath background="true">common/vignette-nf.png</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>Skin.HasSetting(HomeMultiNetflixDark)</visible>
+            </control>
+
         </control>
         <include>Object_NowPlaying</include>
         <include>Object_Codecs</include>
