@@ -34,7 +34,7 @@
                             <control type="label">
                                 <align>left</align>
                                 <aligny>top</aligny>
-                                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                <textcolor>main_fg_100</textcolor>
                                 <font>font_tiny_bold</font>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>

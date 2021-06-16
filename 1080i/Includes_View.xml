@@ -189,7 +189,7 @@
                         <right>4</right>
                         <top>4</top>
                         <control type="image">
-                            <texture colordiffuse="$INFO[Skin.String(color.primary)]" border="10">diffuse/box.png</texture>
+                            <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
                         </control>
                         <control type="image">
                             <texture colordiffuse="main_bg_12">common/selected.png</texture>
@@ -208,7 +208,7 @@
             </itemlayout>
             <focusedlayout height="item_pvr_height" width="521">
                 <include content="View_50_EPG_Itemlayout">
-                    <param name="panelcolor" value="$INFO[Skin.String(color.primary)]" />
+                    <param name="panelcolor" value="main_fg_100" />
                     <param name="fgcolor" value="main_bg_100" />
                     <param name="visible" value="Control.HasFocus(10)" />
                 </include>
@@ -260,8 +260,8 @@
                         <left>30</left>
                         <right>110</right>
                         <font>font_tiny</font>
-                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
-                        <selectedcolor>$INFO[Skin.String(color.secondary)]</selectedcolor>
+                        <textcolor>main_fg_70</textcolor>
+                        <selectedcolor>main_fg_70</selectedcolor>
                         <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
                     </control>
                 </control>
@@ -289,8 +289,8 @@
                             <left>30</left>
                             <right>110</right>
                             <font>font_tiny</font>
-                            <selectedcolor>$INFO[Skin.String(color.secondary)]</selectedcolor>
-                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                            <selectedcolor>main_fg_70</selectedcolor>
+                            <textcolor>main_fg_70</textcolor>
                             <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
                         </control>
                     </control>
@@ -306,7 +306,7 @@
                         <right>4</right>
                         <top>4</top>
                         <control type="image">
-                            <texture colordiffuse="$INFO[Skin.String(color.primary)]" border="10">diffuse/box.png</texture>
+                            <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
                         </control>
                         <control type="image">
                             <texture colordiffuse="main_bg_12">common/selected.png</texture>
@@ -338,7 +338,7 @@
             <focusedlayout height="item_list_height" width="521">
                 <include content="View_50_EPG_Itemlayout">
                     <param name="sublabel" value="false" />
-                    <param name="panelcolor" value="$INFO[Skin.String(color.primary)]" />
+                    <param name="panelcolor" value="main_fg_100" />
                     <param name="fgcolor" value="main_bg_100" />
                     <param name="visible" value="Control.HasFocus(10)" />
                 </include>
@@ -377,7 +377,7 @@
                         <width>auto</width>
                         <label>$PARAM[label]</label>
                         <aligny>center</aligny>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <font>font_tiny_bold</font>
                         <height>24</height>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
@@ -391,7 +391,7 @@
                         <aligny>center</aligny>
                         <include content="Object_Variable_TextColor">
                             <param name="std" value="main_fg_30" />
-                            <param name="alt" value="$INFO[Skin.String(color.secondary)]" />
+                            <param name="alt" value="main_fg_70" />
                             <param name="usealt" value="Skin.HasSetting(EnableHighContrastWidgetText)" />
                         </include>
                         <font>font_tiny_bold</font>
@@ -416,7 +416,7 @@
                         <width>auto</width>
                         <label>$INFO[Container($PARAM[id]).ListItem.Label]</label>
                         <aligny>center</aligny>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <font>font_tiny</font>
                         <height>24</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -430,7 +430,7 @@
                         <width>auto</width>
                         <label>$INFO[Container($PARAM[id]).ListItem.Year, (,)]</label>
                         <aligny>center</aligny>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <font>font_tiny</font>
                         <height>24</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -453,7 +453,7 @@
                         <width>auto</width>
                         <label>$INFO[Container($PARAM[id]).ListItem.TvShowTitle,, - ]$INFO[Container($PARAM[id]).ListItem.Label]</label>
                         <aligny>center</aligny>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <font>font_tiny</font>
                         <height>24</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -467,7 +467,7 @@
                         <width>auto</width>
                         <label>$INFO[Container($PARAM[id]).ListItem.ChannelName]$INFO[Container($PARAM[id]).ListItem.Title, - ,]$INFO[Container($PARAM[id]).ListItem.StartTime, - ,]$INFO[Container($PARAM[id]).ListItem.EndTime, - ,]</label>
                         <aligny>center</aligny>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <font>font_tiny</font>
                         <height>24</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -480,7 +480,7 @@
                         <width>auto</width>
                         <label>$PARAM[label2]</label>
                         <aligny>center</aligny>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <font>font_tiny</font>
                         <height>24</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -658,7 +658,7 @@
                 <left>15</left>
                 <right>25</right>
                 <font>font_tiny</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <height>$PARAM[textbox_height]</height>
                 <aligny>top</aligny>
                 <align>center</align>
@@ -713,7 +713,7 @@
                 <left>15</left>
                 <right>25</right>
                 <font>font_tiny</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <height>$PARAM[textbox_height]</height>
                 <aligny>top</aligny>
                 <align>center</align>
@@ -794,7 +794,7 @@
                     <width>auto</width>
                     <label>$LOCALIZE[31312]</label>
                     <aligny>center</aligny>
-                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                    <textcolor>main_fg_100</textcolor>
                     <font>font_tiny_bold</font>
                     <height>24</height>
                     <visible>$PARAM[toplabel]</visible>
@@ -845,7 +845,7 @@
                         <height>40</height>
                         <align>center</align>
                         <font>font_byline</font>
-                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                        <textcolor>main_fg_70</textcolor>
                         <label>$LOCALIZE[5]</label>
                         <visible>!$PARAM[toplabel]</visible>
                     </control>
@@ -855,7 +855,7 @@
                         <width>auto</width>
                         <label>$LOCALIZE[5]</label>
                         <aligny>center</aligny>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <font>font_tiny_bold</font>
                         <height>24</height>
                         <visible>$PARAM[toplabel]</visible>

@@ -104,7 +104,7 @@
 
     <variable name="Defs_Volume_Colordiffuse">
         <value condition="Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti) + ![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]">panel_fg_100</value>
-        <value>$INFO[Skin.String(color.primary)]</value>
+        <value>main_fg_100</value>
     </variable>
 
     <!-- <include name="Defs_Settings_Gradient">

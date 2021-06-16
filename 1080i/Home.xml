@@ -101,7 +101,7 @@
             <aligny>center</aligny>
             <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR]</label>
             <font>font_splash</font>
-            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+            <textcolor>main_fg_100</textcolor>
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
             <animation effect="slide" start="0" end="-1600" delay="0" time="1000" tween="cubic">Hidden</animation>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
@@ -114,7 +114,7 @@
             <aligny>center</aligny>
             <label>[COLOR=$VAR[ColorHighlight]]Resurrection[/COLOR]</label>
             <font>font_splash</font>
-            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+            <textcolor>main_fg_100</textcolor>
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
             <animation effect="slide" start="0" end="1600" delay="0" time="1000" tween="cubic">Hidden</animation>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>

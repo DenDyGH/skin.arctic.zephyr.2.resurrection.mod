@@ -79,7 +79,7 @@
                 <width>16</width>
                 <height>16</height>
                 <visible>Container(996).HasNext | Container(996).HasPrevious</visible>
-                <texture flipy="true" colordiffuse="$INFO[Skin.String(color.primary)]">common/arrow-small.png</texture>
+                <texture flipy="true" colordiffuse="main_fg_100">common/arrow-small.png</texture>
             </control>
             <control type="image">
                 <left>245</left>
@@ -87,7 +87,7 @@
                 <width>16</width>
                 <height>16</height>
                 <visible>Container(996).HasNext | Container(996).HasPrevious</visible>
-                <texture colordiffuse="$INFO[Skin.String(color.primary)]">common/arrow-small.png</texture>
+                <texture colordiffuse="main_fg_100">common/arrow-small.png</texture>
             </control>
         </control>
     </controls>

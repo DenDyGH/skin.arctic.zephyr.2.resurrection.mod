@@ -133,9 +133,9 @@
             <align>left</align>
             <height>70</height>
             <font>$PARAM[font]</font>
-            <focusedcolor>$INFO[Skin.String(color.primary)]</focusedcolor>
-            <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
-            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+            <focusedcolor>main_fg_100</focusedcolor>
+            <selectedcolor>main_fg_100</selectedcolor>
+            <textcolor>main_fg_100</textcolor>
             <onfocus>SetFocus($PARAM[id],$PARAM[pos])</onfocus>
             <onclick>$INFO[Container($PARAM[id]).ListItemPosition($PARAM[pos]).Property(path)]</onclick>
             <texturenofocus />
@@ -280,7 +280,7 @@
                     <control type="label">
                         <align>center</align>
                         <font>font_byline</font>
-                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                        <textcolor>main_fg_70</textcolor>
                         <label fallback="31105">$INFO[Container(301).ListItem.Property(widgetName.backgroundWidget)]</label>
                         <height>30</height>
                     </control>
@@ -289,7 +289,7 @@
                         <aligny>top</aligny>
                         <align>center</align>
                         <font>font_title</font>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <label>$INFO[Container(5600).ListItem.Label,[B],[/B]]</label>
                         <height>85</height>
                     </control>
@@ -297,7 +297,7 @@
                         <align>center</align>
                         <aligny>top</aligny>
                         <font>font_tiny</font>
-                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                        <textcolor>main_fg_70</textcolor>
                         <label>$INFO[Container(5600).ListItem.Genre]</label>
                         <height>67</height>
                     </control>
@@ -478,7 +478,7 @@
                                 <align>right</align>
                                 <aligny>center</aligny>
                                 <textcolor>main_fg_30</textcolor>
-                                <focusedcolor>$INFO[Skin.String(color.primary)]</focusedcolor>
+                                <focusedcolor>main_fg_100</focusedcolor>
                                 <textoffsetx>0</textoffsetx>
                                 <texturefocus />
                                 <texturenofocus />
@@ -519,7 +519,7 @@
                                         <font>font_submenu</font>
                                         <align>right</align>
                                         <aligny>center</aligny>
-                                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                        <textcolor>main_fg_100</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                 </focusedlayout>
@@ -563,7 +563,7 @@
                                     <font>font_topbar</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
-                                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                    <textcolor>main_fg_100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </focusedlayout>
@@ -593,14 +593,14 @@
                                     <right>0</right>
                                     <aspectratio>keep</aspectratio>
                                     <width>item_list_height</width>
-                                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.Icon]</texture>
+                                    <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
                                 </control>
                                 <control type="label">
                                     <right>80</right>
                                     <font>font_topbar</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
-                                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                    <textcolor>main_fg_100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </focusedlayout>
@@ -724,7 +724,7 @@
                                 <align>right</align>
                                 <aligny>center</aligny>
                                 <textcolor>main_fg_30</textcolor>
-                                <focusedcolor>$INFO[Skin.String(color.primary)]</focusedcolor>
+                                <focusedcolor>main_fg_100</focusedcolor>
                                 <textoffsetx>0</textoffsetx>
                                 <texturefocus />
                                 <texturenofocus />
@@ -755,7 +755,7 @@
                                         <font>font_submenu_small</font>
                                         <align>right</align>
                                         <aligny>center</aligny>
-                                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                        <textcolor>main_fg_100</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                 </itemlayout>
@@ -765,7 +765,7 @@
                                         <font>font_submenu</font>
                                         <align>right</align>
                                         <aligny>center</aligny>
-                                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                        <textcolor>main_fg_100</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                 </focusedlayout>
@@ -799,7 +799,7 @@
                                     <font>font_topbar_small</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
-                                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                    <textcolor>main_fg_100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </itemlayout>
@@ -809,7 +809,7 @@
                                     <font>font_topbar</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
-                                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                    <textcolor>main_fg_100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </focusedlayout>
@@ -821,14 +821,14 @@
                                     <right>0</right>
                                     <aspectratio>keep</aspectratio>
                                     <width>item_list_height</width>
-                                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.Icon]</texture>
+                                    <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
                                 </control>
                                 <control type="label">
                                     <right>80</right>
                                     <font>font_topbar_small</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
-                                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                    <textcolor>main_fg_100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </itemlayout>
@@ -839,14 +839,14 @@
                                     <right>0</right>
                                     <aspectratio>keep</aspectratio>
                                     <width>item_list_height</width>
-                                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.Icon]</texture>
+                                    <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
                                 </control>
                                 <control type="label">
                                     <right>80</right>
                                     <font>font_topbar</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
-                                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                    <textcolor>main_fg_100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </focusedlayout>
@@ -954,7 +954,7 @@
                                 <align>right</align>
                                 <aligny>center</aligny>
                                 <textcolor>main_fg_30</textcolor>
-                                <focusedcolor>$INFO[Skin.String(color.primary)]</focusedcolor>
+                                <focusedcolor>main_fg_100</focusedcolor>
                                 <textoffsetx>0</textoffsetx>
                                 <texturefocus />
                                 <texturenofocus />
@@ -995,7 +995,7 @@
                                         <font>font_submenu</font>
                                         <align>right</align>
                                         <aligny>center</aligny>
-                                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                        <textcolor>main_fg_100</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                 </focusedlayout>
@@ -1038,7 +1038,7 @@
                                     <font>font_topbar</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
-                                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                    <textcolor>main_fg_100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </focusedlayout>
@@ -1068,14 +1068,14 @@
                                     <right>0</right>
                                     <aspectratio>keep</aspectratio>
                                     <width>item_list_height</width>
-                                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.Icon]</texture>
+                                    <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
                                 </control>
                                 <control type="label">
                                     <right>80</right>
                                     <font>font_topbar</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
-                                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                    <textcolor>main_fg_100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </focusedlayout>
@@ -1206,7 +1206,7 @@
                     <align>center</align>
                     <height>70</height>
                     <font>$PARAM[font]</font>
-                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                    <textcolor>main_fg_100</textcolor>
                     <visible>Control.HasFocus($PARAM[id])</visible>
                 </control>
                 <control type="label">
@@ -1232,7 +1232,7 @@
             <onright>SetFocus(301,0,absolute)</onright>
             <aspectratio>keep</aspectratio>
             <texturenofocus colordiffuse="main_fg_30">$PARAM[icon]</texturenofocus>
-            <texturefocus colordiffuse="$INFO[Skin.String(color.primary)]">$PARAM[icon]</texturefocus>
+            <texturefocus colordiffuse="main_fg_100">$PARAM[icon]</texturefocus>
             <onfocus>ClearProperty(WidgetFocus,Home)</onfocus>
             <visible>![[!Control.HasFocus(302) + Container(301).HasPrevious] | [Control.HasFocus(302) + Container(302).HasPrevious]]</visible>
             <visible>!Control.HasFocus(302)</visible>
@@ -1364,14 +1364,14 @@
                             <aligny>center</aligny>
                             <width max="1140">auto</width>
                             <font>font_topbar</font>
-                            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                            <textcolor>main_fg_100</textcolor>
                             <label>$INFO[Container(301).ListItem.Label]</label>
                         </control>
                         <control type="label">
                             <aligny>center</aligny>
                             <width max="1140">auto</width>
                             <font>font_topbar</font>
-                            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                            <textcolor>main_fg_100</textcolor>
                             <label>$INFO[Container(302).ListItem.Label, - ,]</label>
                             <visible>Control.HasFocus(302)</visible>
                             <visible>Skin.HasSetting(HomeMulti)</visible>
@@ -1574,11 +1574,11 @@
                         <control type="image">
                             <width>64</width>
                             <height>64</height>
-                            <texture colordiffuse="$INFO[Skin.String(color.primary)]">flags/star10.png</texture>
+                            <texture colordiffuse="main_fg_100">flags/star10.png</texture>
                         </control>
                         <control type="label">
                             <left>61</left>
-                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                            <textcolor>main_fg_70</textcolor>
                             <top>19</top>
                             <width>auto</width>
                             <height>28</height>

@@ -58,7 +58,7 @@
             <width>1860</width>
             <align>center</align>
             <font>font_small</font>
-            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+            <textcolor>main_fg_100</textcolor>
             <label/>
         </control>
 
@@ -69,7 +69,7 @@
             <width>1860</width>
             <align>center</align>
             <font>font_small</font>
-            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+            <textcolor>main_fg_100</textcolor>
             <label/>
         </control>
 

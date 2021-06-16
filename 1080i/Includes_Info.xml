@@ -102,7 +102,7 @@
                 <height>350</height>
                 <align>right</align>
                 <aligny>center</aligny>
-                <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                <textcolor>main_fg_70</textcolor>
                 <label>$INFO[ListItem.Property(tagline)]</label>
                 <font>font_info_display</font>
             </control>

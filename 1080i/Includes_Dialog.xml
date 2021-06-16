@@ -269,7 +269,7 @@
         <aligny>center</aligny>
         <align>right</align>
         <font>font_notification</font>
-        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+        <textcolor>main_fg_100</textcolor>
     </include>
 
 
@@ -279,7 +279,7 @@
         <centerbottom>33%</centerbottom>
         <height>30</height>
         <align>right</align>
-        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+        <textcolor>main_fg_70</textcolor>
         <font>font_statusbar</font>                
         <aligny>center</aligny>
     </include>

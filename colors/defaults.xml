@@ -15,16 +15,6 @@
 
     <color name="main_half">4d9f9f9f</color>
 
-    <!-- Main netflix dark -->
-    <!-- <color name="main_fg_nfd_100">ffdfe6e9</color> -->
-    <!-- <color name="main_fg_nfd_70">ffb2bec3</color> -->
-    <!-- from dark colour theme -->
-    <color name="main_fg_nfd_100">ffdedede</color>
-    <!-- <color name="main_fg_90">e7dedede</color> -->
-    <color name="main_fg_nfd_70">b3dedede</color>
-    <!-- <color name="main_fg_30">4ddedede</color> -->
-    <!-- <color name="main_fg_12">1fdedede</color> -->
-
     <!-- Dialogs -->
     <color name="dialog_bg_100">FFcccccc</color>
     <color name="dialog_bg_70">B3cccccc</color>

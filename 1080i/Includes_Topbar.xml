@@ -46,7 +46,7 @@
                 <aligny>center</aligny>
                 <width max="1140">auto</width>
                 <font>font_topbar</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$VAR[Label_Header_Content]</label>
                 <visible>!Control.HasFocus(300) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)</visible>
             </control>
@@ -54,7 +54,7 @@
                 <aligny>center</aligny>
                 <width max="1140">auto</width>
                 <font>font_topbar</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[Container(300).ListItem.Label]</label>
                 <visible>Control.HasFocus(300) + ![Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)]</visible>
             </control>
@@ -118,7 +118,7 @@
                     <centertop>50%</centertop>
                     <height>40</height>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
+                    <texture colordiffuse="main_fg_100">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
                 </control>
                 <visible>Weather.IsFetched</visible>
                 <visible>![Control.HasFocus(60) | Control.HasFocus(62)]</visible>
@@ -126,7 +126,7 @@
             <control type="label">
                 <width>auto</width>
                 <font>font_small</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[Weather.Temperature]</label>
                 <visible>Weather.IsFetched</visible>
                 <visible>![Control.HasFocus(60) | Control.HasFocus(62)]</visible>
@@ -143,7 +143,7 @@
             <control type="label">
                 <width>auto</width>
                 <font>font_small</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[System.Time]</label>
                 <visible>![Control.HasFocus(60) | Control.HasFocus(62)]</visible>
             </control>
@@ -151,7 +151,7 @@
                 <visible>[Control.HasFocus(60) | Control.HasFocus(62)]</visible>
                 <width>auto</width>
                 <font>font_small</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[Container.NumItems,, $LOCALIZE[31101]]</label>
             </control>
             <control type="label">
@@ -165,7 +165,7 @@
                 <visible>[Control.HasFocus(60) | Control.HasFocus(62)]</visible>
                 <width>auto</width>
                 <font>font_small</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[Container.CurrentPage,$LOCALIZE[31391] , $LOCALIZE[20163] ]$INFO[Container.NumPages]</label>
             </control>
         </control>
@@ -184,14 +184,14 @@
                     <centertop>50%</centertop>
                     <height>40</height>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
+                    <texture colordiffuse="main_fg_100">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
                 </control>
                 <visible>Weather.IsFetched</visible>
             </control>
             <control type="label">
                 <width>auto</width>
                 <font>font_small</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[Weather.Temperature]</label>
                 <visible>Weather.IsFetched</visible>
             </control>
@@ -206,7 +206,7 @@
             <control type="label">
                 <width>auto</width>
                 <font>font_small</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[System.Time]</label>
             </control>
         </control>
@@ -224,7 +224,7 @@
             <control type="label">
                 <width>auto</width>
                 <font>font_small</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[Container.NumItems,, $LOCALIZE[31101]]</label>
             </control>
             <control type="label">
@@ -236,7 +236,7 @@
             <control type="label">
                 <width>auto</width>
                 <font>font_small</font>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <label>$INFO[Container.CurrentPage,$LOCALIZE[31391] , $LOCALIZE[20163] ]$INFO[Container.NumPages]</label>
             </control>
         </control>
@@ -280,13 +280,13 @@
                     <width>70</width>
                     <control type="image">
                         <visible>Control.HasFocus($PARAM[id])</visible>
-                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">common/white.png</texture>
+                        <texture colordiffuse="main_fg_100">common/white.png</texture>
                         <bottom>0</bottom>
                         <height>6</height>
                     </control>
                     <control type="image">
                         <aspectratio>keep</aspectratio>
-                        <texture colordiffuse="$INFO[Skin.String(color.primary)]">$INFO[ListItem.Icon]</texture>
+                        <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
                     </control>
                 </control>
             </focusedlayout>

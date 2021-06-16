@@ -14,7 +14,7 @@
                     <aligny>top</aligny>
                     <align>center</align>
                     <font>font_title</font>
-                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                    <textcolor>main_fg_100</textcolor>
                     <label>$INFO[ListItem.Label,[B],[/B]]</label>
                     <height>80</height>
                 </control>
@@ -22,7 +22,7 @@
                     <align>center</align>
                     <aligny>top</aligny>
                     <font>font_tiny</font>
-                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                    <textcolor>main_fg_70</textcolor>
                     <label>$VAR[Label_SubTitle]</label>
                     <height>60</height>
                     <visible>!ListItem.IsCollection</visible>
@@ -32,7 +32,7 @@
                     <aligny>top</aligny>
                     <font>font_tiny</font>
                     <textcolor>$VAR[ColorHighlight]</textcolor>
-                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),[COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]  |  ]$VAR[Label_Duration,[COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]</label>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),[COLOR=main_fg_100],[/COLOR]  |  ]$VAR[Label_Duration,[COLOR=main_fg_100],[/COLOR]]</label>
                     <height>60</height>
                     <visible>ListItem.IsCollection</visible>
                 </control>
@@ -59,7 +59,7 @@
                     <height>$PARAM[plotheight]</height>
                     <aligny>center</aligny>
                     <align>center</align>
-                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                    <textcolor>main_fg_70</textcolor>
                     <font>font_plotbox</font>
                 </control>
                 <!-- <include content="Object_Icon_Ratings" condition="$PARAM[ratings]">
@@ -123,7 +123,7 @@
                         <itemgap>0</itemgap>
                         <control type="label">
                             <font>font_title_small</font>
-                            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                            <textcolor>main_fg_100</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
                             <height>50</height>
@@ -150,7 +150,7 @@
                             <visible>!$PARAM[isView2]</visible>
                             <top>25</top>
                             <font>font_plotbox</font>
-                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                            <textcolor>main_fg_70</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
                             <height>200</height>
@@ -558,7 +558,7 @@
                     <onleft>5249</onleft>
                     <texturesliderbackground colordiffuse="main_fg_12" border="4">common/white.png</texturesliderbackground>
                     <texturesliderbar colordiffuse="main_fg_30" border="4">scrollbar/scrollv.png</texturesliderbar>
-                    <texturesliderbarfocus colordiffuse="$INFO[Skin.String(color.primary)]" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
+                    <texturesliderbarfocus colordiffuse="main_fg_100" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
                     <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(64) + !Container.Scrolling">Conditional</animation>
                     <include>Animation_FadeIn</include>
                     <include>Animation_FadeOut</include>

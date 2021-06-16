@@ -130,7 +130,7 @@
                 <imagepath background="true">common/vignette-nf.png</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <visible>Skin.HasSetting(HomeMultiNetflixDark)</visible>
+                <visible>Skin.HasSetting(HomeMultiNetflixDark) + [Window.IsVisible(Home.xml) | Window.IsVisible(1135)]</visible>
             </control>
 
         </control>

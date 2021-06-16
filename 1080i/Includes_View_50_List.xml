@@ -141,8 +141,8 @@
                             <left>35</left>
                             <right>35</right>
                             <font>font_title_mini</font>
-                            <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
-                            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                            <selectedcolor>main_fg_100</selectedcolor>
+                            <textcolor>main_fg_100</textcolor>
                             <aligny>top</aligny>
                             <align>center</align>
                             <label>$VAR[Label_Title]</label>
@@ -152,8 +152,8 @@
                             <left>35</left>
                             <right>35</right>
                             <font>font_statusbar</font>
-                            <selectedcolor>$INFO[Skin.String(color.secondary)]</selectedcolor>
-                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                            <selectedcolor>main_fg_70</selectedcolor>
+                            <textcolor>main_fg_70</textcolor>
                             <aligny>top</aligny>
                             <align>center</align>
                             <label>$VAR[Label_Premiered]$VAR[Label_List_Right,  •  ,]</label>
@@ -169,7 +169,7 @@
                         <control type="image">
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
-                            <texture colordiffuse="$INFO[Skin.String(color.primary)]" border="10">diffuse/box.png</texture>
+                            <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
                         </control>
                         <control type="group">
                             <height>282</height>
@@ -235,8 +235,8 @@
                                 <left>15</left>
                                 <right>40</right>
                                 <font>font_title_mini</font>
-                                <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
-                                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                <selectedcolor>main_fg_100</selectedcolor>
+                                <textcolor>main_fg_100</textcolor>
                                 <aligny>top</aligny>
                                 <align>left</align>
                                 <label>$VAR[Label_Title]</label>
@@ -246,8 +246,8 @@
                                 <left>15</left>
                                 <right>40</right>
                                 <font>font_statusbar</font>
-                                <selectedcolor>$INFO[Skin.String(color.secondary)]</selectedcolor>
-                                <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                                <selectedcolor>main_fg_70</selectedcolor>
+                                <textcolor>main_fg_70</textcolor>
                                 <aligny>top</aligny>
                                 <align>left</align>
                                 <label>$VAR[Label_Premiered]$VAR[Label_List_Right,  •  ,]</label>
@@ -264,7 +264,7 @@
                         <control type="image">
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
-                            <texture colordiffuse="$INFO[Skin.String(color.primary)]" border="10">diffuse/box.png</texture>
+                            <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
                         </control>
                         <control type="group">
                             <width>566.89</width>
@@ -395,7 +395,7 @@
                         <itemgap>0</itemgap>
                         <control type="label">
                             <font>font_title_small</font>
-                            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                            <textcolor>main_fg_100</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
                             <height>50</height>
@@ -409,7 +409,7 @@
                         <control type="textbox">
                             <top>25</top>
                             <font>font_plotbox</font>
-                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                            <textcolor>main_fg_70</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
                             <height>320</height>
@@ -466,7 +466,7 @@
                     <itemgap>0</itemgap>
                     <control type="label">
                         <font>font_title_small</font>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <align>left</align>
                         <aligny>top</aligny>
                         <height>52</height>
@@ -484,7 +484,7 @@
                         <visible>!$EXP[Exp_IsPluginAdvancedLauncher]</visible>
                         <top>25</top>
                         <font>font_plotbox</font>
-                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                        <textcolor>main_fg_70</textcolor>
                         <align>left</align>
                         <aligny>top</aligny>
                         <height>160</height>
@@ -494,7 +494,7 @@
                         <visible>$EXP[Exp_IsPluginAdvancedLauncher]</visible>
                         <top>25</top>
                         <font>font_plotbox</font>
-                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                        <textcolor>main_fg_70</textcolor>
                         <align>left</align>
                         <aligny>top</aligny>
                         <height>208</height>
@@ -561,7 +561,7 @@
                         <include content="$PARAM[itemlayout]">
                             <param name="fgcolor" value="main_bg" />
                             <param name="bgcolor" value="main_fg" />
-                            <param name="panelcolor" value="$INFO[Skin.String(color.primary)]" />
+                            <param name="panelcolor" value="main_fg_100" />
                             <param name="selectbox" value="true" />
                             <param name="itemheight" value="$PARAM[itemheight]" />
                         </include>
@@ -580,7 +580,7 @@
         <definition>
             <control type="image">
                 <visible>$PARAM[selectbox]</visible>
-                <texture colordiffuse="$INFO[Skin.String(color.primary)]" border="10">diffuse/box.png</texture>
+                <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
             </control>
             <control type="group">
                 <left>$PARAM[pad]</left>
@@ -730,7 +730,7 @@
                 <top>10</top>
                 <width>830</width>
                 <height>62</height>
-                <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                <textcolor>main_fg_100</textcolor>
                 <font>font_medium</font>
                 <label>$LOCALIZE[19076] ($INFO[Container(5000).NumItems,[B],[/B] $LOCALIZE[31101]])</label>
             </control>
@@ -748,7 +748,7 @@
                             <left>10</left>
                             <width>830</width>
                             <aligny>top</aligny>
-                            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                            <textcolor>main_fg_100</textcolor>
                             <font>font_small</font>
                             <label>$INFO[ListItem.Date,,[CR]]$INFO[ListItem.Label,,[CR]]$VAR[Label_SeasonEpisodeLabel]$INFO[ListItem.EpisodeName]</label>
                         </control>
@@ -758,7 +758,7 @@
                             <left>10</left>
                             <width>830</width>
                             <aligny>top</aligny>
-                            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                            <textcolor>main_fg_100</textcolor>
                             <font>font_small</font>
                             <label>$INFO[ListItem.Date,,[CR]]$INFO[ListItem.Label,,[CR]]$VAR[Label_SeasonEpisodeLabel]$INFO[ListItem.EpisodeName]</label>
                         </control>
@@ -782,7 +782,7 @@
                     <left>-$PARAM[pad]</left>
                     <right>-$PARAM[pad]</right>
                     <visible>$PARAM[selectbox]</visible>
-                    <texture colordiffuse="$INFO[Skin.String(color.primary)]" border="10">diffuse/box.png</texture>
+                    <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
                 </control>
                 <control type="label">
                     <visible>String.IsEmpty(ListItem.Date)</visible>
@@ -827,7 +827,7 @@
         <definition>
             <control type="image">
                 <visible>$PARAM[selectbox]</visible>
-                <texture colordiffuse="$INFO[Skin.String(color.primary)]" border="10">diffuse/box.png</texture>
+                <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
             </control>
 
             <!-- Basic List -->
@@ -861,7 +861,7 @@
     </include>
 
     <include name="View_50_EPG_Itemlayout">
-        <param name="fgcolor" default="$INFO[Skin.String(color.secondary)]" />
+        <param name="fgcolor" default="main_fg_70" />
         <param name="panelcolor" default="main_fg_12" />
         <param name="visible" default="true" />
         <param name="sublabel" default="true" />
@@ -1143,7 +1143,7 @@
                         <align>center</align>
                         <height>50</height>
                         <font>font_title_small</font>
-                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <label>$PARAM[label]</label>
                     </control>
                     <control type="label">
