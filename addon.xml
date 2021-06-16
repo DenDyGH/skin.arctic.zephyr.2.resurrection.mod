@@ -7,6 +7,7 @@
         <import addon="script.image.resource.select" version="3.0.2" /> <!-- not this -->
         <import addon="plugin.program.autocompletion" version="2.0.0" />
         <import addon="plugin.video.themoviedb.helper" version="2.4.36" />
+        <import addon="script.embuary.helper" version="2.0.8" />
         <import addon="resource.images.studios.white" version="0.0.24" />
         <import addon="resource.images.moviegenreicons.transparent" version="0.0.6" />
         <import addon="resource.images.weathericons.outline-hd" version="0.0.3" />
