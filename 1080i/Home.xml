@@ -22,9 +22,6 @@
 
     <!-- Load Basic home menu layout as default if no value is set -->
     <onload condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiNetflixDark) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal) | Skin.HasSetting(HomeBasic)]">Skin.SetBool(HomeBasic)</onload>
-    <!-- Set default colors if no color is set -->
-    <onload condition="String.IsEmpty(Skin.String(color.primary))">Skin.SetString(color.primary, main_fg_100)</onload>
-    <onload condition="String.IsEmpty(Skin.String(color.secondary))">Skin.SetString(color.secondary, main_fg_70)</onload>
 
     <controls>
         <control type="button" id="6000">
