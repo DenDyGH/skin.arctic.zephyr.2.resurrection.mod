@@ -199,29 +199,29 @@
                                             <param name="usealt" value="$EXP[FontSetIsMediumOrLarger]" />
                                         </include>
                                         <font>font_small</font>
-                                        <textcolor>main_fg_100</textcolor>
-                                        <selectedcolor>main_fg_100</selectedcolor>
+                                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                        <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
                                         <label>$INFO[ListItem.TrackNumber]</label>
                                     </control>
                                     <control type="label">
                                         <left>50</left>
                                         <font>font_small_bold</font>
-                                        <textcolor>main_fg_100</textcolor>
-                                        <selectedcolor>main_fg_100</selectedcolor>
+                                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                        <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                     <control type="label">
                                         <align>right</align>
                                         <font>font_small</font>
-                                        <textcolor>main_fg_100</textcolor>
-                                        <selectedcolor>main_fg_100</selectedcolor>
+                                        <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
+                                        <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
                                         <label>$INFO[ListItem.Duration]</label>
                                     </control>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="item_list_height" width="586.67">
                                 <control type="image">
-                                    <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+                                    <texture colordiffuse="$INFO[Skin.String(color.primary)]" border="10">diffuse/box.png</texture>
                                 </control>
                                 <control type="group">
                                     <left>20</left>

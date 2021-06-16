@@ -260,8 +260,8 @@
                         <left>30</left>
                         <right>110</right>
                         <font>font_tiny</font>
-                        <textcolor>main_fg_70</textcolor>
-                        <selectedcolor>main_fg_70</selectedcolor>
+                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
+                        <selectedcolor>$INFO[Skin.String(color.secondary)]</selectedcolor>
                         <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
                     </control>
                 </control>
@@ -289,8 +289,8 @@
                             <left>30</left>
                             <right>110</right>
                             <font>font_tiny</font>
-                            <selectedcolor>main_fg_70</selectedcolor>
-                            <textcolor>main_fg_70</textcolor>
+                            <selectedcolor>$INFO[Skin.String(color.secondary)]</selectedcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
                         </control>
                     </control>
@@ -391,7 +391,7 @@
                         <aligny>center</aligny>
                         <include content="Object_Variable_TextColor">
                             <param name="std" value="main_fg_30" />
-                            <param name="alt" value="main_fg_70" />
+                            <param name="alt" value="$INFO[Skin.String(color.secondary)]" />
                             <param name="usealt" value="Skin.HasSetting(EnableHighContrastWidgetText)" />
                         </include>
                         <font>font_tiny_bold</font>
@@ -845,7 +845,7 @@
                         <height>40</height>
                         <align>center</align>
                         <font>font_byline</font>
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                         <label>$LOCALIZE[5]</label>
                         <visible>!$PARAM[toplabel]</visible>
                     </control>

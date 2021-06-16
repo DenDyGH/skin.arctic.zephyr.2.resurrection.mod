@@ -429,7 +429,7 @@
                                     <param name="label" value="$INFO[ListItem.Label]" />
                                 </include>
                                 <include content="Object_Info_Line_Label">
-                                    <param name="label" value="[CAPITALIZE]$INFO[ListItem.Property(Birthday),[COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(Born),  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(Age),  |  [COLOR=main_fg_100], $LOCALIZE[31356][/COLOR]]$INFO[ListItem.Property(Deathday),  |  [COLOR=main_fg_100]$LOCALIZE[21897] ,[/COLOR]][/CAPITALIZE]" />
+                                    <param name="label" value="[CAPITALIZE]$INFO[ListItem.Property(Birthday),[COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]$INFO[ListItem.Property(Born),  |  [COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]$INFO[ListItem.Property(Age),  |  [COLOR=$INFO[Skin.String(color.primary)]], $LOCALIZE[31356][/COLOR]]$INFO[ListItem.Property(Deathday),  |  [COLOR=$INFO[Skin.String(color.primary)]]$LOCALIZE[21897] ,[/COLOR]][/CAPITALIZE]" />
                                     <param name="textcolor" value="$VAR[ColorHighlight]" />
                                     <param name="divider" value="false" />
                                 </include>

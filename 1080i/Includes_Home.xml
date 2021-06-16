@@ -280,7 +280,7 @@
                     <control type="label">
                         <align>center</align>
                         <font>font_byline</font>
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                         <label fallback="31105">$INFO[Container(301).ListItem.Property(widgetName.backgroundWidget)]</label>
                         <height>30</height>
                     </control>
@@ -297,7 +297,7 @@
                         <align>center</align>
                         <aligny>top</aligny>
                         <font>font_tiny</font>
-                        <textcolor>main_fg_70</textcolor>
+                        <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                         <label>$INFO[Container(5600).ListItem.Genre]</label>
                         <height>67</height>
                     </control>
@@ -1578,7 +1578,7 @@
                         </control>
                         <control type="label">
                             <left>61</left>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <top>19</top>
                             <width>auto</width>
                             <height>28</height>

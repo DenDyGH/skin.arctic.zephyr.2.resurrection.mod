@@ -51,7 +51,7 @@
                             </include>
                             <include content="View_50_Info">
                                 <param name="label" value="$INFO[ListItem.ChannelName]" />
-                                <param name="label2" value="$INFO[ListItem.ChannelNumberLabel,[COLOR=main_fg_100]Channel ,[/COLOR]]" />
+                                <param name="label2" value="$INFO[ListItem.ChannelNumberLabel,[COLOR=$INFO[Skin.String(color.primary)]]Channel ,[/COLOR]]" />
                             </include>
                         </control>
 

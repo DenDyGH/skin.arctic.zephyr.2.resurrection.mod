@@ -212,15 +212,15 @@
 
                         <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30079])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeMultiNetflixDark) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeBasic) || Skin.SetBool(HomeMulti) || Skin.SetBool(HomeMultiNetflix) || Skin.SetString(color.primary, main_fg_100))</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeMultiNetflixDark) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeBasic) || Skin.SetBool(HomeMulti) || Skin.SetBool(HomeMultiNetflix) || Skin.SetString(color.primary, main_fg_100) || Skin.SetString(color.secondary, main_fg_70))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30080])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeBasic) || Skin.SetBool(HomeMulti) || Skin.SetBool(HomeMultiNetflixDark) || Skin.SetString(color.primary, main_fg_nfd_100))</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeBasic) || Skin.SetBool(HomeMulti) || Skin.SetBool(HomeMultiNetflixDark) || Skin.SetString(color.primary, main_fg_nfd_100) || Skin.SetString(color.secondary, main_fg_nfd_70))</onclick>
                         <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30051])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiNetflixDark) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeBasic) || Skin.SetBool(HomeMulti) || Skin.SetBool(HomeMultiVertical) || Skin.SetString(color.primary, main_fg_100))</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiNetflixDark) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeBasic) || Skin.SetBool(HomeMulti) || Skin.SetBool(HomeMultiVertical) || Skin.SetString(color.primary, main_fg_100) || Skin.SetString(color.secondary, main_fg_70))</onclick>
                         <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[30052])</onclick>
-                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiNetflixDark) || Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeBasic) || Skin.SetBool(HomeMulti) || Skin.SetBool(HomeMultiHorizontal) || Skin.SetString(color.primary, main_fg_100))</onclick>
+                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiNetflixDark) || Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeBasic) || Skin.SetBool(HomeMulti) || Skin.SetBool(HomeMultiHorizontal) || Skin.SetString(color.primary, main_fg_100) || Skin.SetString(color.secondary, main_fg_70))</onclick>
                         <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[30061])</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiNetflixDark) || Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeMulti) || Skin.SetBool(HomeBasic) || Skin.SetString(color.primary, main_fg_100))</onclick>
+                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.Reset(HomeMultiNetflix) || Skin.Reset(HomeMultiNetflixDark) || Skin.Reset(HomeMultiVertical) || Skin.Reset(HomeMultiHorizontal) || Skin.Reset(HomeMulti) || Skin.SetBool(HomeBasic) || Skin.SetString(color.primary, main_fg_100) || Skin.SetString(color.secondary, main_fg_70))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[30045])</onclick>
                     </control>
 

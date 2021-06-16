@@ -43,7 +43,7 @@
                     <aligny>top</aligny>
                     <align>center</align>
                     <font>font_title_small</font>
-                    <textcolor>main_fg_100</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <label>$INFO[Container(5600).ListItem.Label]</label>
                     <visible>Control.HasFocus(5600)</visible>
                 </control>
@@ -52,7 +52,7 @@
                     <aligny>top</aligny>
                     <align>center</align>
                     <font>font_title_small</font>
-                    <textcolor>main_fg_100</textcolor>
+                    <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
                     <label>$INFO[Container(5610).ListItem.Label]$INFO[Container(5610).ListItem.Year, (,)]</label>
                     <visible>!Control.HasFocus(5600)</visible>
                 </control>
@@ -60,7 +60,7 @@
                     <height max="80">auto</height>
                     <align>center</align>
                     <font>font_plotbox</font>
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <label>$INFO[ListItem.Plot]</label>
                 </control>
             </control>

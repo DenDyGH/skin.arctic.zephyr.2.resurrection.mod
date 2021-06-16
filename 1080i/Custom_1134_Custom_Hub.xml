@@ -27,7 +27,7 @@
                 <height>40</height>
                 <align>center</align>
                 <font>font_byline</font>
-                <textcolor>main_fg_70</textcolor>
+                <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                 <label>$INFO[Container(5600).ListItem.Label]</label>
             </control>
 

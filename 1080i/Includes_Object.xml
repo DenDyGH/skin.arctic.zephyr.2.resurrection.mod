@@ -169,7 +169,7 @@
                     <label>$PARAM[label]</label>
                     <haspath>$PARAM[haspath]</haspath>
                     <font>font_statusbar</font>
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                 </control>
             </control>
         </definition>
@@ -729,7 +729,7 @@
             <aligny>center</aligny>
             <width>auto</width>
             <font>font_mini</font>
-            <textcolor>main_fg_70</textcolor>
+            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
             <label max="350">$INFO[ListItem.VideoCodec]$INFO[ListItem.VideoResolution,  •  ,]$INFO[ListItem.VideoAspect,  •  ,]</label>
             <height>32</height>
             <visible>Skin.HasSetting(DisableCodecs)</visible>
@@ -751,7 +751,7 @@
             <aligny>center</aligny>
             <width>auto</width>
             <font>font_mini</font>
-            <textcolor>main_fg_70</textcolor>
+            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
             <label max="350">$INFO[ListItem.AudioCodec]$VAR[Label_AudioChannels,  •  ,]</label>
             <height>32</height>
             <visible>Skin.HasSetting(DisableCodecs)</visible>
@@ -773,7 +773,7 @@
             <aligny>center</aligny>
             <width>auto</width>
             <font>font_mini</font>
-            <textcolor>main_fg_70</textcolor>
+            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
             <label max="350">$INFO[ListItem.Property(AudioLanguage.1)]$INFO[ListItem.Property(AudioLanguage.2), / ,]$INFO[ListItem.Property(AudioLanguage.3), / ,]$INFO[ListItem.Property(AudioLanguage.4), / ,]$INFO[ListItem.Property(AudioLanguage.5), / ,]</label>
             <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
             <visible>!Skin.HasSetting(Tags.DisableLanguages)</visible>
@@ -794,7 +794,7 @@
             <aligny>center</aligny>
             <width>auto</width>
             <font>font_mini</font>
-            <textcolor>main_fg_70</textcolor>
+            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
             <label max="350">$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ,]$INFO[ListItem.Property(SubtitleLanguage.3), / ,]$INFO[ListItem.Property(SubtitleLanguage.4), / ,]$INFO[ListItem.Property(SubtitleLanguage.5), / ,]</label>
             <height>32</height>
             <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
@@ -815,7 +815,7 @@
             <aligny>center</aligny>
             <width>auto</width>
             <font>font_mini</font>
-            <textcolor>main_fg_70</textcolor>
+            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
             <label>$INFO[ListItem.Country]</label>
             <height>32</height>
             <visible>!String.IsEmpty(ListItem.Country)</visible>
@@ -836,7 +836,7 @@
             <aligny>center</aligny>
             <width>auto</width>
             <font>font_mini</font>
-            <textcolor>main_fg_70</textcolor>
+            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
             <label>$INFO[ListItem.Studio]</label>
             <height>32</height>
             <visible>!String.IsEmpty(ListItem.Studio)</visible>
@@ -1231,7 +1231,7 @@
                 <label fallback="19055">$PARAM[label]</label>
                 <height max="$PARAM[maxheight]">$PARAM[height]</height>
                 <aligny>top</aligny>
-                <textcolor>main_fg_70</textcolor>
+                <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                 <font>font_plotbox</font>
             </control>
         </definition>
@@ -1621,7 +1621,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>font_tiny</font>
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <label>$INFO[$PARAM[label]]$PARAM[label2]</label>
                     <height>$PARAM[height]</height>
                     <haspath>$PARAM[haspath]</haspath>
@@ -1702,7 +1702,7 @@
                     <left>150</left>
                     <align>left</align>
                     <font>font_tiny</font>
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <label>$INFO[$PARAM[label2],, ]$PARAM[label3]</label>
                     <haspath>$PARAM[haspath]</haspath>
                     <scroll>true</scroll>
@@ -1987,7 +1987,7 @@
                 <label fallback="19055">$INFO[$PARAM[listitem]Plot]</label>
                 <height>260</height>
                 <aligny>top</aligny>
-                <textcolor>main_fg_70</textcolor>
+                <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                 <font>font_plotbox</font>
             </control>
         </definition>
@@ -2409,7 +2409,7 @@
                     <visible>!Skin.HasSetting(Ratings.Oscars)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2430,7 +2430,7 @@
                     <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2452,7 +2452,7 @@
                     <visible>!Skin.HasSetting(Ratings.TVDB)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2486,7 +2486,7 @@
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2526,7 +2526,7 @@
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2547,7 +2547,7 @@
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2561,7 +2561,7 @@
                     <visible>$PARAM[imdbvotes]</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2575,7 +2575,7 @@
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2589,7 +2589,7 @@
                     <visible>!$PARAM[imdbvotes]</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2603,7 +2603,7 @@
                     <visible>!$PARAM[imdbvotes]</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2616,7 +2616,7 @@
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -2629,7 +2629,7 @@
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                 </control>
                 <control type="label">
-                    <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>28</height>
@@ -3052,7 +3052,7 @@
                             <top>120</top>
                             <bottom>10</bottom>
                             <align>left</align>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <font>font_overlay_plotbox</font>
                             <label fallback="19055">$VAR[Label_OverlayPlot]</label>
                             <pagecontrol>9601</pagecontrol>
@@ -3118,7 +3118,7 @@
                     <param name="visible" value="!Control.HasFocus($PARAM[id])" />
                     <param name="texture" value="common/buttonshadow-nf.png" />
                     <param name="icon" value="$PARAM[icon]" />
-                    <param name="colordiffuse-icon" value="main_fg_70" />
+                    <param name="colordiffuse-icon" value="$INFO[Skin.String(color.secondary)]" />
                     <param name="colordiffuse-texture" value="main_fg_12" />
                 </include>
             </control>
@@ -3134,7 +3134,7 @@
                 <font>font_info_buttons</font>
                 <label>$PARAM[label]</label>
                 <textoffsetx>0</textoffsetx>
-                <textcolor>main_fg_70</textcolor>
+                <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                 <focusedcolor>main_bg_100</focusedcolor>
                 <nested />
             </control>

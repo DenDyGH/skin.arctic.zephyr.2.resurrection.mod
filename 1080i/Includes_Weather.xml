@@ -76,7 +76,7 @@
                             <textoffsetx>0</textoffsetx>
                             <width>auto</width>
                             <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <label>$LOCALIZE[31003]</label>
                         </control>
                     </control>
@@ -100,7 +100,7 @@
                             <textoffsetx>0</textoffsetx>
                             <width>auto</width>
                             <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <label>$LOCALIZE[402]$INFO[Window(Weather).Property(Current.FeelsLike), ,°]</label>
                         </control>
                     </control>
@@ -134,7 +134,7 @@
                             <textoffsetx>0</textoffsetx>
                             <width>auto</width>
                             <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <label>$VAR[Weather_Sunrise]</label>
                         </control>
                     </control>
@@ -158,7 +158,7 @@
                             <textoffsetx>0</textoffsetx>
                             <width>auto</width>
                             <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <label>$VAR[Weather_Sunset]</label>
                         </control>
                     </control>
@@ -194,7 +194,7 @@
                             <textoffsetx>0</textoffsetx>
                             <width>auto</width>
                             <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <label>$LOCALIZE[383]</label>
                         </control>
                     </control>
@@ -218,7 +218,7 @@
                             <textoffsetx>0</textoffsetx>
                             <width>auto</width>
                             <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <label>$VAR[Weather_UVIndex_Label]</label>
                         </control>
                     </control>
@@ -303,7 +303,7 @@
                 <right>20</right>
                 <align>center</align>
                 <font>font_plotbox</font>
-                <textcolor>main_fg_70</textcolor>
+                <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                 <label fallback="N/A">$PARAM[label]</label>
             </control>
             <control type="label">
@@ -323,7 +323,7 @@
                 <align>center</align>
                 <aligny>top</aligny>
                 <font>font_plotbox</font>
-                <textcolor>main_fg_70</textcolor>
+                <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                 <label fallback="N/A">$INFO[Window(Weather).Property($PARAM[day].Outlook),[CAPITALIZE],[/CAPITALIZE]]</label>
             </control>
         </control>

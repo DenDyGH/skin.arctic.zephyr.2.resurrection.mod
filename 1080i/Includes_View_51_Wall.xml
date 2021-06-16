@@ -5,8 +5,8 @@
             <left>15</left>
             <right>15</right>
             <font>font_statusbar</font>
-            <selectedcolor>main_fg_100</selectedcolor>
-            <textcolor>main_fg_100</textcolor>
+            <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <top>$PARAM[iconheight]</top>
             <bottom>30</bottom>
             <aligny>center</aligny>
@@ -20,8 +20,8 @@
             <left>15</left>
             <right>15</right>
             <font>font_statusbar</font>
-            <selectedcolor>main_fg_100</selectedcolor>
-            <textcolor>main_fg_100</textcolor>
+            <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <top>$PARAM[iconheight]</top>
             <bottom>25</bottom>
             <aligny>center</aligny>
@@ -32,8 +32,8 @@
             <left>15</left>
             <right>15</right>
             <font>font_statusbar</font>
-            <selectedcolor>main_fg_100</selectedcolor>
-            <textcolor>main_fg_100</textcolor>
+            <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <top>$PARAM[iconheight]</top>
             <bottom>25</bottom>
             <aligny>center</aligny>
@@ -47,8 +47,8 @@
             <left>15</left>
             <right>15</right>
             <font>font_statusbar</font>
-            <selectedcolor>main_fg_100</selectedcolor>
-            <textcolor>main_fg_100</textcolor>
+            <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <top>348.75</top>
             <height>20</height>
             <aligny>center</aligny>
@@ -59,8 +59,8 @@
             <left>15</left>
             <right>15</right>
             <font>font_statusbar</font>
-            <selectedcolor>main_fg_100</selectedcolor>
-            <textcolor>main_fg_100</textcolor>
+            <selectedcolor>$INFO[Skin.String(color.primary)]</selectedcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <top>348.75</top>
             <height>20</height>
             <aligny>center</aligny>
@@ -261,7 +261,7 @@
             <left>15</left>
             <right>15</right>
             <font>font_statusbar</font>
-            <textcolor>main_fg_100</textcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <top>$PARAM[iconheight]</top>
             <bottom>30</bottom>
             <aligny>center</aligny>

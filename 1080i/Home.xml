@@ -24,6 +24,7 @@
     <onload condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiNetflixDark) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal) | Skin.HasSetting(HomeBasic)]">Skin.SetBool(HomeBasic)</onload>
     <!-- Set default colors if no color is set -->
     <onload condition="String.IsEmpty(Skin.String(color.primary))">Skin.SetString(color.primary, main_fg_100)</onload>
+    <onload condition="String.IsEmpty(Skin.String(color.secondary))">Skin.SetString(color.secondary, main_fg_70)</onload>
 
     <controls>
         <control type="button" id="6000">
@@ -100,7 +101,7 @@
             <aligny>center</aligny>
             <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR]</label>
             <font>font_splash</font>
-            <textcolor>main_fg_100</textcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
             <animation effect="slide" start="0" end="-1600" delay="0" time="1000" tween="cubic">Hidden</animation>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
@@ -113,7 +114,7 @@
             <aligny>center</aligny>
             <label>[COLOR=$VAR[ColorHighlight]]Resurrection[/COLOR]</label>
             <font>font_splash</font>
-            <textcolor>main_fg_100</textcolor>
+            <textcolor>$INFO[Skin.String(color.primary)]</textcolor>
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
             <animation effect="slide" start="0" end="1600" delay="0" time="1000" tween="cubic">Hidden</animation>
             <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>

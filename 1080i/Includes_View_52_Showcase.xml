@@ -22,7 +22,7 @@
                     <align>center</align>
                     <aligny>top</aligny>
                     <font>font_tiny</font>
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <label>$VAR[Label_SubTitle]</label>
                     <height>60</height>
                     <visible>!ListItem.IsCollection</visible>
@@ -59,7 +59,7 @@
                     <height>$PARAM[plotheight]</height>
                     <aligny>center</aligny>
                     <align>center</align>
-                    <textcolor>main_fg_70</textcolor>
+                    <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                     <font>font_plotbox</font>
                 </control>
                 <!-- <include content="Object_Icon_Ratings" condition="$PARAM[ratings]">
@@ -150,7 +150,7 @@
                             <visible>!$PARAM[isView2]</visible>
                             <top>25</top>
                             <font>font_plotbox</font>
-                            <textcolor>main_fg_70</textcolor>
+                            <textcolor>$INFO[Skin.String(color.secondary)]</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
                             <height>200</height>

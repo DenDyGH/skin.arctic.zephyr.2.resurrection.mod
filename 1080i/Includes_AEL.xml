@@ -26,7 +26,7 @@
         <value condition="!String.IsEmpty(ListItem.Art(boxback))">$INFO[ListItem.Art(boxback)]</value>
     </variable>
     <variable name="ROM_Details">
-        <value condition="!String.IsEmpty(ListItem.Property(platform))">$INFO[ListItem.Property(platform),[COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Studio,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(nplayers),  |  [COLOR=main_fg_100], [/COLOR]]</value>
-        <value>[COLOR=main_fg_100]N/A[/COLOR]</value>
+        <value condition="!String.IsEmpty(ListItem.Property(platform))">$INFO[ListItem.Property(platform),[COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]$INFO[ListItem.Studio,  |  [COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=$INFO[Skin.String(color.primary)]],[/COLOR]]$INFO[ListItem.Property(nplayers),  |  [COLOR=$INFO[Skin.String(color.primary)]], [/COLOR]]</value>
+        <value>[COLOR=$INFO[Skin.String(color.primary)]]N/A[/COLOR]</value>
     </variable>
 </includes>
