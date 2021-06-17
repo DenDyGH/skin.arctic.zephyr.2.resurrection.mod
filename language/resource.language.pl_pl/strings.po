@@ -1693,3 +1693,8 @@ msgstr "Styl Netfliksowy | Wiele widgetów"
 msgctxt "#30080"
 msgid "Netflix style (dark) | Multiple widgets"
 msgstr "Styl Netfliksowy (ciemny) | Wiele widgetów"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30081"
+msgid "Icons only"
+msgstr "Tylko ikony"

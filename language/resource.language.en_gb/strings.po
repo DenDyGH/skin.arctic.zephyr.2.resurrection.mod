@@ -1728,3 +1728,8 @@ msgstr ""
 msgctxt "#30080"
 msgid "Netflix style (dark) | Multiple widgets"
 msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30081"
+msgid "Icons only"
+msgstr ""

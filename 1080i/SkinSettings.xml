@@ -252,7 +252,7 @@
                                     RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
                         </onclick>
                         <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[30061])</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,
+                        <onclick>SetProperty(Dialog.5.BuiltIn,
                                     Skin.Reset(HomeMultiNetflix) || 
                                     Skin.Reset(HomeMultiNetflixDark) || 
                                     Skin.Reset(HomeMultiVertical) || 
@@ -272,12 +272,15 @@
 
                         <!-- If vertical just toggle icons -->
                         <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.ToggleSetting(HomeIcons)</onclick>
+                        <!-- <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.Reset(VerticalIconsOnly)</onclick> -->
+                        <onclick condition="Skin.HasSetting(HomeMultiVertical) + [Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeIcons)]">Skin.ToggleSetting(VerticalIconsOnly)</onclick>
 
                         <!-- If not vertical toggle both -->
                         <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + !Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeTextAutoWidth)</onclick>
                         <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeIcons)</onclick>
                         <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeTextAutoWidth)</onclick>
                         <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeIcons)</onclick>
+                        <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(VerticalIconsOnly)</onclick>
                     </control>
 
                     <control type="button" id="19119" description="Corner Icon">

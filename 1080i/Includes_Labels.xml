@@ -83,11 +83,13 @@
     </variable>
 
     <variable name="Label_SkinSettings_MenuStyle">
-        <value condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeIcons)">$LOCALIZE[30053]</value>
-        <value condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeIcons)">$LOCALIZE[30054]</value>
-        <value condition="Skin.HasSetting(HomeIcons)">$LOCALIZE[30055]</value>
-        <value condition="Skin.HasSetting(HomeTextAutoWidth)">$LOCALIZE[30056]</value>
-        <value>$LOCALIZE[30057]</value>
+        <value condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">$LOCALIZE[30053]</value>
+        <value condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">$LOCALIZE[30054]</value>
+        <value condition="Skin.HasSetting(VerticalIconsOnly) + [Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeIcons)]">$LOCALIZE[30081]</value>
+        <value condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">$LOCALIZE[30055]</value>
+        <value condition="Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(VerticalIconsOnly)">$LOCALIZE[30056]</value>
+        <value condition="!Skin.HasSetting(VerticalIconsOnly)">$LOCALIZE[30057]</value>
+        <value>$LOCALIZE[30059]</value>
     </variable>
 
     <variable name="Label_AudioChannels">
