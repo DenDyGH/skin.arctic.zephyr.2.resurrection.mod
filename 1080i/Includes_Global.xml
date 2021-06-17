@@ -101,7 +101,7 @@
             <control type="multiimage">
                 <include>Defs_TimePerImage</include>
                 <randomize>true</randomize>
-                <width>2160</width>
+                <width>1920</width>
                 <!-- <height>1080</height> -->
                 <aspectratio>scale</aspectratio>
                 <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
