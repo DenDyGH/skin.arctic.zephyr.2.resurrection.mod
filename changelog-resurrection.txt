@@ -1,3 +1,8 @@
+0.4.1
+    - make background fanart fullscreen for netflix style view
+    - fix for smartplaylist
+    - reimplementation menu style using script toolbox
+    - added option to set only icons for vertical and netflix style menu layout
 0.4.0
     - temporary fix to landscape aspect ratio (small landscape still need a fix)
     - added embuary helper as dependency
