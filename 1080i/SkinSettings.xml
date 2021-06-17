@@ -264,24 +264,78 @@
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[30045])</onclick>
                     </control>
 
-                    <control type="button" id="19109" description="Menu Style">
+                    <control type="button" id="19109" description="Home Menu Style">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30046]</label>
                         <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
+                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30054])</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,
+                                    Skin.Reset(VerticalIconsOnly) ||
+                                    Skin.Reset(HomeTextAutoWidth) ||
+                                    Skin.Reset(HomeIcons))
+                        </onclick>
+                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30053])</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,
+                                    Skin.Reset(VerticalIconsOnly) ||
+                                    Skin.Reset(HomeTextAutoWidth) ||
+                                    Skin.SetBool(HomeIcons))
+                        </onclick>
+                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30081])</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,
+                                    Skin.Reset(HomeIcons) ||
+                                    Skin.Reset(HomeTextAutoWidth) ||
+                                    Skin.SetBool(VerticalIconsOnly))
+                        </onclick>
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[30046])</onclick>
+                        <visible>Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)</visible>
+                    </control>
+
+                    <control type="button" id="19110" description="Home Menu Style">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[30046]</label>
+                        <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
+                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30056])</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,
+                                    Skin.Reset(HomeIcons) ||
+                                    Skin.SetBool(HomeTextAutoWidth))
+                        </onclick>
+                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30057])</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,
+                                    Skin.Reset(HomeIcons) ||
+                                    Skin.Reset(VerticalIconsOnly) ||
+                                    Skin.Reset(HomeTextAutoWidth))
+                        </onclick>
+                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30055])</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,
+                                    Skin.Reset(HomeTextAutoWidth) ||
+                                    Skin.SetBool(HomeIcons))
+                        </onclick>
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[30046])</onclick>
+                        <visible>[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)]</visible>
+                    </control>
+
+                    <!-- <control type="button" id="19109" description="Menu Style"> -->
+                        <!-- <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible> -->
+                        <!-- <include>Defs_Settings_Button</include> -->
+                        <!-- <label>$LOCALIZE[30046]</label> -->
+                        <!-- <label2>$VAR[Label_SkinSettings_MenuStyle]</label2> -->
 
                         <!-- If vertical just toggle icons -->
-                        <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.ToggleSetting(HomeIcons)</onclick>
+                        <!-- <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.ToggleSetting(HomeIcons)</onclick> -->
                         <!-- <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.Reset(VerticalIconsOnly)</onclick> -->
-                        <onclick condition="Skin.HasSetting(HomeMultiVertical) + [Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeIcons)]">Skin.ToggleSetting(VerticalIconsOnly)</onclick>
+                        <!-- <onclick condition="Skin.HasSetting(HomeMultiVertical) + [Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeIcons)]">Skin.ToggleSetting(VerticalIconsOnly)</onclick> -->
 
                         <!-- If not vertical toggle both -->
-                        <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + !Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeTextAutoWidth)</onclick>
-                        <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeIcons)</onclick>
-                        <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeTextAutoWidth)</onclick>
-                        <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeIcons)</onclick>
-                        <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(VerticalIconsOnly)</onclick>
-                    </control>
+                        <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + !Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeTextAutoWidth)</onclick> -->
+                        <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeIcons)</onclick> -->
+                        <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeTextAutoWidth)</onclick> -->
+                        <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeIcons)</onclick> -->
+                        <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(VerticalIconsOnly)</onclick> -->
+                    <!-- </control> -->
 
                     <control type="button" id="19119" description="Corner Icon">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible>
