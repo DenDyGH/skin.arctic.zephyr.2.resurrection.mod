@@ -1707,4 +1707,4 @@ msgstr "Zaktualizuj bibliotekę"
 #: /1080i/SkinSettings.xml
 msgctxt "#30083"
 msgid "Switch to colorful icons"
-msgstr "Przełącz na kolorowe ikony"
+msgstr "Wybierz pomiędzy typem ikon"

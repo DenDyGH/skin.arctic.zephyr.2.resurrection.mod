@@ -1741,5 +1741,5 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30083"
-msgid "Switch to colorful icons"
+msgid "Choose between icons type"
 msgstr ""
