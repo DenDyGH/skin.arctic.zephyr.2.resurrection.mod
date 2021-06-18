@@ -1738,3 +1738,8 @@ msgstr ""
 msgctxt "#30082"
 msgid "Update Library"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30083"
+msgid "Switch to colorful icons"
+msgstr ""

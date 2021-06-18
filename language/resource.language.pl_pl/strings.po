@@ -1703,3 +1703,8 @@ msgstr "Tylko ikony"
 msgctxt "#30082"
 msgid "Update Library"
 msgstr "Zaktualizuj bibliotekę"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30083"
+msgid "Switch to colorful icons"
+msgstr "Przełącz na kolorowe ikony"
