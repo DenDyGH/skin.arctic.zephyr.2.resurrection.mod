@@ -1733,3 +1733,8 @@ msgstr ""
 msgctxt "#30081"
 msgid "Icons only"
 msgstr ""
+
+#: /1080i/Includes_Items.xml
+msgctxt "#30082"
+msgid "Update Library"
+msgstr ""

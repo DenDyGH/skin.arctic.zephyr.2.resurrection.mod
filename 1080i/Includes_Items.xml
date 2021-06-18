@@ -29,6 +29,10 @@
                 <visible>Control.IsEnabled(6)</visible>
                 <onclick>SendClick(6)</onclick>
             </item>
+            <item>
+                <label>$LOCALIZE[30082]</label>
+                <onclick>UpdateLibrary(video)</onclick>
+            </item>
         </content>
     </include>
 

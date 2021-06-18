@@ -1698,3 +1698,8 @@ msgstr "Styl Netfliksowy (ciemny) | Wiele widgetów"
 msgctxt "#30081"
 msgid "Icons only"
 msgstr "Tylko ikony"
+
+#: /1080i/Includes_Items.xml
+msgctxt "#30082"
+msgid "Update Library"
+msgstr "Zaktualizuj bibliotekę"
