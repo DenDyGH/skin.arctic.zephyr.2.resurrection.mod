@@ -32,6 +32,7 @@
             <item>
                 <label>$LOCALIZE[30082]</label>
                 <onclick>UpdateLibrary(video)</onclick>
+                <onclick>Dialog.Close(all,force)</onclick>
             </item>
         </content>
     </include>
