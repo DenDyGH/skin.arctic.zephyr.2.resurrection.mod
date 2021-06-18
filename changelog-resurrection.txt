@@ -1,3 +1,9 @@
+0.4.2
+    - some tweaks to resurrection.png
+    - added option to choose between colorful and monochrome icons
+    - added update library button to manage section in DialogVideoInfo
+    - added kodi icon as an option in horizontal menu layout
+    - fix for landscape and small landscape apect ratio
 0.4.1
     - make background fanart fullscreen for netflix style view
     - fix for smartplaylist
