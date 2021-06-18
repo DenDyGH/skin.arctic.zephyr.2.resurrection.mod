@@ -210,7 +210,6 @@
                         <label>$LOCALIZE[30045]</label>
                         <label2>$VAR[Label_SkinSettings_HomeLayout]</label2>
 
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30079])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,
                                     Skin.Reset(HomeMultiVertical) || 
@@ -261,7 +260,7 @@
                                     Skin.SetBool(HomeBasic) || 
                                     RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
                         </onclick>
-                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[30045])</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[30045])</onclick>
                     </control>
 
                     <control type="button" id="19109" description="Home Menu Style">
@@ -269,7 +268,7 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30046]</label>
                         <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30054])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,
                                     Skin.Reset(VerticalIconsOnly) ||
@@ -288,7 +287,7 @@
                                     Skin.Reset(HomeTextAutoWidth) ||
                                     Skin.SetBool(VerticalIconsOnly))
                         </onclick>
-                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[30046])</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[30046])</onclick>
                         <visible>Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)</visible>
                     </control>
 
@@ -297,7 +296,7 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30046]</label>
                         <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30056])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,
                                     Skin.Reset(HomeIcons) ||
@@ -314,7 +313,7 @@
                                     Skin.Reset(HomeTextAutoWidth) ||
                                     Skin.SetBool(HomeIcons))
                         </onclick>
-                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[30046])</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[30046])</onclick>
                         <visible>[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)]</visible>
                     </control>
 
@@ -379,14 +378,14 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31150]</label>
                         <label2>$INFO[Skin.String(HomeBackgroundImage)]</label2>
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(HomeBackgroundImage))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
                         <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(HomeBackgroundImage))</onclick>
                         <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31272])</onclick>
                         <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(HomeBackgroundImage))</onclick>
-                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31150])</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31150])</onclick>
                     </control>
 
                     <control type="radiobutton" id="19107" description="Auto Scroll Single Widgets">
@@ -429,12 +428,12 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31150]</label>
                         <label2>$INFO[Skin.String(fanart.fallback)]</label2>
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(fanart.fallback))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
                         <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(fanart.fallback))</onclick>
-                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31150])</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31150])</onclick>
                     </control>
 
                     <control type="radiobutton" id="19205" description="Show video in background">
@@ -458,7 +457,7 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31128]</label>
                         <label2>$INFO[Skin.String(AutoScroll)]</label2>
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31117])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31117]))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31122])</onclick>
@@ -473,7 +472,7 @@
                         <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31126]))</onclick>
                         <onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31127])</onclick>
                         <onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31127]))</onclick>
-                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31128])</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31128])</onclick>
                     </control>
                     
                     <control type="radiobutton" id="19206" description="Animate background ken burns">
@@ -731,7 +730,7 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31386]</label>
                         <label2>$INFO[Skin.String(OSD_Timeout),,]</label2>
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30039])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(OSD_Timeout))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30064])</onclick>
@@ -750,7 +749,7 @@
                         <onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31125]))</onclick>
                         <onclick>SetProperty(Dialog.9.Label,$LOCALIZE[31126])</onclick>
                         <onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31126]))</onclick>
-                        <onclick>RunScript(script.toolbox,info=selectdialog,header=Autoclose OSD)</onclick>>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=Autoclose OSD)</onclick>>
                         <selected>!String.IsEmpty(Skin.String(OSD_Timeout))</selected>
                     </control>
 
@@ -961,12 +960,11 @@
                         <label>$LOCALIZE[30066]</label>
                         <label2>$INFO[Skin.String(FocusBorderSize)]</label2>
 
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30067])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30067]))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30068])</onclick>
                         <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30068]))</onclick>
-                        <onclick>RunScript(script.toolbox,info=selectdialog,header=Focus border size)</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=Focus border size)</onclick>
                     </control>
 
                     <control type="label" id="19781" description="LABEL">
@@ -1110,7 +1108,7 @@
                         <selected>System.HasAddon(plugin.video.specialfeatures)</selected>
                         <include>Defs_Settings_Button</include>
                     </control> -->
-                    <control type="radiobutton" id="19807">
+                    <!-- <control type="radiobutton" id="19807">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>script.toolbox</label>
                         <label2>$INFO[System.AddonVersion(script.toolbox)]        </label2>
@@ -1118,7 +1116,7 @@
                         <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
                         <selected>System.HasAddon(script.toolbox)</selected>
                         <include>Defs_Settings_Button</include>
-                    </control>
+                    </control> -->
                     <!-- <control type="radiobutton" id="19808">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>script.colorbox</label>
