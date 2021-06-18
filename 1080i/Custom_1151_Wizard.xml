@@ -4,7 +4,6 @@
     <defaultcontrol always="true">9001</defaultcontrol>
     <onunload>Skin.SetBool(TMDbHelper.DisablePersonStats)</onunload>
     <onunload>Skin.SetBool(SkinWizard)</onunload>
-    <onunload condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal) | Skin.HasSetting(HomeBasic)]">Skin.SetBool(HomeBasic)</onunload>
 
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetString(FocusBorderSize, Bold)</onload>
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
