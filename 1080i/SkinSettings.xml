@@ -345,7 +345,8 @@
                         <onclick condition="String.IsEmpty(Skin.String(CornerIcon))">Skin.SetString(CornerIcon,Settings)</onclick>
                         <onclick condition="String.IsEqual(Skin.String(CornerIcon),Settings)">Skin.SetString(CornerIcon,Power)</onclick>
                         <onclick condition="String.IsEqual(Skin.String(CornerIcon),Power)">Skin.SetString(CornerIcon,Home)</onclick>
-                        <onclick condition="String.IsEqual(Skin.String(CornerIcon),Home)">Skin.Reset(CornerIcon)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(CornerIcon),Home)">Skin.SetString(CornerIcon,Kodi)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(CornerIcon),Kodi)">Skin.Reset(CornerIcon)</onclick>
                         <visible>!Skin.HasSetting(HomeTextAutoWidth) + [Skin.HasSetting(HomeMultiHorizontal) | !Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(HomeIcons)</visible>
                     </control>
 

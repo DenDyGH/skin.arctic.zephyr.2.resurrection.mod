@@ -5,6 +5,7 @@
         <value condition="String.IsEqual(Skin.String(CornerIcon),Settings)">special://skin/extras/icons/settings.png</value>
         <value condition="String.IsEqual(Skin.String(CornerIcon),Power)">special://skin/extras/icons/power.png</value>
         <value condition="String.IsEqual(Skin.String(CornerIcon),Home)">special://skin/extras/icons/home.png</value>
+        <value condition="String.IsEqual(Skin.String(CornerIcon),Kodi)">special://skin/extras/icons/kodi.png</value>
         <value>special://skin/extras/icons/search.png</value>
     </variable>
 

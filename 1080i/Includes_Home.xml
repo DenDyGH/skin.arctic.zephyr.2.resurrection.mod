@@ -1318,6 +1318,10 @@
             <param name="icon" value="special://skin/extras/icons/power.png" />
             <onclick>ActivateWindow(shutdownmenu)</onclick>
         </include>
+        <include content="Home_CornerIcon_Template" condition="String.IsEqual(Skin.String(CornerIcon),Kodi)">
+            <param name="icon" value="special://skin/extras/icons/kodi.png" />
+            <onclick>ActivateWindow(settings)</onclick>
+        </include>
         <control type="image">
             <left>-18</left>
             <height>70</height>
