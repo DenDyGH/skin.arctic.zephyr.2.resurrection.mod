@@ -137,21 +137,21 @@
                     <pagecontrol>61</pagecontrol>
                     <usecontrolcoords>true</usecontrolcoords>
                     
-                    <!-- ========================= -->
-                    <!-- Arctic Zephyr 2 - H. Mods -->
-                    <!-- ========================= -->
+                    <!-- =============================== -->
+                    <!-- Arctic: Zephyr 2 - Resurrection -->
+                    <!-- =============================== -->
 
                     <!-- Debugging -->
 
                     <control type="image" id="19182">
                         <description>Skin Sign</description>
                         <centerleft>50%</centerleft>
-                        <width>450</width>
+                        <width>611</width>
                         <height>400</height>
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
-                        <colordiffuse>FFFFFFFF</colordiffuse>
+                        <!-- <colordiffuse>FFFFFFFF</colordiffuse> -->
                         <fadetime>200</fadetime>
-                        <texture border="5">../resurrection.png</texture>
+                        <texture>../resurrection.png</texture>
                         <bordersize>5</bordersize>
                         <aspectratio>keep</aspectratio>
                     </control>
