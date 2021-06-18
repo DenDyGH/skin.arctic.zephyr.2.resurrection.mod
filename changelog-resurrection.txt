@@ -1,3 +1,6 @@
+0.4.3
+    - fixed custom skin wizard and enabled home layout options
+    - getting rid of script.toolbox in favor of embuary helper
 0.4.2
     - some tweaks to resurrection.png
     - added option to choose between colorful and monochrome icons
