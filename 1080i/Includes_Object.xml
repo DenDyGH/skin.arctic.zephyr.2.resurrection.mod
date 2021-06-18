@@ -267,7 +267,7 @@
         <param name="squarecondition" default="[!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Square)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Square)]" />
         <param name="iconcondition" default="[!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Icon)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Icon)]" />
         <param name="landscapecondition" default="[!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Landscape)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Landscape)]" />
-        <param name="smalllandscapecondition" default="false" />
+        <param name="smalllandscapecondition" default="[!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Small Landscape)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Small Landscape)]" />
         <param name="smallsquarecondition" default="false" />
         <param name="bannercondition" default="false" />
         <param name="height" default="item_row_height" />
@@ -345,32 +345,6 @@
                     </include>
                 </focusedlayout>
 
-                <itemlayout width="item_smalllandscape_width" height="item_row_height" condition="false">
-                    <include content="View_51_Wall_Itemlayout">
-                        <param name="iconheight" value="item_icon_height" />
-                        <param name="icononlyheight" value="item_smalllandscape_iconheight" />
-                        <param name="textfade_end" value="$VAR[Defs_WidgetTextContrast_Start]" />
-                        <param name="textfade_start" value="$VAR[Defs_WidgetTextContrast_End]" />
-                        <param name="selectbox" value="false" />
-                        <param name="icon" value="$VAR[Image_Landscape]" />
-                        <param name="diffuse" value="diffuse/landscape-small-wall.png" />
-                        <param name="labelinclude" value="$PARAM[smalllandscapelabelinclude]" />
-                        <param name="id" value="$PARAM[id]" />
-                    </include>
-                </itemlayout>
-                <focusedlayout width="item_smalllandscape_width" height="item_row_height" condition="false">
-                    <include content="View_51_Wall_Itemlayout">
-                        <param name="selectbox" value="true" />
-                        <param name="iconheight" value="item_icon_height" />
-                        <param name="textfade_start" value="$VAR[Defs_WidgetTextContrast_Start]" />
-                        <param name="icononlyheight" value="item_smalllandscape_iconheight" />
-                        <param name="icon" value="$VAR[Image_Landscape]" />
-                        <param name="diffuse" value="diffuse/landscape-small-wall.png" />
-                        <param name="labelinclude" value="$PARAM[smalllandscapelabelinclude]" />
-                        <param name="id" value="$PARAM[id]" />
-                    </include>
-                </focusedlayout>
-
                 <itemlayout width="item_landscape_width" height="item_row_height" condition="$PARAM[landscapecondition]">
                     <include content="View_51_Wall_Itemlayout">
                         <param name="iconheight" value="item_icon_height" />
@@ -393,6 +367,32 @@
                         <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                         <param name="id" value="$PARAM[id]" />
                         <param name="label2" value="$PARAM[label2]" />
+                    </include>
+                </focusedlayout>
+
+                <itemlayout width="item_smalllandscape_width" height="item_row_height" condition="$PARAM[smalllandscapecondition]">
+                    <include content="View_51_Wall_Itemlayout">
+                        <param name="iconheight" value="item_icon_height" />
+                        <param name="icononlyheight" value="item_smalllandscape_iconheight" />
+                        <param name="textfade_end" value="$VAR[Defs_WidgetTextContrast_Start]" />
+                        <param name="textfade_start" value="$VAR[Defs_WidgetTextContrast_End]" />
+                        <param name="selectbox" value="false" />
+                        <param name="icon" value="$VAR[Image_Landscape]" />
+                        <param name="diffuse" value="diffuse/landscape-small-wall.png" />
+                        <param name="labelinclude" value="$PARAM[smalllandscapelabelinclude]" />
+                        <param name="id" value="$PARAM[id]" />
+                    </include>
+                </itemlayout>
+                <focusedlayout width="item_smalllandscape_width" height="item_row_height" condition="$PARAM[smalllandscapecondition]">
+                    <include content="View_51_Wall_Itemlayout">
+                        <param name="selectbox" value="true" />
+                        <param name="iconheight" value="item_icon_height" />
+                        <param name="textfade_start" value="$VAR[Defs_WidgetTextContrast_Start]" />
+                        <param name="icononlyheight" value="item_smalllandscape_iconheight" />
+                        <param name="icon" value="$VAR[Image_Landscape]" />
+                        <param name="diffuse" value="diffuse/landscape-small-wall.png" />
+                        <param name="labelinclude" value="$PARAM[smalllandscapelabelinclude]" />
+                        <param name="id" value="$PARAM[id]" />
                     </include>
                 </focusedlayout>
 
