@@ -2345,6 +2345,21 @@
                     <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
                     <visible>$PARAM[imdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
+                    <visible>!Skin.HasSetting(Ratings.IMDB.Votes)</visible>
+                    <visible>$PARAM[imdbvotes]</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_100</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>font_tiny</font>
+                    <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+                    <visible>$PARAM[imdb]</visible>
+                    <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
+                    <visible>Skin.HasSetting(Ratings.IMDB.Votes)</visible>
                     <visible>$PARAM[imdbvotes]</visible>
                 </control>
                 <control type="label">
@@ -2558,6 +2573,22 @@
                     <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
                     <visible>$PARAM[imdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
+                    <visible>!Skin.HasSetting(Ratings.IMDB.Votes)</visible>
+                    <visible>$PARAM[imdbvotes]</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>font_tiny</font>
+                    <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)]</label>
+                    <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+                    <visible>$PARAM[imdb]</visible>
+                    <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
+                    <visible>Skin.HasSetting(Ratings.IMDB.Votes)</visible>
                     <visible>$PARAM[imdbvotes]</visible>
                 </control>
                 <control type="label">
