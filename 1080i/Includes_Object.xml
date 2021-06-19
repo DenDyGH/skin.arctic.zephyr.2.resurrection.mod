@@ -2379,7 +2379,7 @@
     </include>
 
     <include name="Object_OSD_Ratings">
-        <param name="directory" default="$INFO[Skin.String(Icons)]" />
+        <param name="directory" default="monochrome" />
         <param name="align" default="right" />
         <param name="width" default="900" />
         <param name="rottentomatoes" default="true" />

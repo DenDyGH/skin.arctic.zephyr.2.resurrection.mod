@@ -169,7 +169,7 @@
                                     <top>-4</top>
                                     <height>50</height>
                                     <centertop>50%</centertop>
-                                    <texture colordiffuse="panel_fg_70">$INFO[MusicPlayer.Codec,flags/$INFO[Skin.String(Icons)]/audio/,.png]</texture>
+                                    <texture colordiffuse="panel_fg_70">$INFO[MusicPlayer.Codec,flags/monochrome/audio/,.png]</texture>
                                     <aspectratio align="left">keep</aspectratio>
                                     <visible allowhiddenfocus="true">!String.IsEmpty(Control.GetLabel(9968))</visible>
                                 </control>
@@ -570,7 +570,7 @@
                                     <width>64</width>
                                     <height>56</height>
                                     <aspectratio align="left">keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/other/3D.png</texture>
+                                    <texture colordiffuse="panel_fg_100">flags/monochrome/other/3D.png</texture>
                                     <visible>VideoPlayer.IsStereoscopic</visible>
                                 </control>
                                 <control type="image">
@@ -587,7 +587,7 @@
                                     <width>64</width>
                                     <height>42</height>
                                     <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">$INFO[VideoPlayer.VideoResolution,flags/$INFO[Skin.String(Icons)]/resolution/,.png]</texture>
+                                    <texture colordiffuse="panel_fg_100">$INFO[VideoPlayer.VideoResolution,flags/monochrome/resolution/,.png]</texture>
                                 </control>
                                 <control type="image">
                                     <fadetime>100</fadetime>
@@ -595,7 +595,7 @@
                                     <width>71</width>
                                     <height>48</height>
                                     <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">$INFO[VideoPlayer.VideoCodec,flags/$INFO[Skin.String(Icons)]/source/,.png]</texture>
+                                    <texture colordiffuse="panel_fg_100">$INFO[VideoPlayer.VideoCodec,flags/monochrome/source/,.png]</texture>
                                 </control>
                                 <control type="group">
                                     <width>71</width>
@@ -603,7 +603,7 @@
                                     <centertop>50%</centertop>
                                     <visible>!String.IsEmpty(Player.Process(VideoFPS)) + Integer.IsGreater(Player.Process(VideoFPS),0)</visible>
                                     <control type="image">
-                                        <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/other/fps.png</texture>
+                                        <texture colordiffuse="panel_fg_100">flags/monochrome/other/fps.png</texture>
                                         <aspectratio align="center">keep</aspectratio>
                                     </control>
                                     <control type="label">
@@ -631,7 +631,7 @@
                                     <width>32</width>
                                     <height>32</height>
                                     <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">$INFO[VideoPlayer.AudioChannels,flags/$INFO[Skin.String(Icons)]/channels/,.png]</texture>
+                                    <texture colordiffuse="panel_fg_100">$INFO[VideoPlayer.AudioChannels,flags/monochrome/channels/,.png]</texture>
                                 </control>
                             </control>
                         </control>
