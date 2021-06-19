@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.4.3">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.4.4">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -19,9 +19,14 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
-            0.4.3
-                - fixed custom skin wizard and enabled home layout options
-                - getting rid of script.toolbox in favor of embuary helper
+            0.4.4
+                - added option to disable/enable imdb votes count
+                - Add Timeshift to PVR OSD (thanks @FXB78)!
+                - some tweaks to flag icons
+                - added user rating flag in colorful icons
+                - some improvements for skin wizard
+                - updated colorful flags
+                - Fullscreen music window enabler (thanks to @frodo19)!
         </news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>

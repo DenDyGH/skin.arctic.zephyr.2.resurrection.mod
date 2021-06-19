@@ -1,3 +1,11 @@
+0.4.4
+    - added option to disable/enable imdb votes count
+    - Add Timeshift to PVR OSD (thanks @FXB78)!
+    - some tweaks to flag icons
+    - added user rating flag in colorful icons
+    - some improvements for skin wizard
+    - updated colorful flags
+    - Fullscreen music window enabler (thanks to @frodo19)!
 0.4.3
     - fixed custom skin wizard and enabled home layout options
     - getting rid of script.toolbox in favor of embuary helper
