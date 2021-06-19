@@ -547,7 +547,7 @@
                             <width>257.14</width>
                             <height>393.5</height>
                             <orientation>vertical</orientation>                
-                            <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="label">
                                     <right>40</right>
                                     <font>font_topbar_small</font>
@@ -557,7 +557,7 @@
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </itemlayout>
-                            <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="label">
                                     <right>40</right>
                                     <font>font_topbar</font>
@@ -568,7 +568,7 @@
                                 </control>
                             </focusedlayout>
 
-                            <itemlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <itemlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="image">
                                     <centertop>53%</centertop>
                                     <height>64</height>
@@ -586,7 +586,7 @@
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </itemlayout>
-                            <focusedlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <focusedlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="image">
                                     <centertop>53%</centertop>
                                     <height>64</height>
@@ -814,7 +814,7 @@
                             <width>257.14</width>
                             <height>393.5</height>
                             <orientation>vertical</orientation>                
-                            <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="label">
                                     <right>40</right>
                                     <font>font_topbar_small</font>
@@ -824,7 +824,7 @@
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </itemlayout>
-                            <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="label">
                                     <right>40</right>
                                     <font>font_topbar</font>
@@ -835,7 +835,7 @@
                                 </control>
                             </focusedlayout>
 
-                            <itemlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <itemlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="image">
                                     <centertop>53%</centertop>
                                     <height>64</height>
@@ -853,7 +853,7 @@
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </itemlayout>
-                            <focusedlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <focusedlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="image">
                                     <centertop>53%</centertop>
                                     <height>64</height>
@@ -1064,7 +1064,7 @@
                             <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">6000</onright>
                             <width>257.14</width>
                             <orientation>vertical</orientation>                
-                            <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="label">
                                     <right>40</right>
                                     <font>font_topbar_small</font>
@@ -1074,7 +1074,7 @@
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </itemlayout>
-                            <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="label">
                                     <right>40</right>
                                     <font>font_topbar</font>
@@ -1085,7 +1085,7 @@
                                 </control>
                             </focusedlayout>
 
-                            <itemlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <itemlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="image">
                                     <centertop>53%</centertop>
                                     <height>64</height>
@@ -1103,7 +1103,7 @@
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </itemlayout>
-                            <focusedlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly">
+                            <focusedlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                                 <control type="image">
                                     <centertop>53%</centertop>
                                     <height>64</height>
