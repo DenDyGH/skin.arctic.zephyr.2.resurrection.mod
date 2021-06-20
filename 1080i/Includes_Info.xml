@@ -200,7 +200,7 @@
                 <param name="label" value="Trailer" />
                 <param name="icon" value="special://skin/extras/icons/video.png" />
                 <param name="visible" value="!String.IsEmpty(ListItem.Trailer)" />
-                <onclick>Dialog.Close(all,true)</onclick>
+                <!-- <onclick>Dialog.Close(all,true)</onclick> -->
                 <onclick>RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Trailer]')</onclick>
             </include>
             <include content="Object_Info_Button">
