@@ -6,7 +6,7 @@
 *You can install it via repository to provide automatic updates*
 - Download repository: [repository.heppen](https://github.com/nfm886/repository.heppen/raw/main/repository.heppen.zip)
 - Or install it via Kodi file-manager
-	- add source: https://nfm886.github.io/repository.heppen
+	- add source: https://nfm886.github.io/repository.heppen or https://zips.ovh/heppen
 
 *or install it manually (updates should be installed manually)*
 - [skin.arctic.zephyr.2.resurrection.mod](https://github.com/nfm886/skin.arctic.zephyr.2.resurrection.mod/archive/refs/heads/main.zip)
