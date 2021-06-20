@@ -162,7 +162,8 @@
                 <param name="label" value="$VAR[Label_Info_PlayButton]" />
                 <param name="icon" value="$VAR[Image_Info_PlayButton]" />
                 <param name="visible" value="true" />
-                <onclick>RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')</onclick>
+                <onclick>Dialog.Close(all,true)</onclick>
+                <onclick>RunPlugin(plugin://plugin.video.themoviedb.helper?info=play&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]&amp;type=movie)</onclick>
             </include>
 
             <include content="Object_Info_Button">
