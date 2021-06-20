@@ -1,3 +1,7 @@
+0.4.5
+    - changes to play button in DialogVideoInfo
+    - some tweaks to resurrection.png
+    - fix for missing artist name in music artists widget
 0.4.4
     - added option to disable/enable imdb votes count
     - Add Timeshift to PVR OSD (thanks @FXB78)!
