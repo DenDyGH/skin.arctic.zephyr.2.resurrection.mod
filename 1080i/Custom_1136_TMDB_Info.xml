@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="window" id="1136">
     <defaultcontrol always="true">9999</defaultcontrol>
+    <onload>SetProperty(Header_Left_Text,$LOCALIZE[19033])</onload>
     <controls>
         <include>Global_Background</include>
         <include>Topbar</include>

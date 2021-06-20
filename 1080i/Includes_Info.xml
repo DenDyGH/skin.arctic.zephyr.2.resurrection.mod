@@ -146,13 +146,23 @@
             <onup>9601</onup>
             <ondown>4100</ondown>
             <include>Defs_ButtonList</include>
-            <include content="Object_Info_Button">
+            <!-- <include content="Object_Info_Button">
                 <param name="id" value="8" />
                 <param name="groupid" value="8008" />
                 <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
                 <param name="label" value="$VAR[Label_Info_PlayButton]" />
                 <param name="icon" value="$VAR[Image_Info_PlayButton]" />
                 <param name="visible" value="Control.IsEnabled(8) + [!ListItem.IsFolder | !String.IsEmpty(ListItem.DBID)]" />
+            </include> -->
+            <include content="Object_Info_Button">
+                <param name="id" value="8899" />
+                <param name="groupid" value="8014" />
+                <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+                <param name="label" value="$VAR[Label_Info_PlayButton]" />
+                <param name="icon" value="$VAR[Image_Info_PlayButton]" />
+                <onclick>Dialog.Close(all,true)</onclick>
+                <onclick condition="!String.Contains(ListItem.FileNameAndPath,plugin)">RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.FileNameAndPath]')</onclick>
+                <onclick condition="String.Contains(ListItem.FileNameAndPath,plugin)">RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Trailer]')</onclick>
             </include>
             <include content="Object_Info_Button">
                 <param name="id" value="8888" />
@@ -175,13 +185,13 @@
                 <onclick>Skin.SetString(SearchTerm, $INFO[ListItem.Title])</onclick>
                 <onclick>ActivateWindow(1138)</onclick>
             </include>
-            <include content="Object_Info_Button">
+            <!-- <include content="Object_Info_Button">
                 <param name="id" value="11" />
                 <param name="groupid" value="8011" />
                 <param name="label" value="Trailer" />
                 <param name="icon" value="special://skin/extras/icons/video.png" />
                 <param name="visible" value="Control.IsEnabled(11) + !String.IsEmpty(ListItem.Trailer)" />
-            </include>
+            </include> -->
             <include content="Object_Info_Button">
                 <param name="id" value="8150" />
                 <param name="groupid" value="8050" />
