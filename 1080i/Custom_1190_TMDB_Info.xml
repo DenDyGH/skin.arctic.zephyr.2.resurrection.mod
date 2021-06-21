@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="window" id="1136">
+<window type="window" id="1190">
     <defaultcontrol always="true">9999</defaultcontrol>
     <onload>SetProperty(Header_Left_Text,$LOCALIZE[19033])</onload>
     <controls>
@@ -15,9 +15,7 @@
                 <content target="videos">$INFO[Window(Home).Property(TMDbHelper.Path.Current)]</content>
         </control>
         <control type="group">
-            <visible>Container(9999).IsUpdating</visible>
             <visible>!$EXP[Exp_InfoVisible]</visible>
-            <include>Animation_FadeInOut</include>
             <include>Dialog_Busy</include>
         </control>
     </controls>
