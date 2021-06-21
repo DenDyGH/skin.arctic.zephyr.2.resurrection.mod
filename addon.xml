@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.4.6">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.4.7">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -19,8 +19,10 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
-            0.4.6
-                - fix for play button in DialogVideoInfo
+            0.4.7
+                - added two netflix icons
+                - changed art thumb for tv shows
+                - bring back previous behavior on play button inside DialogVideoInfo
         </news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>

@@ -1,3 +1,7 @@
+0.4.7
+    - added two netflix icons
+    - changed art thumb for tv shows
+    - bring back previous behavior on play button inside DialogVideoInfo
 0.4.6
     - fix for play button in DialogVideoInfo
 0.4.5
