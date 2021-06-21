@@ -165,8 +165,8 @@
                 <!-- <onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1136)</onclick> -->
                 <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id)) + [String.IsEqual(ListItem.DBTYPE,movie) | ListItem.IsCollection | String.IsEqual(ListItem.DBTYPE,set)]">RunPlugin(plugin://plugin.video.themoviedb.helper?info=play&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]&amp;type=movie)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id)) + String.IsEqual(ListItem.DBTYPE,tvshow)">RunPlugin(plugin://plugin.video.themoviedb.helper?info=play&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]&amp;type=tv)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property*tmdb_id)) + [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]">RunPlugin(plugin://plugin.video.themoviedb.helper?info=play&amp;tmdb_id=$INFO[ListItem.Property(tvshow.tmdb_id)]&amp;type=episode&amp;season=$INFO[ListItem.Season]&amp;episode=$INFO[ListItem.Episode])</onclick>
-                <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id)) + [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]">RunPlugin(plugin://plugin.video.themoviedb.helper?info=play&amp;tmdb_id=$INFO[ListItem.Property(tvshow.tmdb_id)]&amp;type=episode&amp;season=$INFO[ListItem.Season]&amp;episode=$INFO[ListItem.Episode])</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
             </include>
 
             <include content="Object_Info_Button">
