@@ -119,10 +119,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Set) | ListItem.IsCollection</visible>
                             <visible>!Skin.HasSetting(DisableInfoListSets)</visible>
-                            <content limit="10" target="videos" sortby="year" sortorder="ascending" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper) + !String.IsEmpty(ListItem.Set)">plugin://plugin.video.themoviedb.helper/?info=collection&amp;type=$VAR[tmdb_type]&amp;query=$INFO[ListItem.Set]&amp;nextpage=false</content>
-                            <content limit="10" target="videos" sortby="year" sortorder="ascending" condition="ListItem.IsCollection + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper) + !String.IsEmpty(ListItem.Title)">plugin://plugin.video.themoviedb.helper/?info=collection&amp;type=$VAR[tmdb_type]&amp;query=$INFO[ListItem.Title]&amp;nextpage=false</content>
-                            <content limit="10" target="videos" sortby="year" sortorder="ascending" condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.SetID,videodb://movies/sets/,/]</content>
-                            <content limit="10" target="videos" sortby="year" sortorder="ascending" condition="ListItem.IsCollection">$INFO[ListItem.DBID,videodb://movies/sets/,/]</content>
+                            <content limit="10" target="videos" sortby="year" sortorder="ascending">$VAR[Def_Set_List]</content>
                         </include>
                         <!-- 1140 Set Cast -->
                         <include content="Info_Widget_Poster">
@@ -236,7 +233,7 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.IMDBNumber)</visible>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper/?info=similar&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</content>
+                            <content limit="10" target="videos">$VAR[Def_Similar_List]</content>
                         </include>
 
                         <!-- Year -->
