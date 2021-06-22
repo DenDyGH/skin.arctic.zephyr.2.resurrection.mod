@@ -171,7 +171,7 @@
                 <param name="groupid" value="8011" />
                 <param name="label" value="$LOCALIZE[1024]" />
                 <param name="icon" value="special://skin/extras/icons/folder.png" />
-                <param name="visible" value="Control.IsEnabled(8110) + ListItem.IsFolder + String.IsEmpty(ListItem.DBID)" />
+                <param name="visible" value="Control.IsEnabled(8110) + String.IsEmpty(ListItem.DBID) + [ListItem.IsFolder | ListItem.IsCollection]" />
                 <onclick>Dialog.Close(1140)</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + String.IsEmpty(ListItem.DBID)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.FolderPath])</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.DBID,videodb://tvshows/titles/,/])</onclick>
