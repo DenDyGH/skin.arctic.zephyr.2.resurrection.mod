@@ -146,29 +146,25 @@
             <onup>9601</onup>
             <ondown>4100</ondown>
             <include>Defs_ButtonList</include>
-            <include content="Object_Info_Button">
+            <!-- <include content="Object_Info_Button">
                 <param name="id" value="8" />
                 <param name="groupid" value="8008" />
                 <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
                 <param name="label" value="$VAR[Label_Info_PlayButton]" />
                 <param name="icon" value="$VAR[Image_Info_PlayButton]" />
                 <param name="visible" value="Control.IsEnabled(8) + [!ListItem.IsFolder | !String.IsEmpty(ListItem.DBID)]" />
-            </include>
+            </include> -->
 
-            <!-- <include content="Object_Info_Button">
-                <param name="id" value="8890" />
-                <param name="groupid" value="8016" />
-                <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+            <include content="Object_Info_Button">
+                <param name="id" value="8110" />
+                <param name="groupid" value="8010" />
                 <param name="label" value="$VAR[Label_Info_PlayButton]" />
                 <param name="icon" value="$VAR[Image_Info_PlayButton]" />
                 <param name="visible" value="true" />
-                <onclick>Dialog.Close(all,true)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id)) + [String.IsEqual(ListItem.DBTYPE,movie) | ListItem.IsCollection | String.IsEqual(ListItem.DBTYPE,set)]">RunPlugin(plugin://plugin.video.themoviedb.helper?info=play&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]&amp;type=movie)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id)) + String.IsEqual(ListItem.DBTYPE,tvshow)">RunPlugin(plugin://plugin.video.themoviedb.helper?info=play&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]&amp;type=tv)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id)) + [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]">RunPlugin(plugin://plugin.video.themoviedb.helper?info=play&amp;tmdb_id=$INFO[ListItem.Property(tvshow.tmdb_id)]&amp;type=episode&amp;season=$INFO[ListItem.Season]&amp;episode=$INFO[ListItem.Episode])</onclick>
-                <onclick condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,set)">RunScript(script.embuary.helper,action=jumptoshow_by_episode,dbid=$INFO[ListItem.DBID])</onclick>
-                <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')</onclick>
-            </include> -->
+    
+                <onclick condition="!String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia='$ESCINFO[ListItem.FileNameAndPath]')</onclick>
+                <onclick condition="String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia='$ESCINFO[ListItem.FolderPath]')</onclick>
+            </include>
 
             <include content="Object_Info_Button">
                 <param name="id" value="8888" />
