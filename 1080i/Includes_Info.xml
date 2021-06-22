@@ -156,22 +156,26 @@
             </include> -->
 
             <include content="Object_Info_Button">
-                <param name="id" value="8110" />
-                <param name="groupid" value="8010" />
+                <param name="id" value="3101" />
+                <param name="groupid" value="3201" />
                 <param name="label" value="$VAR[Label_Info_PlayButton]" />
                 <param name="icon" value="$VAR[Image_Info_PlayButton]" />
-                <param name="visible" value="Control.IsEnabled(8110) + [!ListItem.IsFolder | !String.IsEmpty(ListItem.DBID)]" />
+                <param name="visible" value="Control.IsEnabled(3101) + !ListItem.IsFolder + !ListItem.IsCollection" />
     
-                <onclick condition="!String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia='$ESCINFO[ListItem.FileNameAndPath]')</onclick>
-                <onclick condition="String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia='$ESCINFO[ListItem.FolderPath]')</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia=$INFO[ListItem.FileNameAndPath])</onclick>
+                <onclick condition="String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia=$INFO[ListItem.FolderPath])</onclick>
+
+                <onclick>ActivateWindow(busydialognocancel)</onclick>
+                <onclick>SetProperty(CloseBusyDialog,1)</onclick>
+                <onclick>AlarmClock(closebusydialog,Dialog.Close(busydialognocancel),00:05,silent)</onclick>
             </include>
 
             <include content="Object_Info_Button">
-                <param name="id" value="8112" />
-                <param name="groupid" value="8011" />
+                <param name="id" value="3102" />
+                <param name="groupid" value="3202" />
                 <param name="label" value="$LOCALIZE[1024]" />
                 <param name="icon" value="special://skin/extras/icons/folder.png" />
-                <param name="visible" value="Control.IsEnabled(8110) + String.IsEmpty(ListItem.DBID) + [ListItem.IsFolder | ListItem.IsCollection]" />
+                <param name="visible" value="[ListItem.IsFolder | ListItem.IsCollection]" />
                 <onclick>Dialog.Close(1140)</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + String.IsEmpty(ListItem.DBID)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.FolderPath])</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.DBID,videodb://tvshows/titles/,/])</onclick>
