@@ -377,7 +377,7 @@
                         <param name="textfade_end" value="$VAR[Defs_WidgetTextContrast_Start]" />
                         <param name="textfade_start" value="$VAR[Defs_WidgetTextContrast_End]" />
                         <param name="selectbox" value="false" />
-                        <param name="icon" value="$VAR[Image_Landscape]" />
+                        <param name="icon" value="$VAR[Image_Landscape_Small]" />
                         <param name="diffuse" value="diffuse/landscape-small-wall.png" />
                         <param name="labelinclude" value="$PARAM[smalllandscapelabelinclude]" />
                         <param name="id" value="$PARAM[id]" />
@@ -389,7 +389,7 @@
                         <param name="iconheight" value="item_icon_height" />
                         <param name="textfade_start" value="$VAR[Defs_WidgetTextContrast_Start]" />
                         <param name="icononlyheight" value="item_smalllandscape_iconheight" />
-                        <param name="icon" value="$VAR[Image_Landscape]" />
+                        <param name="icon" value="$VAR[Image_Landscape_Small]" />
                         <param name="diffuse" value="diffuse/landscape-small-wall.png" />
                         <param name="labelinclude" value="$PARAM[smalllandscapelabelinclude]" />
                         <param name="id" value="$PARAM[id]" />
