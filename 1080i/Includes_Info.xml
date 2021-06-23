@@ -165,9 +165,9 @@
                 <onclick condition="!String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia=$INFO[ListItem.FileNameAndPath])</onclick>
                 <onclick condition="String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia=$INFO[ListItem.FolderPath])</onclick>
 
-                <onclick>ActivateWindow(busydialognocancel)</onclick>
+                <!-- <onclick>ActivateWindow(busydialognocancel)</onclick>
                 <onclick>SetProperty(CloseBusyDialog,1)</onclick>
-                <onclick>AlarmClock(closebusydialog,Dialog.Close(busydialognocancel),00:05,silent)</onclick>
+                <onclick>AlarmClock(closebusydialog,Dialog.Close(busydialognocancel),00:05,silent)</onclick> -->
             </include>
 
             <include content="Object_Info_Button">
