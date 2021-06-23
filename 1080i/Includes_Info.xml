@@ -122,7 +122,7 @@
         <param name="icon" default="$INFO[ListItem.Icon]" />
         <param name="controltype" default="list" />
         <definition>
-            <control type="$PARAM[controltype]" id="$PARAM[id]">
+            <control type="list" id="$PARAM[id]">
                 <orientation>horizontal</orientation>
                 <height>view_height</height>
                 <width>1790</width>
@@ -214,7 +214,7 @@
                 <param name="icon" value="special://skin/extras/icons/video.png" />
                 <param name="visible" value="Control.IsEnabled(11) + !String.IsEmpty(ListItem.Trailer)" />
             </include> -->
-            <include content="Object_Info_Button">
+            <!-- <include content="Object_Info_Button">
                 <param name="id" value="8899" />
                 <param name="groupid" value="8014" />
                 <param name="label" value="Trailer" />
@@ -222,7 +222,21 @@
                 <param name="visible" value="!String.IsEmpty(ListItem.Trailer)" />
                 <onclick>Dialog.Close(all,true)</onclick>
                 <onclick>RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Trailer]')</onclick>
+            </include> -->
+
+            <include content="Object_Info_Button">
+                <param name="id" value="8899" />
+                <param name="groupid" value="8014" />
+                <param name="label" value="Trailer" />
+                <param name="icon" value="special://skin/extras/icons/video.png" />
+                <param name="visible" value="!Window.IsVisible(1140) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))]" />
+                <onclick>Dialog.Close(all,true)</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.Trailer)">RunScript(script.embuary.helper,action=playitem,item='$INFO[ListItem.Trailer]')</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Trailer)">RunScript(script.embuary.helper,action=playitem,item='$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)]')</onclick>
             </include>
+
             <include content="Object_Info_Button">
                 <param name="id" value="8150" />
                 <param name="groupid" value="8050" />
