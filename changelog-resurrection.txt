@@ -1,3 +1,11 @@
+0.4.8
+    - improvements for DialogVideoInfo
+    - added themoviedb icon
+    - changed small landscape art
+    - improvements for play and browser button in DialogVideoInfo
+    - updated polish language string
+    - updated color flag icons
+    - added option to automatically switch colour theme based on time
 0.4.7
     - added two netflix icons
     - changed art thumb for tv shows
