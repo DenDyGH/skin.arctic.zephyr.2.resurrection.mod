@@ -186,6 +186,10 @@
         <value condition="!String.IsEmpty(Window(home).Property(SpecialFeatures.Widget)) + !String.StartsWith(ListItem.Path,plugin://)">$INFO[Window(home).Property(SpecialFeatures.Widget)]</value>
     </variable>
 
+    <variable name="Def_Cast_List">
+        <value condition="!String.IsEmpty(ListItem.Cast)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title=$INFO[ListItem.Title]</value>
+    </variable>
+
     <variable name="Def_Set_List">
         <value condition="!Skin.HasSetting(DisableExtendedInfo) + !String.IsEmpty(ListItem.Set)">plugin://plugin.video.themoviedb.helper/?info=collection&amp;type=movie&amp;query=$INFO[ListItem.Set]&amp;nextpage=false</value>
         <value condition="!String.IsEmpty(ListItem.Set)">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22set%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Set]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</value>

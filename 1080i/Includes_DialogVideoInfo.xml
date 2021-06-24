@@ -134,7 +134,7 @@
                             <onclick>RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(5077).ListItem.Label],type=person,call_auto=1190)</onclick>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(Container(5001).ListItem.Property(tmdb_id)) + !Container(5001).IsUpdating</visible>
-                            <content limit="25" target="videos">plugin://plugin.video.themoviedb.helper/?info=cast&amp;type=$VAR[tmdb_type]&amp;tmdb_id=$INFO[Container(5001).ListItem.Property(tmdb_id)]</content>
+                            <content limit="25" target="videos">$VAR[Def_List_Cast]</content>
                         </include>
                         <!-- NextUp -->
                         <include content="Info_Widget_Poster">

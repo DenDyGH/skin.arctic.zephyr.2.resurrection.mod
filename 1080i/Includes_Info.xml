@@ -146,14 +146,6 @@
             <onup>9601</onup>
             <ondown>4100</ondown>
             <include>Defs_ButtonList</include>
-            <!-- <include content="Object_Info_Button">
-                <param name="id" value="8" />
-                <param name="groupid" value="8008" />
-                <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
-                <param name="label" value="$VAR[Label_Info_PlayButton]" />
-                <param name="icon" value="$VAR[Image_Info_PlayButton]" />
-                <param name="visible" value="Control.IsEnabled(8) + [!ListItem.IsFolder | !String.IsEmpty(ListItem.DBID)]" />
-            </include> -->
 
             <include content="Object_Info_Button">
                 <param name="id" value="3101" />
@@ -164,10 +156,6 @@
     
                 <onclick condition="!String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia=$INFO[ListItem.FileNameAndPath])</onclick>
                 <onclick condition="String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia=$INFO[ListItem.FolderPath])</onclick>
-
-                <!-- <onclick>ActivateWindow(busydialognocancel)</onclick>
-                <onclick>SetProperty(CloseBusyDialog,1)</onclick>
-                <onclick>AlarmClock(closebusydialog,Dialog.Close(busydialognocancel),00:05,silent)</onclick> -->
             </include>
 
             <include content="Object_Info_Button">
@@ -176,6 +164,7 @@
                 <param name="label" value="$LOCALIZE[1024]" />
                 <param name="icon" value="special://skin/extras/icons/folder.png" />
                 <param name="visible" value="[ListItem.IsFolder | ListItem.IsCollection]" />
+
                 <onclick>Dialog.Close(1140)</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + String.IsEmpty(ListItem.DBID)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.FolderPath])</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.DBID,videodb://tvshows/titles/,/])</onclick>
@@ -186,43 +175,18 @@
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(ListItem.DBID) + ListItem.IsCollection">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_path=$INFO[ListItem.DBID,videodb://movies/sets/,/])</onclick>
             </include>
 
-            <!-- <include content="Object_Info_Button">
-                <param name="id" value="8888" />
-                <param name="groupid" value="8808" />
-                <param name="label" value="$LOCALIZE[1024]" />
-                <param name="icon" value="special://skin/extras/icons/folder.png" />
-                <param name="visible" value="Control.IsEnabled(8) + ListItem.IsFolder + String.IsEmpty(ListItem.DBID)" />
-                <onclick>Dialog.Close(12003)</onclick>
-                <onclick condition="Window.IsVisible(MyVideoNav.xml)">Container.Update($INFO[ListItem.FolderPath])</onclick>
-                <onclick condition="!Window.IsVisible(MyVideoNav.xml)">ActivateWindow(videos,$INFO[ListItem.FolderPath],return)</onclick>
-            </include> -->
             <include content="Object_Info_Button">
                 <param name="id" value="8115" />
                 <param name="groupid" value="8015" />
                 <param name="label" value="Search" />
                 <param name="icon" value="special://skin/extras/icons/search.png" />
                 <param name="visible" value="!String.IsEmpty(ListItem.Property(tmdb_id))" />
+
                 <onclick>Dialog.Close(12003)</onclick>
                 <onclick>Skin.Reset(SearchTerm)</onclick>
                 <onclick>Skin.SetString(SearchTerm, $INFO[ListItem.Title])</onclick>
                 <onclick>ActivateWindow(1138)</onclick>
             </include>
-            <!-- <include content="Object_Info_Button">
-                <param name="id" value="11" />
-                <param name="groupid" value="8011" />
-                <param name="label" value="Trailer" />
-                <param name="icon" value="special://skin/extras/icons/video.png" />
-                <param name="visible" value="Control.IsEnabled(11) + !String.IsEmpty(ListItem.Trailer)" />
-            </include> -->
-            <!-- <include content="Object_Info_Button">
-                <param name="id" value="8899" />
-                <param name="groupid" value="8014" />
-                <param name="label" value="Trailer" />
-                <param name="icon" value="special://skin/extras/icons/video.png" />
-                <param name="visible" value="!String.IsEmpty(ListItem.Trailer)" />
-                <onclick>Dialog.Close(all,true)</onclick>
-                <onclick>RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Trailer]')</onclick>
-            </include> -->
 
             <include content="Object_Info_Button">
                 <param name="id" value="8899" />
@@ -230,6 +194,7 @@
                 <param name="label" value="Trailer" />
                 <param name="icon" value="special://skin/extras/icons/video.png" />
                 <param name="visible" value="!Window.IsVisible(1140) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))]" />
+                
                 <onclick>Dialog.Close(all,true)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">RunScript(script.embuary.helper,action=playitem,item='$INFO[ListItem.Trailer]')</onclick>
@@ -243,17 +208,21 @@
                 <param name="label" value="Cast" />
                 <param name="icon" value="special://skin/extras/icons/person.png" />
                 <param name="visible" value="Control.IsEnabled(8150)" />
+
                 <onclick>SetFocus(50)</onclick>
             </include>
+
             <include content="Object_Info_Button">
                 <param name="id" value="8151" />
                 <param name="groupid" value="8051" />
                 <param name="label" value="30041" />
                 <param name="icon" value="special://skin/extras/icons/trakttv.png" />
                 <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(window(home).property(tmdbhelper.listitem.tmdb_id))] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" />
+                
                 <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
                 <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(tmdbhelper.listitem.tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
             </include>
+
             <include content="Object_Info_Button">
                 <param name="id" value="7" />
                 <param name="groupid" value="8007" />
@@ -261,6 +230,7 @@
                 <param name="icon" value="special://skin/extras/icons/userrating.png" />
                 <param name="visible" value="Control.IsEnabled(7)" />
             </include>
+            
             <include content="Object_Info_Button">
                 <param name="id" value="8101" />
                 <param name="groupid" value="8001" />
