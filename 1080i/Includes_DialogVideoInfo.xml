@@ -119,7 +119,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Set) | ListItem.IsCollection</visible>
                             <visible>!Skin.HasSetting(DisableInfoListSets)</visible>
-                            <content limit="10" target="videos" sortby="year" sortorder="ascending">$VAR[Def_Set_List]</content>
+                            <content target="videos" sortby="year" sortorder="ascending">$VAR[Def_Set_List]</content>
                         </include>
                         <!-- 1140 Set Cast -->
                         <include content="Info_Widget_Poster">
@@ -134,7 +134,7 @@
                             <onclick>RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(5077).ListItem.Label],type=person,call_auto=1190)</onclick>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(Container(5001).ListItem.Property(tmdb_id)) + !Container(5001).IsUpdating</visible>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper/?info=cast&amp;type=$VAR[tmdb_type]&amp;tmdb_id=$INFO[Container(5001).ListItem.Property(tmdb_id)]</content>
+                            <content limit="25" target="videos">plugin://plugin.video.themoviedb.helper/?info=cast&amp;type=$VAR[tmdb_type]&amp;tmdb_id=$INFO[Container(5001).ListItem.Property(tmdb_id)]</content>
                         </include>
                         <!-- NextUp -->
                         <include content="Info_Widget_Poster">
@@ -167,7 +167,7 @@
                             <onclick>ActivateWindow(videos,$INFO[Container(5008).ListItem.FolderPath])</onclick>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>String.IsEqual(ListItem.DBTYPE,tvshow)</visible>
-                            <content limit="10" target="videos">$INFO[ListItem.DBID,videodb://tvshows/titles/,/]</content>
+                            <content limit="25" target="videos">$INFO[ListItem.DBID,videodb://tvshows/titles/,/]</content>
                         </include>
                         <!-- Director -->
                         <include content="Info_Widget_Poster">
@@ -178,7 +178,7 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Director)</visible>
-                            <content limit="10" target="videos" sortby="year" sortorder="descending" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">$VAR[Def_Director_List]</content>
+                            <content target="videos" sortby="year" sortorder="descending" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">$VAR[Def_Director_List]</content>
                         </include>
                         <!-- Crew -->
                         <include content="Info_Widget_Poster">
@@ -189,7 +189,7 @@
                             <param name="labelinclude" value="View_Cast_Job_Label" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper/?info=crew&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</content>
+                            <content limit="25" target="videos">plugin://plugin.video.themoviedb.helper/?info=crew&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</content>
                         </include>
                         
                         <!-- Extras -->
@@ -208,7 +208,7 @@
                             <onclick>Dialog.Close(all,force)</onclick>
                             <onclick>PlayMedia($INFO[Container(5048).ListItem.FileNameAndPath])</onclick>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="10" target="videos" sortby="file">$VAR[Defs_VideoInfo_Extras]</content>
+                            <content limit="25" target="videos" sortby="file">$VAR[Defs_VideoInfo_Extras]</content>
                             <visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)</visible>
                         </include>
 
@@ -220,7 +220,7 @@
                             <param name="label" value="$LOCALIZE[30042]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper/?info=recommendations&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</content>
+                            <content limit="25" target="videos">plugin://plugin.video.themoviedb.helper/?info=recommendations&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</content>
                         </include>
                         <!-- Similar -->
                         <include content="Info_Widget_Poster">
@@ -231,7 +231,7 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.IMDBNumber)</visible>
-                            <content limit="10" target="videos">$VAR[Def_Similar_List]</content>
+                            <content limit="25" target="videos">$VAR[Def_Similar_List]</content>
                         </include>
 
                         <!-- Year -->
@@ -243,10 +243,10 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Year)</visible>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;primary_release_year=$INFO[ListItem.Year]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;first_air_date_year=$INFO[ListItem.Year]&amp;nextpage=false</content>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie)">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22year%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Year]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,tvshow)">videodb://tvshows/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22year%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Year]%22%5d%7d%5d%7d%2c%22type%22%3a%22tvshows%22%7d</content>
+                            <content limit="25" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;primary_release_year=$INFO[ListItem.Year]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
+                            <content limit="25" target="videos" condition="String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;first_air_date_year=$INFO[ListItem.Year]&amp;nextpage=false</content>
+                            <content limit="25" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie)">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22year%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Year]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</content>
+                            <content limit="25" target="videos" condition="String.IsEqual(ListItem.DBTYPE,tvshow)">videodb://tvshows/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22year%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Year]%22%5d%7d%5d%7d%2c%22type%22%3a%22tvshows%22%7d</content>
                         </include>
                         <!-- Genre -->
                         <include content="Info_Widget_Poster">
@@ -257,7 +257,7 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Genre)</visible>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;with_genres=$INFO[ListItem.Genre]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
+                            <content limit="25" target="videos">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=$VAR[tmdb_type]&amp;with_genres=$INFO[ListItem.Genre]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
                         </include>
 
                         <!-- Cast Stars In -->
@@ -269,8 +269,8 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>String.IsEqual(ListItem.DBTYPE,movie) + Integer.IsGreater(Container(50).NumItems,0)</visible>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=discover&amp;type=$VAR[tmdb_type]&amp;with_cast=$INFO[Container(50).ListItemAbsolute(0).Label]$INFO[Container(50).ListItemAbsolute(1).Label, / ,]$INFO[Container(50).ListItemAbsolute(2).Label, / ,]&amp;with_separator=OR&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(0).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(1).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(2).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(3).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(4).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(5).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(6).Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
+                            <content limit="25" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=discover&amp;type=$VAR[tmdb_type]&amp;with_cast=$INFO[Container(50).ListItemAbsolute(0).Label]$INFO[Container(50).ListItemAbsolute(1).Label, / ,]$INFO[Container(50).ListItemAbsolute(2).Label, / ,]&amp;with_separator=OR&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</content>
+                            <content limit="25" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(0).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(1).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(2).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(3).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(4).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(5).Label]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Container(50).ListItemAbsolute(6).Label]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</content>
                         </include>
 
                         <!-- Studio -->
@@ -282,7 +282,7 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Studio)</visible>
-                            <content limit="10" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">$VAR[Def_Studio_List]</content>
+                            <content limit="25" target="videos" condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">$VAR[Def_Studio_List]</content>
                         </include>
 
                         <!-- Youtube -->
