@@ -224,10 +224,11 @@
     </include>
     <include name="OSD_LiveTVPosition">
         <align>center</align>
-        <height>48</height>
-        <centerbottom>121</centerbottom>
+        <height>227</height>
+        <!-- <centerbottom>121</centerbottom> -->
+        <bottom>-70</bottom>
         <left>331</left>
-        <width>723</width>
+        <width>1386</width>
         <itemgap>36</itemgap>
     </include>
     <include name="OSD_MusicPosition">
@@ -243,21 +244,22 @@
     <include name="OSD_LiveTV_Seekbar">
         <control type="group">
             <visible>!Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRChannelGuide.xml) + !Window.IsVisible(1139)</visible>
-            <left>view_pad</left>
-            <right>view_pad</right>
+            <left>0</left>
+            <right>0</right>
             <top>view_pad</top>
-            <bottom>view_pad</bottom>
+            <bottom>0</bottom>
 
             <control type="group" description="Channel Icon">
                 <left>0</left>
-                <width>227</width>
+                <width>307</width>
                 <height>227</height>
                 <bottom>0</bottom>
                 <control type="image">
-                    <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
+                    <texture colordiffuse="panel_bg" border="10">diffuse/box-sharp.png</texture>
                     <animation effect="fade" end="75" condition="true">Conditional</animation>
                 </control>
                 <control type="image" id="2334">
+                    <top>50</top>
                     <aspectratio>keep</aspectratio>
                     <bordersize>20</bordersize>
                     <texture background="true">$INFO[Player.Icon]</texture>
@@ -280,20 +282,20 @@
             </control>
 
             <control type="group" description="Main Info">
-                <left>231</left>
-                <width>762.5</width>
+                <left>307</left>
+                <width>1386</width>
                 <height>227</height>
                 <bottom>0</bottom>
                 <control type="image">
-                    <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
+                    <texture colordiffuse="panel_bg" border="10">diffuse/box-sharp.png</texture>
                     <animation effect="fade" end="75" condition="true">Conditional</animation>
                 </control>
                 <control type="group">
-                    <left>30</left>
                     <right>30</right>
                     <top>25</top>
                     <bottom>25</bottom>
                     <control type="label">
+                        <left>-285</left>
                         <font>font_button</font>
                         <aligny>top</aligny>
                         <textcolor>panel_fg_100</textcolor>
@@ -301,25 +303,58 @@
                         <label>$INFO[VideoPlayer.ChannelNumberLabel] &#8226; $INFO[VideoPlayer.ChannelName]</label>
                     </control>
                     <control type="label">
-                        <font>font_button</font>
+                        <font>font_small_bold</font>
+                        <aligny>top</aligny>
+                        <align>right</align>
+                        <textcolor>panel_fg_100</textcolor>
+                        <selectedcolor>panel_fg_100</selectedcolor>
+                        <label>$INFO[System.Time] (-$INFO[PVR.TimeshiftOffset]) - $INFO[VideoPlayer.EndTime]</label>
+                        <visible>Window.IsVisible(videoosd) + PVR.IsTimeShift</visible>
+                    </control>
+                    <control type="label">
+                        <font>font_small_bold</font>
                         <aligny>top</aligny>
                         <align>right</align>
                         <textcolor>panel_fg_100</textcolor>
                         <selectedcolor>panel_fg_100</selectedcolor>
                         <label>$INFO[VideoPlayer.StartTime]$INFO[VideoPlayer.EndTime, - ,]</label>
+                        <visible>Window.IsVisible(videoosd) + !PVR.IsTimeShift</visible>
                     </control>
                     <control type="label">
                         <font>font_title_small</font>
-                        <top>40</top>
+                        <top>-10</top>
+                        <left>40</left>
                         <aligny>top</aligny>
+                        <width>1025</width>
                         <textcolor>panel_fg_100</textcolor>
                         <selectedcolor>panel_fg_100</selectedcolor>
                         <label>$INFO[Player.Title]</label>
                     </control>
 
                     <control type="group">
+                        <width>1356</width>
+                        <control type="label">
+                            <font>font_tiny</font>
+                            <top>55</top>
+                            <left>40</left>
+                            <aligny>top</aligny>
+                            <textcolor>panel_fg_100</textcolor>
+                            <selectedcolor>panel_fg_100</selectedcolor>
+                            <label>$INFO[VideoPlayer.Genre]</label>
+                        </control>
+                        <control type="label">
+                            <font>font_tiny_bold</font>
+                            <top>55</top>
+                            <aligny>top</aligny>
+                            <align>right</align>
+                            <label>$INFO[PVR.EpgEventRemainingTime,+,m]</label>
+                        </control>
+                    </control>
+
+                    <control type="group">
                         <height>12</height>
                         <top>110</top>
+                        <left>30</left>
                         <control type="progress" description="cache">
                             <width>100%</width>
                             <height>12</height>
@@ -353,17 +388,8 @@
                             <visible>Player.SeekEnabled + Pvr.IsPlayingTv + !Player.ChannelPreviewActive</visible>
                         </control>
                     </control>
-                    <control type="label">
-                        <font>font_tiny</font>
-                        <top>140</top>
-                        <right>230</right>
-                        <aligny>top</aligny>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[VideoPlayer.Genre]</label>
-                        <visible>!Window.IsVisible(videoosd)</visible>
-                    </control>
-                    <control type="label">
+    
+                    <!-- <control type="label">
                         <font>font_tiny</font>
                         <top>140</top>
                         <aligny>top</aligny>
@@ -372,8 +398,8 @@
                         <selectedcolor>panel_fg_100</selectedcolor>
                         <label>$INFO[System.Time] - $INFO[VideoPlayer.EndTime]</label>
                         <visible>!Window.IsVisible(videoosd) + !PVR.IsTimeShift</visible>
-                    </control>
-                    <control type="label">
+                    </control> -->
+                    <!-- <control type="label">
                         <font>font_tiny</font>
                         <top>140</top>
                         <aligny>top</aligny>
@@ -382,40 +408,53 @@
                         <selectedcolor>panel_fg_100</selectedcolor>
                         <label>$INFO[System.Time] (-$INFO[PVR.TimeshiftOffset]) - $INFO[VideoPlayer.EndTime]</label>
                         <visible>!Window.IsVisible(videoosd) + PVR.IsTimeShift</visible>
+                    </control> -->
+
+                    <control type="label">
+                        <font>font_tiny_bold</font>
+                        <top>140</top>
+                        <left>40</left>
+                        <aligny>top</aligny>
+                        <label>$INFO[VideoPlayer.NextTitle]</label>
+                        <visible>!Window.IsVisible(videoosd)</visible>
+                    </control>
+                    <control type="label">
+                        <font>font_tiny_bold</font>
+                        <top>140</top>
+                        <aligny>top</aligny>
+                        <align>right</align>
+                        <label>$INFO[VideoPlayer.NextStartTime] $INFO[VideoPlayer.NextEndTime, - ]</label>
+                        <visible>!Window.IsVisible(videoosd)</visible>
                     </control>
                 </control>
             </control>
 
-            <control type="group" description="Plot Info">
-                <visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
-                <left>997.5</left>
-                <width>762.5</width>
+            <control type="group" description="Clock">
+                <left>1693</left>
+                <width>227</width>
                 <height>227</height>
                 <bottom>0</bottom>
                 <control type="image">
-                    <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
+                    <texture colordiffuse="panel_bg" border="10">diffuse/box-sharp.png</texture>
                     <animation effect="fade" end="75" condition="true">Conditional</animation>
                 </control>
                 <control type="group">
-                    <left>30</left>
-                    <right>30</right>
-                    <top>25</top>
-                    <bottom>25</bottom>
                     <control type="label">
-                        <font>font_button</font>
-                        <aligny>top</aligny>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <font>font_title_large</font>
                         <textcolor>panel_fg_100</textcolor>
                         <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$LOCALIZE[14116]</label>
+                        <label>$INFO[System.Time]</label>
                     </control>
-                    <control type="textbox">
+                    <!-- <control type="textbox">
                         <font>font_plotbox</font>
                         <top>57</top>
                         <aligny>top</aligny>
                         <textcolor>panel_fg_100</textcolor>
                         <selectedcolor>panel_fg_100</selectedcolor>
                         <label>$INFO[VideoPlayer.Plot]</label>
-                    </control>
+                    </control> -->
                 </control>
             </control>
         </control>
@@ -922,28 +961,6 @@
 
     <include name="OSD_Controls">
 
-        <control type="togglebutton" id="11">
-            <centertop>50%</centertop>
-            <description>Skip Back</description>
-            <width>48</width>
-            <height>48</height>
-            <label/>
-            <font/>
-            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/record.png</texturefocus>
-            <texturenofocus colordiffuse="panel_fg_70">osd/record.png</texturenofocus>
-            <usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
-            <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/record-on.png</alttexturefocus>
-            <alttexturenofocus colordiffuse="panel_fg_70">osd/record-on.png</alttexturenofocus>
-            <onclick>PVR.ToggleRecordPlayingChannel</onclick>
-            <enable>PVR.CanRecordPlayingChannel</enable>
-            <visible>VideoPlayer.Content(LiveTV)</visible>
-            <animation effect="fade" start="100" end="33" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
-            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
-            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-            <include>OSD_Button_OnFocus</include>
-        </control>
-
         <control type="button" id="12">
             <centertop>50%</centertop>
             <description>Skip Back</description>
@@ -958,6 +975,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!VideoPlayer.Content(livetv)</visible>
         </control>
 
         <control type="button" id="13">
@@ -974,6 +992,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
         <control type="togglebutton" id="14">
@@ -996,6 +1015,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
         <control type="button" id="15">
@@ -1012,6 +1032,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
         <control type="button" id="16">
@@ -1028,6 +1049,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
         <control type="button" id="17">
@@ -1044,6 +1066,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
         <!-- <control type="button" id="39">
             <centertop>50%</centertop>
@@ -1078,7 +1101,7 @@
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
-            <visible>VideoPlayer.Content(livetv)</visible>
+            <visible>!VideoPlayer.Content(livetv)</visible>
         </control>
         <control type="button" id="18">
             <centertop>50%</centertop>
@@ -1104,6 +1127,7 @@
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
         </control>
         <control type="button" id="10018">
@@ -1124,6 +1148,7 @@
             <onclick>AudioNextLanguage</onclick>
             <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
         </control>
 
@@ -1264,6 +1289,7 @@
             <onclick>SetFocus(3112,9)</onclick>
             <onup>SetFocus(3112,9)</onup>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
         <control type="button" id="414">
             <centertop>50%</centertop>
@@ -1278,6 +1304,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onclick>ActivateWindow(playerprocessinfo)</onclick>
             <visible>Window.IsVisible(videoosd)</visible>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
         <control type="button" id="40">
             <centertop>50%</centertop>
@@ -1306,6 +1333,7 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onclick>ActivateWindow(osdvideosettings)</onclick>
             <visible>VideoPlayer.Content(musicvideos)</visible>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
         <control type="button" id="31">
@@ -1346,6 +1374,257 @@
             <onclick>Close</onclick>
             <onclick>RunScript(script.cu.lrclyrics)</onclick>
 
+        </control>
+    </include>
+
+    <!-- Live TV OSD Controls -->
+    <include name="OSD_Controls_LiveTV">
+
+        <control type="togglebutton" id="11">
+            <!-- <centertop>50%</centertop> -->
+            <description>Record</description>
+            <centertop>50%</centertop>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/record.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/record.png</texturenofocus>
+            <usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
+            <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/record-on.png</alttexturefocus>
+            <alttexturenofocus colordiffuse="panel_fg_70">osd/record-on.png</alttexturenofocus>
+            <onclick>PVR.ToggleRecordPlayingChannel</onclick>
+            <enable>PVR.CanRecordPlayingChannel</enable>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+            <animation effect="fade" start="100" end="33" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+        </control>
+
+        <control type="button" id="12">
+            <centertop>50%</centertop>
+            <description>Skip Back</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]" flipx="true">osd/next.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70" flipx="true">osd/next.png</texturenofocus>
+            <onclick>PlayerControl(Previous)</onclick>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+            <visible>VideoPlayer.Content(livetv)</visible>
+        </control>
+
+        <control type="button" id="13">
+            <centertop>50%</centertop>
+            <description>Rewind</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]" flipx="true">osd/ff.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70" flipx="true">osd/ff.png</texturenofocus>
+            <onclick>PlayerControl(Rewind)</onclick>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+        </control>
+
+        <control type="togglebutton" id="14">
+            <centertop>50%</centertop>
+            <description>Play/Pause</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <altlabel></altlabel>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/pause.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/pause.png</texturenofocus>
+            <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+            <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/play.png</alttexturefocus>
+            <alttexturenofocus colordiffuse="panel_fg_70">osd/play.png</alttexturenofocus>
+            <onclick>PlayerControl(Play)</onclick>
+            <visible>Player.PauseEnabled</visible>
+            <animation effect="fade" start="100" end="33" time="100" condition="!Player.PauseEnabled">Conditional</animation>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+        </control>
+
+        <control type="button" id="15">
+            <centertop>50%</centertop>
+            <description>Stop</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/stop.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/stop.png</texturenofocus>
+            <onclick>PlayerControl(Stop)</onclick>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+        </control>
+
+        <control type="button" id="16">
+            <centertop>50%</centertop>
+            <description>Fast Forward</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/ff.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/ff.png</texturenofocus>
+            <onclick>PlayerControl(Forward)</onclick>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+        </control>
+
+        <control type="button" id="17">
+            <centertop>50%</centertop>
+            <description>Next</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/next.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/next.png</texturenofocus>
+            <onclick>PlayerControl(Next)</onclick>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+        </control>
+
+        <control type="button" id="26">
+            <centertop>50%</centertop>
+            <description>EPG</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/playlist.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/playlist.png</texturenofocus>
+            <onclick>Close</onclick>
+            <onclick>ActivateWindow(tvguide,,return)</onclick>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+            <visible>Window.IsVisible(videoosd)</visible>
+            <visible>VideoPlayer.Content(livetv)</visible>
+        </control>
+        <control type="button" id="18">
+            <centertop>50%</centertop>
+            <description>Subs</description>
+            <width>48</width>
+            <height>48</height>
+            <label>$VAR[OSD_CurrentSubLang]</label>
+            <textcolor>Selected</textcolor>
+            <focusedcolor>Highlight</focusedcolor>
+            <shadowcolor>Shadow</shadowcolor>
+            <font>font_osd_lang</font>
+            <align>right</align>
+            <aligny>top</aligny>
+            <textoffsetx>0</textoffsetx>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/subs.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/subs.png</texturenofocus>
+            <onclick condition="Skin.HasSetting(OSDSubtitleSettings)">ActivateWindow(osdsubtitlesettings)</onclick>
+            <onclick condition="!Skin.HasSetting(OSDSubtitleSettings) + VideoPlayer.HasSubtitles">NextSubtitle</onclick>
+            <onclick condition="!Skin.HasSetting(OSDSubtitleSettings) + !VideoPlayer.HasSubtitles">Close</onclick>
+            <onclick condition="!Skin.HasSetting(OSDSubtitleSettings) + !VideoPlayer.HasSubtitles">ActivateWindow(SubtitleSearch)</onclick>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
+            <include>OSD_Button_OnFocus</include>
+            <visible>Window.IsVisible(videoosd)</visible>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+            <visible>!VideoPlayer.Content(musicvideos)</visible>
+        </control>
+        <control type="button" id="10018">
+            <centertop>50%</centertop>
+            <description>Audio</description>
+            <width>48</width>
+            <height>48</height>
+            <label>$INFO[VideoPlayer.AudioLanguage,[UPPERCASE],[/UPPERCASE]]</label>
+            <textcolor>Selected</textcolor>
+            <focusedcolor>Highlight</focusedcolor>
+            <shadowcolor>Shadow</shadowcolor>
+            <font>font_osd_lang</font>
+            <align>right</align>
+            <aligny>top</aligny>
+            <textoffsetx>0</textoffsetx>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/audio-settings.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
+            <onclick>AudioNextLanguage</onclick>
+            <include>OSD_Button_OnFocus</include>
+            <visible>Window.IsVisible(videoosd)</visible>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+            <visible>!VideoPlayer.Content(musicvideos)</visible>
+        </control>
+
+        <control type="button" id="41">
+            <centertop>50%</centertop>
+            <description>Settings</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onclick>ActivateWindow(osdvideosettings)</onclick>
+            <visible>VideoPlayer.Content(musicvideos)</visible>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+        </control>
+
+        <control type="button" id="25">
+            <centertop>50%</centertop>
+            <description>Settings</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/settings.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/settings.png</texturenofocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onclick>SetFocus(3112,9)</onclick>
+            <onup>SetFocus(3112,9)</onup>
+            <visible>!VideoPlayer.Content(musicvideos)</visible>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
+        </control>
+
+        <control type="button" id="414">
+            <centertop>50%</centertop>
+            <description>Playerprocessinfo</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">DefaultAddonScreensaver.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">DefaultAddonScreensaver.png</texturenofocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
+            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
+            <onclick>ActivateWindow(playerprocessinfo)</onclick>
+            <visible>Window.IsVisible(videoosd)</visible>
+            <visible>VideoPlayer.Content(LiveTV)</visible>
         </control>
 
     </include>

@@ -51,7 +51,8 @@
 
                     <orientation>horizontal</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
-                    <include>OSD_Controls</include>
+                    <include condition="!VideoPlayer.Content(LiveTV)">OSD_Controls</include>
+                    <include condition="VideoPlayer.Content(LiveTV)">OSD_Controls_LiveTV</include>
                 </control>
             </control>
 
