@@ -1808,3 +1808,13 @@ msgstr ""
 msgctxt "#30096"
 msgid "Value"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30097"
+msgid "Enable Monochrome Highlight"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30098"
+msgid "Color Highlight"
+msgstr ""

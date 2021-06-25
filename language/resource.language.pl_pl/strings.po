@@ -1706,7 +1706,7 @@ msgstr "Zaktualizuj bibliotekę"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30083"
-msgid "Switch to colorful icons"
+msgid "Choose between icons type"
 msgstr "Wybierz pomiędzy typem ikon"
 
 #: /1080i/Custom_1117_ColorPicker.xml
@@ -1773,3 +1773,13 @@ msgstr "Kolor"
 msgctxt "#30096"
 msgid "Value"
 msgstr "Wartość"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30097"
+msgid "Enable Monochrome Highlight"
+msgstr "Włącz jednokolorowe podświetlenie"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30098"
+msgid "Color Highlight"
+msgstr "Kolor podświetlenia"

@@ -505,7 +505,7 @@
                     <control type="button" id="19301" description="Color Highlight">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
                         <include>Defs_Settings_Button</include>
-                        <label>Color Highlight</label>
+                        <label>$LOCALIZE[30098]</label>
                         <label2>$INFO[Skin.String(focuscolor.name)]</label2>
                         <onclick>SetProperty(colorpick,$LOCALIZE[30084],Home)</onclick>
                         <onclick>ActivateWindow(1117)</onclick>
@@ -523,7 +523,7 @@
                     <control type="radiobutton" id="19308" description="Monochrome Highlight">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
                         <include>Defs_Settings_Button</include>
-                        <label>Enable Monochrome Hihglight</label>
+                        <label>$LOCALIZE[30097]</label>
                         <onclick>Skin.ToggleSetting(EnableMonochromeHighlight)</onclick>
                         <selected>Skin.HasSetting(EnableMonochromeHighlight)</selected>
                     </control>
