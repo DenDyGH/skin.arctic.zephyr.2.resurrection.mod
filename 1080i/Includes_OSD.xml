@@ -326,8 +326,8 @@
                         <left>40</left>
                         <aligny>top</aligny>
                         <width>1025</width>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
+                        <textcolor>main_bg_70</textcolor>
+                        <selectedcolor>main_bg_70</selectedcolor>
                         <label>$INFO[Player.Title]</label>
                     </control>
 
@@ -338,8 +338,8 @@
                             <top>55</top>
                             <left>40</left>
                             <aligny>top</aligny>
-                            <textcolor>panel_fg_100</textcolor>
-                            <selectedcolor>panel_fg_100</selectedcolor>
+                            <textcolor>main_bg_70</textcolor>
+                            <selectedcolor>main_bg_70</selectedcolor>
                             <label>$INFO[VideoPlayer.Genre]</label>
                         </control>
                         <control type="label">
@@ -347,6 +347,8 @@
                             <top>55</top>
                             <aligny>top</aligny>
                             <align>right</align>
+                            <textcolor>main_bg_70</textcolor>
+                            <selectedcolor>main_bg_70</selectedcolor>
                             <label>$INFO[PVR.EpgEventRemainingTime,+,m]</label>
                         </control>
                     </control>
@@ -430,6 +432,8 @@
                         <top>140</top>
                         <left>40</left>
                         <aligny>top</aligny>
+                        <textcolor>main_bg_70</textcolor>
+                        <selectedcolor>main_bg_70</selectedcolor>
                         <label>$INFO[VideoPlayer.NextTitle]</label>
                         <visible>!Window.IsVisible(videoosd)</visible>
                     </control>
@@ -438,6 +442,8 @@
                         <top>140</top>
                         <aligny>top</aligny>
                         <align>right</align>
+                        <textcolor>main_bg_70</textcolor>
+                        <selectedcolor>main_bg_70</selectedcolor>
                         <label>$INFO[VideoPlayer.NextStartTime] $INFO[VideoPlayer.NextEndTime, - ]</label>
                         <visible>!Window.IsVisible(videoosd)</visible>
                     </control>
