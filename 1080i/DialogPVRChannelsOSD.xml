@@ -51,14 +51,8 @@
                         <top>4</top>
                         <bottom>0</bottom>
                         <control type="image">
-                            <top>4</top>
-                            <right>4</right>
-                            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
-                        </control>
-                        <control type="image">
-                            <top>4</top>
-                            <right>4</right>
-                            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+                            <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
+                            <animation effect="fade" end="85" condition="true">Conditional</animation>
                         </control>
                         <control type="image">
                             <aspectratio>keep</aspectratio>
@@ -72,14 +66,8 @@
                         <top>4</top>
                         <bottom>0</bottom>
                         <control type="image">
-                            <top>4</top>
-                            <right>4</right>
-                            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
-                        </control>
-                        <control type="image">
-                            <top>4</top>
-                            <right>4</right>
-                            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+                            <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
+                            <animation effect="fade" end="85" condition="true">Conditional</animation>
                         </control>
                         <control type="group">
                             <left>30</left>
@@ -118,16 +106,13 @@
                 </itemlayout>
                 <focusedlayout width="1764" height="231">
                     <control type="group">
-                        <width>120</width>
+                        <left>0</left>
+                        <width>227</width>
+                        <top>4</top>
+                        <bottom>0</bottom>
                         <control type="image">
-                            <top>4</top>
-                            <right>4</right>
-                            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
-                        </control>
-                        <control type="image">
-                            <top>4</top>
-                            <right>4</right>
-                            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+                            <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
+                            <animation effect="fade" end="85" condition="true">Conditional</animation>
                         </control>
                         <include content="Object_PVR_Icon">
                             <param name="font" value="font_statusbar_bold" />
