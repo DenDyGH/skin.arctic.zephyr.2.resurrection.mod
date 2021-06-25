@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.4.9">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.5.0">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -19,16 +19,13 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
-            0.4.9
-                - fix for playing trailers
-            0.4.8
-                - improvements for DialogVideoInfo
-                - added themoviedb icon
-                - changed small landscape art
-                - improvements for play and browser button in DialogVideoInfo
-                - updated polish language string
-                - updated color flag icons
-                - added option to automatically switch colour theme based on time
+            0.5.0
+                - updated some language strings
+                - added option to set gradient colour
+                - introducing new ColorPicker
+                - introducing new Live TV OSD
+                - code cleanup
+                - bump up limit for items in DialogVideoInfo
         </news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>

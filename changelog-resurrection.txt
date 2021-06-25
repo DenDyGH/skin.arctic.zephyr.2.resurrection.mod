@@ -1,3 +1,10 @@
+0.5.0
+    - updated some language strings
+    - added option to set gradient colour
+    - introducing new ColorPicker
+    - introducing new Live TV OSD
+    - code cleanup
+    - bump up limit for items in DialogVideoInfo
 0.4.9
     - fix for playing trailers
 0.4.8
