@@ -1,3 +1,6 @@
+0.5.1
+    - fixed some critical visual bugs in DialogPVRChannelsOSD
+    - fixed text color in PVR OSD
 0.5.0
     - updated some language strings
     - added option to set gradient colour
