@@ -20,6 +20,15 @@
                 <label>21421</label>
             </control>
 
+            <include content="Defs_Settings_Gradient">
+                <param name="id" value="9000" />
+                <left>0</left>
+                <top>view_pad</top>
+                <right>dialog_side_grouplist</right>
+                <height>item_list_height</height>
+                <visible>ControlGroup(9000).HasFocus()</visible>
+            </include>
+
             <control type="grouplist" id="9000">
                 <top>dialog_top</top>
                 <bottom>dialog_pad</bottom>

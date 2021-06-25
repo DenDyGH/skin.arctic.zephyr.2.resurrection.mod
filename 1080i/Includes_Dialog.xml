@@ -23,15 +23,19 @@
 
             <control type="group">
                 <description>Busy animation</description>
-                <left>view_pad</left>
+                <left>-16</left>
+                <centertop>50%</centertop>
+                <width>80</width>
+                <height>80</height>
+                <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
                 <control type="image">
-                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
-                    <left>-96</left>
-                    <centertop>50%</centertop>
-                    <width>80</width>
-                    <height>80</height>
                     <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                     <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
+                    <aspectratio>keep</aspectratio>
+                    <animation effect="fade" condition="true" start="0" end="75" pulse="true" time="1000">Conditional</animation>
                 </control>
             </control>
 
@@ -144,6 +148,9 @@
                             <control type="image">
                                 <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                             </control>
+                            <control type="image">
+                                <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+                            </control>
                             <control type="label">
                                 <font>font_tiny</font>
                                 <align>left</align>
@@ -162,11 +169,168 @@
 
     <include name="Dialog_Standard_Button">
         <align>left</align>
+        <aligny>center</aligny>
         <height>item_list_height</height>
         <texturenofocus />
+        <texturefocus />
         <texturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</texturefocus>
         <alttexturenofocus />
+        <alttexturefocus />
         <alttexturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturefocus>
+    </include>
+
+    <include name="Dialog_ColorPicker_WatchedIndicator_Group">
+        <param name="colordiffuse" default="$VAR[ColorWatchedProgress]" />
+        <definition>
+            <control type="grouplist">
+                <nested />
+                <top>50</top>
+                <left>-10</left>
+                <right>-10</right>
+                <orientation>horizontal</orientation>
+                <itemgap>30</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+                <include content="Dialog_ColorPicker_WatchedIndicator">
+                    <param name="selected" value="false" />
+                    <param name="colordiffuse-progress" value="$PARAM[colordiffuse]" />
+                    <param name="colordiffuse-indicator" value="$PARAM[colordiffuse]" />
+                </include>
+                <include content="Dialog_ColorPicker_WatchedIndicator">
+                    <param name="selected" value="false" />
+                    <param name="progress" value="75" />
+                    <param name="texture" value="indicator/timer.png" />
+                    <param name="colordiffuse-progress" value="$PARAM[colordiffuse]" />
+                    <param name="colordiffuse-indicator" value="white" />
+                </include>
+                <include content="Dialog_ColorPicker_WatchedIndicator">
+                    <param name="selected" value="true" />
+                    <param name="colordiffuse-progress" value="$PARAM[colordiffuse]" />
+                    <param name="colordiffuse-indicator" value="$PARAM[colordiffuse]" />
+                </include>
+                <include content="Dialog_ColorPicker_WatchedIndicator">
+                    <param name="selected" value="true" />
+                    <param name="progress" value="75" />
+                    <param name="texture" value="indicator/timer.png" />
+                    <param name="colordiffuse-progress" value="$PARAM[colordiffuse]" />
+                    <param name="colordiffuse-indicator" value="white" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Dialog_ColorPicker_WatchedIndicator">
+        <param name="selected" default="false" />
+        <param name="progress" default="100" />
+        <param name="colordiffuse-progress" default="$VAR[ColorWatchedProgress]" />
+        <param name="colordiffuse-indicator" default="$VAR[ColorWatchedProgress]" />
+        <param name="texture" default="indicator/checkmark.png" />
+        <definition>
+            <control type="group">
+                <top>10</top>
+                <left>10</left>
+                <width>44</width>
+                <height>44</height>
+                <include content="Object_Control" condition="$PARAM[selected]">
+                    <param name="type" value="group" />
+                    <include content="Defs_Pad"><param name="pad" value="-7" /></include>
+                    <control type="image">
+                        <texture colordiffuse="$VAR[ColorHighlight]">indicator/circle-fo.png</texture>
+                    </control>
+                    <control type="image">
+                        <animation effect="fade" end="50" condition="true">Conditional</animation>
+                        <texture colordiffuse="$VAR[ColorGradient]">indicator/circle-fo.png</texture>
+                    </control>
+                </include>
+                <control type="image">
+                    <texture colordiffuse="ff333333">indicator/circle-bg.png</texture>
+                </control>
+                <control type="image">
+                    <include content="Defs_Pad"><param name="pad" value="-8" /></include>
+                    <texture colordiffuse="$PARAM[colordiffuse-progress]">progress/circle/p$PARAM[progress].png</texture>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <texture colordiffuse="black">indicator/circle-fg.png</texture>
+                </control>
+                <control type="image">
+                    <include content="Defs_Pad"><param name="pad" value="10" /></include>
+                    <texture colordiffuse="$PARAM[colordiffuse-indicator]">$PARAM[texture]</texture>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Dialog_ColorPicker_SwatchLabel">
+        <control type="label">
+            <nested />
+            <height>20</height>
+            <font>font_info_buttons</font>
+            <textcolor>dialog_fg_100</textcolor>
+        </control>
+    </include>
+
+    <include name="Dialog_ColorPicker_SwatchPreview">
+        <control type="group">
+            <width>86.67</width>
+            <left>$PARAM[left]</left>
+            <include content="Dialog_ColorPicker_SwatchLabel">
+                <left>-10</left>
+                <right>-10</right>
+                <align>center</align>
+                <label>$PARAM[label]</label>
+            </include>
+            <control type="group">
+                <top>40</top>
+                <height>40</height>
+                <control type="image">
+                    <include content="Defs_Pad">
+                        <param name="pad" value="-20" />
+                    </include>
+                    <texture border="32" colordiffuse="Shadow">common/shadow-20.png</texture>
+                    <visible>!Control.HasFocus($PARAM[id])</visible>
+                </control>
+                <control type="button" id="$PARAM[id]">
+                    <texturefocus />
+                    <texturenofocus />
+                    <font />
+                    <textcolor>00ffffff</textcolor>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                    <onup>3012</onup>
+                    <ondown>3015</ondown>
+                    <onclick>SetProperty(colorpick,$PARAM[color],Home)</onclick>
+                    <onclick>SetFocus(3110)</onclick>
+                    <!-- <onfocus>SetProperty(colorpick,$PARAM[color],Home)</onfocus> -->
+                </control>
+                <control type="group">
+                    <control type="image">
+                        <texture colordiffuse="$VAR[$PARAM[color-var]]" border="20">common/box.png</texture>
+                        <visible>!Control.HasFocus(3110) | !String.IsEqual(Window(Home).Property(colorpick),$PARAM[color])</visible>
+                    </control>
+                    <control type="image">
+                        <texture colordiffuse="$INFO[Container(3110).ListItem.Label]" border="20">common/box.png</texture>
+                        <visible>Control.HasFocus(3110) + String.IsEqual(Window(Home).Property(colorpick),$PARAM[color])</visible>
+                    </control>
+                    <control type="image">
+                        <include content="Defs_Pad">
+                            <param name="pad" value="-27" />
+                        </include>
+                        <bordersize>20</bordersize>
+                        <bordertexture border="32" colordiffuse="Shadow">common/shadow-20.png</bordertexture>
+                        <texture border="20" colordiffuse="Selected">common/selectbox.png</texture>
+                        <visible>Control.HasFocus($PARAM[id])</visible>
+                    </control>
+                </control>
+                <control type="image">
+                    <centertop>50%</centertop>
+                    <centerleft>50%</centerleft>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture>diffuse/circle.png</texture>
+                    <visible>String.IsEqual(Window(Home).Property(colorpick),$PARAM[color])</visible>
+                </control>
+            </control>
+        </control>
     </include>
 
     <!-- ==================== -->
@@ -199,14 +363,24 @@
                 <texture>dialog/loading-back.png</texture>
                 <colordiffuse>$PARAM[fgcolor]_70</colordiffuse>
             </control>
-            <control type="image">
-                <left>-16</left>
+            <control type="group">
+                <right>-16</right>
                 <centertop>50%</centertop>
                 <width>80</width>
                 <height>80</height>
-                <texture colordiffuse="$VAR[ColorHighlight]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
                 <visible>[Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)] | $PARAM[nowplaying]</visible>
+                <control type="image">
+                    <texture colordiffuse="$VAR[ColorHighlight]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <texture colordiffuse="$VAR[ColorGradient]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
+                    <animation effect="fade" end="66" condition="true">Conditional</animation>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <include content="Defs_Progress_Colorfade">
+                        <param name="id" value="$PARAM[progress-id]" />
+                    </include>
+                </control>
             </control>
             <control type="grouplist">
                 <left>8</left>
@@ -342,13 +516,30 @@
         <label>$INFO[ListItem.Label2]</label>
     </include>
 
+    <include name="Dialog_Standard_Right_Buttons_Gradient">
+        <control type="group">
+            <nested />
+            <height>item_list_height</height>
+            <control type="image">
+                <texture colordiffuse="$VAR[ColorHighlight]" border="8" flipy="true">common/box.png</texture>
+            </control>
+            <control type="image">
+                <texture colordiffuse="$VAR[ColorGradient]" border="8" flipy="true">common/box-gradient.png</texture>
+            </control>
+        </control>
+    </include>
+
     <include name="Dialog_Standard_Right_Buttons">
         <height>item_list_height</height>
         <align>center</align>
         <font>font_button</font>
         <textcolor>dialog_fg_70</textcolor>
-        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">diffuse/box.png</texturefocus>
-        <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">diffuse/box.png</alttexturefocus>
+        <include content="Defs_ButtonType">
+            <param name="texturefocus" value="true" />
+        </include>
+        <include content="Defs_ButtonType">
+            <param name="alttexturefocus" value="true" />
+        </include>
         <alttexturenofocus />
     </include>
 
@@ -814,6 +1005,12 @@
                         <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                         <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
                     </control>
+                    <control type="image">
+                        <top>$PARAM[selectpad]</top>
+                        <bottom>$PARAM[selectpad]</bottom>
+                        <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+                        <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
+                    </control>
                     <include content="Dialog_Standard_List_Itemlayout">
                         <param name="color_30" value="Selected" />
                         <param name="color_70" value="Selected" />
@@ -864,6 +1061,15 @@
             <control type="label" id="1">
                 <include>Dialog_Standard_Header</include>
             </control>
+
+            <!-- Right Gradient -->
+            <include content="Defs_Settings_Gradient">
+                <param name="id" value="5" />
+                <top>dialog_top</top>
+                <right>dialog_side_grouplist</right>
+                <height>item_list_height</height>
+                <visible>ControlGroup(5).HasFocus()</visible>
+            </include>
 
             <include>Dialog_Standard_List</include>
             <include content="Dialog_Standard_List">

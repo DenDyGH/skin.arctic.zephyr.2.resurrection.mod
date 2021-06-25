@@ -18,6 +18,23 @@
                 <include>Dialog_Standard_Header</include>
             </control>
 
+            <!-- Left Gradient Fade -->
+            <include content="Defs_Settings_Gradient">
+                <param name="id" value="3" />
+                <top>dialog_top</top>
+                <width>dialog_side_grouplist</width>
+                <height>item_list_height</height>
+            </include>
+            <!-- Right Gradient -->
+            <include content="Defs_Settings_Gradient">
+                <param name="id" value="5" />
+                <left>dialog_side_grouplist</left>
+                <top>dialog_top</top>
+                <right>dialog_side_grouplist</right>
+                <height>item_list_height</height>
+                <visible>ControlGroup(5).HasFocus()</visible>
+            </include>
+
             <control type="grouplist" id="3">
                 <description>button area</description>
                 <left>0</left>

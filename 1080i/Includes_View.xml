@@ -997,7 +997,7 @@
     <include name="View_Selectbox_Bold">
         <param name="overlay" default="true" />
         <param name="pad" default="-7" />
-        <param name="colordiffuse" default="$VAR[ColorHighlight2]" />
+        <param name="colordiffuse" default="$VAR[ColorHighlight]" />
         <param name="focusbounce" default="true" />
         <definition>
             <control type="group">
@@ -1010,10 +1010,26 @@
                     <top>$PARAM[pad]</top>
                     <right>$PARAM[pad]</right>
                     <bottom>$PARAM[pad]</bottom>
-                    <control type="image">
-                        <bordersize>15</bordersize>
-                        <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
-                        <texture border="20" colordiffuse="$PARAM[colordiffuse]">common/selectbox.png</texture>
+                    <control type="group">
+                        <control type="image">
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox.png</texture>
+                        </control>
+                        <control type="image">
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox-gradient.png</texture>
+                        </control>
+                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
+                    </control>
+                    <control type="group">
+                        <control type="image">
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="ffffffff" border="10">common/selectbox.png</texture>
+                        </control>
+                        <visible>String.IsEqual(Skin.String(PosterHighlight),White)</visible>
                     </control>
                 </control>
                 <include condition="$PARAM[overlay]">View_WatchedOverlay_Focus</include>
@@ -1037,10 +1053,26 @@
                     <top>$PARAM[pad]</top>
                     <right>$PARAM[pad]</right>
                     <bottom>$PARAM[pad]</bottom>
-                    <control type="image">
-                        <bordersize>15</bordersize>
-                        <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
-                        <texture border="20" colordiffuse="$PARAM[colordiffuse]">common/selectbox2.png</texture>
+                    <control type="group">
+                        <control type="image">
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox2.png</texture>
+                        </control>
+                        <control type="image">
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox2-gradient.png</texture>
+                        </control>
+                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
+                    </control>
+                    <control type="group">
+                        <control type="image">
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="ffffffff" border="10">common/selectbox2.png</texture>
+                        </control>
+                        <visible>String.IsEqual(Skin.String(PosterHighlight),White)</visible>
                     </control>
                 </control>
                 <include condition="$PARAM[overlay]">View_WatchedOverlay_Focus</include>

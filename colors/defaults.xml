@@ -43,6 +43,7 @@
 
     <!-- Highlight -->
     <color name="Highlight">ff0385b5</color>
+    <color name="Gradient">ff35e55e</color>
     <color name="Selected">ffffffff</color>
 
     <!-- Shadows -->

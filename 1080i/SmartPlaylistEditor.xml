@@ -17,6 +17,15 @@
                 <label>21432</label>
             </control>
 
+            <include content="Defs_Settings_Gradient">
+                <param name="id" value="9000" />
+                <left>0</left>
+                <top>dialog_top</top>
+                <width>680</width>
+                <height>item_list_height</height>
+                <visible>ControlGroup(9000).HasFocus()</visible>
+            </include>
+
             <!-- Left Side -->
             <control type="grouplist" description="Playlist Options" id="9000">
                 <left>0</left>

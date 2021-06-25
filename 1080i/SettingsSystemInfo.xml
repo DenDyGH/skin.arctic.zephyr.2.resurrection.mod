@@ -22,6 +22,14 @@
 
             <control type="group">
                 <left>item_list_height</left>
+                <!-- Left Gradient Fade -->
+                <include content="Defs_Settings_Gradient">
+                    <param name="id" value="50" />
+                    <top>item_list_height_half</top>
+                    <height>item_list_height</height>
+                    <width>dialog_side_grouplist</width>
+                    <visible>!Control.HasFocus(300) + !Control.HasFocus(20)</visible>
+                </include>
                 <control type="grouplist" id="50">
                     <description>button area</description>
                     <left>0</left>
@@ -116,16 +124,15 @@
                         <font>font_small_mono</font>
                         <visible>!Control.IsVisible(30)</visible>
                     </control>
-                    <control type="progress" id="24">
-                        <description>Memory BAR</description>
-                        <top>0</top>
+                    <include content="Defs_Progress_Gradient">
+                        <param name="id" value="24" />
+                        <param name="top" value="-16" />
                         <left>30</left>
                         <height>16</height>
                         <width>406</width>
                         <info>system.memory(used)</info>
-                        <include>Defs_Settings_Button</include>
                         <visible>!Control.IsVisible(30)</visible>
-                    </control>
+                    </include>
                     <control type="label">
                         <top>-66</top>
                         <left>480</left>
@@ -136,8 +143,9 @@
                         <font>font_small_mono</font>
                         <visible>!Control.IsVisible(30)</visible>
                     </control>
-                    <control type="progress" id="22">
-                        <top>0</top>
+                    <include content="Defs_Progress_Gradient">
+                        <param name="id" value="22" />
+                        <param name="top" value="-16" />
                         <description>CPU BAR</description>
                         <left>480</left>
                         <height>16</height>
@@ -145,7 +153,7 @@
                         <info>System.CPUUsage</info>
                         <include>Defs_Settings_Button</include>
                         <visible>!Control.IsVisible(30)</visible>
-                    </control>
+                    </include>
                     <control type="group" id="24">
                         <height>24</height>
                         <visible>!Control.IsVisible(30)</visible>

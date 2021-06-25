@@ -9,6 +9,7 @@
     <constant name="view_list_height">780</constant>
 
     <constant name="item_list_height">78</constant>
+    <constant name="item_list_height_half">39</constant>
     <constant name="item_pvr_height">117</constant>
     <constant name="item_biglist_height">156</constant>
     <constant name="item_row_height">412.5</constant>
@@ -28,4 +29,5 @@
     <constant name="dialog_pad">30</constant>
     <constant name="dialog_side_grouplist">400</constant>
     <constant name="dialog_right_iconwidth">340</constant>
+    <constant name="dialog_settings_grouplist_height">640</constant>
 </includes>

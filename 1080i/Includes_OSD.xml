@@ -371,8 +371,23 @@
                         <control type="progress" id="498">
                             <width>100%</width>
                             <height>12</height>
-                            <texturebg colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texturebg>
+
                             <info>PVR.EpgEventProgress</info>
+                            <visible>Pvr.IsPlayingTv</visible>
+                        </control>
+                        <control type="progress">
+                            <description>Progressbar</description>
+                            <width>100%</width>
+                            <height>12</height>
+
+                            <info>PVR.EpgEventProgress</info>
+                            <texturebg colordiffuse="00ffffff" border="6">diffuse/progress-bg.png</texturebg>
+                            <lefttexture colordiffuse="00ffffff" border="6">diffuse/progress-left.png</lefttexture>
+                            <midtexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse.png">diffuse/progress-end.png</midtexture>
+                            <righttexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse-end.png">diffuse/progress-right.png</righttexture>
+                            <include content="Defs_Progress_Colorfade">
+                                <param name="id" value="498" />
+                            </include>
                             <visible>Pvr.IsPlayingTv</visible>
                         </control>
 
@@ -382,9 +397,9 @@
                             <visible>Player.HasMedia</visible>
                             <animation effect="fade" start="100" end="0" condition="!Player.Seeking" reversible="false" delay="300" time="0">Conditional</animation>
                             <animation effect="fade" start="0" end="100" condition="Player.Seeking" reversible="false" time="0">Conditional</animation>
-                            <texturesliderbar colordiffuse="00ffffff" border="4">diffuse/progress-bg.png</texturesliderbar>
-                            <textureslidernib colordiffuse="panel_fg_100" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernib>
-                            <textureslidernibfocus colordiffuse="panel_fg_100" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernibfocus>
+                            <texturesliderbar colordiffuse="00ffffff" border="6">diffuse/progress-bg.png</texturesliderbar>
+                            <textureslidernib colordiffuse="panel_fg_100" border="6" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="panel_fg_100" border="6" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernibfocus>
                             <visible>Player.SeekEnabled + Pvr.IsPlayingTv + !Player.ChannelPreviewActive</visible>
                         </control>
                     </control>
@@ -905,15 +920,43 @@
                 <width>100%</width>
                 <height>12</height>
                 <info>Player.Progress</info>
-                <texturebg colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texturebg>
+                <visible>Player.HasMedia + !Pvr.IsPlayingTv</visible>
+            </control>
+            <control type="progress">
+                <description>Progressbar</description>
+                <width>100%</width>
+                <height>12</height>
+
+                <info>Player.Progress</info>
+                <texturebg colordiffuse="00ffffff" border="6">diffuse/progress-bg.png</texturebg>
+                <lefttexture colordiffuse="00ffffff" border="6">diffuse/progress-left.png</lefttexture>
+                <midtexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse.png">diffuse/progress-end.png</midtexture>
+                <righttexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse-end.png">diffuse/progress-right.png</righttexture>
+                <include content="Defs_Progress_Colorfade">
+                    <param name="id" value="499" />
+                </include>
                 <visible>Player.HasMedia + !Pvr.IsPlayingTv</visible>
             </control>
 
             <control type="progress" id="498">
                 <width>100%</width>
                 <height>12</height>
-                <texturebg colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texturebg>
                 <info>PVR.EpgEventProgress</info>
+                <visible>Pvr.IsPlayingTv</visible>
+            </control>
+            <control type="progress">
+                <description>Progressbar</description>
+                <width>100%</width>
+                <height>12</height>
+
+                <info>PVR.EpgEventProgress</info>
+                <texturebg colordiffuse="00ffffff" border="6">diffuse/progress-bg.png</texturebg>
+                <lefttexture colordiffuse="00ffffff" border="6">diffuse/progress-left.png</lefttexture>
+                <midtexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse.png">diffuse/progress-end.png</midtexture>
+                <righttexture colordiffuse="$VAR[ColorGradient]" border="6" diffuse="progress/diffuse-end.png">diffuse/progress-right.png</righttexture>
+                <include content="Defs_Progress_Colorfade">
+                    <param name="id" value="498" />
+                </include>
                 <visible>Pvr.IsPlayingTv</visible>
             </control>
 

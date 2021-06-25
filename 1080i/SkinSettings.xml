@@ -16,6 +16,23 @@
 
             <control type="group">
                 <left>item_list_height</left>
+                <!-- Left Gradient Fade -->
+                <include content="Defs_Settings_Gradient">
+                    <param name="id" value="9000" />
+                    <top>item_list_height_half</top>
+                    <height>item_list_height</height>
+                    <width>dialog_side_grouplist</width>
+                    <visible>!Control.HasFocus(300) + !Control.HasFocus(20)</visible>
+                </include>
+                <!-- Right Gradient -->
+                <include content="Defs_Settings_Gradient">
+                    <param name="id" value="9999" />
+                    <top>item_list_height_half</top>
+                    <height>item_list_height</height>
+                    <left>dialog_side_grouplist</left>
+                    <right>0</right>
+                    <visible>ControlGroup(9999).HasFocus()</visible>
+                </include>
                 <control type="grouplist" id="9000">
                     <description>button area</description>
                     <left>0</left>
@@ -28,16 +45,14 @@
                     <control type="togglebutton" id="9150" description="Home">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9150])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9150)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
-                        <label>Arctic Zephyr 2</label>
-                        <altlabel>[COLOR=Selected]Arctic Zephyr 2[/COLOR]</altlabel>
+                        <label>Resurrection</label>
+                        <altlabel>[COLOR=Selected]Resurrection[/COLOR]</altlabel>
                     </control>
                     <control type="togglebutton" id="9001" description="Home">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9001])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9001)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[10000]</label>
@@ -46,7 +61,6 @@
                     <control type="togglebutton" id="9002" description="Background">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9002])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9002)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31110]</label>
@@ -56,7 +70,6 @@
                     <control type="togglebutton" id="9003" description="Colors">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9003])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9003)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31143]</label>
@@ -66,7 +79,6 @@
                     <control type="togglebutton" id="9004" description="Views">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9004])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9004)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[14022]</label>
@@ -76,7 +88,6 @@
                     <control type="togglebutton" id="9007" description="Furniture">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9007])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9007)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31024]</label>
@@ -86,7 +97,6 @@
                     <control type="togglebutton" id="9005" description="OSD">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9005])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9005)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31270]</label>
@@ -96,7 +106,6 @@
                     <control type="togglebutton" id="9006" description="PVR">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9006])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9006)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31422]</label>
@@ -106,7 +115,6 @@
                     <control type="togglebutton" id="9008" description="Dependencies">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9008])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9008)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[24996]</label>
@@ -116,7 +124,6 @@
                     <control type="togglebutton" id="9009" description="Reset Backup">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9009])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9009)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
                         <width>550</width>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30039]</label>
@@ -142,38 +149,7 @@
                     <!-- =============================== -->
 
                     <!-- Debugging -->
-
-                    <control type="image" id="19182">
-                        <description>Skin Sign</description>
-                        <centerleft>50%</centerleft>
-                        <width>611</width>
-                        <height>400</height>
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
-                        <!-- <colordiffuse>FFFFFFFF</colordiffuse> -->
-                        <fadetime>200</fadetime>
-                        <texture>../resurrection.png</texture>
-                        <bordersize>5</bordersize>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-
-                    <control type="label" id="19183">
-                        <description>Skin description</description>
-                        <left>80</left>
-                        <right>80</right>
-                        <top>60</top>
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <label>$LOCALIZE[30038]</label>
-                        <haspath>false</haspath>
-                        <font>font14</font>
-                        <wrapmultiline>true</wrapmultiline>
-                        <scrollspeed>50</scrollspeed>
-                        <scrollsuffix> - </scrollsuffix>
-                  </control>
-
                     <control type="label" id="19185" description="LABEL">
-                        <top>120</top>
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
                         <include>Dialog_Standard_HintLabel</include>
                         <label>$LOCALIZE[30044]</label>
@@ -185,6 +161,30 @@
                         <label>$LOCALIZE[30044]</label>
                         <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
                         <selected>Skin.HasSetting(DebugInfo)</selected>
+                    </control>
+
+                    <control type="image" id="19182">
+                        <description>Skin Sign</description>
+                        <centerleft>50%</centerleft>
+                        <width>611</width>
+                        <height>305.5</height>
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
+                        <!-- <colordiffuse>FFFFFFFF</colordiffuse> -->
+                        <fadetime>200</fadetime>
+                        <texture>../resurrection.png</texture>
+                        <bordersize>5</bordersize>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+
+                    <control type="textbox" id="2">
+                        <description>Skin description</description>
+                        <top>-60</top>
+                        <height>300</height>
+                        <width>850</width>
+                        <centerleft>50%</centerleft>
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9150)</visible>
+                        <label>$LOCALIZE[30038]</label>
+                        <align>center</align>
                     </control>
 
                     <!-- ==== -->
@@ -493,13 +493,39 @@
                         <label>$LOCALIZE[14078]</label>
                     </control>
 
-                    <control type="button" id="19301" description="Color Highlight">
+                    <!-- <control type="button" id="19301" description="Color Highlight">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31286]</label>
                         <label2>$INFO[Skin.String(focuscolor.name)]</label2>
                         <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
                         <onclick>RunScript(script.skin.helper.colorpicker,skinstring=focuscolor.name)</onclick>
+                    </control> -->
+
+                    <control type="button" id="19301" description="Color Highlight">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>Color Highlight</label>
+                        <label2>$INFO[Skin.String(focuscolor.name)]</label2>
+                        <onclick>SetProperty(colorpick,$LOCALIZE[30084],Home)</onclick>
+                        <onclick>ActivateWindow(1117)</onclick>
+                    </control>
+
+                    <control type="button" id="19305" description="Color Highlight2">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[30086]</label>
+                        <label2>$INFO[Skin.String(gradientcolor.name)]</label2>
+                        <onclick>SetProperty(colorpick,$LOCALIZE[30085],Home)</onclick>
+                        <onclick>ActivateWindow(1117)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="19308" description="Monochrome Highlight">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>Enable Monochrome Hihglight</label>
+                        <onclick>Skin.ToggleSetting(EnableMonochromeHighlight)</onclick>
+                        <selected>Skin.HasSetting(EnableMonochromeHighlight)</selected>
                     </control>
 
                     <control type="button" id="19302" description="Color Highlight">
@@ -1073,7 +1099,7 @@
                         <selected>System.HasAddon(script.skin.helper.widgets)</selected>
                         <include>Defs_Settings_Button</include>
                     </control> -->
-                    <control type="radiobutton" id="19803">
+                    <!-- <control type="radiobutton" id="19803">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>script.skin.helper.colorpicker</label>
                         <label2>$INFO[System.AddonVersion(script.skin.helper.colorpicker)]        </label2>
@@ -1081,7 +1107,7 @@
                         <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
                         <selected>System.HasAddon(script.skin.helper.colorpicker)</selected>
                         <include>Defs_Settings_Button</include>
-                    </control>
+                    </control> -->
                     <!-- <control type="radiobutton" id="19804">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>script.skin.helper.skinbackup</label>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<window type="dialog" id="1121">
+<window type="dialog" id="1122">
     <allowoverlay>no</allowoverlay>
     <onload condition="!Window.IsActive(visualisation) + !Window.IsActive(videos)">FullScreen</onload>
     <visible>Player.HasAudio + String.IsEmpty(Window(10025).Property(TvTunesIsAlive))</visible>
