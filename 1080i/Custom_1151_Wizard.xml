@@ -7,6 +7,8 @@
     <onload condition="!Skin.HasSetting(HomeBasic) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeMultiVertical) + !Skin.HasSetting(HomeMultiNetflixDark) + !Skin.HasSetting(HomeMultiNetflix)">Skin.SetBool(HomeMultiNetflix)</onload>
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetString(FocusBorderSize, Bold)</onload>
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
+    <onload condition="String.IsEmpty(Window(Home).Property(colorpick),$LOCALIZE[30084])">Skin.SetString(focuscolor.name,ff4a148c)</onload>
+    <onload condition="String.IsEmpty(Window(Home).Property(colorpick),$LOCALIZE[30085])">Skin.SetString(gradientcolor.name,ffe65100)</onload>
 
     <controls>
         <include>Global_Overlay</include>
