@@ -364,7 +364,7 @@
                 <colordiffuse>$PARAM[fgcolor]_70</colordiffuse>
             </control>
             <control type="group">
-                <right>-16</right>
+                <left>-16</left>
                 <centertop>50%</centertop>
                 <width>80</width>
                 <height>80</height>
