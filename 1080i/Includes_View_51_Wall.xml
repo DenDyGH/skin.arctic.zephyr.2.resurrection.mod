@@ -187,7 +187,6 @@
                     <control type="group">
                         <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
                         <height>$PARAM[icononlyheight]</height>
-                        <include>Object_DefaultIcon</include>
 
                         <include content="Object_Poster">
                             <param name="icon" value="$PARAM[icon]" />
@@ -200,7 +199,6 @@
                     <control type="group">
                         <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
                         <height>$PARAM[icononlyheight]</height>
-                        <include>Object_DefaultIcon</include>
                         <include content="Object_Poster">
                             <param name="icon" value="$PARAM[icon]" />
                             <param name="aspectratio" value="keep" />
