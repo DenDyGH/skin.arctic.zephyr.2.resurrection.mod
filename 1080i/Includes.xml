@@ -74,6 +74,26 @@
         <value>WatchedProgress</value>
     </variable>
 
+    <variable name="PVRTimeRemainingMMVar">
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),09)">9m</value>
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),08)">8m</value>
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),07)">7m</value>
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),06)">6m</value>
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),05)">5m</value>
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),04)">4m</value>
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),03)">3m</value>
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),02)">2m</value>
+        <value condition="Integer.IsEqual(PVR.EpgEventRemainingTime(mm),01)">1m</value>
+    </variable>
+
+    <variable name="PVRTimeRemainingVar">
+        <value condition="Integer.IsGreater(PVR.EpgEventRemainingTime(h),0) + Integer.IsGreater(PVR.EpgEventRemainingTime(mm),9)">$INFO[PVR.EpgEventRemainingTime(h),,h]$INFO[PVR.EpgEventRemainingTime(mm),,m]</value>
+        <value condition="Integer.IsGreater(PVR.EpgEventRemainingTime(h),0) + Integer.IsLessOrEqual(PVR.EpgEventRemainingTime(mm),9)">$INFO[PVR.EpgEventRemainingTime(h),,h]$VAR[PVRTimeRemainingMMVar]</value>
+        <value condition="Integer.IsLessOrEqual(PVR.EpgEventRemainingTime(h),0) + Integer.IsGreater(PVR.EpgEventRemainingTime(mm),9)">$INFO[PVR.EpgEventRemainingTime(mm),,m]</value>
+        <value condition="Integer.IsLessOrEqual(PVR.EpgEventRemainingTime(h),0) + Integer.IsLessOrEqual(PVR.EpgEventRemainingTime(mm),9)">$VAR[PVRTimeRemainingMMVar]</value>
+        <value>$INFO[PVR.EpgEventRemainingTime(ss)]s</value>
+    </variable>
+
     <include name="Dimensions_Fullscreen">
         <left>0</left>
         <top>0</top>

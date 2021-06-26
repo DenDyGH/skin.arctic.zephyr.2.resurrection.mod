@@ -298,16 +298,16 @@
                         <left>-285</left>
                         <font>font_button</font>
                         <aligny>top</aligny>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
+                        <textcolor>ffededed</textcolor>
+                        <selectedcolor>ffededed</selectedcolor>
                         <label>$INFO[VideoPlayer.ChannelNumberLabel] &#8226; $INFO[VideoPlayer.ChannelName]</label>
                     </control>
                     <control type="label">
                         <font>font_small_bold</font>
                         <aligny>top</aligny>
                         <align>right</align>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
+                        <textcolor>ffededed</textcolor>
+                        <selectedcolor>ffededed</selectedcolor>
                         <label>$INFO[System.Time] (-$INFO[PVR.TimeshiftOffset]) - $INFO[VideoPlayer.EndTime]</label>
                         <visible>Window.IsVisible(videoosd) + PVR.IsTimeShift</visible>
                     </control>
@@ -315,8 +315,8 @@
                         <font>font_small_bold</font>
                         <aligny>top</aligny>
                         <align>right</align>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
+                        <textcolor>ffededed</textcolor>
+                        <selectedcolor>ffededed</selectedcolor>
                         <label>$INFO[VideoPlayer.StartTime]$INFO[VideoPlayer.EndTime, - ,]</label>
                         <visible>Window.IsVisible(videoosd) + !PVR.IsTimeShift</visible>
                     </control>
@@ -326,8 +326,8 @@
                         <left>40</left>
                         <aligny>top</aligny>
                         <width>1025</width>
-                        <textcolor>main_bg_70</textcolor>
-                        <selectedcolor>main_bg_70</selectedcolor>
+                        <textcolor>ffededed</textcolor>
+                        <selectedcolor>ffededed</selectedcolor>
                         <label>$INFO[Player.Title]</label>
                     </control>
 
@@ -338,18 +338,29 @@
                             <top>55</top>
                             <left>40</left>
                             <aligny>top</aligny>
-                            <textcolor>main_bg_70</textcolor>
-                            <selectedcolor>main_bg_70</selectedcolor>
+                            <textcolor>ffededed</textcolor>
+                            <selectedcolor>ffededed</selectedcolor>
+                            <label>$INFO[VideoPlayer.Season,s]$INFO[VideoPlayer.Episode,e, - ]$INFO[VideoPlayer.Episodename]</label>
+                            <visible>!String.IsEmpty(VideoPlayer.EpisodeName)</visible>
+                        </control>
+                        <control type="label">
+                            <font>font_tiny</font>
+                            <top>55</top>
+                            <left>40</left>
+                            <aligny>top</aligny>
+                            <textcolor>ffededed</textcolor>
+                            <selectedcolor>ffededed</selectedcolor>
                             <label>$INFO[VideoPlayer.Genre]</label>
+                            <visible>String.IsEmpty(VideoPlayer.EpisodeName)</visible>
                         </control>
                         <control type="label">
                             <font>font_tiny_bold</font>
                             <top>55</top>
                             <aligny>top</aligny>
                             <align>right</align>
-                            <textcolor>main_bg_70</textcolor>
-                            <selectedcolor>main_bg_70</selectedcolor>
-                            <label>$INFO[PVR.EpgEventRemainingTime,+,m]</label>
+                            <textcolor>b3ededed</textcolor>
+                            <selectedcolor>b3ededed</selectedcolor>
+                            <label>$VAR[PVRTimeRemainingVar]</label>
                         </control>
                     </control>
 
@@ -432,8 +443,8 @@
                         <top>140</top>
                         <left>40</left>
                         <aligny>top</aligny>
-                        <textcolor>main_bg_70</textcolor>
-                        <selectedcolor>main_bg_70</selectedcolor>
+                        <textcolor>b3ededed</textcolor>
+                        <selectedcolor>b3ededed</selectedcolor>
                         <label>$INFO[VideoPlayer.NextTitle]</label>
                         <visible>!Window.IsVisible(videoosd)</visible>
                     </control>
@@ -442,8 +453,8 @@
                         <top>140</top>
                         <aligny>top</aligny>
                         <align>right</align>
-                        <textcolor>main_bg_70</textcolor>
-                        <selectedcolor>main_bg_70</selectedcolor>
+                        <textcolor>b3ededed</textcolor>
+                        <selectedcolor>b3ededed</selectedcolor>
                         <label>$INFO[VideoPlayer.NextStartTime] $INFO[VideoPlayer.NextEndTime, - ]</label>
                         <visible>!Window.IsVisible(videoosd)</visible>
                     </control>
