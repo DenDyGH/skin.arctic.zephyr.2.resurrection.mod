@@ -14,6 +14,15 @@
                 <param name="height" value="940" />
             </include>
 
+            <!-- Right Gradient -->
+            <include content="Defs_Settings_Gradient">
+                <param name="id" value="5" />
+                <top>dialog_top</top>
+                <right>dialog_side_grouplist</right>
+                <height>item_list_height</height>
+                <visible>ControlGroup(5).HasFocus()</visible>
+            </include>
+
             <control type="label" id="2">
                 <include>Dialog_Standard_Header</include>
             </control>
