@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.5.1">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.5.2">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -19,16 +19,14 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
-            0.5.1
-                - fixed some critical visual bugs in DialogPVRChannelsOSD
-                - fixed text color in PVR OSD
-            0.5.0
-                - updated some language strings
-                - added option to set gradient colour
-                - introducing new ColorPicker
-                - introducing new Live TV OSD
-                - code cleanup
-                - bump up limit for items in DialogVideoInfo
+            0.5.2
+                - added script.embuary.helper to manage dependencies section in skin settings
+                - show episode names in PVR OSD if possible instead show genre and changes to time remaining
+                - fixed wrong place for circle in DialogExtendedProgressBar
+                - fix for gradients in script-skinshortcuts
+                - fix gradient in videosdsettings
+                - added new color picker and settings for colors in Skin Wizard
+                - Removed double icons in wall view (thanks to @notoco)!
         </news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>

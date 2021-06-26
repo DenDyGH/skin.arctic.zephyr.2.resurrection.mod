@@ -1,3 +1,11 @@
+0.5.2
+    - added script.embuary.helper to manage dependencies section in skin settings
+    - show episode names in PVR OSD if possible instead show genre and changes to time remaining
+    - fixed wrong place for circle in DialogExtendedProgressBar
+    - fix for gradients in script-skinshortcuts
+    - fix gradient in videosdsettings
+    - added new color picker and settings for colors in Skin Wizard
+    - Removed double icons in wall view (thanks to @notoco)!
 0.5.1
     - fixed some critical visual bugs in DialogPVRChannelsOSD
     - fixed text color in PVR OSD
