@@ -23,10 +23,11 @@
     <onload condition="Skin.HasSetting(DisableBlur)">Skin.Reset(TMDbHelper.EnableBlur)</onload>
     <onload condition="!Skin.HasSetting(DisableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
 
-    <!-- Load Basic home menu layout as default if no value is set -->
-    <!-- <onload condition="![Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiNetflixDark) | Skin.HasSetting(HomeMultiVertical) | Skin.HasSetting(HomeMultiHorizontal) | Skin.HasSetting(HomeBasic)]">Skin.SetBool(HomeBasic)</onload> -->
     <!-- Load monochrome flags if no value is set -->
     <onload condition="String.IsEmpty(Skin.String(Icons))">Skin.SetString(Icons, monochrome)</onload>
+    <!-- Load default value for color highlight and color gradient -->
+    <onload condition="String.IsEmpty(Window(Home).Property(colorpick),$LOCALIZE[30084])">Skin.SetString(focuscolor.name,ff4a148c)</onload>
+    <onload condition="String.IsEmpty(Window(Home).Property(colorpick),$LOCALIZE[30085])">Skin.SetString(gradientcolor.name,ffe65100)</onload>
 
     <controls>
         <control type="button" id="6000">
