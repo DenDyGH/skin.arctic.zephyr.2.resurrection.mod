@@ -1144,15 +1144,15 @@
                         <selected>System.HasAddon(script.toolbox)</selected>
                         <include>Defs_Settings_Button</include>
                     </control> -->
-                    <!-- <control type="radiobutton" id="19808">
+                    <control type="radiobutton" id="19808">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.colorbox</label>
-                        <label2>$INFO[System.AddonVersion(script.colorbox)]        </label2>
-                        <onclick>Addon.OpenSettings(script.colorbox)</onclick>
-                        <onclick condition="!System.HasAddon(script.colorbox)">InstallAddon(script.colorbox)</onclick>
-                        <selected>System.HasAddon(script.colorbox)</selected>
+                        <label>script.embuary.helper</label>
+                        <label2>$INFO[System.AddonVersion(script.embuary.helper)]        </label2>
+                        <onclick>Addon.OpenSettings(script.embuary.helper)</onclick>
+                        <onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
+                        <selected>System.HasAddon(script.embuary.helper)</selected>
                         <include>Defs_Settings_Button</include>
-                    </control> -->
+                    </control>
                     <control type="radiobutton" id="19809">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>plugin.video.themoviedb.helper</label>
