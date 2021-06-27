@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window type="dialog" id="1126">
+
+    <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+    <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+    <onload>SetFocus(91506)</onload>
+    <!-- <onload condition="!Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetFocus(3000)</onload> -->
+
+    <onunload>ClearProperty(fanart,Home)</onunload>
+    <onunload>ClearProperty(fanart1,Home)</onunload>
+    <onunload>ClearProperty(fanart2,Home)</onunload>
+    <onunload>ClearProperty(fanart3,Home)</onunload>
+    <onunload>ClearProperty(fanart4,Home)</onunload>
+    <onunload>ClearProperty(fanart5,Home)</onunload>
+    <onunload>ClearProperty(fanart6,Home)</onunload>
+    <onunload>ClearProperty(fanart7,Home)</onunload>
+    <onunload>ClearProperty(fanart8,Home)</onunload>
+    <onunload>ClearProperty(fanart9,Home)</onunload>
+    <onunload>ClearProperty(fanart10,Home)</onunload>
+
+    <controls>
+
+        <!-- <control type="group">
+            <visible>!Skin.HasSetting(SkinHelper.EnableExtraFanart)</visible>
+            <control type="image">
+                <include>Dimensions_Fullscreen</include>
+                <aspectratio>scale</aspectratio>
+                <texture>colors/black.png</texture>
+            </control>
+            <control type="image">
+                <include>Dimensions_Fullscreen</include>
+                <aspectratio>keep</aspectratio>
+                <texture>$INFO[Window(home).Property(fanart)]</texture>
+            </control>
+            <control type="button" id="3000">
+                <include>Defs_Hidden_Button</include>
+                <onclick>Action(close)</onclick>
+            </control>
+        </control> -->
+
+        <control type="group">
+            <!-- <visible>Skin.HasSetting(SkinHelper.EnableExtraFanart)</visible> -->
+            <control type="list" id="9105">
+                <itemlayout />
+                <focusedlayout />
+                <posx>-20</posx>
+                <posy>-20</posy>
+                <width>1</width>
+                <height>1</height>
+                <content>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart)]</label>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart1)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart1))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart2)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart2))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart3)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart3))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart4)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart4))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart5)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart5))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart6)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart6))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart7)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart7))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart8)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart8))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart9)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart9))</visible>
+                    </item>
+                    <!-- <item>
+                        <label>$INFO[Window(home).Property(fanart10)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart10))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart11)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart11))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart12)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart12))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart13)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart13))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart14)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart14))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart15)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart15))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart16)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart16))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart17)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart17))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart18)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart18))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart19)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart19))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window(home).Property(fanart20)]</label>
+                        <visible>!String.IsEmpty(Window(home).Property(fanart20))</visible>
+                    </item> -->
+                </content>
+            </control>
+            <control type="button" id="91506">
+                <include>Defs_Hidden_Button</include>
+                <onleft>Control.Move(9105,-1)</onleft>
+                <onright>Control.Move(9105,1)</onright>
+                <onclick>Action(Close)</onclick>
+            </control>
+            <control type="group">
+                <animation effect="fade" start="0" end="100" time="1000" tween="cubic" easing="inout">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="1000" tween="cubic" easing="inout">Hidden</animation>
+                <visible>Control.HasFocus(91506)</visible>
+                <control type="image">
+                    <width>1920</width>
+                    <height>1080</height>
+                    <texture>indicator/blackdot.png</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Container(9105).ListItem.Label]</texture>
+                </control>
+                <control type="image">
+                    <visible>Container(9105).HasPrevious</visible>
+                    <left>0</left>
+                    <top>1000</top>
+                    <width>34</width>
+                    <height>34</height>
+                    <texture flipx="false" colordiffuse="$VAR[HighlightColor]">icons/spin-left.png</texture>
+                    <animation effect="fade" time="1000" start="100" end="0" condition="System.IdleTime(2)">Conditional</animation>
+                </control>
+                <control type="image">
+                    <visible>Container(9105).HasNext</visible>
+                    <left>1880</left>
+                    <top>1000</top>
+                    <width>34</width>
+                    <height>34</height>
+                    <texture flipx="true" colordiffuse="$VAR[HighlightColor]">icons/spin-left.png</texture>
+                    <animation effect="fade" time="1000" start="100" end="0" condition="System.IdleTime(2)">Conditional</animation>
+                </control>
+            </control>
+        </control>
+
+    </controls>
+</window>

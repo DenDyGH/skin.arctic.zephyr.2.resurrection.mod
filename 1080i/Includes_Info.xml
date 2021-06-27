@@ -241,6 +241,26 @@
                 <onunfocus>ClearProperty(FilePath,Home)</onunfocus>
                 <onclick>SetFocus(8111)</onclick>
             </include>
+
+            <include content="Object_Info_Button">
+                <param name="id" value="9105" />
+                <param name="groupid" value="8003" />
+                <param name="label" value="Fanart" />
+                <param name="icon" value="special://skin/extras/icons/pictures.png" />
+                <param name="visible" value="!Container(6000).IsUpdating" />
+
+                <onclick>SetProperty(fanart,$INFO[Container(6000).ListItem(0).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart1,$INFO[Container(6000).ListItem(1).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart2,$INFO[Container(6000).ListItem(2).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart3,$INFO[Container(6000).ListItem(3).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart4,$INFO[Container(6000).ListItem(4).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart5,$INFO[Container(6000).ListItem(5).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart6,$INFO[Container(6000).ListItem(6).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart7,$INFO[Container(6000).ListItem(7).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart8,$INFO[Container(6000).ListItem(8).Thumb],home)</onclick>
+                <onclick>SetProperty(fanart9,$INFO[Container(6000).ListItem(9).Thumb],home)</onclick>
+                <onclick>ActivateWindow(1126)</onclick>
+            </include>
         </control>
     </include>
 
