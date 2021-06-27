@@ -318,7 +318,7 @@
                         <textcolor>ffededed</textcolor>
                         <selectedcolor>ffededed</selectedcolor>
                         <label>$INFO[VideoPlayer.StartTime]$INFO[VideoPlayer.EndTime, - ,]</label>
-                        <visible>Window.IsVisible(videoosd) + !PVR.IsTimeShift</visible>
+                        <visible>!PVR.IsTimeShift</visible>
                     </control>
                     <control type="label">
                         <font>font_title_small</font>
