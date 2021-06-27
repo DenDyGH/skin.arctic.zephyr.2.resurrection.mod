@@ -1705,3 +1705,102 @@ msgctxt "#30078"
 msgid "Finished Initialising Skin"
 msgstr "Felszín beállítások befejezve"
 
+#: /1080i/Includes_Labels.xml
+msgctxt "#30079"
+msgid "Netflix style | Multiple widgets"
+msgstr "Netflix stílus | Többszörös widgetek"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30080"
+msgid "Netflix style (dark) | Multiple widgets"
+msgstr "Netflix stílus (sötét) | Többszörös widgetek"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#30081"
+msgid "Icons only"
+msgstr "Csak ikonok"
+
+#: /1080i/Includes_Items.xml
+msgctxt "#30082"
+msgid "Update Library"
+msgstr "Médiatár frissítése"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30083"
+msgid "Choose between icons type"
+msgstr "Ikon típusok közti váltás"
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#30084"
+msgid "Highlight"
+msgstr "Kiemelt"
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#30085"
+msgid "Gradient"
+msgstr "Gradiens"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30086"
+msgid "Gradient colour"
+msgstr "Gradiens szín"
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#30087"
+msgid "Creator"
+msgstr "Készíttette"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30088"
+msgid "Watched indicators"
+msgstr "Nézett jelölések"
+
+#: /1080i/Custom_1121_EnableIndicators.xml
+msgctxt "#30089"
+msgid "Watched progress colour"
+msgstr "Nézett folyamatjelző színe"
+
+#: /1080i/Custom_1121_EnableIndicators.xml
+msgctxt "#30090"
+msgid "Hide all indicators"
+msgstr "Minden jelölő elrejtése"
+
+#: /1080i/Custom_1121_EnableIndicators.xml
+msgctxt "#30091"
+msgid "Classic corner style indicators"
+msgstr "Klasszikus sarok stílusú jelölők"
+
+#: /shortcuts/Custom_1121_EnableIndicators.xml
+msgctxt "#30092"
+msgid "In-progress"
+msgstr "Folyamatban"
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#30093"
+msgid "Overlay"
+msgstr "Átfedés"
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#30094"
+msgid "Gradient preview"
+msgstr "Gradiens előnézet"
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#30095"
+msgid "Colour"
+msgstr "Szín"
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#30096"
+msgid "Value"
+msgstr "Érték"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30097"
+msgid "Enable Monochrome Highlight"
+msgstr "Monokróm kiemelés engedélyezése"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30098"
+msgid "Color Highlight"
+msgstr "Színes kiemelés"
