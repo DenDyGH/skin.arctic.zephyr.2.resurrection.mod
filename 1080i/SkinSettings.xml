@@ -432,6 +432,19 @@
                         <selected>Skin.HasSetting(DisableBackgroundOverlay)</selected>
                     </control>
 
+                    <!-- <control type="button" id="19208" description="Set Fallback Image">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>Set background image</label>
+                        <label2>$INFO[Skin.String(background.image)]</label2>
+
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(background.image))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(background.image))</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createselect,header=Set background image)</onclick>
+                    </control> -->
+
                     <control type="button" id="19204" description="Set Fallback Image">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
                         <include>Defs_Settings_Button</include>
