@@ -337,6 +337,7 @@
                             <font>font_tiny</font>
                             <top>55</top>
                             <left>40</left>
+                            <width>1025</width>
                             <aligny>top</aligny>
                             <textcolor>ffededed</textcolor>
                             <selectedcolor>ffededed</selectedcolor>
@@ -347,6 +348,7 @@
                             <font>font_tiny</font>
                             <top>55</top>
                             <left>40</left>
+                            <width>1025</width>
                             <aligny>top</aligny>
                             <textcolor>ffededed</textcolor>
                             <selectedcolor>ffededed</selectedcolor>
