@@ -1,3 +1,10 @@
+0.5.3
+    - changed visibility of start/end time of current watching Live TV program
+    - added option to disable white/dark background overlay
+    - added fanart button to DialogVideoInfo
+    - fix time being cuts off due to its big font size
+    - fix for program's remaining time overlaps with program description
+    - Hungarian lang updated
 0.5.2
     - added script.embuary.helper to manage dependencies section in skin settings
     - show episode names in PVR OSD if possible instead show genre and changes to time remaining
