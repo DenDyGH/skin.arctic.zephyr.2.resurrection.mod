@@ -228,7 +228,7 @@
         <!-- <centerbottom>121</centerbottom> -->
         <bottom>-70</bottom>
         <left>331</left>
-        <width>1386</width>
+        <width>1336</width>
         <itemgap>36</itemgap>
     </include>
     <include name="OSD_MusicPosition">
@@ -283,7 +283,7 @@
 
             <control type="group" description="Main Info">
                 <left>307</left>
-                <width>1386</width>
+                <width>1336</width>
                 <height>227</height>
                 <bottom>0</bottom>
                 <control type="image">
@@ -325,19 +325,19 @@
                         <top>-10</top>
                         <left>40</left>
                         <aligny>top</aligny>
-                        <width>1025</width>
+                        <width>975</width>
                         <textcolor>ffededed</textcolor>
                         <selectedcolor>ffededed</selectedcolor>
                         <label>$INFO[Player.Title]</label>
                     </control>
 
                     <control type="group">
-                        <width>1356</width>
+                        <width>1306</width>
                         <control type="label">
                             <font>font_tiny</font>
                             <top>55</top>
                             <left>40</left>
-                            <width>1025</width>
+                            <width>975</width>
                             <aligny>top</aligny>
                             <textcolor>ffededed</textcolor>
                             <selectedcolor>ffededed</selectedcolor>
@@ -348,7 +348,7 @@
                             <font>font_tiny</font>
                             <top>55</top>
                             <left>40</left>
-                            <width>1025</width>
+                            <width>975</width>
                             <aligny>top</aligny>
                             <textcolor>ffededed</textcolor>
                             <selectedcolor>ffededed</selectedcolor>
@@ -464,8 +464,8 @@
             </control>
 
             <control type="group" description="Clock">
-                <left>1693</left>
-                <width>227</width>
+                <left>1643</left>
+                <width>277</width>
                 <height>227</height>
                 <bottom>0</bottom>
                 <control type="image">
