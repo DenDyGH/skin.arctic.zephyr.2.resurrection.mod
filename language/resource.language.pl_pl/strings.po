@@ -1783,3 +1783,8 @@ msgstr "Włącz jednokolorowe podświetlenie"
 msgctxt "#30098"
 msgid "Color Highlight"
 msgstr "Kolor podświetlenia"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30099"
+msgid "Disable background overlay"
+msgstr "Wyłącz nakładkę na tło"

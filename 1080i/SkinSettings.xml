@@ -426,7 +426,7 @@
                     <control type="radiobutton" id="19207" description="Disable overlay">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
                         <include>Defs_Settings_Button</include>
-                        <label>Disable Overlay</label>
+                        <label>$LOCALIZE[30099]</label>
 
                         <onclick>Skin.ToggleSetting(DisableBackgroundOverlay)</onclick>
                         <selected>Skin.HasSetting(DisableBackgroundOverlay)</selected>
