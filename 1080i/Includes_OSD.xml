@@ -836,7 +836,7 @@
                     <width>auto</width>
                     <font>font_tiny</font>
                     <textcolor>panel_fg_100</textcolor>
-                    <label>$INFO[System.Time,$LOCALIZE[555] ,]</label>
+                    <label>$INFO[System.Time,$LOCALIZE[142] ,]</label>
                 </control>
                 <control type="label">
                     <width>auto</width>
