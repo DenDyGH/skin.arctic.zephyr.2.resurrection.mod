@@ -266,12 +266,14 @@
                     <visible>!String.IsEmpty(Player.Icon)</visible>
                 </control>
                 <control type="image">
+                    <top>50</top>
                     <aspectratio>keep</aspectratio>
                     <bordersize>20</bordersize>
                     <texture colordiffuse="panel_fg_100">diffuse/circle.png</texture>
                     <visible>String.IsEmpty(Player.Icon) | String.IsEmpty(Control.GetLabel(2334))</visible>
                 </control>
                 <control type="label">
+                    <top>50</top>
                     <align>center</align>
                     <aligny>center</aligny>
                     <font>font_overlay_title</font>
