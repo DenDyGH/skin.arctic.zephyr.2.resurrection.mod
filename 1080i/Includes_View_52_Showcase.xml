@@ -226,6 +226,37 @@
         <pagecontrol>62</pagecontrol>
     </include>
 
+    <include name="Flix_View_52_Showcase_Aura_Info">
+        <param name="plotheight" default="120" />
+        <definition>
+            <control type="grouplist">
+                <orientation>vertical</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <itemgap>0</itemgap>
+                <control type="group">
+                    <height>220</height>
+                    <include content="Flix_Object_Info_Title">
+                        <param name="font" value="font_title_large" />
+                        <param name="titleheight" value="$PARAM[titleheight]" />
+                        <param name="top" value="80" />
+                        <param name="visible" value="String.IsEmpty(ListItem.Art(clearlogo))" />
+                    </include>
+                    <control type="image">
+                        <width>480</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">$VAR[Image_ClearLogo]</texture>
+                        <visible>!String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    </control>
+                </control>
+                <include>Flix_Object_Info_Line</include>
+                <include>Object_Info_Ratings</include>
+                <include content="Flix_Object_Info_Plot">
+                    <param name="maxheight" value="$PARAM[plotheight]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
     <include name="View_52_Showcase_Aura_Info">
         <param name="plotheight" default="120" />
         <definition>

@@ -1823,3 +1823,8 @@ msgstr ""
 msgctxt "#30099"
 msgid "Disable background overlay"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30100"
+msgid "Flix View | Multiple widgets"
+msgstr ""

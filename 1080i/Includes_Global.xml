@@ -96,7 +96,33 @@
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <visible>!Skin.HasSetting(HomeMultiNetflixDark)</visible>
+                <visible>!Skin.HasSetting(HomeMultiNetflixDark) | !Skin.HasSetting(HomeMultiFlixView)</visible>
+            </control>
+            <control type="multiimage">
+                <include>Defs_TimePerImage</include>
+                <randomize>true</randomize>
+                <width>1920</width>
+                <left>240</left>
+                <aspectratio>scale</aspectratio>
+                <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+                <fadetime>600</fadetime>
+                <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
+            </control>
+            <control type="multiimage">
+                <include>Defs_TimePerImage</include>
+                <randomize>true</randomize>
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>scale</aspectratio>
+                <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+                <fadetime>600</fadetime>
+                <imagepath background="true">common/vignette-flix-basic.png</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
             </control>
             <control type="multiimage">
                 <include>Defs_TimePerImage</include>

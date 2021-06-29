@@ -210,8 +210,21 @@
                         <label>$LOCALIZE[30045]</label>
                         <label2>$VAR[Label_SkinSettings_HomeLayout]</label2>
 
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30079])</onclick>
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30100])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,
+                                    Skin.Reset(HomeMultiNetflix) ||
+                                    Skin.Reset(HomeMultiVertical) || 
+                                    Skin.Reset(HomeMultiNetflixDark) || 
+                                    Skin.Reset(HomeMultiHorizontal) || 
+                                    Skin.Reset(HomeBasic) || 
+                                    Skin.SetBool(HomeMulti) || 
+                                    Skin.SetBool(HomeMultiFlixView) || 
+                                    RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=Darker with dark dialogs))
+                        </onclick>
+
+                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30079])</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,
+                                    Skin.Reset(HomeMultiFlixView) ||
                                     Skin.Reset(HomeMultiVertical) || 
                                     Skin.Reset(HomeMultiNetflixDark) || 
                                     Skin.Reset(HomeMultiHorizontal) || 
@@ -220,8 +233,9 @@
                                     Skin.SetBool(HomeMultiNetflix) || 
                                     RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
                         </onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30080])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,
+                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30080])</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,
+                                    Skin.Reset(HomeMultiFlixView) ||
                                     Skin.Reset(HomeMultiNetflix) || 
                                     Skin.Reset(HomeMultiVertical) || 
                                     Skin.Reset(HomeMultiHorizontal) || 
@@ -230,8 +244,9 @@
                                     Skin.SetBool(HomeMultiNetflixDark) || 
                                     RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=Dark with dark dialogs))
                         </onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30051])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,
+                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[30051])</onclick>
+                        <onclick>SetProperty(Dialog.4.BuiltIn,
+                                    Skin.Reset(HomeMultiFlixView) ||
                                     Skin.Reset(HomeMultiNetflix) || 
                                     Skin.Reset(HomeMultiNetflixDark) || 
                                     Skin.Reset(HomeMultiHorizontal) || 
@@ -240,8 +255,9 @@
                                     Skin.SetBool(HomeMultiVertical) || 
                                     RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
                         </onclick>
-                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[30052])</onclick>
-                        <onclick>SetProperty(Dialog.4.BuiltIn,
+                        <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[30052])</onclick>
+                        <onclick>SetProperty(Dialog.5.BuiltIn,
+                                    Skin.Reset(HomeMultiFlixView) ||
                                     Skin.Reset(HomeMultiNetflix) || 
                                     Skin.Reset(HomeMultiNetflixDark) || 
                                     Skin.Reset(HomeMultiVertical) || 
@@ -250,8 +266,9 @@
                                     Skin.SetBool(HomeMultiHorizontal) || 
                                     RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
                         </onclick>
-                        <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[30061])</onclick>
-                        <onclick>SetProperty(Dialog.5.BuiltIn,
+                        <onclick>SetProperty(Dialog.6.Label,$LOCALIZE[30061])</onclick>
+                        <onclick>SetProperty(Dialog.6.BuiltIn,
+                                    Skin.Reset(HomeMultiFlixView) ||
                                     Skin.Reset(HomeMultiNetflix) || 
                                     Skin.Reset(HomeMultiNetflixDark) || 
                                     Skin.Reset(HomeMultiVertical) || 

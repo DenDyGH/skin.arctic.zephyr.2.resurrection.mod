@@ -81,6 +81,7 @@
         <control type="group">
             <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
             <include>Animation_FadeInOut</include>
+            <include condition="Skin.HasSetting(HomeMultiFlixView)">Home_Multi_Flix_View</include>
             <include condition="Skin.HasSetting(HomeMultiNetflix)">Home_Multi_Netflix</include>
             <include condition="Skin.HasSetting(HomeMultiNetflixDark)">Home_Multi_Netflix_Dark</include>
             <include condition="Skin.HasSetting(HomeMultiVertical)">Home_Multi_Vertical</include>
