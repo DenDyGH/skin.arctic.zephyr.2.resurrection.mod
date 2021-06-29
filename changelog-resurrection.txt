@@ -1,3 +1,6 @@
+0.5.4
+    - changed size of icon when no logo is set for channel in PVR OSD
+    - Use correct clock string (#142), not duration (thanks @epinter)!
 0.5.3
     - changed visibility of start/end time of current watching Live TV program
     - added option to disable white/dark background overlay
