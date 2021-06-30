@@ -249,7 +249,7 @@
                     </control>
                 </control>
                 <include>Flix_Object_Info_Line</include>
-                <include>Object_Info_Ratings</include>
+                <include>Flix_Object_Info_Ratings</include>
                 <include content="Flix_Object_Info_Plot">
                     <param name="maxheight" value="$PARAM[plotheight]" />
                 </include>

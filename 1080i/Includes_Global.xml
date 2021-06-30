@@ -102,7 +102,6 @@
                 <include>Defs_TimePerImage</include>
                 <randomize>true</randomize>
                 <width>1920</width>
-                <left>240</left>
                 <aspectratio>scale</aspectratio>
                 <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
                 <fadetime>600</fadetime>
