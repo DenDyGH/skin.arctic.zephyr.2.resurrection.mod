@@ -237,6 +237,7 @@
                     <height>220</height>
                     <include content="Flix_Object_Info_Title">
                         <param name="font" value="font_title_large" />
+                        <param name="shadowcolor" value="ff000000" />
                         <param name="titleheight" value="$PARAM[titleheight]" />
                         <param name="top" value="80" />
                         <param name="visible" value="String.IsEmpty(ListItem.Art(clearlogo))" />
@@ -252,6 +253,7 @@
                 <include>Flix_Object_Info_Ratings</include>
                 <include content="Flix_Object_Info_Plot">
                     <param name="maxheight" value="$PARAM[plotheight]" />
+                    <param name="shadowcolor" value="ff000000" />
                 </include>
             </control>
         </definition>

@@ -1369,6 +1369,7 @@
         <param name="font" default="font_title_large" />
         <param name="titleheight" default="80" />
         <param name="textcolor" default="main_fg_100" />
+        <param name="shadowcolor" default="ff000000" />
         <param name="top" default="" />
         <param name="visible" default="true" />
         <definition>
@@ -1378,6 +1379,7 @@
                 <height>$PARAM[titleheight]</height>
                 <aligny>top</aligny>
                 <textcolor>$PARAM[textcolor]</textcolor>
+                <shadowcolor>$PARAM[shadowcolor]</shadowcolor>
                 <font>$PARAM[font]</font>
                 <visible>$PARAM[visible]</visible>
             </control>
@@ -1404,6 +1406,7 @@
         <param name="height" default="120" />
         <param name="maxwidth" default="820" />
         <param name="width" default="auto" />
+        <param name="shadowcolor" default="ff000000" />
         <param name="label" default="$VAR[Label_Plot]" />
         <definition>
             <control type="textbox">
@@ -1414,6 +1417,7 @@
                 <width max="$PARAM[maxwidth]">$PARAM[width]</width>
                 <aligny>top</aligny>
                 <textcolor>main_fg_100</textcolor>
+                <shadowcolor>$PARAM[shadowcolor]</shadowcolor>
                 <font>font_plotbox</font>
             </control>
         </definition>
