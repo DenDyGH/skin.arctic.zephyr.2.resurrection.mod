@@ -396,6 +396,14 @@
                         <onclick>Skin.ToggleSetting(DisableAutoScrollWidgets)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="19111" description="Disable skin splash on startup">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[30100]</label>
+                        <selected>Skin.HasSetting(DisplaySplashOnStartup)</selected>
+                        <onclick>Skin.ToggleSetting(DisplaySplashOnStartup)</onclick>
+                    </control>
+
                     <!-- ========== -->
                     <!-- Background -->
                     <!-- ========== -->

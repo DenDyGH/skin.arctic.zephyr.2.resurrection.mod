@@ -1788,3 +1788,8 @@ msgstr "Kolor podświetlenia"
 msgctxt "#30099"
 msgid "Disable background overlay"
 msgstr "Wyłącz nakładkę na tło"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30100"
+msgid "Disable skin Splash on startup"
+msgstr "Wyłącz ekran ładowania skórki"
