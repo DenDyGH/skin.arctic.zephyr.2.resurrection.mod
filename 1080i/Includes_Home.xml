@@ -523,7 +523,7 @@
                                 <control type="group">
                                     <control type="grouplist" id="3000">
                                         <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
-                                        <!-- <top>412.5</top> -->
+                                        <top>12.5</top>
                                         <!-- <left>120</left> -->
                                         <onup>301</onup>
                                         <ondown>301</ondown>
