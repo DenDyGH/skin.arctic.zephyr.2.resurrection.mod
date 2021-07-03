@@ -528,12 +528,12 @@
                                         <onup>301</onup>
                                         <ondown>301</ondown>
                                         <onleft>301</onleft>
-                                        <scrolltime tween="quadratic">400</scrolltime>
-                                        <height>99999</height>
+                                        <scrolltime tween="quadratic">600</scrolltime>
+                                        <height>640</height>
                                         <width>1800</width>
                                         <orientation>vertical</orientation>
-                                        <itemgap>0</itemgap>
-                                        <usecontrolcoords>false</usecontrolcoords>
+                                        <itemgap>-52</itemgap>
+                                        <usecontrolcoords>true</usecontrolcoords>
 
                                         <animation effect="slide" end="0,-200" time="600" condition="Integer.IsGreater(Container(3000).Position,2)">Conditional</animation>
                                         <animation effect="slide" end="0,-200" time="600" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>
