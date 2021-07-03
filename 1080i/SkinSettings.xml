@@ -210,7 +210,7 @@
                         <label>$LOCALIZE[30045]</label>
                         <label2>$VAR[Label_SkinSettings_HomeLayout]</label2>
 
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30100])</onclick>
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30101])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,
                                     Skin.Reset(HomeMultiNetflix) ||
                                     Skin.Reset(HomeMultiVertical) || 
