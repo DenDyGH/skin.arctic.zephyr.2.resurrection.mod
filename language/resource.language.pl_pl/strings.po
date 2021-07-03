@@ -1791,5 +1791,10 @@ msgstr "Wyłącz nakładkę na tło"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30100"
+msgid "Disable skin Splash on startup"
+msgstr "Wyłącz ekran ładowania skórki"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30101"
 msgid "Flix View | Multiple widgets"
 msgstr "Widok Flix | Wiele widgetów"

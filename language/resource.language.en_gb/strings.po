@@ -1826,5 +1826,10 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30100"
+msgid "Disable skin Splash on startup"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30101"
 msgid "Flix View | Multiple widgets"
 msgstr ""

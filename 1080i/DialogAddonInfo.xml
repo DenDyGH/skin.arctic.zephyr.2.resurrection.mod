@@ -164,6 +164,15 @@
                                     <param name="visible" value="Control.IsEnabled(9) + !Skin.HasSetting(KioskMode)" />
                                 </include>
 
+                                <include content="Object_Info_Button">
+                                    <param name="id" value="14" />
+                                    <param name="groupid" value="8014" />
+                                    <param name="label" value="$LOCALIZE[21338]" />
+                                    <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+                                    <param name="icon" value="special://skin/extras/icons/update.png" />
+                                    <param name="visible" value="Control.IsEnabled(14) + !Skin.HasSetting(KioskMode)" />
+                                </include>
+
                                 <!-- Dependencies -->
                                 <include content="Object_Info_Button">
                                     <param name="id" value="10" />
