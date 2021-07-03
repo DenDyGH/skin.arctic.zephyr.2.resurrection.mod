@@ -100,4 +100,11 @@
         <width>1920</width>
         <height>1080</height>
     </include>
+
+    <include name="Dimensions_TrailerScreen">
+        <top>-80</top>
+        <right>0</right>
+        <width>1520</width>
+        <height>825</height>
+    </include>
 </includes>

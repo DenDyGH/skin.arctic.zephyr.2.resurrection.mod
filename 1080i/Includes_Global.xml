@@ -10,6 +10,29 @@
         </control>
     </include>
 
+    <include name="Flix_Global_Videowindow">
+        <control type="image" description="Background">
+            <include>Dimensions_TrailerScreen</include>
+            <texture colordiffuse="black">common/white.png</texture>
+        </control>
+        <control type="videowindow">
+            <visible>Player.HasVideo</visible>
+            <include>Dimensions_TrailerScreen</include>
+        </control>
+        <!-- <control type="image" description="Background">
+            <include>Dimensions_TrailerScreen</include>
+            <texture colordiffuse="HomePanel">common/bg.jpg</texture>
+            <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [Skin.HasSetting(HomeMulti) | $EXP[Exp_InfoVisible]]]</visible>
+        </control> -->
+    </include>
+
+    <include name="Flix_Global_Videowindow_Hidden">
+        <control type="videowindow">
+            <visible>Player.HasVideo</visible>
+            <include>Dimensions_TrailerScreen</include>
+        </control>
+    </include>
+
     <include name="Global_Videowindow">
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
@@ -74,8 +97,8 @@
             <imagepath background="true">$VAR[Global_Background_ImageBlur_Var]</imagepath>
             <visible>!Skin.HasSetting(DisableBlur)</visible>
         </control>
-        <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
-        <include condition="!Skin.HasSetting(global.showvideo)">Global_Videowindow_Hidden</include>
+        <include condition="Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView)">Global_Videowindow</include>
+        <include condition="!Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView)">Global_Videowindow_Hidden</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
         <control type="group">
             <visible>$EXP[Exp_GlobalBackground]</visible>
@@ -98,31 +121,7 @@
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeMultiNetflixDark) | !Skin.HasSetting(HomeMultiFlixView)</visible>
             </control>
-            <control type="multiimage">
-                <include>Defs_TimePerImage</include>
-                <randomize>true</randomize>
-                <width>1920</width>
-                <aspectratio>scale</aspectratio>
-                <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
-                <fadetime>600</fadetime>
-                <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
-            </control>
-            <control type="multiimage">
-                <include>Defs_TimePerImage</include>
-                <randomize>true</randomize>
-                <width>1920</width>
-                <height>1080</height>
-                <aspectratio>scale</aspectratio>
-                <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
-                <fadetime>600</fadetime>
-                <imagepath background="true">common/vignette-flix-basic.png</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
-            </control>
+            
             <control type="multiimage">
                 <include>Defs_TimePerImage</include>
                 <randomize>true</randomize>
@@ -159,6 +158,38 @@
             </control>
 
         </control>
+
+        <include condition="Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView)">Flix_Global_Videowindow</include>
+        <include condition="!Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView)">Flix_Global_Videowindow_Hidden</include>
+
+        <control type="group">
+                <control type="multiimage">
+                    <include>Defs_TimePerImage</include>
+                    <randomize>true</randomize>
+                    <width>1920</width>
+                    <aspectratio>scale</aspectratio>
+                    <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+                    <fadetime>600</fadetime>
+                    <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+                    <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <visible>Skin.HasSetting(HomeMultiFlixView) + !Player.HasVideo</visible>
+                </control>
+                <control type="multiimage">
+                    <include>Defs_TimePerImage</include>
+                    <randomize>true</randomize>
+                    <width>1920</width>
+                    <height>1080</height>
+                    <aspectratio>scale</aspectratio>
+                    <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+                    <fadetime>600</fadetime>
+                    <imagepath background="true">common/vignette-flix-basic.png</imagepath>
+                    <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
+                </control>
+            </control>
+
         <include>Object_NowPlaying</include>
         <include>Object_Codecs</include>
         <include>Object_Languages</include>
