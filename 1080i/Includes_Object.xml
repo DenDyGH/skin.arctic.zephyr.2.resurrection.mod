@@ -322,12 +322,10 @@
                         <param name="labelinclude" value="$PARAM[squarelabelinclude]" />
                     </include>
                     <control type="button">
-                        <visible>false</visible>
-                        <onfocus>SetProperty(playingtrailer,true,home)</onfocus>
-                        <onfocus condition="String.IsEmpty(Window(Home).Property(playingtrailer))">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:05,silent)</onfocus>
+                        <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
-                        <onunfocus>ClearProperty(playingtrailer,home)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -353,12 +351,10 @@
                         <param name="labelinclude" value="$PARAM[labelinclude]" />
                     </include>
                     <control type="button">
-                        <visible>false</visible>
-                        <onfocus>SetProperty(playingtrailer,true,home)</onfocus>
-                        <onfocus condition="String.IsEmpty(Window(Home).Property(playingtrailer))">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:05,silent)</onfocus>
+                        <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
-                        <onunfocus>ClearProperty(playingtrailer,home)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -386,12 +382,10 @@
                         <param name="label2" value="$PARAM[label2]" />
                     </include>
                     <control type="button">
-                        <visible>false</visible>
-                        <onfocus>SetProperty(playingtrailer,true,home)</onfocus>
-                        <onfocus condition="String.IsEmpty(Window(Home).Property(playingtrailer))">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:05,silent)</onfocus>
+                        <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
-                        <onunfocus>ClearProperty(playingtrailer,home)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -420,12 +414,10 @@
                         <param name="id" value="$PARAM[id]" />
                     </include>
                     <control type="button">
-                        <visible>false</visible>
-                        <onfocus>SetProperty(playingtrailer,true,home)</onfocus>
-                        <onfocus condition="String.IsEmpty(Window(Home).Property(playingtrailer))">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:05,silent)</onfocus>
+                        <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
-                        <onunfocus>ClearProperty(playingtrailer,home)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -461,12 +453,10 @@
                         <visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
                     </control>
                     <control type="button">
-                        <visible>false</visible>
-                        <onfocus>SetProperty(playingtrailer,true,home)</onfocus>
-                        <onfocus condition="String.IsEmpty(Window(Home).Property(playingtrailer))">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:05,silent)</onfocus>
+                        <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
-                        <onunfocus>ClearProperty(playingtrailer,home)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -486,12 +476,10 @@
                         <param name="labelinclude" value="$PARAM[labelinclude]" />
                     </include>
                     <control type="button">
-                        <visible>false</visible>
-                        <onfocus>SetProperty(playingtrailer,true,home)</onfocus>
-                        <onfocus condition="String.IsEmpty(Window(Home).Property(playingtrailer))">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:05,silent)</onfocus>
+                        <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
-                        <onunfocus>ClearProperty(playingtrailer,home)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
