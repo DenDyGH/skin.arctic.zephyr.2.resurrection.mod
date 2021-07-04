@@ -325,7 +325,7 @@
                         <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
-                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -354,7 +354,7 @@
                         <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
-                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -385,7 +385,7 @@
                         <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
-                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -417,7 +417,7 @@
                         <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
-                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -456,7 +456,7 @@
                         <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
-                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -479,7 +479,7 @@
                         <include>Defs_Hidden_Button</include>
                         <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus>
                         <onunfocus>PlayerControl(Stop)</onunfocus>
-                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[Container($PARAM[id]).ListItem.FileNameAndPath],1),00:03,silent)</onfocus>
+                        <onfocus condition="!Player.HasVideo">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
