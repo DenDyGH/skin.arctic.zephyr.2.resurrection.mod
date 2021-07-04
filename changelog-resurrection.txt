@@ -1,3 +1,6 @@
+0.5.5
+    - option to disable skin splash art on startup
+    - added button to select add-on version in DialogAddonInfo
 0.5.4
     - changed size of icon when no logo is set for channel in PVR OSD
     - Use correct clock string (#142), not duration (thanks @epinter)!
