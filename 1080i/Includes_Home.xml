@@ -447,72 +447,6 @@
                         <orientation>horizontal</orientation>
                         <usecontrolcoords>true</usecontrolcoords>
                         <itemgap>0</itemgap>
-                        <control type="group" id="300">
-                            <width>257.14</width>
-                            <left>15</left>
-                            <top>-7</top>
-                            <bottom>7</bottom>
-                            <control type="group">
-                                <width>257.14</width>
-                                <control type="button" id="3002">
-                                    <onup>SetFocus(30,999,absolute)</onup>
-                                    <ondown>SetFocus(302,0,absolute)</ondown>
-                                    <right>40</right>
-                                    <onleft>301</onleft>
-                                    <onright>301</onright>
-                                    <onback>301</onback>
-                                    <font>font_topbar</font>
-                                    <align>right</align>
-                                    <aligny>center</aligny>
-                                    <textcolor>main_fg_30</textcolor>
-                                    <focusedcolor>main_fg_100</focusedcolor>
-                                    <textoffsetx>0</textoffsetx>
-                                    <texturefocus />
-                                    <texturenofocus />
-                                    <label>$INFO[Container(301).ListItem.Label]</label>
-                                    <onclick>$INFO[Container(301).ListItem.Property(path)]</onclick>
-                                    <height>item_list_height</height>
-                                    <include>Animation_Left</include>
-                                    <visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(3002)</visible>
-                                </control>
-                                <control type="panel" id="302">
-                                    <include>Animation_Left</include>
-                                    <visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(3002)</visible>
-                                    <onup>3002</onup>
-                                    <ondown>3002</ondown>
-                                    <onleft>301</onleft>
-                                    <onright>301</onright>
-                                    <onback>301</onback>
-                                    <include>Defs_InfoDialog_Visible</include>
-                                    <left>0</left>
-                                    <animation effect="fade" start="100" end="0" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100) | Control.HasFocus(6000)">Conditional</animation>
-                                    <top>item_list_height</top>
-                                    <width>257.14</width>
-                                    <onright>3000</onright>
-                                    <orientation>vertical</orientation>                
-                                    <itemlayout width="257.14" height="item_list_height">
-                                        <control type="label">
-                                            <right>40</right>
-                                            <font>font_submenu_small</font>
-                                            <align>right</align>
-                                            <aligny>center</aligny>
-                                            <textcolor>main_fg_100</textcolor>
-                                            <label>$INFO[ListItem.Label]</label>
-                                        </control>
-                                    </itemlayout>
-                                    <focusedlayout width="257.14" height="item_list_height">
-                                        <control type="label">
-                                            <right>40</right>
-                                            <font>font_submenu</font>
-                                            <align>right</align>
-                                            <aligny>center</aligny>
-                                            <textcolor>main_fg_100</textcolor>
-                                            <label>$INFO[ListItem.Label]</label>
-                                        </control>
-                                    </focusedlayout>
-                                    <content><include>skinshortcuts-submenu</include></content>
-                                </control>
-                            </control>
 
                             <control type="group" id="99301">
                                 <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
@@ -590,7 +524,7 @@
                 <onright condition="!String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">3000</onright>
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Settings)">5000</onright>
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">6000</onright>
-                <top>293.5</top>
+                <top>193.5</top>
                 <width>257.14</width>
                 <height>787</height>
                 <orientation>vertical</orientation>            
@@ -674,6 +608,73 @@
                 </focusedlayout>
                 <content><include>skinshortcuts-mainmenu</include></content>
             </control>
+
+            <control type="group" id="300">
+                <width>257.14</width>
+                <left>15</left>
+                <top>70</top>
+                <bottom>7</bottom>
+                <control type="group">
+                    <width>257.14</width>
+                    <control type="button" id="3002">
+                        <onup>SetFocus(30,999,absolute)</onup>
+                        <ondown>SetFocus(302,0,absolute)</ondown>
+                        <right>40</right>
+                        <onleft>301</onleft>
+                        <onright>301</onright>
+                        <onback>301</onback>
+                        <font>font_topbar</font>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <textcolor>main_fg_30</textcolor>
+                        <focusedcolor>main_fg_100</focusedcolor>
+                        <textoffsetx>0</textoffsetx>
+                        <texturefocus />
+                        <texturenofocus />
+                        <label>$INFO[Container(301).ListItem.Label]</label>
+                        <onclick>$INFO[Container(301).ListItem.Property(path)]</onclick>
+                        <height>item_list_height</height>
+                        <include>Animation_Left</include>
+                        <visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(3002)</visible>
+                    </control>
+                    <control type="panel" id="302">
+                        <include>Animation_Left</include>
+                        <visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(3002)</visible>
+                        <onup>3002</onup>
+                        <ondown>3002</ondown>
+                        <onleft>301</onleft>
+                        <onright>301</onright>
+                        <onback>301</onback>
+                        <include>Defs_InfoDialog_Visible</include>
+                        <left>0</left>
+                        <animation effect="fade" start="100" end="0" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100) | Control.HasFocus(6000)">Conditional</animation>
+                        <top>item_list_height</top>
+                        <width>257.14</width>
+                        <onright>3000</onright>
+                        <orientation>vertical</orientation>                
+                        <itemlayout width="257.14" height="item_list_height">
+                            <control type="label">
+                                <right>40</right>
+                                <font>font_submenu_small</font>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <textcolor>main_fg_100</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="257.14" height="item_list_height">
+                            <control type="label">
+                                <right>40</right>
+                                <font>font_submenu</font>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <textcolor>main_fg_100</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </focusedlayout>
+                        <content><include>skinshortcuts-submenu</include></content>
+                    </control>
+                </control>
         </control>
 
     </control>
