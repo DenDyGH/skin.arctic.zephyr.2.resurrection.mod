@@ -379,6 +379,64 @@
         </include> -->
 
         <control type="group">
+
+            <control type="group">
+                <include content="View_Group">
+                    <param name="animation" value="Defs_Null" />
+                </include>
+                <control type="grouplist">
+                    <top>253.5</top>
+                    <left>43</left>
+                    <bottom>-115</bottom>
+                    <width>2500</width>
+                    <height>640</height>
+                    <orientation>horizontal</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>0</itemgap>
+
+                        <control type="group" id="99301">
+                            <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
+                            <height>412.5</height>
+                            <width>1800</width>
+                            <include>Animation_Right</include>
+                            <include>Defs_InfoDialog_Visible</include>
+                            <control type="group">
+                                <control type="grouplist" id="3000">
+                                    <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+                                    <top>12.5</top>
+                                    <!-- <left>120</left> -->
+                                    <onup>301</onup>
+                                    <ondown>301</ondown>
+                                    <onleft>301</onleft>
+                                    <scrolltime tween="quadratic">600</scrolltime>
+                                    <height>640</height>
+                                    <width>1800</width>
+                                    <orientation>vertical</orientation>
+                                    <itemgap>-52</itemgap>
+                                    <usecontrolcoords>true</usecontrolcoords>
+
+                                    <!-- <animation effect="slide" end="0,-200" time="600" condition="Integer.IsGreater(Container(3000).Position,2)">Conditional</animation>
+                                    <animation effect="slide" end="0,-200" time="600" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>
+                                    <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,4)">Conditional</animation>
+                                    <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,5)">Conditional</animation>
+                                    <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,6)">Conditional</animation>
+                                    <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,7)">Conditional</animation>
+                                    <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,8)">Conditional</animation>
+                                    <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,9)">Conditional</animation>
+                                    <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,10)">Conditional</animation>
+                                    <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,11)">Conditional</animation> -->
+
+                                    <control type="group" id="7999"><height>0</height></control>
+                                    <include>skinshortcuts-template-vertical-submenu</include>
+                                    <include>skinshortcuts-template-vertical-main</include>
+                                </control>
+                          </control>
+                      </control>
+                  </control>
+              </control>
+          </control>
+
+        <control type="group">
             <top>view_top</top>
             <include>Animation_FadeIn_Delay</include>
             <visible>ControlGroup(3000).HasFocus()</visible>
@@ -431,66 +489,6 @@
                 <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]</visible>
                 <include>PVRRecordingWidgets</include>
             </control>
-
-            <control type="group">
-
-                <control type="group">
-                    <include content="View_Group">
-                        <param name="animation" value="Defs_Null" />
-                    </include>
-                    <control type="grouplist">
-                        <top>253.5</top>
-                        <left>277.14</left>
-                        <bottom>-115</bottom>
-                        <width>2500</width>
-                        <height>99999</height>
-                        <orientation>horizontal</orientation>
-                        <usecontrolcoords>true</usecontrolcoords>
-                        <itemgap>0</itemgap>
-
-                            <control type="group" id="99301">
-                                <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
-                                <height>412.5</height>
-                                <width>1800</width>
-                                <include>Animation_Right</include>
-                                <include>Defs_InfoDialog_Visible</include>
-                                <control type="group">
-                                    <control type="grouplist" id="3000">
-                                        <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
-                                        <top>12.5</top>
-                                        <!-- <left>120</left> -->
-                                        <onup>301</onup>
-                                        <ondown>301</ondown>
-                                        <onleft>301</onleft>
-                                        <scrolltime tween="quadratic">600</scrolltime>
-                                        <height>640</height>
-                                        <width>1800</width>
-                                        <orientation>vertical</orientation>
-                                        <itemgap>-52</itemgap>
-                                        <usecontrolcoords>true</usecontrolcoords>
-
-                                        <animation effect="slide" end="0,-200" time="600" condition="Integer.IsGreater(Container(3000).Position,2)">Conditional</animation>
-                                        <animation effect="slide" end="0,-200" time="600" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>
-                                        <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,4)">Conditional</animation>
-                                        <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,5)">Conditional</animation>
-                                        <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,6)">Conditional</animation>
-                                        <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,7)">Conditional</animation>
-                                        <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,8)">Conditional</animation>
-                                        <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,9)">Conditional</animation>
-                                        <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,10)">Conditional</animation>
-                                        <animation effect="slide" end="0,-210.25" time="600" condition="Integer.IsGreater(Container(3000).Position,11)">Conditional</animation>
-
-                                        <control type="group" id="7999"><height>0</height></control>
-                                        <include>skinshortcuts-template-vertical-submenu</include>
-                                        <include>skinshortcuts-template-vertical-main</include>
-                                    </control>
-                              </control>
-                          </control>
-
-                            
-                      </control>
-                  </control>
-              </control>
 
               <control type="multiimage">
                 <include>Defs_TimePerImage</include>
