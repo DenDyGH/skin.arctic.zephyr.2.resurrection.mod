@@ -269,25 +269,25 @@
                         <label>$LOCALIZE[30046]</label>
                         <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
 
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30054])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,
+                        <onclick>SetProperty(Context.1.Label,$LOCALIZE[30054])</onclick>
+                        <onclick>SetProperty(Context.1.BuiltIn,
                                     Skin.Reset(VerticalIconsOnly) ||
                                     Skin.Reset(HomeTextAutoWidth) ||
                                     Skin.Reset(HomeIcons))
                         </onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30053])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,
+                        <onclick>SetProperty(Context.2.Label,$LOCALIZE[30053])</onclick>
+                        <onclick>SetProperty(Context.2.BuiltIn,
                                     Skin.Reset(VerticalIconsOnly) ||
                                     Skin.Reset(HomeTextAutoWidth) ||
                                     Skin.SetBool(HomeIcons))
                         </onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30081])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,
+                        <onclick>SetProperty(Context.3.Label,$LOCALIZE[30081])</onclick>
+                        <onclick>SetProperty(Context.3.BuiltIn,
                                     Skin.Reset(HomeIcons) ||
                                     Skin.Reset(HomeTextAutoWidth) ||
                                     Skin.SetBool(VerticalIconsOnly))
                         </onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[30046])</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
                         <visible>Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)</visible>
                     </control>
 
@@ -297,23 +297,23 @@
                         <label>$LOCALIZE[30046]</label>
                         <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
 
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30056])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,
+                        <onclick>SetProperty(Context.1.Label,$LOCALIZE[30056])</onclick>
+                        <onclick>SetProperty(Context.1.BuiltIn,
                                     Skin.Reset(HomeIcons) ||
                                     Skin.SetBool(HomeTextAutoWidth))
                         </onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30057])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,
+                        <onclick>SetProperty(Context.2.Label,$LOCALIZE[30057])</onclick>
+                        <onclick>SetProperty(Context.2.BuiltIn,
                                     Skin.Reset(HomeIcons) ||
                                     Skin.Reset(VerticalIconsOnly) ||
                                     Skin.Reset(HomeTextAutoWidth))
                         </onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30055])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,
+                        <onclick>SetProperty(Context.3.Label,$LOCALIZE[30055])</onclick>
+                        <onclick>SetProperty(Context.3.BuiltIn,
                                     Skin.Reset(HomeTextAutoWidth) ||
                                     Skin.SetBool(HomeIcons))
                         </onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[30046])</onclick>
+                        <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
                         <visible>[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)]</visible>
                     </control>
 
