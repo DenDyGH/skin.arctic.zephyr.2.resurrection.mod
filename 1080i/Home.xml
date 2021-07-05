@@ -91,7 +91,7 @@
 
         <!-- Splash -->
         <control type="group">
-            <visible>Skin.HasSetting(DisplaySplashOnStartup)</visible>
+            <visible>!Skin.HasSetting(DisplaySplashOnStartup)</visible>
             <control type="image" description="Background">
                 <include>Dimensions_Fullscreen</include>
                 <texture colordiffuse="Background">common/bg.jpg</texture>
