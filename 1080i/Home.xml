@@ -15,7 +15,7 @@
     <onload condition="Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)">SetFocus(301)</onload>
 
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
-    <onload condition="!Skin.HasSetting(SkinWizard)">ActivateWindow(1151)</onload>
+    <!-- <onload condition="!Skin.HasSetting(SkinWizard)">ActivateWindow(1151)</onload> -->
     
     <onload condition="!Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.Fallback,$VAR[Global_Background_Image_NoFanart],Home)</onload>
     <onload condition="Skin.HasSetting(NoFanart) + !Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.SourceImage,Art(fallback),Home)</onload>
