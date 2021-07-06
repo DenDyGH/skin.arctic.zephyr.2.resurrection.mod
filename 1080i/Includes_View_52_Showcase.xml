@@ -32,7 +32,7 @@
                     <aligny>top</aligny>
                     <font>font_tiny</font>
                     <textcolor>$VAR[ColorHighlight]</textcolor>
-                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),[COLOR=main_fg_100],[/COLOR]  |  ]$VAR[Label_Duration,[COLOR=main_fg_100],[/COLOR]]</label>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),[COLOR=main_fg_100],[/COLOR]  | ]$VAR[Label_Duration,[COLOR=main_fg_100],[/COLOR]]</label>
                     <height>60</height>
                     <visible>ListItem.IsCollection</visible>
                 </control>
@@ -382,6 +382,35 @@
                 <include>View_Horizontal_Movement</include>
             </include>
             <include condition="Skin.HasSetting(UseAuraShowcase)">View_520_Showcase_Aura_Info</include>
+        </control>
+    </include>
+
+    <include name="View_525_Showcase_Flix">
+        <control type="group">
+            <include>View_Group</include>
+            <visible>Control.IsVisible(525)</visible>
+
+            <include content="View_51_Flix_Container">
+                <param name="id" value="525" />
+                <param name="height" value="item_cast_height" />
+                <param name="orientation" value="horizontal" />
+                <param name="controltype" value="fixedlist" />
+                <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
+                <param name="labelinclude" value="Defs_Null" />
+                <param name="diffuse" value="diffuse/landscape-wall.png" />
+                <param name="itemwidth" value="item_landscape_width" />
+                <param name="itemheight" value="item_cast_height" />
+                <param name="icon" value="$VAR[Image_Landscape]" />
+                <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
+                <param name="iconheight" value="item_icon_height" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="viewtype" value="Showcase Flix View" />
+                <param name="viewtypename" value="wrap" />
+                <param name="forced" value="true" />
+                <movement>2</movement>
+                <include>View_Horizontal_Movement</include>
+            </include>
+            <include>View_52_Showcase_Aura_Info</include>
         </control>
     </include>
 
