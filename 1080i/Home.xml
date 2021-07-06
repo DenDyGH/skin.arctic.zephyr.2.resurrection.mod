@@ -15,7 +15,7 @@
     <onload condition="Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)">SetFocus(301)</onload>
 
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
-    <onload condition="!Skin.HasSetting(SkinWizard)">ActivateWindow(1151)</onload>
+    <!-- <onload condition="!Skin.HasSetting(SkinWizard)">ActivateWindow(1151)</onload> -->
     
     <onload condition="!Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.Fallback,$VAR[Global_Background_Image_NoFanart],Home)</onload>
     <onload condition="Skin.HasSetting(NoFanart) + !Skin.HasSetting(DisableBlur)">SetProperty(TMDbHelper.Blur.SourceImage,Art(fallback),Home)</onload>
@@ -23,11 +23,17 @@
     <onload condition="Skin.HasSetting(DisableBlur)">Skin.Reset(TMDbHelper.EnableBlur)</onload>
     <onload condition="!Skin.HasSetting(DisableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
 
+    <!-- Initial setup from Skin Wizard -->
+    <onload condition="!Skin.HasSetting(HomeBasic) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeMultiVertical) + !Skin.HasSetting(HomeMultiNetflixDark) + !Skin.HasSetting(HomeMultiNetflix)">Skin.SetBool(HomeMultiNetflix)</onload>
+    <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetString(FocusBorderSize, Bold)</onload>
+    <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
+    <onload condition="String.IsEmpty(Skin.String(PosterHighlight))">Skin.SetString(PosterHighlight,Highlight)</onload>
+
     <!-- Load monochrome flags if no value is set -->
     <onload condition="String.IsEmpty(Skin.String(Icons))">Skin.SetString(Icons, monochrome)</onload>
     <!-- Load default value for color highlight and color gradient -->
-    <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff4a148c)</onload>
-    <onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ffe65100)</onload>
+    <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff01579b)</onload>
+    <onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ff81d4fa)</onload>
 
     <controls>
         <control type="button" id="6000">
@@ -92,7 +98,7 @@
 
         <!-- Splash -->
         <control type="group">
-            <visible>Skin.HasSetting(DisplaySplashOnStartup)</visible>
+            <visible>!Skin.HasSetting(DisplaySplashOnStartup)</visible>
             <control type="image" description="Background">
                 <include>Dimensions_Fullscreen</include>
                 <texture colordiffuse="Background">common/bg.jpg</texture>

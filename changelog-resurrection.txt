@@ -1,3 +1,13 @@
+0.5.7
+    - fixed critical bootloop after first install
+0.5.6
+    - reversed option to "display splash screen on startup"
+    - switch from dialog to context menu for home menu style setting
+    - fix for color diffused colorful icons in movies ratings
+    - disabled skin wizard on initial setup to avoid issues
+0.5.5
+    - option to disable skin splash art on startup
+    - added button to select add-on version in DialogAddonInfo
 0.5.4
     - changed size of icon when no logo is set for channel in PVR OSD
     - Use correct clock string (#142), not duration (thanks @epinter)!

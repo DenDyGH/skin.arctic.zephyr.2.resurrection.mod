@@ -1061,7 +1061,7 @@
                     <top>41</top>
                     <left>260</left>
                     <include content="Object_Ratings_Content" condition="!Skin.HasSetting(DisableStarRating) + !Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="main_fg_100" />
+                        <param name="colordiffuse" value="$INFO[Skin.String(icons.diffuse)]" />
                         <param name="align" value="left" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
                         <param name="top250" value="$PARAM[top250]" />
@@ -1072,7 +1072,7 @@
                     <top>41</top>
                     <left>0</left>
                     <include content="Object_Ratings_Content" condition="Skin.HasSetting(DisableStarRating) | Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="main_fg_100" />
+                        <param name="colordiffuse" value="$INFO[Skin.String(icons.diffuse)]" />
                         <param name="align" value="left" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
                         <param name="top250" value="$PARAM[top250]" />
@@ -2348,7 +2348,7 @@
                     <left>-14</left>
                     <width>64</width>
                     <height>64</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]">flags/star10.png</texture>
+                    <texture colordiffuse="main_fg_100">flags/star10.png</texture>
                     <visible>$PARAM[numericstarrating]</visible>
                     <visible>!String.IsEmpty(ListItem.Rating)</visible>
                 </control>
@@ -2369,7 +2369,7 @@
                     <top>0</top>
                     <width>32</width>
                     <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/user_rating.png</texture>
+                    <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/user_rating.png</texture>
                     <visible>$PARAM[numericstarrating]</visible>
                     <visible>!String.IsEmpty(ListItem.UserRating)</visible>
                 </control>
