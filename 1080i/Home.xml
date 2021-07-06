@@ -24,7 +24,7 @@
     <onload condition="!Skin.HasSetting(DisableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onload>
 
     <!-- Initial setup from Skin Wizard -->
-    <onload condition="!Skin.HasSetting(HomeBasic) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeMultiVertical) + !Skin.HasSetting(HomeMultiNetflixDark) + !Skin.HasSetting(HomeMultiNetflix)">Skin.SetBool(HomeMultiNetflix)</onload>
+    <onload condition="!Skin.HasSetting(HomeBasic) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeMultiVertical) + !Skin.HasSetting(HomeMultiNetflixDark) + !Skin.HasSetting(HomeMultiNetflix) + !Skin.HasSetting(HomeMultiFlixView)">Skin.SetBool(HomeMultiNetflix)</onload>
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetString(FocusBorderSize, Bold)</onload>
     <onload condition="!Skin.HasSetting(FocusBorderSize)">Skin.SetBool(FocusBorderSize)</onload>
     <onload condition="String.IsEmpty(Skin.String(PosterHighlight))">Skin.SetString(PosterHighlight,Highlight)</onload>
