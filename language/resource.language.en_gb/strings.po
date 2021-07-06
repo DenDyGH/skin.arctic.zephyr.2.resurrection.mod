@@ -1826,7 +1826,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30100"
-msgid "Disable skin Splash on startup"
+msgid "Disable skin splash art on startup"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
