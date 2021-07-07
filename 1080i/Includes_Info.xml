@@ -178,7 +178,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="8115" />
                 <param name="groupid" value="8015" />
-                <param name="label" value="Search" />
+                <param name="label" value="$LOCALIZE[30060]" />
                 <param name="icon" value="special://skin/extras/icons/search.png" />
                 <param name="visible" value="!String.IsEmpty(ListItem.Property(tmdb_id))" />
 
@@ -191,7 +191,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="8899" />
                 <param name="groupid" value="8014" />
-                <param name="label" value="Trailer" />
+                <param name="label" value="$LOCALIZE[30102]" />
                 <param name="icon" value="special://skin/extras/icons/video.png" />
                 <param name="visible" value="!Window.IsVisible(1140) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))]" />
                 
@@ -205,7 +205,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="8150" />
                 <param name="groupid" value="8050" />
-                <param name="label" value="Cast" />
+                <param name="label" value="$LOCALIZE[30103]" />
                 <param name="icon" value="special://skin/extras/icons/person.png" />
                 <param name="visible" value="Control.IsEnabled(8150)" />
 
@@ -226,7 +226,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="7" />
                 <param name="groupid" value="8007" />
-                <param name="label" value="Rating" />
+                <param name="label" value="$LOCALIZE[30104]" />
                 <param name="icon" value="special://skin/extras/icons/userrating.png" />
                 <param name="visible" value="Control.IsEnabled(7)" />
             </include>
@@ -234,7 +234,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="8101" />
                 <param name="groupid" value="8001" />
-                <param name="label" value="Manage" />
+                <param name="label" value="$LOCALIZE[31312]"/>
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
                 <param name="visible" value="Control.IsEnabled(6) + !Skin.HasSetting(KioskMode)" />
                 <onfocus>SetProperty(FilePath,1,Home)</onfocus>
