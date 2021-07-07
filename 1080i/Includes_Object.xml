@@ -323,13 +323,14 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <!-- <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus> -->
+                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:03,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -356,13 +357,14 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <!-- <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus> -->
+                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:03,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -391,13 +393,14 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <!-- <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus> -->
+                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:03,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -427,13 +430,14 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <!-- <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus> -->
+                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:03,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -470,13 +474,14 @@
                     </control>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <!-- <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus> -->
+                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:03,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -497,13 +502,14 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <!-- <onunfocus>CancelAlarm(playtrailer,silent)</onunfocus> -->
+                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:03,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:03,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
