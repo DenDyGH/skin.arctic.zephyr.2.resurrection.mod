@@ -1,4 +1,4 @@
-# Kodi Media Center language file
+ Kodi Media Center language file
 # Addon Name: Horizon
 # Addon id: skin.horizon
 # Addon Provider: jurialmunkey
@@ -657,8 +657,8 @@ msgstr "Színátfedés"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31132"
-msgid "Use short music osd"
-msgstr "Rövid zenei osd használata"
+msgid "Use long music osd"
+msgstr "Nagyobb zenei osd használata"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31133"
@@ -928,8 +928,8 @@ msgstr "Véletlenszerű albumok"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31188"
-msgid "Automatically switch color theme based on time (Light 6am - Dark 6pm)"
-msgstr "Automata téma-színváltás (világos reggel 6-tól, sötét este 6-tól"
+msgid "Automatically switch colour theme based on time (Light 6am - Dark 6pm)"
+msgstr "Automata téma-színváltás (világos reggel 6-tól, sötét este 6-tól)"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31189"
@@ -1534,6 +1534,20 @@ msgctxt "#30040"
 msgid "Restore to defaults"
 msgstr "Alapbeállításokra visszaállít"
 
+#: /1080i/Includes_Info.xml
+msgctxt "#30041"
+msgid "Watchlist"
+msgstr "Lejátszási lista"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30042"
+msgid "Recommended"
+msgstr "Ajánlott"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30043"
+msgid "Posters"
+msgstr "Poszterek"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30044"
@@ -1804,3 +1818,18 @@ msgstr "Monokróm kiemelés engedélyezése"
 msgctxt "#30098"
 msgid "Color Highlight"
 msgstr "Színes kiemelés"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30099"
+msgid "Disable background overlay"
+msgstr "Háttér elmosás tiltása"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30100"
+msgid "Disable skin splash art on startup"
+msgstr "Felszín betöltőkép tiltása indításkor"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30101"
+msgid "Flix View | Multiple widgets"
+msgstr "Flix nézet | Többszörös widgetek"
