@@ -1833,3 +1833,18 @@ msgstr "Felszín betöltőkép tiltása indításkor"
 msgctxt "#30101"
 msgid "Flix View | Multiple widgets"
 msgstr "Flix nézet | Többszörös widgetek"
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30102"
+msgid "Trailer"
+msgstr "Bemutató"
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30103"
+msgid "Cast"
+msgstr "Stáb"
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30104"
+msgid "Rating"
+msgstr "Értékelés"
