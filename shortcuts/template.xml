@@ -300,7 +300,7 @@
                 <param name="spinner-visible" value="true" />
                 <visible>String.IsEqual(Container(301).ListItem.Property(id),$SKINSHORTCUTS[mainmenuid])</visible>
                 <onfocus>SetProperty(widgetMovementId,$PYTHON[int(id)],Home)</onfocus>
-                <animation effect="fade" start="100" end="0" time="750" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PYTHON[int(id)])">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="750" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PYTHON[int(id)]) + Skin.HasSetting(HomeMultiFlixView)">Conditional</animation>
             </include>
             <include content="Object_Widget_Spotlight" condition="!Skin.HasSetting(FixedWidgets)">
                 <param name="controltype" value="list" />
@@ -329,7 +329,7 @@
                 <visible>Integer.IsGreater(Container($PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]).NumItems,0) | Container($PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]).IsUpdating</visible>
                 <visible>String.IsEqual(Container(301).ListItem.Property(id),$SKINSHORTCUTS[mainmenuid])</visible>
                 <onfocus>SetProperty(widgetMovementId,$PYTHON[int(id)],Home)</onfocus>
-                <animation effect="fade" start="100" end="0" time="750" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PYTHON[int(id)])">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="750" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PYTHON[int(id)]) + Skin.HasSetting(HomeMultiFlixView)">Conditional</animation>
                 <!-- <movement>$SKINSHORTCUTS[widgetMovement]</movement> -->
                 <include content="Defs_AutoScroll">
                     <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets) + Integer.IsEqual(Container(3000).NumItems,1)" />
@@ -362,7 +362,7 @@
                 <visible>Integer.IsGreater(Container($PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]).NumItems,0) | Container($PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]).IsUpdating</visible>
                 <visible>String.IsEqual(Container(301).ListItem.Property(id),$SKINSHORTCUTS[mainmenuid])</visible>
                 <onfocus>SetProperty(widgetMovementId,$PYTHON[int(id)],Home)</onfocus>
-                <animation effect="fade" start="100" end="0" time="750" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PYTHON[int(id)])">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="750" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PYTHON[int(id)]) + Skin.HasSetting(HomeMultiFlixView)">Conditional</animation>
                 <!-- <movement>$SKINSHORTCUTS[widgetMovement]</movement> -->
                 <include content="Defs_AutoScroll">
                     <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets) + Integer.IsEqual(Container(3000).NumItems,1)" />
