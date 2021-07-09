@@ -388,7 +388,7 @@
                 </include>
                 <control type="grouplist">
                     <top>253.5</top>
-                    <left>43</left>
+                    <left>-43</left>
                     <bottom>-115</bottom>
                     <width>2500</width>
                     <height>99999</height>
@@ -411,7 +411,7 @@
                                 <onleft>301</onleft>
                                 <scrolltime tween="quadratic">600</scrolltime>
                                 <height>99999</height>
-                                <width>1800</width>
+                                <width>1920</width>
                                 <orientation>vertical</orientation>
                                 <itemgap>0</itemgap>
                                 <usecontrolcoords>false</usecontrolcoords>
@@ -587,21 +587,21 @@
                     </control>
                 </focusedlayout>
 
-                <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
+                <itemlayout width="150" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
                     <control type="image">
                         <centertop>53%</centertop>
                         <height>64</height>
-                        <right>0</right>
+                        <right>72</right>
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
                         <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
                     </control>
                 </itemlayout>
-                <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
+                <focusedlayout width="150" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
                     <control type="image">
                         <centertop>53%</centertop>
                         <height>64</height>
-                        <right>0</right>
+                        <right>72</right>
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
                         <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>

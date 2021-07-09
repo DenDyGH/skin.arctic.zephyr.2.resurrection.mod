@@ -266,7 +266,7 @@
         <param name="diffuse" default="diffuse/poster-wall.png" />
         <definition>
             <control type="group">
-                <right>10</right>
+                <right>-12</right>
                 <control type="group">
                     <height>$PARAM[iconheight]</height>
                     <include condition="$PARAM[circle]" content="View_51_Wall_Circle">
