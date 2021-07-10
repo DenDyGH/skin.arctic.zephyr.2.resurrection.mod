@@ -509,6 +509,43 @@
                 <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
             </control>
 
+            <control type="group">
+                <top>0</top>
+                <left>32</left>
+                <height>200</height>
+                <control type="image">
+                    <top>78</top>
+                    <width>92</width>
+                    <height>92</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$INFO[System.ProfileThumb]</texture>
+                    <visible>Control.HasFocus(301) | Control.IsVisible(301)</visible>
+                </control>
+                <control type="label">
+                    <left>108</left>
+                    <label>$INFO[System.ProfileName]</label>
+                    <font>font_title</font>
+                    <visible>Control.HasFocus(301) | Control.IsVisible(301)</visible>
+                </control>
+                <control type="button" id="303">
+                    <top>120</top>
+                    <left>80</left>
+                    <onup>301</onup>
+                    <ondown>301</ondown>
+                    <align>left</align>
+                    <font>font_tiny</font>
+                    <label>$LOCALIZE[30105]</label>
+                    <onclick>Skin.SetString(profileName)</onclick>
+                    <onclick condition="!String.IsEmpty(Skin.String(profileName))">LoadProfile($INFO[Skin.String(profileName)])</onclick>
+                    <focusedcolor>$VAR[Defs_Settings_ToggleButton_Text]</focusedcolor>
+                    <texturefocus />
+                    <alttexturefocus />
+                    <texturefocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white-gradient.png</texturefocus>
+                    <alttexturefocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white-gradient.png</alttexturefocus>
+                    <visible>Control.IsVisible(301)</visible>
+                </control>
+            </control>
+
             <control type="panel" id="301">
                 <visible allowhiddenfocus="true">![Control.HasFocus(302) | Control.HasFocus(3002)]</visible>
                 <include>Animation_Left</include>
@@ -526,9 +563,11 @@
                 <onright condition="!String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">3000</onright>
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Settings)">5000</onright>
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">6000</onright>
-                <top>193.5</top>
+                <top>293</top>
+                <left>62</left>
                 <width>257.14</width>
                 <height>787</height>
+                <onup>303</onup>
                 <orientation>vertical</orientation>
                 <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                     <control type="label">

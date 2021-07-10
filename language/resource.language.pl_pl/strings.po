@@ -1798,3 +1798,23 @@ msgstr "Wyłącz ekran ładowania skórki"
 msgctxt "#30101"
 msgid "Flix View | Multiple widgets"
 msgstr "Widok Flix | Wiele widgetów"
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30102"
+msgid "Trailer"
+msgstr ""
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30103"
+msgid "Cast"
+msgstr "Obsada"
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30104"
+msgid "Rating"
+msgstr "Ocena"
+
+#: /1080i/Includes_Home.xml
+msgctxt "#30105"
+msgid "Switch Profile"
+msgstr "Zmień Profil"

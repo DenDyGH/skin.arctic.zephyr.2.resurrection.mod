@@ -1848,3 +1848,8 @@ msgstr ""
 msgctxt "#30104"
 msgid "Rating"
 msgstr ""
+
+#: /1080i/Includes_Home.xml
+msgctxt "#30105"
+msgid "Switch Profile"
+msgstr ""
