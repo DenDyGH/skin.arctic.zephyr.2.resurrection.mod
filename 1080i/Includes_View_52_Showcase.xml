@@ -250,11 +250,15 @@
                     </control>
                 </control>
                 <include>Flix_Object_Info_Line</include>
-                <include>Flix_Object_Info_Ratings</include>
                 <include content="Flix_Object_Info_Plot">
                     <param name="maxheight" value="$PARAM[plotheight]" />
                     <param name="shadowcolor" value="ff000000" />
                 </include>
+            </control>
+            <control type="group">
+                <width>1770</width>
+                <top>412.5</top>
+                <include>Flix_Object_Info_Ratings</include>
             </control>
         </definition>
     </include>
