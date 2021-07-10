@@ -414,7 +414,7 @@
                                 <height>99999</height>
                                 <width>1920</width>
                                 <orientation>vertical</orientation>
-                                <itemgap>-18</itemgap>
+                                <itemgap>-12</itemgap>
                                 <usecontrolcoords>false</usecontrolcoords>
 
                                 <animation effect="slide" end="0,-390" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,2">Conditional</animation>
