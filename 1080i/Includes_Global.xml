@@ -191,7 +191,7 @@
         </control>
 
         <include>Object_NowPlaying</include>
-        <include>Object_Codecs</include>
+        <include condition="!Skin.HasSetting(HomeMultiFlixView)">Object_Codecs</include>
         <include>Object_Languages</include>
     </include>
 
