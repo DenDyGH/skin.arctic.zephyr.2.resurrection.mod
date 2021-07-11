@@ -387,9 +387,9 @@
                     <param name="animation" value="Defs_Null" />
                 </include>
                 <control type="grouplist">
-                    <top>412.5</top>
-                    <left>43</left>
-                    <bottom>-115</bottom>
+                    <top>392.5</top>
+                    <left>0</left>
+                    <!-- <bottom>0</bottom> -->
                     <width>2500</width>
                     <height>99999</height>
                     <orientation>horizontal</orientation>
@@ -417,16 +417,16 @@
                                 <itemgap>-12</itemgap>
                                 <usecontrolcoords>false</usecontrolcoords>
 
-                                <animation effect="slide" end="0,-390" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,2">Conditional</animation>
-                                <animation effect="slide" end="0,-190" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>
-                                <animation effect="slide" end="0,-190" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,4)">Conditional</animation>
-                                <animation effect="slide" end="0,-200" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,5)">Conditional</animation>
-                                <animation effect="slide" end="0,-200" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,6)">Conditional</animation>
-                                <animation effect="slide" end="0,-190" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,7)">Conditional</animation>
-                                <animation effect="slide" end="0,-190" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,8)">Conditional</animation>
-                                <animation effect="slide" end="0,-190" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,9)">Conditional</animation>
-                                <animation effect="slide" end="0,-190" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,10)">Conditional</animation>
-                                <animation effect="slide" end="0,-190" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,11)">Conditional</animation>
+                                <animation effect="slide" end="0,-400" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,2">Conditional</animation>
+                                <animation effect="slide" end="0,-220" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>
+                                <animation effect="slide" end="0,-195" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,4)">Conditional</animation>
+                                <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,5)">Conditional</animation>
+                                <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,6)">Conditional</animation>
+                                <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,7)">Conditional</animation>
+                                <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,8)">Conditional</animation>
+                                <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,9)">Conditional</animation>
+                                <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,10)">Conditional</animation>
+                                <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,11)">Conditional</animation>
 
                                 <control type="group" id="7999">
                                     <height>0</height>
@@ -453,7 +453,7 @@
             <visible>![String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]]</visible>
             <height>680</height>
             <top>2.5</top>
-            <left>132.5</left>
+            <left>102.5</left>
             <right>15</right>
             <bottom>432.5</bottom>
             <control type="group">
@@ -603,7 +603,7 @@
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
                         <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
-                        <animation effect="slide" start="0" end="484" time="200" reversible="false" condition="ControlGroup(3000).HasFocus()">Conditional</animation>
+                        <animation effect="slide" start="0" end="444" time="200" reversible="false" condition="ControlGroup(3000).HasFocus()">Conditional</animation>
                     </control>
                     <control type="label">
                         <left>80</left>
