@@ -522,13 +522,14 @@
                     <visible>Control.HasFocus(301) | Control.IsVisible(301)</visible>
                 </control>
                 <control type="label">
+                    <top>25</top>
                     <left>108</left>
                     <label>$INFO[System.ProfileName]</label>
                     <font>font_title</font>
                     <visible>Control.HasFocus(301) | Control.IsVisible(301)</visible>
                 </control>
                 <control type="button" id="303">
-                    <top>120</top>
+                    <top>100</top>
                     <left>80</left>
                     <onup>301</onup>
                     <ondown>301</ondown>

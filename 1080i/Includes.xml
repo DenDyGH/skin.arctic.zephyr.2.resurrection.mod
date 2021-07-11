@@ -21,7 +21,7 @@
     <include file="Includes_Items.xml" />
     <include file="Includes_Images.xml" />
     <include file="Includes_Labels.xml" />
-<!--    <include file="Includes_NextAired.xml" /> -->
+    <!--    <include file="Includes_NextAired.xml" /> -->
     <include file="Includes_Object.xml" />
     <include file="Includes_Variable_Object.xml" />
     <include file="Includes_OSD.xml" />
@@ -102,9 +102,9 @@
     </include>
 
     <include name="Dimensions_TrailerScreen">
-        <top>-80</top>
-        <right>0</right>
+        <top>-100</top>
+        <right>-20</right>
         <width>1520</width>
-        <height>825</height>
+        <height>925</height>
     </include>
 </includes>
