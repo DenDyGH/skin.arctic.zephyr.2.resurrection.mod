@@ -231,6 +231,7 @@
             <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
             <visible>!Window.IsVisible(DialogNotification.xml)</visible>
             <visible>![$EXP[Exp_InfoVisible] + !String.IsEmpty(Window(Home).Property(FilePath))]</visible>
+            <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
             <include>Animation_FadeIn_Delay</include>
             <include>Animation_FadeOut</include>
             <include content="Dialog_Notification_Group">
@@ -328,9 +329,9 @@
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -362,9 +363,9 @@
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -398,9 +399,9 @@
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -435,9 +436,9 @@
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -479,9 +480,9 @@
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -507,9 +508,9 @@
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
