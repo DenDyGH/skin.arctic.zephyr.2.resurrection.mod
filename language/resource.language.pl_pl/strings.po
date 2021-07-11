@@ -1823,3 +1823,8 @@ msgstr "Zmień Profil"
 msgctxt "#30106"
 msgid "Match"
 msgstr "Trafność"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30107"
+msgid "Play Trailer in background in Flix View"
+msgstr "Odtwarzaj zwiastun w tle w widoku Flix"
