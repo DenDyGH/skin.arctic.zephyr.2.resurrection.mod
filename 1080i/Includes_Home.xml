@@ -388,7 +388,7 @@
                 </include>
                 <control type="grouplist">
                     <top>412.5</top>
-                    <left>-43</left>
+                    <left>43</left>
                     <bottom>-115</bottom>
                     <width>2500</width>
                     <height>99999</height>
@@ -469,7 +469,7 @@
             </control>
         </control>
         <control type="group">
-            <animation effect="slide" start="0" end="-714" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100)">Conditional</animation>
+            <animation effect="slide" start="0" end="-514" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100)">Conditional</animation>
             <animation effect="slide" start="0" end="-380" time="200" condition="Control.HasFocus(6000)">Conditional</animation>
             <control type="group">
                 <include>Animation_Right</include>
@@ -480,7 +480,7 @@
                     <include>Weather</include>
                 </control>
                 <control type="group">
-                    <animation effect="slide" start="0" end="714" time="0" condition="true">Conditional</animation>
+                    <animation effect="slide" start="0" end="514" time="0" condition="true">Conditional</animation>
                     <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)</visible>
                     <include content="View_Settings">
                         <param name="hideonwindowopen" value="false" />
@@ -511,7 +511,7 @@
 
             <control type="group">
                 <top>0</top>
-                <left>32</left>
+                <left>64</left>
                 <height>200</height>
                 <control type="image">
                     <top>78</top>
@@ -526,6 +526,7 @@
                     <left>108</left>
                     <label>$INFO[System.ProfileName]</label>
                     <font>font_title</font>
+                    <textcolor>main_fg_100</textcolor>
                     <visible>Control.HasFocus(301) | Control.IsVisible(301)</visible>
                 </control>
                 <control type="button" id="303">
@@ -561,7 +562,7 @@
                 <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(widgetAspect,$INFO[Container(301).ListItem.Property(widgetAspect)],home)</onleft>
                 <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">ActivateWindow(1135)</onleft>
                 <onleft condition="Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetFocus(302,0)</onleft>
-                <animation effect="fade" start="100" end="0" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100) | Control.HasFocus(6000)">Conditional</animation>
+                <!-- <animation effect="fade" start="100" end="0" time="200" condition="ControlGroup(3000).HasFocus() | Control.HasFocus(5000) | Control.HasFocus(5100) | Control.HasFocus(6000)">Conditional</animation> -->
                 <onright condition="!String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">3000</onright>
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Settings)">5000</onright>
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">6000</onright>
@@ -577,7 +578,7 @@
                         <font>font_topbar_small</font>
                         <align>right</align>
                         <aligny>center</aligny>
-                        <textcolor>main_fg_30</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
@@ -592,25 +593,26 @@
                     </control>
                 </focusedlayout>
 
-                <itemlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
+                <itemlayout width="714" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                     <control type="image">
                         <centertop>53%</centertop>
                         <height>64</height>
                         <left>0</left>
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
-                        <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
+                        <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
+                        <animation effect="slide" start="0" end="484" time="200" reversible="false" condition="ControlGroup(3000).HasFocus()">Conditional</animation>
                     </control>
                     <control type="label">
                         <left>80</left>
                         <font>font_topbar_small</font>
                         <align>left</align>
                         <aligny>center</aligny>
-                        <textcolor>main_fg_30</textcolor>
+                        <textcolor>main_fg_100</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout width="257.14" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
+                <focusedlayout width="714" height="item_list_height" condition="Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                     <control type="image">
                         <centertop>53%</centertop>
                         <height>64</height>
