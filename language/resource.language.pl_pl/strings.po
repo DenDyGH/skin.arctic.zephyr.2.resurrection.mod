@@ -1828,3 +1828,8 @@ msgstr "Trafność"
 msgctxt "#30107"
 msgid "Play Trailer in background in Flix View"
 msgstr "Odtwarzaj zwiastun w tle w widoku Flix"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30108"
+msgid "Disable profile info in narrow menu"
+msgstr "Wyłącz informacje o profilu w wysuwanym menu"

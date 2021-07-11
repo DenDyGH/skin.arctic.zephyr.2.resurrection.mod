@@ -513,6 +513,7 @@
                 <top>0</top>
                 <left>64</left>
                 <height>200</height>
+                <visible>!Skin.HasSetting(DisabledProfileInfo)</visible>
                 <control type="image">
                     <top>78</top>
                     <width>92</width>

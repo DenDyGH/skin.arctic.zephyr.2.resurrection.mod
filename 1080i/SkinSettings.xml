@@ -415,6 +415,15 @@
                         <onclick>Skin.ToggleSetting(DisplaySplashOnStartup)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="19112" description="Disable profile info in main menu">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[30108]</label>
+                        <enable>Skin.HasSetting(HomeMultiFlixView)</enable>
+                        <selected>Skin.HasSetting(DisabledProfileInfo)</selected>
+                        <onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
+                    </control>
+
                     <!-- ========== -->
                     <!-- Background -->
                     <!-- ========== -->
