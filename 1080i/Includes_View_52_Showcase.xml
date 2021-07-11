@@ -257,7 +257,7 @@
             </control>
             <control type="group">
                 <width>1770</width>
-                <top>412.5</top>
+                <top>572.5</top>
                 <include>Flix_Object_Info_Ratings</include>
             </control>
         </definition>
