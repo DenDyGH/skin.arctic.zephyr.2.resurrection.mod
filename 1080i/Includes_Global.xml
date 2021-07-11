@@ -169,6 +169,11 @@
                 <width>1920</width>
                 <aspectratio>scale</aspectratio>
                 <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+
+                <animation effect="fade" start="45" end="15" reversible="false" condition="[!Window.IsVisible(Home.xml) | Window.IsVisible(DialogVideoInfo.xml)] + !Skin.HasSetting(DisableBackgroundOverlay) + [Skin.HasSetting(EnableBlur) | ![[!Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]]">Conditional</animation>
+                <animation effect="fade" start="60" end="45" reversible="false" condition="[!Window.IsVisible(Home.xml) | Window.IsVisible(DialogVideoInfo.xml)] + !Skin.HasSetting(DisableBackgroundOverlay) + [!Skin.HasSetting(EnableBlur) | [!Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation>
+                <animation effect="fade" start="10" end="30" reversible="false" condition="[!Window.IsVisible(Home.xml) | Window.IsVisible(DialogVideoInfo.xml)] + !Skin.HasSetting(DisableBackgroundOverlay) + Skin.HasSetting(DisableBlur)">Conditional</animation>
+
                 <fadetime>600</fadetime>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
@@ -186,7 +191,7 @@
                 <imagepath background="true">common/vignette-flix-basic.png</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <visible>Skin.HasSetting(HomeMultiFlixView) + !String.IsEmpty(ListItem.Art(fanart))</visible>
+                <visible>Skin.HasSetting(HomeMultiFlixView) + !String.IsEmpty(ListItem.Art(fanart)) + Window.IsVisible(Home.xml)</visible>
             </control>
         </control>
 
