@@ -536,8 +536,9 @@
                     <align>left</align>
                     <font>font_tiny</font>
                     <label>$LOCALIZE[30105]</label>
-                    <onclick>Skin.SetString(profileName)</onclick>
-                    <onclick condition="!String.IsEmpty(Skin.String(profileName))">LoadProfile($INFO[Skin.String(profileName)])</onclick>
+                    <onclick>ActivateWindow(LoginScreen.xml)</onclick>
+                    <!-- <onclick>Skin.SetString(profileName)</onclick> -->
+                    <!-- <onclick condition="!String.IsEmpty(Skin.String(profileName))">LoadProfile($INFO[Skin.String(profileName)])</onclick> -->
                     <focusedcolor>$VAR[Defs_Settings_ToggleButton_Text]</focusedcolor>
                     <texturefocus />
                     <alttexturefocus />
