@@ -256,7 +256,7 @@
                 </include>
                 <control type="group">
                     <top>48</top>
-                    <left>24</left>
+                    <!-- <left>24</left> -->
                     <control type="image">
                         <width>64</width>
                         <texture background="true" colordiffuse="ffa90007">common/circle.png</texture>

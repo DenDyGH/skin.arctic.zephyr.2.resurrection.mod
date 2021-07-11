@@ -1818,3 +1818,8 @@ msgstr "Ocena"
 msgctxt "#30105"
 msgid "Switch Profile"
 msgstr "Zmień Profil"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#30106"
+msgid "Match"
+msgstr "Trafność"

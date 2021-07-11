@@ -1170,12 +1170,14 @@
         <param name="divider" default="true" />
         <param name="visible" default="true" />
         <param name="fallback" default="" />
+        <param name="font" default="font13" />
         <definition>
             <control type="label">
                 <width>auto</width>
                 <label>  |  </label>
                 <height>40</height>
                 <aligny>top</aligny>
+                <font>$PARAM[font]</font>
                 <textcolor>$VAR[ColorHighlight]</textcolor>
                 <include content="Object_Variable_Font">
                     <param name="std" value="font_small" />
@@ -1192,6 +1194,7 @@
                 <label fallback="$PARAM[fallback]">$PARAM[label]</label>
                 <height>40</height>
                 <aligny>top</aligny>
+                <font>$PARAM[font]</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
                 <include content="Object_Variable_Font">
                     <param name="std" value="font_small" />
@@ -1262,15 +1265,23 @@
                 <!-- First Items -->
                 <!-- Set a fallback so divider is not first item if blank -->
                 <include content="Flix_Object_Info_Line_Label">
-                    <param name="label" value="$INFO[$PARAM[container]ListItem.Year]" />
+                    <param name="label" value="$VAR[Def_Percentage_Rating]% $LOCALIZE[30106]   " />
+                    <param name="font" value="font_title_mini" />
                     <param name="textcolor" value="$PARAM[green]" />
                     <param name="divider" value="false" />
                     <param name="fallback" value="N/A" />
                     <param name="visible" value="!String.IsEqual($PARAM[container]ListItem.DBType,set) + !String.IsEqual($PARAM[container]ListItem.DBType,artist) + !String.IsEqual($PARAM[container]ListItem.DBType,album) + !String.IsEqual($PARAM[container]ListItem.DBType,song) + [!String.IsEqual($PARAM[container]ListItem.DBType,episode) | String.IsEmpty($PARAM[container]ListItem.Premiered)]" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
+                    <param name="label" value="$INFO[$PARAM[container]ListItem.Year]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="divider" value="false" />
+                    <param name="fallback" value="N/A" />
+                    <param name="visible" value="!String.IsEqual($PARAM[container]ListItem.DBType,set) + !String.IsEqual($PARAM[container]ListItem.DBType,artist) + !String.IsEqual($PARAM[container]ListItem.DBType,album) + !String.IsEqual($PARAM[container]ListItem.DBType,song) + [!String.IsEqual($PARAM[container]ListItem.DBType,episode) | String.IsEmpty($PARAM[container]ListItem.Premiered)]" />
+                </include>
+                <include content="Flix_Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Premiered]" />
-                    <param name="textcolor" value="$PARAM[green]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
                     <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,episode) + !String.IsEmpty($PARAM[container]ListItem.Premiered)" />
