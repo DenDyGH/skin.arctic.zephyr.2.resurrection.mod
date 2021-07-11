@@ -10,6 +10,30 @@
         </control>
     </include>
 
+    <include name="Flix_Global_Videowindow">
+        <control type="image" description="Background">
+            <include>Dimensions_TrailerScreen</include>
+            <texture colordiffuse="black">common/white.png</texture>
+            <visible>Player.HasVideo</visible>
+        </control>
+        <control type="videowindow">
+            <visible>Player.HasVideo</visible>
+            <include>Dimensions_TrailerScreen</include>
+        </control>
+        <!-- <control type="image" description="Background">
+            <include>Dimensions_TrailerScreen</include>
+            <texture colordiffuse="HomePanel">common/bg.jpg</texture>
+            <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [Skin.HasSetting(HomeMulti) | $EXP[Exp_InfoVisible]]]</visible>
+        </control> -->
+    </include>
+
+    <include name="Flix_Global_Videowindow_Hidden">
+        <control type="videowindow">
+            <visible>Player.HasVideo</visible>
+            <include>Dimensions_TrailerScreen</include>
+        </control>
+    </include>
+
     <include name="Global_Videowindow">
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
@@ -32,11 +56,11 @@
             <include>Dimensions_Fullscreen</include>
         </control>
     </include>
-    
+
     <include name="Global_Visualisation">
         <control type="group">
             <visible>String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Player.HasAudio</visible>
-            
+
             <control type="visualisation">
                 <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [Skin.HasSetting(ArtistSlideShow.Disabled)]]</visible>
                 <description>visualisation</description>
@@ -44,7 +68,7 @@
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
             </control>
-            
+
             <control type="multiimage">
                 <aspectratio>scale</aspectratio>
                 <include>Dimensions_Fullscreen</include>
@@ -74,8 +98,8 @@
             <imagepath background="true">$VAR[Global_Background_ImageBlur_Var]</imagepath>
             <visible>!Skin.HasSetting(DisableBlur)</visible>
         </control>
-        <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
-        <include condition="!Skin.HasSetting(global.showvideo)">Global_Videowindow_Hidden</include>
+        <include condition="Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView)">Global_Videowindow</include>
+        <include condition="!Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView)">Global_Videowindow_Hidden</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
         <control type="group">
             <visible>$EXP[Exp_GlobalBackground]</visible>
@@ -96,8 +120,9 @@
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <visible>!Skin.HasSetting(HomeMultiNetflixDark)</visible>
+                <visible>!Skin.HasSetting(HomeMultiNetflixDark) | !Skin.HasSetting(HomeMultiFlixView)</visible>
             </control>
+
             <control type="multiimage">
                 <include>Defs_TimePerImage</include>
                 <randomize>true</randomize>
@@ -125,7 +150,7 @@
                 <fadetime>600</fadetime>
                 <!-- <animation effect="fade" start="45" end="15" reversible="false" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(Settings.xml) | Window.IsActive(AddonBrowser.xml)">Conditional</animation> -->
                 <!-- <animation effect="fade" start="60" end="45" reversible="false" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(Settings.xml) | Window.IsActive(AddonBrowser.xml)">Conditional</animation> -->
-                
+
                 <!-- <animation effect="fade" start="10" end="30" reversible="true" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(Settings.xml) | Window.IsActive(AddonBrowser.xml)">Conditional</animation> -->
                 <imagepath background="true">common/vignette-nf.png</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
@@ -134,8 +159,45 @@
             </control>
 
         </control>
+
+        <include condition="Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView)">Flix_Global_Videowindow</include>
+        <include condition="!Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView)">Flix_Global_Videowindow_Hidden</include>
+
+        <control type="group">
+            <control type="multiimage">
+                <include>Defs_TimePerImage</include>
+                <randomize>true</randomize>
+                <width>1920</width>
+                <aspectratio>scale</aspectratio>
+                <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+
+                <animation effect="fade" start="45" end="15" reversible="false" condition="[!Window.IsVisible(Home.xml) | Window.IsVisible(DialogVideoInfo.xml)] + !Skin.HasSetting(DisableBackgroundOverlay) + [Skin.HasSetting(EnableBlur) | ![[!Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]]">Conditional</animation>
+                <animation effect="fade" start="60" end="45" reversible="false" condition="[!Window.IsVisible(Home.xml) | Window.IsVisible(DialogVideoInfo.xml)] + !Skin.HasSetting(DisableBackgroundOverlay) + [!Skin.HasSetting(EnableBlur) | [!Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation>
+                <animation effect="fade" start="10" end="30" reversible="false" condition="[!Window.IsVisible(Home.xml) | Window.IsVisible(DialogVideoInfo.xml)] + !Skin.HasSetting(DisableBackgroundOverlay) + Skin.HasSetting(DisableBlur)">Conditional</animation>
+
+                <fadetime>600</fadetime>
+                <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>Skin.HasSetting(HomeMultiFlixView) + !Player.HasVideo + !String.IsEmpty(ListItem.Art(fanart))</visible>
+            </control>
+            <control type="multiimage">
+                <include>Defs_TimePerImage</include>
+                <randomize>true</randomize>
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>scale</aspectratio>
+                <include condition="!Skin.HasSetting(DisableBlur)">Defs_Global_Fade_Blur</include>
+                <fadetime>600</fadetime>
+                <imagepath background="true">common/vignette-flix-basic.png</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>Skin.HasSetting(HomeMultiFlixView) + !String.IsEmpty(ListItem.Art(fanart)) + Window.IsVisible(Home.xml)</visible>
+            </control>
+        </control>
+
         <include>Object_NowPlaying</include>
-        <include>Object_Codecs</include>
+        <include condition="!Skin.HasSetting(HomeMultiFlixView)">Object_Codecs</include>
         <include>Object_Languages</include>
     </include>
 
@@ -207,7 +269,7 @@
         <value condition="Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [String.IsEqual(Container(9989).ListItem.Property(list),Settings) | String.IsEqual(Container(301).ListItem.Property(widget),Settings)]">$VAR[Global_Background_Image_NoFanart]</value>
 
         <!-- Weather -->
-        <value condition="[Window.IsVisible(weather) | [Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti) + String.IsEqual(Container(301).ListItem.Property(widget),Weather)] | [Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [Control.HasFocus(9999) | String.IsEqual(Container(9989).ListItem.Property(list),Weather)]]] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,/]</value>    
+        <value condition="[Window.IsVisible(weather) | [Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti) + String.IsEqual(Container(301).ListItem.Property(widget),Weather)] | [Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [Control.HasFocus(9999) | String.IsEqual(Container(9989).ListItem.Property(list),Weather)]]] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,/]</value>
 
 
         <!-- Fanart -->
@@ -217,7 +279,7 @@
         <value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container.Property(Fanart_Image))">$INFO[Container.Property(Fanart_Image)]</value>
         <value condition="!String.IsEmpty(Container.Property(Fanart))">$INFO[Container.Property(Fanart)]</value>
-        
+
         <!-- Home Fanart Widgets -->
         <value condition="!String.IsEmpty(Container.ListItem.Art(fanart)) + Window.IsVisible(Home)">$INFO[Container.ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container.ListItem.Property(Fanart_Image)) + Window.IsVisible(Home)">$INFO[Container.ListItem.Property(Fanart_Image)]</value>

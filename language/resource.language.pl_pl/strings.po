@@ -1793,3 +1793,38 @@ msgstr "Wyłącz nakładkę na tło"
 msgctxt "#30100"
 msgid "Disable skin splash art on startup"
 msgstr "Wyłącz ekran ładowania skórki"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30101"
+msgid "Flix View | Multiple widgets"
+msgstr "Widok Flix | Wiele widgetów"
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30102"
+msgid "Trailer"
+msgstr ""
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30103"
+msgid "Cast"
+msgstr "Obsada"
+
+#: /1080i/Includes_Info.xml
+msgctxt "#30104"
+msgid "Rating"
+msgstr "Ocena"
+
+#: /1080i/Includes_Home.xml
+msgctxt "#30105"
+msgid "Switch Profile"
+msgstr "Zmień Profil"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#30106"
+msgid "Match"
+msgstr "Trafność"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30107"
+msgid "Play Trailer in background in Flix View"
+msgstr "Odtwarzaj zwiastun w tle w widoku Flix"

@@ -73,6 +73,7 @@
     </variable>
 
     <variable name="Label_SkinSettings_HomeLayout">
+        <value condition="Skin.HasSetting(HomeMultiFlixView)">$LOCALIZE[30101]</value>
         <value condition="Skin.HasSetting(HomeMultiNetflix)">$LOCALIZE[30079]</value>
         <value condition="Skin.HasSetting(HomeMultiNetflixDark)">$LOCALIZE[30080]</value>
         <value condition="Skin.HasSetting(HomeMultiVertical)">$LOCALIZE[30051]</value>
