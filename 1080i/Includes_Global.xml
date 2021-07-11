@@ -14,6 +14,7 @@
         <control type="image" description="Background">
             <include>Dimensions_TrailerScreen</include>
             <texture colordiffuse="black">common/white.png</texture>
+            <visible>Player.HasVideo</visible>
         </control>
         <control type="videowindow">
             <visible>Player.HasVideo</visible>

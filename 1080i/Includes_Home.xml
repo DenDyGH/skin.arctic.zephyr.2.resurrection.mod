@@ -534,6 +534,8 @@
                     <left>80</left>
                     <onup>301</onup>
                     <ondown>301</ondown>
+                    <onleft>3000</onleft>
+                    <onright>3000</onright>
                     <align>left</align>
                     <font>font_tiny</font>
                     <label>$LOCALIZE[30105]</label>
