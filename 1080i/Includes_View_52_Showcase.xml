@@ -254,6 +254,30 @@
                     <param name="maxheight" value="$PARAM[plotheight]" />
                     <param name="shadowcolor" value="ff000000" />
                 </include>
+                <control type="group">
+                    <top>48</top>
+                    <left>24</left>
+                    <control type="image">
+                        <width>64</width>
+                        <texture background="true" colordiffuse="ffa90007">common/circle.png</texture>
+                        <visible>!String.IsEmpty(ListItem.Studio)</visible>
+                    </control>
+                    <control type="image">
+                        <top>2</top>
+                        <left>2</left>
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="ff000000">special://skin/extras/icons/director.png</texture>
+                        <visible>!String.IsEmpty(ListItem.Studio)</visible>
+                    </control>
+                    <control type="label">
+                        <left>74</left>
+                        <top>32</top>
+                        <width>680</width>
+                        <wrapmultiline>true</wrapmultiline>
+                        <label>$INFO[ListItem.Studio]</label>
+                    </control>
+                </control>
             </control>
             <control type="group">
                 <width>1770</width>
