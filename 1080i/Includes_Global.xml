@@ -160,8 +160,8 @@
 
         </control>
 
-        <include condition="Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView)">Flix_Global_Videowindow</include>
-        <include condition="!Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView)">Flix_Global_Videowindow_Hidden</include>
+        <include condition="Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Flix_Global_Videowindow</include>
+        <include condition="!Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Flix_Global_Videowindow_Hidden</include>
 
         <control type="group">
             <control type="multiimage">
@@ -192,7 +192,7 @@
                 <imagepath background="true">common/vignette-flix-basic.png</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <visible>Skin.HasSetting(HomeMultiFlixView) + !String.IsEmpty(ListItem.Art(fanart)) + Window.IsVisible(Home.xml)</visible>
+                <visible>Skin.HasSetting(HomeMultiFlixView) + [!String.IsEmpty(ListItem.Art(fanart)) | Player.HasVideo] + Window.IsVisible(Home.xml)</visible>
             </control>
         </control>
 

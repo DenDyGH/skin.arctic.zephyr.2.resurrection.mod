@@ -5,6 +5,7 @@
     <onload>ClearProperty(Header_Left_Text)</onload>
     <onload>ClearProperty(Header_Center_Text)</onload>
     <onload>ClearProperty(OSD_Menu,Home)</onload>
+    <onload condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onload>
     <onunload>ClearProperty(FilePath,home)</onunload>
     <onunload>ClearProperty(OSD_Menu,Home)</onunload>
     <onunload>ClearProperty(HasTrailer,Home)</onunload>
