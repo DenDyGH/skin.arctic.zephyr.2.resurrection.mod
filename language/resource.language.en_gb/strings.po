@@ -1873,3 +1873,8 @@ msgstr ""
 msgctxt "#30109"
 msgid "Enable zoom on hover"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30110"
+msgid "Show player tempo controls in OSD"
+msgstr ""
