@@ -1842,4 +1842,4 @@ msgstr "Włącz przybliżenie po najechaniu"
 #: /1080i/SkinSettings.xml
 msgctxt "#30110"
 msgid "Show player tempo controls in OSD"
-msgstr "Pokaż kontrolki do zmiany tempa odtwarzana na OSD"
+msgstr "Pokaż kontrolki do zmiany tempa odtwarzania na OSD"
