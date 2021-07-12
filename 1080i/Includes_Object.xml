@@ -1271,7 +1271,7 @@
                     <param name="textcolor" value="$PARAM[green]" />
                     <param name="divider" value="false" />
                     <param name="fallback" value="N/A" />
-                    <param name="visible" value="!String.IsEqual($PARAM[container]ListItem.DBType,set) + !String.IsEqual($PARAM[container]ListItem.DBType,artist) + !String.IsEqual($PARAM[container]ListItem.DBType,album) + !String.IsEqual($PARAM[container]ListItem.DBType,song) + [!String.IsEqual($PARAM[container]ListItem.DBType,episode) | String.IsEmpty($PARAM[container]ListItem.Premiered)]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Rating)" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Year]" />
