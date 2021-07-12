@@ -260,7 +260,7 @@
         <param name="iconheight" default="item_icon_height" />
         <param name="icononlyheight" default="100%" />
         <param name="labelinclude" default="View_51_Wall_Label" />
-        <param name="aspectratio" default="keep" />
+        <param name="aspectratio" default="scale" />
         <param name="clearlogo" default="false" />
         <param name="circle" default="false" />
         <param name="diffuse" default="diffuse/poster-wall.png" />
