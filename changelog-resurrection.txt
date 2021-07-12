@@ -1,3 +1,14 @@
+0.6.1
+    - option to enable/disable player tempo controls in OSD
+    - fix for percentage rating visibility
+    - added genre to be displayed in Flix View when there is no info about studio
+    - fix for properly displaying posters in widgets
+    - disabled background playing for DialogVideoInfo in Flix View
+    - added option to enable/disable zoom on hover
+    - (as I promised) thanks to @onlytanmoy for his testing!
+0.6.0
+    - introducing new Flix View layout
+    - updated language strings
 0.5.7
     - fixed critical bootloop after first install
 0.5.6
