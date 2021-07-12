@@ -1868,3 +1868,8 @@ msgstr ""
 msgctxt "#30108"
 msgid "Disable profile info in narrow menu"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30109"
+msgid "Enable zoom on hover"
+msgstr ""
