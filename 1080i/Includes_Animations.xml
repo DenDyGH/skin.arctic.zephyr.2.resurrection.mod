@@ -41,7 +41,7 @@
     </include>
 
     <include name="Animation_Common">
-        <animation type="WindowOpen" reversible="false"  condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(SettingsSystemInfo.xml) + !Window.Previous(SkinSettings.xml) + !Window.Previous(SettingsProfile.xml) + !Window.Previous(eventlog)">
+        <animation type="WindowOpen" reversible="false" condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(SettingsSystemInfo.xml) + !Window.Previous(SkinSettings.xml) + !Window.Previous(SettingsProfile.xml) + !Window.Previous(eventlog)">
             <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
             <effect type="zoom" start="50" end="100" time="300" center="auto" tween="quadratic" easing="out" />
         </animation>
@@ -49,7 +49,7 @@
             <effect type="fade" end="0" start="100" time="200" tween="sine" easing="out" />
             <effect type="zoom" end="75" start="100" time="200" center="auto" tween="quadratic" easing="in" />
         </animation>
-        
+
         <animation type="Visible" reversible="false">
             <effect type="fade" start="0" end="100" time="300" delay="300" tween="sine" easing="in" />
             <effect type="zoom" start="115" end="100" time="300" delay="300" center="auto" tween="sine" easing="out" />
@@ -75,9 +75,9 @@
             <effect type="fade" start="0" end="100" time="300" />
         </animation>
         <animation type="WindowClose" reversible="false" condition="![[Control.HasFocus(302) | Control.HasFocus(5610)] + Control.IsVisible(302) + String.IsEqual(Window(Home).Property(TMDbHelper.WidgetContainer),5610)]">
-            <effect type="fade" end="0" start="100" time="300"  />
+            <effect type="fade" end="0" start="100" time="300" />
         </animation>
-        
+
         <animation type="Visible" reversible="false">
             <effect type="fade" start="0" end="100" time="300" delay="300" tween="sine" easing="in" />
             <effect type="zoom" start="115" end="100" time="300" delay="300" center="auto" tween="sine" easing="out" />
@@ -98,7 +98,7 @@
             <effect type="fade" end="0" start="100" time="200" tween="sine" easing="out" />
             <effect type="zoom" end="75" start="100" time="200" center="auto" tween="quadratic" easing="in" />
         </animation>
-        
+
         <animation type="Visible" reversible="false">
             <effect type="fade" start="0" end="100" time="300" delay="400" tween="sine" easing="in" />
             <effect type="zoom" start="115" end="100" time="300" delay="400" center="auto" tween="sine" easing="out" />
@@ -251,6 +251,28 @@
     <include name="Animation_FadeOut">
         <animation effect="fade" end="0" start="100" time="150">Hidden</animation>
         <animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
+    </include>
+
+    <include name="Animation_Flix_Widget_Slide">
+        <animation effect="slide" end="0,-400" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,2">Conditional</animation>
+        <animation effect="slide" end="0,-220" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>
+        <animation effect="slide" end="0,-195" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,4)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,5)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,6)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,7)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,8)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,9)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,10)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,11)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,12)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,13)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,14)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,15)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,16)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,17)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,18)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,19)">Conditional</animation>
+        <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,20)">Conditional</animation>
     </include>
 
 </includes>
