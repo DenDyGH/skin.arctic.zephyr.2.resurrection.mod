@@ -1,3 +1,11 @@
+0.6.2
+    - added option to set delay to playing trailers in Flix View
+    - added spanish language (thanks to @AudigierSanchez)
+    - increased limit of widgets to slide in Flix View
+    - show clearlogo in home simple layout only when enabled
+    - changed name from "Netflix Style" to "Modern" in home layouts
+    - enabled busy spinner for loading widgets in Flix View
+    - fixed movement through settings up and down
 0.6.1
     - option to enable/disable player tempo controls in OSD
     - fix for percentage rating visibility
