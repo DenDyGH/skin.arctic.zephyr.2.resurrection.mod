@@ -1721,12 +1721,12 @@ msgstr ""
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30079"
-msgid "Netflix style | Multiple widgets"
+msgid "Modern | Multiple widgets"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30080"
-msgid "Netflix style (dark) | Multiple widgets"
+msgid "Modern (dark) | Multiple widgets"
 msgstr ""
 
 #: /1080i/Includes_Labels.xml

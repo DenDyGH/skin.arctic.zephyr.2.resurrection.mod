@@ -1686,13 +1686,13 @@ msgstr "Zakończono initializowanie skórki"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30079"
-msgid "Netflix style | Multiple widgets"
-msgstr "Styl Netfliksowy | Wiele widgetów"
+msgid "Modern | Multiple widgets"
+msgstr "Modern | Wiele widgetów"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30080"
-msgid "Netflix style (dark) | Multiple widgets"
-msgstr "Styl Netfliksowy (ciemny) | Wiele widgetów"
+msgid "Modern (dark) | Multiple widgets"
+msgstr "Modern (ciemny) | Wiele widgetów"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30081"
