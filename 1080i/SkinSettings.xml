@@ -509,6 +509,8 @@
                         <label>$LOCALIZE[30111]</label>
                         <label2>$VAR[Def_Trailer_Delay]</label2>
 
+                        <enable>Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)</enable>
+
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30039])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(Trailer_Delay))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30112])</onclick>
