@@ -324,7 +324,7 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <include>Animation_Flix_AlarmDelay</include>
                         <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
@@ -358,7 +358,7 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <include>Animation_Flix_AlarmDelay</include>
                         <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
@@ -394,7 +394,7 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <include>Animation_Flix_AlarmDelay</include>
                         <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
@@ -431,7 +431,7 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <include>Animation_Flix_AlarmDelay</include>
                         <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
@@ -475,7 +475,7 @@
                     </control>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <include>Animation_Flix_AlarmDelay</include>
                         <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 
@@ -503,7 +503,7 @@
                     </include>
                     <control type="button">
                         <include>Defs_Hidden_Button</include>
-                        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
+                        <include>Animation_Flix_AlarmDelay</include>
                         <onunfocus>CancelAlarm(playtrailer,true)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(HomeMultiFlixView)">PlayerControl(Stop)</onunfocus>
 

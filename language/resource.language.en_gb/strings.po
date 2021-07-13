@@ -1878,3 +1878,18 @@ msgstr ""
 msgctxt "#30110"
 msgid "Show player tempo controls in OSD"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30111"
+msgid "Set delay to playing Trailers in Flix View"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30112"
+msgid "4 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30113"
+msgid "7 seconds"
+msgstr ""

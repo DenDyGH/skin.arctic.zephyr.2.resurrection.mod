@@ -1843,3 +1843,18 @@ msgstr "Włącz przybliżenie po najechaniu"
 msgctxt "#30110"
 msgid "Show player tempo controls in OSD"
 msgstr "Pokaż kontrolki do zmiany tempa odtwarzania na OSD"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30111"
+msgid "Set delay to playing Trailers in Flix View"
+msgstr "Ustaw opóźnienie do odtwarzania zwiastunów w widoku Flix"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30112"
+msgid "4 seconds"
+msgstr "4 sekundy"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30113"
+msgid "7 seconds"
+msgstr "7 sekund"
