@@ -200,6 +200,7 @@
             <visible>!Control.HasFocus(5610)</visible>
             <fadetime>200</fadetime>
             <visible>[String.IsEmpty(Skin.String(HomeBackgroundImage)) + String.IsEmpty(Container(301).ListItem.Property(Background)) + String.IsEmpty(Container(301).ListItem.Property(backgroundPlaylist))] | Control.HasFocus(5600)</visible>
+            <visible>Skin.HasSetting(EnableClearlogo)</visible>
         </control>
 
         <control type="group">
