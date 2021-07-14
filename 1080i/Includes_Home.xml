@@ -987,7 +987,7 @@
 
                     <control type="group" id="99301">
                         <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
-                        <height>412.5</height>
+                        <height>420.5</height>
                         <width>1800</width>
                         <include>Animation_Right</include>
                         <include>Defs_InfoDialog_Visible</include>
@@ -998,7 +998,7 @@
                             <ondown>301</ondown>
                             <onleft>301</onleft>
                             <scrolltime tween="quadratic">400</scrolltime>
-                            <height>412.5</height>
+                            <height>420.5</height>
                             <width>1800</width>
                             <orientation>vertical</orientation>
                             <itemgap>-52</itemgap>
@@ -1260,7 +1260,7 @@
 
                     <control type="group" id="99301">
                         <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
-                        <height>412.5</height>
+                        <height>420.5</height>
                         <width>1800</width>
                         <include>Animation_Right</include>
                         <include>Defs_InfoDialog_Visible</include>
@@ -1271,7 +1271,7 @@
                             <ondown>301</ondown>
                             <onleft>301</onleft>
                             <scrolltime tween="quadratic">400</scrolltime>
-                            <height>412.5</height>
+                            <height>420.5</height>
                             <width>1800</width>
                             <orientation>vertical</orientation>
                             <itemgap>-52</itemgap>
