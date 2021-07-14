@@ -385,6 +385,7 @@
                         <height>24</height>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
+                        <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
                     </control>
                     <control type="label">
                         <top>20</top>
@@ -401,6 +402,37 @@
                         <height>24</height>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
                         <visible>![Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])]</visible>
+                        <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
+                    </control>
+                    <control type="label">
+                        <top>9</top>
+                        <left>15</left>
+                        <width>auto</width>
+                        <label>$PARAM[label]</label>
+                        <aligny>center</aligny>
+                        <textcolor>main_fg_100</textcolor>
+                        <font>font_tiny_bold</font>
+                        <height>24</height>
+                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
+                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
+                        <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
+                    </control>
+                    <control type="label">
+                        <top>9</top>
+                        <left>15</left>
+                        <width>auto</width>
+                        <label>$PARAM[label]</label>
+                        <aligny>center</aligny>
+                        <include content="Object_Variable_TextColor">
+                            <param name="std" value="main_fg_30" />
+                            <param name="alt" value="main_fg_70" />
+                            <param name="usealt" value="Skin.HasSetting(EnableHighContrastWidgetText)" />
+                        </include>
+                        <font>font_tiny_bold</font>
+                        <height>24</height>
+                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
+                        <visible>![Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])]</visible>
+                        <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
                     </control>
                     <control type="label">
                         <top>20</top>
