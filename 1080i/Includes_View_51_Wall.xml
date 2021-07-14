@@ -622,7 +622,7 @@
                 <param name="height" value="view_height" />
                 <param name="itemwidth" value="item_square_width" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="aspectratio" value="keep" />
+                <param name="aspectratio" value="scale" />
                 <param name="viewtype" value="$LOCALIZE[31360]" />
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
