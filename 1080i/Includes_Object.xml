@@ -953,7 +953,7 @@
                     <include condition="!Skin.HasSetting(DisableCodecs)">Object_Languages_Right</include>
                     <orientation>horizontal</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
-                    <include>Object_Languages_Items</include>
+                    <include condition="!Skin.HasSetting(HomeMultiFlixView)">Object_Languages_Items</include>
                     <nested />
                 </control>
             </control>
