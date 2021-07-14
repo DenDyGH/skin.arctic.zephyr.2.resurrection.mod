@@ -1,3 +1,10 @@
+0.6.3
+    - fixed height for widgets row in Modern layouts
+    - disable language and studio info in Flix View
+    - fix for square wall aspect ratio
+    - move view_cast_toplabel a little bit higher
+    - play trailer only when Home window is visible
+    - fix for possible issue with playing items with special characters
 0.6.2
     - added option to set delay to playing trailers in Flix View
     - added spanish language (thanks to @AudigierSanchez)

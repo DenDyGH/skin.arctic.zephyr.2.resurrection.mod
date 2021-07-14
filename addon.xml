@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.6.2">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.6.3">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -20,14 +20,13 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
-            0.6.2
-                - added option to set delay to playing trailers in Flix View
-                - added spanish language (thanks to @AudigierSanchez)
-                - increased limit of widgets to slide in Flix View
-                - show clearlogo in home simple layout only when enabled
-                - changed name from "Netflix Style" to "Modern" in home layouts
-                - enabled busy spinner for loading widgets in Flix View
-                - fixed movement through settings up and down
+            0.6.3
+                - fixed height for widgets row in Modern layouts
+                - disable language and studio info in Flix View
+                - fix for square wall aspect ratio
+                - move view_cast_toplabel a little bit higher
+                - play trailer only when Home window is visible
+                - fix for possible issue with playing items with special characters
         </news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
