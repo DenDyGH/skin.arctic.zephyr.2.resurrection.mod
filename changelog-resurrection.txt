@@ -1,3 +1,7 @@
+0.6.4
+    - fixed playing trailers in background in Flix View
+    - fixed height for widgets row in Horizontal layout
+    - tweaks to trailers delay
 0.6.3
     - fixed height for widgets row in Modern layouts
     - disable language and studio info in Flix View
