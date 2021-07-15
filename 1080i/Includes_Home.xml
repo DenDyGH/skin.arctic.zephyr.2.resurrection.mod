@@ -408,8 +408,8 @@
                                 <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
                                 <!-- <left>120</left> -->
                                 <top>20</top>
-                                <onup>301</onup>
-                                <ondown>301</ondown>
+                                <!-- <onup>301</onup> -->
+                                <!-- <ondown>301</ondown> -->
                                 <onleft>301</onleft>
                                 <scrolltime tween="quadratic">600</scrolltime>
                                 <height>99999</height>
@@ -1335,7 +1335,7 @@
                     <param name="animation" value="Defs_Null" />
                 </include>
                 <control type="grouplist">
-                    <top>-15</top>
+                    <top>-40</top>
                     <width>2500</width>
                     <left>-30</left>
                     <bottom>-15</bottom>
