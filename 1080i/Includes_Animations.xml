@@ -254,7 +254,7 @@
     </include>
 
     <include name="Animation_Flix_Widget_Slide">
-        <animation effect="slide" end="0,-400" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,2">Conditional</animation>
+        <animation effect="slide" end="0,-400" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,2)">Conditional</animation>
         <animation effect="slide" end="0,-220" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>
         <animation effect="slide" end="0,-195" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,4)">Conditional</animation>
         <animation effect="slide" end="0,-205" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,5)">Conditional</animation>
