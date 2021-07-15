@@ -507,26 +507,24 @@
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30111]</label>
-                        <label2>$VAR[Def_Trailer_Delay]</label2>
+                        <label2>$VAR[Defs_Trailer_Delay]</label2>
 
                         <enable>Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)</enable>
 
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30039])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(Trailer_Delay))</onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30112])</onclick>
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30112])</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(Trailer_Delay,00:00))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30113])</onclick>
                         <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(Trailer_Delay,00:03))</onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30113])</onclick>
+                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31117])</onclick>
                         <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(Trailer_Delay,00:06))</onclick>
-                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31117])</onclick>
-                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(Trailer_Delay,00:09))</onclick>
-                        <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31123])</onclick>
-                        <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(Trailer_Delay,00:14))</onclick>
-                        <onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31124])</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(Trailer_Delay,00:19))</onclick>
-                        <onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31125])</onclick>
-                        <onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(Trailer_Delay,00:29))</onclick>
-                        <onclick>SetProperty(Dialog.8.Label,$LOCALIZE[31126])</onclick>
-                        <onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(Trailer_Delay,00:59))</onclick>
+                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31123])</onclick>
+                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(Trailer_Delay,00:11))</onclick>
+                        <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31124])</onclick>
+                        <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(Trailer_Delay,00:16))</onclick>
+                        <onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31125])</onclick>
+                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(Trailer_Delay,00:26))</onclick>
+                        <onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31126])</onclick>
+                        <onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(Trailer_Delay,00:56))</onclick>
                         <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[30111])</onclick>
                     </control>
 
