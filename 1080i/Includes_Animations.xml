@@ -276,14 +276,7 @@
     </include>
 
     <include name="Animation_Flix_AlarmDelay">
-        <animation effect="slide" end="0,0" time="4000" reversible="false">Focus</animation>
-        <!-- <animation effect="slide" end="0,0" time="3000" reversible="false" condition="String.IsEqual(Skin.String(Trailer_Delay),00:03)">Focus</animation>
-        <animation effect="slide" end="0,0" time="6000" reversible="false" condition="String.IsEqual(Skin.String(Trailer_Delay),00:06)">Focus</animation>
-        <animation effect="slide" end="0,0" time="9000" reversible="false" condition="String.IsEqual(Skin.String(Trailer_Delay),00:09)">Focus</animation>
-        <animation effect="slide" end="0,0" time="14000" reversible="false" condition="String.IsEqual(Skin.String(Trailer_Delay),00:14)">Focus</animation>
-        <animation effect="slide" end="0,0" time="19000" reversible="false" condition="String.IsEqual(Skin.String(Trailer_Delay),00:19)">Focus</animation>
-        <animation effect="slide" end="0,0" time="29000" reversible="false" condition="String.IsEqual(Skin.String(Trailer_Delay),00:29)">Focus</animation>
-        <animation effect="slide" end="0,0" time="59000" reversible="false" condition="String.IsEqual(Skin.String(Trailer_Delay),00:59)">Focus</animation> -->
+        <animation effect="slide" end="0,0" time="1000" reversible="false">Focus</animation>
     </include>
 
 </includes>
