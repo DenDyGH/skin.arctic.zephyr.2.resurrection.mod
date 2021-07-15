@@ -1,3 +1,5 @@
+0.6.5
+    - tweaks to posters looks and behavior
 0.6.4
     - fixed playing trailers in background in Flix View
     - fixed height for widgets row in Horizontal layout
