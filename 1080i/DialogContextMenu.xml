@@ -3,6 +3,8 @@
 <window id="106">
     <defaultcontrol always="true">1000</defaultcontrol>
 
+    <onload>CancelAlarm(playtrailer,true)</onload>
+
     <coordinates>
         <origin x="0" y="0" />
     </coordinates>

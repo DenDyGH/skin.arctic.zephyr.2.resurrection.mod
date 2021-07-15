@@ -457,7 +457,7 @@
         <value>0</value>
     </variable>
 
-    <variable name="Def_Trailer_Delay">
+    <variable name="Defs_Trailer_Delay">
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:03)">$LOCALIZE[30112]</value>
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:06)">$LOCALIZE[30113]</value>
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:09)">$LOCALIZE[31117]</value>
@@ -465,7 +465,7 @@
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:19)">$LOCALIZE[31124]</value>
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:29)">$LOCALIZE[31125]</value>
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:59)">$LOCALIZE[31126]</value>
-        <value>Default</value>
+        <value>Null</value>
     </variable>
 
     <include name="Defs_Settings_OnLoad">

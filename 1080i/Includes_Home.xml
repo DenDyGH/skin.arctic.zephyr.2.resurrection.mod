@@ -1914,6 +1914,7 @@
             <include>Defs_InfoDialog_Visible</include>
             <include content="Object_Info_Arrows">
                 <param name="id" value="3000" />
+                <param name="bottom" value="15" />
             </include>
         </control>
         <control type="group">
@@ -1930,7 +1931,7 @@
                     <onup>301</onup>
                     <ondown>noop</ondown>
                     <scrolltime tween="quadratic">400</scrolltime>
-                    <height>view_height</height>
+                    <height>875</height>
                     <width>1800</width>
                     <orientation>vertical</orientation>
                     <itemgap>-52</itemgap>
