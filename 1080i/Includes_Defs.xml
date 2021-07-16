@@ -125,6 +125,15 @@
         <value>main_fg_100</value>
     </variable>
 
+    <include name="Defs_Posters_Padding">
+        <param name="right" default="12" />
+        <param name="left" default="0" />
+        <definition>
+            <right>$PARAM[right]</right>
+            <left>$PARAM[left]</left>
+        </definition>
+    </include>
+
     <include name="Defs_Settings_Gradient">
         <control type="group">
             <nested />
@@ -458,13 +467,13 @@
     </variable>
 
     <variable name="Defs_Trailer_Delay">
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:03)">$LOCALIZE[30112]</value>
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:06)">$LOCALIZE[30113]</value>
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:09)">$LOCALIZE[31117]</value>
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:14)">$LOCALIZE[31123]</value>
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:19)">$LOCALIZE[31124]</value>
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:29)">$LOCALIZE[31125]</value>
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:59)">$LOCALIZE[31126]</value>
+        <!-- <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:04)">$LOCALIZE[30112]</value> -->
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:04)">$LOCALIZE[30113]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:07)">$LOCALIZE[31117]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:12)">$LOCALIZE[31123]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:17)">$LOCALIZE[31124]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:27)">$LOCALIZE[31125]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:57)">$LOCALIZE[31126]</value>
         <value>Null</value>
     </variable>
 
