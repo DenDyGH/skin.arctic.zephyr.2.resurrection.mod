@@ -276,7 +276,7 @@
     </include>
 
     <include name="Animation_Flix_AlarmDelay">
-        <animation effect="slide" end="0,0" time="1000" reversible="false">Focus</animation>
+        <animation effect="slide" end="0,0" time="3000" reversible="false">Focus</animation>
     </include>
 
 </includes>
