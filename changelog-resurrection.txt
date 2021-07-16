@@ -1,3 +1,7 @@
+0.6.6
+    - added missing trailer delay
+    - increased trailers delay
+    - tweaks to poster looks in Flix View
 0.6.5
     - tweaks to posters looks and behavior
 0.6.4
