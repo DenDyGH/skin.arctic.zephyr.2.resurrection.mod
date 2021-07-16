@@ -125,6 +125,15 @@
         <value>main_fg_100</value>
     </variable>
 
+    <include name="Defs_Posters_Padding">
+        <param name="right" default="12" />
+        <param name="left" default="0" />
+        <definition>
+            <right>$PARAM[right]</right>
+            <left>$PARAM[left]</left>
+        </definition>
+    </include>
+
     <include name="Defs_Settings_Gradient">
         <control type="group">
             <nested />

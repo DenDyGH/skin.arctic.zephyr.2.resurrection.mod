@@ -388,7 +388,7 @@
                     <param name="animation" value="Defs_Null" />
                 </include>
                 <control type="grouplist">
-                    <top>392.5</top>
+                    <top>386.5</top>
                     <left>0</left>
                     <!-- <bottom>0</bottom> -->
                     <width>2500</width>
