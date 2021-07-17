@@ -563,11 +563,11 @@
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">6000</onright>
                 <top>293</top>
                 <left>62</left>
-                <width>257.14</width>
+                <width>714</width>
                 <height>787</height>
                 <onup>303</onup>
                 <orientation>vertical</orientation>
-                <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
+                <itemlayout width="714" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                     <control type="label">
                         <right>40</right>
                         <font>font_topbar_small</font>
@@ -577,7 +577,7 @@
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
+                <focusedlayout width="714" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                     <control type="label">
                         <right>40</right>
                         <font>font_topbar</font>
