@@ -485,7 +485,15 @@
                         <left>14</left>
                         <visible>Container($PARAM[id]).IsUpdating</visible>
                         <visible>$PARAM[spinner-visible]</visible>
-                        <!-- <visible>!Skin.HasSetting(HomeMultiFlixView)</visible> -->
+                        <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
+                    </control>
+                    <control type="group">
+                        <include>Defs_SmallBusySpinner</include>
+                        <top>0</top>
+                        <left>14</left>
+                        <visible>Container($PARAM[id]).IsUpdating</visible>
+                        <visible>$PARAM[spinner-visible]</visible>
+                        <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
                     </control>
                     <control type="label">
                         <top>20</top>
@@ -500,6 +508,22 @@
                         <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
                         <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
                         <visible>!$PARAM[uselabel2]</visible>
+                        <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
+                    </control>
+                    <control type="label">
+                        <top>9</top>
+                        <width>auto</width>
+                        <label>$INFO[Container($PARAM[id]).ListItem.TvShowTitle,, - ]$INFO[Container($PARAM[id]).ListItem.Label]</label>
+                        <aligny>center</aligny>
+                        <textcolor>main_fg_100</textcolor>
+                        <font>font_tiny</font>
+                        <height>24</height>
+                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
+                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
+                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                        <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
+                        <visible>!$PARAM[uselabel2]</visible>
+                        <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
                     </control>
                     <control type="label">
                         <top>20</top>
@@ -513,6 +537,21 @@
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
                         <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
                         <visible>!$PARAM[uselabel2]</visible>
+                        <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
+                    </control>
+                    <control type="label">
+                        <top>9</top>
+                        <width>auto</width>
+                        <label>$INFO[Container($PARAM[id]).ListItem.ChannelName]$INFO[Container($PARAM[id]).ListItem.Title, - ,]$INFO[Container($PARAM[id]).ListItem.StartTime, - ,]$INFO[Container($PARAM[id]).ListItem.EndTime, - ,]</label>
+                        <aligny>center</aligny>
+                        <textcolor>main_fg_100</textcolor>
+                        <font>font_tiny</font>
+                        <height>24</height>
+                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
+                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
+                        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                        <visible>!$PARAM[uselabel2]</visible>
+                        <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
                     </control>
                     <control type="label">
                         <top>20</top>
@@ -548,7 +587,8 @@
         <definition>
             <control type="group">
                 <visible>$PARAM[visible]</visible>
-                <height>$PARAM[iconheight]</height>
+                <include content="Defs_Cast_Height_Normal" condition="!Skin.HasSetting(HomeMultiFlixView)"/>
+                <include content="Defs_Cast_Height_Flix" condition="Skin.HasSetting(HomeMultiFlixView)"/>
                 <control type="image">
                     <height>200</height>
                     <bottom>0</bottom>

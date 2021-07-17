@@ -125,6 +125,14 @@
         <value>main_fg_100</value>
     </variable>
 
+    <include name="Defs_Cast_Height_Normal">
+        <height>350</height>
+    </include>
+
+    <include name="Defs_Cast_Height_Flix">
+        <height>390.5</height>
+    </include>
+
     <include name="Defs_Posters_Padding">
         <param name="right" default="12" />
         <param name="left" default="0" />

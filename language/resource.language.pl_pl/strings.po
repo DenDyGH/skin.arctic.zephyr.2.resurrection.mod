@@ -1858,3 +1858,8 @@ msgstr "4 sekundy"
 msgctxt "#30113"
 msgid "7 seconds"
 msgstr "7 sekund"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30114"
+msgid "Don't blur Home screen"
+msgstr "Nie rozmywaj tła ekranu głównego"

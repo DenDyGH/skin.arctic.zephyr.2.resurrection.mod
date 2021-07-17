@@ -263,19 +263,19 @@
                         <visible>!String.IsEmpty(ListItem.Studio) | !String.IsEmpty(ListItem.Genre)</visible>
                     </control>
                     <control type="image">
-                        <top>2</top>
-                        <left>2</left>
-                        <width>60</width>
-                        <height>60</height>
-                        <texture colordiffuse="ff000000">special://skin/extras/icons/director.png</texture>
+                        <top>8</top>
+                        <left>8</left>
+                        <width>50</width>
+                        <height>50</height>
+                        <texture colordiffuse="ff000000">indicator/camp-chair.png</texture>
                         <visible>!String.IsEmpty(ListItem.Studio)</visible>
                     </control>
                     <control type="image">
-                        <top>2</top>
-                        <left>2</left>
-                        <width>60</width>
-                        <height>60</height>
-                        <texture colordiffuse="ff000000">special://skin/extras/icons/folder.png</texture>
+                        <top>6</top>
+                        <left>6</left>
+                        <width>54</width>
+                        <height>54</height>
+                        <texture colordiffuse="ff000000">indicator/genre2.png</texture>
                         <visible>String.IsEmpty(ListItem.Studio)</visible>
                     </control>
                     <control type="label">
