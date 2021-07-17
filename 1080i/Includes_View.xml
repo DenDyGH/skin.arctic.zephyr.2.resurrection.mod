@@ -485,6 +485,15 @@
                         <left>14</left>
                         <visible>Container($PARAM[id]).IsUpdating</visible>
                         <visible>$PARAM[spinner-visible]</visible>
+                        <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
+                    </control>
+                    <control type="group">
+                        <include>Defs_SmallBusySpinner</include>
+                        <top>0</top>
+                        <left>14</left>
+                        <visible>Container($PARAM[id]).IsUpdating</visible>
+                        <visible>$PARAM[spinner-visible]</visible>
+                        <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
                     </control>
                     <control type="label">
                         <top>20</top>
