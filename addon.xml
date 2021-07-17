@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.6.6">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, nfm886" version="0.6.7">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.1.1" />
@@ -20,16 +20,14 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
-            0.6.6
-                - added missing trailer delay
-                - increased trailers delay
-                - tweaks to poster looks in Flix View
-            0.6.5
-                - tweaks to posters looks and behavior
-            0.6.4
-                - fixed playing trailers in background in Flix View
-                - fixed height for widgets row in Horizontal layout
-                - tweaks to trailers delay
+            0.6.7
+                - fixed DialogVideoInfo mess
+                - Hungarian lang updated.
+                - added option to not blur home screen (todo: adding fade to background without blur)
+                - fixed top margin of small busy spinner
+                - fixed top margin in view cast toplabel
+                - increased width of menu panel
+                - changed 2 icons
         </news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
