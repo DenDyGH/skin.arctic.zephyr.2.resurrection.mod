@@ -59,7 +59,7 @@
                 <param name="id" value="$PARAM[id]" />
                 <param name="height" value="item_cast_height" />
                 <param name="orientation" value="horizontal" />
-                <param name="itemwidth" value="$PARAM[itemwidth]" />
+                <param name="itemwidth" value="260" />
                 <param name="iconheight" value="$PARAM[iconheight]" />
                 <param name="diffuse" value="$PARAM[diffuse]" />
                 <param name="icon" value="$PARAM[icon]" />
@@ -153,7 +153,7 @@
                 <param name="label" value="$VAR[Label_Info_PlayButton]" />
                 <param name="icon" value="$VAR[Image_Info_PlayButton]" />
                 <param name="visible" value="Control.IsEnabled(3101) + !ListItem.IsFolder + !ListItem.IsCollection" />
-    
+
                 <onclick condition="!String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia='$ESCINFO[ListItem.FileNameAndPath]')</onclick>
                 <onclick condition="String.IsEmpty(ListItem.FileNameAndPath)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,playmedia='$ESCINFO[ListItem.FolderPath]')</onclick>
             </include>
@@ -169,7 +169,7 @@
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + String.IsEmpty(ListItem.DBID)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.FolderPath])</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.DBID,videodb://tvshows/titles/,/])</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(ListItem.DBID) + ListItem.IsCollection">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_update=$INFO[ListItem.DBID,videodb://movies/sets/,/])</onclick>
-    
+
                 <onclick condition="!Window.IsVisible(MyVideoNav.xml) + String.IsEmpty(ListItem.DBID)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_path=$INFO[ListItem.FolderPath])</onclick>
                 <onclick condition="!Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_path=$INFO[ListItem.DBID,videodb://tvshows/titles/,/])</onclick>
                 <onclick condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(ListItem.DBID) + ListItem.IsCollection">RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_path=$INFO[ListItem.DBID,videodb://movies/sets/,/])</onclick>
@@ -194,7 +194,7 @@
                 <param name="label" value="$LOCALIZE[30102]" />
                 <param name="icon" value="special://skin/extras/icons/video.png" />
                 <param name="visible" value="!Window.IsVisible(1140) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))]" />
-                
+
                 <onclick>Dialog.Close(all,true)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">RunScript(script.embuary.helper,action=playitem,item='$INFO[ListItem.Trailer]')</onclick>
@@ -218,7 +218,7 @@
                 <param name="label" value="30041" />
                 <param name="icon" value="special://skin/extras/icons/trakttv.png" />
                 <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(window(home).property(tmdbhelper.listitem.tmdb_id))] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" />
-                
+
                 <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
                 <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(tmdbhelper.listitem.tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
             </include>
@@ -230,7 +230,7 @@
                 <param name="icon" value="special://skin/extras/icons/userrating.png" />
                 <param name="visible" value="Control.IsEnabled(7)" />
             </include>
-            
+
             <include content="Object_Info_Button">
                 <param name="id" value="8101" />
                 <param name="groupid" value="8001" />
