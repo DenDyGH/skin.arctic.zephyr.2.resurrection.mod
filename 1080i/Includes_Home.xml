@@ -571,7 +571,7 @@
                     <control type="label">
                         <right>40</right>
                         <font>font_topbar_small</font>
-                        <align>right</align>
+                        <align>left</align>
                         <aligny>center</aligny>
                         <textcolor>main_fg_100</textcolor>
                         <label>$INFO[ListItem.Label]</label>
@@ -581,7 +581,7 @@
                     <control type="label">
                         <right>40</right>
                         <font>font_topbar</font>
-                        <align>right</align>
+                        <align>left</align>
                         <aligny>center</aligny>
                         <textcolor>main_fg_100</textcolor>
                         <label>$INFO[ListItem.Label]</label>
@@ -626,21 +626,22 @@
                     </control>
                 </focusedlayout>
 
-                <itemlayout width="150" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
+                <itemlayout width="400" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
                     <control type="image">
                         <centertop>53%</centertop>
                         <height>64</height>
-                        <right>72</right>
+                        <right>330</right>
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
                         <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
+                        <animation effect="slide" start="0" end="454" time="200" reversible="false" condition="ControlGroup(3000).HasFocus()">Conditional</animation>
                     </control>
                 </itemlayout>
-                <focusedlayout width="150" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
+                <focusedlayout width="400" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
                     <control type="image">
                         <centertop>53%</centertop>
                         <height>64</height>
-                        <right>72</right>
+                        <right>330</right>
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
                         <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
