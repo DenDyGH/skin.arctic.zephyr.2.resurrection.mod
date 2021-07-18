@@ -430,7 +430,7 @@
         </control>
     </include>
 
-    <include name="View_525_Showcase_Flix">
+    <!-- <include name="View_525_Showcase_Flix">
         <control type="group">
             <include>View_Group</include>
             <visible>Control.IsVisible(525)</visible>
@@ -457,7 +457,7 @@
             </include>
             <include>View_52_Showcase_Aura_Info</include>
         </control>
-    </include>
+    </include> -->
 
     <include name="View_521_Showcase_Landscape">
         <control type="group">
