@@ -507,7 +507,7 @@
     <include name="View_51_Wall_Container">
         <param name="itemlayout" default="View_51_Wall_Itemlayout" />
         <param name="itemwidth" default="item_poster_width" />
-        <param name="itemheight" default="item_row_height" />
+        <param name="itemheight" default="482.5" />
         <param name="controltype" default="panel" />
         <param name="controllayout" default="View_Standard" />
         <param name="orientation" default="vertical" />
@@ -573,7 +573,7 @@
             <visible>Control.IsVisible(51)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="51" />
-                <param name="height" value="view_height" />
+                <param name="height" value="825" />
                 <param name="viewtype" value="$LOCALIZE[31358]" />
                 <param name="viewtypename" value="icon" />
                 <param name="forced" value="true" />
@@ -610,7 +610,7 @@
                 <param name="id" value="511" />
                 <param name="height" value="view_height" />
                 <param name="itemwidth" value="item_landscape_width" />
-                <param name="itemheight" value="item_row_height" />
+                <param name="itemheight" value="482.5" />
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="item_icon_height" />
@@ -732,7 +732,7 @@
                 <param name="id" value="515" />
                 <param name="height" value="view_height" />
                 <param name="itemwidth" value="450" />
-                <param name="itemheight" value="275" />
+                <param name="itemheight" value="412.5" />
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="aspectratio" value="scale" />
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
