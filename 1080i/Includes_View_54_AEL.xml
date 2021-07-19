@@ -35,15 +35,49 @@
             <top>0</top>
             <width>1</width>
             <height>1</height>
-            <onload condition="!IsEmpty(ListItem.Trailer)">PlayerControl(Repeat)</onload>
-            <onfocus condition="!IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.trailer],1)</onfocus>
+            <onload condition="!String.IsEmpty(ListItem.Trailer)">PlayerControl(Repeat)</onload>
+            <onfocus condition="!String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.trailer],1)</onfocus>
             <onunfocus condition="Player.HasVideo">PlayerControl(Stop)</onunfocus>
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>
             <animation type="Focus">
-                <effect type="fade" delay="2000" start="0" end="100" />
+                <effect type="fade" delay="3500" start="0" end="100" />
             </animation>
         </control>
+    </include>
+    <include name="View_540_Poster">
+        <param name="height" default="view_poster_height" />
+        <param name="width" default="view_poster_width" />
+        <definition>
+            <control type="group">
+                <right>0</right>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <!-- Backing Panel -->
+                <include content="View_50_Poster">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="icon" value="[Player.Playing + !String.IsEmpty(ListItem.Trailer)] | !String.IsEmpty(ListItem.Art(snap))" />
+                    <param name="diffuse" value="diffuse/landscape-mediainfo.png" />
+                </include>
+                <!-- Trailer and Snap -->
+                <control type="group">
+                    <bottom>30</bottom>
+                    <right>30</right>
+                    <control type="image">
+                        <texture border="10" colordiffuse="ff000000">diffuse/landscape-mediainfo.png</texture>
+                    </control>
+                    <control type="image">
+                        <texture diffuse="diffuse/landscape-mediainfo.png" background="true">$VAR[ROM_Simple_Art_Snap]</texture>
+                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <visible>![Player.Playing + !String.IsEmpty(ListItem.Trailer)]</visible>
+                    </control>
+                    <control type="videowindow">
+                        <visible>Player.Playing + !String.IsEmpty(ListItem.Trailer)</visible>
+                    </control>
+                </control>
+            </control>
+        </definition>
     </include>
     <include name="View_540_List_Info">
         <control type="group">
@@ -59,34 +93,10 @@
                     <aspectratio>keep</aspectratio>
                 </control>
             </control>
-            <control type="group">
-                <right>0</right>
-                <width>723.33</width>
-                <height>420</height>
-                <!-- Backing Panel -->
-                <include content="View_50_Poster">
-                    <param name="height" value="420" />
-                    <param name="width" value="723.33" />
-                    <param name="icon" value="[Player.Playing + !IsEmpty(ListItem.Trailer)] | !String.IsEmpty(ListItem.Art(snap))" />
-                    <param name="diffuse" value="diffuse/landscape-mediainfo.png" />
-                </include>
-                <!-- Trailer and Snap -->
-                <control type="group">
-                    <bottom>30</bottom>
-                    <right>30</right>
-                    <control type="image">
-                        <texture border="10" colordiffuse="ff000000">diffuse/landscape-mediainfo.png</texture>
-                    </control>
-                    <control type="image">
-                        <texture diffuse="diffuse/landscape-mediainfo.png" background="true">$VAR[ROM_Simple_Art_Snap]</texture>
-                        <aspectratio scalediffuse="false">keep</aspectratio>
-                        <visible>![Player.Playing + !IsEmpty(ListItem.Trailer)]</visible>
-                    </control>
-                    <control type="videowindow">
-                        <visible>Player.Playing + !IsEmpty(ListItem.Trailer)</visible>
-                    </control>
-                </control>
-            </control>
+            <include content="View_540_Poster">
+                <param name="height" value="420" />
+                <param name="width" value="723.33" />
+            </include>
             <control type="grouplist">
                 <top>430</top>
                 <left>0</left>
@@ -165,6 +175,33 @@
                 <param name="visible" value="$EXP[Exp_IsPluginAdvancedLauncher]" />
             </include>
             <include>View_540_List_Info</include>
+        </control>
+    </include>
+
+    <include name="View_541_Wall_Info">
+        <control type="group">
+            <include>View_Group</include>
+            <visible>Control.IsVisible(541)</visible>
+            <include content="View_51_Wall_Container">
+                <param name="id" value="541" />
+                <param name="height" value="view_height" />
+                <param name="viewtype" value="$LOCALIZE[31440]" />
+                <param name="viewtypename" value="icon" />
+                <param name="controllayout" value="View_514_Wall_Info_Layout" />
+                <param name="forced" value="true" />
+                <param name="visible" value="$EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="focustrailer" value="true" />
+                <param name="aspectratio" value="keep" />
+                <width>1028.56</width>
+                <include>View_Vertical_Movement</include>
+            </include>
+            <include content="View_522_Showcase_Seasons_Info">
+                <param name="visible" value="true" />
+                <param name="icon" value="$VAR[Image_Landscape]" />
+                <param name="title" value="$VAR[Label_List_Title]" />
+                <param name="plot" value="$INFO[ListItem.Plot]" />
+                <param name="isRomTrailer" value="true" />
+            </include>
         </control>
     </include>
 </includes>
