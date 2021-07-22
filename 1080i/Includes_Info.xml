@@ -59,7 +59,7 @@
                 <param name="id" value="$PARAM[id]" />
                 <param name="height" value="item_cast_height" />
                 <param name="orientation" value="horizontal" />
-                <param name="itemwidth" value="260" />
+                <param name="itemwidth" value="$PARAM[itemwidth]" />
                 <param name="iconheight" value="$PARAM[iconheight]" />
                 <param name="diffuse" value="$PARAM[diffuse]" />
                 <param name="icon" value="$PARAM[icon]" />

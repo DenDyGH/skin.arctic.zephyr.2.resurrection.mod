@@ -3,12 +3,10 @@
 <window id="2000">
     <defaultcontrol always="true">3</defaultcontrol>
 
-    <onload>CancelAlarm(playtrailer,true)</onload>
-
     <controls>
         <include condition="![Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)]">Dialog_Select_Standard</include>
         <include condition="Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)">Dialog_Select_Game</include>
 
-
+        
     </controls>
 </window>

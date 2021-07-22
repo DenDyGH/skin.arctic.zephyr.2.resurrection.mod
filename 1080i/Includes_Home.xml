@@ -388,7 +388,7 @@
                     <param name="animation" value="Defs_Null" />
                 </include>
                 <control type="grouplist">
-                    <top>386.5</top>
+                    <top>392.5</top>
                     <left>0</left>
                     <!-- <bottom>0</bottom> -->
                     <width>2500</width>
@@ -408,8 +408,8 @@
                                 <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
                                 <!-- <left>120</left> -->
                                 <top>20</top>
-                                <!-- <onup>301</onup> -->
-                                <!-- <ondown>301</ondown> -->
+                                <onup>301</onup>
+                                <ondown>301</ondown>
                                 <onleft>301</onleft>
                                 <scrolltime tween="quadratic">600</scrolltime>
                                 <height>99999</height>
@@ -988,7 +988,7 @@
 
                     <control type="group" id="99301">
                         <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
-                        <height>420.5</height>
+                        <height>412.5</height>
                         <width>1800</width>
                         <include>Animation_Right</include>
                         <include>Defs_InfoDialog_Visible</include>
@@ -999,7 +999,7 @@
                             <ondown>301</ondown>
                             <onleft>301</onleft>
                             <scrolltime tween="quadratic">400</scrolltime>
-                            <height>420.5</height>
+                            <height>412.5</height>
                             <width>1800</width>
                             <orientation>vertical</orientation>
                             <itemgap>-52</itemgap>
@@ -1261,7 +1261,7 @@
 
                     <control type="group" id="99301">
                         <animation effect="slide" start="0,0" end="0,250" time="0" tween="sine" condition="String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]">Conditional</animation>
-                        <height>420.5</height>
+                        <height>412.5</height>
                         <width>1800</width>
                         <include>Animation_Right</include>
                         <include>Defs_InfoDialog_Visible</include>
@@ -1272,7 +1272,7 @@
                             <ondown>301</ondown>
                             <onleft>301</onleft>
                             <scrolltime tween="quadratic">400</scrolltime>
-                            <height>420.5</height>
+                            <height>412.5</height>
                             <width>1800</width>
                             <orientation>vertical</orientation>
                             <itemgap>-52</itemgap>
@@ -1336,7 +1336,7 @@
                     <param name="animation" value="Defs_Null" />
                 </include>
                 <control type="grouplist">
-                    <top>-40</top>
+                    <top>-15</top>
                     <width>2500</width>
                     <left>-30</left>
                     <bottom>-15</bottom>
@@ -1915,7 +1915,6 @@
             <include>Defs_InfoDialog_Visible</include>
             <include content="Object_Info_Arrows">
                 <param name="id" value="3000" />
-                <param name="bottom" value="15" />
             </include>
         </control>
         <control type="group">
@@ -1932,7 +1931,7 @@
                     <onup>301</onup>
                     <ondown>noop</ondown>
                     <scrolltime tween="quadratic">400</scrolltime>
-                    <height>875</height>
+                    <height>view_height</height>
                     <width>1800</width>
                     <orientation>vertical</orientation>
                     <itemgap>-52</itemgap>

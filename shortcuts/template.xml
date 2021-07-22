@@ -170,7 +170,7 @@
                 <param name="top" value="52" />
                 <param name="left" value="0" />
                 <param name="right" value="-30" />
-                <param name="height" value="380" />
+                <param name="height" value="item_cast_height" />
                 <param name="orientation" value="horizontal" />
                 <param name="labelinclude" value="Defs_Null" />
                 <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
@@ -198,7 +198,7 @@
                 <param name="top" value="52" />
                 <param name="left" value="0" />
                 <param name="right" value="-30" />
-                <param name="height" value="380" />
+                <param name="height" value="item_cast_height" />
                 <param name="orientation" value="horizontal" />
                 <param name="labelinclude" value="Defs_Null" />
                 <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
