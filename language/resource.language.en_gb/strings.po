@@ -1893,3 +1893,13 @@ msgstr ""
 msgctxt "#30113"
 msgid "7 seconds"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30114"
+msgid "Don't blur Home screen"
+msgstr ""
+
+#: /1080i/Includes_View_54_AEL.xml
+msgctxt "#31440"
+msgid "ROM Info Wall Trailer"
+msgstr ""

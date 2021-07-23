@@ -1,3 +1,5 @@
+0.7.0
+    - Merge additional Advanced Emulator Launcher view from skin.arctic.zephyr.2 main
 0.6.9
     - rollback version to most stable one
 0.6.8
