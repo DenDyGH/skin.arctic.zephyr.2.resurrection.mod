@@ -233,8 +233,7 @@
         <value condition="Skin.HasSetting(NoFanart)">$VAR[Global_Background_Image_NoFanart]</value>
         <value condition="Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
         <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
-        <value condition="!Skin.HasSetting(DisableBlur) + Skin.HasSetting(DontBlurHome)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
-        <value condition="!Skin.HasSetting(DisableBlur) + !Skin.HasSetting(DontBlurHome) + !Window.IsVisible(Home.xml)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
+        <value condition="!Skin.HasSetting(DisableBlur)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="Skin.HasSetting(NoFanart)">$VAR[Global_Background_Image_NoFanart]</value>
         <value>$VAR[Global_Background_Image_Var]</value>
     </variable>

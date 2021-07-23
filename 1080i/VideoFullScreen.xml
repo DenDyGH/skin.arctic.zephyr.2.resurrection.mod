@@ -2,7 +2,6 @@
 <!-- Foundation -->
 <window id="2005">
     <onload>ClearProperty(ViewType,Home)</onload>
-    <onload>CancelAlarm(playtrailer,true)</onload>
     <controls>
 
         <include content="Object_ShadowSpot_Group">

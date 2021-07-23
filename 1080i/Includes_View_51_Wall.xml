@@ -159,7 +159,7 @@
         </control>
     </include>
 
-    <include name="View_51_Wall_Itemlayout">
+    <include name="View_51_Flix_Itemlayout">
         <param name="altid" default="999999" />
         <param name="icon" default="$VAR[Image_Poster]" />
         <param name="iconheight" default="item_icon_height" />
@@ -171,18 +171,9 @@
         <param name="diffuse" default="diffuse/poster-wall.png" />
         <definition>
             <control type="group">
-                <include content="Defs_Posters_Padding" condition="Skin.HasSetting(HomeMultiFlixView)">
-                    <param name="right" value="-7" />
-                    <param name="left" value="-7" />
-                </include>
-                <include content="Defs_Posters_Padding" condition="!Skin.HasSetting(HomeMultiFlixView)">
-                    <param name="right" value="12" />
-                    <param name="left" value="0" />
-                </include>
-                <animation effect="zoom" time="350" end="110,110" center="120,120" ease="inout" condition="Skin.HasSetting(EnableZoomOnHover)">Focus</animation>
+                <right>10</right>
                 <control type="group">
                     <height>$PARAM[iconheight]</height>
-                    <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
                     <include condition="$PARAM[circle]" content="View_51_Wall_Circle">
                         <param name="diffuse" value="$PARAM[diffuse]" />
                         <param name="selectbox" value="$PARAM[selectbox]" />
@@ -236,9 +227,49 @@
                         </include>
                     </control>
                 </control>
+                <include content="$PARAM[labelinclude]">
+                    <param name="bordersize" value="$PARAM[bordersize]" />
+                    <param name="diffuse" value="$PARAM[diffuse]" />
+                    <param name="iconheight" value="$PARAM[iconheight]" />
+                    <param name="icononlyheight" value="$PARAM[icononlyheight]" />
+                    <param name="label2" value="$PARAM[label2]" />
+                    <param name="textfade_end" value="$PARAM[textfade_end]" />
+                    <param name="textfade_start" value="$PARAM[textfade_start]" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="selectbox" value="$PARAM[selectbox]" />
+                </include>
+
                 <control type="group">
-                    <height>390</height>
-                    <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
+                    <height>$PARAM[iconheight]</height>
+                    <control type="image">
+                        <right>30</right>
+                        <bottom>30</bottom>
+                        <width>33%</width>
+                        <aspectratio align="right" aligny="bottom">keep</aspectratio>
+                        <texture>$VAR[Image_ClearLogo]</texture>
+                        <visible>$PARAM[clearlogo]</visible>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="View_51_Wall_Itemlayout">
+        <param name="altid" default="999999" />
+        <param name="icon" default="$VAR[Image_Poster]" />
+        <param name="iconheight" default="item_icon_height" />
+        <param name="icononlyheight" default="100%" />
+        <param name="labelinclude" default="View_51_Wall_Label" />
+        <param name="aspectratio" default="scale" />
+        <param name="clearlogo" default="false" />
+        <param name="circle" default="false" />
+        <param name="diffuse" default="diffuse/poster-wall.png" />
+        <definition>
+            <control type="group">
+                <right>-2</right>
+                <animation effect="zoom" time="350" end="110,110" center="120,120" ease="inout" condition="Skin.HasSetting(EnableZoomOnHover)">Focus</animation>
+                <control type="group">
+                    <height>$PARAM[iconheight]</height>
                     <include condition="$PARAM[circle]" content="View_51_Wall_Circle">
                         <param name="diffuse" value="$PARAM[diffuse]" />
                         <param name="selectbox" value="$PARAM[selectbox]" />
@@ -507,7 +538,7 @@
     <include name="View_51_Wall_Container">
         <param name="itemlayout" default="View_51_Wall_Itemlayout" />
         <param name="itemwidth" default="item_poster_width" />
-        <param name="itemheight" default="482.5" />
+        <param name="itemheight" default="item_row_height" />
         <param name="controltype" default="panel" />
         <param name="controllayout" default="View_Standard" />
         <param name="orientation" default="vertical" />
@@ -575,7 +606,7 @@
             <visible>Control.IsVisible(51)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="51" />
-                <param name="height" value="825" />
+                <param name="height" value="view_height" />
                 <param name="viewtype" value="$LOCALIZE[31358]" />
                 <param name="viewtypename" value="icon" />
                 <param name="forced" value="true" />
@@ -593,7 +624,7 @@
                 <param name="height" value="view_height" />
                 <param name="itemwidth" value="item_square_width" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="aspectratio" value="scale" />
+                <param name="aspectratio" value="keep" />
                 <param name="viewtype" value="$LOCALIZE[31360]" />
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
@@ -612,7 +643,7 @@
                 <param name="id" value="511" />
                 <param name="height" value="view_height" />
                 <param name="itemwidth" value="item_landscape_width" />
-                <param name="itemheight" value="482.5" />
+                <param name="itemheight" value="item_row_height" />
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="item_icon_height" />
@@ -734,7 +765,7 @@
                 <param name="id" value="515" />
                 <param name="height" value="view_height" />
                 <param name="itemwidth" value="450" />
-                <param name="itemheight" value="412.5" />
+                <param name="itemheight" value="275" />
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="aspectratio" value="scale" />
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />

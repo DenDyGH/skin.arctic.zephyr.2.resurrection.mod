@@ -1,5 +1,7 @@
-0.6.9
+0.7.0
     - Merge additional Advanced Emulator Launcher view from skin.arctic.zephyr.2 main
+0.6.9
+    - rollback version to most stable one
 0.6.8
     - fixed some messing in view types with Flix view
     - fixed main menu in Flix View
