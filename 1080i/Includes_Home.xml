@@ -1336,10 +1336,10 @@
                     <param name="animation" value="Defs_Null" />
                 </include>
                 <control type="grouplist">
-                    <top>-15</top>
+                    <top>-35</top>
                     <width>2500</width>
                     <left>-30</left>
-                    <bottom>-15</bottom>
+                    <bottom>-35</bottom>
                     <orientation>horizontal</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
                     <itemgap>0</itemgap>
@@ -1528,7 +1528,7 @@
                             <ondown>301</ondown>
                             <onleft>301</onleft>
                             <scrolltime tween="quadratic">400</scrolltime>
-                            <height>view_height</height>
+                            <height>865</height>
                             <width>1800</width>
                             <orientation>vertical</orientation>
                             <itemgap>-52</itemgap>

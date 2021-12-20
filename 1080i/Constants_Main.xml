@@ -16,7 +16,7 @@
     <constant name="item_cast_height">360.5</constant>
     <constant name="item_poster_width">257.14</constant>
     <constant name="item_square_width">360</constant>
-    <constant name="item_icon_height">375.5</constant>
+    <constant name="item_icon_height">350</constant>
     <constant name="item_landscape_width">600</constant>
     <constant name="item_smalllandscape_width">450</constant>
     <constant name="item_smalllandscape_iconheight">261</constant>
