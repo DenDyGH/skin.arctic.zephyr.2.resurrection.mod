@@ -543,8 +543,8 @@
                 <bottom>0</bottom>
                 <bordersize>20</bordersize>
                 <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
-                <aspectratio aligny="center" align="right">keep</aspectratio>
-                <visible>Skin.HasSetting(PVRGuide.ColorDiffuse)</visible>
+                <aspectratio aligny="center" align="$PARAM[alignicon]">keep</aspectratio>
+                <visible>Skin.HasSetting(PVRGuide.ColorDiffuse) + $PARAM[iconvisible]</visible>
             </control>
             <control type="image">
                 <top>4</top>
@@ -553,8 +553,8 @@
                 <bottom>0</bottom>
                 <bordersize>20</bordersize>
                 <texture>$INFO[ListItem.Icon]</texture>
-                <aspectratio aligny="center" align="right">keep</aspectratio>
-                <visible>!Skin.HasSetting(PVRGuide.ColorDiffuse)</visible>
+                <aspectratio aligny="center" align="$PARAM[alignicon]">keep</aspectratio>
+                <visible>!Skin.HasSetting(PVRGuide.ColorDiffuse) + $PARAM[iconvisible]</visible>
             </control>
             <control type="image">
                 <top>4</top>
@@ -563,8 +563,8 @@
                 <bottom>0</bottom>
                 <bordersize>20</bordersize>
                 <texture colordiffuse="main_fg_100">common/circle.png</texture>
-                <aspectratio aligny="center" align="right">keep</aspectratio>
-                <visible>String.IsEmpty(ListItem.Icon) | String.StartsWith(ListItem.Icon,special://xbmc/addons/pvr.demo/)</visible>
+                <aspectratio aligny="center" align="$PARAM[alignicon]">keep</aspectratio>
+                <visible>String.IsEmpty(ListItem.Icon) | String.StartsWith(ListItem.Icon,special://xbmc/addons/pvr.demo/) + $PARAM[iconvisible]</visible>
             </control>
             <control type="label">
                 <top>4</top>

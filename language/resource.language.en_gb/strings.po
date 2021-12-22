@@ -1903,3 +1903,8 @@ msgstr ""
 msgctxt "#31440"
 msgid "ROM Info Wall Trailer"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31441"
+msgid "Disable channel label in PVR Guide"
+msgstr ""

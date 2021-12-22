@@ -266,11 +266,20 @@
                         <textcolor>main_fg_70</textcolor>
                         <selectedcolor>main_fg_70</selectedcolor>
                         <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                        <visible>!Skin.HasSetting(DisableChannelLabel)</visible>
                     </control>
                 </control>
                 <include content="Object_PVR_Icon">
                     <param name="height" value="74" />
                     <param name="font" value="font_statusbar_bold" />
+                    <param name="alignicon" value="right" />
+                    <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel)" />
+                </include>
+                <include content="Object_PVR_Icon">
+                    <param name="height" value="74" />
+                    <param name="font" value="font_statusbar_bold" />
+                    <param name="alignicon" value="center" />
+                    <param name="iconvisible" value="Skin.HasSetting(DisableChannelLabel)" />
                 </include>
             </channellayout>
             <focusedchannellayout height="item_list_height" width="340">
@@ -295,11 +304,20 @@
                             <selectedcolor>main_fg_70</selectedcolor>
                             <textcolor>main_fg_70</textcolor>
                             <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                            <visible>!Skin.HasSetting(DisableChannelLabel)</visible>
                         </control>
                     </control>
                     <include content="Object_PVR_Icon">
                         <param name="height" value="74" />
                         <param name="font" value="font_statusbar_bold" />
+                        <param name="alignicon" value="right" />
+                        <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel)" />
+                    </include>
+                    <include content="Object_PVR_Icon">
+                        <param name="height" value="74" />
+                        <param name="font" value="font_statusbar_bold" />
+                        <param name="alignicon" value="center" />
+                        <param name="iconvisible" value="Skin.HasSetting(DisableChannelLabel)" />
                     </include>
                 </control>
                 <control type="group">

@@ -1060,6 +1060,14 @@
                         <onclick>Skin.ToggleSetting(PVRGuide.ChannelNumber)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="19612" description="Disable channel label in pvr guide">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31441]</label>
+                        <selected>Skin.HasSetting(DisableChannelLabel)</selected>
+                        <onclick>Skin.ToggleSetting(DisableChannelLabel)</onclick>
+                    </control>
+
                     <control type="label" id="19682" description="LABEL">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
                         <include>Dialog_Standard_HintLabel</include>

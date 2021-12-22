@@ -1858,3 +1858,18 @@ msgstr "4 sekundy"
 msgctxt "#30113"
 msgid "7 seconds"
 msgstr "7 sekund"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30114"
+msgid "Don't blur Home screen"
+msgstr "Nie rozmywaj tła na stronie głównej"
+
+#: /1080i/Includes_View_54_AEL.xml
+msgctxt "#31440"
+msgid "ROM Info Wall Trailer"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31441"
+msgid "Disable channel label in PVR Guide"
+msgstr "Wyłącz nazwę kanału w przewodniku"
