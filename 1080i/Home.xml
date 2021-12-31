@@ -30,7 +30,7 @@
     <onload condition="String.IsEmpty(Skin.String(PosterHighlight))">Skin.SetString(PosterHighlight,Highlight)</onload>
 
     <!-- Load monochrome flags if no value is set -->
-    <onload condition="String.IsEmpty(Skin.String(Icons))">Skin.SetString(Icons, monochrome)</onload>
+    <onload condition="String.IsEmpty(Skin.String(Icons))">Skin.SetString(Icons, colorful)</onload>
     <!-- Load default value for color highlight and color gradient -->
     <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff01579b)</onload>
     <onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ff81d4fa)</onload>
