@@ -496,9 +496,9 @@
                 <height>$PARAM[height]</height>
                 <visible>$PARAM[visible]</visible>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <!-- <include content="View_Forced" condition="$PARAM[forced]">
+                <include content="View_Forced" condition="$PARAM[forced]">
                     <param name="string" value="$PARAM[viewtype]" />
-                </include> -->
+                </include>
                 <itemlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="selectbox" value="false" />
@@ -560,9 +560,9 @@
                 <height>$PARAM[height]</height>
                 <visible>$PARAM[visible]</visible>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <!-- <include content="View_Forced" condition="$PARAM[forced]">
+                <include content="View_Forced" condition="$PARAM[forced]">
                     <param name="string" value="$PARAM[viewtype]" />
-                </include> -->
+                </include>
                 <itemlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="selectbox" value="false" />
@@ -607,7 +607,7 @@
             <include content="View_51_Wall_Container">
                 <param name="id" value="51" />
                 <param name="height" value="view_height" />
-                <param name="viewtype" value="$LOCALIZE[31358]" />
+                <param name="viewtype" value="Poster Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="forced" value="true" />
                 <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors) | $EXP[Exp_IsPluginAdvancedLauncher]" />
@@ -625,7 +625,7 @@
                 <param name="itemwidth" value="item_square_width" />
                 <param name="iconheight" value="item_icon_height" />
                 <param name="aspectratio" value="keep" />
-                <param name="viewtype" value="$LOCALIZE[31360]" />
+                <param name="viewtype" value="Square Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
                 <param name="forced" value="true" />
@@ -648,7 +648,7 @@
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="item_icon_height" />
                 <param name="diffuse" value="diffuse/landscape-wall.png" />
-                <param name="viewtype" value="$LOCALIZE[31359]" />
+                <param name="viewtype" value="Landscape Wall" />
                 <param name="viewtypename" value="wide" />
                 <param name="forced" value="true" />
                 <param name="labelinclude" value="View_51_Wall_Landscape_Label" />
@@ -669,7 +669,7 @@
                 <param name="itemheight" value="275" />
                 <param name="iconheight" value="220" />
                 <param name="diffuse" value="diffuse/icon-wall.png" />
-                <param name="viewtype" value="$LOCALIZE[31424]" />
+                <param name="viewtype" value="Icon Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="forced" value="true" />
                 <param name="visible" value="Container.Content(genres) | Container.Content(countries) | Container.Content(directors) | Container.Content(studios) | Container.Content(years) | Container.Content() | Container.Content(addons)" />
@@ -690,7 +690,7 @@
                 <param name="aspectratio" value="scale" />
                 <param name="diffuse" value="diffuse/circle.png" />
                 <param name="circle" value="true" />
-                <param name="viewtype" value="$LOCALIZE[31425]" />
+                <param name="viewtype" value="Circle Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="forced" value="true" />
                 <param name="visible" value="Container.Content(artists) | Container.Content(images) | Container.Content(actors)" />
@@ -714,7 +714,7 @@
             <include content="View_51_Wall_Container">
                 <param name="id" value="514" />
                 <param name="height" value="view_height" />
-                <param name="viewtype" value="$LOCALIZE[31426]" />
+                <param name="viewtype" value="Info Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
                 <param name="forced" value="true" />
@@ -738,7 +738,7 @@
             <include content="View_51_Wall_Container">
                 <param name="id" value="516" />
                 <param name="height" value="view_height" />
-                <param name="viewtype" value="$LOCALIZE[31436]" />
+                <param name="viewtype" value="Info Wall 2" />
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
                 <param name="forced" value="true" />
@@ -771,7 +771,7 @@
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="260.625" />
                 <param name="diffuse" value="diffuse/landscape-small-wall.png" />
-                <param name="viewtype" value="$LOCALIZE[31431]" />
+                <param name="viewtype" value="Landscape Wall Small" />
                 <param name="viewtypename" value="wide" />
                 <param name="forced" value="true" />
                 <param name="labelinclude" value="Defs_Null" />

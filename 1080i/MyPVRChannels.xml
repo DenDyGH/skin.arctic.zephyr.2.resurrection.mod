@@ -31,7 +31,7 @@
                     <param name="selectbox" value="false" />
                     <param name="controllayout" value="View_PVR_Channels" />
                     <param name="controltype" value="list" />
-                    <param name="viewtype" value="$LOCALIZE[31191]" />
+                    <param name="viewtype" value="Info List" />
                 </include>
             </control>
         </control>

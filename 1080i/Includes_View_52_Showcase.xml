@@ -358,7 +358,7 @@
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Layout" />
                 <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[Exp_IsPluginAdvancedLauncher]" />
-                <param name="viewtype" value="$LOCALIZE[31040]" />
+                <param name="viewtype" value="Poster Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
@@ -378,7 +378,7 @@
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
                 <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)" />
-                <param name="viewtype" value="$LOCALIZE[31040]" />
+                <param name="viewtype" value="Poster Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
@@ -402,7 +402,7 @@
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_520_Showcase_Layout" />
                 <param name="visible" value="Container.Content(artists) | Container.Content(albums) | $EXP[Exp_IsPluginAdvancedLauncher]" />
-                <param name="viewtype" value="$LOCALIZE[31362]" />
+                <param name="viewtype" value="Square Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
@@ -427,7 +427,7 @@
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
                 <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | $EXP[Exp_IsPluginAdvancedLauncher]" />
-                <param name="viewtype" value="$LOCALIZE[31362]" />
+                <param name="viewtype" value="Square Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
                 <movement>4</movement>
@@ -484,7 +484,7 @@
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="item_icon_height" />
                 <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[Exp_IsPluginAdvancedLauncher]" />
-                <param name="viewtype" value="$LOCALIZE[31361]" />
+                <param name="viewtype" value="Landscape Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
@@ -510,7 +510,7 @@
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="item_icon_height" />
                 <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[Exp_IsPluginAdvancedLauncher]" />
-                <param name="viewtype" value="$LOCALIZE[31361]" />
+                <param name="viewtype" value="Landscape Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
                 <movement>2</movement>
@@ -528,7 +528,7 @@
             <include content="View_51_Wall_Container">
                 <param name="id" value="522" />
                 <param name="height" value="item_row_height" />
-                <param name="viewtype" value="$LOCALIZE[31427]" />
+                <param name="viewtype" value="Season Info" />
                 <param name="viewtypename" value="biglist" />
                 <param name="forced" value="true" />
                 <param name="visible" value="Container.Content(seasons)" />
@@ -595,7 +595,7 @@
                 <include content="View_51_Wall_Container">
                     <param name="id" value="524" />
                     <param name="height" value="view_height" />
-                    <param name="viewtype" value="$LOCALIZE[31171]" />
+                    <param name="viewtype" value="Season Info 2" />
                     <param name="viewtypename" value="biglist" />
                     <param name="forced" value="true" />
                     <param name="visible" value="Container.Content(seasons)" />

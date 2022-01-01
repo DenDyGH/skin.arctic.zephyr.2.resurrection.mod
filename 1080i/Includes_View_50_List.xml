@@ -13,7 +13,7 @@
                 <param name="left" value="view_poster_width" />
                 <param name="right" value="-20" />
                 <param name="id" value="50" />
-                <param name="viewtype" value="$LOCALIZE[535]" />
+                <param name="viewtype" value="List" />
                 <param name="viewtypename" value="list" />
                 <param name="forced" value="true" />
                 <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors) | [Container.Content(files) + Window.IsVisible(MyVideoNav.xml) + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/) + !String.IsEmpty(Container.PluginName)] | Window.IsVisible(videoplaylist) | $EXP[Exp_IsPluginAdvancedLauncher]" />
@@ -37,7 +37,7 @@
                     <param name="left" value="654" />
                     <param name="right" value="-20" />
                     <param name="id" value="500" />
-                    <param name="viewtype" value="$LOCALIZE[535]" />
+                    <param name="viewtype" value="List" />
                     <param name="viewtypename" value="list" />
                     <param name="forced" value="true" />
                     <param name="visible" value="![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors) | [Container.Content(files) + Window.IsVisible(MyVideoNav.xml) + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/) + !String.IsEmpty(Container.PluginName)] | Window.IsVisible(videoplaylist)] | $EXP[Exp_IsPluginAdvancedLauncher]" />
@@ -59,7 +59,7 @@
                     <param name="left" value="870" />
                     <param name="right" value="-20" />
                     <param name="id" value="500" />
-                    <param name="viewtype" value="$LOCALIZE[535]" />
+                    <param name="viewtype" value="List" />
                     <param name="viewtypename" value="list" />
                     <param name="forced" value="true" />
                     <param name="visible" value="true" />
@@ -76,7 +76,7 @@
                 <param name="left" value="-20" />
                 <param name="right" value="771.44" />
                 <param name="id" value="501" />
-                <param name="viewtype" value="$LOCALIZE[31298]" />
+                <param name="viewtype" value="Media Info" />
                 <param name="viewtypename" value="info" />
                 <param name="forced" value="true" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
@@ -99,7 +99,7 @@
                 <param name="left" value="-20" />
                 <param name="right" value="1038.53" />
                 <param name="id" value="502" />
-                <param name="viewtype" value="$LOCALIZE[31423]" />
+                <param name="viewtype" value="Media Info 2" />
                 <param name="viewtypename" value="biginfo" />
                 <param name="forced" value="true" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
@@ -340,7 +340,7 @@
                         <param name="left" value="0" />
                         <param name="right" value="648" />
                         <param name="id" value="504" />
-                        <param name="viewtype" value="$LOCALIZE[31134]" />
+                        <param name="viewtype" value="Tri-Panel" />
                         <param name="viewtypename" value="biginfo" />
                         <param name="forced" value="true" />
                         <param name="itemlayout" value="View_504_Itemlayout" />
@@ -518,7 +518,7 @@
         <param name="top" default="0" />
         <param name="controllayout" default="View_Vertical" />
         <param name="controltype" default="panel" />
-        <param name="viewtype" default="$LOCALIZE[535]" />
+        <param name="viewtype" default="List" />
         <param name="viewtypename" default="list" />
         <param name="forced" default="false" />
         <param name="flipsides" default="false" />
@@ -541,9 +541,9 @@
                 <include>$PARAM[controllayout]</include>
                 <pagecontrol>60</pagecontrol>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <!-- <include content="View_Forced" condition="$PARAM[forced]">
+                <include content="View_Forced" condition="$PARAM[forced]">
                     <param name="string" value="$PARAM[viewtype]" />
-                </include> -->
+                </include>
                 <itemlayout height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="itemheight" value="$PARAM[itemheight]" />
