@@ -541,9 +541,9 @@
                 <include>$PARAM[controllayout]</include>
                 <pagecontrol>60</pagecontrol>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <include content="View_Forced" condition="$PARAM[forced]">
+                <!-- <include content="View_Forced" condition="$PARAM[forced]">
                     <param name="string" value="$PARAM[viewtype]" />
-                </include>
+                </include> -->
                 <itemlayout height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="itemheight" value="$PARAM[itemheight]" />

@@ -496,9 +496,9 @@
                 <height>$PARAM[height]</height>
                 <visible>$PARAM[visible]</visible>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <include content="View_Forced" condition="$PARAM[forced]">
+                <!-- <include content="View_Forced" condition="$PARAM[forced]">
                     <param name="string" value="$PARAM[viewtype]" />
-                </include>
+                </include> -->
                 <itemlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="selectbox" value="false" />
@@ -560,9 +560,9 @@
                 <height>$PARAM[height]</height>
                 <visible>$PARAM[visible]</visible>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <include content="View_Forced" condition="$PARAM[forced]">
+                <!-- <include content="View_Forced" condition="$PARAM[forced]">
                     <param name="string" value="$PARAM[viewtype]" />
-                </include>
+                </include> -->
                 <itemlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="selectbox" value="false" />
