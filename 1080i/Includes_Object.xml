@@ -535,6 +535,7 @@
         <param name="width" default="113" />
         <param name="height" default="113" />
         <param name="font" default="font_small_bold" />
+        <param name="iconvisible" default="true"/>
         <definition>
             <control type="image">
                 <top>4</top>
