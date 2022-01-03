@@ -204,18 +204,18 @@
         <value condition="!String.IsEmpty(ListItem.Art(snap))">$INFO[ListItem.Art(snap)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(landscape)) + Skin.HasSetting(LandscapeArt)">$INFO[ListItem.Art(landscape)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)">$INFO[ListItem.Art(thumb)]</value>
-        <value condition="!String.IsEmpty(ListItem.Property(fanart))">$INFO[ListItem.Property(fanart)]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
         <value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
         <value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)">$INFO[Container.Art(landscape)]</value>
         <value condition="!String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)">$INFO[Container.Art(tvshow.landscape)]</value>
+        <value condition="!String.IsEmpty(Container.Thumb)">$INFO[Container.Thumb]</value>
+        <value condition="!String.IsEmpty(Container.Art(thumb))">$INFO[Container.Art(thumb)]</value>
+        <value condition="!String.IsEmpty(ListItem.Property(fanart))">$INFO[ListItem.Property(fanart)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
         <value condition="!String.IsEmpty(Container.Property(fanart))">$INFO[Container.Property(fanart)]</value>
         <value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container.Thumb)">$INFO[Container.Thumb]</value>
-        <value condition="!String.IsEmpty(Container.Art(thumb))">$INFO[Container.Art(thumb)]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
 
