@@ -1,3 +1,5 @@
+0.7.4
+    - Fixed icon visibility for pvr
 0.7.3
     - Fixed forced view
     - Fix for ratings not showing in video osd
