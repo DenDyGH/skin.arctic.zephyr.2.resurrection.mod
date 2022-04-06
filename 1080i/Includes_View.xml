@@ -97,10 +97,18 @@
     </include>
 
     <include name="View_PVR_Guide_Info">
+        <control type="image">
+			<top>-545</top>
+			<width>395</width>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<texture>$INFO[ListItem.Icon]</texture>
+		</control>
         <control type="grouplist">
             <orientation>vertical</orientation>
             <usecontrolcoords>true</usecontrolcoords>
             <itemgap>0</itemgap>
+            <right>0</right>
+			<width>1340</width>
             <include content="Object_Info_Title">
                 <param name="label" value="$VAR[Label_PVRGuide_Title]" />
             </include>
