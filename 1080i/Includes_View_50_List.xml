@@ -16,7 +16,7 @@
                 <param name="viewtype" value="List" />
                 <param name="viewtypename" value="list" />
                 <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors) | [Container.Content(files) + Window.IsVisible(MyVideoNav.xml) + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/) + !String.IsEmpty(Container.PluginName)] | Window.IsVisible(videoplaylist) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors) | [Container.Content(files) + Window.IsVisible(MyVideoNav.xml) + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/) + !String.IsEmpty(Container.PluginName)] | Window.IsVisible(videoplaylist) | $EXP[InGameMode]" />
             </include>
         </control>
     </include>
@@ -40,7 +40,7 @@
                     <param name="viewtype" value="List" />
                     <param name="viewtypename" value="list" />
                     <param name="forced" value="true" />
-                    <param name="visible" value="![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors) | [Container.Content(files) + Window.IsVisible(MyVideoNav.xml) + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/) + !String.IsEmpty(Container.PluginName)] | Window.IsVisible(videoplaylist)] | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                    <param name="visible" value="![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors) | [Container.Content(files) + Window.IsVisible(MyVideoNav.xml) + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/) + !String.IsEmpty(Container.PluginName)] | Window.IsVisible(videoplaylist)] | $EXP[InGameMode]" />
                 </include>
             </control>
         </control>
@@ -80,7 +80,7 @@
                 <param name="viewtypename" value="info" />
                 <param name="forced" value="true" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
             </include>
             <include content="View_522_Showcase_Seasons_Info">
                 <param name="visible" value="true" />
@@ -103,7 +103,7 @@
                 <param name="viewtypename" value="biginfo" />
                 <param name="forced" value="true" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | $EXP[InGameMode]" />
             </include>
             <include>View_502_List_Info</include>
         </control>
@@ -119,7 +119,7 @@
                 <width>1790</width>
                 <top>-15</top>
                 <left>-15</left>
-                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | $EXP[Exp_IsPluginAdvancedLauncher]</visible>
+                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | $EXP[InGameMode]</visible>
                 <height>840</height>
                 <include>View_Vertical</include>
                 <movement>2</movement>
@@ -345,7 +345,7 @@
                         <param name="forced" value="true" />
                         <param name="itemlayout" value="View_504_Itemlayout" />
                         <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                        <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                        <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | $EXP[InGameMode]" />
                     </include>
                     <include content="View_504_Info">
                         <param name="visible" value="true" />
@@ -402,10 +402,10 @@
                             <width>500</width>
                             <label>$PARAM[title]</label>
                         </control>
-                        <include condition="!$EXP[Exp_IsPluginAdvancedLauncher]" content="Object_Info_Line">
+                        <include condition="!$EXP[InGameMode]" content="Object_Info_Line">
                             <param name="nextaired" value="false" />
                         </include>
-                        <include condition="$EXP[Exp_IsPluginAdvancedLauncher]">View_540_ROM_Details</include>
+                        <include condition="$EXP[InGameMode]">View_540_ROM_Details</include>
                         <control type="textbox">
                             <top>25</top>
                             <font>font_plotbox</font>
@@ -472,16 +472,16 @@
                         <height>52</height>
                         <label>$VAR[Label_List_Title]</label>
                     </control>
-                    <include condition="!$EXP[Exp_IsPluginAdvancedLauncher]">Object_Info_Line</include>
-                    <include condition="$EXP[Exp_IsPluginAdvancedLauncher]">View_540_ROM_Details</include>
-                    <include content="Object_Info_Ratings" condition="!$EXP[Exp_IsPluginAdvancedLauncher]">
+                    <include condition="!$EXP[InGameMode]">Object_Info_Line</include>
+                    <include condition="$EXP[InGameMode]">View_540_ROM_Details</include>
+                    <include content="Object_Info_Ratings" condition="!$EXP[InGameMode]">
                         <param name="top" value="-10" />
                         <param name="imdbvotes" value="false" />
                         <param name="top250" value="false" />
                         <param name="oscars" value="false" />
                     </include>
                     <control type="textbox">
-                        <visible>!$EXP[Exp_IsPluginAdvancedLauncher]</visible>
+                        <visible>!$EXP[InGameMode]</visible>
                         <top>25</top>
                         <font>font_plotbox</font>
                         <textcolor>main_fg_70</textcolor>
@@ -491,7 +491,7 @@
                         <label>$VAR[Label_Plot]</label>
                     </control>
                     <control type="textbox">
-                        <visible>$EXP[Exp_IsPluginAdvancedLauncher]</visible>
+                        <visible>$EXP[InGameMode]</visible>
                         <top>25</top>
                         <font>font_plotbox</font>
                         <textcolor>main_fg_70</textcolor>

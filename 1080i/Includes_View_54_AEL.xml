@@ -172,7 +172,7 @@
                 <param name="forced" value="true" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
                 <param name="focustrailer" value="true" />
-                <param name="visible" value="$EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="$EXP[InGameMode]" />
             </include>
             <include>View_540_List_Info</include>
         </control>
@@ -189,7 +189,7 @@
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
                 <param name="forced" value="true" />
-                <param name="visible" value="$EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="$EXP[InGameMode]" />
                 <param name="focustrailer" value="true" />
                 <param name="aspectratio" value="keep" />
                 <width>1028.56</width>
