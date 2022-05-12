@@ -114,7 +114,7 @@
                     <height>390</height>
                     <texture background="true">$VAR[Image_ClearLogo]</texture>
                     <aspectratio align="right" aligny="bottom">keep</aspectratio>
-                    <visible>!$EXP[Exp_IsPluginAdvancedLauncher] + [!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]</visible>
+                    <visible>!$EXP[InGameMode] + [!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]</visible>
                 </control>
                 <control type="group">
                     <include content="View_540_Platform_Icon">
@@ -137,12 +137,12 @@
                             <width>630</width>
                             <label>$PARAM[title]</label>
                         </control>
-                        <include condition="$EXP[Exp_IsPluginAdvancedLauncher]" content="View_540_ROM_Details">
+                        <include condition="$EXP[InGameMode]" content="View_540_ROM_Details">
                         </include>
-                        <include condition="$PARAM[seasons] + !$EXP[Exp_IsPluginAdvancedLauncher]" content="Object_Info_Line">
+                        <include condition="$PARAM[seasons] + !$EXP[InGameMode]" content="Object_Info_Line">
                             <param name="nextaired" value="false" />
                         </include>
-                        <include condition="!$PARAM[seasons] + !$EXP[Exp_IsPluginAdvancedLauncher]" content="Object_Info_Line">
+                        <include condition="!$PARAM[seasons] + !$EXP[InGameMode]" content="Object_Info_Line">
                             <param name="nextaired" value="false" />
                             <param name="label" value="$INFO[Container($PARAM[id]).ListItem.MPAA]" />
                             <param name="container" value="Container($PARAM[id])." />
@@ -357,7 +357,7 @@
                 <param name="labelinclude" value="Defs_Null" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Layout" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[InGameMode]" />
                 <param name="viewtype" value="Poster Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
@@ -401,7 +401,7 @@
                 <param name="orientation" value="horizontal" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_520_Showcase_Layout" />
-                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | $EXP[InGameMode]" />
                 <param name="viewtype" value="Square Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
@@ -426,7 +426,7 @@
                 <param name="orientation" value="horizontal" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
-                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | $EXP[InGameMode]" />
                 <param name="viewtype" value="Square Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
@@ -455,7 +455,7 @@
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
                 <param name="viewtype" value="Showcase Flix View" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
@@ -483,7 +483,7 @@
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
                 <param name="viewtype" value="Landscape Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
@@ -509,7 +509,7 @@
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
                 <param name="viewtype" value="Landscape Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <param name="forced" value="true" />
