@@ -1059,7 +1059,7 @@
                     <top>41</top>
                     <left>260</left>
                     <include content="Object_Ratings_Content" condition="!Skin.HasSetting(DisableStarRating) + !Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="$INFO[Skin.String(icons.diffuse)]" />
+                        <param name="colordiffuse" value="$VAR[IconsDiffuse_Var]" />
                         <param name="align" value="right" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
                         <param name="top250" value="$PARAM[top250]" />
@@ -1070,7 +1070,7 @@
                     <top>41</top>
                     <left>0</left>
                     <include content="Object_Ratings_Content" condition="Skin.HasSetting(DisableStarRating) | Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="$INFO[Skin.String(icons.diffuse)]" />
+                        <param name="colordiffuse" value="$VAR[IconsDiffuse_Var]" />
                         <param name="align" value="right" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
                         <param name="top250" value="$PARAM[top250]" />
@@ -1110,7 +1110,7 @@
                     <top>41</top>
                     <left>260</left>
                     <include content="Object_Ratings_Content" condition="!Skin.HasSetting(DisableStarRating) + !Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="$INFO[Skin.String(icons.diffuse)]" />
+                        <param name="colordiffuse" value="$VAR[IconsDiffuse_Var]" />
                         <param name="align" value="left" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
                         <param name="top250" value="$PARAM[top250]" />
@@ -1121,7 +1121,7 @@
                     <top>41</top>
                     <left>0</left>
                     <include content="Object_Ratings_Content" condition="Skin.HasSetting(DisableStarRating) | Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="$INFO[Skin.String(icons.diffuse)]" />
+                        <param name="colordiffuse" value="$VAR[IconsDiffuse_Var]" />
                         <param name="align" value="left" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
                         <param name="top250" value="$PARAM[top250]" />
@@ -1626,7 +1626,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/oscar.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/oscar.png</texture>
                     </control>
                     <control type="label">
                         <textcolor>main_fg_100</textcolor>
@@ -1648,7 +1648,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/trakt.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/trakt.png</texture>
                     </control>
                     <control type="label">
                         <textcolor>main_fg_100</textcolor>
@@ -1670,7 +1670,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/tmdb.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/tmdb.png</texture>
                     </control>
                     <control type="label">
                         <textcolor>main_fg_100</textcolor>
@@ -1692,7 +1692,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/metacritic.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/metacritic.png</texture>
                     </control>
                     <control type="label">
                         <textcolor>main_fg_100</textcolor>
@@ -1713,7 +1713,7 @@
                         <centerleft>50%</centerleft>
                         <width>52</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/imdbtop250.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/imdbtop250.png</texture>
                     </control>
                     <control type="label">
                         <textcolor>main_fg_100</textcolor>
@@ -1745,7 +1745,7 @@
                         <centerleft>50%</centerleft>
                         <width>52</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/imdb.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/imdb.png</texture>
                     </control>
                     <control type="label">
                         <textcolor>main_fg_100</textcolor>
@@ -1790,7 +1790,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/tvdb.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/tvdb.png</texture>
                     </control>
                     <control type="label">
                         <textcolor>main_fg_100</textcolor>
@@ -1811,7 +1811,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/user_rating.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/user_rating.png</texture>
                         <visible>Integer.IsGreater(Container($PARAM[id]).ListItem.UserRating,5)</visible>
                     </control>
                     <control type="image">
@@ -1819,7 +1819,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100" flipy="true">flags/$INFO[Skin.String(Icons)]/ratings/user_rating.png</texture>
+                        <texture colordiffuse="main_fg_100" flipy="true">flags/$VAR[IconsColor_Var]/ratings/user_rating.png</texture>
                         <visible>!Integer.IsGreater(Container($PARAM[id]).ListItem.UserRating,5)</visible>
                     </control>
                     <control type="label">
@@ -1842,7 +1842,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/rtrotten.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/rtrotten.png</texture>
                         <visible>!Integer.IsGreater($PARAM[rt_prop],59)</visible>
                     </control>
                     <control type="image">
@@ -1850,7 +1850,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/rtfresh.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/rtfresh.png</texture>
                         <visible>Integer.IsGreater($PARAM[rt_prop],59)</visible>
                     </control>
                     <control type="label">
@@ -1873,7 +1873,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/popcorn_spilt.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/popcorn_spilt.png</texture>
                         <visible>!Integer.IsGreater($PARAM[rt_audience_prop],59)</visible>
                     </control>
                     <control type="image">
@@ -1881,7 +1881,7 @@
                         <centerleft>50%</centerleft>
                         <width>32</width>
                         <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/ratings/popcorn.png</texture>
+                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/popcorn.png</texture>
                         <visible>Integer.IsGreater($PARAM[rt_audience_prop],59)</visible>
                     </control>
                     <control type="label">
@@ -2380,7 +2380,7 @@
     </include>
 
     <include name="Object_Ratings_Content">
-        <param name="directory" default="$INFO[Skin.String(Icons)]" />
+        <param name="directory" default="$VAR[IconsColor_Var]" />
         <param name="align" default="left" />
         <param name="rottentomatoes" default="true" />
         <param name="imdbvotes" default="true" />

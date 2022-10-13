@@ -84,8 +84,8 @@
                 </control>
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[id])</visible>
-                    <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Bold)">View_Selectbox_Bold</include>
-                    <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Thin)">View_Selectbox_Thin</include>
+                    <include condition="$PARAM[selectbox] + [String.IsEqual(Skin.String(FocusBorderSize),Bold) | String.IsEmpty(Skin.String(FocusBorderSize))]">View_Selectbox_Bold</include>
+                    <include condition="$PARAM[selectbox] + String.IsEqual(Skin.String(FocusBorderSize),Thin)">View_Selectbox_Thin</include>
                 </control>
             </control>
 
@@ -799,10 +799,10 @@
                     <param name="diffuse" value="$PARAM[diffuse]" />
                     <control type="group">
                         <visible>Control.HasFocus($PARAM[id])</visible>
-                        <include condition="Skin.String(FocusBorderSize, Bold)" content="View_Selectbox_Bold">
+                        <include condition="String.IsEqual(Skin.String(FocusBorderSize),Bold) | String.IsEmpty(Skin.String(FocusBorderSize))" content="View_Selectbox_Bold">
                             <param name="overlay" value="false" />
                         </include>
-                        <include condition="Skin.String(FocusBorderSize, Thin)" content="View_Selectbox_Thin">
+                        <include condition="String.IsEqual(Skin.String(FocusBorderSize),Thin)" content="View_Selectbox_Thin">
                             <param name="overlay" value="false" />
                         </include>
                     </control>
@@ -1055,7 +1055,7 @@
                             <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox-gradient.png</texture>
                         </control>
-                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
+                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     </control>
                     <control type="group">
                         <control type="image">
@@ -1098,7 +1098,7 @@
                             <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox2-gradient.png</texture>
                         </control>
-                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
+                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     </control>
                     <control type="group">
                         <control type="image">

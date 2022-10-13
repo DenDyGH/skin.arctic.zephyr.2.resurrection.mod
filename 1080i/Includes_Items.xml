@@ -2420,17 +2420,17 @@
         <control type="button" id="9001">
             <label>Monochrome</label>
             <include>Dialog_Standard_Button</include>
-            <onclick>Skin.SetString(Icons, monochrome)</onclick>
-            <onclick>Skin.SetString(icons.diffuse, main_fg_100)</onclick>
-            <onclick>Skin.SetString(icons.label, Monochrome)</onclick>
+            <onclick>Skin.SetString(Icons,monochrome)</onclick>
+            <onclick>Skin.SetString(icons.diffuse,main_fg_100)</onclick>
+            <onclick>Skin.SetString(icons.label,Monochrome)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9002">
             <label>Colorful</label>
             <include>Dialog_Standard_Button</include>
-            <onclick>Skin.SetString(Icons, colorful)</onclick>
+            <onclick>Skin.SetString(Icons,colorful)</onclick>
             <onclick>Skin.SetString(icons.diffuse, '')</onclick>
-            <onclick>Skin.SetString(icons.label, Colorful)</onclick>
+            <onclick>Skin.SetString(icons.label,Colorful)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
     </include>

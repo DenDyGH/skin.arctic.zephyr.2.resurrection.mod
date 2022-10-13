@@ -219,10 +219,10 @@
                     <control type="group">
                         <visible>!$PARAM[circle]</visible>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Bold)" content="View_Selectbox_Bold">
+                        <include condition="$PARAM[selectbox] + [String.IsEqual(Skin.String(FocusBorderSize),Bold) | String.IsEmpty(Skin.String(FocusBorderSize))]" content="View_Selectbox_Bold">
                             <param name="focusbounce" value="$PARAM[focusbounce]" />
                         </include>
-                        <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Thin)" content="View_Selectbox_Thin">
+                        <include condition="$PARAM[selectbox] + String.IsEqual(Skin.String(FocusBorderSize),Thin)" content="View_Selectbox_Thin">
                             <param name="focusbounce" value="$PARAM[focusbounce]" />
                         </include>
                     </control>
@@ -315,10 +315,10 @@
                     <control type="group">
                         <visible>!$PARAM[circle]</visible>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Bold)" content="View_Selectbox_Bold">
+                        <include condition="$PARAM[selectbox] + [String.IsEqual(Skin.String(FocusBorderSize),Bold) | String.IsEmpty(Skin.String(FocusBorderSize))]" content="View_Selectbox_Bold">
                             <param name="focusbounce" value="$PARAM[focusbounce]" />
                         </include>
-                        <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Thin)" content="View_Selectbox_Thin">
+                        <include condition="$PARAM[selectbox] + String.IsEqual(Skin.String(FocusBorderSize),Thin)" content="View_Selectbox_Thin">
                             <param name="focusbounce" value="$PARAM[focusbounce]" />
                         </include>
                     </control>
@@ -457,8 +457,8 @@
                 </control>
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[id])</visible>
-                    <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Bold)">View_Selectbox_Bold</include>
-                    <include condition="$PARAM[selectbox] + Skin.String(FocusBorderSize, Thin)">View_Selectbox_Thin</include>
+                    <include condition="$PARAM[selectbox] + [String.IsEqual(Skin.String(FocusBorderSize),Bold) | String.IsEmpty(Skin.String(FocusBorderSize))]">View_Selectbox_Bold</include>
+                    <include condition="$PARAM[selectbox] + String.IsEqual(Skin.String(FocusBorderSize),Thin)">View_Selectbox_Thin</include>
                 </control>
             </control>
             <include content="$PARAM[labelinclude]">

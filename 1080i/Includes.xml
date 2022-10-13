@@ -21,7 +21,6 @@
     <include file="Includes_Items.xml" />
     <include file="Includes_Images.xml" />
     <include file="Includes_Labels.xml" />
-    <!--    <include file="Includes_NextAired.xml" /> -->
     <include file="Includes_Object.xml" />
     <include file="Includes_Variable_Object.xml" />
     <include file="Includes_OSD.xml" />
@@ -37,14 +36,6 @@
 
     <include file="Constants_Main.xml" />
 
-    <!-- <variable name="ColorHighlight">
-        <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
-        <value>Highlight</value>
-    </variable>
-    <variable name="ColorHighlight2">
-        <value condition="String.IsEqual(Skin.String(PosterHighlight),Highlight)">$VAR[ColorHighlight]</value>
-        <value>Selected</value>
-    </variable> -->
     <!-- Highlight Color -->
     <variable name="ColorHighlight">
         <value condition="Skin.HasSetting(TMDbHelper.EnableColors) + !String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.Colors.Main))">$INFO[Window(home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
@@ -72,6 +63,21 @@
     <variable name="ColorWatchedProgress">
         <value condition="!String.IsEmpty(Skin.String(watchedprogresscolor.name))">$INFO[Skin.String(watchedprogresscolor.name)]</value>
         <value>WatchedProgress</value>
+    </variable>
+
+    <variable name="IconsColor_Var">
+        <value condition="String.IsEmpty(Skin.String(Icons))">monochrome</value>
+        <value>$INFO[Skin.String(Icons)]</value>
+    </variable>
+
+    <variable name="IconsDiffuse_Var">
+        <value condition="String.IsEmpty(Skin.String(icons.diffuse))">main_fg_100</value>
+        <value>$INFO[Skin.String(icons.diffuse)]</value>
+    </variable>
+
+    <variable name="IconsColorLabel_Var">
+        <value condition="String.IsEmpty(Skin.String(icons.label))">Monochrome</value>
+        <value>$INFO[Skin.String(icons.label)]</value>
     </variable>
 
     <variable name="PVRTimeRemainingMMVar">
