@@ -770,13 +770,6 @@
                         <selected>!Skin.HasSetting(HideOSDScrollingText)</selected>
                         <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
                     </control>
-                    <control type="radiobutton" id="19513" description="Video Lyrics">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31377]</label>
-                        <selected>!Skin.HasSetting(NormalLyrics)</selected>
-                        <onclick>Skin.ToggleSetting(NormalLyrics)</onclick>
-                    </control>
                     <control type="radiobutton" id="19514" description="Animate Artist slideshow">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
                         <include>Defs_Settings_Button</include>
@@ -1013,15 +1006,6 @@
                         <onclick>Addon.OpenSettings(script.skinshortcuts)</onclick>
                         <onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
                         <selected>System.HasAddon(script.skinshortcuts)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
-                    <control type="radiobutton" id="19812">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.artistslideshow</label>
-                        <label2>$INFO[System.AddonVersion(script.artistslideshow)]        </label2>
-                        <onclick>Addon.OpenSettings(script.artistslideshow)</onclick>
-                        <onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
-                        <selected>System.HasAddon(script.artistslideshow)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
                     <control type="radiobutton" id="19814">
