@@ -6,9 +6,6 @@
     <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(refocus,SetFocus(301),00:01,silent,false)</onload>
     <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
 
-    <onload condition="Skin.HasSetting(ThemeSwitcher) + !Skin.HasSetting(HomeMultiNetflixDark) + System.Time(06:00,18:00) + !String.IsEqual(Window(home).property(lookandfeel.skintheme),SKINDEFAULT)">RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT)</onload>
-    <onload condition="Skin.HasSetting(ThemeSwitcher) + !Skin.HasSetting(HomeMultiNetflixDark) + !System.Time(06:00,18:00) + !String.IsEqual(Window(home).property(lookandfeel.skintheme),Dark with dark dialogs)">RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=Dark with dark dialogs)</onload>
-
     <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=301&amp;levels=1&amp;group=mainmenu|powermenu|searchmenu)</onload>
     
     <onunload condition="!Control.HasFocus(301) + [Window.Next(VideoFullScreen.xml) | Window.Next(MusicVisualisation.xml)]">SetFocus(301)</onunload>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1150">
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <onunload>ClearProperty(CustomDialogWindow.header)</onunload>
+    <onunload>ClearProperty(CustomDialogWindow.items)</onunload>
+    <controls>
+        <include>Global_Overlay</include>
+        <control type="group">
+            <include content="Dialog_Standard_Group">
+                <param name="width" value="1180" />
+                <param name="height" value="520" />
+            </include>
+
+            <control type="label">
+                <description>Header Label</description>
+                <label>$INFO[Window(home).Property(CustomDialogWindow.header)]</label>
+                <include>Dialog_Standard_Header</include>
+            </control>
+
+            <include content="Defs_Settings_Gradient">
+                <param name="id" value="9000" />
+                <top>dialog_top</top>
+                <height>item_list_height</height>
+                <right>dialog_side_grouplist</right>
+                <visible>ControlGroup(9000).HasFocus()</visible>
+            </include>
+
+            <control type="grouplist" id="9000">
+                <onright>61</onright>
+                <description>Control Area</description>
+                <width>780</width>
+                <top>dialog_top</top>
+                <height>390</height>
+                <itemgap>0</itemgap>
+                <pagecontrol>61</pagecontrol>
+                <orientation>vertical</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),LayoutSettings)">Items_SettingsDialog_Layout</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),MenuStyle)">Items_SettingsDialog_MenuStyle</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),MenuStyle2)">Items_SettingsDialog_MenuStyle2</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),FallbackImage)">Items_SettingsDialog_FallbackImage</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),FallbackImage_Fanart)">Items_SettingsDialog_FallbackImage_Fanart</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),TrailerDelay)">Items_SettingsDialog_TrailerDelay</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),TimePerImage)">Items_SettingsDialog_TimePerImage</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),IconStyle)">Items_SettingsDialog_IconStyle</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),OSD_Timeout)">Items_SettingsDialog_OSD_Timeout</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),FocusBorder)">Items_SettingsDialog_FocusBorder</include>
+            </control>
+
+            <include content="Dialog_Scrollbar">
+                <param name="onleft" value="9000" />
+            </include>
+            
+           
+            <control type="group">
+                <include>Dialog_Standard_Right_Group</include>
+                <control type="grouplist" id="8000">
+                    <onleft>61</onleft>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <control type="button" id="8001" description="Close">
+                        <label>$LOCALIZE[15067]</label>
+                        <onclick>Close</onclick>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

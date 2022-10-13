@@ -197,9 +197,9 @@
 
                 <onclick>Dialog.Close(all,true)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Trailer)">RunScript(script.embuary.helper,action=playitem,item='$INFO[ListItem.Trailer]')</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
                 <onclick condition="String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onclick>
-                <onclick condition="String.IsEmpty(ListItem.Trailer)">RunScript(script.embuary.helper,action=playitem,item='$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)]')</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)])</onclick>
             </include>
 
             <include content="Object_Info_Button">

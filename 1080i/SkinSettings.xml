@@ -209,69 +209,9 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30045]</label>
                         <label2>$VAR[Label_SkinSettings_HomeLayout]</label2>
-
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30101])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,
-                                    Skin.Reset(HomeMultiNetflix) ||
-                                    Skin.Reset(HomeMultiVertical) || 
-                                    Skin.Reset(HomeMultiNetflixDark) || 
-                                    Skin.Reset(HomeMultiHorizontal) || 
-                                    Skin.Reset(HomeBasic) || 
-                                    Skin.SetBool(HomeMulti) || 
-                                    Skin.SetBool(HomeMultiFlixView) || RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=Darker with dark dialogs))
-                        </onclick>
-
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30079])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,
-                                    Skin.Reset(HomeMultiFlixView) ||
-                                    Skin.Reset(HomeMultiVertical) || 
-                                    Skin.Reset(HomeMultiNetflixDark) || 
-                                    Skin.Reset(HomeMultiHorizontal) || 
-                                    Skin.Reset(HomeBasic) || 
-                                    Skin.SetBool(HomeMulti) || 
-                                    Skin.SetBool(HomeMultiNetflix) || RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
-                        </onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30080])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,
-                                    Skin.Reset(HomeMultiFlixView) ||
-                                    Skin.Reset(HomeMultiNetflix) || 
-                                    Skin.Reset(HomeMultiVertical) || 
-                                    Skin.Reset(HomeMultiHorizontal) || 
-                                    Skin.Reset(HomeBasic) || 
-                                    Skin.SetBool(HomeMulti) || 
-                                    Skin.SetBool(HomeMultiNetflixDark) || RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=Dark with dark dialogs))
-                        </onclick>
-                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[30051])</onclick>
-                        <onclick>SetProperty(Dialog.4.BuiltIn,
-                                    Skin.Reset(HomeMultiFlixView) ||
-                                    Skin.Reset(HomeMultiNetflix) || 
-                                    Skin.Reset(HomeMultiNetflixDark) || 
-                                    Skin.Reset(HomeMultiHorizontal) || 
-                                    Skin.Reset(HomeBasic) || 
-                                    Skin.SetBool(HomeMulti) || 
-                                    Skin.SetBool(HomeMultiVertical) || RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
-                        </onclick>
-                        <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[30052])</onclick>
-                        <onclick>SetProperty(Dialog.5.BuiltIn,
-                                    Skin.Reset(HomeMultiFlixView) ||
-                                    Skin.Reset(HomeMultiNetflix) || 
-                                    Skin.Reset(HomeMultiNetflixDark) || 
-                                    Skin.Reset(HomeMultiVertical) || 
-                                    Skin.Reset(HomeBasic) || 
-                                    Skin.SetBool(HomeMulti) || 
-                                    Skin.SetBool(HomeMultiHorizontal) || RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
-                        </onclick>
-                        <onclick>SetProperty(Dialog.6.Label,$LOCALIZE[30061])</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,
-                                    Skin.Reset(HomeMultiFlixView) ||
-                                    Skin.Reset(HomeMultiNetflix) || 
-                                    Skin.Reset(HomeMultiNetflixDark) || 
-                                    Skin.Reset(HomeMultiVertical) || 
-                                    Skin.Reset(HomeMultiHorizontal) || 
-                                    Skin.Reset(HomeMulti) || 
-                                    Skin.SetBool(HomeBasic) || RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT))
-                        </onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[30045])</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[30045],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,LayoutSettings,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                     </control>
 
                     <control type="button" id="19109" description="Home Menu Style">
@@ -279,26 +219,9 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30046]</label>
                         <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
-
-                        <onclick>SetProperty(Context.1.Label,$LOCALIZE[30054])</onclick>
-                        <onclick>SetProperty(Context.1.BuiltIn,
-                                    Skin.Reset(VerticalIconsOnly) ||
-                                    Skin.Reset(HomeTextAutoWidth) ||
-                                    Skin.Reset(HomeIcons))
-                        </onclick>
-                        <onclick>SetProperty(Context.2.Label,$LOCALIZE[30053])</onclick>
-                        <onclick>SetProperty(Context.2.BuiltIn,
-                                    Skin.Reset(VerticalIconsOnly) ||
-                                    Skin.Reset(HomeTextAutoWidth) ||
-                                    Skin.SetBool(HomeIcons))
-                        </onclick>
-                        <onclick>SetProperty(Context.3.Label,$LOCALIZE[30081])</onclick>
-                        <onclick>SetProperty(Context.3.BuiltIn,
-                                    Skin.Reset(HomeIcons) ||
-                                    Skin.Reset(HomeTextAutoWidth) ||
-                                    Skin.SetBool(VerticalIconsOnly))
-                        </onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[30046],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,MenuStyle,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                         <visible>Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)</visible>
                     </control>
 
@@ -307,45 +230,11 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30046]</label>
                         <label2>$VAR[Label_SkinSettings_MenuStyle]</label2>
-
-                        <onclick>SetProperty(Context.1.Label,$LOCALIZE[30056])</onclick>
-                        <onclick>SetProperty(Context.1.BuiltIn,
-                                    Skin.Reset(HomeIcons) ||
-                                    Skin.SetBool(HomeTextAutoWidth))
-                        </onclick>
-                        <onclick>SetProperty(Context.2.Label,$LOCALIZE[30057])</onclick>
-                        <onclick>SetProperty(Context.2.BuiltIn,
-                                    Skin.Reset(HomeIcons) ||
-                                    Skin.Reset(VerticalIconsOnly) ||
-                                    Skin.Reset(HomeTextAutoWidth))
-                        </onclick>
-                        <onclick>SetProperty(Context.3.Label,$LOCALIZE[30055])</onclick>
-                        <onclick>SetProperty(Context.3.BuiltIn,
-                                    Skin.Reset(HomeTextAutoWidth) ||
-                                    Skin.SetBool(HomeIcons))
-                        </onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[30046],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,MenuStyle2,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                         <visible>[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)]</visible>
                     </control>
-
-                    <!-- <control type="button" id="19109" description="Menu Style"> -->
-                    <!-- <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible> -->
-                    <!-- <include>Defs_Settings_Button</include> -->
-                    <!-- <label>$LOCALIZE[30046]</label> -->
-                    <!-- <label2>$VAR[Label_SkinSettings_MenuStyle]</label2> -->
-
-                    <!-- If vertical just toggle icons -->
-                    <!-- <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.ToggleSetting(HomeIcons)</onclick> -->
-                    <!-- <onclick condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal)">Skin.Reset(VerticalIconsOnly)</onclick> -->
-                    <!-- <onclick condition="Skin.HasSetting(HomeMultiVertical) + [Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeIcons)]">Skin.ToggleSetting(VerticalIconsOnly)</onclick> -->
-
-                    <!-- If not vertical toggle both -->
-                    <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + !Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeTextAutoWidth)</onclick> -->
-                    <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeTextAutoWidth) + !Skin.HasSetting(HomeIcons)">Skin.SetBool(HomeIcons)</onclick> -->
-                    <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeTextAutoWidth)</onclick> -->
-                    <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(HomeIcons)</onclick> -->
-                    <!-- <onclick condition="[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)] + Skin.HasSetting(HomeIcons)">Skin.Reset(VerticalIconsOnly)</onclick> -->
-                    <!-- </control> -->
 
                     <control type="button" id="19119" description="Corner Icon">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible>
@@ -389,14 +278,9 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31150]</label>
                         <label2>$INFO[Skin.String(HomeBackgroundImage)]</label2>
-
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(HomeBackgroundImage))</onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(HomeBackgroundImage))</onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31272])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(HomeBackgroundImage))</onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31150])</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31150],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,FallbackImage,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                     </control>
 
                     <control type="radiobutton" id="19107" description="Auto Scroll Single Widgets">
@@ -460,30 +344,14 @@
                         <selected>Skin.HasSetting(DisableBackgroundOverlay)</selected>
                     </control>
 
-                    <!-- <control type="button" id="19208" description="Set Fallback Image">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>Set background image</label>
-                        <label2>$INFO[Skin.String(background.image)]</label2>
-
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(background.image))</onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(background.image))</onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=Set background image)</onclick>
-                    </control> -->
-
                     <control type="button" id="19204" description="Set Fallback Image">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9002)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31150]</label>
                         <label2>$INFO[Skin.String(fanart.fallback)]</label2>
-
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(fanart.fallback))</onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(fanart.fallback))</onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31150])</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31150],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,FallbackImage_Fanart,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                     </control>
 
                     <control type="radiobutton" id="19205" description="Show video in background">
@@ -511,23 +379,9 @@
 
                         <enable>Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)</enable>
 
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30039])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(Trailer_Delay))</onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30112])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(Trailer_Delay,00:03))</onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30113])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(Trailer_Delay,00:06))</onclick>
-                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31117])</onclick>
-                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(Trailer_Delay,00:09))</onclick>
-                        <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31123])</onclick>
-                        <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(Trailer_Delay,00:14))</onclick>
-                        <onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31124])</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(Trailer_Delay,00:19))</onclick>
-                        <onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31125])</onclick>
-                        <onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(Trailer_Delay,00:29))</onclick>
-                        <onclick>SetProperty(Dialog.8.Label,$LOCALIZE[31126])</onclick>
-                        <onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(Trailer_Delay,00:59))</onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[30111])</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[30111],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,TrailerDelay,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                     </control>
 
                     <control type="button" id="192047" description="Set Timer Per Image">
@@ -536,21 +390,9 @@
                         <label>$LOCALIZE[31128]</label>
                         <label2>$INFO[Skin.String(AutoScroll)]</label2>
 
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31117])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31117]))</onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31122])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31122]))</onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31123])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31123]))</onclick>
-                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31124])</onclick>
-                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31124]))</onclick>
-                        <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31125])</onclick>
-                        <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31125]))</onclick>
-                        <onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31126])</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31126]))</onclick>
-                        <onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31127])</onclick>
-                        <onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(AutoScroll,$LOCALIZE[31127]))</onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31128])</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31128],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,TimePerImage,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                     </control>
 
                     <control type="radiobutton" id="19206" description="Animate background ken burns">
@@ -639,15 +481,6 @@
                         <onclick>Skin.ToggleSetting(EnableHighContrastWidgetText)</onclick>
                     </control>
 
-                    <control type="radiobutton" id="19307" description="Automatic Theme Switch">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31188]</label>
-                        <selected>Skin.HasSetting(ThemeSwitcher)</selected>
-                        <onclick>Skin.ToggleSetting(ThemeSwitcher)</onclick>
-                        <onclick condition="String.IsEmpty(Window(home).property(lookandfeel.skintheme))">RunScript(script.embuary.helper,action=getkodisetting,setting=lookandfeel.skintheme)</onclick>
-                    </control>
-
                     <control type="label" id="19382" description="LABEL">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
                         <include>Dialog_Standard_HintLabel</include>
@@ -730,18 +563,9 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30083]</label>
                         <label2>$INFO[Skin.String(icons.label)]</label2>
-
-                        <onclick>SetProperty(Context.1.Label,Monochrome)</onclick>
-                        <onclick>SetProperty(Context.1.BuiltIn,
-                                            Skin.SetString(Icons, monochrome) ||
-                                            Skin.SetString(icons.diffuse, main_fg_100) ||
-                                            Skin.SetString(icons.label, Monochrome))</onclick>
-                        <onclick>SetProperty(Context.2.Label,Colorful)</onclick>
-                        <onclick>SetProperty(Context.2.BuiltIn,
-                                            Skin.SetString(Icons, colorful) ||
-                                            Skin.SetString(icons.diffuse, '') ||
-                                            Skin.SetString(icons.label, Colorful))</onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[30083],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,IconStyle,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                     </control>
 
                     <control type="radiobutton" id="19412" description="Plot overlay">
@@ -854,25 +678,9 @@
                         <label>$LOCALIZE[31386]</label>
                         <label2>$INFO[Skin.String(OSD_Timeout),,]</label2>
 
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30039])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(OSD_Timeout))</onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30064])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[30064]))</onclick>
-                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[30065])</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[30065]))</onclick>
-                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31117])</onclick>
-                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31117]))</onclick>
-                        <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31122])</onclick>
-                        <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31122]))</onclick>
-                        <onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31123])</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31123]))</onclick>
-                        <onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31124])</onclick>
-                        <onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31124]))</onclick>
-                        <onclick>SetProperty(Dialog.8.Label,$LOCALIZE[31125])</onclick>
-                        <onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31125]))</onclick>
-                        <onclick>SetProperty(Dialog.9.Label,$LOCALIZE[31126])</onclick>
-                        <onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31126]))</onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=Autoclose OSD)</onclick>>
+                        <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31386],home)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,OSD_Timeout,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                         <selected>!String.IsEmpty(Skin.String(OSD_Timeout))</selected>
                     </control>
 
@@ -1098,12 +906,8 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[30066]</label>
                         <label2>$INFO[Skin.String(FocusBorderSize)]</label2>
-
-                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[30067])</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30067]))</onclick>
-                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[30068])</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(FocusBorderSize, $LOCALIZE[30068]))</onclick>
-                        <onclick>RunScript(script.embuary.helper,action=createselect,header=Focus border size)</onclick>
+                        <onclick>SetProperty(CustomDialogWindow.items,FocusBorder,home)</onclick>
+                        <onclick>ActivateWindow(1150)</onclick>
                     </control>
 
                     <control type="label" id="19781" description="LABEL">
@@ -1193,78 +997,6 @@
                         <label>$LOCALIZE[31161]</label>
                     </control>
 
-                    <!-- <control type="radiobutton" id="19801">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.skin.helper.service</label>
-                        <label2>$INFO[System.AddonVersion(script.skin.helper.service)]        </label2>
-                        <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
-                        <onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-                        <selected>System.HasAddon(script.skin.helper.service)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
-                    <control type="radiobutton" id="19802">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.skin.helper.widgets</label>
-                        <label2>$INFO[System.AddonVersion(script.skin.helper.widgets)]        </label2>
-                        <onclick condition="System.HasAddon(script.skin.helper.widgets)">Addon.OpenSettings(script.skin.helper.widgets)</onclick>
-                        <onclick condition="!System.HasAddon(script.skin.helper.widgets)">InstallAddon(script.skin.helper.widgets)</onclick>
-                        <selected>System.HasAddon(script.skin.helper.widgets)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control> -->
-                    <!-- <control type="radiobutton" id="19803">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.skin.helper.colorpicker</label>
-                        <label2>$INFO[System.AddonVersion(script.skin.helper.colorpicker)]        </label2>
-                        <onclick>Addon.OpenSettings(script.skin.helper.colorpicker)</onclick>
-                        <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
-                        <selected>System.HasAddon(script.skin.helper.colorpicker)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control> -->
-                    <!-- <control type="radiobutton" id="19804">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.skin.helper.skinbackup</label>
-                        <label2>$INFO[System.AddonVersion(script.skin.helper.skinbackup)]        </label2>
-                        <onclick condition="System.HasAddon(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
-                        <onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
-                        <selected>System.HasAddon(script.skin.helper.skinbackup)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
-                    <control type="radiobutton" id="19805">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.module.metadatautils</label>
-                        <label2>$INFO[System.AddonVersion(script.module.metadatautils)]        </label2>
-                        <onclick>Addon.OpenSettings(script.module.metadatautils)</onclick>
-                        <onclick condition="!System.HasAddon(script.module.metadatautils)">InstallAddon(script.module.metadatautils)</onclick>
-                        <selected>System.HasAddon(script.module.metadatautils)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
-                    <control type="radiobutton" id="19806">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>plugin.video.specialfeatures</label>
-                        <label2>$INFO[System.AddonVersion(plugin.video.specialfeatures)]        </label2>
-                        <onclick>Addon.OpenSettings(plugin.video.specialfeatures)</onclick>
-                        <onclick condition="!System.HasAddon(plugin.video.specialfeatures)">InstallAddon(plugin.video.specialfeatures)</onclick>
-                        <selected>System.HasAddon(plugin.video.specialfeatures)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control> -->
-                    <!-- <control type="radiobutton" id="19807">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.toolbox</label>
-                        <label2>$INFO[System.AddonVersion(script.toolbox)]        </label2>
-                        <onclick>Addon.OpenSettings(script.toolbox)</onclick>
-                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
-                        <selected>System.HasAddon(script.toolbox)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control> -->
-                    <control type="radiobutton" id="19808">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.embuary.helper</label>
-                        <label2>$INFO[System.AddonVersion(script.embuary.helper)]        </label2>
-                        <onclick>Addon.OpenSettings(script.embuary.helper)</onclick>
-                        <onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
-                        <selected>System.HasAddon(script.embuary.helper)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
                     <control type="radiobutton" id="19809">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>plugin.video.themoviedb.helper</label>
@@ -1283,15 +1015,6 @@
                         <selected>System.HasAddon(script.skinshortcuts)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
-                    <!-- <control type="radiobutton" id="19811">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.cu.lrclyrics</label>
-                        <label2>$INFO[System.AddonVersion(script.cu.lrclyrics)]        </label2>
-                        <onclick>Addon.OpenSettings(script.cu.lrclyrics)</onclick>
-                        <onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
-                        <selected>System.HasAddon(script.cu.lrclyrics)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control> -->
                     <control type="radiobutton" id="19812">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>script.artistslideshow</label>
@@ -1301,15 +1024,6 @@
                         <selected>System.HasAddon(script.artistslideshow)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
-                    <!-- <control type="radiobutton" id="19813">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.globalsearch</label>
-                        <label2>$INFO[System.AddonVersion(script.globalsearch)]        </label2>
-                        <onclick>Addon.OpenSettings(script.globalsearch)</onclick>
-                        <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
-                        <selected>System.HasAddon(script.globalsearch)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control> -->
                     <control type="radiobutton" id="19814">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>script.tv.show.next.aired</label>

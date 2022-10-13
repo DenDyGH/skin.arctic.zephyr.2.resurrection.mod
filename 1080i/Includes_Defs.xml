@@ -316,7 +316,7 @@
     </variable>
 
     <variable name="Def_Cast_List">
-        <value condition="!String.IsEmpty(ListItem.Cast)">plugin://script.embuary.helper?info=getcast&amp;type=movie&amp;title=$INFO[ListItem.Title]</value>
+        <value condition="!String.IsEmpty(ListItem.Cast)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=movie&amp;imdb_id=$INFO[ListItem.IMDBNumber]</value>
     </variable>
 
     <variable name="Def_Set_List">
@@ -327,8 +327,8 @@
     <variable name="Def_Similar_List">
         <value condition="!Skin.HasSetting(DisableExtendedInfo) + String.IsEqual(ListItem.DBType,tvshow)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=tv&amp;query=$INFO[ListItem.Label]</value>
         <value condition="!Skin.HasSetting(DisableExtendedInfo) + String.IsEqual(ListItem.DBType,movie)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=movie&amp;query=$INFO[ListItem.Label]</value>
-        <value condition="String.IsEqual(ListItem.DBType,movie)">plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</value>
-        <value condition="String.IsEqual(ListItem.DBType,tvshow)">plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=tvshow</value>
+        <value condition="String.IsEqual(ListItem.DBType,movie)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=movie&amp;imdb_id=$INFO[ListItem.IMDBNumber]</value>
+        <value condition="String.IsEqual(ListItem.DBType,tvshow)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=tv&amp;imdb_id=$INFO[ListItem.IMDBNumber]</value>
     </variable>
 
     <variable name="Def_Director_List">
