@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="2901">
-    <onload condition="!Player.PauseEnabled + String.IsEmpty(Window(Home).Property(OSDViewMode))">SetFocus(15)</onload>
-    <onload condition="Player.PauseEnabled + String.IsEmpty(Window(Home).Property(OSDViewMode))">SetFocus(14)</onload>
-    <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode))">SetFocus(3112)</onload>
-    <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode))">ClearProperty(OSDViewMode,Home)</onload>
+    <onload condition="!Player.PauseEnabled">SetFocus(15)</onload>
+    <onload condition="Player.PauseEnabled">SetFocus(14)</onload>
     <onunload>ClearProperty(OSDInfo,Home)</onunload>
     <controls>
 
@@ -28,7 +26,6 @@
         <control type="group">
             <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
             <control type="group">
-                <include condition="String.IsEmpty(Window(Home).Property(OSDViewMode))">Animation_FadeIn</include>
                 <visible>!Window.IsVisible(DialogSlider.xml)</visible>
                 <visible>!Window.IsVisible(VideoOSDBookmarks.xml)</visible>
                 <animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9605)">Conditional</animation>
@@ -65,7 +62,6 @@
             </include>
 
             <control type="group">
-                <include condition="String.IsEmpty(Window(Home).Property(OSDViewMode))">Animation_FadeIn</include>
                 <visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
                 <include>Global_Background</include>
                 <include>Topbar</include>

@@ -1682,7 +1682,6 @@
         <param name="osd_id" default="9000" />
         <definition>
             <control type="group">
-                <include condition="String.IsEmpty(Window(Home).Property(OSDViewMode))">Animation_FadeIn_SlideUp</include>
                 <animation effect="slide" end="$PARAM[position]" condition="true">Conditional</animation>
                 <visible>Integer.IsEqual(Window(Home).Property(OSD_Menu),$PARAM[id]) + !Window.IsVisible(DialogSlider.xml)</visible>
                 <control type="group">
