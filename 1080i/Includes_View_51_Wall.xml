@@ -266,7 +266,7 @@
         <param name="diffuse" default="diffuse/poster-wall.png" />
         <definition>
             <control type="group">
-                <right>-2</right>
+                <right>10</right>
                 <animation effect="zoom" time="350" end="110,110" center="120,120" ease="inout" condition="Skin.HasSetting(EnableZoomOnHover)">Focus</animation>
                 <control type="group">
                     <height>$PARAM[iconheight]</height>
