@@ -38,18 +38,29 @@
 
     <!-- Highlight Color -->
     <variable name="ColorHighlight">
-        <value condition="Skin.HasSetting(TMDbHelper.EnableColors) + !String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.Colors.Main))">$INFO[Window(home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
         <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
         <value>Highlight</value>
     </variable>
 
     <!-- Gradient Color -->
     <variable name="ColorGradient">
-        <value condition="Skin.HasSetting(TMDbHelper.EnableColors) + !String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.Colors.Comp))">$INFO[Window(home).Property(TMDbHelper.ListItem.Colors.Comp)]</value>
         <value condition="!Skin.HasSetting(EnableMonochromeHighlight) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
         <value condition="!Skin.HasSetting(EnableMonochromeHighlight)">Gradient</value>
-        <value>00ffffff</value>
+        <value>Highlight</value>
     </variable>
+
+    <include name="MonochromeTexture">
+        <param name="colordiffuse" default="$VAR[ColorHighlight]"/>
+        <param name="texture" default="common/white.png"/>
+        <definition>
+            <texturefocus colordiffuse="$PARAM[colordiffuse]">$PARAM[texture]</texturefocus>
+            <alttexturefocus colordiffuse="$PARAM[colordiffuse]">$PARAM[texture]</alttexturefocus>
+        </definition>
+    </include>
+
+    <include name="GradientTexture">
+        <texturefocus></texturefocus>
+    </include>
 
     <!-- Overlay Color -->
     <variable name="ColorOverlay">

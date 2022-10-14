@@ -171,12 +171,8 @@
         <align>left</align>
         <aligny>center</aligny>
         <height>item_list_height</height>
-        <texturenofocus />
-        <texturefocus />
-        <texturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</texturefocus>
-        <alttexturenofocus />
-        <alttexturefocus />
-        <alttexturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturefocus>
+        <include condition="Skin.HasSetting(EnableMonochromeHighlight)">MonochromeTexture</include>
+        <include condition="!Skin.HasSetting(EnableMonochromeHighlight)">GradientTexture</include>
     </include>
 
     <include name="Dialog_ColorPicker_WatchedIndicator_Group">
@@ -514,19 +510,6 @@
         <font>font_tiny</font>
         <textcolor>dialog_fg_70</textcolor>
         <label>$INFO[ListItem.Label2]</label>
-    </include>
-
-    <include name="Dialog_Standard_Right_Buttons_Gradient">
-        <control type="group">
-            <nested />
-            <height>item_list_height</height>
-            <control type="image">
-                <texture colordiffuse="$VAR[ColorHighlight]" border="8" flipy="true">common/box.png</texture>
-            </control>
-            <control type="image">
-                <texture colordiffuse="$VAR[ColorGradient]" border="8" flipy="true">common/box-gradient.png</texture>
-            </control>
-        </control>
     </include>
 
     <include name="Dialog_Standard_Right_Buttons">
