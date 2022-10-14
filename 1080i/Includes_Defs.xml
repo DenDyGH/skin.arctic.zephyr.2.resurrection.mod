@@ -826,7 +826,7 @@
                     <top>0</top>
                     <width>100</width>
                     <height>100</height>
-                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                    <animation effect="rotate" condition="true" start="360" end="0" loop="true" time="1000" center="auto">Conditional</animation>
                     <control type="image">
                         <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
@@ -834,7 +834,7 @@
                     <control type="image">
                         <texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
-                        <animation effect="fade" condition="true" start="0" end="75" pulse="true" time="1000">Conditional</animation>
+                        <animation effect="fade" condition="true" start="75" end="0" pulse="true" time="1000">Conditional</animation>
                     </control>
                 </control>
                 <control type="label">
@@ -864,7 +864,7 @@
                     <top>0</top>
                     <width>42</width>
                     <height>42</height>
-                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                    <animation effect="rotate" condition="true" start="360" end="0" loop="true" time="1000" center="auto">Conditional</animation>
                     <control type="image">
                         <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
@@ -872,7 +872,7 @@
                     <control type="image">
                         <texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
-                        <animation effect="fade" condition="true" start="0" end="75" pulse="true" time="1000">Conditional</animation>
+                        <animation effect="fade" condition="true" start="75" end="0" pulse="true" time="1000">Conditional</animation>
                     </control>
                 </control>
             </control>
