@@ -304,15 +304,15 @@
     </variable>
 
     <variable name="Label_Settings_Information">
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9001)">$LOCALIZE[31070]</value>
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9002)">$LOCALIZE[31071]</value>
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9003)">$LOCALIZE[31073]</value>
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9004)">$LOCALIZE[31074]</value>
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9005)">$LOCALIZE[31075]</value>
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9006)">$LOCALIZE[31076]</value>
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9007)">$LOCALIZE[31077]</value>
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9008)">$LOCALIZE[31078]</value>
-        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9009)">$LOCALIZE[31080]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(1)">$LOCALIZE[31070]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(2)">$LOCALIZE[31071]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(3)">$LOCALIZE[31073]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(4)">$LOCALIZE[31074]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(5)">$LOCALIZE[31075]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(6)">$LOCALIZE[31076]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(7)">$LOCALIZE[31077]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(8)">$LOCALIZE[31078]</value>
+        <value condition="Window.IsActive(skinsettings) + !Control.HasFocus(300) + Container(9000).HasFocus(9)">$LOCALIZE[31080]</value>
         <value condition="Window.IsActive(skinsettings)">$LOCALIZE[31081]</value>
         <value condition="Window.IsActive(systeminfo)">$LOCALIZE[31082]</value>
         <value condition="Window.IsActive(systemsettings)">$LOCALIZE[31083]</value>
