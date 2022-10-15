@@ -39,7 +39,7 @@
                     <left>0</left>
                     <top>39</top>
                     <width>dialog_side_grouplist</width>
-                    <height>702</height>
+                    <height>dialog_settings_grouplist_height</height>
                     <itemgap>0</itemgap>
                     <onright>5</onright>
                     <ondown>20</ondown>
