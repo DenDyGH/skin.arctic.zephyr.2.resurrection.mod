@@ -102,7 +102,7 @@
         <focusedcolor>Selected</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <texturefocus colordiffuse="dialog_bg_12">common/white.png</texturefocus>
+        <texturefocus>common/button_texture.png</texturefocus>
         <texturenofocus/>
         <textureup flipy="true" colordiffuse="dialog_fg_30">buttons/spin-down.png</textureup>
         <texturedown colordiffuse="dialog_fg_30">buttons/spin-down.png</texturedown>
@@ -125,7 +125,7 @@
         <focusedcolor>Selected</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <texturefocus colordiffuse="dialog_bg_12">common/white.png</texturefocus>
+        <texturefocus>common/button_texture.png</texturefocus>
         <texturenofocus/>
         <textureup flipy="true" colordiffuse="dialog_fg_30">buttons/spin-down.png</textureup>
         <texturedown colordiffuse="dialog_fg_30">buttons/spin-down.png</texturedown>
