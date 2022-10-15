@@ -637,8 +637,8 @@
         <textureradiofocus colordiffuse="dialog_fg_70">buttons/radio-on.png</textureradiofocus>
         <textureradionofocus colordiffuse="dialog_fg_30">buttons/radio-off.png</textureradionofocus>
         <focusedcolor>Selected</focusedcolor>
-        <alttexturefocus colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</alttexturefocus>
-        <texturefocus colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texturefocus>
+        <alttexturefocus>common/button_texture.png</alttexturefocus>
+        <texturefocus>common/button_texture.png</texturefocus>
     </include>
 
     <include name="Defs_SettingsTrick">
@@ -704,10 +704,7 @@
                 <focusedlayout height="item_list_height" width="item_list_height">
                     <include>Defs_SettingsTrick</include>
                     <control type="image">
-                        <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                    </control>
-                    <control type="image">
-                        <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+                        <texture>common/button_texture.png</texture>
                     </control>
                     <control type="group">
                         <width>item_list_height</width>

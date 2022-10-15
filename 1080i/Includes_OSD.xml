@@ -1734,7 +1734,7 @@
                         </itemlayout>
                         <focusedlayout width="450" height="item_list_height">
                             <control type="image">
-                                <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+                                <texture>common/button_texture.png</texture>
                             </control>
                             <control type="label">
                                 <font>font_tiny</font>

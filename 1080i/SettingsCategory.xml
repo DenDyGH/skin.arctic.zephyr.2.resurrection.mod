@@ -26,14 +26,11 @@
                     <top>item_list_height_half</top>
                     <control type="group">
                         <top>dialog_settings_grouplist_height</top>
-                        <height>item_list_height</height>
+                        <height>item_list_height_half</height>
                         <width>dialog_side_grouplist</width>
                         <visible>Control.HasFocus(20)</visible>
                         <control type="image">
-                            <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                        </control>
-                        <control type="image">
-                            <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+                            <texture>common/button_texture.png</texture>
                         </control>
                     </control>
                 </control>

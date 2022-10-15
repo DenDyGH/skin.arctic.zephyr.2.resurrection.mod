@@ -146,10 +146,7 @@
                         </itemlayout>
                         <focusedlayout width="450" height="item_list_height">
                             <control type="image">
-                                <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                            </control>
-                            <control type="image">
-                                <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+                                <texture>common/button_texture.png</texture>
                             </control>
                             <control type="label">
                                 <font>font_tiny</font>
@@ -985,13 +982,7 @@
                     <control type="image">
                         <top>$PARAM[selectpad]</top>
                         <bottom>$PARAM[selectpad]</bottom>
-                        <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                        <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
-                    </control>
-                    <control type="image">
-                        <top>$PARAM[selectpad]</top>
-                        <bottom>$PARAM[selectpad]</bottom>
-                        <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+                        <texture>common/button_texture.png</texture>
                         <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
                     </control>
                     <include content="Dialog_Standard_List_Itemlayout">

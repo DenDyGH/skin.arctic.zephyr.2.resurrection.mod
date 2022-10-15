@@ -529,9 +529,6 @@
                     <onclick>ActivateWindow(LoginScreen.xml)</onclick>
                     <focusedcolor>$VAR[Defs_Settings_ToggleButton_Text]</focusedcolor>
                     <texturefocus />
-                    <alttexturefocus />
-                    <texturefocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white-gradient.png</texturefocus>
-                    <alttexturefocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white-gradient.png</alttexturefocus>
                     <visible>Control.IsVisible(301)</visible>
                 </control>
             </control>

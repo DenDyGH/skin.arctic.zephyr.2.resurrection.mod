@@ -72,10 +72,7 @@
                 </itemlayout>
                 <focusedlayout width="550" height="item_list_height">
                     <control type="image">
-                        <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                    </control>
-                    <control type="image">
-                        <texture border="5" colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+                        <texture>common/button_texture.png</texture>
                     </control>
                     <control type="label">
                         <left>30</left>
