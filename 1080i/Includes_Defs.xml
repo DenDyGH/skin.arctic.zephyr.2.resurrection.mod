@@ -760,7 +760,7 @@
         <value>$VAR[ColorGradient]</value>
     </variable>
     <variable name="Defs_Settings_ToggleButton_Text">
-        <value condition="Control.HasFocus(300) | Control.HasFocus(20)">dialog_fg_70</value>
+        <value condition="[Control.HasFocus(300) | Control.HasFocus(20)] + !Skin.HasSetting(EnableMonochromeHighlight)">dialog_fg_70</value>
         <value>Selected</value>
     </variable>
     <include name="Defs_Settings_Button">
