@@ -151,13 +151,6 @@
 
             <!-- Shortcuts Buttons -->
             <control type="group">
-                <include content="Defs_Settings_Gradient">
-                    <param name="id" value="9100" />
-                    <height>item_list_height</height>
-                    <top>90</top>
-                    <left>550</left>
-                    <visible>ControlGroup(9100).HasFocus()</visible>
-                </include>
                 <control type="grouplist" id="9100">
                     <onleft>304</onleft>
                     <onup>9100</onup>

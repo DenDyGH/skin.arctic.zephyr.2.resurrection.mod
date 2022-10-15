@@ -116,30 +116,6 @@
         <value>main_fg_100</value>
     </variable>
 
-    <include name="Defs_Settings_Gradient">
-        <control type="group">
-            <nested />
-            <animation effect="fade" start="0" end="100" time="1">Visible</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,0)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,1)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,2)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,3)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,4)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,5)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,6)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,7)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,8)">Conditional</animation>
-            <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,9)">Conditional</animation>
-            <control type="image">
-                <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-            </control>
-            <control type="image">
-                <texture colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
-            </control>
-            <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
-        </control>
-    </include>
-
     <include name="Defs_Progress_Colorfader">
         <animation effect="fade" start="100" end="0" condition="Integer.IsEqual($PARAM[info],0)">Conditional</animation>
         <animation effect="fade" start="100" end="1" condition="Integer.IsEqual($PARAM[info],1)">Conditional</animation>
@@ -760,7 +736,7 @@
         <value>$VAR[ColorGradient]</value>
     </variable>
     <variable name="Defs_Settings_ToggleButton_Text">
-        <value condition="[Control.HasFocus(300) | Control.HasFocus(20)] + !Skin.HasSetting(EnableMonochromeHighlight)">dialog_fg_70</value>
+        <!-- <value condition="[Control.HasFocus(300) | Control.HasFocus(20)] + !Skin.HasSetting(EnableMonochromeHighlight)">dialog_fg_70</value> -->
         <value>Selected</value>
     </variable>
     <include name="Defs_Settings_Button">
@@ -770,8 +746,6 @@
         <height>item_list_height</height>
         <textoffsetx>30</textoffsetx>
         <focusedcolor>$VAR[Defs_Settings_ToggleButton_Text]</focusedcolor>
-        <include condition="Skin.HasSetting(EnableMonochromeHighlight)">MonochromeTexture</include>
-        <include condition="!Skin.HasSetting(EnableMonochromeHighlight)">GradientTexture</include>
     </include>
     <include name="Defs_RadioButton_NoTexture">
         <textureradioondisabled />

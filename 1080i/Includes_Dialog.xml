@@ -171,8 +171,8 @@
         <align>left</align>
         <aligny>center</aligny>
         <height>item_list_height</height>
-        <include condition="Skin.HasSetting(EnableMonochromeHighlight)">MonochromeTexture</include>
-        <include condition="!Skin.HasSetting(EnableMonochromeHighlight)">GradientTexture</include>
+        <texturefocus>common/button_texture.png</texturefocus>
+        <alttexturefocus>common/button_texture.png</alttexturefocus>
     </include>
 
     <include name="Dialog_ColorPicker_WatchedIndicator_Group">
@@ -1044,15 +1044,6 @@
             <control type="label" id="1">
                 <include>Dialog_Standard_Header</include>
             </control>
-
-            <!-- Right Gradient -->
-            <include content="Defs_Settings_Gradient">
-                <param name="id" value="5" />
-                <top>dialog_top</top>
-                <right>dialog_side_grouplist</right>
-                <height>item_list_height</height>
-                <visible>ControlGroup(5).HasFocus()</visible>
-            </include>
 
             <include>Dialog_Standard_List</include>
             <include content="Dialog_Standard_List">

@@ -49,19 +49,6 @@
         <value>Highlight</value>
     </variable>
 
-    <include name="MonochromeTexture">
-        <param name="colordiffuse" default="$VAR[ColorHighlight]"/>
-        <param name="texture" default="common/white.png"/>
-        <definition>
-            <texturefocus colordiffuse="$PARAM[colordiffuse]">$PARAM[texture]</texturefocus>
-            <alttexturefocus colordiffuse="$PARAM[colordiffuse]">$PARAM[texture]</alttexturefocus>
-        </definition>
-    </include>
-
-    <include name="GradientTexture">
-        <texturefocus></texturefocus>
-    </include>
-
     <!-- Overlay Color -->
     <variable name="ColorOverlay">
         <value condition="Skin.HasSetting(DisableOverlay)">7f000000</value>

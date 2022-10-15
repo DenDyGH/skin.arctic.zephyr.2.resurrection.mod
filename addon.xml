@@ -3,6 +3,7 @@
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts"/>
+        <import addon="script.skinhelper"/>
         <import addon="plugin.video.themoviedb.helper"/>
         <import addon="resource.images.studios.white"/>
         <import addon="resource.images.moviegenreicons.transparent"/>

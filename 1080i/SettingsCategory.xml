@@ -21,23 +21,6 @@
 
             <control type="group">
                 <left>item_list_height</left>
-                <!-- Left Gradient Fade -->
-                <include content="Defs_Settings_Gradient">
-                    <param name="id" value="3" />
-                    <top>item_list_height_half</top>
-                    <height>item_list_height</height>
-                    <width>dialog_side_grouplist</width>
-                    <visible>!Control.HasFocus(300) + !Control.HasFocus(20)</visible>
-                </include>
-                <!-- Right Gradient -->
-                <include content="Defs_Settings_Gradient">
-                    <param name="id" value="5" />
-                    <top>item_list_height_half</top>
-                    <height>item_list_height</height>
-                    <left>dialog_side_grouplist</left>
-                    <right>0</right>
-                    <visible>ControlGroup(5).HasFocus()</visible>
-                </include>
                 <!-- Expert Settings Button -->
                 <control type="group">
                     <top>item_list_height_half</top>

@@ -39,10 +39,7 @@
 
                     <focusedlayout width="550" height="item_list_height">
                         <control type="image">
-                            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
-                        </control>
-                        <control type="image">
-                            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
+                            <texture>common/button_texture.png</texture>
                         </control>
                         <control type="label">
                             <width>550</width>
@@ -96,15 +93,6 @@
                 </control>
 
                 <control type="group" id="12111">
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9999" />
-                        <top>item_list_height_half</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9999).HasFocus()</visible>
-                    </include>
                     <!-- ==== -->
                     <!-- Home -->
                     <!-- ==== -->
@@ -227,15 +215,6 @@
                         </control>
                     </control>
 
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9988" />
-                        <top>item_list_height_half</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9988).HasFocus()</visible>
-                    </include>
                     <!-- ========== -->
                     <!-- Background -->
                     <!-- ========== -->
@@ -335,15 +314,6 @@
                         </control>
                     </control>
 
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9977" />
-                        <top>item_list_height_half</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9977).HasFocus()</visible>
-                    </include>
                     <!-- ============= -->
                     <!-- Miscellaneous -->
                     <!-- ============= -->
@@ -385,9 +355,9 @@
                         <control type="radiobutton" id="19308" description="Monochrome Highlight">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[30097]</label>
+                            <selected>Skin.HasSetting(EnableMonochromeHighlight)</selected>
                             <onclick>Skin.ToggleSetting(EnableMonochromeHighlight)</onclick>
                             <onclick>ReloadSkin()</onclick>
-                            <selected>Skin.HasSetting(EnableMonochromeHighlight)</selected>
                         </control>
 
                         <control type="button" id="19302" description="Color Highlight">
@@ -463,15 +433,6 @@
                         </control>
                     </control>
 
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9966" />
-                        <top>item_list_height_half</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9966).HasFocus()</visible>
-                    </include>
                     <!-- ======= -->
                     <!-- Library -->
                     <!-- ======= -->
@@ -591,15 +552,6 @@
                         </control>
                     </control>
 
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9955" />
-                        <top>item_list_height_half</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9955).HasFocus()</visible>
-                    </include>
                     <!-- ================= -->
                     <!-- Video / Music OSD -->
                     <!-- ================= -->
@@ -758,15 +710,6 @@
                         </control>
                     </control>
 
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9944" />
-                        <top>item_list_height_half</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9944).HasFocus()</visible>
-                    </include>
                     <!-- ============= -->
                     <!-- Live TV / PVR -->
                     <!-- ============= -->
@@ -839,15 +782,6 @@
                         </control>
                     </control>
 
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9933" />
-                        <top>item_list_height_half</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9933).HasFocus()</visible>
-                    </include>
                     <!-- ============= -->
                     <!-- Furniture -->
                     <!-- ============= -->
@@ -946,15 +880,6 @@
                         </control>
                     </control>
 
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9922" />
-                        <top>item_list_height_half</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9922).HasFocus()</visible>
-                    </include>
                     <!-- ============ -->
                     <!-- Dependencies -->
                     <!-- ============ -->
@@ -1067,15 +992,6 @@
                         </control>
                     </control>
 
-                    <!-- Right Gradient -->
-                    <include content="Defs_Settings_Gradient">
-                        <param name="id" value="9911" />
-                        <top>429</top>
-                        <height>item_list_height</height>
-                        <left>dialog_side_grouplist</left>
-                        <right>0</right>
-                        <visible>ControlGroup(9911).HasFocus()</visible>
-                    </include>
                     <!-- =============================== -->
                     <!-- Arctic: Zephyr 2 - Resurrection -->
                     <!-- =============================== -->

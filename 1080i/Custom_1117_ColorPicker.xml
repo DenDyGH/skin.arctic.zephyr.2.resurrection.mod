@@ -43,6 +43,7 @@
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">Skin.SetString(gradientcolor.name,$INFO[ListItem.Label])</onclick>
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">Skin.SetString(overlaycolor.name,$INFO[ListItem.Label])</onclick>
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])">Skin.SetString(watchedprogresscolor.name,$INFO[ListItem.Label])</onclick>
+                        <onclick>RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
                         <onclick>SetFocus(3010)</onclick>
                         <itemlayout width="80" height="80">
                             <control type="image">
@@ -198,15 +199,6 @@
                             <param name="label" value="$LOCALIZE[30085]" />
                             <param name="color-var" value="ColorGradient" />
                         </include>
-                        <!-- <include content="Dialog_ColorPicker_SwatchPreview">
-                            <param name="id" value="3023" />
-                            <param name="onleft" value="3022" />
-                            <param name="onright" value="3021" />
-                            <param name="left" value="213.33" />
-                            <param name="color" value="$LOCALIZE[30093]" />
-                            <param name="label" value="$LOCALIZE[30093]" />
-                            <param name="color-var" value="ColorOverlay" />
-                        </include> -->
                     </control>
 
                     <!-- Button grouplist -->
@@ -229,7 +221,6 @@
                             <include>Dialog_Standard_Right_Buttons</include>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">SetProperty(colorpick,$LOCALIZE[30085],Home)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">SetProperty(colorpick,$LOCALIZE[30084],Home)</onclick>
-                            <!-- <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">SetProperty(colorpick,$LOCALIZE[30084],Home)</onclick> -->
                             <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])<!--  | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093]) --></visible>
                         </control>
                         <!-- EDIT -->
@@ -253,7 +244,8 @@
                         <control type="button" id="3012">
                             <label>$LOCALIZE[15067]</label>
                             <include>Dialog_Standard_Right_Buttons</include>
-                            <onclick>Action(Close)</onclick>
+                            <onclick>RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
+                            <onclick>ReloadSkin()</onclick>
                         </control>
                     </control>
                 </control>
