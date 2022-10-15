@@ -1908,3 +1908,8 @@ msgstr ""
 msgctxt "#31441"
 msgid "Disable channel label in PVR Guide"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31442"
+msgid "Show duration instead of rating in list view"
+msgstr ""
