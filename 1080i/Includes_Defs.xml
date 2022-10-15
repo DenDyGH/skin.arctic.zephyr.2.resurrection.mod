@@ -770,7 +770,6 @@
         <height>item_list_height</height>
         <textoffsetx>30</textoffsetx>
         <focusedcolor>$VAR[Defs_Settings_ToggleButton_Text]</focusedcolor>
-        <alttexturefocus />
         <include condition="Skin.HasSetting(EnableMonochromeHighlight)">MonochromeTexture</include>
         <include condition="!Skin.HasSetting(EnableMonochromeHighlight)">GradientTexture</include>
     </include>
