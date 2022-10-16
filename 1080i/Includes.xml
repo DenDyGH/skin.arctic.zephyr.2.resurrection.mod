@@ -38,15 +38,12 @@
 
     <!-- Highlight Color -->
     <variable name="ColorHighlight">
-        <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
-        <value>Highlight</value>
+        <value>$INFO[Skin.String(focuscolor.name)]</value>
     </variable>
 
     <!-- Gradient Color -->
     <variable name="ColorGradient">
-        <value condition="!Skin.HasSetting(EnableMonochromeHighlight) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
-        <value condition="!Skin.HasSetting(EnableMonochromeHighlight)">Gradient</value>
-        <value>Highlight</value>
+        <value>$INFO[Skin.String(gradientcolor.name)]</value>
     </variable>
 
     <!-- Overlay Color -->
