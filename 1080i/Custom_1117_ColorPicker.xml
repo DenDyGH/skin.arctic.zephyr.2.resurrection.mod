@@ -2,6 +2,7 @@
 <window type="dialog" id="1117">
     <defaultcontrol always="true">9000</defaultcontrol>
     <onunload>ClearProperty(colorpick,home)</onunload>
+    <onunload>RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onunload>
     <controls>
         <include>Global_Overlay</include>
         <control type="group">
@@ -232,6 +233,7 @@
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">Skin.SetString(gradientcolor.name)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">Skin.SetString(overlaycolor.name)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])">Skin.SetString(watchedprogress.name)</onclick>
+                            <onclick>RunScript(script.skinhelper,gradient=true,highlight=$INFO[Skin.String(focuscolor.name)],gradient=$INFO[Skin.String(gradientcolor.name)])</onclick>
                         </control>
                         <!-- CHOOSE PALETTE -->
                         <control type="button" id="3030">
@@ -244,7 +246,6 @@
                         <control type="button" id="3012">
                             <label>$LOCALIZE[15067]</label>
                             <include>Dialog_Standard_Right_Buttons</include>
-                            <onclick>RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
                             <onclick>ReloadSkin()</onclick>
                         </control>
                     </control>
