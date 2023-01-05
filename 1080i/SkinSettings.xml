@@ -357,6 +357,8 @@
                             <label>$LOCALIZE[30097]</label>
                             <selected>Skin.HasSetting(EnableMonochromeHighlight)</selected>
                             <onclick>Skin.ToggleSetting(EnableMonochromeHighlight)</onclick>
+                            <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$VAR[ColorHighlight])</onclick>
+                            <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
                             <onclick>ReloadSkin()</onclick>
                         </control>
 
