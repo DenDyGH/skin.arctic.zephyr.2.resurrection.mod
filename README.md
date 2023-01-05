@@ -4,19 +4,19 @@
 # Dependencies
 
 *Latest version of this skin requires additional dependency which are not listed in Kodi's repository so you must provide it on your own.*
-*Download [script.skinhelper](https://github.com/heppenowski/script.skinhelper/archive/refs/heads/main.zip) and install it*
+*Download [script.skinhelper](https://github.com/heppen7/script.skinhelper/archive/refs/heads/main.zip) and install it*
 
 Later you will find skinhelper in heppen's repository.
 
 # Installation & Updates
 
 *You can install it via repository to provide automatic updates*
-- Download repository: [repository.heppen](https://github.com/heppenowski/repository.heppen/archive/refs/heads/main.zip)
+- Download repository: [repository.heppen](https://github.com/heppen7/repository.heppen/archive/refs/heads/main.zip)
 - Or install it via Kodi file-manager
 	- add source: https://zips.ovh/heppen
 
 *or install it manually (updates should be installed manually)*
-- [skin.arctic.zephyr.2.resurrection.mod](https://github.com/heppenowski/skin.arctic.zephyr.2.resurrection.mod/archive/refs/heads/main.zip)
+- [skin.arctic.zephyr.2.resurrection.mod](https://github.com/heppen7/skin.arctic.zephyr.2.resurrection.mod/archive/refs/heads/main.zip)
 
 # License
 
