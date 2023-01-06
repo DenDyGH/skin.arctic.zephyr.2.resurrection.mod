@@ -1054,6 +1054,7 @@
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox-gradient.png</texture>
+                            <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
                         </control>
                         <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     </control>
@@ -1097,6 +1098,7 @@
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox2-gradient.png</texture>
+                            <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
                         </control>
                         <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     </control>
