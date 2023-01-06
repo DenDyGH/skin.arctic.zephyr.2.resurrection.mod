@@ -1362,6 +1362,11 @@ msgctxt "#31386"
 msgid "Auto close OSD controls after delay (in seconds)"
 msgstr "Automatycznie zamknij kontrolki OSD po czasie (w sekundach)"
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31387"
+msgid "Autohide seekbar after pausing"
+msgstr "Ukrywaj OSD podczas pauzy"
+
 #: /1080i/Includes_Topbar.xml
 msgctxt "#31391"
 msgid "Page"
