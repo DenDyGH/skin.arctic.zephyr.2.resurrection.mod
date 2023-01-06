@@ -2,7 +2,8 @@
 <window type="dialog" id="1117">
     <defaultcontrol always="true">9000</defaultcontrol>
     <onunload>ClearProperty(colorpick,home)</onunload>
-    <onunload>RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onunload>
+    <onunload condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onunload>
+    <onunload condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$VAR[ColorHighlight])</onunload>
     <controls>
         <include>Global_Overlay</include>
         <control type="group">
@@ -44,7 +45,8 @@
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">Skin.SetString(gradientcolor.name,$INFO[ListItem.Label])</onclick>
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">Skin.SetString(overlaycolor.name,$INFO[ListItem.Label])</onclick>
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])">Skin.SetString(watchedprogresscolor.name,$INFO[ListItem.Label])</onclick>
-                        <onclick>RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
+                        <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
+                        <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$VAR[ColorHighlight])</onclick>
                         <onclick>SetFocus(3010)</onclick>
                         <itemlayout width="80" height="80">
                             <control type="image">
@@ -181,7 +183,7 @@
                         <left>80</left>
                         <right>80</right>
                         <height>110</height>
-                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])<!--  | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093]) --></visible>
+                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])</visible>
                         <include content="Dialog_ColorPicker_SwatchPreview">
                             <param name="id" value="3021" />
                             <param name="onleft" value="3023" />
@@ -222,7 +224,7 @@
                             <include>Dialog_Standard_Right_Buttons</include>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">SetProperty(colorpick,$LOCALIZE[30085],Home)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">SetProperty(colorpick,$LOCALIZE[30084],Home)</onclick>
-                            <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])<!--  | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093]) --></visible>
+                            <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])</visible>
                         </control>
                         <!-- EDIT -->
                         <control type="button" id="3010">
@@ -233,7 +235,8 @@
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">Skin.SetString(gradientcolor.name)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">Skin.SetString(overlaycolor.name)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])">Skin.SetString(watchedprogress.name)</onclick>
-                            <onclick>RunScript(script.skinhelper,gradient=true,highlight=$INFO[Skin.String(focuscolor.name)],gradient=$INFO[Skin.String(gradientcolor.name)])</onclick>
+                            <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$INFO[Skin.String(focuscolor.name)],gradient=$INFO[Skin.String(gradientcolor.name)])</onclick>
+                            <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$INFO[Skin.String(focuscolor.name)])</onclick>
                         </control>
                         <!-- CHOOSE PALETTE -->
                         <control type="button" id="3030">
