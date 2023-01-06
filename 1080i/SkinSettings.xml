@@ -602,6 +602,13 @@
                             <selected>!String.IsEmpty(Skin.String(OSD_Timeout))</selected>
                         </control>
 
+                        <control type="radiobutton" id="19522" description="Autohide seekbar after pausing">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31387]</label>
+                            <onclick>Skin.ToggleSetting(OSD.AutoHideOnPause)</onclick>
+                            <selected>Skin.HasSetting(OSD.AutoHideOnPause)</selected>
+                        </control>
+
                         <control type="label" id="19501" description="LABEL VIDEO OSD">
                             <include>Dialog_Standard_HintLabel</include>
                             <label>$LOCALIZE[31346]</label>
