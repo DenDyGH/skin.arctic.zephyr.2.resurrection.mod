@@ -606,6 +606,7 @@
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31387]</label>
                             <onclick>Skin.ToggleSetting(OSD.AutoHideOnPause)</onclick>
+                            <enable>!String.IsEmpty(Skin.String(OSD_Timeout))</enable>
                             <selected>Skin.HasSetting(OSD.AutoHideOnPause)</selected>
                         </control>
 
