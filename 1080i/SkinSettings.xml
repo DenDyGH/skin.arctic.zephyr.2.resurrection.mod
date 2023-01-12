@@ -548,7 +548,7 @@
                         <control type="radiobutton" id="19431">
                             <label>$LOCALIZE[31174]</label>
                             <include>Defs_Settings_Button</include>
-                            <selected>Skin.HasSetting(LandscapeArt)</selected>
+                            <selected>!Skin.HasSetting(LandscapeArt)</selected>
                             <onclick>Skin.ToggleSetting(LandscapeArt)</onclick>
                         </control>
 
