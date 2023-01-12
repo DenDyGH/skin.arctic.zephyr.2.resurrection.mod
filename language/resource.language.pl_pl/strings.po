@@ -863,7 +863,7 @@ msgstr "Ostatnio dodane"
 #: /1080i/SkinSettings.xml
 msgctxt "#31174"
 msgid "Landscape art"
-msgstr "Krajobraz"
+msgstr "Wyświetlaj landscape"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31175"
