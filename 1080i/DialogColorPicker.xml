@@ -21,7 +21,7 @@
 			<control type="panel" id="6">
 				<left>20</left>
 				<top>100</top>
-				<width>880</width>
+				<width>890</width>
 				<bottom>26</bottom>
 				<onup>6</onup>
 				<ondown>6</ondown>
@@ -30,27 +30,28 @@
 				<orientation>vertical</orientation>
 				<pagecontrol>61</pagecontrol>
 				<viewtype label="100">icon</viewtype>
-				<itemlayout height="80" width="146">
+				<itemlayout height="80" width="80">
 					<control type="group">
 						<control type="image">
 							<top>3</top>
 							<left>8</left>
-							<width>138</width>
-							<height>74</height>
+							<width>80</width>
+							<height>80</height>
+							<bordersize>2</bordersize>
 							<texture border="0">common/white.png</texture>
 							<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="80" width="146">
+				<focusedlayout height="80" width="80">
 					<control type="group">
-						<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="124" center="auto">Focus</animation>
+						<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="118" center="auto">Focus</animation>
 						<control type="image">
 							<top>3</top>
 							<left>8</left>
-							<width>138</width>
-							<height>74</height>
+							<width>80</width>
+							<height>80</height>
 							<texture border="0">common/white.png</texture>
 							<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 							<aspectratio>stretch</aspectratio>
@@ -59,7 +60,7 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>910</left>
+				<left>920</left>
 				<top>100</top>
 				<width>12</width>
 				<bottom>26</bottom>
@@ -68,9 +69,9 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>935</left>
+				<left>940</left>
 				<top>103</top>
-				<width>330</width>
+				<width>325</width>
 				<onleft>61</onleft>
 				<onright>6</onright>
 				<orientation>vertical</orientation>
