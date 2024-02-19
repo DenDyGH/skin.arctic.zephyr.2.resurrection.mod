@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">6</defaultcontrol>
-	<include>Animation_DialogPopupOpenClose</include>
-	<depth>DepthOSD</depth>
 	<controls>
 		<include>Global_Overlay</include>
 		<control type="group">
@@ -69,23 +67,14 @@
 				<onright>9001</onright>
 				<orientation>vertical</orientation>
 			</control>
-			<control type="label">
-				<left>925</left>
-				<top>748</top>
-				<width>275</width>
-				<height>35</height>
-				<font>font12</font>
-				<align>right</align>
-				<textcolor>grey</textcolor>
-				<label>$VAR[SelectLabel]</label>
-			</control>
 			<control type="grouplist" id="9000">
-				<left>930</left>
+				<left>935</left>
 				<top>103</top>
-				<width>340</width>
+				<width>330</width>
 				<onleft>61</onleft>
-				<itemgap>dialogbuttons_itemgap</itemgap>
 				<onright>6</onright>
+				<orientation>vertical</orientation>
+				<itemgap>10</itemgap>
 				<!-- Close -->
 				<control type="button" id="3012">
 					<label>$LOCALIZE[15067]</label>
