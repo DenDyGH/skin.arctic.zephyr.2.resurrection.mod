@@ -70,15 +70,15 @@
                             <onclick>noop</onclick>
                         </item>
                         <item id="5">
-                            <label>$LOCALIZE[31024]</label>
-                            <onclick>noop</onclick>
-                        </item>
-                        <item id="6">
                             <label>$LOCALIZE[31270]</label>
                             <onclick>noop</onclick>
                         </item>
-                        <item id="7">
+                        <item id="6">
                             <label>$LOCALIZE[31422]</label>
+                            <onclick>noop</onclick>
+                        </item>
+                        <item id="7">
+                            <label>$LOCALIZE[31024]</label>
                             <onclick>noop</onclick>
                         </item>
                         <item id="8">

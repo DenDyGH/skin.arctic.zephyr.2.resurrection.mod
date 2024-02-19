@@ -126,8 +126,20 @@
             <include>Defs_Settings_Button</include>
         </control>
 
+        <control type="sliderex" id="13">
+            <description>Default Slider</description>
+            <include>Defs_Settings_Button</include>
+            <aligny>center</aligny>
+            <texturefocus>common/button_texture.png</texturefocus>
+        </control>
+
         <control type="label" id="14">
             <include>Dialog_Standard_HintLabel</include>
+        </control>
+
+        <control type="colorbutton" id="15">
+            <description>Default ColorButton</description>
+            <include>Defs_Settings_Button</include>
         </control>
 
     </controls>

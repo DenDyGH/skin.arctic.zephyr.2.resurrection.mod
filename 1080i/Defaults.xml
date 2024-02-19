@@ -191,6 +191,25 @@
         <orientation>vertical</orientation>
     </default>
 
+    <default type="colorbutton">
+        <height>70</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <font>font_small</font>
+        <colorwidth>96</colorwidth>
+		<colorheight>30</colorheight>
+		<texturecolormask>common/white.png</texturecolormask>
+		<texturecolordisabledmask colordiffuse="disabled">common/white.png</texturecolordisabledmask>
+        <textoffsetx>30</textoffsetx>
+        <textcolor>dialog_fg_70</textcolor>
+        <focusedcolor>Selected</focusedcolor>
+        <disabledcolor>dialog_fg_30</disabledcolor>
+        <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
+        <texturefocus>common/button_texture.png</texturefocus>
+        <texturenofocus />
+        <pulseonselect>false</pulseonselect>
+    </default>
+
 
 
     <default type="textbox">
