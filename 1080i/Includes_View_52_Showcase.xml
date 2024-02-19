@@ -168,24 +168,24 @@
                             <top>25</top>
                             <itemgap>14</itemgap>
                             <include content="Object_Info_TextPairs">
-                                <param name="name" value="Genre" />
+                                <param name="name" value="$LOCALIZE[31443]" />
                                 <param name="label" value="ListItem.Genre" />
                             </include>
                             <include content="Object_Info_TextPairs">
-                                <param name="name" value="Director" />
+                                <param name="name" value="$LOCALIZE[31444]" />
                                 <param name="label" value="ListItem.Director" />
                             </include>
                             <control type="group">
                                 <visible>!String.isEmpty(ListItem.Tagline)</visible>
                                 <include content="Object_Info_TextPairs">
-                                    <param name="name" value="Tagline" />
+                                    <param name="name" value="$LOCALIZE[31446]" />
                                     <param name="label" value="ListItem.Tagline" />
                                 </include>
                             </control>
                             <control type="group">
                                 <visible>String.isEmpty(ListItem.Tagline)</visible>
                                 <include content="Object_Info_TextPairs">
-                                    <param name="name" value="Premiered" />
+                                    <param name="name" value="$LOCALIZE[31447]" />
                                     <param name="label" value="ListItem.Premiered" />
                                 </include>
                             </control>

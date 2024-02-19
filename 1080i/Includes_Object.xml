@@ -971,22 +971,22 @@
     <include name="Object_Info_Details">
         <include content="Object_Info_TextPairs">
             <param name="pad" value="32" />
-            <param name="name" value="Genre" />
+            <param name="name" value="$LOCALIZE[31443]" />
             <param name="label" value="ListItem.Genre" />
         </include>
         <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
-            <param name="name" value="Director" />
+            <param name="name" value="$LOCALIZE[31444]" />
             <param name="label" value="ListItem.Director" />
         </include>
         <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
-            <param name="name" value="Writer" />
+            <param name="name" value="$LOCALIZE[31445]" />
             <param name="label" value="ListItem.Writer" />
         </include>
         <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
-            <param name="name" value="Tagline" />
+            <param name="name" value="$LOCALIZE[31446]" />
             <param name="label" value="ListItem.Tagline" />
         </include>
         <!-- <include content="Object_Info_TextPairs">
@@ -1001,7 +1001,7 @@
         </include> -->
         <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
-            <param name="name" value="Premiered" />
+            <param name="name" value="$LOCALIZE[31447]" />
             <param name="label" value="ListItem.Premiered" />
         </include>
     </include>
@@ -1009,17 +1009,17 @@
     <include name="Object_InfoSets_Details">
         <include content="Object_Info_TextPairs">
             <param name="pad" value="32" />
-            <param name="name" value="Genre" />
+            <param name="name" value="$LOCALIZE[31443]" />
             <param name="label" value="Window(Home).Property(TMDbHelper.ListItem.Genre)" />
         </include>
         <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
-            <param name="name" value="Director" />
+            <param name="name" value="$LOCALIZE[31444]" />
             <param name="label" value="Window(Home).Property(TMDbHelper.ListItem.Director)" />
         </include>
         <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
-            <param name="name" value="Writer" />
+            <param name="name" value="$LOCALIZE[31445]" />
             <param name="label" value="Window(Home).Property(TMDbHelper.ListItem.Writer)" />
         </include>
         <!-- <include content="Object_Info_TextPairs">

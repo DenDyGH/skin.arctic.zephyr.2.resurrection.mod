@@ -1883,3 +1883,28 @@ msgstr "Wyłącz nazwę kanału w przewodniku"
 msgctxt "#31442"
 msgid "Show duration instead of rating in list view"
 msgstr "Czas trwania zamiast oceny w widoku listy"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31443"
+msgid "Genre"
+msgstr "Gatunek"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31444"
+msgid "Director"
+msgstr "Reżyser"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31445"
+msgid "Writer"
+msgstr "Scenarzysta"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31446"
+msgid "Tagline"
+msgstr "Slogan"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31447"
+msgid "Premiered"
+msgstr "Premiera"

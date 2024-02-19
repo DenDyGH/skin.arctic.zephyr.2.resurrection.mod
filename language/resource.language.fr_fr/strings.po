@@ -1911,3 +1911,33 @@ msgstr "Mur d'information et bande-annonce jeu vidéo"
 msgctxt "#31441"
 msgid "Disable channel label in PVR Guide"
 msgstr "Désactiver les étiquettes de chaînes dans le guide TV"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31442"
+msgid "Show duration instead of rating in list view"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31443"
+msgid "Genre"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31444"
+msgid "Director"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31445"
+msgid "Writer"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31446"
+msgid "Tagline"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31447"
+msgid "Premiered"
+msgstr ""

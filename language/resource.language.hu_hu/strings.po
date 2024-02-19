@@ -1848,3 +1848,93 @@ msgstr "Stáb"
 msgctxt "#30104"
 msgid "Rating"
 msgstr "Értékelés"
+
+#: /1080i/Includes_Home.xml
+msgctxt "#30105"
+msgid "Switch Profile"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#30106"
+msgid "Match"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30107"
+msgid "Play Trailer in background in Flix View"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30108"
+msgid "Disable profile info in narrow menu"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30109"
+msgid "Enable zoom on hover"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30110"
+msgid "Show player tempo controls in OSD"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30111"
+msgid "Set delay to playing Trailers in Flix View"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30112"
+msgid "4 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30113"
+msgid "7 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30114"
+msgid "Don't blur Home screen"
+msgstr ""
+
+#: /1080i/Includes_View_54_AEL.xml
+msgctxt "#31440"
+msgid "ROM Info Wall Trailer"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31441"
+msgid "Disable channel label in PVR Guide"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31442"
+msgid "Show duration instead of rating in list view"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31443"
+msgid "Genre"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31444"
+msgid "Director"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31445"
+msgid "Writer"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31446"
+msgid "Tagline"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31447"
+msgid "Premiered"
+msgstr ""
