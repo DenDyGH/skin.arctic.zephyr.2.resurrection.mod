@@ -15,7 +15,7 @@
 			<control type="label">
 				<left>dialog_pad</left>
 				<include>Dialog_Standard_Header</include>
-				<label>$LOCALIZE[30095]</label>
+				<label>$LOCALIZE[737]: $INFO[ListItem.Label,, - ]$INFO[ListItem.Label2,#,]</label>
 			</control>
 			<!-- Color picker panel -->
 			<control type="panel" id="6">
