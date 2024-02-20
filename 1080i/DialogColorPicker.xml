@@ -65,7 +65,7 @@
 				<width>12</width>
 				<bottom>26</bottom>
 				<onleft condition="Control.IsVisible(6)">6</onleft>
-				<onright>9001</onright>
+				<onright>9000</onright>
 				<orientation>vertical</orientation>
 			</control>
 			<control type="grouplist" id="9000">
