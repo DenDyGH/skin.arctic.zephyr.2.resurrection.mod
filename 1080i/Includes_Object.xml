@@ -1664,7 +1664,7 @@
                     <width>64</width>
                     <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)</visible>
                     <visible>!String.IsEmpty($PARAM[tmdb_prop])</visible>
-                    <visible>Skin.HasSetting(Ratings.TheMovieDB)</visible>
+                    <visible>!Skin.HasSetting(Ratings.TheMovieDB)</visible>
                     <control type="image">
                         <top>0</top>
                         <centerleft>50%</centerleft>
@@ -2482,7 +2482,7 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating), ,%   ]</label>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating), ,   ]</label>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
                     <visible>$PARAM[trakt]</visible>
                     <visible>!Skin.HasSetting(Ratings.Trakt)</visible>
@@ -2494,7 +2494,7 @@
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/tmdb.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
                     <visible>$PARAM[tmdb]</visible>
-                    <visible>Skin.HasSetting(Ratings.TheMovieDB)</visible>
+                    <visible>!Skin.HasSetting(Ratings.TheMovieDB)</visible>
                 </control>
                 <control type="label">
                     <textcolor>main_fg_100</textcolor>
@@ -2506,7 +2506,7 @@
                     <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating), ,   ]</label>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
                     <visible>$PARAM[tmdb]</visible>
-                    <visible>Skin.HasSetting(Ratings.TheMovieDB)</visible>
+                    <visible>!Skin.HasSetting(Ratings.TheMovieDB)</visible>
                 </control>
                 <control type="image">
                     <top>0</top>
