@@ -4,19 +4,16 @@
 # Dependencies
 
 *Latest version of this skin requires additional dependency which are not listed in Kodi's repository so you must provide it on your own.*
-*Download [script.skinhelper](https://github.com/heppen7/script.skinhelper/archive/refs/heads/main.zip) and install it*
-
-Later you will find skinhelper in heppen's repository.
+*Download [script.skinhelper](https://github.com/DenDyGH/script.skinhelper/releases/download/v0.0.3/script.skinhelper-0.0.3.zip) and install it*
 
 # Installation & Updates
 
-*You can install it via repository to provide automatic updates*
-- Download repository: [repository.heppen](https://github.com/heppen7/repository.heppen/archive/refs/heads/main.zip)
-- Or install it via Kodi file-manager
-	- add source: https://zips.ovh/heppen
+First of all, install SkinHelper
+- [script.skinhelper](https://github.com/DenDyGH/script.skinhelper/releases/download/v0.0.3/script.skinhelper-0.0.3.zip)
 
-*or install it manually (updates should be installed manually)*
-- [skin.arctic.zephyr.2.resurrection.mod](https://github.com/heppen7/skin.arctic.zephyr.2.resurrection.mod/archive/refs/heads/main.zip)
+Then install skin
+- Kodi 20 Nexus: [skin.arctic.zephyr.2.resurrection.mod](https://github.com/DenDyGH/skin.arctic.zephyr.2.resurrection.mod/releases/download/v1.0.4/skin.arctic.zephyr.2.resurrection.mod-Nexus.zip)
+- Kodi 21 Omega: [skin.arctic.zephyr.2.resurrection.mod](https://github.com/DenDyGH/skin.arctic.zephyr.2.resurrection.mod/releases/download/v1.0.4/skin.arctic.zephyr.2.resurrection.mod-Omega.zip)
 
 # License
 
