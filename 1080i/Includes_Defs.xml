@@ -796,6 +796,7 @@
                         <texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
                         <animation effect="fade" condition="true" start="75" end="0" pulse="true" time="1000">Conditional</animation>
+                        <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
                     </control>
                 </control>
                 <control type="label">
@@ -834,6 +835,7 @@
                         <texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
                         <animation effect="fade" condition="true" start="75" end="0" pulse="true" time="1000">Conditional</animation>
+                        <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
                     </control>
                 </control>
             </control>
