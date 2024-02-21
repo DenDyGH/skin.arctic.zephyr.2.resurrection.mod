@@ -417,7 +417,7 @@
                             <include content="Defs_Progress_Colorfade">
                                 <param name="id" value="498" />
                             </include>
-                            <visible>Pvr.IsPlayingTv</visible>
+                            <visible>Pvr.IsPlayingTv + !Skin.HasSetting(EnableMonochromeHighlight)</visible>
                         </control>
 
                         <control type="slider" id="402">
@@ -968,7 +968,7 @@
                 <include content="Defs_Progress_Colorfade">
                     <param name="id" value="499" />
                 </include>
-                <visible>Player.HasMedia + !Pvr.IsPlayingTv</visible>
+                <visible>Player.HasMedia + !Pvr.IsPlayingTv + !Skin.HasSetting(EnableMonochromeHighlight)</visible>
             </control>
 
             <control type="progress" id="498">
@@ -990,7 +990,7 @@
                 <include content="Defs_Progress_Colorfade">
                     <param name="id" value="498" />
                 </include>
-                <visible>Pvr.IsPlayingTv</visible>
+                <visible>Pvr.IsPlayingTv + !Skin.HasSetting(EnableMonochromeHighlight)</visible>
             </control>
 
             <control type="progress" id="401">

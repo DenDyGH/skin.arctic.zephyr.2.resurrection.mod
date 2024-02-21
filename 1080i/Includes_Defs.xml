@@ -16,6 +16,7 @@
             <include content="Defs_Progress_Colorfade">
                 <param name="id" value="$PARAM[id]" />
             </include>
+            <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
         </control>
     </include>
 

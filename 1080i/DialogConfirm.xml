@@ -78,6 +78,7 @@
                 <include content="Defs_Progress_Colorfade">
                     <param name="id" value="20" />
                 </include>
+                <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
             </control>
 
         </control>
