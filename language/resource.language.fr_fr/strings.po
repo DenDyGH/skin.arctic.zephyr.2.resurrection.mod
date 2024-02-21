@@ -540,8 +540,8 @@ msgid "Spotlight"
 msgstr "Projecteur"
 
 msgctxt "#31106"
-msgid "Ends "
-msgstr "Fini à "
+msgid "Ends: "
+msgstr "Fini à: "
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31107"

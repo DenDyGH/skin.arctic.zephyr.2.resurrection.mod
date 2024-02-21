@@ -536,8 +536,8 @@ msgid "Spotlight"
 msgstr ""
 
 msgctxt "#31106"
-msgid "Ends "
-msgstr "Koniec "
+msgid "Ends: "
+msgstr "Koniec: "
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31107"

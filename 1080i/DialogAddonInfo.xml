@@ -118,6 +118,7 @@
                                 <include content="Object_Info_Button">
                                     <param name="id" value="12" />
                                     <param name="groupid" value="8012" />
+                                    <param name="width" value="auto" />
                                     <param name="label" value="$INFO[Control.GetLabel(12)]" />
                                     <param name="icon" value="special://skin/extras/icons/play3.png" />
                                     <param name="visible" value="Control.IsEnabled(12)" />
@@ -128,6 +129,7 @@
                                     <param name="id" value="7" />
                                     <param name="groupid" value="8007" />
                                     <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+                                    <param name="width" value="auto" />
                                     <param name="label" value="$VAR[Label_AddonInfo_Enable]" />
                                     <param name="icon" value="$VAR[Image_AddonInfo_Enable]" />
                                     <param name="visible" value="Control.IsEnabled(7) + !Skin.HasSetting(KioskMode)" />
@@ -139,6 +141,7 @@
                                     <param name="groupid" value="8006" />
                                     <param name="usealtwidth" value="$EXP[FontSetIsMediumOrLarger]" />
                                     <param name="altwidth" value="130" />
+                                    <param name="width" value="auto" />
                                     <param name="label" value="$INFO[Control.GetLabel(6)]" />
                                     <param name="icon" value="$VAR[Image_AddonInfo_Install]" />
                                     <param name="visible" value="Control.IsEnabled(6) + !Skin.HasSetting(KioskMode)" />
@@ -160,6 +163,7 @@
                                     <param name="groupid" value="8009" />
                                     <param name="label" value="$LOCALIZE[5]" />
                                     <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+                                    <param name="width" value="auto" />
                                     <param name="icon" value="special://skin/extras/icons/settings.png" />
                                     <param name="visible" value="Control.IsEnabled(9) + !Skin.HasSetting(KioskMode)" />
                                 </include>
@@ -169,6 +173,7 @@
                                     <param name="groupid" value="8014" />
                                     <param name="label" value="$LOCALIZE[21338]" />
                                     <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
+                                    <param name="width" value="auto" />
                                     <param name="icon" value="special://skin/extras/icons/update.png" />
                                     <param name="visible" value="Control.IsEnabled(14) + !Skin.HasSetting(KioskMode)" />
                                 </include>
@@ -178,7 +183,8 @@
                                     <param name="id" value="10" />
                                     <param name="groupid" value="8010" />
                                     <param name="usealtwidth" value="$EXP[FontSetIsLarger]" />
-                                    <param name="label" value="Depends" />
+                                    <param name="label" value="$LOCALIZE[39024]" />
+                                    <param name="width" value="auto" />
                                     <param name="icon" value="special://skin/extras/icons/dependencies.png" />
                                     <param name="visible" value="Control.IsEnabled(10) + !Skin.HasSetting(KioskMode)" />
                                 </include>
