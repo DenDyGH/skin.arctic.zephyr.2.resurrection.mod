@@ -746,10 +746,10 @@
             </control>
 
             <control type="image">
-                <bottom>110</bottom>
+                <bottom>125</bottom>
                 <right>view_pad</right>
-                <width>500</width>
-                <height>281</height>
+                <width>400</width>
+                <height>180</height>
                 <texture background="true">$VAR[Image_Player_Clearart]</texture>
                 <visible>![!String.IsEmpty(Window(Home).Property(OSDInfo)) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml) | Skin.HasSetting(ShowInfoPaused)]</visible>
                 <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
