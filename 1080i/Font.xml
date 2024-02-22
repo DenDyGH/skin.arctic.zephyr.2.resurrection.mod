@@ -150,6 +150,13 @@
             <style>bold</style>
         </font>
         <font>
+            <name>font_title_medium</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>52</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
             <name>font_title</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>48</size>
@@ -377,6 +384,13 @@
             <name>font_title_large</name>
             <filename>Roboto-Bold.ttf</filename>
             <size>64</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_title_medium</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>52</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
@@ -612,6 +626,13 @@
             <style>bold</style>
         </font>
         <font>
+            <name>font_title_medium</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>52</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
             <name>font_title</name>
             <filename>Roboto-Bold.ttf</filename>
             <size>48</size>
@@ -841,6 +862,13 @@
             <name>font_title_large</name>
             <filename>arialbd.ttf</filename>
             <size>64</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_title_medium</name>
+            <filename>arialbd.ttf</filename>
+            <size>52</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
