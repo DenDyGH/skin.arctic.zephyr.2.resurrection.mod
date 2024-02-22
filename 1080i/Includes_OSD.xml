@@ -543,7 +543,7 @@
                     <height>480</height>
                     <bottom>150</bottom>
                     <control type="group">
-                        <height>435</height>
+                        <height>330</height>
                         <bottom>0</bottom>
                         <width>290</width>
                         <control type="group">
@@ -590,7 +590,7 @@
                         </control>
                     </control>
                     <control type="grouplist">
-                        <left>310</left>
+                        <left>240</left>
                         <usecontrolcoords>true</usecontrolcoords>
                         <bottom>0</bottom>
                         <right>0</right>
@@ -746,7 +746,7 @@
             </control>
 
             <control type="image">
-                <bottom>150</bottom>
+                <bottom>110</bottom>
                 <right>view_pad</right>
                 <width>500</width>
                 <height>281</height>
