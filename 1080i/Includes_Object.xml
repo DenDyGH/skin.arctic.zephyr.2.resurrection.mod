@@ -597,9 +597,9 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">flags/monochrome/other/HDR.png</texture>
+                    <texture colordiffuse="main_fg_100">$VAR[Image_VideoPlayer_HDRCodec]</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
-                    <visible>String.Contains(ListItem.FileNameAndPath,HDR)</visible>
+                    <visible>String.Contains(ListItem.FileNameAndPath,HDR) | String.IsEqual(ListItem.HdrType,hdr10) | String.IsEqual(ListItem.HdrType,dolbyvision) | String.IsEqual(ListItem.HdrType,hlg)</visible>
                 </control>
                 <control type="image" id="77881">
                     <fadetime>100</fadetime>

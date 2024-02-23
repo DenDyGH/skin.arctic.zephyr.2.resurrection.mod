@@ -75,6 +75,13 @@
         <value>$INFO[VideoPlayer.AudioCodec,flags/monochrome/audio/,.png]</value>
     </variable>
 
+    <variable name="Image_VideoPlayer_HDRCodec">
+        <value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">flags/monochrome/other/dolbyvision.png</value>
+        <value condition="String.IsEqual(ListItem.HdrType,hdr10)">flags/monochrome/other/hdr10.png</value>
+        <value condition="String.IsEqual(ListItem.HdrType,hlg)">flags/monochrome/other/hlg.png</value>
+        <value>flags/monochrome/other/HDR.png</value>
+    </variable>
+
     <variable name="Image_OSD_Artwork">
         <value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
         <value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
