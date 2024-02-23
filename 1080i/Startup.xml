@@ -13,6 +13,7 @@
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(widgetTarget,videos)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(HomeMultiVertical)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(HomeMulti)</onload>
+    <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(Icons,monochrome)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(SkinInit)</onload>
 
 

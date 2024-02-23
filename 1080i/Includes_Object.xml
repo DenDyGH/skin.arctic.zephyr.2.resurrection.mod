@@ -686,7 +686,7 @@
                         <param name="alt" value="72" />
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <texture colordiffuse="main_fg_100">$VAR[Image_AudioCodec]</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77885))</visible>
@@ -705,7 +705,7 @@
                         <param name="alt" value="48" />
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[ListItem.AudioChannels].png</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77886))</visible>
