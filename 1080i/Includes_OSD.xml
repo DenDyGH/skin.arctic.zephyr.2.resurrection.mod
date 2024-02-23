@@ -545,7 +545,7 @@
                     <control type="group">
                         <height>330</height>
                         <bottom>0</bottom>
-                        <width>290</width>
+                        <width>220</width>
                         <control type="group">
                             <left>-15</left>
                             <right>-15</right>
@@ -554,8 +554,15 @@
                             <control type="image">
                                 <bordersize>15</bordersize>
                                 <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
+                                <aspectratio scalediffuse="true" align="left" aligny="bottom">scale</aspectratio>
+                                <visible>!Pvr.IsPlayingTv + !String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(Player.Art(poster))</visible>
+                                <texture background="true" diffuse="diffuse/poster-wall.png">$VAR[Image_OSD_Artwork]</texture>
+                            </control>
+                            <control type="image">
+                                <bordersize>15</bordersize>
+                                <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                                 <aspectratio scalediffuse="true" align="left" aligny="bottom">keep</aspectratio>
-                                <visible>!Pvr.IsPlayingTv</visible>
+                                <visible>!Pvr.IsPlayingTv + String.IsEmpty(Player.Art(tvshow.poster)) + String.IsEmpty(Player.Art(poster))</visible>
                                 <texture background="true" diffuse="diffuse/poster-wall.png">$VAR[Image_OSD_Artwork]</texture>
                             </control>
                             <control type="group">
