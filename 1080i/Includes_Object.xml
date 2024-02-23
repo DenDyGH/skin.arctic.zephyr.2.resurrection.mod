@@ -579,7 +579,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">flags/monochrome/other/3D.png</texture>
+                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/other/3D.png</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>ListItem.IsStereoscopic</visible>
                 </control>
@@ -633,7 +633,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">$INFO[ListItem.VideoResolution,flags/monochrome/resolution/,.png]</texture>
+                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[ListItem.VideoResolution].png</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77882))</visible>
                 </control>
@@ -651,7 +651,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">$INFO[ListItem.VideoCodec,flags/monochrome/source/,.png]</texture>
+                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/source/$INFO[ListItem.VideoCodec].png</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77883))</visible>
                 </control>
@@ -669,7 +669,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">$INFO[ListItem.VideoAspect,flags/monochrome/aspectratio/,.png]</texture>
+                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/aspectratio/$INFO[ListItem.VideoAspect].png</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77884))</visible>
                 </control>
@@ -706,7 +706,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">$INFO[ListItem.AudioChannels,flags/monochrome/channels/,.png]</texture>
+                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[ListItem.AudioChannels].png</texture>
                     <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77886))</visible>
                 </control>
@@ -2694,7 +2694,7 @@
     </include>
 
     <include name="Object_OSD_Ratings">
-        <param name="directory" default="monochrome" />
+        <param name="directory" default="$INFO[Skin.String(Icons)]" />
         <param name="align" default="right" />
         <param name="width" default="900" />
         <param name="rottentomatoes" default="true" />
