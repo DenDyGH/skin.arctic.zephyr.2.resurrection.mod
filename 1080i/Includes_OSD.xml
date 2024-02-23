@@ -753,7 +753,7 @@
             </control>
 
             <control type="image">
-                <bottom>125</bottom>
+                <bottom>130</bottom>
                 <right>view_pad</right>
                 <width>400</width>
                 <height>180</height>
@@ -761,7 +761,7 @@
                 <visible>![!String.IsEmpty(Window(Home).Property(OSDInfo)) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml) | Skin.HasSetting(ShowInfoPaused)]</visible>
                 <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
                 <visible>Skin.HasSetting(ShowOSDClearArt)</visible>
-                <aspectratio>keep</aspectratio>
+                <aspectratio aligny="bottom">keep</aspectratio>
                 <animation effect="fade" start="0" end="100" delay="200" time="300">Visible</animation>
             </control>
             <!-- Small Info OSD -->
