@@ -1807,7 +1807,7 @@ msgstr "Widok Flix | Wiele widgetów"
 #: /1080i/Includes_Info.xml
 msgctxt "#30102"
 msgid "Trailer"
-msgstr ""
+msgstr "Zwiastun"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#30103"
