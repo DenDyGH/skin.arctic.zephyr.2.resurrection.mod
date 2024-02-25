@@ -555,14 +555,7 @@
                                 <bordersize>15</bordersize>
                                 <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                                 <aspectratio scalediffuse="true" align="center" aligny="bottom">scale</aspectratio>
-                                <visible>!Pvr.IsPlayingTv + !String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(Player.Art(poster))</visible>
-                                <texture background="true" diffuse="diffuse/poster-wall.png">$VAR[Image_OSD_Artwork]</texture>
-                            </control>
-                            <control type="image">
-                                <bordersize>15</bordersize>
-                                <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
-                                <aspectratio scalediffuse="true" align="left" aligny="bottom">keep</aspectratio>
-                                <visible>!Pvr.IsPlayingTv + String.IsEmpty(Player.Art(tvshow.poster)) + String.IsEmpty(Player.Art(poster))</visible>
+                                <visible>!Pvr.IsPlayingTv</visible>
                                 <texture background="true" diffuse="diffuse/poster-wall.png">$VAR[Image_OSD_Artwork]</texture>
                             </control>
                             <control type="group">
