@@ -658,16 +658,17 @@
     </include>
 
     <include name="Defs_Settings_Background">
-        <control type="image">
+        <!-- <control type="image">
             <animation type="WindowOpen" reversible="false" condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(SkinSettings.xml) + !Window.Previous(SettingsProfile.xml) + !Window.Previous(SettingsSystemInfo.xml)">
                 <effect type="fade" start="0" end="100" time="300" delay="0"/>
             </animation>
             <include>Dimensions_Fullscreen</include>
             <texture border="2">common/black-back.png</texture>
-        </control>
-        <include content="Topbar">
+        </control> -->
+        <!-- <include content="Topbar">
             <param name="fgcolor" value="panel_fg" />
-        </include>
+        </include> -->
+        <include>Topbar</include>
         <include condition="!Window.Previous(home)">View_Settings</include>
         <include content="Object_Settings_Info">
             <param name="visible" value="Control.HasFocus(300) | !Window.IsVisible(SettingsCategory.xml)" />

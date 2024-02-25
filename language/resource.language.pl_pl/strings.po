@@ -745,8 +745,8 @@ msgid "Clock and weather"
 msgstr "Zegar i pogoda"
 
 msgctxt "#31150"
-msgid "Fallback image"
-msgstr "Obraz zastępczy"
+msgid "Home background image"
+msgstr "Obraz tła strony głównej"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31151"
@@ -1908,3 +1908,8 @@ msgstr "Slogan"
 msgctxt "#31447"
 msgid "Premiered"
 msgstr "Premiera"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31448"
+msgid "Fanart fallback image"
+msgstr "Obraz zastępczy dla fanarta"

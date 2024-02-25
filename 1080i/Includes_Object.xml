@@ -158,14 +158,14 @@
                     <height>32</height>
                     <width>32</width>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="panel_fg_70">buttons/info.png</texture>
+                    <texture colordiffuse="panel_fg_110">buttons/info.png</texture>
                 </control>
                 <control type="textbox" id="$PARAM[id]">
                     <centertop>50%</centertop>
                     <left>82</left>
                     <right>30</right>
                     <height>60</height>
-                    <textcolor>panel_fg_70</textcolor>
+                    <textcolor>panel_fg_110</textcolor>
                     <font>font_statusbar</font>
                     <aligny>center</aligny>
                     <label>$PARAM[label]</label>

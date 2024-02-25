@@ -750,7 +750,7 @@ msgid "Clock and weather"
 msgstr "Reloj y clima"
 
 msgctxt "#31150"
-msgid "Fallback image"
+msgid "Home background image"
 msgstr "Establecer imagen alternativa"
 
 #: /1080i/SkinSettings.xml
@@ -1937,4 +1937,9 @@ msgstr ""
 #: /1080i/Includes_Object.xml
 msgctxt "#31447"
 msgid "Premiered"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31448"
+msgid "Fanart fallback image"
 msgstr ""
