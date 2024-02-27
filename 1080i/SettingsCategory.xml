@@ -30,7 +30,7 @@
                         <width>dialog_side_grouplist</width>
                         <visible>Control.HasFocus(20)</visible>
                         <control type="image">
-                            <texture>common/button_texture.png</texture>
+                            <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
                         </control>
                     </control>
                 </control>
@@ -130,7 +130,7 @@
             <description>Default Slider</description>
             <include>Defs_Settings_Button</include>
             <aligny>center</aligny>
-            <texturefocus>common/button_texture.png</texturefocus>
+            <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
         </control>
 
         <control type="label" id="14">

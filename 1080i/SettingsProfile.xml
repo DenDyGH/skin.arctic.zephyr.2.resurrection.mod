@@ -67,7 +67,7 @@
                     <focusedlayout height="80" width="1300">
                         <control type="group">
                             <control type="image">
-                                <texture>common/button_texture.png</texture>
+                                <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
                             </control>
                             <control type="label">
                                 <left>50</left>

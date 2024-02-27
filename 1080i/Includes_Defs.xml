@@ -638,8 +638,8 @@
         <textureradiofocus colordiffuse="dialog_fg_70">buttons/radio-on.png</textureradiofocus>
         <textureradionofocus colordiffuse="dialog_fg_30">buttons/radio-off.png</textureradionofocus>
         <focusedcolor>Selected</focusedcolor>
-        <alttexturefocus>common/button_texture.png</alttexturefocus>
-        <texturefocus>common/button_texture.png</texturefocus>
+        <alttexturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</alttexturefocus>
+        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
     </include>
 
     <include name="Defs_SettingsTrick">
@@ -706,7 +706,7 @@
                 <focusedlayout height="item_list_height" width="item_list_height">
                     <include>Defs_SettingsTrick</include>
                     <control type="image">
-                        <texture>common/button_texture.png</texture>
+                        <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
                     </control>
                     <control type="group">
                         <width>item_list_height</width>

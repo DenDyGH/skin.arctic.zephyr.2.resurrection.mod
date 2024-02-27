@@ -39,7 +39,7 @@
 
                     <focusedlayout width="550" height="item_list_height">
                         <control type="image">
-                            <texture>common/button_texture.png</texture>
+                            <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
                         </control>
                         <control type="label">
                             <width>550</width>
@@ -358,9 +358,8 @@
                             <label>$LOCALIZE[30097]</label>
                             <selected>Skin.HasSetting(EnableMonochromeHighlight)</selected>
                             <onclick>Skin.ToggleSetting(EnableMonochromeHighlight)</onclick>
-                            <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$VAR[ColorHighlight])</onclick>
-                            <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
-                            <onclick>ReloadSkin()</onclick>
+                            <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$VAR[ColorHighlight],reload=true)</onclick>
+                            <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient],reload=true)</onclick>
                         </control>
 
                         <control type="button" id="19302" description="Color Highlight">

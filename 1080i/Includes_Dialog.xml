@@ -146,7 +146,7 @@
                         </itemlayout>
                         <focusedlayout width="450" height="item_list_height">
                             <control type="image">
-                                <texture>common/button_texture.png</texture>
+                                <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
                             </control>
                             <control type="label">
                                 <font>font_tiny</font>
@@ -168,8 +168,8 @@
         <align>left</align>
         <aligny>center</aligny>
         <height>item_list_height</height>
-        <texturefocus>common/button_texture.png</texturefocus>
-        <alttexturefocus>common/button_texture.png</alttexturefocus>
+        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
+        <alttexturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</alttexturefocus>
     </include>
 
     <include name="Dialog_ColorPicker_WatchedIndicator_Group">
@@ -983,7 +983,7 @@
                     <control type="image">
                         <top>$PARAM[selectpad]</top>
                         <bottom>$PARAM[selectpad]</bottom>
-                        <texture>common/button_texture.png</texture>
+                        <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
                         <animation effect="fade" start="100" end="50" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
                     </control>
                     <include content="Dialog_Standard_List_Itemlayout">

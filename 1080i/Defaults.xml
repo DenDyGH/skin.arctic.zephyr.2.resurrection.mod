@@ -49,7 +49,7 @@
         <focusedcolor>Selected</focusedcolor>
         <disabledcolor>dialog_fg_30</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <texturefocus>common/button_texture.png</texturefocus>
+        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
         <texturenofocus/>
         <pulseonselect>false</pulseonselect>
     </default>
@@ -63,8 +63,8 @@
         <focusedcolor>Selected</focusedcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <disabledcolor>dialog_fg_30</disabledcolor>
-        <texturefocus>common/button_texture.png</texturefocus>
-        <alttexturefocus>common/button_texture.png</alttexturefocus>
+        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
+        <alttexturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</alttexturefocus>
         <texturenofocus/>
         <alttexturenofocus/>
         <pulseonselect>false</pulseonselect>
@@ -82,7 +82,7 @@
         <focusedcolor>Selected</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <texturefocus>common/button_texture.png</texturefocus>
+        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
         <texturenofocus/>
         <textureradioondisabled colordiffuse="dialog_fg_12">buttons/radio-on.png</textureradioondisabled>
         <textureradiooffdisabled colordiffuse="dialog_fg_12">buttons/radio-off.png</textureradiooffdisabled>
@@ -102,7 +102,7 @@
         <focusedcolor>Selected</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <texturefocus>common/button_texture.png</texturefocus>
+        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
         <texturenofocus/>
         <textureup flipy="true" colordiffuse="dialog_fg_30">buttons/spin-down.png</textureup>
         <texturedown colordiffuse="dialog_fg_30">buttons/spin-down.png</texturedown>
@@ -125,7 +125,7 @@
         <focusedcolor>Selected</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <texturefocus>common/button_texture.png</texturefocus>
+        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
         <texturenofocus/>
         <textureup flipy="true" colordiffuse="dialog_fg_30">buttons/spin-down.png</textureup>
         <texturedown colordiffuse="dialog_fg_30">buttons/spin-down.png</texturedown>
@@ -205,7 +205,7 @@
         <focusedcolor>Selected</focusedcolor>
         <disabledcolor>dialog_fg_30</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <texturefocus>common/button_texture.png</texturefocus>
+        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
         <texturenofocus />
         <pulseonselect>false</pulseonselect>
     </default>

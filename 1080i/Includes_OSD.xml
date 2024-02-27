@@ -1745,7 +1745,7 @@
                         </itemlayout>
                         <focusedlayout width="450" height="item_list_height">
                             <control type="image">
-                                <texture>common/button_texture.png</texture>
+                                <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
                             </control>
                             <control type="label">
                                 <font>font_tiny</font>
