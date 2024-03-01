@@ -392,8 +392,8 @@
                 
                 <font>font13</font>
                 <align>left</align>
-                <label>DialogFavourites.xml</label>
-                <visible>Window.IsVisible(DialogFavourites.xml)</visible>
+                <label>MyFavourites.xml</label>
+                <visible>Window.IsVisible(MyFavourites.xml)</visible>
             </control>
 
             <control type="label">

@@ -1913,3 +1913,8 @@ msgstr "Premiera"
 msgctxt "#31448"
 msgid "Fanart fallback image"
 msgstr "Obraz zastępczy dla fanarta"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31449"
+msgid "Favourites browser"
+msgstr "Przeglądarka ulubionych"

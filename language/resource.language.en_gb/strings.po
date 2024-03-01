@@ -1948,3 +1948,8 @@ msgstr ""
 msgctxt "#31448"
 msgid "Fanart fallback image"
 msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31449"
+msgid "Favourites browser"
+msgstr ""

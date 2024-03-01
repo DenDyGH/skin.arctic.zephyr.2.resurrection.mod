@@ -40,6 +40,9 @@
         <action>ActivateWindow(1138)</action>
     </override>
 
+    <!-- Favourites Shortcut -->
+    <shortcut label="$LOCALIZE[31449]" type="571" grouping="common" thumbnail="special://skin/extras/icons/favourites2.png" icon="special://skin/extras/icons/favourites2.png">ActivateWindow(favouritesbrowser)</shortcut>
+
     <!-- Properties -->
     <!-- Widget Aspect -->
     <property property="widgetAspect">Poster</property>

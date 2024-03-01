@@ -162,6 +162,7 @@
         <value condition="[Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(Container.ShowTitle)">$INFO[Container.ShowTitle]</value>
         <value condition="!String.IsEmpty(Container.FolderName) + !Integer.IsGreaterOrEqual(Container.FolderName,1)">$INFO[Container.FolderName]</value>
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$INFO[System.Date]</value>
+        <value condition="Window.IsVisible(MyFavourites.xml)">$LOCALIZE[10060]</value>
     </variable>
 
     <variable name="Label_Header_Content">
@@ -192,6 +193,7 @@
         <value condition="Window.IsVisible(Home.xml)">$LOCALIZE[10000]</value>
         <value condition="Window.IsVisible(DialogPVRInfo.xml)">$LOCALIZE[19180]</value>
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">Next Aired</value>
+        <value condition="Window.IsVisible(MyFavourites.xml)">$LOCALIZE[10060]</value>
     </variable>
 
     <variable name="Label_OSD_Time">
