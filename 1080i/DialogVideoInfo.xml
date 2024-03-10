@@ -10,6 +10,7 @@
     <onunload>ClearProperty(OSD_Menu,Home)</onunload>
     <onunload>ClearProperty(HasTrailer,Home)</onunload>
     <onload>SetProperty(TMDBHelper.Info.OriginalPath,$INFO[ListItem.FolderPath],Home)</onload>
+    <onunload condition="Window.Previous(fullscreenvideo)">Close</onunload>
     <controls>
 
         <!-- Top Info -->
