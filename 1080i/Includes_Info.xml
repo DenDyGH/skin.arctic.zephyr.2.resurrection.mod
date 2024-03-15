@@ -180,12 +180,12 @@
                 <param name="groupid" value="8015" />
                 <param name="label" value="$LOCALIZE[30060]" />
                 <param name="icon" value="special://skin/extras/icons/search.png" />
-                <param name="visible" value="!String.IsEmpty(ListItem.Property(tmdb_id))" />
+                <param name="visible" value="!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(ListItem.IMDbNumber)" />
 
-                <onclick>Dialog.Close(12003)</onclick>
-                <onclick>Skin.Reset(SearchTerm)</onclick>
-                <onclick>Skin.SetString(SearchTerm, $INFO[ListItem.Title])</onclick>
-                <onclick>ActivateWindow(1138)</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.TvShowTitle)">Skin.SetString(SearchTerm,$INFO[ListItem.TvShowTitle])</onclick>
+                <onclick condition="String.IsEmpty(ListItem.TvShowTitle) + !String.IsEmpty(ListItem.Title)">Skin.SetString(SearchTerm,$INFO[ListItem.Title])</onclick>
+                <onclick condition="String.IsEmpty(ListItem.TvShowTitle) + String.IsEmpty(ListItem.Title) + !String.IsEmpty(ListItem.Label)">Skin.SetString(SearchTerm,$INFO[ListItem.Label])</onclick>
+                <onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1190,call_id=1138)</onclick>
             </include>
 
             <include content="Object_Info_Button">
@@ -195,11 +195,11 @@
                 <param name="icon" value="special://skin/extras/icons/video.png" />
                 <param name="visible" value="!Window.IsVisible(1140) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))]" />
 
-                <onclick>Dialog.Close(all,true)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onclick>
-                <onclick condition="!String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
+                <onclick condition="!String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer]),False</onclick>
                 <onclick condition="String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onclick>
-                <onclick condition="String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)])</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)]),False</onclick>
+                <onclick>Dialog.Close(all,true)</onclick>
             </include>
 
             <include content="Object_Info_Button">
