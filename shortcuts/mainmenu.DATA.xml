@@ -69,6 +69,6 @@
         <label>13012</label>
         <label2>Common Shortcut</label2>
         <icon>special://skin/extras/icons/power.png</icon>
-        <action>Quit()</action>
+        <action>ActivateWindow(shutdownmenu)</action>
     </shortcut>
 </shortcuts>
