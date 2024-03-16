@@ -1021,8 +1021,8 @@ msgstr "Csatornaszámok"
 
 #: /1080i/Includes_OSD.xml
 msgctxt "#31207"
-msgid "Ends"
-msgstr "Befejezés"
+msgid "Ends:"
+msgstr "Befejezés:"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31214"

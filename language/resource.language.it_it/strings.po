@@ -1022,8 +1022,8 @@ msgstr "Numeri canali"
 
 #: /1080i/Includes_OSD.xml
 msgctxt "#31207"
-msgid "Ends"
-msgstr "Termina "
+msgid "Ends:"
+msgstr "Termina:"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31214"
