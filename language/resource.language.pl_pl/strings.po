@@ -1918,3 +1918,8 @@ msgstr "Obraz zastępczy dla fanarta"
 msgctxt "#31449"
 msgid "Favourites browser"
 msgstr "Przeglądarka ulubionych"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31450"
+msgid "Scroll seekbar instead of showing info panel"
+msgstr "Przewijaj pasek postępu zamiast wyświetlać panel z informacjami"

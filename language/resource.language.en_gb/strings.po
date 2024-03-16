@@ -1953,3 +1953,8 @@ msgstr ""
 msgctxt "#31449"
 msgid "Favourites browser"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31450"
+msgid "Scroll seekbar instead of showing info panel"
+msgstr ""
