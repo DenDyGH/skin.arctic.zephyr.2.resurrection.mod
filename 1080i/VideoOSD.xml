@@ -68,16 +68,30 @@
                 <include>Topbar</include>
             </control>
 
+            <control type="progress">
+                <centerleft>50%</centerleft>
+                <width>1840</width>
+                <height>112</height>
+                <bottom>50</bottom>
+                <info>Player.Progress</info>
+                <texturebg colordiffuse="00ffffff">slider/slider_bg2.png</texturebg>
+                <righttexture colordiffuse="panel_fg_100">slider/slider_nib2.png</righttexture>
+                <lefttexture />
+                <midtexture />
+                <visible>Control.HasFocus(6500)</visible>
+                <visible>!Pvr.IsPlayingTv</visible>
+            </control>
+
             <control type="slider" id="6500">
-                <bottom>112</bottom>
+                <width>1760</width>
                 <height>32</height>
+                <bottom>112</bottom>
                 <left>view_pad</left>
-                <width>1800</width>
-                <texturesliderbar/>
-                <textureslidernib/>
-                <textureslidernibfocus/>
                 <info>Player.Progress</info>
                 <action>seek</action>
+                <texturesliderbar />
+                <textureslidernib />
+                <textureslidernibfocus />
                 <ondown condition="Skin.HasSetting(PlayerScrollSeekbar)">14</ondown>
             </control>
         </control>
