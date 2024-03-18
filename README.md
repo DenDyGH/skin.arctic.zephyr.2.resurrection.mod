@@ -4,12 +4,12 @@
 # Dependencies
 
 *Latest version of this skin requires additional dependency which are not listed in Kodi's repository so you must provide it on your own.*
-*Download [script.skinhelper](https://github.com/DenDyGH/script.skinhelper/releases/download/v0.0.3/script.skinhelper-0.0.3.zip) and install it*
+*Download [script.skinhelper](https://github.com/DenDyGH/script.skinhelper/releases/download/v0.0.4/script.skinhelper-0.0.4.zip) and install it*
 
 # Installation & Updates
 
 First of all, install SkinHelper
-- [script.skinhelper](https://github.com/DenDyGH/script.skinhelper/releases/download/v0.0.3/script.skinhelper-0.0.3.zip)
+- [script.skinhelper](https://github.com/DenDyGH/script.skinhelper/releases/download/v0.0.4/script.skinhelper-0.0.4.zip)
 
 Then install skin
 - Kodi 20 Nexus: [skin.arctic.zephyr.2.resurrection.mod](https://github.com/DenDyGH/skin.arctic.zephyr.2.resurrection.mod/releases/latest/download/skin.arctic.zephyr.2.resurrection.mod-Nexus.zip)
