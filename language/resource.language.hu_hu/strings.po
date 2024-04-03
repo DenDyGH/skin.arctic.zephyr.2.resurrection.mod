@@ -1953,3 +1953,28 @@ msgstr ""
 msgctxt "#31450"
 msgid "Scroll seekbar instead of showing info panel"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31451"
+msgid "Hide forward/rewind button"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31452"
+msgid "Hide chapters button"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31453"
+msgid "Hide settings button"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31454"
+msgid "Hide player process info button"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31455"
+msgid "Audio button opens audio settings"
+msgstr ""

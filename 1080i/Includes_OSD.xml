@@ -1061,6 +1061,7 @@
             <onclick>PlayerControl(Previous)</onclick>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!Skin.HasSetting(HideChaptersButton)</visible>
             <visible>!VideoPlayer.Content(livetv)</visible>
         </control>
 
@@ -1076,6 +1077,7 @@
             <onclick>PlayerControl(Rewind)</onclick>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!Skin.HasSetting(HideForwardRewindButton)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
@@ -1127,6 +1129,7 @@
             <onclick>PlayerControl(Forward)</onclick>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!Skin.HasSetting(HideForwardRewindButton)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
@@ -1142,6 +1145,7 @@
             <onclick>PlayerControl(Next)</onclick>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!Skin.HasSetting(HideChaptersButton)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
@@ -1249,11 +1253,25 @@
             <textoffsetx>0</textoffsetx>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/audio-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
-            <onclick>AudioNextLanguage</onclick>
+            <onclick condition="Skin.HasSetting(OSDAudioSettings)">ActivateWindow(osdaudiosettings)</onclick>
+            <onclick condition="!Skin.HasSetting(OSDAudioSettings)">AudioNextLanguage</onclick>
             <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
+        </control>
+        <control type="button" id="41">
+            <centertop>50%</centertop>
+            <description>Video Settings</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
+            <onclick>ActivateWindow(osdvideosettings)</onclick>
+            <visible>!VideoPlayer.Content(musicvideos)</visible>
+            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
         <control type="button" id="32">
@@ -1375,6 +1393,7 @@
             <texturenofocus colordiffuse="panel_fg_70">osd/settings.png</texturenofocus>
             <onclick>SetFocus(3112,9)</onclick>
             <onup>SetFocus(3112,9)</onup>
+            <visible>!Skin.HasSetting(HideSettingsButton)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
@@ -1388,6 +1407,7 @@
             <texturefocus colordiffuse="$VAR[ColorHighlight]">DefaultAddonScreensaver.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">DefaultAddonScreensaver.png</texturenofocus>
             <onclick>ActivateWindow(playerprocessinfo)</onclick>
+            <visible>!Skin.HasSetting(HidePlayerInfoButton)</visible>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
@@ -1402,19 +1422,6 @@
             <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
             <onclick>ActivateWindow(osdaudiosettings)</onclick>
             <visible>VideoPlayer.Content(musicvideos)</visible>
-        </control>
-        <control type="button" id="41">
-            <centertop>50%</centertop>
-            <description>Settings</description>
-            <width>48</width>
-            <height>48</height>
-            <label/>
-            <font/>
-            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
-            <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
-            <onclick>ActivateWindow(osdvideosettings)</onclick>
-            <visible>VideoPlayer.Content(musicvideos)</visible>
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
         <control type="button" id="31">

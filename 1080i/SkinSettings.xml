@@ -641,11 +641,11 @@
                             <onclick>Skin.ToggleSetting(OSDSubtitleSettings)</onclick>
                         </control>
 
-                        <control type="radiobutton" id="19517" description="Show player tempo controls">
+                        <control type="radiobutton" id="19528" description="Audio button opens audio settings">
                             <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[30110]</label>
-                            <selected>Skin.HasSetting(PlayerTempoControls)</selected>
-                            <onclick>Skin.ToggleSetting(PlayerTempoControls)</onclick>
+                            <label>$LOCALIZE[31455]</label>
+                            <selected>Skin.HasSetting(OSDAudioSettings)</selected>
+                            <onclick>Skin.ToggleSetting(OSDAudioSettings)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19523" description="Scroll seekbar instead of showing info panel">
@@ -653,6 +653,41 @@
                             <label>$LOCALIZE[31450]</label>
                             <selected>Skin.HasSetting(PlayerScrollSeekbar)</selected>
                             <onclick>Skin.ToggleSetting(PlayerScrollSeekbar)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19524" description="Hide forward/rewind button">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31451]</label>
+                            <selected>Skin.HasSetting(HideForwardRewindButton)</selected>
+                            <onclick>Skin.ToggleSetting(HideForwardRewindButton)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19525" description="Hide chapters button">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31452]</label>
+                            <selected>Skin.HasSetting(HideChaptersButton)</selected>
+                            <onclick>Skin.ToggleSetting(HideChaptersButton)</onclick>
+                        </control>
+                
+                        <control type="radiobutton" id="19526" description="Hide settings button">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31453]</label>
+                            <selected>Skin.HasSetting(HideSettingsButton)</selected>
+                            <onclick>Skin.ToggleSetting(HideSettingsButton)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19527" description="Hide player process info button">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31454]</label>
+                            <selected>Skin.HasSetting(HidePlayerInfoButton)</selected>
+                            <onclick>Skin.ToggleSetting(HidePlayerInfoButton)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19517" description="Show player tempo controls">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[30110]</label>
+                            <selected>Skin.HasSetting(PlayerTempoControls)</selected>
+                            <onclick>Skin.ToggleSetting(PlayerTempoControls)</onclick>
                         </control>
 
                         <control type="label" id="19507" description="LABEL MUSIC OSD">

@@ -1923,3 +1923,28 @@ msgstr "Przeglądarka ulubionych"
 msgctxt "#31450"
 msgid "Scroll seekbar instead of showing info panel"
 msgstr "Przewijaj pasek postępu zamiast wyświetlać panel z informacjami"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31451"
+msgid "Hide forward/rewind button"
+msgstr "Ukryj przyciski przewijania do przodu/do tyłu"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31452"
+msgid "Hide chapters button"
+msgstr "Ukryj przyciski rozdziałów"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31453"
+msgid "Hide settings button"
+msgstr "Ukryj przycisk ustawień"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31454"
+msgid "Hide player process info button"
+msgstr "Ukryj przycisk informacji o procesie odtwarzacza"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31455"
+msgid "Audio button opens audio settings"
+msgstr "Przycisk od dźwięku otwiera ustawienia dźwięku"
