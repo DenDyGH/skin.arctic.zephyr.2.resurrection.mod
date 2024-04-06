@@ -349,6 +349,7 @@
                             <textcolor>main_bg_100</textcolor>
                             <selectedcolor>main_bg_100</selectedcolor>
                             <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                            <visible>!Skin.HasSetting(DisableChannelLabel)</visible>
                         </control>
                     </control>
                     <include content="Object_PVR_Icon">
@@ -356,6 +357,16 @@
                         <param name="bgcolor" value="main_fg" />
                         <param name="height" value="74" />
                         <param name="font" value="font_statusbar_bold" />
+                        <param name="alignicon" value="right" />
+                        <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel)" />
+                    </include>
+                    <include content="Object_PVR_Icon">
+                        <param name="fgcolor" value="main_bg" />
+                        <param name="bgcolor" value="main_fg" />
+                        <param name="height" value="74" />
+                        <param name="font" value="font_statusbar_bold" />
+                        <param name="alignicon" value="center" />
+                        <param name="iconvisible" value="Skin.HasSetting(DisableChannelLabel)" />
                     </include>
                 </control>
             </focusedchannellayout>
