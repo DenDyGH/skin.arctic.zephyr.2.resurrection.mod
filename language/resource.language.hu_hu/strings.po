@@ -477,7 +477,7 @@ msgstr "A tartalom Faune betűtípust használ"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31093"
-msgid "Slim PVR Guide"
+msgid "Disable Slim PVR Guide"
 msgstr "Keskeny PVR menü"
 
 #: /1080i/SkinSettings.xml

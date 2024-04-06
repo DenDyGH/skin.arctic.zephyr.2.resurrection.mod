@@ -481,7 +481,7 @@ msgstr "Les encadrés utilisent la police Faune"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31093"
-msgid "Slim PVR Guide"
+msgid "Disable Slim PVR Guide"
 msgstr "Guide TV compact"
 
 #: /1080i/SkinSettings.xml

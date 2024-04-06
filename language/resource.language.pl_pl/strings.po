@@ -477,8 +477,8 @@ msgstr "Okno opisu używa czcionki Faune"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31093"
-msgid "Slim PVR Guide"
-msgstr "Zwęź przewodnik PVR"
+msgid "Disable Slim PVR Guide"
+msgstr "Wyłącz wąski tryb przewodnika"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31094"
