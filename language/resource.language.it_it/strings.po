@@ -1974,3 +1974,13 @@ msgstr ""
 msgctxt "#31455"
 msgid "Audio button opens audio settings"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31456"
+msgid "Show remaining time instead of end time"
+msgstr ""
+
+#: /1080i/Includes_OSD.xml
+msgctxt "#31457"
+msgid "Remaining:"
+msgstr ""

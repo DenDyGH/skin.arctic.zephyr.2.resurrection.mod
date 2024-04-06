@@ -878,7 +878,16 @@
                     <font>font_tiny</font>
                     <textcolor>panel_fg_100</textcolor>
                     <label>$VAR[Label_OSD_FinishTime,$LOCALIZE[31207] ,]</label>
+                    <visible>!Skin.HasSetting(ShowTimeRemaining)</visible>
                     <visible>!Window.IsVisible(MusicVisualisation.xml) + [!String.IsEmpty(Player.FinishTime) | !String.IsEmpty(VideoPlayer.EndTime)]</visible>
+                </control>
+                <control type="label">
+                    <width>auto</width>
+                    <font>font_tiny</font>
+                    <textcolor>panel_fg_100</textcolor>
+                    <label>$VAR[Label_OSD_TimeRemaining,$LOCALIZE[31457] ,]</label>
+                    <visible>Skin.HasSetting(ShowTimeRemaining)</visible>
+                    <visible>!Window.IsVisible(MusicVisualisation.xml) + !String.IsEmpty(Player.TimeRemaining)</visible>
                 </control>
                 <control type="label">
                     <width>auto</width>

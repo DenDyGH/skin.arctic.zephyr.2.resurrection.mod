@@ -690,6 +690,13 @@
                             <onclick>Skin.ToggleSetting(PlayerTempoControls)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19529" description="Show remaining time instead of end time">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31456]</label>
+                            <selected>Skin.HasSetting(ShowTimeRemaining)</selected>
+                            <onclick>Skin.ToggleSetting(ShowTimeRemaining)</onclick>
+                        </control>
+
                         <control type="label" id="19507" description="LABEL MUSIC OSD">
                             <include>Dialog_Standard_HintLabel</include>
                             <label>$LOCALIZE[31347]</label>

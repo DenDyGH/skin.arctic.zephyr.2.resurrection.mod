@@ -211,6 +211,11 @@
         <value condition="!String.IsEmpty(Player.FinishTime)">$INFO[Player.FinishTime]</value>
     </variable>
 
+    <variable name="Label_OSD_TimeRemaining">
+        <value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.EndTime]</value>
+        <value condition="!String.IsEmpty(Player.TimeRemaining)">$INFO[Player.TimeRemaining]</value>
+    </variable>
+
     <variable name="Label_OSD_Title">
         <value>$INFO[Player.Title]</value>
     </variable>
