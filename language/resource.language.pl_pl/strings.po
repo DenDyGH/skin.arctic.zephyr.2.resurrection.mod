@@ -1948,3 +1948,13 @@ msgstr "Ukryj przycisk informacji o procesie odtwarzacza"
 msgctxt "#31455"
 msgid "Audio button opens audio settings"
 msgstr "Przycisk od dźwięku otwiera ustawienia dźwięku"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31456"
+msgid "Show remaining time instead of end time"
+msgstr "Pokaż pozostały czas zamiast godzinę zakończenia"
+
+#: /1080i/Includes_OSD.xml
+msgctxt "#31457"
+msgid "Remaining:"
+msgstr "Pozostało:"
