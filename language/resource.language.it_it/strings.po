@@ -478,7 +478,7 @@ msgstr "Le caselle della trama utilizzano il font Faune"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31093"
-msgid "Slim PVR Guide"
+msgid "Disable Slim PVR Guide"
 msgstr "Guida PVR sottile"
 
 #: /1080i/SkinSettings.xml
