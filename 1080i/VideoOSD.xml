@@ -78,8 +78,8 @@
                 <righttexture colordiffuse="panel_fg_100">slider/slider_nib2.png</righttexture>
                 <lefttexture />
                 <midtexture />
+                <visible>!PVR.IsPlayingTV</visible>
                 <visible>Control.HasFocus(6500)</visible>
-                <visible>!Pvr.IsPlayingTv</visible>
             </control>
 
             <control type="slider" id="6500">
