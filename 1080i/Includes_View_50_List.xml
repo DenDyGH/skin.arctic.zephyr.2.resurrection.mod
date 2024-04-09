@@ -167,6 +167,13 @@
                         <top>0</top>
                         <bottom>30</bottom>
                         <control type="image">
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="$VAR[ColorHighlight]" border="10">diffuse/box.png</texture>
@@ -262,6 +269,13 @@
                         <top>0</top>
                         <bottom>30</bottom>
                         <control type="image">
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="$VAR[ColorHighlight]" border="10">diffuse/box.png</texture>
@@ -579,6 +593,12 @@
         <param name="selectbox" default="false" />
         <definition>
             <control type="image">
+                <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                <visible>$PARAM[selectbox]</visible>
+                <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+            </control>
+            <control type="image">
+                <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                 <visible>$PARAM[selectbox]</visible>
                 <texture colordiffuse="$VAR[ColorHighlight]" border="10">diffuse/box.png</texture>
             </control>
@@ -779,6 +799,14 @@
                 <left>$PARAM[pad]</left>
                 <right>$PARAM[pad]</right>
                 <control type="image">
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                    <left>-$PARAM[pad]</left>
+                    <right>-$PARAM[pad]</right>
+                    <visible>$PARAM[selectbox]</visible>
+                    <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+                </control>
+                <control type="image">
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                     <left>-$PARAM[pad]</left>
                     <right>-$PARAM[pad]</right>
                     <visible>$PARAM[selectbox]</visible>
@@ -826,6 +854,12 @@
         <param name="selectbox" default="false" />
         <definition>
             <control type="image">
+                <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                <visible>$PARAM[selectbox]</visible>
+                <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+            </control>
+            <control type="image">
+                <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                 <visible>$PARAM[selectbox]</visible>
                 <texture colordiffuse="$VAR[ColorHighlight]" border="10">diffuse/box.png</texture>
             </control>
