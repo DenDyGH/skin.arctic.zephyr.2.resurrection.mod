@@ -506,7 +506,7 @@
                 <right>4</right>
                 <left>0</left>
                 <bottom>0</bottom>
-                <bordersize>20</bordersize>
+                <bordersize>18</bordersize>
                 <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
                 <aspectratio aligny="center" align="$PARAM[alignicon]">keep</aspectratio>
                 <visible>Skin.HasSetting(PVRGuide.ColorDiffuse) + $PARAM[iconvisible]</visible>
@@ -516,7 +516,7 @@
                 <right>4</right>
                 <left>0</left>
                 <bottom>0</bottom>
-                <bordersize>20</bordersize>
+                <bordersize>18</bordersize>
                 <texture>$INFO[ListItem.Icon]</texture>
                 <aspectratio aligny="center" align="$PARAM[alignicon]">keep</aspectratio>
                 <visible>!Skin.HasSetting(PVRGuide.ColorDiffuse) + $PARAM[iconvisible]</visible>
