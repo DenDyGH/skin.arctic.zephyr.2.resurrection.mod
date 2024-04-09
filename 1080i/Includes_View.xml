@@ -268,20 +268,29 @@
                         <visible>ListItem.IsPlaying</visible>
                     </control>
                     <control type="label">
-                        <left>30</left>
+                        <left>15</left>
                         <right>110</right>
                         <font>font_tiny</font>
                         <textcolor>main_fg_70</textcolor>
                         <selectedcolor>main_fg_70</selectedcolor>
                         <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
-                        <visible>!Skin.HasSetting(DisableChannelLabel)</visible>
+                        <visible>!Skin.HasSetting(DisableChannelLabel) + !Skin.HasSetting(HideChannelsIcon)</visible>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <right>15</right>
+                        <font>font_tiny</font>
+                        <textcolor>main_fg_70</textcolor>
+                        <selectedcolor>main_fg_70</selectedcolor>
+                        <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                        <visible>!Skin.HasSetting(DisableChannelLabel) + Skin.HasSetting(HideChannelsIcon)</visible>
                     </control>
                 </control>
                 <include content="Object_PVR_Icon">
                     <param name="height" value="74" />
                     <param name="font" value="font_statusbar_bold" />
                     <param name="alignicon" value="right" />
-                    <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel)" />
+                    <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel) + !Skin.HasSetting(HideChannelsIcon)" />
                 </include>
                 <include content="Object_PVR_Icon">
                     <param name="height" value="74" />
@@ -306,20 +315,29 @@
                             <visible>ListItem.IsPlaying</visible>
                         </control>
                         <control type="label">
-                            <left>30</left>
+                            <left>15</left>
                             <right>110</right>
                             <font>font_tiny</font>
                             <selectedcolor>main_fg_70</selectedcolor>
                             <textcolor>main_fg_70</textcolor>
                             <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
-                            <visible>!Skin.HasSetting(DisableChannelLabel)</visible>
+                            <visible>!Skin.HasSetting(DisableChannelLabel) + !Skin.HasSetting(HideChannelsIcon)</visible>
+                        </control>
+                        <control type="label">
+                            <left>15</left>
+                            <right>15</right>
+                            <font>font_tiny</font>
+                            <selectedcolor>main_fg_70</selectedcolor>
+                            <textcolor>main_fg_70</textcolor>
+                            <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                            <visible>!Skin.HasSetting(DisableChannelLabel) + Skin.HasSetting(HideChannelsIcon)</visible>
                         </control>
                     </control>
                     <include content="Object_PVR_Icon">
                         <param name="height" value="74" />
                         <param name="font" value="font_statusbar_bold" />
                         <param name="alignicon" value="right" />
-                        <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel)" />
+                        <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel) + !Skin.HasSetting(HideChannelsIcon)" />
                     </include>
                     <include content="Object_PVR_Icon">
                         <param name="height" value="74" />
@@ -343,13 +361,22 @@
                             <visible>ListItem.IsPlaying</visible>
                         </control>
                         <control type="label">
-                            <left>30</left>
+                            <left>15</left>
                             <right>110</right>
                             <font>font_tiny_bold</font>
                             <textcolor>main_bg_100</textcolor>
                             <selectedcolor>main_bg_100</selectedcolor>
                             <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
-                            <visible>!Skin.HasSetting(DisableChannelLabel)</visible>
+                            <visible>!Skin.HasSetting(DisableChannelLabel) + !Skin.HasSetting(HideChannelsIcon)</visible>
+                        </control>
+                        <control type="label">
+                            <left>15</left>
+                            <right>15</right>
+                            <font>font_tiny_bold</font>
+                            <textcolor>main_bg_100</textcolor>
+                            <selectedcolor>main_bg_100</selectedcolor>
+                            <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                            <visible>!Skin.HasSetting(DisableChannelLabel) + Skin.HasSetting(HideChannelsIcon)</visible>
                         </control>
                     </control>
                     <include content="Object_PVR_Icon">
@@ -358,7 +385,7 @@
                         <param name="height" value="74" />
                         <param name="font" value="font_statusbar_bold" />
                         <param name="alignicon" value="right" />
-                        <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel)" />
+                        <param name="iconvisible" value="!Skin.HasSetting(DisableChannelLabel) + !Skin.HasSetting(HideChannelsIcon)" />
                     </include>
                     <include content="Object_PVR_Icon">
                         <param name="fgcolor" value="main_bg" />

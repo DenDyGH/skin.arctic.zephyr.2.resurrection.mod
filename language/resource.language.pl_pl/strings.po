@@ -1958,3 +1958,8 @@ msgstr "Pokaż pozostały czas zamiast godzinę zakończenia"
 msgctxt "#31457"
 msgid "Remaining:"
 msgstr "Pozostało:"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31458"
+msgid "Hide channels icon in pvr guide"
+msgstr "Ukryj ikony kanałów w przewodniku"

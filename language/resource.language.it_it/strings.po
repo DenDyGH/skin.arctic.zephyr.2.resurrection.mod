@@ -1984,3 +1984,8 @@ msgstr ""
 msgctxt "#31457"
 msgid "Remaining:"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31458"
+msgid "Hide channels icon in pvr guide"
+msgstr ""
