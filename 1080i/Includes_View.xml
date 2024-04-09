@@ -1067,7 +1067,7 @@
                             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox-gradient.png</texture>
                             <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
                         </control>
-                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
+                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     </control>
                     <control type="group">
                         <control type="image">
@@ -1111,7 +1111,7 @@
                             <texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox2-gradient.png</texture>
                             <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
                         </control>
-                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
+                        <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     </control>
                     <control type="group">
                         <control type="image">
