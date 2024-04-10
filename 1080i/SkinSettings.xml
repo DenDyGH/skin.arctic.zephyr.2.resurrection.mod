@@ -371,6 +371,15 @@
                             <onclick condition="String.IsEqual(Skin.String(PosterHighlight),Highlight)">Skin.SetString(PosterHighlight,Mix)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19531" description="Invert text color">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31459]</label>
+                            <selected>Skin.HasSetting(InvertTextColor)</selected>
+                            <onclick>Skin.ToggleSetting(InvertTextColor)</onclick>
+                            <enable>String.IsEqual(Skin.String(PosterHighlight),Highlight)</enable>
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
+                        </control>
+
                         <control type="radiobutton" id="19314" description="Enable zoom on hover">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[30109]</label>
