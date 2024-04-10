@@ -1998,3 +1998,8 @@ msgstr ""
 msgctxt "#31458"
 msgid "Hide channels icon in pvr guide"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31459"
+msgid "Selection box: invert text color"
+msgstr ""
