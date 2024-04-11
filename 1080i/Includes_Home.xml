@@ -1701,7 +1701,7 @@
             <control type="grouplist">
                 <nested />
                 <animation effect="fade" end="50" condition="true">Conditional</animation>
-                <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Title)</visible>
+                <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Title) + String.IsEmpty(Container($PARAM[id]).ListItem.ChannelName)</visible>
                 <orientation>vertical</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
                 <itemgap>0</itemgap>
@@ -1763,6 +1763,24 @@
                 <include content="Object_Info_Plot">
                     <param name="label" value="$INFO[Container($PARAM[id]).ListItem.Plot]" />
                     <param name="maxheight" value="$PARAM[plotheight]" />
+                </include>
+            </control>
+            <!-- FOR LIVETV WIDGET -->
+            <control type="grouplist">
+                <nested />
+                <animation effect="fade" end="50" condition="true">Conditional</animation>
+                <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Title) + !String.IsEmpty(Container($PARAM[id]).ListItem.ChannelName)</visible>
+                <orientation>vertical</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <itemgap>0</itemgap>
+                <include content="Object_Info_Title">
+                    <param name="label" value="$INFO[Container($PARAM[id]).ListItem.Title]" />
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="titleheight" value="$PARAM[titleheight]" />
+                </include>
+                <include content="Object_Info_Plot">
+                    <param name="label" value="$INFO[Container($PARAM[id]).ListItem.Plot]" />
+                    <param name="maxheight" value="300" />
                 </include>
             </control>
         </definition>
