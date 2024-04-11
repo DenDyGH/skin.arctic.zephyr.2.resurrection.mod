@@ -319,6 +319,7 @@
                 <orientation>vertical</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
                 <itemgap>0</itemgap>
+                <visible>String.IsEmpty(ListItem.ChannelName)</visible>
                 <include content="Object_Info_Title">
                     <param name="font" value="$PARAM[font]" />
                     <param name="titleheight" value="$PARAM[titleheight]" />
@@ -329,6 +330,63 @@
                 <include content="Object_Info_Plot">
                     <param name="maxheight" value="$PARAM[plotheight]" />
                 </include>
+            </control>
+            <!-- FOR LIVETV WIDGET -->
+            <control type="grouplist">
+                <top>-15</top>
+                <orientation>vertical</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <itemgap>0</itemgap>
+                <visible>!String.IsEmpty(ListItem.ChannelName)</visible>
+                <include content="Object_Info_Title">
+                    <param name="font" value="$PARAM[font]" />
+                    <param name="titleheight" value="$PARAM[titleheight]" />
+                    <param name="label" value="$INFO[ListItem.Title]" />
+                </include>
+                <control type="progress">
+                    <left>pad</left>
+                    <width>1750</width>
+                    <height>10</height>
+                    <reveal>true</reveal>
+                    <top>15</top>
+                    <info>ListItem.Progress</info>
+                    <colordiffuse>Selected</colordiffuse>
+                </control>
+                <control type="group">
+                    <control type="image">
+                        <visible>!String.IsEmpty(ListItem.EPGEventIcon)</visible>
+                        <top>30</top>
+                        <left>-15</left>
+                        <height>243</height>
+                        <width>432</width>
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
+                            <texture colordiffuse="main_bg_30" border="10">diffuse/box.png</texture>
+                    </control>
+                    <control type="image">
+                        <visible>!String.IsEmpty(ListItem.EPGEventIcon)</visible>
+                        <top>30</top>
+                        <left>-15</left>
+                        <bordersize>16</bordersize>
+                        <height>243</height>
+                        <width>432</width>
+                        <texture background="true" diffuse="diffuse/landscape-wall.png">$INFO[ListItem.EPGEventIcon]</texture>
+                    </control>
+                    <control type="image">
+                        <visible>String.IsEmpty(ListItem.EPGEventIcon)</visible>
+                        <top>30</top>
+                        <left>20</left>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <aspectratio aligny="center" align="right">keep</aspectratio>
+                        <width>400</width>
+                        <height>300</height>
+                    </control>
+                    <include content="Object_Info_Plot">
+                        <param name="maxheight" value="243" />
+                        <left>420</left>
+                        <top>35</top>
+                    </include>
+                </control>               
             </control>
         </definition>
     </include>
