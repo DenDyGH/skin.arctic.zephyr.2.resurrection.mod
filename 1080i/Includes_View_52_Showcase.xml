@@ -343,6 +343,7 @@
                     <param name="titleheight" value="$PARAM[titleheight]" />
                     <param name="label" value="$INFO[ListItem.Title]" />
                 </include>
+                <include>Object_Info_Line_PVR</include>
                 <control type="progress">
                     <left>pad</left>
                     <width>1750</width>
@@ -359,9 +360,9 @@
                         <left>-15</left>
                         <height>243</height>
                         <width>432</width>
-                            <bordersize>15</bordersize>
-                            <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
-                            <texture colordiffuse="main_bg_30" border="10">diffuse/box.png</texture>
+                        <bordersize>15</bordersize>
+                        <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
+                        <texture colordiffuse="main_bg_30" border="10">diffuse/box.png</texture>
                     </control>
                     <control type="image">
                         <visible>!String.IsEmpty(ListItem.EPGEventIcon)</visible>
@@ -377,13 +378,13 @@
                         <top>30</top>
                         <left>20</left>
                         <texture>$INFO[ListItem.Icon]</texture>
-                        <aspectratio aligny="center" align="right">keep</aspectratio>
-                        <width>400</width>
-                        <height>300</height>
+                        <aspectratio aligny="center" align="center">keep</aspectratio>
+                        <width>330</width>
+                        <height>198</height>
                     </control>
                     <include content="Object_Info_Plot">
                         <param name="maxheight" value="243" />
-                        <left>420</left>
+                        <left>425</left>
                         <top>35</top>
                     </include>
                 </control>               
