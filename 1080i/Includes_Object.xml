@@ -1461,6 +1461,45 @@
         </definition>
     </include>
 
+    <include name="Object_Info_Line_PVR">
+        <param name="textcolor" default="main_fg_100" />
+        <definition>
+            <control type="grouplist">
+                <height>40</height>
+                <orientation>horizontal</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <itemgap>0</itemgap>
+                <left>0</left>
+                <right>0</right>
+                <include content="Object_Info_Line_Label">
+                    <param name="label" value="$INFO[ListItem.Genre]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Genre)" />
+                </include>
+                <include content="Object_Info_Line_Label">
+                    <param name="label" value="  |  " />
+                    <param name="textcolor" value="$VAR[ColorHighlight]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Genre) + !String.IsEmpty(ListItem.Episode)" />
+                </include>
+                <include content="Object_Info_Line_Label">
+                    <param name="label" value="$LOCALIZE[31460]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Episode)" />
+                </include>
+                <include content="Object_Info_Line_Label">
+                    <param name="label" value="  |  " />
+                    <param name="textcolor" value="$VAR[ColorHighlight]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Episode) | !String.IsEmpty(ListItem.EndTime)" />
+                </include>
+                <include content="Object_Info_Line_Label">
+                    <param name="label" value="$LOCALIZE[31106]$INFO[ListItem.EndTime]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.EndTime)" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
     <include name="Flix_Object_Info_Title">
         <param name="label" default="$INFO[ListItem.Label]" />
         <param name="font" default="font_title_large" />
