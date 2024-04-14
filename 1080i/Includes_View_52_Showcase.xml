@@ -350,6 +350,7 @@
                     <height>10</height>
                     <reveal>true</reveal>
                     <top>15</top>
+                    <visible>ListItem.HasEpg</visible>
                     <info>ListItem.Progress</info>
                     <colordiffuse>Selected</colordiffuse>
                 </control>

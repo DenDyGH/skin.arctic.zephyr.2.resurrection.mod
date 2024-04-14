@@ -11,7 +11,7 @@
     <constant name="item_list_height">78</constant>
     <constant name="item_list_height_half">39</constant>
     <constant name="item_pvr_height">117</constant>
-    <constant name="item_biglist_height">156</constant>
+    <constant name="item_biglist_height">100</constant>
     <constant name="item_row_height">412.5</constant>
     <constant name="item_cast_height">360.5</constant>
     <constant name="item_poster_width">257.14</constant>
