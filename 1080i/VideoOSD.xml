@@ -38,7 +38,7 @@
 
                     <onup condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo)) + !Skin.HasSetting(PlayerScrollSeekbar)">SetProperty(OSDInfo,1,Home)</onup>
                     <onup condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo)) + !Skin.HasSetting(PlayerScrollSeekbar)">ClearProperty(OSDInfo,Home)</onup>
-                    <onup condition="!VideoPlayer.Content(LiveTV) + Skin.HasSetting(PlayerScrollSeekbar)">6500</onup>
+                    <onup condition="!VideoPlayer.Content(LiveTV) + Skin.HasSetting(PlayerScrollSeekbar)">6501</onup>
                     <ondown condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo))">Close</ondown>
                     <ondown condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo))">ClearProperty(OSDInfo,Home)</ondown>
 
@@ -79,10 +79,10 @@
                 <lefttexture />
                 <midtexture />
                 <visible>!PVR.IsPlayingTV</visible>
-                <visible>Control.HasFocus(6500)</visible>
+                <visible>Control.HasFocus(6501)</visible>
             </control>
 
-            <control type="slider" id="6500">
+            <!-- <control type="slider" id="6500">
                 <width>1760</width>
                 <height>32</height>
                 <bottom>112</bottom>
@@ -93,6 +93,31 @@
                 <textureslidernib />
                 <textureslidernibfocus />
                 <ondown condition="Skin.HasSetting(PlayerScrollSeekbar)">14</ondown>
+            </control> -->
+
+            <control type="group" id="6500">
+                <visible>Player.SeekEnabled</visible>
+                <control type="button" id="6501">
+                    <include>Defs_Hidden_Button</include>
+                    <onunfocus condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onunfocus>
+                    <ondown>14</ondown>
+                    <onright>StepForward</onright>
+                    <onleft>StepBack</onleft>
+                    <onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
+                    <lefttexture />
+                    <midtexture />
+                </control>
+                <control type="slider" id="6501">
+                    <description>Seekbar</description>
+                    <visible>Window.IsActive(videoosd)</visible>
+                    <visible>!String.IsEmpty(Player.Duration)</visible>
+                    <action>seek</action>
+                    <texturesliderbar />
+                    <textureslidernib />
+                    <textureslidernibfocus />
+                    <visible>Control.HasFocus(6501) + !VideoPlayer.Content(LiveTV)</visible>
+                    <visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog)]</visible>	
+                </control>
             </control>
         </control>
 
