@@ -368,7 +368,7 @@
                             <label2>$INFO[Skin.String(PosterHighlight)]</label2>
                             <onclick condition="String.IsEqual(Skin.String(PosterHighlight),White)">Skin.SetString(PosterHighlight,Highlight)</onclick>
                             <onclick condition="String.IsEqual(Skin.String(PosterHighlight),Mix)">Skin.SetString(PosterHighlight,White)</onclick>
-                            <onclick condition="String.IsEqual(Skin.String(PosterHighlight),Highlight)">Skin.SetString(PosterHighlight,Mix)</onclick>
+                            <onclick condition="String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEmpty(Skin.String(PosterHighlight))">Skin.SetString(PosterHighlight,Mix)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19531" description="Invert text color">

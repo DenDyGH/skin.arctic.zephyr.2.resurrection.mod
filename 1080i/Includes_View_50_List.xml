@@ -167,7 +167,7 @@
                         <top>0</top>
                         <bottom>30</bottom>
                         <control type="image">
-                            <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
@@ -269,7 +269,7 @@
                         <top>0</top>
                         <bottom>30</bottom>
                         <control type="image">
-                            <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
@@ -593,7 +593,7 @@
         <param name="selectbox" default="false" />
         <definition>
             <control type="image">
-                <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                 <visible>$PARAM[selectbox]</visible>
                 <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
             </control>
@@ -684,7 +684,7 @@
                 <visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set) | [String.IsEqual(ListItem.DBType,song) + !Skin.HasSetting(UseTrackNamingTemplate)]] | [!Skin.HasSetting(EnhancedAddonLabels) + !String.IsEmpty(Container.PluginName)]</visible>
                 <control type="image">
                     <visible>!String.IsEmpty(ListItem.Overlay) | Control.IsVisible(522) | Control.IsVisible(524)</visible>
-                    <visible>String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White)</visible>
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     <centertop>50%</centertop>
                     <left>0</left>
                     <width>32</width>
@@ -710,7 +710,7 @@
                     <texture colordiffuse="$PARAM[fgcolor]_90">$VAR[Image_Overlay_List]</texture>
                 </control>
                 <control type="label">
-                    <visible>String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White)</visible>
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     <animation effect="slide" end="-52" condition="String.IsEmpty(ListItem.Overlay) + !Control.IsVisible(522) + !Control.IsVisible(524)">Conditional</animation>
                     <left>52</left>
                     <font>font_small_bold</font>
@@ -737,7 +737,7 @@
                     <label>$INFO[ListItem.Label]</label>
                 </control>
                 <control type="label">
-                    <visible>String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White)</visible>
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     <align>right</align>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
                     <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
@@ -852,7 +852,7 @@
                 <left>$PARAM[pad]</left>
                 <right>$PARAM[pad]</right>
                 <control type="image">
-                    <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     <left>-$PARAM[pad]</left>
                     <right>-$PARAM[pad]</right>
                     <visible>$PARAM[selectbox]</visible>
@@ -907,7 +907,7 @@
         <param name="selectbox" default="false" />
         <definition>
             <control type="image">
-                <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)</visible>
+                <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                 <visible>$PARAM[selectbox]</visible>
                 <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
             </control>
