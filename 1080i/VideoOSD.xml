@@ -79,21 +79,20 @@
                 <lefttexture />
                 <midtexture />
                 <visible>!PVR.IsPlayingTV</visible>
-                <visible>Control.HasFocus(6501)</visible>
+                <visible>Control.HasFocus(6501) | Control.HasFocus(6502)</visible>
             </control>
 
-            <!-- <control type="slider" id="6500">
+            <control type="slider" id="6502">
                 <width>1760</width>
                 <height>32</height>
-                <bottom>112</bottom>
+                <bottom>100</bottom>
                 <left>view_pad</left>
                 <info>Player.Progress</info>
                 <action>seek</action>
                 <texturesliderbar />
                 <textureslidernib />
                 <textureslidernibfocus />
-                <ondown condition="Skin.HasSetting(PlayerScrollSeekbar)">14</ondown>
-            </control> -->
+            </control>
 
             <control type="group" id="6500">
                 <visible>Player.SeekEnabled</visible>
