@@ -1072,6 +1072,7 @@
             <include>OSD_Button_OnFocus</include>
             <visible>!Skin.HasSetting(HideChaptersButton)</visible>
             <visible>!VideoPlayer.Content(livetv)</visible>
+            <visible>Player.HasSceneMarkers | Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1)</visible>
         </control>
 
         <control type="button" id="13">
@@ -1087,7 +1088,7 @@
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
             <visible>!Skin.HasSetting(HideForwardRewindButton)</visible>
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
+            <visible>[Player.SeekEnabled + !VideoPlayer.Content(livetv)] + !Player.Paused</visible>
         </control>
 
         <control type="togglebutton" id="14">
@@ -1139,7 +1140,7 @@
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
             <visible>!Skin.HasSetting(HideForwardRewindButton)</visible>
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
+            <visible>[Player.SeekEnabled + !VideoPlayer.Content(livetv)] + !Player.Paused</visible>
         </control>
 
         <control type="button" id="17">
@@ -1156,6 +1157,7 @@
             <include>OSD_Button_OnFocus</include>
             <visible>!Skin.HasSetting(HideChaptersButton)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
+            <visible>Player.HasSceneMarkers | Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | PVR.IsTimeShift</visible>
         </control>
 
         <control type="button" id="27">

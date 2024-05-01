@@ -722,7 +722,7 @@ msgstr "Czcionki i grafiki"
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
 msgid "Display additional on-screen information with controls or when paused"
-msgstr "Wyświetl dodatkowe informacje na wyświetlaczu z kontrolkami albo podczas pauzy"
+msgstr "Wyświetlaj dodatkowe informacje o odtwarzanym materiale"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31146"
@@ -993,7 +993,7 @@ msgstr "Losowe filmy"
 #: /1080i/SkinSettings.xml
 msgctxt "#31201"
 msgid "Simple on-screen info (hide poster and plot)"
-msgstr "Skrócone informacje na wyświetlaczu (ukryj plakat i wątek)"
+msgstr "Wyświetlaj skrócone informacje (bez plakatu i opisu)"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31202"
@@ -1921,8 +1921,8 @@ msgstr "Przeglądarka ulubionych"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31450"
-msgid "Scroll seekbar instead of showing info panel"
-msgstr "Przewijaj pasek postępu zamiast wyświetlać panel z informacjami"
+msgid "Allow to scroll seekbar"
+msgstr "Zezwól na przewijanie paska postępu"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31451"
