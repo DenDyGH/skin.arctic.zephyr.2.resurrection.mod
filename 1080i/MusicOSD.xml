@@ -3,6 +3,7 @@
 <window id="120">
     <onload condition="!Player.PauseEnabled">SetFocus(15)</onload>
     <onload condition="Player.PauseEnabled">SetFocus(14)</onload>
+    <onunload>CancelAlarm(osd_timeout,true)</onunload>
     <controls>
 
         <control type="button" id="99220">
