@@ -99,7 +99,10 @@
                 <control type="button" id="6501">
                     <include>Defs_Hidden_Button</include>
                     <onunfocus condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onunfocus>
-                    <ondown>14</ondown>
+                    <onup condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo))">SetProperty(OSDInfo,1,Home)</onup>
+                    <onup condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo))">ClearProperty(OSDInfo,Home)</onup>
+                    <ondown condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo))">14</ondown>
+                    <ondown condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo))">ClearProperty(OSDInfo,Home)</ondown>
                     <onright>StepForward</onright>
                     <onleft>StepBack</onleft>
                     <onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>

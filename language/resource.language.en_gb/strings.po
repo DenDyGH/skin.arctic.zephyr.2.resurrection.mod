@@ -1956,7 +1956,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31450"
-msgid "Scroll seekbar instead of showing info panel"
+msgid "Allow to scroll seekbar"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
