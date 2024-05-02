@@ -8,19 +8,24 @@
 
         <include>Global_Background</include>
         <include>Defs_Settings_Background</include>
-        
-        
+
         <control type="group">
             <include>Dialog_Settings_Group</include>
-    
+
             <include content="Defs_Settings_Changer">
                 <onright>3</onright>
             </include>
 
-            
-
             <control type="group">
                 <left>item_list_height</left>
+                <!-- Left Texture Fade -->
+                <include content="Defs_Settings_Texture">
+                    <param name="id" value="3" />
+                    <top>item_list_height_half</top>
+                    <height>item_list_height</height>
+                    <width>dialog_side_grouplist</width>
+                    <visible>!Control.HasFocus(300) + !Control.HasFocus(20)</visible>
+                </include>
                 <!-- Expert Settings Button -->
                 <control type="group">
                     <top>item_list_height_half</top>
@@ -46,7 +51,6 @@
                     <include>Defs_Settings_OnLeft</include>
                 </control>
 
-                
                 <control type="button" id="20">
                     <width>dialog_side_grouplist</width>
                     <bottom>39</bottom>
