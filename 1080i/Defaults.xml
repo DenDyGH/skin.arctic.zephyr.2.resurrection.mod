@@ -63,8 +63,8 @@
         <focusedcolor>Selected</focusedcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <disabledcolor>dialog_fg_30</disabledcolor>
-        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
-        <alttexturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</alttexturefocus>
+        <!-- <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus> -->
+        <!-- <alttexturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</alttexturefocus> -->
         <texturenofocus/>
         <alttexturenofocus/>
         <pulseonselect>false</pulseonselect>

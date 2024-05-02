@@ -37,16 +37,17 @@
                     </itemlayout>
 
                     <focusedlayout width="550" height="item_list_height">
-                        <control type="image">
-                            <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
-                        </control>
+                        <!-- Left Texture Fade -->
+                        <include content="Defs_Settings_Texture">
+                            <visible>!Control.HasFocus(300) + !Control.HasFocus(20)</visible>
+                        </include>
                         <control type="label">
                             <width>550</width>
                             <height>item_list_height</height>
                             <align>left</align>
                             <font>font_small</font>
                             <textoffsetx>30</textoffsetx>
-                            <textcolor>Selected</textcolor>
+                            <textcolor>$VAR[Defs_Settings_ToggleButton_Text]</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </focusedlayout>
