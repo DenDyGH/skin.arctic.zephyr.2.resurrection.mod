@@ -1968,3 +1968,8 @@ msgstr "Ukryj ikony kanałów w przewodniku"
 msgctxt "#31459"
 msgid "Selection box: invert text color"
 msgstr "Pole wyboru: odwróć kolor czcionki"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31460"
+msgid "Debug: show arts path"
+msgstr "Debug: pokaż ścieżkę obrazków"
