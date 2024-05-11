@@ -995,8 +995,64 @@
             <visible>Skin.HasSetting(DebugInfo)</visible>
         </control>
 
-        <!-- Path label -->
+        <!-- ARTS -->
+        <control type="grouplist">
+            <top>700</top>
+            <height>250</height>
+            <left>15</left>
+            <itemgap>35</itemgap>
+            <control type="label">
+                <textcolor>goldenrod</textcolor>
+                <font>font13</font>
+                <align>left</align>
+                <label>[CR][COLOR=FF00FF00]poster  [/COLOR]$INFO[ListItem.Art(poster)]</label>
+                <visible>Skin.HasSetting(DebugInfo) + Skin.HasSetting(DebugArts) + !String.IsEmpty(ListItem.Art(poster))</visible>
+            </control>
+            <control type="label">
+                <textcolor>goldenrod</textcolor>
+                <font>font13</font>
+                <align>left</align>
+                <label>[CR][COLOR=FF00FF00]fanart  [/COLOR]$INFO[ListItem.Art(fanart)]</label>
+                <visible>Skin.HasSetting(DebugInfo) + Skin.HasSetting(DebugArts) + !String.IsEmpty(ListItem.Art(fanart))</visible>
+            </control>
+            <control type="label">
+                <textcolor>goldenrod</textcolor>
+                <font>font13</font>
+                <align>left</align>
+                <label>[CR][COLOR=FF00FF00]landscape  [/COLOR]$INFO[ListItem.Art(landscape)]</label>
+                <visible>Skin.HasSetting(DebugInfo) + Skin.HasSetting(DebugArts) + !String.IsEmpty(ListItem.Art(landscape))</visible>
+            </control>
+            <control type="label">
+                <textcolor>goldenrod</textcolor>
+                <font>font13</font>
+                <align>left</align>
+                <label>[CR][COLOR=FF00FF00]clearlogo  [/COLOR]$INFO[ListItem.Art(clearlogo)]</label>
+                <visible>Skin.HasSetting(DebugInfo) + Skin.HasSetting(DebugArts) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+            </control>
+            <control type="label">
+                <textcolor>goldenrod</textcolor>
+                <font>font13</font>
+                <align>left</align>
+                <label>[CR][COLOR=FF00FF00]clearart  [/COLOR]$INFO[ListItem.Art(clearart)]</label>
+                <visible>Skin.HasSetting(DebugInfo) + Skin.HasSetting(DebugArts) + !String.IsEmpty(ListItem.Art(clearart))</visible>
+            </control>
+            <control type="label">
+                <textcolor>goldenrod</textcolor>
+                <font>font13</font>
+                <align>left</align>
+                <label>[CR][COLOR=FF00FF00]banner  [/COLOR]$INFO[ListItem.Art(banner)]</label>
+                <visible>Skin.HasSetting(DebugInfo) + Skin.HasSetting(DebugArts) + !String.IsEmpty(ListItem.Art(banner))</visible>
+            </control>
+            <control type="label">
+                <textcolor>goldenrod</textcolor>
+                <font>font13</font>
+                <align>left</align>
+                <label>[CR][COLOR=FF00FF00]thumb  [/COLOR]$INFO[ListItem.Art(thumb)]</label>
+                <visible>Skin.HasSetting(DebugInfo) + Skin.HasSetting(DebugArts) + !String.IsEmpty(ListItem.Art(thumb))</visible>
+            </control>
+        </control>
 
+        <!-- Path label -->
         <control type="label">
             <posx>15r</posx>
             <posy>48</posy>

@@ -2003,3 +2003,8 @@ msgstr ""
 msgctxt "#31459"
 msgid "Selection box: invert text color"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31460"
+msgid "Debug: show arts path"
+msgstr ""
