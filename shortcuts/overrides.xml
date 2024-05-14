@@ -46,8 +46,8 @@
     <!-- Properties -->
     <!-- Widget Aspect -->
     <property property="widgetAspect">Poster</property>
-    <property property="widgetAspect">Square</property>
-    <property property="widgetAspect">Landscape</property>
+    <property property="widgetAspect">Big Square</property>
+    <property property="widgetAspect">Big Landscape</property>
     <property property="widgetAspect">Banner</property>
     <property property="widgetAspect">Small Square</property>
     <property property="widgetAspect">Small Landscape</property>
