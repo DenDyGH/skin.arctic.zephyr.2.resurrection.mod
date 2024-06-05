@@ -47,7 +47,7 @@
                 <orientation>horizontal</orientation>
                 <pagecontrol>62</pagecontrol>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[InGameMode] | Container.Content(favourites)</visible>
+                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[InGameMode]</visible>
                 <viewtype label="$LOCALIZE[31262]">bigicon</viewtype>
                 <include content="View_Forced">
                     <param name="string" value="$LOCALIZE[31262]" />
