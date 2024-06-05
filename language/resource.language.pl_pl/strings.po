@@ -1978,3 +1978,8 @@ msgstr "Debug: pokaż ścieżkę obrazków"
 msgctxt "#31461"
 msgid "Alpha value for some dialogs"
 msgstr "Wartość alpha dla niektórych dialogów"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31462"
+msgid "Hide extra info background"
+msgstr "Ukryj tło w oknie rozszerzonych informacji"
