@@ -1973,3 +1973,8 @@ msgstr "Pole wyboru: odwróć kolor czcionki"
 msgctxt "#31460"
 msgid "Debug: show arts path"
 msgstr "Debug: pokaż ścieżkę obrazków"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31461"
+msgid "Alpha value for some dialogs"
+msgstr "Wartość alpha dla niektórych dialogów"
