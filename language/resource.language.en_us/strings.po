@@ -80,8 +80,3 @@ msgstr "Highlight color"
 msgctxt "#31349"
 msgid "Initialising Skin"
 msgstr "Initializing Skin"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31461"
-msgid "Alpha value for some dialogs"
-msgstr ""

@@ -2004,3 +2004,8 @@ msgstr ""
 msgctxt "#31461"
 msgid "Alpha value for some dialogs"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31462"
+msgid "Hide extra info background"
+msgstr ""
