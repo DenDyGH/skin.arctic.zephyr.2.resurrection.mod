@@ -306,4 +306,49 @@
         <animation effect="slide" end="0,0" time="59000" reversible="false" condition="String.IsEqual(Skin.String(Trailer_Delay),00:59)">Focus</animation>
     </include>
 
+    <include name="Animation_Alpha_Value">
+        <animation effect="fade" start="0" end="0" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),100)">Visible</animation>
+        <animation effect="fade" start="0" end="0" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),100)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="5" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),95)">Visible</animation>
+        <animation effect="fade" start="0" end="5" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),95)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="10" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),90)">Visible</animation>
+        <animation effect="fade" start="0" end="10" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),90)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="15" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),85)">Visible</animation>
+        <animation effect="fade" start="0" end="15" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),85)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="20" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),80)">Visible</animation>
+        <animation effect="fade" start="0" end="20" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),80)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="25" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),75)">Visible</animation>
+        <animation effect="fade" start="0" end="25" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),75)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="30" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),70)">Visible</animation>
+        <animation effect="fade" start="0" end="30" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),70)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="35" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),65)">Visible</animation>
+        <animation effect="fade" start="0" end="35" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),65)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="40" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),60)">Visible</animation>
+        <animation effect="fade" start="0" end="40" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),60)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="45" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),55)">Visible</animation>
+        <animation effect="fade" start="0" end="45" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),55)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="50" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),50)">Visible</animation>
+        <animation effect="fade" start="0" end="50" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),50)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="55" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),45)">Visible</animation>
+        <animation effect="fade" start="0" end="55" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),45)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="60" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),40)">Visible</animation>
+        <animation effect="fade" start="0" end="60" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),40)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="65" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),35)">Visible</animation>
+        <animation effect="fade" start="0" end="65" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),35)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="70" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),30)">Visible</animation>
+        <animation effect="fade" start="0" end="70" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),30)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="75" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),25)">Visible</animation>
+        <animation effect="fade" start="0" end="75" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),25)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="80" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),20)">Visible</animation>
+        <animation effect="fade" start="0" end="80" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),20)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="85" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),15)">Visible</animation>
+        <animation effect="fade" start="0" end="85" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),15)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="90" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),10)">Visible</animation>
+        <animation effect="fade" start="0" end="90" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),10)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="95" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),5)">Visible</animation>
+        <animation effect="fade" start="0" end="95" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),5)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout" condition="String.IsEmpty(Skin.String(AlphaValue)) | String.IsEqual(Skin.String(AlphaValue),0)">Visible</animation>
+        <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout" condition="String.IsEmpty(Skin.String(AlphaValue)) | String.IsEqual(Skin.String(AlphaValue),0)">WindowOpen</animation>
+    </include>
+
 </includes>

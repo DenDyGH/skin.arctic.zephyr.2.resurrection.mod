@@ -10,6 +10,15 @@
         </control>
     </include>
 
+    <include name="Global_Overlay_Alpha">
+        <control type="image">
+            <include>Animation_Alpha_Value</include>
+            <include condition="!Window.IsVisible(DialogButtonMenu.xml)">Animation_FadeOut</include>
+            <include>Dimensions_Fullscreen</include>
+            <texture border="2">common/black-back.png</texture>
+        </control>
+    </include>
+
     <include name="Flix_Global_Videowindow">
         <control type="image" description="Background">
             <include>Dimensions_TrailerScreen</include>
