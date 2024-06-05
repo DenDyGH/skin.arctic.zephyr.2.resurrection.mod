@@ -390,8 +390,8 @@
                         <control type="radiobutton" id="19312" description="Geometric panels">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31189]</label>
-                            <selected>!Skin.HasSetting(DisableGeometric)</selected>
-                            <onclick>Skin.ToggleSetting(DisableGeometric)</onclick>
+                            <selected>Skin.HasSetting(EnableGeometric)</selected>
+                            <onclick>Skin.ToggleSetting(EnableGeometric)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19313" description="Use High Contrast Colors">
