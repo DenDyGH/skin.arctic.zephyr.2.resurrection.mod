@@ -2018,3 +2018,13 @@ msgstr ""
 msgctxt "#31462"
 msgid "Hide extra info background"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31463"
+msgid "Selection box: enable transparency"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31464"
+msgid "Select a transparency value"
+msgstr ""

@@ -167,16 +167,28 @@
                         <top>0</top>
                         <bottom>30</bottom>
                         <control type="image">
+                            <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                             <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
                         </control>
                         <control type="image">
+                            <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                             <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="$VAR[ColorHighlight]" border="10">diffuse/box.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>Skin.HasSetting(HighlightTransparency) + [String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)]</visible>
+                            <bordersize>15</bordersize>
+                            <texture colordiffuse="main_fg_100" border="10">common/selectbox2.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>[Skin.HasSetting(HighlightTransparency) + String.IsEqual(Skin.String(PosterHighlight),Highlight)]</visible>
+                            <bordersize>15</bordersize>
+                            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox2.png</texture>
                         </control>
                         <control type="group">
                             <height>282</height>
@@ -203,6 +215,7 @@
                             <visible>ListItem.IsParentFolder</visible>
                         </control>
                         <control type="label">
+                            <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                             <left>35</left>
                             <right>35</right>
                             <font>font_statusbar_bold</font>
@@ -215,11 +228,38 @@
                             <label>$VAR[Label_Title]</label>
                         </control>
                         <control type="label">
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                            <left>35</left>
+                            <right>35</right>
+                            <font>font_statusbar_bold</font>
+                            <selectedcolor>main_bg_100</selectedcolor>
+                            <textcolor>dialog_fg_100</textcolor>
+                            <top>282</top>
+                            <bottom>32</bottom>
+                            <aligny>center</aligny>
+                            <align>left</align>
+                            <label>$VAR[Label_Title]</label>
+                        </control>
+                        <control type="label">
+                            <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                             <left>35</left>
                             <right>35</right>
                             <font>font_statusbar</font>
                             <selectedcolor>main_bg_100</selectedcolor>
                             <textcolor>main_bg_100</textcolor>
+                            <top>282</top>
+                            <bottom>32</bottom>
+                            <aligny>center</aligny>
+                            <align>right</align>
+                            <label>$VAR[Label_Premiered]$VAR[Label_List_Right,  •  ,]</label>
+                        </control>
+                        <control type="label">
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                            <left>35</left>
+                            <right>35</right>
+                            <font>font_statusbar</font>
+                            <selectedcolor>main_bg_100</selectedcolor>
+                            <textcolor>dialog_fg_100</textcolor>
                             <top>282</top>
                             <bottom>32</bottom>
                             <aligny>center</aligny>
@@ -269,16 +309,28 @@
                         <top>0</top>
                         <bottom>30</bottom>
                         <control type="image">
+                            <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                             <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
                         </control>
                         <control type="image">
+                            <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                             <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                             <bordersize>15</bordersize>
                             <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                             <texture colordiffuse="$VAR[ColorHighlight]" border="10">diffuse/box.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>Skin.HasSetting(HighlightTransparency) + [String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)]</visible>
+                            <bordersize>15</bordersize>
+                            <texture colordiffuse="main_fg_100" border="10">common/selectbox2.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>[Skin.HasSetting(HighlightTransparency) + String.IsEqual(Skin.String(PosterHighlight),Highlight)]</visible>
+                            <bordersize>15</bordersize>
+                            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox2.png</texture>
                         </control>
                         <control type="group">
                             <width>566.89</width>
@@ -298,6 +350,7 @@
                         <control type="group">
                             <left>566.89</left>
                             <control type="label">
+                                <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <top>45</top>
@@ -307,6 +360,7 @@
                                 <textcolor>main_bg_100</textcolor>
                             </control>
                             <control type="textbox">
+                                <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <top>95</top>
@@ -317,11 +371,47 @@
                                 <visible>!ListItem.IsParentFolder</visible>
                             </control>
                             <control type="label">
+                                <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <font>font_statusbar</font>
                                 <selectedcolor>main_bg_70</selectedcolor>
                                 <textcolor>main_bg_70</textcolor>
+                                <height>35</height>
+                                <bottom>30</bottom>
+                                <aligny>center</aligny>
+                                <align>right</align>
+                                <label>$VAR[Label_Premiered]$VAR[Label_List_Right,  •  ,]</label>
+                            </control>
+
+                            <control type="label">
+                                <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                                <left>15</left>
+                                <right>40</right>
+                                <top>45</top>
+                                <height>30</height>
+                                <label>$VAR[Label_Title]</label>
+                                <font>font_title_small</font>
+                                <textcolor>main_fg_100</textcolor>
+                            </control>
+                            <control type="textbox">
+                                <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                                <left>15</left>
+                                <right>40</right>
+                                <top>95</top>
+                                <height>160</height>
+                                <label>$VAR[Label_Plot]</label>
+                                <font>font_plotbox</font>
+                                <textcolor>main_fg_70</textcolor>
+                                <visible>!ListItem.IsParentFolder</visible>
+                            </control>
+                            <control type="label">
+                                <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                                <left>15</left>
+                                <right>40</right>
+                                <font>font_statusbar</font>
+                                <selectedcolor>main_bg_70</selectedcolor>
+                                <textcolor>main_fg_70</textcolor>
                                 <height>35</height>
                                 <bottom>30</bottom>
                                 <aligny>center</aligny>
@@ -593,14 +683,26 @@
         <param name="selectbox" default="false" />
         <definition>
             <control type="image">
+                <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                 <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                 <visible>$PARAM[selectbox]</visible>
                 <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
             </control>
             <control type="image">
+                <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                 <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                 <visible>$PARAM[selectbox]</visible>
                 <texture colordiffuse="$VAR[ColorHighlight]" border="10">diffuse/box.png</texture>
+            </control>
+            <control type="image">
+                <visible>Skin.HasSetting(HighlightTransparency) + [String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix)]</visible>
+                <visible>$PARAM[selectbox]</visible>
+                <texture colordiffuse="main_fg_100" border="10">common/selectbox2.png</texture>
+            </control>
+            <control type="image">
+                <visible>[Skin.HasSetting(HighlightTransparency) + String.IsEqual(Skin.String(PosterHighlight),Highlight)]</visible>
+                <visible>$PARAM[selectbox]</visible>
+                <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox2.png</texture>
             </control>
             <control type="group">
                 <left>$PARAM[pad]</left>
@@ -609,11 +711,13 @@
                 <visible>Skin.HasSetting(EnhancedAddonLabels) | String.IsEmpty(Container.PluginName)</visible>
                 <!-- LEFT SIDE -->
                 <control type="label">
+                    <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
                     <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
                     <label>$VAR[Label_List_Left]</label>
                 </control>
                 <control type="image">
+                    <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                     <animation effect="slide" end="$VAR[Defs_ItemLayout_LeftSideObjectSlideVertical]" />
                     <centertop>50%</centertop>
                     <left>120</left>
@@ -622,6 +726,7 @@
                     <texture colordiffuse="$PARAM[fgcolor]_90">$VAR[Image_Overlay_List]</texture>
                 </control>
                 <control type="label">
+                    <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                     <animation effect="slide" end="$VAR[Defs_ItemLayout_LeftSideObjectSlideVertical]" />
                     <left>172</left>
                     <font>font_small_bold</font>
@@ -630,10 +735,43 @@
                     <label>$VAR[Label_List_Title]</label>
                 </control>
 
+                <control type="label">
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                    <textcolor>dialog_fg_100</textcolor>
+                    <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
+                    <label>$VAR[Label_List_Left]</label>
+                </control>
+                <control type="image">
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                    <animation effect="slide" end="$VAR[Defs_ItemLayout_LeftSideObjectSlideVertical]" />
+                    <centertop>50%</centertop>
+                    <left>120</left>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="dialog_fg_100">$VAR[Image_Overlay_List]</texture>
+                </control>
+                <control type="label">
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                    <animation effect="slide" end="$VAR[Defs_ItemLayout_LeftSideObjectSlideVertical]" />
+                    <left>172</left>
+                    <font>font_small_bold</font>
+                    <textcolor>dialog_fg_100</textcolor>
+                    <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
+                    <label>$VAR[Label_List_Title]</label>
+                </control>
+
                 <!-- Videos / Tvshows / Seasons / Sets -->
                 <control type="label">
+                    <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                     <align>right</align>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
+                    <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
+                    <label>$VAR[Label_List_Right]</label>
+                </control>
+                <control type="label">
+                    <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
+                    <align>right</align>
+                    <textcolor>dialog_fg_100</textcolor>
                     <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
                     <label>$VAR[Label_List_Right]</label>
                 </control>

@@ -1983,3 +1983,13 @@ msgstr "Wartość alpha dla niektórych dialogów"
 msgctxt "#31462"
 msgid "Hide extra info background"
 msgstr "Ukryj tło w oknie rozszerzonych informacji"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31463"
+msgid "Selection box: enable transparency"
+msgstr "Pole wyboru: włącz przezroczystość"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31464"
+msgid "Select a transparency value"
+msgstr "Wybierz poziom przezroczystości"
