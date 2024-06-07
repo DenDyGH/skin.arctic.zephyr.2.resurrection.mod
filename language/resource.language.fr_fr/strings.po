@@ -2026,3 +2026,38 @@ msgstr ""
 msgctxt "#31464"
 msgid "Select a transparency value"
 msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31465"
+msgid "Series Premiere"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31466"
+msgid "Season Premiere"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31467"
+msgid "Mid-Season Premiere"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31468"
+msgid "Series Finale"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31469"
+msgid "Season Finale"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31470"
+msgid "Mid-Season Finale"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31471"
+msgid "Premiere and finale indicators for series"
+msgstr ""

@@ -235,6 +235,13 @@
             <size>130</size>
         </font>
 
+        <font>
+            <name>font_infotag_bold</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>22</size>
+            <style>uppercase</style>
+        </font>
+
         <include>VideoLyrics_Fonts</include>
 
     </fontset>
