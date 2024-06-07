@@ -3620,13 +3620,12 @@
         <control type="group">
             <visible>$PARAM[visible]</visible>
             <control type="image">
-                <bordersize>$PARAM[bordersize]</bordersize>
-                <width>$PARAM[width]</width>
-                <texture border="10" colordiffuse="$PARAM[colordiffuse]">common/dialog_overlay_a.png</texture>
+                <bordersize>15</bordersize>
+                <texture border="10" colordiffuse="$PARAM[colordiffuse]">common/dialog_overlay_b.png</texture>
             </control>
             <control type="label">
                 <font>font_infotag_bold</font>
-                <top>$PARAM[top]</top>
+                <top>30</top>
                 <textcolor>main_fg_100</textcolor>
                 <label>$PARAM[label]</label>
                 <align>center</align>
@@ -3645,49 +3644,31 @@
                     <param name="colordiffuse">b303b585</param>
                     <param name="visible">String.IsEqual($PARAM[listitem].Property(episode_type),series_premiere)</param>
                     <param name="label">$LOCALIZE[31465]</param>
-                    <param name="width" value="$PARAM[width]" />
-                    <param name="bordersize" value="$PARAM[bordersize]" />
-                    <param name="top" value="$PARAM[top]" />
                 </include>
                 <include content="Object_BannerOverlay">
                     <param name="colordiffuse">b30385b5</param>
                     <param name="visible">String.IsEqual($PARAM[listitem].Property(episode_type),season_premiere)</param>
                     <param name="label">$LOCALIZE[31466]</param>
-                    <param name="width" value="$PARAM[width]" />
-                    <param name="bordersize" value="$PARAM[bordersize]" />
-                    <param name="top" value="$PARAM[top]" />
                 </include>
                 <include content="Object_BannerOverlay">
                     <param name="colordiffuse">b385b503</param>
                     <param name="visible">String.IsEqual($PARAM[listitem].Property(episode_type),mid_season_premiere)</param>
                     <param name="label">$LOCALIZE[31467]</param>
-                    <param name="width" value="$PARAM[width]" />
-                    <param name="bordersize" value="$PARAM[bordersize]" />
-                    <param name="top" value="$PARAM[top]" />
                 </include>
                 <include content="Object_BannerOverlay">
                     <param name="colordiffuse">b38503b5</param>
                     <param name="visible">String.IsEqual($PARAM[listitem].Property(episode_type),series_finale)</param>
                     <param name="label">$LOCALIZE[31468]</param>
-                    <param name="width" value="$PARAM[width]" />
-                    <param name="bordersize" value="$PARAM[bordersize]" />
-                    <param name="top" value="$PARAM[top]" />
                 </include>
                 <include content="Object_BannerOverlay">
                     <param name="colordiffuse">b3b50385</param>
                     <param name="visible">String.IsEqual($PARAM[listitem].Property(episode_type),season_finale)</param>
                     <param name="label">$LOCALIZE[31469]</param>
-                    <param name="width" value="$PARAM[width]" />
-                    <param name="bordersize" value="$PARAM[bordersize]" />
-                    <param name="top" value="$PARAM[top]" />
                 </include>
                 <include content="Object_BannerOverlay">
                     <param name="colordiffuse">b3b58503</param>
                     <param name="visible">String.IsEqual($PARAM[listitem].Property(episode_type),mid_season_finale)</param>
                     <param name="label">$LOCALIZE[31470]</param>
-                    <param name="width" value="$PARAM[width]" />
-                    <param name="bordersize" value="$PARAM[bordersize]" />
-                    <param name="top" value="$PARAM[top]" />
                 </include>
             </control>
         </definition>
