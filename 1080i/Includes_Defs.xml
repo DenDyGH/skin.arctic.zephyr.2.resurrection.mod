@@ -132,7 +132,12 @@
             <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,8)">Conditional</animation>
             <animation effect="slide" end="0,item_list_height" condition="Integer.IsGreater(Container($PARAM[id]).Position,9)">Conditional</animation>
             <control type="image">
+                <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                 <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
+            </control>
+            <control type="image">
+                <visible>Skin.HasSetting(HighlightTransparency)</visible>
+                <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox2.png</texture>
             </control>
         </control>
     </include>
@@ -726,7 +731,12 @@
                 <focusedlayout height="item_list_height" width="item_list_height">
                     <include>Defs_SettingsTrick</include>
                     <control type="image">
+                        <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                         <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
+                    </control>
+                    <control type="image">
+                        <visible>Skin.HasSetting(HighlightTransparency)</visible>
+                        <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox2.png</texture>
                     </control>
                     <control type="group">
                         <width>item_list_height</width>

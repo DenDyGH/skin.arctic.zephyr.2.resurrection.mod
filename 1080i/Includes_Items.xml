@@ -2620,4 +2620,111 @@
             <onclick>Skin.SetString(AlphaValue,0)</onclick>
         </control>
     </include>
+    <include name="Items_Highlight_AlphaValue">
+        <control type="button" id="9001">
+            <label>100%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,100)</onclick>
+        </control>
+        <control type="button" id="9002">
+            <label>95%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,95)</onclick>
+        </control>
+        <control type="button" id="9003">
+            <label>90%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,90)</onclick>
+        </control>
+        <control type="button" id="9004">
+            <label>85%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,85)</onclick>
+        </control>
+        <control type="button" id="9005">
+            <label>80%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,80)</onclick>
+        </control>
+        <control type="button" id="9006">
+            <label>75%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,75)</onclick>
+        </control>
+        <control type="button" id="9007">
+            <label>70%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,70)</onclick>
+        </control>
+        <control type="button" id="9008">
+            <label>65%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,65)</onclick>
+        </control>
+        <control type="button" id="9009">
+            <label>60%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,60)</onclick>
+        </control>
+        <control type="button" id="9010">
+            <label>55%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,55)</onclick>
+        </control>
+        <control type="button" id="9012">
+            <label>50%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,50)</onclick>
+        </control>
+        <control type="button" id="9013">
+            <label>45%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,45)</onclick>
+        </control>
+        <control type="button" id="9014">
+            <label>40%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,40)</onclick>
+        </control>
+        <control type="button" id="9015">
+            <label>35%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,35)</onclick>
+        </control>
+        <control type="button" id="9016">
+            <label>30%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,30)</onclick>
+        </control>
+        <control type="button" id="9017">
+            <label>25%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,25)</onclick>
+        </control>
+        <control type="button" id="9018">
+            <label>20%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,20)</onclick>
+        </control>
+        <control type="button" id="9019">
+            <label>15%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,15)</onclick>
+        </control>
+        <control type="button" id="9020">
+            <label>10%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,10)</onclick>
+        </control>
+        <control type="button" id="9021">
+            <label>5%</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,5)</onclick>
+        </control>
+        <control type="button" id="9022">
+            <label>0% ($LOCALIZE[30059])</label>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>Skin.SetString(AlphaValue_Highlight,0)</onclick>
+        </control>
+    </include>
 </includes>

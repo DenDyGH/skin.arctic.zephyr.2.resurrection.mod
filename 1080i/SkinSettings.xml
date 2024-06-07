@@ -36,13 +36,13 @@
                         </control>
                     </itemlayout>
 
-                    <focusedlayout width="550" height="item_list_height">
+                    <focusedlayout width="400" height="item_list_height">
                         <!-- Left Texture Fade -->
                         <include content="Defs_Settings_Texture">
                             <visible>!Control.HasFocus(300) + !Control.HasFocus(20)</visible>
                         </include>
                         <control type="label">
-                            <width>550</width>
+                            <width>400</width>
                             <height>item_list_height</height>
                             <align>left</align>
                             <font>font_small</font>
@@ -378,6 +378,23 @@
                             <onclick>Skin.ToggleSetting(InvertTextColor)</onclick>
                             <enable>String.IsEqual(Skin.String(PosterHighlight),Highlight)</enable>
                             <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
+                        </control>
+
+                        <control type="radiobutton" id="19938" description="Highlight transparency">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31463]</label>
+                            <selected>Skin.HasSetting(HighlightTransparency)</selected>
+                            <onclick>Skin.ToggleSetting(HighlightTransparency)</onclick>
+                        </control>
+
+                        <control type="button" id="19939" description="Highlight Alpha Value">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31464]</label>
+                            <label2>$INFO[Skin.String(AlphaValue_Highlight),,%]</label2>
+                            <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31464],home)</onclick>
+                            <onclick>SetProperty(CustomDialogWindow.items,AlphaValue_Highlight,home)</onclick>
+                            <onclick>ActivateWindow(1150)</onclick>
+                            <enable>Skin.HasSetting(HighlightTransparency)</enable>
                         </control>
 
                         <control type="radiobutton" id="19314" description="Enable zoom on hover">
