@@ -214,6 +214,10 @@
                         <visible>$PARAM[circle]</visible>
                     </control>
 
+                    <include content="Object_EpisodeTypeBanner" condition="Skin.HasSetting(SeriesIndicators)">
+                        <param name="listitem">$PARAM[listitem]</param>
+                    </include>
+
                     <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
 
                     <control type="group">
@@ -289,6 +293,10 @@
                             <param name="aspectratio" value="$PARAM[aspectratio]" />
                             <param name="bordersize" value="$PARAM[bordersize]" />
                             <param name="diffuse" value="$PARAM[diffuse]" />
+                        </include>
+
+                        <include content="Object_EpisodeTypeBanner" condition="Skin.HasSetting(SeriesIndicators)">
+                            <param name="listitem">$PARAM[listitem]</param>
                         </include>
                     </control>
 
