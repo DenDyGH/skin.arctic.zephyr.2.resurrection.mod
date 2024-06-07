@@ -116,6 +116,10 @@
                     <aspectratio align="right" aligny="bottom">keep</aspectratio>
                     <visible>!$EXP[InGameMode] + ![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]</visible>
                 </control>
+                <include content="Object_EpisodeTypeBanner" condition="Skin.HasSetting(SeriesIndicators)">
+                    <param name="listitem">$PARAM[listitem]</param>
+                    <param name="width" value="731" />
+                </include>
                 <control type="group">
                     <include content="View_540_Platform_Icon">
                         <param name="top" value="440" />

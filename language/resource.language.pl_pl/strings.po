@@ -1993,3 +1993,38 @@ msgstr "Pole wyboru: włącz przezroczystość"
 msgctxt "#31464"
 msgid "Select a transparency value"
 msgstr "Wybierz poziom przezroczystości"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31465"
+msgid "Series Premiere"
+msgstr "Premiera Serialu"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31466"
+msgid "Season Premiere"
+msgstr "Premiera Sezonu"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31467"
+msgid "Mid-Season Premiere"
+msgstr "Premiera śródsezonowa"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31468"
+msgid "Series Finale"
+msgstr "Finał Serialu"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31469"
+msgid "Season Finale"
+msgstr "Finał Sezonu"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31470"
+msgid "Mid-Season Finale"
+msgstr "Finał śródsezonowy"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31471"
+msgid "Premiere and finale indicators for series"
+msgstr "Oznaczenia premier i finałów seriali"

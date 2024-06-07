@@ -340,6 +340,11 @@
                                 <texture background="true" diffuse="diffuse/banner-side.png">$VAR[Image_Landscape]</texture>
                                 <visible>!ListItem.IsParentFolder</visible>
                             </control>
+                            <include content="Object_EpisodeTypeBanner" condition="Skin.HasSetting(SeriesIndicators)">
+                                <param name="listitem">$PARAM[listitem]</param>
+                                <param name="bordersize" value="15" />
+                                <param name="top" value="30" />
+                            </include>
                         </control>
                         <control type="image">
                             <bordersize>45</bordersize>
@@ -485,6 +490,10 @@
                     <aspectratio align="right" aligny="bottom">keep</aspectratio>
                     <visible>![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]</visible>
                 </control>
+                <include content="Object_EpisodeTypeBanner" condition="Skin.HasSetting(SeriesIndicators)">
+                    <param name="listitem">$PARAM[listitem]</param>
+                    <param name="width" value="608" />
+                </include>
                 <control type="group">
                     <include content="View_540_Platform_Icon">
                         <param name="top" value="372" />
@@ -555,6 +564,10 @@
                     <aspectratio align="right" aligny="bottom">keep</aspectratio>
                     <visible>![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]</visible>
                 </control>
+                <include content="Object_EpisodeTypeBanner" condition="Skin.HasSetting(SeriesIndicators)">
+                    <param name="listitem">$PARAM[listitem]</param>
+                    <param name="width" value="693" />
+                </include>
             </control>
             <control type="group">
                 <include content="View_540_Platform_Icon">
