@@ -997,7 +997,7 @@
         </definition>
     </include>
 
-    <include name="View_WatchedOverlay">
+    <!-- <include name="View_WatchedOverlay">
         <control type="group">
             <visible>!Skin.HasSetting(DisableWatchedOverlay)</visible>
             <control type="image">
@@ -1059,6 +1059,95 @@
                 <include>View_UnwatchedEpisodes_Visible</include>
             </control>
         </control>
+    </include> -->
+
+    <include name="View_WatchedOverlay">
+        <control type="group">
+            <visible>!Skin.HasSetting(DisableWatchedOverlay)</visible>
+            <control type="image">
+                <bottom>-15</bottom>
+                <right>20</right>
+                <width>64</width>
+                <height>64</height>
+                <texture colordiffuse="ff333333">$VAR[Image_Overlay_CircleBG]</texture>
+            </control>
+            <control type="image">
+                <bottom>-15</bottom>
+                <right>20</right>
+                <width>64</width>
+                <height>64</height>
+                <texture flipx="true" flipy="true" colordiffuse="ff00dd44">$VAR[Defs_PercentPlayed,progress/circle/p,.png]</texture>
+                <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.PlayCount,0)</visible>
+            </control>
+            <control type="image">
+                <bottom>6</bottom>
+                <right>41</right>
+                <width>24</width>
+                <height>24</height>
+                <align>center</align>
+                <texture colordiffuse="ffffffff">$VAR[Image_Overlay]</texture>
+                <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | ![String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)]</visible>
+            </control>
+            <control type="label">
+                <bottom>3</bottom>
+                <right>38</right>
+                <width>28</width>
+                <height>28</height>
+                <font>font_unwatched</font>
+                <align>center</align>
+                <textcolor>ffffffff</textcolor>
+                <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                <include>View_UnwatchedEpisodes_Visible</include>
+            </control>
+        </control>
+    </include>
+
+    <include name="View_WatchedOverlay_Focus">
+        <control type="group">
+            <visible>!Skin.HasSetting(DisableWatchedOverlay)</visible>
+            <control type="image">
+                <bottom>-15</bottom>
+                <right>20</right>
+                <width>64</width>
+                <height>64</height>
+                <bordersize>5</bordersize>
+                <texture colordiffuse="$VAR[ColorHighlight]">$VAR[Image_Overlay_CircleFO]</texture>
+            </control>
+            <control type="image">
+                <bottom>-15</bottom>
+                <right>20</right>
+                <width>64</width>
+                <height>64</height>
+                <texture colordiffuse="ff333333">$VAR[Image_Overlay_CircleBG]</texture>
+            </control>
+            <control type="image">
+                <bottom>-15</bottom>
+                <right>20</right>
+                <width>64</width>
+                <height>64</height>
+                <texture flipx="true" flipy="true" colordiffuse="ff00dd44">$VAR[Defs_PercentPlayed,progress/circle/p,.png]</texture>
+            </control>
+            <control type="image">
+                <bottom>6</bottom>
+                <right>41</right>
+                <width>24</width>
+                <height>24</height>
+                <align>center</align>
+                <texture colordiffuse="ffffffff">$VAR[Image_Overlay_Focus]</texture>
+                <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | ![Container.Content(tvshows) | Container.Content(seasons) | Window.IsVisible(Home)]</visible>
+            </control>
+            <control type="label">
+                <bottom>3</bottom>
+                <right>38</right>
+                <width>28</width>
+                <height>28</height>
+                <font>font_unwatched</font>
+                <align>center</align>
+                <textcolor>ffffffff</textcolor>
+                <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                <include>View_UnwatchedEpisodes_Visible</include>
+            </control>
+        </control>
     </include>
 
     <include name="View_UnwatchedEpisodes_Visible">
@@ -1105,8 +1194,8 @@
                         <visible>String.IsEqual(Skin.String(PosterHighlight),White)</visible>
                     </control>
                 </control>
-                <include condition="$PARAM[overlay]">View_WatchedOverlay_Focus</include>
             </control>
+            <include condition="$PARAM[overlay]">View_WatchedOverlay_Focus</include>
         </definition>
     </include>
 
@@ -1149,8 +1238,8 @@
                         <visible>String.IsEqual(Skin.String(PosterHighlight),White)</visible>
                     </control>
                 </control>
-                <include condition="$PARAM[overlay]">View_WatchedOverlay_Focus</include>
             </control>
+            <include condition="$PARAM[overlay]">View_WatchedOverlay_Focus</include>
         </definition>
     </include>
 
