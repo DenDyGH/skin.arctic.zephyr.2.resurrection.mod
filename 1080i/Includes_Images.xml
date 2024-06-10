@@ -206,7 +206,7 @@
         <value condition="Window.IsVisible(AddonBrowser.xml) + String.EndsWith(ListItem.Label2,%)">$INFO[ListItem.Label2]</value>
         <value condition="!String.IsEmpty(ListItem.Property(WatchedProgress)) + !Integer.IsEqual(ListItem.Property(WatchedProgress),0) + !Integer.IsEqual(ListItem.Property(WatchedProgress),100)">$INFO[ListItem.Property(WatchedProgress)]</value>
         <value condition="!String.IsEmpty(ListItem.PercentPlayed) + [!Integer.IsEqual(ListItem.PercentPlayed,0) | ListItem.IsResumable]">$INFO[ListItem.PercentPlayed]</value>
-        <value condition="!Integer.IsEqual(ListItem.Progress,0)">$VAR[Defs_PercentPlayed_Progress]</value>
+        <value condition="!Integer.IsEqual(ListItem.Progress,0) + String.IsEmpty(ListItem.ChannelName)">$VAR[Defs_PercentPlayed_Progress]</value>
         <value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">100</value>
         <value condition="Integer.IsGreater(ListItem.PlayCount,0) + !String.IsEqual(ListItem.DBType,song) + !String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,artist) + !String.IsEqual(ListItem.DBType,image) + !String.IsEqual(ListItem.DBType,addon)">100</value>
     </variable>
