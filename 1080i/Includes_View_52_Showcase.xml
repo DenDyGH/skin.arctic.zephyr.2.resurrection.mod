@@ -808,7 +808,6 @@
                 <right>view_pad</right>
                 <bottom>view_bottom</bottom>
                 <control type="group">
-                    <top>-15</top>
                     <right>-15</right>
                     <include>View_WatchedOverlay</include>
                 </control>

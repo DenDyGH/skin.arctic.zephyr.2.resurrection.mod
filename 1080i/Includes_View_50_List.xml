@@ -266,7 +266,10 @@
                             <align>right</align>
                             <label>$VAR[Label_Premiered]$VAR[Label_List_Right,  •  ,]</label>
                         </control>
-                        <include>View_WatchedOverlay</include>
+                        <control type="group">
+                            <right>-35</right>
+                            <include>View_WatchedOverlay_Focus</include>
+                        </control>
                     </control>
                 </focusedlayout>
                 <itemlayout width="1790" height="119.5" condition="Container.Content(episodes)">
@@ -420,7 +423,10 @@
                                 <label>$VAR[Label_Premiered]$VAR[Label_List_Right,  •  ,]</label>
                             </control>
                         </control>
-                        <include>View_WatchedOverlay</include>
+                        <control type="group">
+                            <right>-35</right>
+                            <include>View_WatchedOverlay_Focus</include>
+                        </control>
                     </control>
                 </focusedlayout>
             </control>
