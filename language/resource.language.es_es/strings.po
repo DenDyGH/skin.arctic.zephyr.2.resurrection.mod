@@ -726,7 +726,7 @@ msgstr "Fuentes e ilustraciones"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
-msgid "Display additional on-screen information with controls or when paused"
+msgid "Display concise information about the currently playing video"
 msgstr "Mostrar información adicional en pantalla con controles o cuando se esta en pausa"
 
 #: /1080i/SkinSettings.xml

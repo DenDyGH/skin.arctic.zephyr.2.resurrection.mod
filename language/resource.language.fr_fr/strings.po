@@ -725,7 +725,7 @@ msgstr "Polices de caractère et illustrations"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
-msgid "Display additional on-screen information with controls or when paused"
+msgid "Display concise information about the currently playing video"
 msgstr "Afficher des informations supplémentaires à l'écran avec des commandes ou en pause"
 
 #: /1080i/SkinSettings.xml

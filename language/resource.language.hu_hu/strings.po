@@ -721,7 +721,7 @@ msgstr "Betűtípusok és képek"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
-msgid "Display additional on-screen information with controls or when paused"
+msgid "Display concise information about the currently playing video"
 msgstr "Kiegészítő osd-infó megjelenítése szünetkor"
 
 #: /1080i/SkinSettings.xml

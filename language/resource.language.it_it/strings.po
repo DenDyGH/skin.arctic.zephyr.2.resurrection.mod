@@ -722,7 +722,7 @@ msgstr "Fonts e Artwork"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
-msgid "Display additional on-screen information with controls or when paused"
+msgid "Display concise information about the currently playing video"
 msgstr "Visualizza ulteriori informazioni sullo schermo con i controlli o quando in pausa"
 
 #: /1080i/SkinSettings.xml

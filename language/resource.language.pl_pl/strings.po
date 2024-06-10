@@ -721,8 +721,8 @@ msgstr "Czcionki i grafiki"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
-msgid "Display additional on-screen information with controls or when paused"
-msgstr "Wyświetlaj dodatkowe informacje o odtwarzanym materiale"
+msgid "Display concise information about the currently playing video"
+msgstr "Wyświetlaj zwięzłe informacje o odtwarzanym materiale"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31146"

@@ -352,8 +352,8 @@
                         </control>
                         <control type="group">
                             <left>566.89</left>
+                            <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                             <control type="label">
-                                <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <top>45</top>
@@ -363,7 +363,6 @@
                                 <textcolor>main_bg_100</textcolor>
                             </control>
                             <control type="textbox">
-                                <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <top>95</top>
@@ -374,7 +373,6 @@
                                 <visible>!ListItem.IsParentFolder</visible>
                             </control>
                             <control type="label">
-                                <visible>[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <font>font_statusbar</font>
@@ -386,9 +384,11 @@
                                 <align>right</align>
                                 <label>$VAR[Label_Premiered]$VAR[Label_List_Right,  •  ,]</label>
                             </control>
-
+                        </control>
+                        <control type="group">
+                            <left>566.89</left>
+                            <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
                             <control type="label">
-                                <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <top>45</top>
@@ -398,7 +398,6 @@
                                 <textcolor>main_fg_100</textcolor>
                             </control>
                             <control type="textbox">
-                                <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <top>95</top>
@@ -409,7 +408,6 @@
                                 <visible>!ListItem.IsParentFolder</visible>
                             </control>
                             <control type="label">
-                                <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)</visible>
                                 <left>15</left>
                                 <right>40</right>
                                 <font>font_statusbar</font>
