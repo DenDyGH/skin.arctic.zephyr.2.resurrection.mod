@@ -1077,7 +1077,6 @@
                 <width>64</width>
                 <height>64</height>
                 <texture flipx="true" flipy="true" colordiffuse="ff00dd44">$VAR[Defs_PercentPlayed,progress/circle/p,.png]</texture>
-                <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.PlayCount,0)</visible>
             </control>
             <control type="image">
                 <bottom>6</bottom>
