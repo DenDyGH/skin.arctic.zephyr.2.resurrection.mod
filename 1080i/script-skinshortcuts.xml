@@ -79,7 +79,7 @@
                         <right>260</right>
                         <scroll>false</scroll>
                         <info>ListItem.Label</info>
-                        <textcolor>Selected</textcolor>
+                        <textcolor>$VAR[ColorSelected]</textcolor>
                         <animation effect="fade" start="100" end="50" condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">Conditional</animation>
                         <animation effect="slide" end="48" condition="!String.IsEqual(Window.Property(groupname),powermenu)">Conditional</animation>
                     </control>
@@ -87,7 +87,7 @@
                         <bordersize>10</bordersize>
                         <width>item_list_height</width>
                         <height>item_list_height</height>
-                        <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                        <texture colordiffuse="$VAR[ColorSelected]">$INFO[ListItem.Icon]</texture>
                         <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
                 </focusedlayout>
@@ -121,28 +121,28 @@
                     <height>32</height>
                     <font/>
                     <texturenofocus colordiffuse="dialog_fg_30">buttons/cross.png</texturenofocus>
-                    <texturefocus colordiffuse="Selected">buttons/cross.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorSelected]">buttons/cross.png</texturefocus>
                 </control>
                 <control type="button" id="301" description="Add">
                     <width>32</width>
                     <height>32</height>
                     <font/>
                     <texturenofocus colordiffuse="dialog_fg_30">buttons/plus.png</texturenofocus>
-                    <texturefocus colordiffuse="Selected">buttons/plus.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorSelected]">buttons/plus.png</texturefocus>
                 </control>
                 <control type="button" id="303" description="Up">
                     <width>32</width>
                     <height>32</height>
                     <font/>
                     <texturenofocus colordiffuse="dialog_fg_30" flipy="true">buttons/down.png</texturenofocus>
-                    <texturefocus colordiffuse="Selected" flipy="true">buttons/down.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorSelected]" flipy="true">buttons/down.png</texturefocus>
                 </control>
                 <control type="button" id="304" description="Down">
                     <width>32</width>
                     <height>32</height>
                     <font/>
                     <texturenofocus colordiffuse="dialog_fg_30">buttons/down.png</texturenofocus>
-                    <texturefocus colordiffuse="Selected">buttons/down.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorSelected]">buttons/down.png</texturefocus>
                 </control>
             </control>
 

@@ -17,7 +17,7 @@
         <font>font_small</font>
         <textoffsetx>30</textoffsetx>
         <textcolor>dialog_fg_70</textcolor>
-        <focusedcolor>Selected</focusedcolor>
+        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <texturefocus colordiffuse="dialog_bg_30">common/white.png</texturefocus>
@@ -46,7 +46,7 @@
         <font>font_small</font>
         <textoffsetx>30</textoffsetx>
         <textcolor>dialog_fg_70</textcolor>
-        <focusedcolor>Selected</focusedcolor>
+        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
         <disabledcolor>dialog_fg_30</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
@@ -60,7 +60,7 @@
         <font>font_small</font>
         <textoffsetx>30</textoffsetx>
         <textcolor>dialog_fg_70</textcolor>
-        <focusedcolor>Selected</focusedcolor>
+        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <disabledcolor>dialog_fg_30</disabledcolor>
         <!-- <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus> -->
@@ -79,7 +79,7 @@
         <radioheight>32</radioheight>
         <textoffsetx>30</textoffsetx>
         <textcolor>dialog_fg_70</textcolor>
-        <focusedcolor>Selected</focusedcolor>
+        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
@@ -99,7 +99,7 @@
         <spinwidth>32</spinwidth>
         <spinheight>32</spinheight>
         <textcolor>dialog_fg_70</textcolor>
-        <focusedcolor>Selected</focusedcolor>
+        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
@@ -122,7 +122,7 @@
         <spinwidth>32</spinwidth>
         <spinheight>32</spinheight>
         <textcolor>dialog_fg_70</textcolor>
-        <focusedcolor>Selected</focusedcolor>
+        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
@@ -174,7 +174,7 @@
         <font>font_small</font>
         <aligny>center</aligny>
         <textcolor>dialog_fg_70</textcolor>
-        <focusedcolor>Selected</focusedcolor>
+        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
         <textoffsetx>30</textoffsetx>
         <textoffsety>0</textoffsety>
