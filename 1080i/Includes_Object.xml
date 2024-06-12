@@ -1482,7 +1482,7 @@
                     <param name="visible" value="!String.IsEmpty(ListItem.Genre) + !String.IsEmpty(ListItem.Episode)" />
                 </include>
                 <include content="Object_Info_Line_Label">
-                    <param name="label" value="$LOCALIZE[31460]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]" />
+                    <param name="label" value="$LOCALIZE[31472]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="visible" value="!String.IsEmpty(ListItem.Episode)" />
                 </include>
