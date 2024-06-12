@@ -46,6 +46,12 @@
         <value>$INFO[Skin.String(gradientcolor.name)]</value>
     </variable>
 
+    <!-- Invert Text Color -->
+    <variable name="ColorSelected">
+        <value condition="Skin.HasSetting(InvertTextColor)">ff333333</value>
+        <value>Selected</value>
+    </variable>
+
     <!-- Overlay Color -->
     <variable name="ColorOverlay">
         <value condition="Skin.HasSetting(DisableOverlay)">7f000000</value>
