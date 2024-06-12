@@ -2052,5 +2052,10 @@ msgstr ""
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31471"
-msgid "Premiere and finale indicators for series"
+msgid "Premiere and finale indicators for episodes"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31472"
+msgid "Episode: "
 msgstr ""
