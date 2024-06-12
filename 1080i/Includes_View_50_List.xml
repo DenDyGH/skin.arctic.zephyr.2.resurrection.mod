@@ -577,14 +577,14 @@
                     </control>
                     <control type="group">
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <include content="$PARAM[itemlayout]" condition="[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]">
+                        <include content="$PARAM[itemlayout]" condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] + !Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]">
                             <param name="fgcolor" value="main_bg" />
                             <param name="bgcolor" value="main_fg" />
                             <param name="panelcolor" value="main_fg_100" />
                             <param name="selectbox" value="true" />
                             <param name="itemheight" value="$PARAM[itemheight]" />
                         </include>
-                        <include content="$PARAM[itemlayout]" condition="String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)">
+                        <include content="$PARAM[itemlayout]" condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White)] + Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)]">
                             <param name="fgcolor" value="main_fg" />
                             <param name="bgcolor" value="main_bg" />
                             <param name="panelcolor" value="main_fg_100" />

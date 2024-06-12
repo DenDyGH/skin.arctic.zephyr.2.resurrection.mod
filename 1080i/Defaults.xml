@@ -86,8 +86,8 @@
         <texturenofocus/>
         <textureradioondisabled colordiffuse="dialog_fg_12">buttons/radio-on.png</textureradioondisabled>
         <textureradiooffdisabled colordiffuse="dialog_fg_12">buttons/radio-off.png</textureradiooffdisabled>
-        <textureradioonfocus colordiffuse="Selected">buttons/radio-on.png</textureradioonfocus>
-        <textureradioofffocus colordiffuse="Selected">buttons/radio-off.png</textureradioofffocus>
+        <textureradioonfocus colordiffuse="$VAR[ColorSelected]">buttons/radio-on.png</textureradioonfocus>
+        <textureradioofffocus colordiffuse="$VAR[ColorSelected]">buttons/radio-off.png</textureradioofffocus>
         <textureradioonnofocus colordiffuse="dialog_fg_70">buttons/radio-on.png</textureradioonnofocus>
         <textureradiooffnofocus colordiffuse="dialog_fg_30">buttons/radio-off.png</textureradiooffnofocus>
         <textoffsetx>30</textoffsetx>
