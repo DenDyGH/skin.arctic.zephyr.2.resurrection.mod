@@ -735,7 +735,7 @@
                             <centertop>50%</centertop>
                             <width>60</width>
                             <height>60</height>
-                            <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                            <texture colordiffuse="$VAR[ColorSelected]">$INFO[ListItem.Icon]</texture>
                         </control>
                     </control>
                     <control type="label">

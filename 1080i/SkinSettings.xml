@@ -376,8 +376,6 @@
                             <label>$LOCALIZE[31459]</label>
                             <selected>Skin.HasSetting(InvertTextColor)</selected>
                             <onclick>Skin.ToggleSetting(InvertTextColor)</onclick>
-                            <enable>String.IsEqual(Skin.String(PosterHighlight),Highlight)</enable>
-                            <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                         </control>
 
                         <control type="radiobutton" id="19938" description="Highlight transparency">

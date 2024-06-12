@@ -52,12 +52,12 @@
         <value>Selected</value>
     </variable>
     <variable name="ColorSelected_100">
-        <value condition="[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]">main_bg_100</value>
-        <value condition="String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)">dialog_fg_100</value>
+        <value condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] + !Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]">main_bg_100</value>
+        <value condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White)] + Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)]">dialog_fg_100</value>
     </variable>
     <variable name="ColorSelected_70">
-        <value condition="[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]">main_bg_70</value>
-        <value condition="String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)">main_fg_70</value>
+        <value condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] + !Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]">main_bg_70</value>
+        <value condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White)] + Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)]">main_fg_70</value>
     </variable>
     <variable name="ColorFG_Highlight">
         <value condition="String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))">main_fg_100</value>
