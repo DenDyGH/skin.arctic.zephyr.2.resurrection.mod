@@ -1790,7 +1790,7 @@
                                 <align>left</align>
                                 <left>30</left>
                                 <aligny>center</aligny>
-                                <textcolor>Selected</textcolor>
+                                <textcolor>$VAR[ColorSelected]</textcolor>
                                 <label>[CAPITALIZE]$INFO[ListItem.Label][/CAPITALIZE]</label>
                             </control>
                         </focusedlayout>

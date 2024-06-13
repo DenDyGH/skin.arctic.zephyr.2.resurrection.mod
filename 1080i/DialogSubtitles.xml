@@ -158,7 +158,7 @@
                         <height>item_list_height</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label,,  •  ]$INFO[ListItem.Label2]</label>
-                        <textcolor>Selected</textcolor>
+                        <textcolor>$VAR[ColorSelected]</textcolor>
                         <font>font_small</font>
                         <scroll>true</scroll>
                     </control>
@@ -214,7 +214,7 @@
                             </control>
                             <control type="label">
                                 <label>$INFO[ListItem.Label]</label>
-                                <textcolor>Selected</textcolor>
+                                <textcolor>$VAR[ColorSelected]</textcolor>
                                 <selectedcolor>Selected</selectedcolor>
                                 <include>Dialog_Standard_Right_Buttons</include>
                                 <visible>Control.HasFocus(150)</visible>

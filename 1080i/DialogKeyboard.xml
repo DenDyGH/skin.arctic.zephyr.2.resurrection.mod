@@ -516,7 +516,7 @@
                                 <height>100%</height>
                                 <aligny>center</aligny>
                                 <align>center</align>
-                                <textcolor>Selected</textcolor>
+                                <textcolor>$VAR[ColorSelected]</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </control>
