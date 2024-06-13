@@ -1110,7 +1110,7 @@
                 <width>64</width>
                 <height>64</height>
                 <bordersize>5</bordersize>
-                <texture colordiffuse="$VAR[ColorHighlight]">$VAR[Image_Overlay_CircleFO]</texture>
+                <texture colordiffuse="$VAR[ColorHighlightOverlay]">$VAR[Image_Overlay_CircleFO]</texture>
             </control>
             <control type="image">
                 <bottom>-15</bottom>
