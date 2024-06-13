@@ -72,6 +72,11 @@
         <value>Highlight</value>
     </variable>
 
+    <variable name="ColorHighlightOverlay">
+        <value condition="String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))">ffffffff</value>
+        <value condition="String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),Highlight)">$VAR[ColorHighlight]</value>
+    </variable>
+
     <!-- Watched / Progress Color -->
     <variable name="ColorWatchedProgress">
         <value condition="!String.IsEmpty(Skin.String(watchedprogresscolor.name))">$INFO[Skin.String(watchedprogresscolor.name)]</value>
