@@ -153,7 +153,7 @@
                                 <align>left</align>
                                 <left>30</left>
                                 <aligny>center</aligny>
-                                <textcolor>Selected</textcolor>
+                                <textcolor>$VAR[ColorSelected]</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </focusedlayout>
@@ -988,7 +988,7 @@
                     </control>
                     <include content="Dialog_Standard_List_Itemlayout">
                         <param name="color_30" value="Selected" />
-                        <param name="color_70" value="Selected" />
+                        <param name="color_70" value="$VAR[ColorSelected]" />
                         <param name="color_highlight" value="Selected" />
                         <param name="list_style" value="$PARAM[list_style]" />
                         <param name="left_pad" value="$PARAM[left_pad]" />
