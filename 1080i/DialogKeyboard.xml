@@ -460,6 +460,7 @@
                 <width>100%</width>
                 <height>89</height>
                 <bottom>-129</bottom>
+                <visible>$EXP[Exp_HasAutoCompletion]</visible>
                 <control type="image">
                     <top>-18</top>
                     <bottom>-18</bottom>
@@ -521,7 +522,7 @@
                             </control>
                         </control>
                     </focusedlayout>
-                    <include condition="$EXP[Exp_HasAutoCompletion]">AutoCompletion</include>
+                    <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
                 </control>
             </control>
         </control>
