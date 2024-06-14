@@ -131,8 +131,4 @@
         <width>1520</width>
         <height>925</height>
     </include>
-
-    <include name="AutoCompletion">
-        <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
-    </include>
 </includes>
