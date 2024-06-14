@@ -521,7 +521,7 @@
                             </control>
                         </control>
                     </focusedlayout>
-                    <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
+                    <include condition="$EXP[Exp_HasAutoCompletion]">AutoCompletion</include>
                 </control>
             </control>
         </control>

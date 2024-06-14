@@ -140,8 +140,6 @@
         <pulseonselect>false</pulseonselect>
     </default>
 
-
-
     <default type="progress">
         <texturebg colordiffuse="2f5f5f5f" border="4">diffuse/progress-bg.png</texturebg>
         <lefttexture colordiffuse="$VAR[ColorHighlight]" border="4">diffuse/progress-left.png</lefttexture>
@@ -197,9 +195,9 @@
         <aligny>center</aligny>
         <font>font_small</font>
         <colorwidth>96</colorwidth>
-		<colorheight>30</colorheight>
-		<texturecolormask>common/white.png</texturecolormask>
-		<texturecolordisabledmask colordiffuse="disabled">common/white.png</texturecolordisabledmask>
+        <colorheight>30</colorheight>
+        <texturecolormask>common/white.png</texturecolormask>
+        <texturecolordisabledmask colordiffuse="disabled">common/white.png</texturecolordisabledmask>
         <textoffsetx>30</textoffsetx>
         <textcolor>dialog_fg_70</textcolor>
         <focusedcolor>Selected</focusedcolor>
@@ -209,8 +207,6 @@
         <texturenofocus />
         <pulseonselect>false</pulseonselect>
     </default>
-
-
 
     <default type="textbox">
         <font>font_small</font>
@@ -235,8 +231,7 @@
        | String.Contains(Container.FolderPath,plugin://plugin.program.iagl) 
        | Window.IsActive(games) 
        | Container.Content(games) ]
-   </expression>
-
+    </expression>
 
     <expression name="Exp_ShowPlotOverlay">[Control.HasFocus(9601) | [System.IdleTime(4) + Skin.HasSetting(AutoPlotOverlay) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,video) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + ![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(1190) | Window.IsVisible(1140)]]]</expression>
 
@@ -244,13 +239,15 @@
 
     <expression name="Exp_GlobalBackground">[!Player.HasMedia | [Player.HasVideo + !Skin.HasSetting(global.showvideo)] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio] | [Player.HasAudio + !String.IsEmpty(Window(Home).Property(PlayingBackgroundMedia))]]</expression>
 
-	<expression name="FontSetIsDefault">String.IsEqual(Skin.Font,Default)</expression>
+    <expression name="FontSetIsDefault">String.IsEqual(Skin.Font,Default)</expression>
 
-	<expression name="FontSetIsMedium">String.IsEqual(Skin.Font,Roboto Regular)</expression>
+    <expression name="FontSetIsMedium">String.IsEqual(Skin.Font,Roboto Regular)</expression>
 
-	<expression name="FontSetIsLarger">String.IsEqual(Skin.Font,Roboto Regular Larger)</expression>
+    <expression name="FontSetIsLarger">String.IsEqual(Skin.Font,Roboto Regular Larger)</expression>
 
-	<expression name="FontSetIsMediumOrLarger">String.Contains(Skin.Font,Roboto Regular)</expression>
+    <expression name="FontSetIsMediumOrLarger">String.Contains(Skin.Font,Roboto Regular)</expression>
+
+    <expression name="Exp_HasAutoCompletion">[System.HasAddon(plugin.program.autocompletion) + System.AddonIsEnabled(plugin.program.autocompletion)]</expression>
 
     <include name="Defaults_FauneFonts">
         <!-- Plot Font -->
