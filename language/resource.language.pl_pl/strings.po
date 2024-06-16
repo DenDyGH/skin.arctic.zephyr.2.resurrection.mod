@@ -107,8 +107,8 @@ msgstr "Podstawowe skróty"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
-msgid "Left-align showcase viewtypes"
-msgstr "Wyrównaj do lewej typy pokazu"
+msgid "Show clearlogo if available"
+msgstr "Pokazuj clearlogo jeśli jest dostępny"
 
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"

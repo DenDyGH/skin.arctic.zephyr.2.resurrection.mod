@@ -539,11 +539,11 @@
                             <onclick>Skin.ToggleSetting(FlipSide)</onclick>
                         </control>
 
-                        <control type="radiobutton" id="19406" description="Left-align showcase">
+                        <control type="radiobutton" id="19406" description="Show clearlogo if available">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31019]</label>
-                            <selected>Skin.HasSetting(UseAuraShowcase)</selected>
-                            <onclick>Skin.ToggleSetting(UseAuraShowcase)</onclick>
+                            <selected>Skin.HasSetting(ShowClearlogo)</selected>
+                            <onclick>Skin.ToggleSetting(ShowClearlogo)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19408" description="Default list labels">
