@@ -1239,7 +1239,7 @@
                         <include>Defs_InfoDialog_Visible</include>
                         <control type="grouplist" id="3000">
                             <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
-                            <top>20</top>
+                            <top>-5</top>
                             <onup>301</onup>
                             <ondown>301</ondown>
                             <onleft>301</onleft>
@@ -1259,10 +1259,10 @@
                             <visible>Integer.IsEqual(Container(3000).NumItems,1)</visible>
                             <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
                             <visible>![String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]]</visible>
-                            <top>432.5</top>
+                            <top>402.5</top>
                             <left>15</left>
                             <right>15</right>
-                            <bottom>-10</bottom>
+                            <bottom>-20</bottom>
                             <control type="group">
                                 <top>30</top>
                                 <visible>ControlGroup(3000).HasFocus()</visible>
@@ -1643,7 +1643,7 @@
                 <bottom>-15</bottom>
                 <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !Control.HasFocus(9999)</visible>
                 <control type="grouplist" id="3000">
-                    <top>20</top>
+                    <top>-20</top>
                     <onup>301</onup>
                     <ondown>noop</ondown>
                     <scrolltime tween="quadratic">400</scrolltime>
@@ -1661,7 +1661,7 @@
                 <control type="group">
                     <visible>Integer.IsEqual(Container(3000).NumItems,1)</visible>
                     <visible>![String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]]</visible>
-                    <top>432.5</top>
+                    <top>382.5</top>
                     <left>15</left>
                     <right>15</right>
                     <bottom>-20</bottom>
