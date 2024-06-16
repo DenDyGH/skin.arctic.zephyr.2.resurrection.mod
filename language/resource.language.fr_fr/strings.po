@@ -111,8 +111,8 @@ msgstr "Raccourcis communs"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
-msgid "Left-align showcase viewtypes"
-msgstr "Aligner le type de vue 'vitrine' à gauche"
+msgid "Show clearlogo if available"
+msgstr ""
 
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"

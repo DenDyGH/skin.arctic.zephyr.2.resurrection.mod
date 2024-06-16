@@ -112,8 +112,8 @@ msgstr "Acceso directo común"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
-msgid "Left-align showcase viewtypes"
-msgstr "Alinear a la izquierda el escaparate de imágenes en tipos de vista"
+msgid "Show clearlogo if available"
+msgstr ""
 
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"

@@ -107,7 +107,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
-msgid "Left-align showcase viewtypes"
+msgid "Show clearlogo if available"
 msgstr ""
 
 #: /1080i/script-globalsearch-main.xml

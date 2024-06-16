@@ -477,7 +477,7 @@
                     <param name="right" value="30" />
                 </include>
                 <control type="grouplist">
-                    <top>430</top>
+                    <top>410</top>
                     <left>0</left>
                     <right>30</right>
                     <orientation>vertical</orientation>
@@ -494,24 +494,24 @@
                     <include condition="!$EXP[InGameMode]">Object_Info_Line</include>
                     <include condition="$EXP[InGameMode]">View_540_ROM_Details</include>
                     <include content="Object_Info_Ratings" condition="!$EXP[InGameMode]">
-                        <param name="top" value="-10" />
+                        <param name="top" value="-30" />
                         <param name="imdbvotes" value="false" />
                         <param name="top250" value="false" />
                         <param name="oscars" value="false" />
                     </include>
                     <control type="textbox">
                         <visible>!$EXP[InGameMode]</visible>
-                        <top>25</top>
+                        <top>5</top>
                         <font>font_plotbox</font>
                         <textcolor>main_fg_70</textcolor>
                         <align>left</align>
                         <aligny>top</aligny>
-                        <height>160</height>
+                        <height>200</height>
                         <label>$VAR[Label_Plot]</label>
                     </control>
                     <control type="textbox">
                         <visible>$EXP[InGameMode]</visible>
-                        <top>25</top>
+                        <top>5</top>
                         <font>font_plotbox</font>
                         <textcolor>main_fg_70</textcolor>
                         <align>left</align>
