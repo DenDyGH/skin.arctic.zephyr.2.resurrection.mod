@@ -147,8 +147,8 @@
                             <param name="label" value="$INFO[Container($PARAM[id]).ListItem.MPAA]" />
                             <param name="container" value="Container($PARAM[id])." />
                         </include>
-                        <include content="Object_Info_Ratings" condition="$PARAM[isView2]">
-                            <param name="top" value="-20" />
+                        <include content="Object_Info_Ratings">
+                            <param name="top" value="-30" />
                             <param name="imdbvotes" value="false" />
                             <param name="top250" value="false" />
                             <param name="oscars" value="false" />

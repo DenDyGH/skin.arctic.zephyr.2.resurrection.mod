@@ -1088,6 +1088,7 @@
         <param name="oscars" default="true" />
         <definition>
             <control type="group">
+                <visible>!String.IsEmpty(ListItem.Rating) | !String.IsEmpty(ListItem.UserRating)</visible>
                 <top>$PARAM[top]</top>
                 <height>75</height>
                 <control type="group">
