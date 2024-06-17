@@ -134,7 +134,7 @@
             <control type="multiimage">
                 <include>Defs_TimePerImage</include>
                 <randomize>true</randomize>
-                <top>-100</top>
+                <top>0</top>
                 <left>560</left>
                 <width>1366</width>
                 <height>768</height>
