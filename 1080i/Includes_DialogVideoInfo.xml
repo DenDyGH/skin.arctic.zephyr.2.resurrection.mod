@@ -461,7 +461,7 @@
                                 <param name="prevent_del" value="noop" />
                             </include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper?info=stars_in_movies&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</content>
+                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=stars_in_movies&amp;limit=80&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]$VAR[Path_Param_Widget]</content>
                         </include>
                         <!-- List 02 -->
                         <include content="Info_Widget_Poster">
@@ -474,7 +474,7 @@
                                 <param name="prevent_del" value="noop" />
                             </include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper?info=stars_in_tvshows&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</content>
+                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=stars_in_tvshows&amp;limit=80&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]$VAR[Path_Param_Widget]</content>
                         </include>
                         <!-- List 03 -->
                         <include content="Info_Widget_Poster">
@@ -487,7 +487,7 @@
                                 <param name="prevent_del" value="noop" />
                             </include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper?info=crew_in_movies&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</content>
+                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=crew_in_movies&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]$VAR[Path_Param_Widget]</content>
                         </include>
                         <!-- List 05 -->
                         <include content="Info_Widget_Poster">
@@ -500,7 +500,7 @@
                                 <param name="prevent_del" value="noop" />
                             </include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper?info=crew_in_tvshows&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</content>
+                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=crew_in_tvshows&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]$VAR[Path_Param_Widget]</content>
                         </include>
                         <!-- List 06 -->
                         <include content="Info_Widget_Poster">
@@ -510,7 +510,7 @@
                             <param name="label" value="Images" />
                             <onclick>SetFocus(9506)</onclick>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="10" target="videos">plugin://plugin.video.themoviedb.helper?info=images&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</content>
+                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=images&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</content>
                         </include>
                     </control>
                 </control>

@@ -904,6 +904,7 @@
                 <visible>!Control.HasFocus(62)</visible>
                 <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
                 <visible>!Window.IsVisible(DialogNotification.xml)</visible>
+                <visible>[!Skin.HasSetting(HomeMultiFlixView) | !Window.IsVisible(Home.xml)]</visible>
                 <visible>Skin.HasSetting(EnableLanguages)</visible>
                 <height>view_bottom</height>
                 <bottom>0</bottom>
@@ -1288,6 +1289,12 @@
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,season)" />
                 </include>
+                <include content="Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
+                    <param name="id" value="$PARAM[uid]11" />
+                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)]" />
+                </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]04" />
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Duration(h),, $LOCALIZE[31036] ]$INFO[$PARAM[container]ListItem.Duration(mm),, $LOCALIZE[31020]]" />
@@ -1407,6 +1414,12 @@
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Property(WatchedEpisodes),$LOCALIZE[16102] , $LOCALIZE[20163] ]$INFO[$PARAM[container]ListItem.Property(TotalEpisodes),,]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,season)" />
+                </include>
+                <include content="Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
+                    <param name="id" value="$PARAM[uid]11" />
+                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)]" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]04" />

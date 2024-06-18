@@ -2063,3 +2063,18 @@ msgstr ""
 msgctxt "#31472"
 msgid "Episode: "
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31473"
+msgid "Hide genre in info line in some views"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31474"
+msgid "Hide play/pause button"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31475"
+msgid "Hide stop button"
+msgstr ""

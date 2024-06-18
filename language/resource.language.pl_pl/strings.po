@@ -1280,7 +1280,7 @@ msgstr "Inicjalizacja skórki"
 #: /1080i/Custom_1136_VideoInfo.xml
 msgctxt "#31356"
 msgid "Years Old"
-msgstr "Wiek"
+msgstr "Lat"
 
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31358"
@@ -2033,3 +2033,18 @@ msgstr "Oznaczenia premier i finałów odcinków"
 msgctxt "#31472"
 msgid "Episode: "
 msgstr "Odcinek: "
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31473"
+msgid "Hide genre in info line in some views"
+msgstr "Wyłącz wyświetlanie gatunku w niektórych widokach"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31474"
+msgid "Hide play/pause button"
+msgstr "Ukryj przycisk play/pauza"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31475"
+msgid "Hide stop button"
+msgstr "Ukryj przycisk stop"

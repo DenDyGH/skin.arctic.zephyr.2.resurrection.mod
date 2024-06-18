@@ -1109,6 +1109,7 @@
             <animation effect="fade" start="100" end="33" time="100" condition="!Player.PauseEnabled">Conditional</animation>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!Skin.HasSetting(HidePlayPauseButton)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
@@ -1124,6 +1125,7 @@
             <onclick>PlayerControl(Stop)</onclick>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <visible>!Skin.HasSetting(HideStopButton)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
