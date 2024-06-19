@@ -334,7 +334,9 @@
                         <texture background="true">$VAR[Image_ClearLogo]</texture>
                     </control>
                 </control>
-                <include>Object_Info_Line</include>
+                <include content="Object_Info_Line">
+                    <param name="fullgenre" value="true" />
+                </include>
                 <include>Object_Info_Ratings</include>
                 <control type="group">
                     <visible>String.IsEmpty(ListItem.Art(clearlogo)) | !Skin.HasSetting(ShowClearlogo)</visible>
