@@ -2,7 +2,9 @@
 <!-- Foundation -->
 <window id="2901">
     <onload condition="!Player.PauseEnabled">SetFocus(15)</onload>
-    <onload condition="Player.PauseEnabled">SetFocus(14)</onload>
+    <onload condition="Player.PauseEnabled + !Skin.HasSetting(HidePlayPauseButton)">SetFocus(14)</onload>
+    <onload condition="Player.PauseEnabled + [Skin.HasSetting(HidePlayPauseButton) + !Skin.HasSetting(HideStopButton)]">SetFocus(15)</onload>
+    <onload condition="Player.PauseEnabled + [Skin.HasSetting(HidePlayPauseButton) + Skin.HasSetting(HideStopButton)]">SetFocus(18)</onload>
     <onunload>ClearProperty(OSDInfo,Home)</onunload>
     <onunload>CancelAlarm(osd_timeout,true)</onunload>
     <controls>
