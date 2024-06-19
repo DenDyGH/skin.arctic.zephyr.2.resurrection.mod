@@ -42,7 +42,7 @@
 
     <include name="View_52_Showcase_Plot">
         <param name="id" default="52" />
-        <param name="plotheight" default="120" />
+        <param name="plotheight" default="210" />
         <param name="ratings" default="true" />
         <param name="bottom" default="-15" />
         <definition>
@@ -50,7 +50,7 @@
                 <orientation>vertical</orientation>
                 <bottom>$PARAM[bottom]</bottom>
                 <align>bottom</align>
-                <itemgap>50</itemgap>
+                <itemgap>20</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
                 <control type="textbox">
                     <left>view_pad</left>
@@ -62,20 +62,8 @@
                     <textcolor>main_fg_70</textcolor>
                     <font>font_plotbox</font>
                 </control>
-                <!-- <include content="Object_Icon_Ratings" condition="$PARAM[ratings]">
-                    <param name="id" value="$PARAM[id]" />
-                </include> -->
-                <!-- Check if we're using TMDb Helper -->
-                <include content="Object_Icon_Ratings" condition="$PARAM[ratings] + !System.HasAddon(plugin.video.themoviedb.helper)">
-                    <param name="id" value="$PARAM[id]" />
-                </include>
-                <include content="Object_Icon_Ratings" condition="$PARAM[ratings] + System.HasAddon(plugin.video.themoviedb.helper)">
-                    <param name="id" value="$PARAM[id]" />
-                    <param name="metacritic_prop" value="Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)" />
-                    <param name="imdb_prop" value="Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)" />
-                    <param name="rt_prop" value="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)" />
-                    <param name="rt_audience_prop" value="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)" />
-                    <param name="oscar_prop" value="Window(Home).Property(TMDbHelper.ListItem.Awards)" />
+                <include content="Object_Ratings_Content" condition="$PARAM[ratings]">
+                    <param name="align" value="center" />
                 </include>
             </control>
             <!-- Advanced Emulator Launcher Specific Platform Icon -->
@@ -537,12 +525,12 @@
         </control>
     </include>
 
-    <include name="View_535_Flix_Poster">
+    <include name="View_526_Flix_Poster">
         <control type="group">
             <include>View_Group</include>
-            <visible>Control.IsVisible(535)</visible>
+            <visible>Control.IsVisible(526)</visible>
             <include content="View_51_Wall_Container">
-                <param name="id" value="535" />
+                <param name="id" value="526" />
                 <param name="height" value="item_cast_height" />
                 <param name="orientation" value="horizontal" />
                 <param name="labelinclude" value="Defs_Null" />
