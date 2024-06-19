@@ -950,11 +950,6 @@ msgctxt "#31191"
 msgid "Info List"
 msgstr "Liste d'information"
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31192"
-msgid "Numeric star rating"
-msgstr "Classement numérique par étoiles"
-
 #: /1080i/Includes_Items.xml
 msgctxt "#31193"
 msgid "Select Art (Kodi)"

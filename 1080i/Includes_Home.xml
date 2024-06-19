@@ -1718,27 +1718,6 @@
                     <top>-30</top>
                     <height>75</height>
                     <visible>!Skin.HasSetting(DisableStarRating)</visible>
-                    <visible>!Skin.HasSetting(NumericStarRating)</visible>
-                    <control type="group">
-                        <left>-14</left>
-                        <visible>String.IsEmpty(Container($PARAM[id]).ListItem.UserRating)</visible>
-                        <include content="Object_StarRating">
-                            <param name="rating_prop" value="Container($PARAM[id]).ListItem.Rating" />
-                        </include>
-                    </control>
-                    <control type="group">
-                        <left>-14</left>
-                        <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.UserRating)</visible>
-                        <include content="Object_StarRating">
-                            <param name="rating_prop" value="Container($PARAM[id]).ListItem.UserRating" />
-                        </include>
-                    </control>
-                </control>
-                <control type="group">
-                    <top>-30</top>
-                    <height>75</height>
-                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
-                    <visible>Skin.HasSetting(NumericStarRating)</visible>
                     <control type="group">
                         <left>-14</left>
                         <top>24</top>
