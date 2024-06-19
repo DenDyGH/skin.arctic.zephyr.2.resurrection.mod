@@ -1041,36 +1041,9 @@
                 <top>$PARAM[top]</top>
                 <height>75</height>
                 <control type="group">
-                    <left>-14</left>
-                    <visible>String.IsEmpty(ListItem.UserRating)</visible>
-                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
-                    <visible>!Skin.HasSetting(NumericStarRating)</visible>
-                    <include>Object_StarRating</include>
-                </control>
-                <control type="group">
-                    <left>-14</left>
-                    <visible>!String.IsEmpty(ListItem.UserRating)</visible>
-                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
-                    <visible>!Skin.HasSetting(NumericStarRating)</visible>
-                    <include content="Object_StarRating">
-                        <param name="rating_prop" value="ListItem.UserRating" />
-                    </include>
-                </control>
-                <control type="group">
-                    <top>41</top>
-                    <left>260</left>
-                    <include content="Object_Ratings_Content" condition="!Skin.HasSetting(DisableStarRating) + !Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="$VAR[IconsDiffuse_Var]" />
-                        <param name="align" value="right" />
-                        <param name="imdbvotes" value="$PARAM[imdbvotes]" />
-                        <param name="top250" value="$PARAM[top250]" />
-                        <param name="oscars" value="$PARAM[oscars]" />
-                    </include>
-                </control>
-                <control type="group">
                     <top>41</top>
                     <left>0</left>
-                    <include content="Object_Ratings_Content" condition="Skin.HasSetting(DisableStarRating) | Skin.HasSetting(NumericStarRating)">
+                    <include content="Object_Ratings_Content">
                         <param name="colordiffuse" value="$VAR[IconsDiffuse_Var]" />
                         <param name="align" value="right" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
@@ -1093,36 +1066,9 @@
                 <top>$PARAM[top]</top>
                 <height>75</height>
                 <control type="group">
-                    <left>-14</left>
-                    <visible>String.IsEmpty(ListItem.UserRating)</visible>
-                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
-                    <visible>!Skin.HasSetting(NumericStarRating)</visible>
-                    <include>Object_StarRating</include>
-                </control>
-                <control type="group">
-                    <left>-14</left>
-                    <visible>!String.IsEmpty(ListItem.UserRating)</visible>
-                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
-                    <visible>!Skin.HasSetting(NumericStarRating)</visible>
-                    <include content="Object_StarRating">
-                        <param name="rating_prop" value="ListItem.UserRating" />
-                    </include>
-                </control>
-                <control type="group">
-                    <top>41</top>
-                    <left>260</left>
-                    <include content="Object_Ratings_Content" condition="!Skin.HasSetting(DisableStarRating) + !Skin.HasSetting(NumericStarRating)">
-                        <param name="colordiffuse" value="$VAR[IconsDiffuse_Var]" />
-                        <param name="align" value="left" />
-                        <param name="imdbvotes" value="$PARAM[imdbvotes]" />
-                        <param name="top250" value="$PARAM[top250]" />
-                        <param name="oscars" value="$PARAM[oscars]" />
-                    </include>
-                </control>
-                <control type="group">
                     <top>41</top>
                     <left>0</left>
-                    <include content="Object_Ratings_Content" condition="Skin.HasSetting(DisableStarRating) | Skin.HasSetting(NumericStarRating)">
+                    <include content="Object_Ratings_Content">
                         <param name="colordiffuse" value="$VAR[IconsDiffuse_Var]" />
                         <param name="align" value="left" />
                         <param name="imdbvotes" value="$PARAM[imdbvotes]" />
@@ -2444,7 +2390,7 @@
         <param name="trakt" default="true" />
         <param name="metacritic" default="true" />
         <param name="oscars" default="true" />
-        <param name="numericstarrating" default="Skin.HasSetting(NumericStarRating) + !Skin.HasSetting(DisableStarRating)" />
+        <param name="numericstarrating" default="!Skin.HasSetting(DisableStarRating)" />
         <param name="top250" default="true" />
         <definition>
             <control type="grouplist">
@@ -2483,7 +2429,7 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/user_rating.png</texture>
-                    <visible>$PARAM[numericstarrating]</visible>
+                    <visible>!Skin.HasSetting(Ratings.User)</visible>
                     <visible>!String.IsEmpty(ListItem.UserRating)</visible>
                 </control>
                 <control type="label">
@@ -2494,7 +2440,7 @@
                     <align>right</align>
                     <font>font_tiny</font>
                     <label>$INFO[ListItem.UserRating,,.0   ]</label>
-                    <visible>$PARAM[numericstarrating]</visible>
+                    <visible>!Skin.HasSetting(Ratings.User)</visible>
                     <visible>!String.IsEmpty(ListItem.UserRating)</visible>
                 </control>
 
@@ -2759,6 +2705,7 @@
         <param name="metacritic" default="true" />
         <param name="oscars" default="true" />
         <param name="top250" default="true" />
+        <param name="numericstarrating" default="true" />
         <definition>
             <control type="grouplist">
                 <left>0</left>
@@ -2767,6 +2714,28 @@
                 <align>$PARAM[align]</align>
                 <itemgap>8</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
+                <control type="image">
+                    <top>-17</top>
+                    <left>-16</left>
+                    <width>64</width>
+                    <height>64</height>
+                    <texture colordiffuse="main_fg_100">flags/star10.png</texture>
+                    <visible>$PARAM[numericstarrating]</visible>
+                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_100</textcolor>
+                    <top>2</top>
+                    <left>-16</left>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>font_tiny</font>
+                    <label>$INFO[VideoPlayer.Rating,,   ]</label>
+                    <visible>$PARAM[numericstarrating]</visible>
+                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
+                </control>
+
                 <control type="image">
                     <top>0</top>
                     <width>32</width>
