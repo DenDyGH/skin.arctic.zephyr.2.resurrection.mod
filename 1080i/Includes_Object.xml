@@ -1302,6 +1302,7 @@
         <param name="textcolor" default="main_fg_100" />
         <param name="container" default="" />
         <param name="uid" default="661" />
+        <param name="fullgenre" default="false" />
         <definition>
             <control type="grouplist">
                 <height>40</height>
@@ -1365,7 +1366,13 @@
                     <param name="id" value="$PARAM[uid]11" />
                     <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)]" />
+                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)] + !$PARAM[fullgenre]" />
+                </include>
+                <include content="Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
+                    <param name="id" value="$PARAM[uid]12" />
+                    <param name="label" value="$INFO[ListItem.Genre]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Genre)  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)] + $PARAM[fullgenre]" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]04" />
