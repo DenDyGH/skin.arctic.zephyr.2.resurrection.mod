@@ -175,6 +175,7 @@
                         <control type="image">
                             <bordersize>15</bordersize>
                             <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">common/selectbox2.png</texture>
+                            <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
                         </control>
                         <control type="group">
                             <height>282</height>
@@ -278,6 +279,7 @@
                         <control type="image">
                             <bordersize>15</bordersize>
                             <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">common/selectbox2.png</texture>
+                            <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
                         </control>
                         <control type="group">
                             <width>566.89</width>
@@ -617,6 +619,7 @@
             </control>
             <control type="image">
                 <visible>$PARAM[selectbox]</visible>
+                <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
                 <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">common/selectbox2.png</texture>
             </control>
             <control type="group">
@@ -877,6 +880,7 @@
             </control>
             <control type="image">
                 <visible>$PARAM[selectbox]</visible>
+                <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
                 <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">common/selectbox2.png</texture>
             </control>
 
