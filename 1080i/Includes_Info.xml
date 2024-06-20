@@ -16,7 +16,7 @@
     </variable>
 
     <variable name="Info_Keywords">
-        <value condition="[String.IsEqual(ListItem.DBTYPE,movie)] + Skin.HasSetting(EnableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=movie_keywords&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</value>
+        <value condition="[String.IsEqual(ListItem.DBTYPE,movie)] + !Skin.HasSetting(DisableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=movie_keywords&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</value>
     </variable>
 
     <variable name="Info_Cast_List01">

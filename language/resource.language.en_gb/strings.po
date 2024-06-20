@@ -47,7 +47,7 @@ msgstr ""
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31007"
-msgid "Use online information"
+msgid "Don't use online information"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
