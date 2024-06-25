@@ -61,13 +61,6 @@
                     <onclick>Skin.ToggleSetting(Ratings.TheMovieDB)</onclick>
                     <selected>!Skin.HasSetting(Ratings.TheMovieDB)</selected>
                 </control>
-                <control type="radiobutton" id="9005">
-                    <label>TVDb</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.TVDB)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.TVDB)</selected>
-                </control>
                 <control type="radiobutton" id="9006">
                     <label>IMDb</label>
                     <radioposx>730</radioposx>
