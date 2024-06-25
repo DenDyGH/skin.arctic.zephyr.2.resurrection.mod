@@ -15,6 +15,7 @@
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
 
     <controls>
+        <include>Defs_TMDbHelper_Loader</include>
         <control type="button" id="6000">
             <description>Weather Jump</description>
             <include>Defs_Hidden_Button</include>

@@ -3,6 +3,7 @@
 <window id="2001">
     <defaultcontrol always="true">300</defaultcontrol>
     <controls>
+        <include>Defs_TMDbHelper_Loader</include>
         
         <!-- Top Info -->
         <control type="group">

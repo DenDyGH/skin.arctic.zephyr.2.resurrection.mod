@@ -2,7 +2,12 @@
 <window>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
     <onload>ClearProperty(SkinSplashStarted,home)</onload>
-    <onload>Skin.SetBool(TMDbHelper.Service)</onload>
+
+    <!-- Start TMDbH service -->
+    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.Service)</onload>
+    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.UseLocalWidgetContainer)</onload>
+    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetString(TMDbHelper.MonitorContainer,99950)</onload>
+    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.DirectCallAuto)</onload>
 
     <!-- Skin Init -->
     <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff0091ea)</onload>
@@ -23,5 +28,8 @@
 
     <onload condition="!String.IsEmpty(Skin.String(StartupPlaylist))">ReplaceWindow(1113)</onload>
     <onload condition="String.IsEmpty(Skin.String(StartupPlaylist))">ReplaceWindow($INFO[System.StartupWindow])</onload>
+
+    <onload>SetProperty(ReloadDone,1)</onload>
+    <onload>SetProperty(ReloadDone,1,Home)</onload>
     <controls />
 </window>
