@@ -3,18 +3,8 @@
     <defaultcontrol always="true">9999</defaultcontrol>
     <onload>SetProperty(Header_Left_Text,$LOCALIZE[19033])</onload>
     <controls>
-        <include condition="!Skin.HasSetting(EI_HideBG)">Global_Background</include>
-        <include condition="Skin.HasSetting(EI_HideBG)">Global_Videowindow</include>
+        <include>Defs_TMDbHelper_Loader</include>
         <include>Topbar</include>
-        <control type="list" id="9999">
-            <width>1</width>
-            <height>1</height>
-            <left>-1000</left>
-            <top>-1000</top>
-                <itemlayout />
-                <focusedlayout />
-                <content target="videos">$INFO[Window(Home).Property(TMDbHelper.Path.Current)]</content>
-        </control>
         <control type="group">
             <visible>!$EXP[Exp_InfoVisible]</visible>
             <include>Dialog_Busy</include>

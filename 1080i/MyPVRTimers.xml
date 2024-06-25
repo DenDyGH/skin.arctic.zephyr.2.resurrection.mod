@@ -5,6 +5,7 @@
     <defaultcontrol always="true">500</defaultcontrol>
     <views>500</views>
     <controls>
+        <include>Defs_TMDbHelper_Loader</include>
         <include>Global_Background</include>
         <include>Topbar</include>
         <include>View_500_List_PVR</include>

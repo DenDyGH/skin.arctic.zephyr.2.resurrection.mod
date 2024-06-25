@@ -1531,7 +1531,7 @@ msgstr "Restaurar a los valores predeterminados"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#30041"
-msgid "Watchlist"
+msgid "TRAKT"
 msgstr ""
 
 #: /1080i/Custom_1119_EnableInfoLists.xml

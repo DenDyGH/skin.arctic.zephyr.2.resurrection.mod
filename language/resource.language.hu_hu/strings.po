@@ -1531,8 +1531,8 @@ msgstr "Alapbeállításokra visszaállít"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#30041"
-msgid "Watchlist"
-msgstr "Lejátszási lista"
+msgid "TRAKT"
+msgstr ""
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30042"

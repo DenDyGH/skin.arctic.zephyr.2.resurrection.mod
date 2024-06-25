@@ -154,6 +154,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="3101" />
                 <param name="groupid" value="3201" />
+                <param name="width" value="auto" />
                 <param name="label" value="$VAR[Label_Info_PlayButton]" />
                 <param name="icon" value="$VAR[Image_Info_PlayButton]" />
                 <param name="visible" value="Control.IsEnabled(3101) + !ListItem.IsFolder + !ListItem.IsCollection" />
@@ -165,6 +166,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="3102" />
                 <param name="groupid" value="3202" />
+                <param name="width" value="auto" />
                 <param name="label" value="$LOCALIZE[1024]" />
                 <param name="icon" value="special://skin/extras/icons/folder.png" />
                 <param name="visible" value="[ListItem.IsFolder | ListItem.IsCollection]" />
@@ -182,6 +184,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="8115" />
                 <param name="groupid" value="8015" />
+                <param name="width" value="auto" />
                 <param name="label" value="$LOCALIZE[30060]" />
                 <param name="icon" value="special://skin/extras/icons/search.png" />
                 <param name="visible" value="!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(ListItem.IMDbNumber)" />
@@ -195,20 +198,22 @@
             <include content="Object_Info_Button">
                 <param name="id" value="8899" />
                 <param name="groupid" value="8014" />
+                <param name="width" value="auto" />
                 <param name="label" value="$LOCALIZE[30102]" />
                 <param name="icon" value="special://skin/extras/icons/video.png" />
-                <param name="visible" value="!Window.IsVisible(1140) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))]" />
+                <param name="visible" value="!Window.IsVisible(1140) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Container(99950).ListItem.Trailer)]" />
 
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer]),False</onclick>
-                <onclick condition="String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onclick>
-                <onclick condition="String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)]),False</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Trailer)">SetProperty(HasTrailer,$INFO[Container(99950).ListItem.Trailer],Home)</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[Container(99950).ListItem.Trailer]),False</onclick>
                 <onclick>Dialog.Close(all,true)</onclick>
             </include>
 
             <include content="Object_Info_Button">
                 <param name="id" value="8150" />
                 <param name="groupid" value="8050" />
+                <param name="width" value="auto" />
                 <param name="label" value="$LOCALIZE[30103]" />
                 <param name="icon" value="special://skin/extras/icons/person.png" />
                 <param name="visible" value="Control.IsEnabled(8150)" />
@@ -220,16 +225,18 @@
                 <param name="id" value="8151" />
                 <param name="groupid" value="8051" />
                 <param name="label" value="30041" />
+                <param name="width" value="auto" />
                 <param name="icon" value="special://skin/extras/icons/trakttv.png" />
-                <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(window(home).property(tmdbhelper.listitem.tmdb_id))] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" />
+                <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(Container(99950).ListItem.Property(TMDb_ID))] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" />
 
                 <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
-                <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(tmdbhelper.listitem.tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
+                <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[Container(99950).ListItem.Property(TMDb_ID)],type=$VAR[tmdb_type],cache_refresh)</onclick>
             </include>
 
             <include content="Object_Info_Button">
                 <param name="id" value="7" />
                 <param name="groupid" value="8007" />
+                <param name="width" value="auto" />
                 <param name="label" value="$LOCALIZE[30104]" />
                 <param name="icon" value="special://skin/extras/icons/userrating.png" />
                 <param name="visible" value="Control.IsEnabled(7)" />
@@ -238,6 +245,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="8101" />
                 <param name="groupid" value="8001" />
+                <param name="width" value="auto" />
                 <param name="label" value="$LOCALIZE[31312]"/>
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
                 <param name="visible" value="Control.IsEnabled(6) + !Skin.HasSetting(KioskMode)" />
@@ -249,6 +257,7 @@
             <include content="Object_Info_Button">
                 <param name="id" value="9105" />
                 <param name="groupid" value="8003" />
+                <param name="width" value="auto" />
                 <param name="label" value="Fanart" />
                 <param name="icon" value="special://skin/extras/icons/pictures.png" />
                 <param name="visible" value="!Container(6000).IsUpdating" />
