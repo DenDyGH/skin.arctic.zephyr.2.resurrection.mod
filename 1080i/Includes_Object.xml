@@ -1622,7 +1622,6 @@
         <param name="rt_prop" default="Container(99950).ListItem.Property(RottenTomatoes_Rating)" />
         <param name="oscar_prop" default="Container(99950).ListItem.Property(Awards)" />
         <param name="rt_audience_prop" default="Container(99950).ListItem.Property(RottenTomatoes_UserMeter)" />
-        <param name="tvdb_prop" default="Window(Home).Property(TMDbHelper.ListItem.Rating.TVDB)" />
         <param name="tmdb_prop" default="Container(99950).ListItem.Property(TMDb_Rating)" />
         <param name="top250_prop" default="Container(99950).ListItem.Property(top250)" />
         <definition>
@@ -1793,28 +1792,6 @@
                         <font>font_tiny_bold</font>
                         <label>$INFO[Container($PARAM[id]).ListItem.Rating]</label>
                         <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Rating)</visible>
-                    </control>
-                </control>
-                <control type="group">
-                    <width>64</width>
-                    <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,tvshow) | String.IsEqual(Container($PARAM[id]).ListItem.DBType,season) | String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
-                    <visible>!String.IsEmpty($PARAM[tvdb_prop])</visible>
-                    <visible>!Skin.HasSetting(Ratings.TVDB)</visible>
-                    <control type="image">
-                        <top>0</top>
-                        <centerleft>50%</centerleft>
-                        <width>32</width>
-                        <height>32</height>
-                        <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/tvdb.png</texture>
-                    </control>
-                    <control type="label">
-                        <textcolor>main_fg_100</textcolor>
-                        <top>40</top>
-                        <width>auto</width>
-                        <height>28</height>
-                        <align>center</align>
-                        <font>font_tiny_bold</font>
-                        <label>$INFO[$PARAM[tvdb_prop]]</label>
                     </control>
                 </control>
                 <control type="group">
@@ -2402,7 +2379,6 @@
         <param name="usermeter" default="true" />
         <param name="imdb" default="true" />
         <param name="tmdb" default="true" />
-        <param name="tvdb" default="true" />
         <param name="trakt" default="true" />
         <param name="metacritic" default="true" />
         <param name="oscars" default="true" />
@@ -2544,29 +2520,6 @@
                     <visible>$PARAM[metacritic]</visible>
                     <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
                 </control>
-
-                <control type="image">
-                    <top>0</top>
-                    <width>32</width>
-                    <height>32</height>
-                    <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/tvdb.png</texture>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Rating.TVDB))</visible>
-                    <visible>$PARAM[tvdb]</visible>
-                    <visible>!Skin.HasSetting(Ratings.TVDB)</visible>
-                </control>
-                <control type="label">
-                    <textcolor>main_fg_100</textcolor>
-                    <top>2</top>
-                    <width>auto</width>
-                    <height>28</height>
-                    <align>right</align>
-                    <font>font_tiny</font>
-                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Rating.TVDB), ,   ]</label>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Rating.TVDB))</visible>
-                    <visible>$PARAM[tvdb]</visible>
-                    <visible>!Skin.HasSetting(Ratings.TVDB)</visible>
-                </control>
-
 
                 <control type="image">
                     <top>0</top>
@@ -2717,7 +2670,6 @@
         <param name="usermeter" default="true" />
         <param name="imdb" default="true" />
         <param name="tmdb" default="true" />
-        <param name="tvdb" default="true" />
         <param name="metacritic" default="true" />
         <param name="oscars" default="true" />
         <param name="top250" default="true" />
@@ -2773,29 +2725,6 @@
                     <visible>$PARAM[metacritic]</visible>
                     <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
                 </control>
-
-                <control type="image">
-                    <top>0</top>
-                    <width>32</width>
-                    <height>32</height>
-                    <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/tvdb.png</texture>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.TVDB))</visible>
-                    <visible>$PARAM[tvdb]</visible>
-                    <visible>!Skin.HasSetting(Ratings.TVDB)</visible>
-                </control>
-                <control type="label">
-                    <textcolor>main_fg_70</textcolor>
-                    <top>2</top>
-                    <width>auto</width>
-                    <height>28</height>
-                    <align>right</align>
-                    <font>font_tiny</font>
-                    <label>$INFO[Window(Home).Property(TMDbHelper.Player.TVDB), ,   ]</label>
-                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.TVDB))</visible>
-                    <visible>$PARAM[tvdb]</visible>
-                    <visible>!Skin.HasSetting(Ratings.TVDB)</visible>
-                </control>
-
 
                 <control type="image">
                     <top>0</top>
