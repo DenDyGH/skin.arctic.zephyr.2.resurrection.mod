@@ -170,6 +170,19 @@
             </control>
         </control>
         <control type="grouplist">
+            <right>view_pad</right>
+            <align>right</align>
+            <top>60</top>
+            <orientation>horizontal</orientation>
+            <control type="label">
+                <width>auto</width>
+                <font>font_tiny</font>
+                <textcolor>$PARAM[fgcolor]_70</textcolor>
+                <label>$INFO[System.Date]</label>
+                <visible>[![Control.HasFocus(60) | Control.HasFocus(62)] + Window.IsVisible(Home.xml) + Skin.HasSetting(ShowDate)] | [![Control.HasFocus(60) | Control.HasFocus(62)] + Skin.HasSetting(ShowDate) + !Skin.HasSetting(EnableShowItemCount)]</visible>
+            </control>
+        </control>
+        <control type="grouplist">
             <visible>!Skin.HasSetting(DisableClock)  + Skin.HasSetting(EnableShowItemCount)</visible>
             <animation effect="slide" start="0" end="-80" time="200" tween="sine" condition="Window.IsVisible(DialogVolumeBar.xml) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">Conditional</animation>
             <right>view_pad</right>

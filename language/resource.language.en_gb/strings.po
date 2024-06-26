@@ -2083,3 +2083,8 @@ msgstr ""
 msgctxt "#31476"
 msgid "Hide MPAA classification"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31477"
+msgid "Show date under clock"
+msgstr ""
