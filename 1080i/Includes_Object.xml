@@ -1175,6 +1175,7 @@
         <param name="textcolor" default="main_fg_100" />
         <param name="container" default="" />
         <param name="uid" default="661" />
+        <param name="percentrating" default="true" />
         <!-- text colors -->
         <param name="green" default="ff27ae60" />
         <definition>
@@ -1193,7 +1194,7 @@
                     <param name="textcolor" value="$PARAM[green]" />
                     <param name="divider" value="false" />
                     <param name="fallback" value="N/A" />
-                    <param name="visible" value="!String.IsEmpty(ListItem.Rating)" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Rating) + $PARAM[percentrating]" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Year]" />
@@ -1236,7 +1237,7 @@
                     <param name="id" value="$PARAM[uid]02" />
                     <param name="label" value="$INFO[$PARAM[container]ListItem.MPAA]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="![String.IsEqual($PARAM[container]ListItem.DBType,artist) | String.IsEqual($PARAM[container]ListItem.DBType,album) | String.IsEqual($PARAM[container]ListItem.DBType,song)]" />
+                    <param name="visible" value="![String.IsEqual($PARAM[container]ListItem.DBType,artist) | String.IsEqual($PARAM[container]ListItem.DBType,album) | String.IsEqual($PARAM[container]ListItem.DBType,song)] + !Skin.HasSetting(Infoline.DisableMPAA)" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]03" />
@@ -1363,7 +1364,7 @@
                     <param name="id" value="$PARAM[uid]02" />
                     <param name="label" value="$INFO[$PARAM[container]ListItem.MPAA]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="![String.IsEqual($PARAM[container]ListItem.DBType,artist) | String.IsEqual($PARAM[container]ListItem.DBType,album) | String.IsEqual($PARAM[container]ListItem.DBType,song)]" />
+                    <param name="visible" value="![String.IsEqual($PARAM[container]ListItem.DBType,artist) | String.IsEqual($PARAM[container]ListItem.DBType,album) | String.IsEqual($PARAM[container]ListItem.DBType,song)] + !Skin.HasSetting(Infoline.DisableMPAA)" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]03" />
@@ -1518,12 +1519,13 @@
         <param name="height" default="120" />
         <param name="maxwidth" default="820" />
         <param name="width" default="auto" />
+        <param name="top" default="30" />
         <param name="shadowcolor" default="ff000000" />
         <param name="label" default="$VAR[Label_Plot]" />
         <definition>
             <control type="textbox">
                 <nested />
-                <top>30</top>
+                <top>$PARAM[top]</top>
                 <label fallback="19055">$PARAM[label]</label>
                 <height>$PARAM[height]</height>
                 <width max="$PARAM[maxwidth]">$PARAM[width]</width>

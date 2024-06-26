@@ -15,6 +15,62 @@
         </control>
     </include>
 
+    <include name="View_51_Flix_Label">
+        <control type="label">
+            <left>15</left>
+            <right>15</right>
+            <font>font_title_mini</font>
+            <selectedcolor>main_fg_100</selectedcolor>
+            <textcolor>main_fg_100</textcolor>
+            <top>$PARAM[iconheight]</top>
+            <bottom>50</bottom>
+            <aligny>center</aligny>
+            <align>center</align>
+            <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="label">
+            <visible>!Container.Content(episodes)</visible>
+            <left>15</left>
+            <right>15</right>
+            <font>font_statusbar</font>
+            <selectedcolor>main_fg_100</selectedcolor>
+            <textcolor>main_fg_100</textcolor>
+            <top>$PARAM[iconheight]</top>
+            <bottom>-20</bottom>
+            <aligny>center</aligny>
+            <align>center</align>
+            <label>$INFO[ListItem.Genre]</label>
+        </control>
+        <control type="label">
+            <visible>Container.Content(episodes)</visible>
+            <left>15</left>
+            <right>15</right>
+            <font>font_statusbar</font>
+            <selectedcolor>main_fg_100</selectedcolor>
+            <textcolor>main_fg_100</textcolor>
+            <top>$PARAM[iconheight]</top>
+            <bottom>-20</bottom>
+            <aligny>center</aligny>
+            <align>center</align>
+            <label>$INFO[ListItem.TvShowTitle]</label>
+        </control>
+    </include>
+
+    <include name="View_517_Wall_Label">
+        <control type="label">
+            <left>15</left>
+            <right>15</right>
+            <font>font_statusbar</font>
+            <selectedcolor>main_fg_100</selectedcolor>
+            <textcolor>main_fg_100</textcolor>
+            <top>$PARAM[iconheight]</top>
+            <bottom>100</bottom>
+            <aligny>center</aligny>
+            <align>center</align>
+            <label>$INFO[ListItem.Label]</label>
+        </control>
+    </include>
+
     <include name="View_51_Wall_Landscape_Label">
         <control type="label">
             <left>15</left>
@@ -642,6 +698,26 @@
             </include>
         </control>
     </include>
+    <include name="View_517_Wall_Square2">
+        <control type="group">
+            <include>View_Group</include>
+            <visible>Control.IsVisible(517)</visible>
+            <include content="View_51_Wall_Container">
+                <param name="id" value="517" />
+                <param name="height" value="view_height" />
+                <param name="itemwidth" value="300" />
+                <param name="iconheight" value="290" />
+                <param name="aspectratio" value="keep" />
+                <param name="viewtype" value="Square Wall2" />
+                <param name="viewtypename" value="icon" />
+                <param name="diffuse" value="diffuse/square-wall.png" />
+                <param name="labelinclude" value="View_517_Wall_Label" />
+                <param name="forced" value="true" />
+                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(games) | Container.Content(programs) | Container.Content(addons) | Container.Content(images) | Container.Content() | Container.Content(files) | Container.Content(favourites) | $EXP[InGameMode]" />
+                <include>View_Vertical_Movement</include>
+            </include>
+        </control>
+    </include>
 
     <include name="View_511_Wall_Landscape">
         <control type="group">
@@ -760,7 +836,6 @@
                 <param name="title" value="$VAR[Label_List_Title]" />
                 <param name="plot" value="$INFO[ListItem.Plot]" />
                 <param name="isView2" value="true" />
->
             </include>
         </control>
     </include>
