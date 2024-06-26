@@ -299,6 +299,63 @@
         </definition>
     </include>
 
+    <include name="Flix_View_52_Showcase_Info2">
+        <param name="plotheight" default="160" />
+        <definition>
+            <control type="grouplist">
+                <orientation>vertical</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <itemgap>0</itemgap>
+                <top>-50</top>
+                <control type="group">
+                    <visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    <height>100</height>
+                    <include content="Flix_Object_Info_Title">
+                        <param name="font" value="font_title_medium" />
+                        <param name="shadowcolor" value="ff000000" />
+                        <param name="titleheight" value="$PARAM[titleheight]" />
+                        <param name="top" value="20" />
+                        <param name="visible" value="String.IsEmpty(ListItem.Art(clearlogo))" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible>!String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    <height>220</height>
+                    <control type="image">
+                        <width>480</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">$VAR[Image_ClearLogo]</texture>
+                        <visible>!String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    </control>
+                </control>
+                <include content="Flix_Object_Info_Line">
+                    <param name="percentrating" value="false" />
+                </include>
+                <control type="group">
+                    <visible>!String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    <include content="Flix_Object_Info_Plot">
+                        <param name="height" value="$PARAM[plotheight]" />
+                        <param name="top" value="10" />
+                        <param name="shadowcolor" value="ff000000" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    <include content="Flix_Object_Info_Plot">
+                        <param name="height" value="320" />
+                        <param name="top" value="10" />
+                        <param name="shadowcolor" value="ff000000" />
+                    </include>
+                </control>
+            </control>
+            <control type="group">
+                <width>1770</width>
+                <top>395</top>
+                <include>Flix_Object_Info_Ratings</include>
+            </control>
+        </definition>
+    </include>
+
     <include name="View_52_Showcase_Aura_Info">
         <param name="plotheight" default="280" />
         <definition>
@@ -543,6 +600,54 @@
                 <include>View_Horizontal_Movement</include>
             </include>
             <include>View_52_Showcase_Aura_Info</include>
+        </control>
+    </include>
+
+    <include name="View_528_Flix_Poster2">
+        <control type="group">
+            <include>View_Group</include>
+            <visible>Control.IsVisible(528)</visible>
+            <include content="View_51_Wall_Container">
+                <param name="id" value="528" />
+                <param name="height" value="item_cast_height" />
+                <param name="orientation" value="horizontal" />
+                <param name="labelinclude" value="Defs_Null" />
+                <param name="controltype" value="fixedlist" />
+                <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)" />
+                <param name="viewtype" value="Flix Poster2" />
+                <param name="viewtypename" value="wrap" />
+                <param name="forced" value="true" />
+                <include>View_Horizontal_Movement</include>
+            </include>
+            <include>Flix_View_52_Showcase_Info2</include>
+        </control>
+    </include>
+
+    <include name="View_529_Flix_Landscape">
+        <control type="group">
+            <include>View_Group</include>
+            <visible>Control.IsVisible(529)</visible>
+            <include content="View_51_Flix_Container">
+                <param name="id" value="529" />
+                <param name="height" value="item_cast_height" />
+                <param name="orientation" value="horizontal" />
+                <param name="controltype" value="fixedlist" />
+                <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
+                <param name="labelinclude" value="View_51_Flix_Label" />
+                <param name="diffuse" value="diffuse/landscape-wall.png" />
+                <param name="itemwidth" value="450" />
+                <param name="itemheight" value="item_cast_height" />
+                <param name="icon" value="$VAR[Image_Landscape]" />
+                <param name="iconheight" value="254" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
+                <param name="viewtype" value="Flix Landscape" />
+                <param name="viewtypename" value="wrap" />
+                <param name="forced" value="true" />
+                <movement>3</movement>
+                <include>View_Horizontal_Movement</include>
+            </include>
+            <include>Flix_View_52_Showcase_Info2</include>
         </control>
     </include>
 

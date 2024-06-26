@@ -2073,3 +2073,8 @@ msgstr ""
 msgctxt "#31475"
 msgid "Hide stop button"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31476"
+msgid "Hide MPAA classification"
+msgstr ""

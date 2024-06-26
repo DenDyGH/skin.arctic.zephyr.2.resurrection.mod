@@ -3,7 +3,7 @@
 <window id="502">
     <defaultcontrol always="true">50</defaultcontrol>
     <menucontrol>300</menucontrol>
-    <views>50,500,510,512,513,520</views>
+    <views>50,500,510,517,512,513,520</views>
     <controls>
 
         <include>Defs_TMDbHelper_Loader</include>
@@ -22,6 +22,7 @@
             <include>View_50_List</include>
             <include>View_500_List_Square</include>
             <include>View_510_Wall_Square</include>
+            <include>View_517_Wall_Square2</include>
             <include>View_512_Wall_Icons</include>
             <include>View_513_Wall_Circle</include>
             <include>View_520_Showcase_Square</include>

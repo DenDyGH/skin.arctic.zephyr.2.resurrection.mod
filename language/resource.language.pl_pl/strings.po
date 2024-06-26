@@ -113,7 +113,7 @@ msgstr "Pokazuj clearlogo jeśli jest dostępny"
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"
 msgid "mins"
-msgstr "minuty"
+msgstr "min"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31021"
@@ -2043,3 +2043,8 @@ msgstr "Ukryj przycisk play/pauza"
 msgctxt "#31475"
 msgid "Hide stop button"
 msgstr "Ukryj przycisk stop"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31476"
+msgid "Hide MPAA classification"
+msgstr "Ukryj klasyfikacje MPAA"

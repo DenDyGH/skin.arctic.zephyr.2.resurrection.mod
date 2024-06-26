@@ -159,6 +159,35 @@
             </control>
         </control>
 
+        <control type="group">
+            <control type="multiimage">
+                <include>Defs_TimePerImage</include>
+                <randomize>true</randomize>
+                <top>0</top>
+                <left>560</left>
+                <width>1366</width>
+                <height>768</height>
+                <aspectratio>scale</aspectratio>
+                <fadetime>600</fadetime>
+                <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]</visible>
+            </control>
+            <control type="multiimage">
+                <include>Defs_TimePerImage</include>
+                <randomize>true</randomize>
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>scale</aspectratio>
+                <fadetime>600</fadetime>
+                <imagepath background="true">common/vignette-flix-basic.png</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]</visible>
+            </control>
+        </control>
+
         <include>Object_NowPlaying</include>
         <include condition="!Skin.HasSetting(HomeMultiFlixView)">Object_Codecs</include>
         <include>Object_Languages</include>
