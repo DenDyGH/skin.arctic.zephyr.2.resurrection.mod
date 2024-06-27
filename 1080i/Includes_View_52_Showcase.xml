@@ -308,31 +308,29 @@
                 <itemgap>0</itemgap>
                 <top>-50</top>
                 <control type="group">
-                    <visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
-                    <height>100</height>
+                    <visible>String.IsEmpty(ListItem.Art(clearlogo)) | !Skin.HasSetting(ShowClearlogo)</visible>
+                    <height>90</height>
                     <include content="Flix_Object_Info_Title">
                         <param name="font" value="font_title_medium" />
                         <param name="shadowcolor" value="ff000000" />
                         <param name="titleheight" value="$PARAM[titleheight]" />
                         <param name="top" value="20" />
-                        <param name="visible" value="String.IsEmpty(ListItem.Art(clearlogo))" />
                     </include>
                 </control>
                 <control type="group">
-                    <visible>!String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    <visible>!String.IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ShowClearlogo)</visible>
                     <height>220</height>
                     <control type="image">
                         <width>480</width>
                         <aspectratio>keep</aspectratio>
                         <texture background="true">$VAR[Image_ClearLogo]</texture>
-                        <visible>!String.IsEmpty(ListItem.Art(clearlogo))</visible>
                     </control>
                 </control>
                 <include content="Flix_Object_Info_Line">
                     <param name="percentrating" value="false" />
                 </include>
                 <control type="group">
-                    <visible>!String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    <visible>!String.IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Flix_Object_Info_Plot">
                         <param name="height" value="$PARAM[plotheight]" />
                         <param name="top" value="10" />
@@ -340,7 +338,7 @@
                     </include>
                 </control>
                 <control type="group">
-                    <visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                    <visible>String.IsEmpty(ListItem.Art(clearlogo)) | !Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Flix_Object_Info_Plot">
                         <param name="height" value="320" />
                         <param name="top" value="10" />
