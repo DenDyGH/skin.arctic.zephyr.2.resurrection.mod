@@ -112,7 +112,7 @@ msgstr "Acceso directo común"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
-msgid "Show clearlogo if available"
+msgid "Show clearlogo instead of text title"
 msgstr ""
 
 #: /1080i/script-globalsearch-main.xml

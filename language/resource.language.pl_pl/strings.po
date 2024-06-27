@@ -107,8 +107,8 @@ msgstr "Podstawowe skróty"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
-msgid "Show clearlogo if available"
-msgstr "Pokazuj clearlogo jeśli jest dostępny"
+msgid "Show clearlogo instead of text title"
+msgstr "Pokazuj clearlogo zamiast tytułu tekstowego"
 
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"
