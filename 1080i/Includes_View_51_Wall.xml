@@ -374,6 +374,18 @@
                         <visible>$PARAM[circle]</visible>
                     </control>
 
+                    <include content="$PARAM[labelinclude]" condition="Window.IsVisible(DialogVideoInfo.xml)">
+                        <param name="bordersize" value="$PARAM[bordersize]" />
+                        <param name="diffuse" value="$PARAM[diffuse]" />
+                        <param name="iconheight" value="$PARAM[iconheight]" />
+                        <param name="icononlyheight" value="$PARAM[icononlyheight]" />
+                        <param name="label2" value="$PARAM[label2]" />
+                        <param name="textfade_end" value="$PARAM[textfade_end]" />
+                        <param name="textfade_start" value="$PARAM[textfade_start]" />
+                        <param name="id" value="$PARAM[id]" />
+                        <param name="selectbox" value="$PARAM[selectbox]" />
+                    </include>
+
                     <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
 
                     <control type="group">
@@ -387,7 +399,7 @@
                         </include>
                     </control>
                 </control>
-                <include content="$PARAM[labelinclude]">
+                <include content="$PARAM[labelinclude]" condition="!Window.IsVisible(DialogVideoInfo.xml)">
                     <param name="bordersize" value="$PARAM[bordersize]" />
                     <param name="diffuse" value="$PARAM[diffuse]" />
                     <param name="iconheight" value="$PARAM[iconheight]" />
