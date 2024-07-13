@@ -766,6 +766,11 @@
                 <visible>Skin.HasSetting(DisableOSDInfo)</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
+                <control type="image">
+                    <bottom>0</bottom>
+                    <top>750</top>
+                    <texture>common/osd-dim.png</texture>
+                </control>
 
                 <control type="group" description="info">
                     <left>view_pad</left>

@@ -173,7 +173,7 @@
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)] + !Player.HasVideo</visible>
+                <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]</visible>
             </control>
             <control type="multiimage">
                 <include>Defs_TimePerImage</include>
