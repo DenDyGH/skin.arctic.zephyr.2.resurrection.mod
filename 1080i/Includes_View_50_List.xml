@@ -227,7 +227,7 @@
                         </control>
                         <control type="group">
                             <right>-35</right>
-                            <include>View_WatchedOverlay_Focus</include>
+                            <include>View_WatchedOverlay_Focus_Full</include>
                         </control>
                     </control>
                 </focusedlayout>
@@ -335,7 +335,7 @@
                         </control>
                         <control type="group">
                             <right>-35</right>
-                            <include>View_WatchedOverlay_Focus</include>
+                            <include>View_WatchedOverlay_Focus_Full</include>
                         </control>
                     </control>
                 </focusedlayout>
