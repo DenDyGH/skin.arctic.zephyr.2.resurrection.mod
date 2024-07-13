@@ -96,7 +96,7 @@
                         </include>
                         <control type="group">
                             <bottom>15</bottom>
-                            <include>View_WatchedOverlay_Focus</include>
+                            <include>View_WatchedOverlay_Focus_Full</include>
                         </control>
                     </control>
                 </focusedlayout>

@@ -274,8 +274,6 @@
                         <param name="listitem">$PARAM[listitem]</param>
                     </include>
 
-                    <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
-
                     <control type="group">
                         <visible>!$PARAM[circle]</visible>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -286,6 +284,7 @@
                             <param name="focusbounce" value="$PARAM[focusbounce]" />
                         </include>
                     </control>
+                    <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
                 </control>
                 <include content="$PARAM[labelinclude]">
                     <param name="bordersize" value="$PARAM[bordersize]" />
@@ -386,8 +385,6 @@
                         <param name="selectbox" value="$PARAM[selectbox]" />
                     </include>
 
-                    <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
-
                     <control type="group">
                         <visible>!$PARAM[circle]</visible>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -398,6 +395,7 @@
                             <param name="focusbounce" value="$PARAM[focusbounce]" />
                         </include>
                     </control>
+                    <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
                 </control>
                 <include content="$PARAM[labelinclude]" condition="!Window.IsVisible(DialogVideoInfo.xml)">
                     <param name="bordersize" value="$PARAM[bordersize]" />

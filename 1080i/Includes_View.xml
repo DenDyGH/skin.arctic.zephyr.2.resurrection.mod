@@ -1112,6 +1112,20 @@
                 <bordersize>5</bordersize>
                 <texture colordiffuse="$VAR[ColorHighlightOverlay]">$VAR[Image_Overlay_CircleFO]</texture>
             </control>
+        </control>
+    </include>
+
+    <include name="View_WatchedOverlay_Focus_Full">
+        <control type="group">
+            <visible>!Skin.HasSetting(DisableWatchedOverlay)</visible>
+            <control type="image">
+                <bottom>-15</bottom>
+                <right>20</right>
+                <width>64</width>
+                <height>64</height>
+                <bordersize>5</bordersize>
+                <texture colordiffuse="$VAR[ColorHighlightOverlay]">$VAR[Image_Overlay_CircleFO]</texture>
+            </control>
             <control type="image">
                 <bottom>-15</bottom>
                 <right>20</right>
