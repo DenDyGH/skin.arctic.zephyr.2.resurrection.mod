@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, heppen" version="1.0.20">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, heppen" version="1.0.21">
     <requires>
         <import addon="xbmc.gui" version="5.16.0" />
         <import addon="script.skinshortcuts"/>
-        <import addon="script.skinhelper"/>
-        <import addon="plugin.video.themoviedb.helper"/>
+        <import addon="script.skinhelper" version="0.0.4" />
+        <import addon="plugin.video.themoviedb.helper" version="5.2.26" />
         <import addon="resource.images.studios.white"/>
         <import addon="resource.images.moviegenreicons.transparent"/>
         <import addon="resource.images.weathericons.white"/>
