@@ -2690,6 +2690,7 @@
                     <width>64</width>
                     <height>64</height>
                     <texture colordiffuse="main_fg_100">flags/star10.png</texture>
+                    <visible>!String.IsEmpty(VideoPlayer.Rating)</visible>
                     <visible>$PARAM[numericstarrating]</visible>
                     <visible>!Skin.HasSetting(DisableStarRating)</visible>
                 </control>
@@ -2702,6 +2703,7 @@
                     <align>right</align>
                     <font>font_tiny</font>
                     <label>$INFO[VideoPlayer.Rating,,   ]</label>
+                    <visible>!String.IsEmpty(VideoPlayer.Rating)</visible>
                     <visible>$PARAM[numericstarrating]</visible>
                     <visible>!Skin.HasSetting(DisableStarRating)</visible>
                 </control>
@@ -2765,7 +2767,7 @@
                     <height>32</height>
                     <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/rtrotten.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.RottenTomatoes_Rating))</visible>
-                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.Player.RottenTomatoes_Rating),0) + !Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_Rating),59)</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.Player.RottenTomatoes_Rating),0) + !Integer.IsGreater(Window(home).Property(TMDbHelper.Player.RottenTomatoes_Rating),59)</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
@@ -2774,7 +2776,7 @@
                     <height>32</height>
                     <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/rtfresh.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.RottenTomatoes_Rating))</visible>
-                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.Player.RottenTomatoes_Rating),59) + !Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_Rating),74)</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.Player.RottenTomatoes_Rating),59) + !Integer.IsGreater(Window(home).Property(TMDbHelper.Player.RottenTomatoes_Rating),74)</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
