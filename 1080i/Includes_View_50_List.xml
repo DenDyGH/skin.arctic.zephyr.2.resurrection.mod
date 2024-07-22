@@ -819,18 +819,18 @@
                 <left>$PARAM[pad]</left>
                 <right>$PARAM[pad]</right>
                 <control type="image">
-                    <visible>String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEmpty(Skin.String(PosterHighlight))</visible>
                     <left>-$PARAM[pad]</left>
                     <right>-$PARAM[pad]</right>
                     <visible>$PARAM[selectbox]</visible>
-                    <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+                    <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
+                    <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">diffuse/box.png</texture>
                 </control>
                 <control type="image">
-                    <visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
                     <left>-$PARAM[pad]</left>
                     <right>-$PARAM[pad]</right>
                     <visible>$PARAM[selectbox]</visible>
-                    <texture colordiffuse="$VAR[ColorHighlight]" border="10">diffuse/box.png</texture>
+                    <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
+                    <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">common/selectbox2.png</texture>
                 </control>
                 <control type="label">
                     <visible>String.IsEmpty(ListItem.Date)</visible>
