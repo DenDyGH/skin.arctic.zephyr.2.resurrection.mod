@@ -2515,106 +2515,127 @@
     </include>
     <include name="Items_Dialog_AlphaValue">
         <control type="button" id="9001">
+            <height>item_list_height</height>
             <label>100%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,100)</onclick>
         </control>
         <control type="button" id="9002">
+            <height>item_list_height</height>
             <label>95%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,95)</onclick>
         </control>
         <control type="button" id="9003">
+            <height>item_list_height</height>
             <label>90%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,90)</onclick>
         </control>
         <control type="button" id="9004">
+            <height>item_list_height</height>
             <label>85%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,85)</onclick>
         </control>
         <control type="button" id="9005">
+            <height>item_list_height</height>
             <label>80%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,80)</onclick>
         </control>
         <control type="button" id="9006">
+            <height>item_list_height</height>
             <label>75%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,75)</onclick>
         </control>
         <control type="button" id="9007">
+            <height>item_list_height</height>
             <label>70%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,70)</onclick>
         </control>
         <control type="button" id="9008">
+            <height>item_list_height</height>
             <label>65%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,65)</onclick>
         </control>
         <control type="button" id="9009">
+            <height>item_list_height</height>
             <label>60%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,60)</onclick>
         </control>
         <control type="button" id="9010">
+            <height>item_list_height</height>
             <label>55%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,55)</onclick>
         </control>
         <control type="button" id="9012">
+            <height>item_list_height</height>
             <label>50%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,50)</onclick>
         </control>
         <control type="button" id="9013">
+            <height>item_list_height</height>
             <label>45%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,45)</onclick>
         </control>
         <control type="button" id="9014">
+            <height>item_list_height</height>
             <label>40%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,40)</onclick>
         </control>
         <control type="button" id="9015">
+            <height>item_list_height</height>
             <label>35%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,35)</onclick>
         </control>
         <control type="button" id="9016">
+            <height>item_list_height</height>
             <label>30%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,30)</onclick>
         </control>
         <control type="button" id="9017">
+            <height>item_list_height</height>
             <label>25%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,25)</onclick>
         </control>
         <control type="button" id="9018">
+            <height>item_list_height</height>
             <label>20%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,20)</onclick>
         </control>
         <control type="button" id="9019">
+            <height>item_list_height</height>
             <label>15%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,15)</onclick>
         </control>
         <control type="button" id="9020">
+            <height>item_list_height</height>
             <label>10%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,10)</onclick>
         </control>
         <control type="button" id="9021">
+            <height>item_list_height</height>
             <label>5%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,5)</onclick>
         </control>
         <control type="button" id="9022">
+            <height>item_list_height</height>
             <label>0% ($LOCALIZE[30059])</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,0)</onclick>
@@ -2622,106 +2643,127 @@
     </include>
     <include name="Items_Highlight_AlphaValue">
         <control type="button" id="9001">
+            <height>item_list_height</height>
             <label>100%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,100)</onclick>
         </control>
         <control type="button" id="9002">
+            <height>item_list_height</height>
             <label>95%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,95)</onclick>
         </control>
         <control type="button" id="9003">
+            <height>item_list_height</height>
             <label>90%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,90)</onclick>
         </control>
         <control type="button" id="9004">
+            <height>item_list_height</height>
             <label>85%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,85)</onclick>
         </control>
         <control type="button" id="9005">
+            <height>item_list_height</height>
             <label>80%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,80)</onclick>
         </control>
         <control type="button" id="9006">
+            <height>item_list_height</height>
             <label>75%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,75)</onclick>
         </control>
         <control type="button" id="9007">
+            <height>item_list_height</height>
             <label>70%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,70)</onclick>
         </control>
         <control type="button" id="9008">
+            <height>item_list_height</height>
             <label>65%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,65)</onclick>
         </control>
         <control type="button" id="9009">
+            <height>item_list_height</height>
             <label>60%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,60)</onclick>
         </control>
         <control type="button" id="9010">
+            <height>item_list_height</height>
             <label>55%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,55)</onclick>
         </control>
         <control type="button" id="9012">
+            <height>item_list_height</height>
             <label>50%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,50)</onclick>
         </control>
         <control type="button" id="9013">
+            <height>item_list_height</height>
             <label>45%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,45)</onclick>
         </control>
         <control type="button" id="9014">
+            <height>item_list_height</height>
             <label>40%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,40)</onclick>
         </control>
         <control type="button" id="9015">
+            <height>item_list_height</height>
             <label>35%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,35)</onclick>
         </control>
         <control type="button" id="9016">
+            <height>item_list_height</height>
             <label>30%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,30)</onclick>
         </control>
         <control type="button" id="9017">
+            <height>item_list_height</height>
             <label>25%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,25)</onclick>
         </control>
         <control type="button" id="9018">
+            <height>item_list_height</height>
             <label>20%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,20)</onclick>
         </control>
         <control type="button" id="9019">
+            <height>item_list_height</height>
             <label>15%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,15)</onclick>
         </control>
         <control type="button" id="9020">
+            <height>item_list_height</height>
             <label>10%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,10)</onclick>
         </control>
         <control type="button" id="9021">
+            <height>item_list_height</height>
             <label>5%</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,5)</onclick>
         </control>
         <control type="button" id="9022">
+            <height>item_list_height</height>
             <label>0% ($LOCALIZE[30059])</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,0)</onclick>
