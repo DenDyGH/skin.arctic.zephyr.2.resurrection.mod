@@ -12,8 +12,6 @@
     <onload>SetProperty(TMDBHelper.Info.OriginalPath,$INFO[ListItem.FolderPath],Home)</onload>
     <controls>
         <include>Defs_TMDbHelper_Loader</include>
-        <include condition="Window.IsVisible(1190) + !Skin.HasSetting(EI_HideBG)">Global_Background</include>
-        <include condition="Window.IsVisible(1190) + Skin.HasSetting(EI_HideBG)">Global_Videowindow</include>
 
         <!-- Top Info -->
         <control type="group">
