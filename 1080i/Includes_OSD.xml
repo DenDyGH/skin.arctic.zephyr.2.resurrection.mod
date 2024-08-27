@@ -1403,6 +1403,21 @@
             <visible>!VideoPlayer.Content(musicvideos)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
+
+        <control type="button" id="42">
+            <centertop>50%</centertop>
+            <description>Bookmarks</description>
+            <width>48</width>
+            <height>48</height>
+            <label/>
+            <font/>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/bookmarks2.png</texturefocus>
+            <texturenofocus colordiffuse="panel_fg_70">osd/bookmarks2.png</texturenofocus>
+            <onclick>ActivateWindow(videobookmarks)</onclick>
+            <visible>!Skin.HasSetting(HideBookmarksButton)</visible>
+            <visible>!VideoPlayer.Content(livetv)</visible>
+        </control>
+
         <control type="button" id="414">
             <centertop>50%</centertop>
             <description>Playerprocessinfo</description>
@@ -1417,6 +1432,7 @@
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
+
         <control type="button" id="40">
             <centertop>50%</centertop>
             <description>Settings</description>
