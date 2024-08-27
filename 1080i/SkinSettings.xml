@@ -746,6 +746,13 @@
                             <onclick>Skin.ToggleSetting(HideSettingsButton)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19532" description="Hide bookmarks button">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31479]</label>
+                            <selected>Skin.HasSetting(HideBookmarksButton)</selected>
+                            <onclick>Skin.ToggleSetting(HideBookmarksButton)</onclick>
+                        </control>
+
                         <control type="radiobutton" id="19527" description="Hide player process info button">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31454]</label>

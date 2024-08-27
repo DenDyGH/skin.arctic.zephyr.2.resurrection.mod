@@ -2088,3 +2088,8 @@ msgstr ""
 msgctxt "#31478"
 msgid "Hide match info in widgets"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31479"
+msgid "Hide bookmarks button"
+msgstr ""
