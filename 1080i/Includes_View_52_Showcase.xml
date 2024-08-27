@@ -356,6 +356,7 @@
 
     <include name="View_52_Showcase_Aura_Info">
         <param name="plotheight" default="280" />
+        <param name="plotheight_clearlogo" default="200" />
         <definition>
             <control type="grouplist">
                 <top>-30</top>
@@ -390,7 +391,7 @@
                 <control type="group">
                     <visible>!String.IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Object_Info_Plot">
-                        <param name="maxheight" value="200" />
+                        <param name="maxheight" value="$PARAM[plotheight_clearlogo]" />
                     </include>
                 </control>
             </control>
