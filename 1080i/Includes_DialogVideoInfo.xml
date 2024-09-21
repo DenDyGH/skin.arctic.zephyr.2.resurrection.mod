@@ -278,7 +278,7 @@
                             <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListStudio)" />
                             <param name="id" value="5005" />
                             <param name="groupid" value="7505" />
-                            <param name="label" value="$INFO[ListItem.Studio,$LOCALIZE[31053] ,]" />
+                            <param name="label" value="$INFO[ListItem.Studio]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Studio)</visible>
@@ -332,6 +332,7 @@
                     <!-- <include condition="String.IsEmpty(ListItem.Property(tmdb_id)) + [!String.IsEmpty(ListItem.Art(fanart1)) | !String.IsEmpty(ListItem.Art(discart))]">Items_Info_Gallery</include> -->
                     <content condition="!String.IsEmpty(ListItem.Property(tmdb_id)) | [String.IsEmpty(ListItem.Art(fanart1)) + String.IsEmpty(ListItem.Art(discart))]">plugin://plugin.video.themoviedb.helper/?info=fanart&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</content>
                     <visible>Integer.IsGreater(Container(6000).NumItems,0) | Container(6000).IsUpdating</visible>
+                    <visible>!Skin.HasSetting(DisableInfoListFanarts)</visible>
                 </include>
                 <control type="group"></control>
             </control>

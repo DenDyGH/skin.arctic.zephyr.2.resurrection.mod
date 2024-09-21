@@ -51,7 +51,7 @@ msgstr "Colección"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31007"
-msgid "Don't use online information"
+msgid "Use local library info for recommendations"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -91,7 +91,7 @@ msgstr "Fanart Extra"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31015"
-msgid "Choose info-dialog lists"
+msgid "Customise recommendations window"
 msgstr "Seleccionar elementos para diálogo de información"
 
 #: /1080i/SkinSettings.xml
@@ -277,7 +277,7 @@ msgstr "Similar a"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31052"
-msgid "By Director"
+msgid "Premiered in"
 msgstr "Del Director"
 
 #: /1080i/DialogVideoInfo.xml
@@ -1536,7 +1536,7 @@ msgstr ""
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30042"
-msgid "Recommended"
+msgid "Recommendations"
 msgstr "recomendado"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
@@ -1671,12 +1671,12 @@ msgstr "delgado"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30070"
-msgid "Films from the Year"
+msgid "Year"
 msgstr ""
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30071"
-msgid "By genre"
+msgid "Genre"
 msgstr ""
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
@@ -2092,4 +2092,9 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31479"
 msgid "Hide bookmarks button"
+msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#31480"
+msgid "Lists"
 msgstr ""

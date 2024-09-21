@@ -47,8 +47,8 @@ msgstr "Kolekcja"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31007"
-msgid "Don't use online information"
-msgstr "Nie korzystaj z informacji online"
+msgid "Use local library info for recommendations"
+msgstr "Pobieraj dane tylko z lokalnej biblioteki"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31008"
@@ -87,8 +87,8 @@ msgstr "Dodatkowy fanart"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31015"
-msgid "Choose info-dialog lists"
-msgstr "Wybierz liste info-dialog"
+msgid "Customise recommendations window"
+msgstr "Dostosuj okno informacji"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31016"
@@ -272,13 +272,13 @@ msgstr "Podobne do"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31052"
-msgid "By Director"
-msgstr "Po reżyserach"
+msgid "Directed by"
+msgstr "Wyreżyserowane przez"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31053"
-msgid "Films from"
-msgstr "Filmy z"
+msgid "Premiered in"
+msgstr "Premiera w"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31054"
@@ -673,22 +673,22 @@ msgstr "Potrójny-Panel"
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31135"
 msgid "Similar"
-msgstr "Podobny"
+msgstr "Podobne"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31136"
 msgid "Next-up episodes"
-msgstr "Kolejne sezony"
+msgstr "Następne odcinki"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31137"
 msgid "Featuring cast-members"
-msgstr "Członkowie obsady"
+msgstr "Z udziałem członków obsady"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31138"
 msgid "Extras and special features"
-msgstr "Dodatkowe i specialne funkcje"
+msgstr "Dodatki i funkcje specjalne"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31139"
@@ -1640,13 +1640,23 @@ msgid "Choose between focus border sizes"
 msgstr "Wybierz pomiędzy rozmiarami obramowania"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30070"
+msgid "Year"
+msgstr "Rok"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#30071"
+msgid "Genre"
+msgstr "Gatunek"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30072"
 msgid "Crew"
-msgstr "Zespół"
+msgstr "Ekipa"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30042"
-msgid "Recommended"
+msgid "Recommendations"
 msgstr "Rekomendacje"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
@@ -2063,3 +2073,8 @@ msgstr "Ukryj info o trafności w widgetach"
 msgctxt "#31479"
 msgid "Hide bookmarks button"
 msgstr "Ukryj przycisk zakładek"
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#31480"
+msgid "Lists"
+msgstr "Listy"
