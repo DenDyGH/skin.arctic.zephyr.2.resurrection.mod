@@ -26,6 +26,10 @@
                 <pagecontrol>61</pagecontrol>
                 <orientation>vertical</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
+                <control type="label" id="9090">
+                    <include>Dialog_Standard_HintLabel</include>
+                    <label>$LOCALIZE[5]</label>
+                </control>
                 <control type="radiobutton" id="9001">
                     <label>$LOCALIZE[31007]</label>
                     <radioposx>730</radioposx>
@@ -40,6 +44,10 @@
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListExtras)</onclick>
                     <selected>!Skin.HasSetting(DisableInfoListExtras)</selected>
+                </control>
+                <control type="label" id="9091">
+                    <include>Dialog_Standard_HintLabel</include>
+                    <label>$LOCALIZE[31480]</label>
                 </control>
                 <control type="radiobutton" id="9002">
                     <label>$LOCALIZE[31006]</label>
@@ -139,6 +147,14 @@
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableInfoListPosters)</onclick>
                     <selected>!Skin.HasSetting(DisableInfoListPosters)</selected>
+                    <enable>!Skin.HasSetting(DisableExtendedInfo)</enable>
+                </control>
+                <control type="radiobutton" id="9022">
+                    <label>Fanarts</label>
+                    <radioposx>730</radioposx>
+                    <include>Dialog_Standard_Button</include>
+                    <onclick>Skin.ToggleSetting(DisableInfoListFanarts)</onclick>
+                    <selected>!Skin.HasSetting(DisableInfoListFanarts)</selected>
                     <enable>!Skin.HasSetting(DisableExtendedInfo)</enable>
                 </control>
             </control>
