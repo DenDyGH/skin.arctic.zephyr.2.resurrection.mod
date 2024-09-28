@@ -1864,7 +1864,7 @@ msgstr "Lire la bande-annonce en arrière-plan de la vue NetFlix"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30108"
-msgid "Disable profile info in narrow menu"
+msgid "Hide profile info in menu"
 msgstr "Désactiver les informations de profil dans le menu"
 
 #: /1080i/SkinSettings.xml
@@ -2100,4 +2100,9 @@ msgstr ""
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31480"
 msgid "Lists"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31481"
+msgid "Hide menu when focus is on widgets"
 msgstr ""

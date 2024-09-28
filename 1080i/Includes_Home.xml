@@ -585,7 +585,7 @@
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
                         <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
-                        <animation effect="slide" start="0" end="444" time="200" reversible="false" condition="ControlGroup(3000).HasFocus()">Conditional</animation>
+                        <animation effect="slide" start="0" end="444" time="200" reversible="false" condition="ControlGroup(3000).HasFocus() + !Skin.HasSetting(FlixHideMenu)">Conditional</animation>
                     </control>
                     <control type="label">
                         <left>80</left>
@@ -623,7 +623,7 @@
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
                         <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
-                        <animation effect="slide" start="0" end="454" time="200" reversible="false" condition="ControlGroup(3000).HasFocus()">Conditional</animation>
+                        <animation effect="slide" start="0" end="454" time="200" reversible="false" condition="ControlGroup(3000).HasFocus() + !Skin.HasSetting(FlixHideMenu)">Conditional</animation>
                     </control>
                 </itemlayout>
                 <focusedlayout width="400" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
