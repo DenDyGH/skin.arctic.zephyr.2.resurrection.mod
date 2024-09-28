@@ -1841,8 +1841,8 @@ msgstr "Odtwarzaj zwiastun w tle w widoku Flix"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30108"
-msgid "Disable profile info in narrow menu"
-msgstr "Wyłącz informacje o profilu w wysuwanym menu"
+msgid "Hide profile info in menu"
+msgstr "Ukryj informacje o profilu w menu"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30109"
@@ -2078,3 +2078,8 @@ msgstr "Ukryj przycisk zakładek"
 msgctxt "#31480"
 msgid "Lists"
 msgstr "Listy"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31481"
+msgid "Hide menu when focus is on widgets"
+msgstr "Ukryj menu gdy focus jest na widgetach"

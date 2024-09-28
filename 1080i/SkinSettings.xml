@@ -130,6 +130,14 @@
                             <onclick>ActivateWindow(1150)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19112" description="Disable profile info in main menu">
+                            <include>Defs_Settings_Button</include>
+                            <label> - $LOCALIZE[30108]</label>
+                            <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
+                            <selected>Skin.HasSetting(DisabledProfileInfo)</selected>
+                            <onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
+                        </control>
+
                         <control type="button" id="19109" description="Home Menu Style">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[30046]</label>
@@ -148,6 +156,14 @@
                             <onclick>SetProperty(CustomDialogWindow.items,MenuStyle2,home)</onclick>
                             <onclick>ActivateWindow(1150)</onclick>
                             <visible>[!Skin.HasSetting(HomeMulti) | Skin.HasSetting(HomeMultiHorizontal)]</visible>
+                        </control>
+
+                        <control type="radiobutton" id="19947" description="Hide menu when focus is on widgets">
+                            <include>Defs_Settings_Button</include>
+                            <label> - $LOCALIZE[31481]</label>
+                            <selected>Skin.HasSetting(FlixHideMenu)</selected>
+                            <onclick>Skin.ToggleSetting(FlixHideMenu)</onclick>
+                            <visible>Skin.HasSetting(HomeMultiFlixView) + [Skin.HasSetting(VerticalIconsOnly) | Skin.HasSetting(HomeIcons)]</visible>
                         </control>
 
                         <control type="button" id="19119" description="Corner Icon">
@@ -196,14 +212,6 @@
                             <label>$LOCALIZE[30100]</label>
                             <selected>Skin.HasSetting(DisplaySplashOnStartup)</selected>
                             <onclick>Skin.ToggleSetting(DisplaySplashOnStartup)</onclick>
-                        </control>
-
-                        <control type="radiobutton" id="19112" description="Disable profile info in main menu">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[30108]</label>
-                            <enable>Skin.HasSetting(HomeMultiFlixView)</enable>
-                            <selected>Skin.HasSetting(DisabledProfileInfo)</selected>
-                            <onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
                         </control>
                     </control>
 
