@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <controls>
+        <include>Global_Overlay</include>
+        <control type="group">
+            <include content="Dialog_Standard_Group">
+                <param name="width" value="1336" />
+                <param name="height" value="940" />
+            </include>
+            <control type="label" id="2">
+                <include>Dialog_Standard_Header</include>
+            </control>
+            <control type="group" id="9000">
+                <include content="Dialog_Standard_List">
+                    <param name="id" value="50" />
+                    <param name="list_style" value="Dialog_Standard_List_Itemlayout_Video" />
+                    <param name="left_pad" value="10" />
+                    <param name="checkmark" value="false" />
+                    <param name="ondown" value="50" />
+                    <param name="onup" value="50" />
+                    <param name="onright" value="9999" />
+                </include>
+            </control>
+            <control type="group">
+                <include>Dialog_Standard_Right_Group</include>
+                <control type="grouplist" id="9999">
+                    <onleft>9000</onleft>
+                    <onup>9999</onup>
+                    <ondown>9999</ondown>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <control type="button" id="21">
+                        <description>Play</description>
+                        <label>$LOCALIZE[208]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                    </control>
+                    <control type="button" id="22">
+                        <description>Add version</description>
+                        <label>$LOCALIZE[40014]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                        <visible>Window.IsVisible(managevideoversions)</visible>
+                    </control>
+                    <control type="button" id="23">
+                        <description>Add extra</description>
+                        <label>$LOCALIZE[40015]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                        <visible>Window.IsVisible(managevideoextras)</visible>
+                    </control>
+                    <control type="button" id="27">
+                        <description>Choose art</description>
+                        <label>$LOCALIZE[13511]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                    </control>
+                    <control type="button" id="24">
+                        <description>Rename</description>
+                        <label>$LOCALIZE[118]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                    </control>
+                    <control type="button" id="26">
+                        <description>Remove</description>
+                        <label>$LOCALIZE[15015]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                    </control>
+                    <control type="button" id="25">
+                        <description>Set as default</description>
+                        <label>$LOCALIZE[40023]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                        <visible>Window.IsVisible(managevideoversions)</visible>
+                    </control>
+                </control>
+            </control>
+            <include>Dialog_Scrollbar</include>
+        </control>
+    </controls>
+</window>

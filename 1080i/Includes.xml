@@ -118,6 +118,106 @@
         <value>$INFO[PVR.EpgEventRemainingTime(ss)]s</value>
     </variable>
 
+    <variable name="VideoResolutionTypeVar">
+        <value condition="String.IsEqual(ListItem.VideoResolution,480)">SD</value>
+        <value condition="String.IsEqual(ListItem.VideoResolution,540)">SD</value>
+        <value condition="String.IsEqual(ListItem.VideoResolution,576)">SD</value>
+        <value condition="String.IsEqual(ListItem.VideoResolution,720)">HD</value>
+        <value condition="String.IsEqual(ListItem.VideoResolution,1080)">HD</value>			
+        <value condition="String.IsEqual(ListItem.VideoResolution,4K)">UHD</value>
+        <value condition="String.IsEqual(ListItem.VideoResolution,8K)">UHD</value>	
+    </variable>
+    <variable name="VideoCodecVar">
+        <value condition="String.IsEqual(ListItem.VideoCodec,av1)">AV1</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,avc1)">AVC-1</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,div3)">DivX</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,divx)">DivX</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,dx50)">DivX</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,flv)">FLV</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,h264)">H.264</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,hev1)">H.265</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,hevc)">H.265</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,hvc1)">H.265</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,mpeg1)">MPEG-1</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,mpeg2)">MPEG-2</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,mpeg2video)">MPEG-2</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,mp4v)">MPEG-4</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,mpeg4)">MPEG-4</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,theora)">Theora</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,vc1)">VC-1</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,vc-1)">VC-1</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,vp8)">VP8</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,vp9)">VP9</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,wmv)">WMV</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,wmv3)">WMV</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,wvc1)">VC-1</value>
+        <value condition="String.IsEqual(ListItem.VideoCodec,xvid)">XviD</value>
+        <value>$INFO[ListItem.VideoCodec]</value>
+    </variable>
+    <variable name="VideoHDRVar">
+        <value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">Dolby Vision</value>
+        <value condition="String.IsEqual(ListItem.HdrType,hdr10)">HDR10</value>
+        <value condition="String.IsEqual(ListItem.HdrType,hlg)">HLG</value>
+        <value>$INFO[ListItem.HdrType]</value>
+    </variable>
+    <variable name="AudioCodecVar">
+        <value condition="String.IsEqual(ListItem.AudioCodec,aac)">AAC</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,aac_latm)">AAC</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,ac3)">Dolby D</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,aif)">AIFF</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,aifc)">AIFF</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,aiff)">AIFF</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,alac)">ALAC</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,ape)">APE</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,avc)">AVC</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,cdda)">CDDA</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dca)">DTS</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dolbydigital)">Dolby D</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dts)">DTS</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTSHD-HRA</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma)">DTSHD-MA</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtsma)">DTSHD-MA</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,eac3)">Dolby D+</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,flac)">FLAC</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,mp1)">MP1</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,mp3)">MP3</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,mp3float)">MP3</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,ogg)">OGG</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,opus)">OPUS</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,pcm)">PCM</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,pcm_bluray)">PCM</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s16le)">PCM</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s24le)">PCM</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,truehd)">TrueHD</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,vorbis)">Vorbis</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,wav)">WAV</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,wavpack)">WAVP</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,wmapro)">WMA-PRO</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,wmav2)">WMA</value>
+        <value>$INFO[ListItem.AudioCodec]</value>
+    </variable>
+    <variable name="AudioChannelsVar">
+        <value condition="String.IsEqual(ListItem.AudioChannels,0)">0.0</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,1)">1.0</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,2)">2.0</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,3)">2.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,4)">4.0</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,5)">4.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,6)">5.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,7)">6.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,8)">7.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,10)">9.1</value>
+        <value>$INFO[ListItem.AudioChannels]</value>
+    </variable>
+    <variable name="MediaInfoListLabelVar">
+        <value condition="Window.IsVisible(selectvideoversion)">$INFO[ListItem.VideoVersionName]</value>
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
+    <variable name="MediaInfoListLabel2Var">
+        <value condition="ListItem.IsStereoscopic">$INFO[ListItem.Duration,$LOCALIZE[180]: ][CR]$VAR[VideoCodecVar,, ]$INFO[ListItem.VideoResolution,| , ]$VAR[VideoResolutionTypeVar,, ]$VAR[VideoHDRVar,| , ]| 3D $INFO[ListItem.VideoAspect,| ,:1 ]$VAR[AudioCodecVar,| , ]$VAR[AudioChannelsVar]</value>
+        <value>$INFO[ListItem.Duration,$LOCALIZE[180]: ][CR]$VAR[VideoCodecVar,, ]$INFO[ListItem.VideoResolution,| , ]$VAR[VideoResolutionTypeVar,, ]$VAR[VideoHDRVar,| , ]$INFO[ListItem.VideoAspect,| ,:1 ]$VAR[AudioCodecVar,| , ]$VAR[AudioChannelsVar]</value>
+    </variable>
+
     <include name="Dimensions_Fullscreen">
         <left>0</left>
         <top>0</top>

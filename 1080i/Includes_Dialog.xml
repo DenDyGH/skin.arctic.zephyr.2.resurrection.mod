@@ -760,6 +760,36 @@
         </definition>
     </include>
 
+    <include name="Dialog_Standard_List_Itemlayout_Video">
+        <param name="left_pad" default="10" />
+        <param name="right_pad" default="0" />
+        <definition>
+            <control type="group">
+                <left>$PARAM[left_pad]</left>
+                <right>$PARAM[right_pad]</right>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <font>font_small_bold</font>
+                    <textcolor>$PARAM[color_70]</textcolor>
+                    <aligny>center</aligny>
+                    <label>$VAR[MediaInfoListLabelVar]</label>
+                    <selectedcolor>$PARAM[color_highlight]</selectedcolor>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <font>font_tiny</font>
+                    <textcolor>$PARAM[color_70]</textcolor>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <label>$VAR[MediaInfoListLabel2Var]</label>
+                    <selectedcolor>$PARAM[color_highlight]</selectedcolor>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="Dialog_Standard_List_Itemlayout_ChannelManager">
         <control type="label">
             <left>30</left>
@@ -1209,6 +1239,52 @@
                     </focusedlayout>
                 </control>
             </control>
+        </control>
+    </include>
+
+    <include name="Dialog_Select_Video">
+        <include>Global_Overlay</include>
+
+        <control type="group">
+            <include content="Dialog_Standard_Group">
+                <param name="width" value="1336" />
+                <param name="height" value="950" />
+            </include>
+            <control type="label" id="1">
+                <include>Dialog_Standard_Header</include>
+            </control>
+
+            <include>Dialog_Standard_List</include>
+            <include content="Dialog_Standard_List">
+                <param name="id" value="6" />
+                <param name="itemheight" value="item_biglist_height" />
+                <param name="list_style" value="Dialog_Standard_List_Itemlayout_Video" />
+                <param name="checkmark" value="false" />
+                <param name="onup" value="6" />
+                <param name="ondown" value="6" />
+                <param name="onright" value="8000" />
+            </include>
+
+            <control type="group">
+                <include>Dialog_Standard_Right_Group</include>
+                <include content="Dialog_Standard_Image">
+                    <param name="image" value="ListItem.Art(poster)" />
+                </include>
+                <control type="grouplist" id="8000">
+                    <onleft>61</onleft>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <control type="button" id="5">
+                        <label>$LOCALIZE[368]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                    </control>
+                    <control type="button" id="7">
+                        <label>$LOCALIZE[222]</label>
+                        <include>Dialog_Standard_Right_Buttons</include>
+                    </control>
+                </control>
+            </control>
+            <include>Dialog_Scrollbar</include>
         </control>
     </include>
 </includes>
