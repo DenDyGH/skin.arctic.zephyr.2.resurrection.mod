@@ -16,6 +16,7 @@
                     <param name="id" value="50" />
                     <param name="list_style" value="Dialog_Standard_List_Itemlayout_Video" />
                     <param name="left_pad" value="10" />
+                    <param name="list_type" value="list" />
                     <param name="checkmark" value="false" />
                     <param name="ondown" value="50" />
                     <param name="onup" value="50" />
