@@ -410,7 +410,7 @@
                                 <height>99999</height>
                                 <width>1920</width>
                                 <orientation>vertical</orientation>
-                                <itemgap>-12</itemgap>
+                                <itemgap>-8</itemgap>
                                 <usecontrolcoords>false</usecontrolcoords>
 
                                 <include>Animation_Flix_Widget_Slide</include>
@@ -796,7 +796,7 @@
                     <param name="animation" value="Defs_Null" />
                 </include>
                 <control type="grouplist">
-                    <top>373.5</top>
+                    <top>383.5</top>
                     <width>2500</width>
                     <left>-30</left>
                     <bottom>-15</bottom>
