@@ -252,6 +252,15 @@
             </include>
 
             <include content="Object_Info_Button">
+                <param name="id" value="15" />
+                <param name="groupid" value="8053" />
+                <param name="icon" value="special://skin/extras/icons/favourites.png" />
+                <param name="label" value="$LOCALIZE[40211]" />
+                <param name="width" value="auto" />
+                <param name="visible" value="!String.IsEmpty(ListItem.VideoVersionName)" />
+            </include>
+
+            <include content="Object_Info_Button">
                 <param name="id" value="8101" />
                 <param name="groupid" value="8001" />
                 <param name="width" value="auto" />
