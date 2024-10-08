@@ -103,7 +103,7 @@
                 <param name="viewtypename" value="biginfo" />
                 <param name="forced" value="true" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | $EXP[InGameMode]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
             </include>
             <include>View_502_List_Info</include>
         </control>
@@ -366,7 +366,7 @@
                         <param name="forced" value="true" />
                         <param name="itemlayout" value="View_504_Itemlayout" />
                         <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                        <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | $EXP[InGameMode]" />
+                        <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
                     </include>
                     <include content="View_504_Info">
                         <param name="visible" value="true" />
