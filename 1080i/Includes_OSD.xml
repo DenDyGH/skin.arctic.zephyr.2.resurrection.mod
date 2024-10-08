@@ -1292,10 +1292,7 @@
             <onclick>SetProperty(OSDExtendedInfo,1,Home)</onclick>
             <onclick condition="!Player.Paused + !Skin.HasSetting(DontPauseOSD)">Pause</onclick>
             <onclick>Action(Close)</onclick>
-            <onclick condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.IMDBNumber) + String.StartsWith(VideoPlayer.IMDBNumber,tt)">RunScript(plugin.video.themoviedb.helper,add_path=plugin://plugin.video.themoviedb.helper/?info=details&amp;type=movie&amp;imdb_id=$INFO[VideoPlayer.IMDBNumber],call_auto=1190,return)</onclick>
-            <onclick condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.IMDBNumber) + !String.StartsWith(VideoPlayer.IMDBNumber,tt)">RunScript(plugin.video.themoviedb.helper,add_path=plugin://plugin.video.themoviedb.helper/?info=details&amp;type=movie&amp;tmdb_id=$INFO[VideoPlayer.IMDBNumber],call_auto=1190,return)</onclick>
-            <onclick condition="VideoPlayer.Content(movies) + String.IsEmpty(VideoPlayer.DBID) + String.IsEmpty(VideoPlayer.IMDBNumber)">RunScript(plugin.video.themoviedb.helper,add_path=plugin://plugin.video.themoviedb.helper/?info=details&amp;type=movie&amp;query='"$INFO[Player.Title]"',call_auto=1190,return)</onclick>
-            <onclick condition="VideoPlayer.Content(tvshows) | VideoPlayer.Content(episodes)">RunScript(plugin.video.themoviedb.helper,add_path=plugin://plugin.video.themoviedb.helper/?info=details&amp;type=tv&amp;query='"$INFO[VideoPlayer.TvShowTitle]"'&amp;year=$INFO[VideoPlayer.Year],call_auto=1190,return)</onclick>
+            <onclick condition="!VideoPlayer.Content(livetv)">RunScript(plugin.video.themoviedb.helper,add_path=$VAR[Path_VideoOSD_TMDbType,plugin://plugin.video.themoviedb.helper/?info=details&amp;tmdb_type=,]$VAR[Path_VideoOSD_TMDbQuery],call_auto=1190,return)</onclick>
 
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
