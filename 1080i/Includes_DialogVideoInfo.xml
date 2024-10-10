@@ -180,7 +180,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Director)</visible>
                             <content limit="1">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=details&amp;type=person]$VAR[Path_Param_Widget]</content>
-                            <content>$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;type=person&amp;filter_key=job&amp;filter_value=Director]$VAR[Path_Param_Widget]</content>
+                            <content sortby="year" sortorder="descending">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;type=person&amp;filter_key=job&amp;filter_value=Director]$VAR[Path_Param_Widget]</content>
                         </include>
                         <!-- Crew -->
                         <include content="Info_Widget_Poster">

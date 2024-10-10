@@ -265,7 +265,7 @@
                 <param name="width" value="auto" />
                 <param name="label" value="Fanart" />
                 <param name="icon" value="special://skin/extras/icons/pictures.png" />
-                <param name="visible" value="!Container(6000).IsUpdating" />
+                <param name="visible" value="!Container(6000).IsUpdating + !Skin.HasSetting(DisableInfoListFanarts)" />
 
                 <onclick>SetProperty(fanart,$INFO[Container(6000).ListItem(0).Thumb],home)</onclick>
                 <onclick>SetProperty(fanart1,$INFO[Container(6000).ListItem(1).Thumb],home)</onclick>
