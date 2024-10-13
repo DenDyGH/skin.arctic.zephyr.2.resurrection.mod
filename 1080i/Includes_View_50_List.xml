@@ -666,10 +666,10 @@
                 <visible>Skin.HasSetting(EnhancedAddonLabels) | String.IsEmpty(Container.PluginName)</visible>
                 <visible>String.IsEqual(ListItem.DBType,song) + !Skin.HasSetting(UseTrackNamingTemplate)</visible>
                 <control type="label">
-                    <include name="Object_Variable_Width">
-                        <param name="width" default="30" />
-                        <param name="altwidth" default="40" />
-                        <param name="usealtwidth" default="$EXP[FontSetIsMediumOrLarger]" />
+                    <include content="Object_Variable_Width">
+                        <param name="std" value="30" />
+                        <param name="alt" value="40" />
+                        <param name="usealt" value="$EXP[FontSetIsMediumOrLarger]" />
                     </include>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
                     <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>

@@ -1045,7 +1045,7 @@
             <control type="group">
                 <left>240</left>
                 <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),TV PVR Recording Widget) + [PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer]</visible>
-                <include>PVRRecordingWidgets</include>
+                <include>PVRTVRecordingWidget</include>
             </control>
 
             <control type="group">
