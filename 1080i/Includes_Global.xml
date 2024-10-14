@@ -123,8 +123,6 @@
                 <animation effect="fade" start="60" end="45" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + [Skin.HasSetting(TMDbHelper.EnableBlur) | [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation>
                 <animation effect="fade" start="10" end="15" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + !Skin.HasSetting(TMDbHelper.EnableBlur)">Conditional</animation>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
             </control>
         </control>
 
@@ -142,8 +140,7 @@
                 <aspectratio>scale</aspectratio>
                 <fadetime>600</fadetime>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="fade" start="100" end="75" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + !Skin.HasSetting(TMDbHelper.EnableBlur)">Conditional</animation>
                 <visible>Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml) + !Player.HasVideo</visible>
             </control>
             <control type="multiimage">
@@ -152,10 +149,7 @@
                 <width>1920</width>
                 <height>1080</height>
                 <aspectratio>scale</aspectratio>
-                <fadetime>600</fadetime>
                 <imagepath background="true">common/vignette-flix-basic.png</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <visible>Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)</visible>
             </control>
         </control>
@@ -171,8 +165,7 @@
                 <aspectratio>scale</aspectratio>
                 <fadetime>600</fadetime>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                <animation effect="fade" start="100" end="75" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + !Skin.HasSetting(TMDbHelper.EnableBlur)">Conditional</animation>
                 <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]</visible>
             </control>
             <control type="multiimage">
@@ -181,10 +174,7 @@
                 <width>1920</width>
                 <height>1080</height>
                 <aspectratio>scale</aspectratio>
-                <fadetime>600</fadetime>
                 <imagepath background="true">common/vignette-flix-basic.png</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]</visible>
             </control>
         </control>

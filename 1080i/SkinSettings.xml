@@ -314,13 +314,6 @@
                             <onclick>SetProperty(CustomDialogWindow.items,TimePerImage,home)</onclick>
                             <onclick>ActivateWindow(1150)</onclick>
                         </control>
-
-                        <control type="radiobutton" id="19206" description="Animate background ken burns">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31205]</label>
-                            <selected>Skin.HasSetting(KenBurnsEffect)</selected>
-                            <onclick>Skin.ToggleSetting(KenBurnsEffect)</onclick>
-                        </control>
                     </control>
 
                     <!-- ============= -->

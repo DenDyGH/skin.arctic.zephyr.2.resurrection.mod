@@ -186,8 +186,6 @@
             <fadetime>600</fadetime>
             <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
             <visible>$EXP[Exp_GlobalBackground]</visible>
-            <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-            <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
         </control>
 
         <control type="image">
@@ -490,8 +488,6 @@
                 <aspectratio>keep</aspectratio>
                 <fadetime>600</fadetime>
                 <imagepath background="true" colordiffuse="ff000000">common/vignette-flix-menu.png</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
             </control>
 

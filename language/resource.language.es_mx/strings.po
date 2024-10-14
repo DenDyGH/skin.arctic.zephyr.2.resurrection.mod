@@ -1010,11 +1010,6 @@ msgid "Refresh Info"
 msgstr "Refrescar información"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31205"
-msgid "Animate background using Ken Burns effect"
-msgstr "Animar fondo usando efecto Ken Burns"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31206"
 msgid "Channel numbers"
 msgstr "Número de canal"
