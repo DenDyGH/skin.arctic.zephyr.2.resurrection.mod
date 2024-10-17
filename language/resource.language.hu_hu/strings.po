@@ -13,7 +13,7 @@ msgstr ""
 #: /1080i/Custom_1134_Custom_Hub.xml
 msgctxt "#31000"
 msgid "No content available..."
-msgstr "Nincs tartalom ehhez..."
+msgstr "Nincs elérhető tartalom..."
 
 #: /1080i/DialogGameControllers.xml
 msgctxt "#31001"
@@ -48,7 +48,7 @@ msgstr "Gyûjtemény"
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31007"
 msgid "Use local library info for recommendations"
-msgstr ""
+msgstr "Javaslatokhoz használja a médiatár információkat"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31008"
@@ -108,12 +108,12 @@ msgstr "Általános parancsikon"
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
 msgid "Show clearlogo instead of text title"
-msgstr ""
+msgstr "Cím helyett clearlogó megjelenítése"
 
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"
 msgid "mins"
-msgstr "perc"
+msgstr "percek"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31021"
@@ -1094,7 +1094,7 @@ msgstr "Filmgyűjtemények"
 
 msgctxt "#31262"
 msgid "Poster"
-msgstr "Poszer"
+msgstr "Poszter"
 
 msgctxt "#31267"
 msgid "Action"
@@ -1215,7 +1215,7 @@ msgstr "Kép források"
 #: /1080i/Includes_Items.xml
 msgctxt "#31306"
 msgid "Special Features"
-msgstr "Különleges képességek"
+msgstr "Különleges tulajdonságok"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31308"
@@ -1325,7 +1325,7 @@ msgstr "Videó dalszöveg"
 #: /1080i/SkinSettings.xml
 msgctxt "#31379"
 msgid "Display plot overlay after delay"
-msgstr "Infó mutatás késleltetése"
+msgstr "Infó mutatásának késleltetése"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31380"
@@ -1350,7 +1350,7 @@ msgstr "Felvételek csoportos indítása"
 #: /shortcuts/overrides.xml
 msgctxt "#31384"
 msgid "Grouped Deleted Recordings"
-msgstr "Csportosan törölt felvételek"
+msgstr "Csoportosan törölt felvételek"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31386"
@@ -1405,7 +1405,7 @@ msgstr "Ikon"
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31421"
 msgid "Banner List"
-msgstr "Banner List"
+msgstr "Banner Lista"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31422"
@@ -1527,7 +1527,7 @@ msgstr "Alapbeállításokra visszaállít"
 #: /1080i/Includes_Info.xml
 msgctxt "#30041"
 msgid "TRAKT"
-msgstr ""
+msgstr "Trakt"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30042"
@@ -1842,259 +1842,259 @@ msgstr "Értékelés"
 #: /1080i/Includes_Home.xml
 msgctxt "#30105"
 msgid "Switch Profile"
-msgstr ""
+msgstr "Profilváltás"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#30106"
 msgid "Match"
-msgstr ""
+msgstr "Megegyező"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30107"
 msgid "Play Trailer in background in Flix View"
-msgstr ""
+msgstr "Előzetes lejátszása a háttérben, a Flix nézetnél"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30108"
 msgid "Hide profile info in menu"
-msgstr ""
+msgstr "Profil elrejtése a menüben"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30109"
 msgid "Enable zoom on hover"
-msgstr ""
+msgstr "Zoom engedélyezése kiválasztáskor"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30110"
 msgid "Show player tempo controls in OSD"
-msgstr ""
+msgstr "Az OSD-ben a lejátszási tempó megjelenítése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30111"
 msgid "Set delay to playing Trailers in Flix View"
-msgstr ""
+msgstr "ÁA késleltetés beállítása az előzetesek lejátszásához, a Flix nézet-ben"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30112"
 msgid "4 seconds"
-msgstr ""
+msgstr "4 másodperc"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30113"
 msgid "7 seconds"
-msgstr ""
+msgstr "7 másodperc"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30114"
 msgid "Don't blur Home screen"
-msgstr ""
+msgstr "Főmenüben az elmosás tiltása"
 
 #: /1080i/Includes_View_54_AEL.xml
 msgctxt "#31440"
 msgid "ROM Info Wall Trailer"
-msgstr ""
+msgstr "ROM Info fal bemutató"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31441"
 msgid "Disable channel label in PVR Guide"
-msgstr ""
+msgstr "Csatornacímke letiltása a PVR műsorújságban"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31442"
 msgid "Show duration instead of rating in list view"
-msgstr ""
+msgstr "Időtartam megjelenítése értékelés helyett listanézetben"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31443"
 msgid "Genre"
-msgstr ""
+msgstr "Műfaj"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31444"
 msgid "Director"
-msgstr ""
+msgstr "Rendező"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31445"
 msgid "Writer"
-msgstr ""
+msgstr "Író"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31446"
 msgid "Tagline"
-msgstr ""
+msgstr "Címsor"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31447"
 msgid "Premiered"
-msgstr ""
+msgstr "Bemutatva"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31448"
 msgid "Fanart fallback image"
-msgstr ""
+msgstr "Fanart háttérkép"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31449"
 msgid "Favourites browser"
-msgstr ""
+msgstr "Kedvencek böngésző"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31450"
 msgid "Allow to scroll seekbar"
-msgstr ""
+msgstr "A keresősáv görgetésének engedélyezése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31451"
 msgid "Hide forward/rewind button"
-msgstr ""
+msgstr "Előre/visszatekerés gomb elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31452"
 msgid "Hide chapters button"
-msgstr ""
+msgstr "Fejezetek gomb elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31453"
 msgid "Hide settings button"
-msgstr ""
+msgstr "Beállítás gomb elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31454"
 msgid "Hide player process info button"
-msgstr ""
+msgstr "Lejátszási infó gomb elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31455"
 msgid "Audio button opens audio settings"
-msgstr ""
+msgstr "Az audio gomb megnyitja a hangbeállításokat"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31456"
 msgid "Show remaining time instead of end time"
-msgstr ""
+msgstr "A hátralévő idő megjelenítése a befejezési idő helyett"
 
 #: /1080i/Includes_OSD.xml
 msgctxt "#31457"
 msgid "Remaining:"
-msgstr ""
+msgstr "Hátralevő:"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31458"
 msgid "Hide channels icon in pvr guide"
-msgstr ""
+msgstr "Csatorna ikon elrejtése a pvr műsorújságban"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31459"
 msgid "Selection box: invert text color"
-msgstr ""
+msgstr "Kiválasztóbox szövegszín invertálás"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31460"
 msgid "Debug: show arts path"
-msgstr ""
+msgstr "Hibakeresés: mutasd az "art" elérési utat"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31461"
 msgid "Alpha value for some dialogs"
-msgstr ""
+msgstr "Áttetszőség néhány dialóghoz"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31462"
 msgid "Hide extra info background"
-msgstr ""
+msgstr "Extra információs háttér elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31463"
 msgid "Selection box: enable transparency"
-msgstr ""
+msgstr "Kiválasztóbox áttetszőség engedélyezése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31464"
 msgid "Select a transparency value"
-msgstr ""
+msgstr "Áttetszőség beállítás"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31465"
 msgid "Series Premiere"
-msgstr ""
+msgstr "Sorozat bemutató"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31466"
 msgid "Season Premiere"
-msgstr ""
+msgstr "Szezon bemutató"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31467"
 msgid "Mid-Season Premiere"
-msgstr ""
+msgstr "Középszezon bemutató"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31468"
 msgid "Series Finale"
-msgstr ""
+msgstr "Sorozat finálé"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31469"
 msgid "Season Finale"
-msgstr ""
+msgstr "Szezon finálé"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31470"
 msgid "Mid-Season Finale"
-msgstr ""
+msgstr "Középszezon finálé"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31471"
 msgid "Premiere and finale indicators for episodes"
-msgstr ""
+msgstr "Az epizódok bemutató és finálé indikátora"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31472"
 msgid "Episode: "
-msgstr ""
+msgstr "Epizód: "
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31473"
 msgid "Hide genre in info line in some views"
-msgstr ""
+msgstr "Műfaj elrejtése az információs sorban egyes nézetekben"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31474"
 msgid "Hide play/pause button"
-msgstr ""
+msgstr "Szünet/lejátszás gomb elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31475"
 msgid "Hide stop button"
-msgstr ""
+msgstr "Stop gomb elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31476"
 msgid "Hide MPAA classification"
-msgstr ""
+msgstr "MPAA besorolás elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31477"
 msgid "Show date under clock"
-msgstr ""
+msgstr "Dátum megjelenítése az óra alatt"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31478"
 msgid "Hide match info in widgets"
-msgstr ""
+msgstr "Információk elrejtése a widgetekben"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31479"
 msgid "Hide bookmarks button"
-msgstr ""
+msgstr "Könyvjelző gomb elrejtése"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31480"
 msgid "Lists"
-msgstr ""
+msgstr "Listák"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31481"
 msgid "Hide menu when focus is on widgets"
-msgstr ""
+msgstr "Menü elrejtése, ha a fókusz a widgeteken van"
