@@ -235,7 +235,7 @@
                 <param name="icon" value="special://skin/extras/icons/versions.png" />
                 <param name="label" value="$LOCALIZE[40000]" />
                 <param name="width" value="auto" />
-                <param name="visible" value="!String.IsEmpty(ListItem.VideoVersionName)" />
+                <param name="visible" value="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.VideoVersionName)" />
             </include>
 
             <include content="Object_Info_Button">
@@ -244,7 +244,7 @@
                 <param name="icon" value="special://skin/extras/icons/favourites.png" />
                 <param name="label" value="$LOCALIZE[40211]" />
                 <param name="width" value="auto" />
-                <param name="visible" value="!String.IsEmpty(ListItem.VideoVersionName)" />
+                <param name="visible" value="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.VideoVersionName)" />
             </include>
 
             <include content="Object_Info_Button">

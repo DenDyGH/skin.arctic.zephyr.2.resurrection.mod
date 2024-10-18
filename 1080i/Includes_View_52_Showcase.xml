@@ -472,7 +472,9 @@
 
     <include name="View_52_Showcase">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(52)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="52" />
@@ -498,7 +500,9 @@
 
     <include name="View_520_Showcase_Square">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(520)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="520" />
@@ -528,7 +532,9 @@
 
     <include name="View_527_Showcase_Square2">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(527)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="527" />
@@ -551,7 +557,9 @@
 
     <include name="View_525_Showcase_Flix">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(525)</visible>
 
             <include content="View_51_Flix_Container">
@@ -579,7 +587,9 @@
 
     <include name="View_526_Flix_Poster">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(526)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="526" />
@@ -599,7 +609,9 @@
 
     <include name="View_528_Flix_Poster2">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(528)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="528" />
@@ -619,7 +631,9 @@
 
     <include name="View_529_Flix_Landscape">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(529)</visible>
             <include content="View_51_Flix_Container">
                 <param name="id" value="529" />
@@ -645,7 +659,9 @@
 
     <include name="View_521_Showcase_Landscape">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(521)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="521" />
@@ -676,7 +692,9 @@
 
     <include name="View_522_Showcase_Seasons">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(522)</visible>
 
             <include content="View_51_Wall_Container">
@@ -739,7 +757,9 @@
 
     <include name="View_524_Showcase_Seasons">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(524)</visible>
 
             <control type="group">

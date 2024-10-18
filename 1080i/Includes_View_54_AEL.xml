@@ -162,7 +162,9 @@
     <include name="View_540_List_ROM_Info">
         <control type="group">
             <visible>Control.IsVisible(540)</visible>
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <include content="View_50_List_Control">
                 <param name="left" value="-20" />
                 <param name="right" value="1038.53" />
@@ -179,7 +181,9 @@
 
     <include name="View_541_Wall_Info">
         <control type="group">
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <visible>Control.IsVisible(541)</visible>
             <include content="View_51_Wall_Container">
                 <param name="id" value="541" />

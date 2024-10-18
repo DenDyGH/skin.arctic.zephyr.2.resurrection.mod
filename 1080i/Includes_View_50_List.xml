@@ -3,7 +3,9 @@
     <include name="View_50_List">
         <control type="group">
             <visible>Control.IsVisible(50)</visible>
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <include content="View_50_Poster">
                 <param name="height" value="view_poster_height" />
                 <param name="width" value="view_poster_width" />
@@ -23,7 +25,9 @@
     <include name="View_500_List_Square">
         <control type="group">
             <visible>Control.IsVisible(500)</visible>
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <control type="group">
                 <include content="View_50_Poster">
                     <param name="height" value="654" />
@@ -47,7 +51,9 @@
     <include name="View_500_List_PVR">
         <control type="group">
             <visible>Control.IsVisible(500)</visible>
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <control type="group">
                 <include content="View_50_PVRInfoPanel">
                     <param name="folder_sortorder" value="ascending" />
@@ -68,7 +74,9 @@
     <include name="View_501_List_MediaInfo">
         <control type="group">
             <visible>Control.IsVisible(501)</visible>
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <include content="View_50_List_Control">
                 <param name="left" value="-20" />
                 <param name="right" value="771.44" />
@@ -90,7 +98,9 @@
     <include name="View_502_List_MediaInfo_Extended">
         <control type="group">
             <visible>Control.IsVisible(502)</visible>
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <include content="View_50_List_Control">
                 <param name="left" value="-20" />
                 <param name="right" value="1038.53" />
@@ -338,7 +348,9 @@
     <include name="View_504_List_TriPanel">
         <control type="group">
             <visible>Control.IsVisible(504)</visible>
-            <include>View_Group</include>
+            <include content="View_Group">
+                <param name="animation" value="Defs_Null" />
+            </include>
             <include content="View_50_Poster">
                 <param name="height" value="view_poster_height" />
                 <param name="width" value="view_poster_width" />
