@@ -4,6 +4,7 @@
     <defaultcontrol always="true">50</defaultcontrol>
     <menucontrol>300</menucontrol>
     <views>50,500,510,517,512,513,520</views>
+    <onload>RunScript(script.skinvariables,action=buildviews)</onload>
     <controls>
 
         <include>Defs_TMDbHelper_Loader</include>
