@@ -557,7 +557,6 @@
         <param name="aspectratio" default="scale" />
         <param name="viewtype" default="$LOCALIZE[31415]" />
         <param name="viewtypename" default="icon" />
-        <param name="forced" default="false" />
         <param name="circle" default="false" />
         <param name="diffuse" default="diffuse/poster-wall.png" />
         <param name="altid" default="999999" />
@@ -570,9 +569,6 @@
                 <height>$PARAM[height]</height>
                 <visible>$PARAM[visible]</visible>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <include content="View_Forced" condition="$PARAM[forced]">
-                    <param name="string" value="$PARAM[viewtype]" />
-                </include>
                 <itemlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="selectbox" value="false" />
@@ -620,7 +616,6 @@
         <param name="aspectratio" default="scale" />
         <param name="viewtype" default="$LOCALIZE[31415]" />
         <param name="viewtypename" default="icon" />
-        <param name="forced" default="false" />
         <param name="circle" default="false" />
         <param name="diffuse" default="diffuse/poster-wall.png" />
         <param name="altid" default="999999" />
@@ -634,9 +629,6 @@
                 <height>$PARAM[height]</height>
                 <visible>$PARAM[visible]</visible>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <include content="View_Forced" condition="$PARAM[forced]">
-                    <param name="string" value="$PARAM[viewtype]" />
-                </include>
                 <itemlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="selectbox" value="false" />
@@ -683,8 +675,7 @@
                 <param name="height" value="view_height" />
                 <param name="viewtype" value="Poster Wall" />
                 <param name="viewtypename" value="icon" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors) | Container.Content(favourites) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_51]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -702,8 +693,7 @@
                 <param name="viewtype" value="Square Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(games) | Container.Content(programs) | Container.Content(addons) | Container.Content(images) | Container.Content() | Container.Content(files) | Container.Content(favourites) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_510]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -722,8 +712,7 @@
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
                 <param name="labelinclude" value="View_517_Wall_Label" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(games) | Container.Content(programs) | Container.Content(addons) | Container.Content(images) | Container.Content() | Container.Content(files) | Container.Content(favourites) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_517]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -744,9 +733,8 @@
                 <param name="diffuse" value="diffuse/landscape-wall.png" />
                 <param name="viewtype" value="Landscape Wall" />
                 <param name="viewtypename" value="wide" />
-                <param name="forced" value="true" />
                 <param name="labelinclude" value="View_51_Wall_Landscape_Label" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(images) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_511]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -765,8 +753,7 @@
                 <param name="diffuse" value="diffuse/icon-wall.png" />
                 <param name="viewtype" value="Icon Wall" />
                 <param name="viewtypename" value="icon" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(genres) | Container.Content(countries) | Container.Content(directors) | Container.Content(studios) | Container.Content(years) | Container.Content() | Container.Content(addons) | Container.Content(favourites)" />
+                <param name="visible" value="$EXP[Exp_View_512]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -786,8 +773,7 @@
                 <param name="circle" value="true" />
                 <param name="viewtype" value="Circle Wall" />
                 <param name="viewtypename" value="icon" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(artists) | Container.Content(images) | Container.Content(actors)" />
+                <param name="visible" value="$EXP[Exp_View_513]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -811,8 +797,7 @@
                 <param name="viewtype" value="Info Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_514]" />
                 <width>1028.56</width>
                 <include>View_Vertical_Movement</include>
             </include>
@@ -835,8 +820,7 @@
                 <param name="viewtype" value="Info Wall 2" />
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | !$EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_516]" />
                 <width>1028.56</width>
                 <include>View_Vertical_Movement</include>
             </include>
@@ -866,9 +850,8 @@
                 <param name="diffuse" value="diffuse/landscape-small-wall.png" />
                 <param name="viewtype" value="Landscape Wall Small" />
                 <param name="viewtypename" value="wide" />
-                <param name="forced" value="true" />
                 <param name="labelinclude" value="Defs_Null" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(images) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_515]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>

@@ -1,0 +1,240 @@
+{
+    "prefix": "Exp_View",
+    "viewtypes": {
+        "50":   "List",
+        "51":   "Poster Wall",
+        "52":   "Poster Showcase",
+        "53":   "Poster",
+        "500":  "List Square",
+        "501":  "MediaInfo",
+        "502":  "MediaInfo Extended",
+        "503":  "Banners",
+        "504":  "Tri Panel",
+        "510":  "Square Wall",
+        "511":  "Landscape Wall",
+        "512":  "Icon Wall",
+        "513":  "Circle Wall",
+        "514":  "Info Wall",
+        "515":  "Landscape Wall Small",
+        "516":  "Info Wall 2",
+        "517":  "Square Wall2",
+        "520":  "Showcase Square",
+        "521":  "Landscape Showcase",
+        "522":  "Showcase Seasons",
+        "523":  "Lovefilm",
+        "524":  "Showcase Seasons2",
+        "525":  "Showcase Flix",
+        "526":  "Flix Poster",
+        "527":  "Showcase Square2",
+        "528":  "Flix Poster2",
+        "529":  "Flix Landscape",
+        "540":  "ROM Trailer",
+        "541":  "ROM Info Wall Trailer"
+    },
+    "rules": {
+        "images": {
+            "rule": "Container.Content(images)",
+            "viewtypes": ["510", "517", "511", "513", "515"],
+            "library": "510",
+            "plugins": "510"
+        },
+        "videos": {
+            "rule": "Container.Content(videos)",
+            "viewtypes": ["52", "500", "501", "502", "504", "511", "515", "525", "526", "528", "529", "521"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "movies": {
+            "rule": "Container.Content(movies)",
+            "viewtypes": ["50", "526", "528", "521", "529", "501", "502", "504", "503", "51", "511", "514", "516", "515", "52", "521", "53", "523"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "sets": {
+            "rule": "Container.Content(sets)",
+            "viewtypes": ["50", "51", "52", "53", "500", "501", "502", "503", "504", "511", "514", "515", "516", "521", "525", "526", "528", "529"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "tvshows": {
+            "rule": "Container.Content(tvshows)",
+            "viewtypes": ["50", "525", "526", "528", "529", "501", "502", "504", "503", "51", "511", "514", "516", "515", "52", "521", "53", "523"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "seasons": {
+            "rule": "Container.Content(seasons)",
+            "viewtypes": ["50", "51", "52", "53", "503", "514", "516", "522", "524", "526", "528"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "episodes": {
+            "rule": "Container.Content(episodes)",
+            "viewtypes": ["50", "500", "501", "502", "503", "504", "511", "515", "521", "525", "529"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "videoversions": {
+            "rule": "Container.Content(videoversions)",
+            "viewtypes": ["50", "51", "52", "53", "500", "501", "502", "503", "504", "511", "514", "515", "516", "521", "523", "525", "526", "528", "529"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "genres": {
+            "rule": "!Window.IsVisible(MyMusicNav.xml) + Container.Content(genres)",
+            "viewtypes": ["50", "500", "512", "516"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "genres-music": {
+            "rule": "Window.IsVisible(MyMusicNav.xml) + Container.Content(genres)",
+            "viewtypes": ["50", "500", "512", "516"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "years": {
+            "rule": "!Window.IsVisible(MyMusicNav.xml) + Container.Content(years)",
+            "viewtypes": ["50", "500", "512", "516"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "years-music": {
+            "rule": "Window.IsVisible(MyMusicNav.xml) + Container.Content(years)",
+            "viewtypes": ["50", "500", "512", "516"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "studios": {
+            "rule": "Container.Content(studios)",
+            "viewtypes": ["50", "500", "512", "516"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "directors": {
+            "rule": "Container.Content(directors)",
+            "viewtypes": ["50", "51", "500", "513"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "countries": {
+            "rule": "Container.Content(countries)",
+            "viewtypes": ["50", "500", "512", "516"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "tags": {
+            "rule": "Container.Content(tags)",
+            "viewtypes": ["50", "500", "512", "516"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "roles": {
+            "rule": "Container.Content(roles)",
+            "viewtypes": ["50", "51", "500", "513"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "actors": {
+            "rule": "Container.Content(actors)",
+            "viewtypes": ["50", "51", "513"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "playlists": {
+            "rule": "Container.Content(playlists)",
+            "viewtypes": ["50", "500"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "musicvideos": {
+            "rule": "Container.Content(musicvideos)",
+            "viewtypes": ["50", "500"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "artists": {
+            "rule": "Container.Content(artists)",
+            "viewtypes": ["50", "500", "510", "517", "513", "520", "527"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "albums": {
+            "rule": "Container.Content(albums)",
+            "viewtypes": ["50", "500", "510", "517", "520", "527"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "songs": {
+            "rule": "Container.Content(songs)",
+            "viewtypes": ["50", "500"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "files": {
+            "rule": "Container.Content(files)",
+            "viewtypes": ["50", "500", "510", "517"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "sources": {
+            "rule": "Container.Content(sources)",
+            "viewtypes": ["500"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "addons": {
+            "rule": "Container.Content(addons)",
+            "viewtypes": ["50", "500", "510", "512", "517", "527"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "recordings": {
+            "rule": "Container.Content(recordings)",
+            "viewtypes": ["500"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "favourites": {
+            "rule": "Container.Content(favourites)",
+            "viewtypes": ["50", "51", "510", "512", "517"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "games": {
+            "rule": "Container.Content(games)",
+            "viewtypes": ["51", "52", "53", "500", "501", "502", "503", "504", "510", "511", "514", "515", "517", "520", "521", "525", "527", "529", "540", "541"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "none-games": {
+            "rule": "Container.Content() + Window.IsVisible(MyGames.xml)",
+            "viewtypes": ["51", "52", "53", "500", "501", "502", "503", "504", "510", "511", "514", "515", "517", "520", "521", "525", "527", "529", "540", "541"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "none-recordings": {
+            "rule": "Container.Content() + Window.IsVisible(MyPVRRecordings.xml)",
+            "viewtypes": ["500"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "none-timers": {
+            "rule": "Container.Content() + Window.IsVisible(MyPVRTimers.xml)",
+            "viewtypes": ["500"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "none-search": {
+            "rule": "Container.Content() + Window.IsVisible(MyPVRSearch.xml)",
+            "viewtypes": ["500"],
+            "library": "500",
+            "plugins": "500"
+        },
+        "none": {
+            "rule": "Container.Content() + !Window.IsVisible(MyGames.xml) + !Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(MyPVRTimers.xml) + !Window.IsVisible(MyPVRSearch.xml)",
+            "viewtypes": ["50", "500", "510", "512", "517", "527"],
+            "library": "500",
+            "plugins": "500"
+        }
+    }
+}

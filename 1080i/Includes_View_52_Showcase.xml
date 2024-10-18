@@ -481,10 +481,9 @@
                 <param name="labelinclude" value="Defs_Null" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Layout" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(videos) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_52]" />
                 <param name="viewtype" value="Poster Showcase" />
                 <param name="viewtypename" value="wrap" />
-                <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
             </include>
             <include content="View_52_Showcase_Header">
@@ -510,10 +509,9 @@
                 <param name="orientation" value="horizontal" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_520_Showcase_Layout" />
-                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_520]" />
                 <param name="viewtype" value="Square Showcase" />
                 <param name="viewtypename" value="wrap" />
-                <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
             </include>
             <include content="View_52_Showcase_Header">
@@ -541,10 +539,9 @@
                 <param name="orientation" value="horizontal" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
-                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_527]" />
                 <param name="viewtype" value="Square Showcase2" />
                 <param name="viewtypename" value="wrap" />
-                <param name="forced" value="true" />
                 <movement>4</movement>
                 <include>View_Horizontal_Movement</include>
             </include>
@@ -570,10 +567,9 @@
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_525]" />
                 <param name="viewtype" value="Showcase Flix View" />
                 <param name="viewtypename" value="wrap" />
-                <param name="forced" value="true" />
                 <movement>2</movement>
                 <include>View_Horizontal_Movement</include>
             </include>
@@ -592,10 +588,9 @@
                 <param name="labelinclude" value="Defs_Null" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(videos)" />
+                <param name="visible" value="$EXP[Exp_View_526]" />
                 <param name="viewtype" value="Flix Poster" />
                 <param name="viewtypename" value="wrap" />
-                <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
             </include>
             <include>View_52_Showcase_Aura_Info</include>
@@ -613,10 +608,9 @@
                 <param name="labelinclude" value="Defs_Null" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Aura_Layout" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(videos)" />
+                <param name="visible" value="$EXP[Exp_View_528]" />
                 <param name="viewtype" value="Flix Poster2" />
                 <param name="viewtypename" value="wrap" />
-                <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
             </include>
             <include>Flix_View_52_Showcase_Info2</include>
@@ -639,10 +633,9 @@
                 <param name="itemheight" value="item_cast_height" />
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="iconheight" value="254" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_529]" />
                 <param name="viewtype" value="Flix Landscape" />
                 <param name="viewtypename" value="wrap" />
-                <param name="forced" value="true" />
                 <movement>3</movement>
                 <include>View_Horizontal_Movement</include>
             </include>
@@ -667,10 +660,9 @@
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_521]" />
                 <param name="viewtype" value="Landscape Showcase" />
                 <param name="viewtypename" value="wrap" />
-                <param name="forced" value="true" />
                 <include>View_Horizontal_Movement</include>
             </include>
             <include content="View_52_Showcase_Header">
@@ -692,8 +684,7 @@
                 <param name="height" value="item_row_height" />
                 <param name="viewtype" value="Season Info" />
                 <param name="viewtypename" value="biglist" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(seasons)" />
+                <param name="visible" value="$EXP[Exp_View_522]" />
                 <param name="orientation" value="horizontal" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
                 <width>1028.56</width>
@@ -726,7 +717,6 @@
                 <param name="height" value="390" />
                 <param name="right" value="771.44" />
                 <param name="id" value="5229" />
-                <param name="forced" value="false" />
                 <param name="visible" value="Control.IsVisible(522) + !Container(522).ListItem.IsParentFolder" />
                 <param name="controllayout" value="Defs_Null" />
                 <param name="controltype" value="fixedlist" />
@@ -759,8 +749,7 @@
                     <param name="height" value="view_height" />
                     <param name="viewtype" value="Season Info 2" />
                     <param name="viewtypename" value="biglist" />
-                    <param name="forced" value="true" />
-                    <param name="visible" value="Container.Content(seasons)" />
+                    <param name="visible" value="$EXP[Exp_View_524]" />
                     <param name="orientation" value="vertical" />
                     <param name="controltype" value="fixedlist" />
                     <param name="controllayout" value="View_514_Wall_Info_Layout" />
@@ -798,7 +787,6 @@
                     <param name="height" value="view_list_height" />
                     <param name="right" value="771.44" />
                     <param name="id" value="5249" />
-                    <param name="forced" value="false" />
                     <param name="visible" value="Control.IsVisible(524) + !Container(524).ListItem.IsParentFolder" />
                     <param name="controllayout" value="Defs_Null" />
                     <param name="controltype" value="list" />
@@ -887,10 +875,7 @@
             </control>
             <control type="wraplist" id="523">
                 <viewtype label="$LOCALIZE[31231]">bigwrap</viewtype>
-                <include content="View_Forced">
-                    <param name="string" value="$LOCALIZE[31231]" />
-                </include>
-                <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                <visible>$EXP[Exp_View_523]</visible>
                 <onleft>523</onleft>
                 <onright>523</onright>
                 <onup>300</onup>

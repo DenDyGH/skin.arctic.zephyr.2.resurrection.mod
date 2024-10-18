@@ -2078,3 +2078,8 @@ msgstr "Listy"
 msgctxt "#31481"
 msgid "Hide menu when focus is on widgets"
 msgstr "Ukryj menu gdy focus jest na widgetach"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31482"
+msgid "Configure viewtypes"
+msgstr "Konfiguracja widoków"

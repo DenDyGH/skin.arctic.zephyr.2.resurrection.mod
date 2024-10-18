@@ -4,6 +4,7 @@
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinshortcuts"/>
         <import addon="script.skinhelper" version="0.0.4" />
+        <import addon="script.skinvariables" version="2.1.14" />
         <import addon="plugin.video.themoviedb.helper" version="5.2.26" />
         <import addon="resource.images.studios.white"/>
         <import addon="resource.images.moviegenreicons.transparent"/>

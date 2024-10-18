@@ -2098,3 +2098,8 @@ msgstr "Listák"
 msgctxt "#31481"
 msgid "Hide menu when focus is on widgets"
 msgstr "Menü elrejtése, ha a fókusz a widgeteken van"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31482"
+msgid "Configure viewtypes"
+msgstr ""

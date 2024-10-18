@@ -526,6 +526,12 @@
                             <label>$LOCALIZE[31152]</label>
                         </control>
 
+                        <control type="button" id="19948" description="Configure viewtypes">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31482]</label>
+                            <onclick>runscript(script.skinvariables,action=buildviews,configure)</onclick>
+                        </control>
+
                         <control type="radiobutton" id="19405" description="Flip sides">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31016]</label>

@@ -15,8 +15,7 @@
                 <param name="id" value="50" />
                 <param name="viewtype" value="List" />
                 <param name="viewtypename" value="list" />
-                <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors) | [Container.Content(files) + Window.IsVisible(MyVideoNav.xml) + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/) + !String.IsEmpty(Container.PluginName)] | Window.IsVisible(videoplaylist) | $EXP[InGameMode] | Container.Content(favourites)" />
+                <param name="visible" value="$EXP[Exp_View_50]" />
             </include>
         </control>
     </include>
@@ -39,8 +38,7 @@
                     <param name="id" value="500" />
                     <param name="viewtype" value="List" />
                     <param name="viewtypename" value="list" />
-                    <param name="forced" value="true" />
-                    <param name="visible" value="![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors) | [Container.Content(files) + Window.IsVisible(MyVideoNav.xml) + !String.IsEqual(Container.FolderPath,plugin://plugin.video.youtube/) + !String.IsEmpty(Container.PluginName)] | Window.IsVisible(videoplaylist)] | $EXP[InGameMode]" />
+                    <param name="visible" value="$EXP[Exp_View_500]" />
                 </include>
             </control>
         </control>
@@ -61,7 +59,6 @@
                     <param name="id" value="500" />
                     <param name="viewtype" value="List" />
                     <param name="viewtypename" value="list" />
-                    <param name="forced" value="true" />
                     <param name="visible" value="true" />
                 </include>
             </control>
@@ -78,9 +75,8 @@
                 <param name="id" value="501" />
                 <param name="viewtype" value="Media Info" />
                 <param name="viewtypename" value="info" />
-                <param name="forced" value="true" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_501]" />
             </include>
             <include content="View_522_Showcase_Seasons_Info">
                 <param name="visible" value="true" />
@@ -101,9 +97,8 @@
                 <param name="id" value="502" />
                 <param name="viewtype" value="Media Info 2" />
                 <param name="viewtypename" value="biginfo" />
-                <param name="forced" value="true" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
+                <param name="visible" value="$EXP[Exp_View_502]" />
             </include>
             <include>View_502_List_Info</include>
         </control>
@@ -119,7 +114,7 @@
                 <width>1790</width>
                 <top>-15</top>
                 <left>-15</left>
-                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | $EXP[InGameMode]</visible>
+                <visible>$EXP[Exp_View_503]</visible>
                 <height>840</height>
                 <include>View_Vertical</include>
                 <movement>2</movement>
@@ -127,9 +122,6 @@
                 <pagecontrol>60</pagecontrol>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <viewtype label="$LOCALIZE[31421]">bigwide</viewtype>
-                <include content="View_Forced">
-                    <param name="string" value="$LOCALIZE[31421]" />
-                </include>
                 <itemlayout width="1790" height="119.5" condition="!Container.Content(episodes)">
                     <control type="group">
                         <top>15</top>
@@ -363,10 +355,9 @@
                         <param name="id" value="504" />
                         <param name="viewtype" value="Tri-Panel" />
                         <param name="viewtypename" value="biginfo" />
-                        <param name="forced" value="true" />
                         <param name="itemlayout" value="View_504_Itemlayout" />
                         <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                        <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | $EXP[InGameMode]" />
+                        <param name="visible" value="$EXP[Exp_View_504]" />
                     </include>
                     <include content="View_504_Info">
                         <param name="visible" value="true" />
@@ -547,7 +538,6 @@
         <param name="controltype" default="panel" />
         <param name="viewtype" default="List" />
         <param name="viewtypename" default="list" />
-        <param name="forced" default="false" />
         <param name="flipsides" default="false" />
         <param name="focustrailer" default="false" />
         <definition>
@@ -568,9 +558,6 @@
                 <include>$PARAM[controllayout]</include>
                 <pagecontrol>60</pagecontrol>
                 <viewtype label="$PARAM[viewtype]">$PARAM[viewtypename]</viewtype>
-                <include content="View_Forced" condition="$PARAM[forced]">
-                    <param name="string" value="$PARAM[viewtype]" />
-                </include>
                 <itemlayout height="$PARAM[itemheight]">
                     <include content="$PARAM[itemlayout]">
                         <param name="itemheight" value="$PARAM[itemheight]" />
