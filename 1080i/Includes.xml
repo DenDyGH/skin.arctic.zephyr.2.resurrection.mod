@@ -37,6 +37,8 @@
 
     <include file="Constants_Main.xml" />
 
+    <include file="Includes_Views_Fallbacks.xml" />
+
     <!-- Highlight Color -->
     <variable name="ColorHighlight">
         <value>$INFO[Skin.String(focuscolor.name)]</value>
