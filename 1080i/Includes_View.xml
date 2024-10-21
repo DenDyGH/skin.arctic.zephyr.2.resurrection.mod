@@ -1061,7 +1061,7 @@
 
     <include name="View_WatchedOverlay">
         <control type="group">
-            <visible>!Skin.HasSetting(DisableWatchedOverlay)</visible>
+            <visible>!Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(ListItem.ChannelName)</visible>
             <control type="image">
                 <bottom>-15</bottom>
                 <right>20</right>
