@@ -1910,7 +1910,7 @@
         <value condition="String.IsEqual(Container.Content,genres) + Window.IsVisible(MyMusicNav.xml)">genres-music</value>
         <value condition="String.IsEqual(Container.Content,years) + Window.IsVisible(MyMusicNav.xml)">years-music</value>
         <value condition="!String.IsEmpty(Container.Content)">$INFO[Container.Content]</value>
-        <value condition="Window.IsVisible(MyGames.xml)">none-games</value>
+        <value condition="Window.IsVisible(MyGames.xml) | $EXP[InGameMode]">none-games</value>
         <value condition="Window.IsVisible(MyPVRRecordings.xml)">none-recordings</value>
         <value condition="Window.IsVisible(MyPVRTimers.xml)">none-timers</value>
         <value condition="Window.IsVisible(MyPVRSearch.xml)">none-search</value>

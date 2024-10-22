@@ -207,7 +207,7 @@
             "plugins": "500"
         },
         "none-games": {
-            "rule": "Container.Content() + Window.IsVisible(MyGames.xml)",
+            "rule": "Container.Content() + [Window.IsVisible(MyGames.xml) | $EXP[InGameMode]]",
             "viewtypes": ["51", "52", "53", "500", "501", "502", "503", "504", "510", "511", "514", "515", "517", "520", "521", "525", "527", "529", "540", "541"],
             "library": "500",
             "plugins": "500"
@@ -231,7 +231,7 @@
             "plugins": "500"
         },
         "none": {
-            "rule": "Container.Content() + !Window.IsVisible(MyGames.xml) + !Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(MyPVRTimers.xml) + !Window.IsVisible(MyPVRSearch.xml)",
+            "rule": "Container.Content() + !Window.IsVisible(MyGames.xml) + !Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(MyPVRTimers.xml) + !Window.IsVisible(MyPVRSearch.xml) + !$EXP[InGameMode]",
             "viewtypes": ["50", "500", "510", "512", "517", "527"],
             "library": "500",
             "plugins": "500"
