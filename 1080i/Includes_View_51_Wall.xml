@@ -677,7 +677,7 @@
                 <param name="height" value="view_height" />
                 <param name="viewtype" value="Poster Wall" />
                 <param name="viewtypename" value="icon" />
-                <param name="visible" value="$EXP[Exp_View_51]" />
+                <param name="visible" value="$EXP[Exp_View_51] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -697,7 +697,7 @@
                 <param name="viewtype" value="Square Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
-                <param name="visible" value="$EXP[Exp_View_510]" />
+                <param name="visible" value="$EXP[Exp_View_510] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -718,7 +718,7 @@
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
                 <param name="labelinclude" value="View_517_Wall_Label" />
-                <param name="visible" value="$EXP[Exp_View_517]" />
+                <param name="visible" value="$EXP[Exp_View_517] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -742,7 +742,7 @@
                 <param name="viewtype" value="Landscape Wall" />
                 <param name="viewtypename" value="wide" />
                 <param name="labelinclude" value="View_51_Wall_Landscape_Label" />
-                <param name="visible" value="$EXP[Exp_View_511]" />
+                <param name="visible" value="$EXP[Exp_View_511] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -763,7 +763,7 @@
                 <param name="diffuse" value="diffuse/icon-wall.png" />
                 <param name="viewtype" value="Icon Wall" />
                 <param name="viewtypename" value="icon" />
-                <param name="visible" value="$EXP[Exp_View_512]" />
+                <param name="visible" value="$EXP[Exp_View_512] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -785,7 +785,7 @@
                 <param name="circle" value="true" />
                 <param name="viewtype" value="Circle Wall" />
                 <param name="viewtypename" value="icon" />
-                <param name="visible" value="$EXP[Exp_View_513]" />
+                <param name="visible" value="$EXP[Exp_View_513] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -811,7 +811,7 @@
                 <param name="viewtype" value="Info Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
-                <param name="visible" value="$EXP[Exp_View_514]" />
+                <param name="visible" value="$EXP[Exp_View_514] | $EXP[InGameAEL]" />
                 <width>1028.56</width>
                 <include>View_Vertical_Movement</include>
             </include>
@@ -869,7 +869,7 @@
                 <param name="viewtype" value="Landscape Wall Small" />
                 <param name="viewtypename" value="wide" />
                 <param name="labelinclude" value="Defs_Null" />
-                <param name="visible" value="$EXP[Exp_View_515]" />
+                <param name="visible" value="$EXP[Exp_View_515] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>

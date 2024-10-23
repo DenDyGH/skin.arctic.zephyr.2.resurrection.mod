@@ -52,7 +52,7 @@
                 <orientation>horizontal</orientation>
                 <pagecontrol>62</pagecontrol>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <visible>$EXP[Exp_View_53]</visible>
+                <visible>$EXP[Exp_View_53] | $EXP[InGameAEL]</visible>
                 <viewtype label="$LOCALIZE[31262]">bigicon</viewtype>
                 <itemlayout width="337">
                     <control type="group">

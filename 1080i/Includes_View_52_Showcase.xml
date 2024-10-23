@@ -483,7 +483,7 @@
                 <param name="labelinclude" value="Defs_Null" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_52_Showcase_Layout" />
-                <param name="visible" value="$EXP[Exp_View_52]" />
+                <param name="visible" value="$EXP[Exp_View_52] | $EXP[InGameAEL]" />
                 <param name="viewtype" value="Poster Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <include>View_Horizontal_Movement</include>
@@ -513,7 +513,7 @@
                 <param name="orientation" value="horizontal" />
                 <param name="controltype" value="fixedlist" />
                 <param name="controllayout" value="View_520_Showcase_Layout" />
-                <param name="visible" value="$EXP[Exp_View_520]" />
+                <param name="visible" value="$EXP[Exp_View_520] | $EXP[InGameAEL]" />
                 <param name="viewtype" value="Square Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <include>View_Horizontal_Movement</include>
@@ -575,7 +575,7 @@
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="visible" value="$EXP[Exp_View_525]" />
+                <param name="visible" value="$EXP[Exp_View_525] | $EXP[InGameAEL]" />
                 <param name="viewtype" value="Showcase Flix View" />
                 <param name="viewtypename" value="wrap" />
                 <movement>2</movement>
@@ -676,7 +676,7 @@
                 <param name="icon" value="$VAR[Image_Landscape]" />
                 <param name="clearlogo" value="![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]" />
                 <param name="iconheight" value="item_icon_height" />
-                <param name="visible" value="$EXP[Exp_View_521]" />
+                <param name="visible" value="$EXP[Exp_View_521] | $EXP[InGameAEL]" />
                 <param name="viewtype" value="Landscape Showcase" />
                 <param name="viewtypename" value="wrap" />
                 <include>View_Horizontal_Movement</include>

@@ -1910,7 +1910,7 @@
         <value condition="String.IsEqual(Container.Content,genres) + Window.IsVisible(MyMusicNav.xml)">genres-music</value>
         <value condition="String.IsEqual(Container.Content,years) + Window.IsVisible(MyMusicNav.xml)">years-music</value>
         <value condition="!String.IsEmpty(Container.Content)">$INFO[Container.Content]</value>
-        <value condition="Window.IsVisible(MyGames.xml) | $EXP[InGameMode]">none-games</value>
+        <value condition="Window.IsVisible(MyGames.xml)">none-games</value>
         <value condition="Window.IsVisible(MyPVRRecordings.xml)">none-recordings</value>
         <value condition="Window.IsVisible(MyPVRTimers.xml)">none-timers</value>
         <value condition="Window.IsVisible(MyPVRSearch.xml)">none-search</value>
@@ -1923,8 +1923,8 @@
             <item>
                 <label>$INFO[Container.Viewmode]</label>
                 <icon>special://skin/extras/icons/viewmode.png</icon>
-                <onclick condition="!Window.IsVisible(MyPVRChannels.xml)">Runscript(script.skinvariables,action=buildviews,contentid=$VAR[Items_ViewMode_Switch],pluginname=$INFO[Container.PluginName])</onclick>
-                <onclick condition="Window.IsVisible(MyPVRChannels.xml)">Container.NextViewMode</onclick>
+                <onclick condition="!Window.IsVisible(MyPVRChannels.xml) + !$EXP[InGameAEL]">Runscript(script.skinvariables,action=buildviews,contentid=$VAR[Items_ViewMode_Switch],pluginname=$INFO[Container.PluginName])</onclick>
+                <onclick condition="Window.IsVisible(MyPVRChannels.xml) | $EXP[InGameAEL]">Container.NextViewMode</onclick>
                 <visible>Control.IsEnabled(2)</visible>
                 <visible>Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(MyGames.xml) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyFavourites.xml)</visible>
                 <visible>!Skin.HasSetting(KioskMode)</visible>

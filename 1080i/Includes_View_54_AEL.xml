@@ -173,7 +173,7 @@
                 <param name="viewtypename" value="biginfo" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
                 <param name="focustrailer" value="true" />
-                <param name="visible" value="$EXP[Exp_View_540]" />
+                <param name="visible" value="$EXP[Exp_View_540] | $EXP[InGameAEL]" />
             </include>
             <include>View_540_List_Info</include>
         </control>
@@ -191,7 +191,7 @@
                 <param name="viewtype" value="$LOCALIZE[31440]" />
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
-                <param name="visible" value="$EXP[Exp_View_541]" />
+                <param name="visible" value="$EXP[Exp_View_541] | $EXP[InGameAEL]" />
                 <param name="focustrailer" value="true" />
                 <param name="aspectratio" value="keep" />
                 <width>1028.56</width>

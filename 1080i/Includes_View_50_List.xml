@@ -17,7 +17,7 @@
                 <param name="id" value="50" />
                 <param name="viewtype" value="List" />
                 <param name="viewtypename" value="list" />
-                <param name="visible" value="$EXP[Exp_View_50]" />
+                <param name="visible" value="$EXP[Exp_View_50] | $EXP[InGameAEL]" />
             </include>
         </control>
     </include>
@@ -42,7 +42,7 @@
                     <param name="id" value="500" />
                     <param name="viewtype" value="List" />
                     <param name="viewtypename" value="list" />
-                    <param name="visible" value="$EXP[Exp_View_500]" />
+                    <param name="visible" value="$EXP[Exp_View_500] | $EXP[InGameAEL]" />
                 </include>
             </control>
         </control>
@@ -84,7 +84,7 @@
                 <param name="viewtype" value="Media Info" />
                 <param name="viewtypename" value="info" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                <param name="visible" value="$EXP[Exp_View_501]" />
+                <param name="visible" value="$EXP[Exp_View_501] | $EXP[InGameAEL]" />
             </include>
             <include content="View_522_Showcase_Seasons_Info">
                 <param name="visible" value="true" />
@@ -108,7 +108,7 @@
                 <param name="viewtype" value="Media Info 2" />
                 <param name="viewtypename" value="biginfo" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                <param name="visible" value="$EXP[Exp_View_502]" />
+                <param name="visible" value="$EXP[Exp_View_502] | $EXP[InGameAEL]" />
             </include>
             <include>View_502_List_Info</include>
         </control>
@@ -124,7 +124,7 @@
                 <width>1790</width>
                 <top>-15</top>
                 <left>-15</left>
-                <visible>$EXP[Exp_View_503]</visible>
+                <visible>$EXP[Exp_View_503] | $EXP[InGameAEL]</visible>
                 <height>840</height>
                 <include>View_Vertical</include>
                 <movement>2</movement>
@@ -369,7 +369,7 @@
                         <param name="viewtypename" value="biginfo" />
                         <param name="itemlayout" value="View_504_Itemlayout" />
                         <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
-                        <param name="visible" value="$EXP[Exp_View_504]" />
+                        <param name="visible" value="$EXP[Exp_View_504] | $EXP[InGameAEL]" />
                     </include>
                     <include content="View_504_Info">
                         <param name="visible" value="true" />
