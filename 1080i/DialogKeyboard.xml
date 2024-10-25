@@ -18,7 +18,7 @@
                 <include content="Defs_Pad">
                     <param name="pad" value="-34" />
                 </include>
-                <include condition="!Skin.HasSetting(DisableShadows)">Defs_Shadow_24</include>
+                <include>Defs_Shadow_24</include>
                 <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
             </control>
 

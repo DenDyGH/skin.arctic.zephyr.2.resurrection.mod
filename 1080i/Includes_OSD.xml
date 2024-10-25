@@ -76,7 +76,7 @@
                 <height>218</height>
                 <control type="image">
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <include condition="!Skin.HasSetting(DisableShadows)">Defs_Shadow_24</include>
+                    <include>Defs_Shadow_24</include>
                     <texture diffuse="diffuse/square-musicosd.png">$INFO[$PARAM[artwork]]</texture>
                 </control>
             </control>
