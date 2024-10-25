@@ -5,7 +5,7 @@
         <include>Global_Overlay</include>
         <control type="group">
             <include content="Dialog_Standard_Group">
-                <param name="width" value="1336" />
+                <param name="width" value="1396" />
                 <param name="height" value="940" />
             </include>
             <control type="label" id="2">
@@ -15,12 +15,13 @@
                 <include content="Dialog_Standard_List">
                     <param name="id" value="50" />
                     <param name="list_style" value="Dialog_Standard_List_Itemlayout_Video" />
-                    <param name="left_pad" value="10" />
+                    <param name="left_pad" value="50" />
                     <param name="list_type" value="list" />
-                    <param name="checkmark" value="false" />
+                    <param name="checkmark" value="true" />
                     <param name="ondown" value="50" />
                     <param name="onup" value="50" />
                     <param name="onright" value="9999" />
+                    <param name="width" value="996" />
                 </include>
             </control>
             <control type="group">
