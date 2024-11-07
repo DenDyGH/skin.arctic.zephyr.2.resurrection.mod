@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <include name="Defs_TMDbHelper_Loader">
-        <control type="list" id="99950">
-            <itemlayout />
-            <focusedlayout />
-            <width>1</width>
-            <height>1</height>
-            <left>-1920</left>
-        </control>
-    </include>
-
     <include name="Defs_Progress_Gradient">
         <control type="progress" id="$PARAM[id]">
             <nested />
@@ -319,7 +309,7 @@
     </variable>
 
     <variable name="Def_Set_List">
-        <value condition="!Skin.HasSetting(DisableExtendedInfo) + !String.IsEmpty(ListItem.Set)">plugin://plugin.video.themoviedb.helper/?info=collection&amp;tmdb_type=collection&amp;tmdb_id=$INFO[Container(99950).ListItem.Property(Set.TMDb_ID)]$VAR[Path_Param_Widget]</value>
+        <value condition="!Skin.HasSetting(DisableExtendedInfo) + !String.IsEmpty(ListItem.Set)">plugin://plugin.video.themoviedb.helper/?info=collection&amp;tmdb_type=collection&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.Set.TMDb_ID)]$VAR[Path_Param_Widget]</value>
         <value condition="!String.IsEmpty(ListItem.Set)">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22set%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Set]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</value>
     </variable>
 

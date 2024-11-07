@@ -5,8 +5,6 @@
     <onload>ClearProperty(oldfocus)</onload>
     <views>50</views>
     <controls>
-
-        <include>Defs_TMDbHelper_Loader</include>
         <include>Global_Background</include>
         <control type="list" id="300">
             <top>30</top>

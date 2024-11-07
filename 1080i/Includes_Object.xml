@@ -294,8 +294,8 @@
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Container(99950).ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Container(99950).ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -328,8 +328,8 @@
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Container(99950).ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Container(99950).ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -364,8 +364,8 @@
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Container(99950).ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Container(99950).ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -401,8 +401,8 @@
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Container(99950).ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Container(99950).ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -445,8 +445,8 @@
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Container(99950).ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Container(99950).ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -473,8 +473,8 @@
 
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[ListItem.Trailer],Home)</onfocus>
                         <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + [Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [!String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[ListItem.Trailer],False,1),00:01,silent)</onfocus>
-                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Container(99950).ListItem.Trailer],Home)</onfocus>
-                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Container(99950).ListItem.Trailer],False,1),00:01,silent)</onfocus>
+                        <onfocus condition="Skin.HasSetting(HomeMultiFlixView) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo]">SetProperty(HasTrailer,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],Home)</onfocus>
+                        <onfocus condition="[Skin.HasSetting(HomeMultiFlixView) + Skin.HasSetting(global.showvideo) + Skin.HasSetting(global.playtrailerinbg)] + System.AddonIsEnabled(plugin.video.youtube) + Control.HasFocus($PARAM[id]) + [String.IsEmpty(ListItem.Trailer) + !Player.HasVideo] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">AlarmClock(playtrailer,PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],False,1),00:01,silent)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -1011,17 +1011,17 @@
         <include content="Object_Info_TextPairs">
             <param name="pad" value="32" />
             <param name="name" value="$LOCALIZE[31443]" />
-            <param name="label" value="Container(99950).ListItem.Genre" />
+            <param name="label" value="Window(Home).Property(TMDbHelper.ListItem.Genre)" />
         </include>
         <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
             <param name="name" value="$LOCALIZE[31444]" />
-            <param name="label" value="Container(99950).ListItem.Director" />
+            <param name="label" value="Window(Home).Property(TMDbHelper.ListItem.Director)" />
         </include>
         <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
             <param name="name" value="$LOCALIZE[31445]" />
-            <param name="label" value="Container(99950).ListItem.Writer" />
+            <param name="label" value="Window(Home).Property(TMDbHelper.ListItem.Writer)" />
         </include>
         <!-- <include content="Object_Info_TextPairs">
             <param name="pad" value="14" />
@@ -1065,12 +1065,12 @@
                 <visible>
                 [!String.IsEmpty(ListItem.Rating) + !Skin.HasSetting(DisableStarRating)] |
                 [!String.IsEmpty(ListItem.UserRating) + !Skin.HasSetting(Ratings.User)] |
-                [String.Contains(Container(99950).ListItem.Property(Awards),Oscar) + String.Contains(Container(99950).ListItem.Property(Awards),Won) + !Skin.HasSetting(Ratings.Oscars)] |
-                [!String.IsEmpty(Container(99950).ListItem.Property(Trakt_Rating)) + !Skin.HasSetting(Ratings.Trakt)] |
-                [!String.IsEmpty(Container(99950).ListItem.Property(TMDb_Rating)) + !Skin.HasSetting(Ratings.TheMovieDB)] |
-                [!String.IsEmpty(Container(99950).ListItem.Property(Metacritic_Rating)) + !Skin.HasSetting(Ratings.Metacritic)] |
-                [!String.IsEmpty(Container(99950).ListItem.Property(RottenTomatoes_UserMeter)) + !Skin.HasSetting(Ratings.RottenTomatoes)] |
-                [!String.IsEmpty(Container(99950).ListItem.Property(IMDb_Rating)) + [!Skin.HasSetting(Ratings.IMDB) | !Skin.HasSetting(Ratings.IMDB.Votes)]]
+                [String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won) + !Skin.HasSetting(Ratings.Oscars)] |
+                [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)) + !Skin.HasSetting(Ratings.Trakt)] |
+                [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating)) + !Skin.HasSetting(Ratings.TheMovieDB)] |
+                [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)) + !Skin.HasSetting(Ratings.Metacritic)] |
+                [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + !Skin.HasSetting(Ratings.RottenTomatoes)] |
+                [!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)) + [!Skin.HasSetting(Ratings.IMDB) | !Skin.HasSetting(Ratings.IMDB.Votes)]]
                 </visible>
                 <top>$PARAM[top]</top>
                 <height>75</height>
@@ -1211,7 +1211,7 @@
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,episode) + !String.IsEmpty($PARAM[container]ListItem.Premiered)" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
-                    <param name="label" value="$INFO[Container(99950).ListItem.Year]" />
+                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Year)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
                     <param name="fallback" value="N/A" />
@@ -1247,9 +1247,9 @@
                 </include>
                 <include content="Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
                     <param name="id" value="$PARAM[uid]11" />
-                    <param name="label" value="$INFO[Container(99950).ListItem.Property(Genre.1.Name)]" />
+                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="!String.IsEmpty(Container(99950).ListItem.Property(Genre.1.Name))  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)]" />
+                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name))  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)]" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]04" />
@@ -1338,7 +1338,7 @@
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,episode) + !String.IsEmpty($PARAM[container]ListItem.Premiered)" />
                 </include>
                 <include content="Object_Info_Line_Label">
-                    <param name="label" value="$INFO[Container(99950).ListItem.Year]" />
+                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Year)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
                     <param name="fallback" value="N/A" />
@@ -1374,9 +1374,9 @@
                 </include>
                 <include content="Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
                     <param name="id" value="$PARAM[uid]11" />
-                    <param name="label" value="$INFO[Container(99950).ListItem.Property(Genre.1.Name)]" />
+                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="!String.IsEmpty(Container(99950).ListItem.Property(Genre.1.Name))  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)] + !$PARAM[fullgenre]" />
+                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name))  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)] + !$PARAM[fullgenre]" />
                 </include>
                 <include content="Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
                     <param name="id" value="$PARAM[uid]12" />
@@ -1618,14 +1618,14 @@
     </include>
 
     <include name="Object_Icon_Ratings">
-        <param name="trakt_prop" default="Container(99950).ListItem.Property(Trakt_Rating)" />
-        <param name="metacritic_prop" default="Container(99950).ListItem.Property(Metacritic_Rating)" />
-        <param name="imdb_prop" default="Container(99950).ListItem.Property(IMDb_Rating)" />
-        <param name="rt_prop" default="Container(99950).ListItem.Property(RottenTomatoes_Rating)" />
-        <param name="oscar_prop" default="Container(99950).ListItem.Property(Awards)" />
-        <param name="rt_audience_prop" default="Container(99950).ListItem.Property(RottenTomatoes_UserMeter)" />
-        <param name="tmdb_prop" default="Container(99950).ListItem.Property(TMDb_Rating)" />
-        <param name="top250_prop" default="Container(99950).ListItem.Property(top250)" />
+        <param name="trakt_prop" default="Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)" />
+        <param name="metacritic_prop" default="Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)" />
+        <param name="imdb_prop" default="Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)" />
+        <param name="rt_prop" default="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)" />
+        <param name="oscar_prop" default="Window(Home).Property(TMDbHelper.ListItem.Awards)" />
+        <param name="rt_audience_prop" default="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)" />
+        <param name="tmdb_prop" default="Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating)" />
+        <param name="top250_prop" default="Window(Home).Property(TMDbHelper.ListItem.Top250)" />
         <definition>
             <control type="grouplist">
                 <orientation>horizontal</orientation>
@@ -2443,7 +2443,7 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/oscar.png</texture>
-                    <visible>String.Contains(Container(99950).ListItem.Property(Awards),Oscar) + String.Contains(Container(99950).ListItem.Property(Awards),Won)</visible>
+                    <visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
                     <visible>$PARAM[oscars]</visible>
                     <visible>!Skin.HasSetting(Ratings.Oscars)</visible>
                 </control>
@@ -2455,7 +2455,7 @@
                     <align>right</align>
                     <font>font_tiny</font>
                     <label>$VAR[Label_Oscars,,   ]</label>
-                    <visible>String.Contains(Container(99950).ListItem.Property(Awards),Oscar) + String.Contains(Container(99950).ListItem.Property(Awards),Won)</visible>
+                    <visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
                     <visible>$PARAM[oscars]</visible>
                     <visible>!Skin.HasSetting(Ratings.Oscars)</visible>
                 </control>
@@ -2464,7 +2464,7 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/trakt.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(Trakt_Rating))</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
                     <visible>$PARAM[trakt]</visible>
                     <visible>!Skin.HasSetting(Ratings.Trakt)</visible>
                 </control>
@@ -2475,8 +2475,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(Trakt_Rating), ,   ]</label>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(Trakt_Rating))</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating), ,   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
                     <visible>$PARAM[trakt]</visible>
                     <visible>!Skin.HasSetting(Ratings.Trakt)</visible>
                 </control>
@@ -2485,7 +2485,7 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/tmdb.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(TMDb_Rating))</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
                     <visible>$PARAM[tmdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.TheMovieDB)</visible>
                 </control>
@@ -2496,8 +2496,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(TMDb_Rating), ,   ]</label>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(TMDb_Rating))</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating), ,   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
                     <visible>$PARAM[tmdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.TheMovieDB)</visible>
                 </control>
@@ -2506,7 +2506,7 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/metacritic.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(Metacritic_Rating))</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
                     <visible>$PARAM[metacritic]</visible>
                     <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
                 </control>
@@ -2517,8 +2517,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(Metacritic_Rating), ,%   ]</label>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(Metacritic_Rating))</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
                     <visible>$PARAM[metacritic]</visible>
                     <visible>!Skin.HasSetting(Ratings.Metacritic)</visible>
                 </control>
@@ -2528,8 +2528,8 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/popcorn.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(RottenTomatoes_UserMeter))</visible>
-                    <visible>Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_UserMeter),59)</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
+                    <visible>Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
                     <visible>$PARAM[usermeter]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
@@ -2538,8 +2538,8 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/popcorn_spilt.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(RottenTomatoes_UserMeter))</visible>
-                    <visible>!Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_UserMeter),59)</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
+                    <visible>!Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
                     <visible>$PARAM[usermeter]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
@@ -2550,8 +2550,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(RottenTomatoes_UserMeter), ,%   ]</label>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(RottenTomatoes_UserMeter))</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
                     <visible>$PARAM[usermeter]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
@@ -2559,8 +2559,8 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/rtrotten.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(RottenTomatoes_Rating))</visible>
-                    <visible>Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_Rating),0) + !Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_Rating),59)</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+                    <visible>Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),0) + !Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59)</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
@@ -2568,8 +2568,8 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/rtfresh.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(RottenTomatoes_Rating))</visible>
-                    <visible>Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_Rating),59) + !Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_Rating),74)</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+                    <visible>Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59) + !Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
@@ -2578,8 +2578,8 @@
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/rtfresh.png</texture>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/certified.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(RottenTomatoes_Rating))</visible>
-                    <visible>Integer.IsGreater(Container(99950).ListItem.Property(RottenTomatoes_Rating),74)</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+                    <visible>Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
@@ -2590,8 +2590,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(RottenTomatoes_Rating), ,%   ]</label>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(RottenTomatoes_Rating))</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
                     <visible>$PARAM[rottentomatoes]</visible>
                     <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible>
                 </control>
@@ -2600,7 +2600,7 @@
                     <width>52</width>
                     <height>32</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/imdb.png</texture>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(IMDb_Rating))</visible>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
                     <visible>$PARAM[imdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                 </control>
@@ -2611,8 +2611,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(IMDb_Rating), ,]$INFO[Container(99950).ListItem.Property(IMDb_Votes), (, $LOCALIZE[205])]</label>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(IMDb_Rating))</visible>
+                    <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Votes), (, $LOCALIZE[205])]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
                     <visible>$PARAM[imdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB.Votes)</visible>
@@ -2625,8 +2625,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(IMDb_Rating)]</label>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(IMDb_Rating))</visible>
+                    <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
                     <visible>$PARAM[imdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                     <visible>Skin.HasSetting(Ratings.IMDB.Votes)</visible>
@@ -2639,8 +2639,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(IMDb_Rating), ,]</label>
-                    <visible>!String.IsEmpty(Container(99950).ListItem.Property(IMDb_Rating))</visible>
+                    <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
                     <visible>$PARAM[imdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                     <visible>!$PARAM[imdbvotes]</visible>
@@ -2652,8 +2652,8 @@
                     <height>28</height>
                     <align>right</align>
                     <font>font_tiny</font>
-                    <label>$INFO[Container(99950).ListItem.Property(top250),#,]</label>
-                    <visible>Integer.IsGreater(Container(99950).ListItem.Property(top250),0)</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,]</label>
+                    <visible>Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.Top250),0)</visible>
                     <visible>$PARAM[imdb]</visible>
                     <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
                     <visible>$PARAM[top250]</visible>

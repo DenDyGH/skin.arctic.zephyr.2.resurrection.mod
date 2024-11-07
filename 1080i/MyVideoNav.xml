@@ -6,7 +6,6 @@
     <views>50,525,526,528,529,500,501,502,504,503,51,510,517,511,512,513,514,516,515,52,520,527,521,522,524,53,523</views>
     <onload>RunScript(script.skinvariables,action=buildviews)</onload>
     <controls>
-        <include>Defs_TMDbHelper_Loader</include>
         <include>Global_Background</include>
         <include>Topbar</include>
 

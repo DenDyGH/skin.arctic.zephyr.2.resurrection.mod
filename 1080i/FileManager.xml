@@ -3,7 +3,6 @@
 <window id="3">
     <defaultcontrol always="true">20</defaultcontrol>
     <controls>
-        <include>Defs_TMDbHelper_Loader</include>
 
         <include>Global_Background</include>
         <include>Topbar</include>

@@ -245,7 +245,7 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Year)</visible>
-                            <content>$INFO[Container(99950).ListItem.Year,plugin://plugin.video.themoviedb.helper/?info=discover&amp;first_air_date_year=,&amp;vote_count.gte=10]$INFO[Container(99950).ListItem.Year,&amp;primary_release_year=,]$VAR[Path_Param_Type,&amp;,]$VAR[Path_Param_Widget]</content>
+                            <content>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),plugin://plugin.video.themoviedb.helper/?info=discover&amp;first_air_date_year=,&amp;vote_count.gte=10]$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),&amp;primary_release_year=,]$VAR[Path_Param_Type,&amp;,]$VAR[Path_Param_Widget]</content>
                         </include>
                         <!-- Genre -->
                         <include content="Info_Widget_Poster">
@@ -256,7 +256,7 @@
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Genre)</visible>
-                            <content target="videos">plugin://plugin.video.themoviedb.helper/?info=discover&amp;type=$VAR[tmdb_type]&amp;with_genres=$INFO[Container(99950).ListItem.Genre]&amp;exclude_key=title&amp;exclude_value=$INFO[Container(99950).ListItem.Title]$VAR[Path_Param_Widget]&amp;vote_count.gte=10</content>
+                            <content target="videos">plugin://plugin.video.themoviedb.helper/?info=discover&amp;type=$VAR[tmdb_type]&amp;with_genres=$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre)]&amp;exclude_key=title&amp;exclude_value=$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]$VAR[Path_Param_Widget]&amp;vote_count.gte=10</content>
                         </include>
 
                         <!-- Studio -->

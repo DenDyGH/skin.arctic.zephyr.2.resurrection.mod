@@ -6,7 +6,6 @@
     
     <views>50,51</views>
     <controls>
-        <include>Defs_TMDbHelper_Loader</include>
         <include>Global_Background</include>
         <include>Topbar</include>
 

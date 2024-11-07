@@ -20,7 +20,6 @@
     <onunload>ClearProperty(fanart10,Home)</onunload>
 
     <controls>
-        <include>Defs_TMDbHelper_Loader</include>
 
         <!-- <control type="group">
             <visible>!Skin.HasSetting(SkinHelper.EnableExtraFanart)</visible>

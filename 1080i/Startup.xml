@@ -6,7 +6,7 @@
     <!-- Start TMDbH service -->
     <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.Service)</onload>
     <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.UseLocalWidgetContainer)</onload>
-    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetString(TMDbHelper.MonitorContainer,99950)</onload>
+    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.Reset(TMDbHelper.MonitorContainer)</onload>
     <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.DirectCallAuto)</onload>
 
     <!-- Skin Init -->

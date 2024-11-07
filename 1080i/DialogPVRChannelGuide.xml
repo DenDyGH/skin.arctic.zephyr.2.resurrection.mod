@@ -2,7 +2,6 @@
 <window>
     <defaultcontrol always="true">11</defaultcontrol>
     <controls>
-        <include>Defs_TMDbHelper_Loader</include>
         <control type="progress" id="9911">
             <visible>false</visible>
             <info>Container(11).ListItem.Progress</info>

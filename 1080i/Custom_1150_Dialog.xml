@@ -5,7 +5,6 @@
     <onunload>ClearProperty(CustomDialogWindow.header)</onunload>
     <onunload>ClearProperty(CustomDialogWindow.items)</onunload>
     <controls>
-        <include>Defs_TMDbHelper_Loader</include>
         <include>Global_Overlay</include>
         <control type="group">
             <include content="Dialog_Standard_Group">

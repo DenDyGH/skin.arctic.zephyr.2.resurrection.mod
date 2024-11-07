@@ -227,8 +227,8 @@
     </variable>
 
     <variable name="Path_Param_Query">
-        <value condition="[String.IsEqual(Container(99950).ListItem.DBType,movie) | String.IsEqual(Container(99950).ListItem.DBType,tvshow)] + !String.IsEmpty(Container(99950).ListItem.Property(tmdb_id))">&amp;tmdb_id=$INFO[Container(99950).ListItem.Property(tmdb_id)]</value>
-        <value condition="[String.IsEqual(Container(99950).ListItem.DBType,season) | String.IsEqual(Container(99950).ListItem.DBType,episode)] + !String.IsEmpty(Container(99950).ListItem.Property(tvshow.tmdb_id))">&amp;tmdb_id=$INFO[Container(99950).ListItem.Property(tvshow.tmdb_id)]</value>
+        <value condition="[String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),movie) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.tmdb_id))">&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.tmdb_id)]</value>
+        <value condition="[String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),season) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),episode)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.tvshow.tmdb_id))">&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.tvshow.tmdb_id)]</value>
         <value condition="[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(ListItem.UniqueID(tmdb))">&amp;tmdb_id=$INFO[ListItem.UniqueID(tmdb)]</value>
         <value condition="[String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !String.IsEmpty(ListItem.UniqueID(tvshow.tmdb))">&amp;tmdb_id=$INFO[ListItem.UniqueID(tvshow.tmdb)]</value>
         <value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.Property(imdb_id))">&amp;imdb_id=$INFO[ListItem.Property(imdb_id)]</value>
@@ -239,8 +239,8 @@
     </variable>
 
     <variable name="Path_Param_Type">
-        <value condition="String.IsEqual(Container(99950).ListItem.DBType,movie)">type=movie</value>
-        <value condition="String.IsEqual(Container(99950).ListItem.DBType,tvshow) | String.IsEqual(Container(99950).ListItem.DBType,season) | String.IsEqual(Container(99950).ListItem.DBType,episode)">type=tv</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),movie)">type=movie</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),tvshow) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),season) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),episode)">type=tv</value>
         <value condition="String.IsEqual(ListItem.DBType,movie)">type=movie</value>
         <value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">type=tv</value>
         <value condition="$EXP[Exp_IsPersonInfo]">type=person</value>
@@ -258,26 +258,26 @@
     </variable>
 
     <variable name="Path_FromDirector">
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.1.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.1.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.1.job),Director)">$INFO[Container(99950).ListItem.Property(Director.1.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.2.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.2.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.2.job),Director)">$INFO[Container(99950).ListItem.Property(Director.2.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.3.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.3.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.3.job),Director)">$INFO[Container(99950).ListItem.Property(Director.3.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.4.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.4.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.4.job),Director)">$INFO[Container(99950).ListItem.Property(Director.4.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.5.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.5.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.5.job),Director)">$INFO[Container(99950).ListItem.Property(Director.5.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.6.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.6.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.6.job),Director)">$INFO[Container(99950).ListItem.Property(Director.6.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.7.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.7.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.7.job),Director)">$INFO[Container(99950).ListItem.Property(Director.7.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.8.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.8.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.8.job),Director)">$INFO[Container(99950).ListItem.Property(Director.8.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Director.9.Name)) + !String.IsEmpty(Container(99950).ListItem.Property(Director.9.job)) + String.IsEqual(Container(99950).ListItem.Property(Director.9.job),Director)">$INFO[Container(99950).ListItem.Property(Director.9.TMDb_ID),&amp;tmdb_id=,]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Director)">$INFO[Container(99950).ListItem.Director,&amp;query=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.1.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.1.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.1.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.1.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.2.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.2.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.2.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.2.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.3.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.3.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.3.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.3.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.4.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.4.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.4.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.4.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.5.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.5.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.5.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.5.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.6.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.6.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.6.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.6.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.7.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.7.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.7.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.7.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.8.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.8.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.8.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.8.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.9.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.9.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.9.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.9.TMDb_ID),&amp;tmdb_id=,]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director),&amp;query=,]</value>
         <value>$INFO[ListItem.Director,&amp;query=,]</value>
     </variable>
 
     <variable name="Path_FromStudio">
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Network.1.TMDb_ID))">$INFO[Container(99950).ListItem.Property(Network.1.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Network.2.TMDb_ID))">$INFO[Container(99950).ListItem.Property(Network.2.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Network.3.TMDb_ID))">$INFO[Container(99950).ListItem.Property(Network.3.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Studio.1.TMDb_ID))">$INFO[Container(99950).ListItem.Property(Studio.1.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Studio.2.TMDb_ID))">$INFO[Container(99950).ListItem.Property(Studio.2.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Studio.3.TMDb_ID))">$INFO[Container(99950).ListItem.Property(Studio.3.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.1.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.1.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.2.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.2.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.3.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.3.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.2.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.2.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.3.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.3.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
     </variable>
 
     <include name="Dimensions_Fullscreen">
