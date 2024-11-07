@@ -58,18 +58,31 @@
             <visible>Skin.HasSetting(global.showvideo)</visible>
             <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [Skin.HasSetting(HomeMulti) | $EXP[Exp_InfoVisible]]]</visible>
         </control>
-        <control type="image" description="Background">
-            <include>Dimensions_Fullscreen</include>
-            <include>Animation_Alpha_Value</include>
-            <texture colordiffuse="HomePanel">common/bg.jpg</texture>
-            <visible>Skin.HasSetting(EI_HideBG) + Window.IsActive(DialogVideoInfo.xml)</visible>
-        </control>
     </include>
 
     <include name="Global_Videowindow_Hidden">
         <control type="videowindow">
             <visible>Player.HasVideo</visible>
             <include>Dimensions_Fullscreen</include>
+        </control>
+    </include>
+
+    <include name="OSD_ExtendedInfo_Background">
+        <control type="group">
+            <control type="image">
+                <texture colordiffuse="black">common/white.png</texture>
+            </control>
+            <control type="videowindow">
+                <height>100%</height>
+                <width>100%</width>
+            </control>
+            <control type="image">
+                <texture colordiffuse="7f000000">common/white.png</texture>
+            </control>
+            <control type="image">
+                <include>Animation_Alpha_Value</include>
+                <texture colordiffuse="HomePanel">common/bg.jpg</texture>
+            </control>
         </control>
     </include>
 

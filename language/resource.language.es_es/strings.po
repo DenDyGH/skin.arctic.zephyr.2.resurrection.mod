@@ -2001,7 +2001,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31462"
-msgid "Hide extra info background"
+msgid "Hide extended info background"
 msgstr ""
 
 #: /1080i/SkinSettings.xml

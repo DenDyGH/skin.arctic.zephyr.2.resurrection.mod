@@ -1981,7 +1981,7 @@ msgstr "Wartość alpha dla niektórych dialogów"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31462"
-msgid "Hide extra info background"
+msgid "Hide extended info background"
 msgstr "Ukryj tło w oknie rozszerzonych informacji"
 
 #: /1080i/SkinSettings.xml

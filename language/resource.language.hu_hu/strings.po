@@ -2001,7 +2001,7 @@ msgstr "Áttetszőség néhány dialóghoz"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31462"
-msgid "Hide extra info background"
+msgid "Hide extended info background"
 msgstr "Extra információs háttér elrejtése"
 
 #: /1080i/SkinSettings.xml
