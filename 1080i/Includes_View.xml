@@ -1070,7 +1070,7 @@
     </include>
 
     <include name="View_UnwatchedEpisodes_Visible">
-        <visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+        <visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + !Integer.IsEqual(ListItem.Property(WatchedEpisodes),0) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
         <visible>!ListItem.IsCollection</visible>
     </include>
 
