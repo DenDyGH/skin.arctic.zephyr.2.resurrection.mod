@@ -2083,3 +2083,13 @@ msgstr "Ukryj menu gdy focus jest na widgetach"
 msgctxt "#31482"
 msgid "Configure viewtypes"
 msgstr "Konfiguracja widoków"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31483"
+msgid "Show episodes count"
+msgstr "Pokazuj ilość odcinków"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31484"
+msgid "Indicators"
+msgstr "Oznaczenia"

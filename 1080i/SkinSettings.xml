@@ -567,20 +567,6 @@
                             <onclick>Skin.ToggleSetting(UseTrackNamingTemplate)</onclick>
                         </control>
 
-                        <control type="radiobutton" id="19402" description="Disable watched indicators">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31317]</label>
-                            <selected>!Skin.HasSetting(DisableWatchedOverlay)</selected>
-                            <onclick>Skin.ToggleSetting(DisableWatchedOverlay)</onclick>
-                        </control>
-
-                        <control type="radiobutton" id="19940" description="Premiere and finale indicators">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31471]</label>
-                            <selected>Skin.HasSetting(SeriesIndicators)</selected>
-                            <onclick>Skin.ToggleSetting(SeriesIndicators)</onclick>
-                        </control>
-
                         <control type="radiobutton" id="19941" description="Disable infoline genre">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31473]</label>
@@ -601,6 +587,32 @@
                             <selected>Skin.HasSetting(Infoline.DisableMatch)</selected>
                             <onclick>Skin.ToggleSetting(Infoline.DisableMatch)</onclick>
                             <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
+                        </control>
+
+                        <control type="label" id="19950" description="LABEL">
+                            <include>Dialog_Standard_HintLabel</include>
+                            <label>$LOCALIZE[31484]</label>
+                        </control>
+
+                        <control type="radiobutton" id="19402" description="Disable watched indicators">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31317]</label>
+                            <selected>!Skin.HasSetting(DisableWatchedOverlay)</selected>
+                            <onclick>Skin.ToggleSetting(DisableWatchedOverlay)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19949" description="Unwatched episodes count indicator">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31483]</label>
+                            <selected>Skin.HasSetting(UnwatchedCountIndicator)</selected>
+                            <onclick>Skin.ToggleSetting(UnwatchedCountIndicator)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19940" description="Premiere and finale indicators">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31471]</label>
+                            <selected>Skin.HasSetting(SeriesIndicators)</selected>
+                            <onclick>Skin.ToggleSetting(SeriesIndicators)</onclick>
                         </control>
 
                         <control type="label" id="19482" description="LABEL">

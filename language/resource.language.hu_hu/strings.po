@@ -2103,3 +2103,13 @@ msgstr "Menü elrejtése, ha a fókusz a widgeteken van"
 msgctxt "#31482"
 msgid "Configure viewtypes"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31483"
+msgid "Show episodes count"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31484"
+msgid "Indicators"
+msgstr ""
