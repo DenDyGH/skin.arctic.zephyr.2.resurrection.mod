@@ -546,6 +546,14 @@
                             <onclick>Skin.ToggleSetting(ShowClearlogo)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19951" description="Clearlogo in extended info dialog">
+                            <include>Defs_Settings_Button</include>
+                            <label> - $LOCALIZE[31485]</label>
+                            <selected>Skin.HasSetting(EI_Clearlogo)</selected>
+                            <onclick>Skin.ToggleSetting(EI_Clearlogo)</onclick>
+                            <enable>Skin.HasSetting(ShowClearlogo)</enable>
+                        </control>
+
                         <control type="radiobutton" id="19408" description="Default list labels">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31095]</label>

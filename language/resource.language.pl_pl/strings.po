@@ -2093,3 +2093,8 @@ msgstr "Pokazuj ilość odcinków"
 msgctxt "#31484"
 msgid "Indicators"
 msgstr "Oznaczenia"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31485"
+msgid "also in extended info dialog"
+msgstr "również w oknie rozszerzonych informacji"

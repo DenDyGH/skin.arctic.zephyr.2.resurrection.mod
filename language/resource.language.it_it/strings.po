@@ -2109,3 +2109,8 @@ msgstr ""
 msgctxt "#31484"
 msgid "Indicators"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31485"
+msgid "also in extended info dialog"
+msgstr ""

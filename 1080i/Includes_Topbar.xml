@@ -34,7 +34,7 @@
 
     <include name="Topbar_Left">
         <control type="grouplist">
-            <visible>!Skin.HasSetting(DisableHeader)</visible>
+            <visible>!Skin.HasSetting(DisableHeader) + [!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(1140) + !Window.IsVisible(DialogPVRInfo.xml)]</visible>
             <top>0</top>
             <include>Animation_FadeInOut</include>
             <itemgap>0</itemgap>
