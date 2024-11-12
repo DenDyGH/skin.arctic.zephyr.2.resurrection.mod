@@ -1167,19 +1167,11 @@
                             <include>Defs_Settings_Button</include>
                         </control>
                         <control type="radiobutton" id="19822">
-                            <label>script.artwork.beef</label>
-                            <label2>$INFO[System.AddonVersion(script.artwork.beef)]        </label2>
-                            <onclick>Addon.OpenSettings(script.artwork.beef)</onclick>
-                            <onclick condition="!System.HasAddon(script.artwork.beef)">InstallAddon(script.artwork.beef)</onclick>
-                            <selected>System.HasAddon(script.artwork.beef)</selected>
-                            <include>Defs_Settings_Button</include>
-                        </control>
-                        <control type="radiobutton" id="19823">
-                            <label>script.artwork.helper</label>
-                            <label2>$INFO[System.AddonVersion(script.artwork.helper)]        </label2>
-                            <onclick>Addon.OpenSettings(script.artwork.helper)</onclick>
-                            <onclick condition="!System.HasAddon(script.artwork.helper)">InstallAddon(script.artwork.helper)</onclick>
-                            <selected>System.HasAddon(script.artwork.helper)</selected>
+                            <label>script.artwork.dump</label>
+                            <label2>$INFO[System.AddonVersion(script.artwork.dump)]        </label2>
+                            <onclick>Addon.OpenSettings(script.artwork.dump)</onclick>
+                            <onclick condition="!System.HasAddon(script.artwork.dump)">InstallAddon(script.artwork.dump)</onclick>
+                            <selected>System.HasAddon(script.artwork.dump)</selected>
                             <include>Defs_Settings_Button</include>
                         </control>
                     </control>
