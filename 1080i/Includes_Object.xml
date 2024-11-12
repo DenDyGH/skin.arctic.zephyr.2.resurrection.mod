@@ -564,7 +564,7 @@
                 <bottom>0</bottom>
                 <itemgap>20</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
-                <visible>!String.IsEmpty(ListItem.VideoCodec) + !String.IsEmpty(ListItem.AudioCodec)</visible>
+                <visible>[!String.IsEmpty(ListItem.VideoCodec) + !String.IsEmpty(ListItem.AudioCodec)] | !String.IsEmpty(ListItem.VideoResolution)</visible>
                 <control type="image">
                     <fadetime>100</fadetime>
                     <centertop>50%</centertop>
@@ -580,7 +580,6 @@
                     </include>
                     <aspectratio align="left">keep</aspectratio>
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/other/3D.png</texture>
-                    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>ListItem.IsStereoscopic</visible>
                 </control>
                 <control type="image">
@@ -598,8 +597,7 @@
                     </include>
                     <aspectratio align="left">keep</aspectratio>
                     <texture colordiffuse="main_fg_100">$VAR[Image_VideoPlayer_HDRCodec]</texture>
-                    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
-                    <visible>String.Contains(ListItem.FileNameAndPath,HDR) | String.IsEqual(ListItem.HdrType,hdr10) | String.IsEqual(ListItem.HdrType,dolbyvision) | String.IsEqual(ListItem.HdrType,hlg)</visible>
+                    <visible>String.Contains(ListItem.FileNameAndPath,HDR) | !String.IsEmpty(Listitem.HdrType)</visible>
                 </control>
                 <control type="image" id="77881">
                     <fadetime>100</fadetime>
@@ -616,7 +614,6 @@
                     </include>
                     <aspectratio align="left">keep</aspectratio>
                     <texture colordiffuse="main_fg_100">$VAR[Image_RipSource]</texture>
-                    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77881))</visible>
                 </control>
                 <control type="image" id="77882">
@@ -634,7 +631,7 @@
                     </include>
                     <aspectratio>keep</aspectratio>
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[ListItem.VideoResolution].png</texture>
-                    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
+                    <visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77882))</visible>
                 </control>
                 <control type="image" id="77883">
@@ -652,7 +649,7 @@
                     </include>
                     <aspectratio>keep</aspectratio>
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/source/$INFO[ListItem.VideoCodec].png</texture>
-                    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
+                    <visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77883))</visible>
                 </control>
                 <control type="image" id="77884">
@@ -670,7 +667,7 @@
                     </include>
                     <aspectratio>keep</aspectratio>
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/aspectratio/$INFO[ListItem.VideoAspect].png</texture>
-                    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
+                    <visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77884))</visible>
                 </control>
                 <control type="image" id="77885">
@@ -688,7 +685,7 @@
                     </include>
                     <aspectratio>keep</aspectratio>
                     <texture colordiffuse="main_fg_100">$VAR[Image_AudioCodec]</texture>
-                    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
+                    <visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77885))</visible>
                 </control>
                 <control type="image" id="77886">
@@ -707,7 +704,7 @@
                     </include>
                     <aspectratio>scale</aspectratio>
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[ListItem.AudioChannels].png</texture>
-                    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
+                    <visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
                     <visible>!String.IsEmpty(Control.GetLabel(77886))</visible>
                 </control>
             </control>
