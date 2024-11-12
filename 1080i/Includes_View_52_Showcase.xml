@@ -235,13 +235,13 @@
                         <param name="shadowcolor" value="ff000000" />
                         <param name="titleheight" value="$PARAM[titleheight]" />
                         <param name="top" value="80" />
-                        <param name="visible" value="String.IsEmpty(ListItem.Art(clearlogo))" />
+                        <param name="visible" value="!$EXP[Exp_HasClearlogo]" />
                     </include>
                     <control type="image">
                         <width>480</width>
                         <aspectratio>keep</aspectratio>
                         <texture background="true">$VAR[Image_ClearLogo]</texture>
-                        <visible>!String.IsEmpty(ListItem.Art(clearlogo))</visible>
+                        <visible>$EXP[Exp_HasClearlogo]</visible>
                     </control>
                 </control>
                 <include>Flix_Object_Info_Line</include>
@@ -308,7 +308,7 @@
                 <itemgap>0</itemgap>
                 <top>-50</top>
                 <control type="group">
-                    <visible>String.IsEmpty(ListItem.Art(clearlogo)) | !Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(ShowClearlogo)</visible>
                     <height>90</height>
                     <include content="Flix_Object_Info_Title">
                         <param name="font" value="font_title_medium" />
@@ -318,7 +318,7 @@
                     </include>
                 </control>
                 <control type="group">
-                    <visible>!String.IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(ShowClearlogo)</visible>
                     <height>220</height>
                     <control type="image">
                         <width>480</width>
@@ -330,7 +330,7 @@
                     <param name="percentrating" value="false" />
                 </include>
                 <control type="group">
-                    <visible>!String.IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Flix_Object_Info_Plot">
                         <param name="height" value="$PARAM[plotheight]" />
                         <param name="top" value="10" />
@@ -338,7 +338,7 @@
                     </include>
                 </control>
                 <control type="group">
-                    <visible>String.IsEmpty(ListItem.Art(clearlogo)) | !Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Flix_Object_Info_Plot">
                         <param name="height" value="320" />
                         <param name="top" value="10" />
@@ -367,10 +367,10 @@
                 <include content="Flix_Object_Info_Title">
                     <param name="font" value="$PARAM[font]" />
                     <param name="titleheight" value="$PARAM[titleheight]" />
-                    <param name="visible" value="String.IsEmpty(ListItem.Art(clearlogo)) | !Skin.HasSetting(ShowClearlogo)" />
+                    <param name="visible" value="!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(ShowClearlogo)" />
                 </include>
                 <control type="group">
-                    <visible>!String.IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(ShowClearlogo)</visible>
                     <height>140</height>
                     <control type="image">
                         <width>460</width>
@@ -383,13 +383,13 @@
                 </include>
                 <include>Object_Info_Ratings</include>
                 <control type="group">
-                    <visible>String.IsEmpty(ListItem.Art(clearlogo)) | !Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Object_Info_Plot">
                         <param name="maxheight" value="$PARAM[plotheight]" />
                     </include>
                 </control>
                 <control type="group">
-                    <visible>!String.IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Object_Info_Plot">
                         <param name="maxheight" value="$PARAM[plotheight_clearlogo]" />
                     </include>

@@ -107,8 +107,8 @@ msgstr "Podstawowe skróty"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
-msgid "Show clearlogo instead of text title"
-msgstr "Pokazuj clearlogo zamiast tytułu tekstowego"
+msgid "Title label as"
+msgstr "Pokazuj tytuł jako"
 
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"
@@ -756,7 +756,7 @@ msgstr "Tagi języka i studio"
 #: /1080i/SkinSettings.xml
 msgctxt "#31152"
 msgid "Viewtypes"
-msgstr "Typy widoków"
+msgstr "Ustawienia widoków"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31153"
@@ -2096,5 +2096,15 @@ msgstr "Oznaczenia"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31485"
-msgid "also in extended info dialog"
-msgstr "również w oknie rozszerzonych informacji"
+msgid "Title label in extended info dialog as"
+msgstr "Pokazuj tytuł w oknie rozszerzonych informacji jako"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31486"
+msgid "Text"
+msgstr "Tekst"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31487"
+msgid "Clearlogo"
+msgstr "Clearlogo"

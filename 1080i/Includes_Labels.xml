@@ -412,4 +412,13 @@
         <value condition="Player.Process(videohwdecoder)">HW</value>
         <value>SW</value>
     </variable>
+
+    <variable name="Label_Setting_TitleLogo">
+        <value condition="!Skin.HasSetting(ShowClearlogo)">$LOCALIZE[31486]</value>
+        <value>$LOCALIZE[31487]</value>
+    </variable>
+    <variable name="Label_Setting_TitleLogo2">
+        <value condition="!Skin.HasSetting(EI_Clearlogo)">$LOCALIZE[31486]</value>
+        <value>$LOCALIZE[31487]</value>
+    </variable>
 </includes>

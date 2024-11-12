@@ -111,7 +111,7 @@ msgstr "Raccourcis communs"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
-msgid "Show clearlogo instead of text title"
+msgid "Title label as"
 msgstr ""
 
 #: /1080i/script-globalsearch-main.xml
@@ -2119,5 +2119,15 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31485"
-msgid "also in extended info dialog"
+msgid "Title label in extended info dialog as"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31486"
+msgid "Text"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31487"
+msgid "Clearlogo"
 msgstr ""

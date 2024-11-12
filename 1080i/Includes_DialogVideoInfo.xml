@@ -39,12 +39,12 @@
                                 <usecontrolcoords>true</usecontrolcoords>
                                 <itemgap>0</itemgap>
                                 <control type="group">
-                                    <visible>String.IsEmpty(ListItem.Art(clearlogo)) | ![Skin.HasSetting(ShowClearlogo) + Skin.HasSetting(EI_Clearlogo)]</visible>
+                                    <visible>!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(EI_Clearlogo)</visible>
                                     <height>80</height>
                                     <include>Object_Info_Title</include>
                                 </control>
                                 <control type="group">
-                                    <visible>!String.IsEmpty(ListItem.Art(clearlogo)) + [Skin.HasSetting(ShowClearlogo) + Skin.HasSetting(EI_Clearlogo)]</visible>
+                                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(EI_Clearlogo)</visible>
                                     <height>150</height>
                                     <control type="image">
                                         <width>640</width>

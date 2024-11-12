@@ -249,6 +249,8 @@
 
     <expression name="Exp_HasAutoCompletion">[System.HasAddon(plugin.program.autocompletion) + System.AddonIsEnabled(plugin.program.autocompletion)]</expression>
 
+    <expression name="Exp_HasClearlogo">!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(artist.clearlogo))</expression>
+
     <include name="Defaults_FauneFonts">
         <!-- Plot Font -->
         <font>

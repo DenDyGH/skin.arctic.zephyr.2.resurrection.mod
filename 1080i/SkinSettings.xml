@@ -539,19 +539,18 @@
                             <onclick>Skin.ToggleSetting(FlipSide)</onclick>
                         </control>
 
-                        <control type="radiobutton" id="19406" description="Show clearlogo if available">
+                        <control type="button" id="19406" description="Show clearlogo if available">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31019]</label>
-                            <selected>Skin.HasSetting(ShowClearlogo)</selected>
+                            <label2>$VAR[Label_Setting_TitleLogo]</label2>
                             <onclick>Skin.ToggleSetting(ShowClearlogo)</onclick>
                         </control>
 
-                        <control type="radiobutton" id="19951" description="Clearlogo in extended info dialog">
+                        <control type="button" id="19951" description="Clearlogo in extended info dialog">
                             <include>Defs_Settings_Button</include>
-                            <label> - $LOCALIZE[31485]</label>
-                            <selected>Skin.HasSetting(EI_Clearlogo)</selected>
+                            <label>$LOCALIZE[31485]</label>
+                            <label2>$VAR[Label_Setting_TitleLogo2]</label2>
                             <onclick>Skin.ToggleSetting(EI_Clearlogo)</onclick>
-                            <enable>Skin.HasSetting(ShowClearlogo)</enable>
                         </control>
 
                         <control type="radiobutton" id="19408" description="Default list labels">
