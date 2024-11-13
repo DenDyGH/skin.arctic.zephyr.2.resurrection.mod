@@ -664,7 +664,7 @@
                                     <width>62</width>
                                     <height>56</height>
                                     <aspectratio align="left">keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">$VAR[VideoPlayerHdrTypeVar]</texture>
+                                    <texture colordiffuse="panel_fg_100">$VAR[Image_VideoPlayer_HDRCodec]</texture>
                                     <visible>!String.IsEmpty(Control.GetLabel(78880))</visible>
                                 </control>
                                 <control type="image" id="78881">
