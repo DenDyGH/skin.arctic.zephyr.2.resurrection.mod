@@ -77,10 +77,16 @@
 
     <variable name="Image_VideoPlayer_HDRCodec">
         <value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">flags/$INFO[Skin.String(Icons)]/other/dolbyvision.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,.hdrplus.) | String.Contains(ListItem.Filenameandpath,.12bit.) | String.Contains(ListItem.Filenameandpath,.hdr10plus.) | String.Contains(ListItem.Filenameandpath,_hdr10plus_) | String.Contains(ListItem.Filenameandpath,-hdr10plus-)">flags/$INFO[Skin.String(Icons)]/other/hdrplus.png</value>
         <value condition="String.IsEqual(ListItem.HdrType,hdr10)">flags/$INFO[Skin.String(Icons)]/other/hdr10.png</value>
         <value condition="String.IsEqual(ListItem.HdrType,hlg)">flags/$INFO[Skin.String(Icons)]/other/hlg.png</value>
         <value>flags/$INFO[Skin.String(Icons)]/other/HDR.png</value>
     </variable>
+
+	<variable name="VideoPlayerHdrTypeVar">
+		<value condition="String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.12bit.) | String.Contains(Player.Filenameandpath,.hdr10plus.) | String.Contains(Player.Filenameandpath,_hdr10plus_) | String.Contains(Player.Filenameandpath,_hdr10plus-)">flags/$INFO[Skin.String(Icons)]/other/hdrplus.png</value>
+		<value>flags/$INFO[Skin.String(Icons)]/other/$INFO[VideoPlayer.HdrType].png</value>
+	</variable>
 
     <variable name="Image_OSD_Artwork">
         <value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
