@@ -1296,7 +1296,7 @@
                     <param name="id" value="66300" />
                     <param name="label" value="$VAR[Label_Info_NextAired_Status,, ]$VAR[Label_Info_NextAired_Date]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="String.IsEqual(ListItem.DBType,tvshow) + $PARAM[nextaired]" />
+                    <param name="visible" value="String.IsEqual(ListItem.DBType,tvshow) + $PARAM[nextaired] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status))" />
                 </include>
             </control>
         </definition>
@@ -1429,7 +1429,7 @@
                     <param name="id" value="66300" />
                     <param name="label" value="$VAR[Label_Info_NextAired_Status,, ]$VAR[Label_Info_NextAired_Date]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="String.IsEqual(ListItem.DBType,tvshow) + $PARAM[nextaired]" />
+                    <param name="visible" value="String.IsEqual(ListItem.DBType,tvshow) + $PARAM[nextaired] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status))" />
                 </include>
             </control>
         </definition>
