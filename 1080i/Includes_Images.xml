@@ -76,11 +76,11 @@
     </variable>
 
     <variable name="Image_VideoPlayer_HDRCodec">
-        <value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">flags/$INFO[Skin.String(Icons)]/other/dolbyvision.png</value>
-        <value condition="String.IsEqual(ListItem.HdrType,hdr10)">flags/$INFO[Skin.String(Icons)]/other/hdr10.png</value>
-        <value condition="String.IsEqual(ListItem.HdrType,hlg)">flags/$INFO[Skin.String(Icons)]/other/hlg.png</value>
+        <value condition="String.IsEqual(ListItem.HdrType,dolbyvision) | [VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.HdrType,dolbyvision)]">flags/$INFO[Skin.String(Icons)]/other/dolbyvision.png</value>
         <value condition="String.Contains(ListItem.FileNameAndPath,hdr10plus) | [VideoPlayer.IsFullscreen + String.Contains(Player.FileNameAndPath,hdr10plus)]">flags/$INFO[Skin.String(Icons)]/other/hdr10plus.png</value>
-        <value>flags/$INFO[Skin.String(Icons)]/other/HDR.png</value>
+        <value condition="String.IsEqual(ListItem.HdrType,hdr10) | [VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.HdrType,hdr10)]">flags/$INFO[Skin.String(Icons)]/other/hdr10.png</value>
+        <value condition="String.IsEqual(ListItem.HdrType,hlg) | [VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.HdrType,hlg)]">flags/$INFO[Skin.String(Icons)]/other/hlg.png</value>
+        <value condition="String.Contains(ListItem.FileNameAndPath,hdr) | [VideoPlayer.IsFullscreen + String.Contains(Player.FileNameAndPath,hdr)]">flags/$INFO[Skin.String(Icons)]/other/HDR.png</value>
     </variable>
 
     <variable name="Image_OSD_Artwork">
