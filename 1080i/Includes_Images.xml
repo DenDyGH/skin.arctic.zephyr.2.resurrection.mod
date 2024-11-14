@@ -90,7 +90,8 @@
     </variable>
 
     <variable name="Image_ArtistFanartVis">
-        <value condition="String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !Skin.HasSetting(ArtistSlideShow.Disabled)">$INFO[Player.Art(fanart)]</value>
+        <value condition="System.HasAddon(script.artistslideshow) + !Skin.HasSetting(ArtistSlideShow.Disabled) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
+        <value condition="[!System.HasAddon(script.artistslideshow) | Skin.HasSetting(ArtistSlideShow.Disabled) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
         <value>common/null.png</value>
     </variable>
 
