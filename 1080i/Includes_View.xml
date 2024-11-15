@@ -997,7 +997,7 @@
 
     <include name="View_WatchedOverlay">
         <control type="group">
-            <visible>!Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(ListItem.ChannelName)</visible>
+            <visible>!Skin.HasSetting(DisableWatchedOverlay) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,video)]</visible>
             <bottom>-16</bottom>
             <right>25</right>
             <width>64</width>
@@ -1025,7 +1025,7 @@
 
     <include name="View_WatchedOverlay_Focus">
         <control type="group">
-            <visible>!Skin.HasSetting(DisableWatchedOverlay) + String.IsEmpty(ListItem.ChannelName)</visible>
+            <visible>!Skin.HasSetting(DisableWatchedOverlay) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,video)]</visible>
             <bottom>-16</bottom>
             <right>25</right>
             <width>64</width>
@@ -1039,7 +1039,7 @@
 
     <include name="View_WatchedOverlay_Focus_Full">
         <control type="group">
-            <visible>!Skin.HasSetting(DisableWatchedOverlay)</visible>
+            <visible>!Skin.HasSetting(DisableWatchedOverlay) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,video)]</visible>
             <bottom>-16</bottom>
             <right>25</right>
             <width>64</width>
