@@ -1031,6 +1031,22 @@
                 <textureslidernibfocus colordiffuse="panel_fg_100" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernibfocus>
                 <visible>Player.SeekEnabled + Pvr.IsPlayingTv + !Player.ChannelPreviewActive</visible>
             </control>
+
+            <!-- CutList and Chapters Range -->
+            <control type="ranges">
+                <width>100%</width>
+                <height>12</height>
+                <texturebg colordiffuse="00ffffff">progress/marker-bg.png</texturebg>
+                <righttexture colordiffuse="panel_fg_50">progress/marker.png</righttexture>
+                <info>Player.CutList</info>
+            </control>
+            <control type="ranges">
+                <width>100%</width>
+                <height>12</height>
+                <texturebg colordiffuse="00ffffff">progress/marker-bg.png</texturebg>
+                <righttexture colordiffuse="panel_fg_50">progress/marker.png</righttexture>
+                <info>Player.Chapters</info>
+            </control>
         </control>
     </include>
 
