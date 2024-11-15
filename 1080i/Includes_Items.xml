@@ -1596,13 +1596,13 @@
             <!-- Scroll text overlay -->
             <item>
                 <label>$LOCALIZE[31142]: $LOCALIZE[16041]</label>
-                <visible>!Skin.HasSetting(HideOSDScrollingText)</visible>
-                <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
+                <visible>Skin.HasSetting(Visualisation.EnableScrollingText)</visible>
+                <onclick>Skin.ToggleSetting(Visualisation.EnableScrollingText)</onclick>
             </item>
             <item>
                 <label>$LOCALIZE[31142]: $LOCALIZE[16039]</label>
-                <visible>Skin.HasSetting(HideOSDScrollingText)</visible>
-                <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
+                <visible>!Skin.HasSetting(Visualisation.EnableScrollingText)</visible>
+                <onclick>Skin.ToggleSetting(Visualisation.EnableScrollingText)</onclick>
             </item>
 
             <item>

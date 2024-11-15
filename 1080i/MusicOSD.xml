@@ -25,15 +25,29 @@
         </control>
 
         <control type="slider">
-            <bottom>58</bottom>
-            <left>398</left>
+            <bottom>140</bottom>
+            <left>325</left>
             <height>24</height>
-            <width>564</width>
+            <width>66%</width>
             <texturesliderbar/>
             <textureslidernib/>
             <textureslidernibfocus/>
             <info>Player.Progress</info>
             <action>seek</action>
+            <visible>!Skin.HasSetting(UseLongMusicOSD)</visible>
+        </control>
+
+        <control type="slider">
+            <bottom>140</bottom>
+            <left>325</left>
+            <height>24</height>
+            <width>75%</width>
+            <texturesliderbar/>
+            <textureslidernib/>
+            <textureslidernibfocus/>
+            <info>Player.Progress</info>
+            <action>seek</action>
+            <visible>Skin.HasSetting(UseLongMusicOSD)</visible>
         </control>
 
         <include content="OSD_Menu_List">

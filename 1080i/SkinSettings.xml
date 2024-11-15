@@ -840,8 +840,8 @@
                         <control type="radiobutton" id="19512" description="Scrolling Text">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31088]</label>
-                            <selected>!Skin.HasSetting(HideOSDScrollingText)</selected>
-                            <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
+                            <selected>Skin.HasSetting(Visualisation.EnableScrollingText)</selected>
+                            <onclick>Skin.ToggleSetting(Visualisation.EnableScrollingText)</onclick>
                         </control>
                         <control type="radiobutton" id="19514" description="Animate Artist slideshow">
                             <include>Defs_Settings_Button</include>

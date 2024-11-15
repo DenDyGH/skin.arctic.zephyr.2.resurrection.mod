@@ -1276,7 +1276,7 @@
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
             <onclick>ActivateWindow(osdvideosettings)</onclick>
-            <visible>!VideoPlayer.Content(musicvideos)</visible>
+            <visible>!VideoPlayer.Content(musicvideos) + !Window.IsVisible(musicosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
 
@@ -1412,7 +1412,7 @@
             <texturenofocus colordiffuse="panel_fg_70">osd/bookmarks2.png</texturenofocus>
             <onclick>ActivateWindow(videobookmarks)</onclick>
             <visible>!Skin.HasSetting(HideBookmarksButton)</visible>
-            <visible>!VideoPlayer.Content(livetv)</visible>
+            <visible>!VideoPlayer.Content(livetv) + !Window.IsVisible(musicosd)</visible>
         </control>
 
         <control type="button" id="414">
