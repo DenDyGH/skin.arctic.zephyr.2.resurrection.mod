@@ -53,8 +53,10 @@
     </variable>
 
     <variable name="Image_AudioCodec">
-        <value condition="String.Contains(ListItem.FileNameAndPath,atmos)">flags/$INFO[Skin.String(Icons)]/audio/atmos.png</value>
-        <value condition="String.Contains(ListItem.FileNameAndPath,dtsx) | String.Contains(ListItem.FileNameAndPath,dts-x) | String.Contains(ListItem.FileNameAndPath,dts:x)">flags/$INFO[Skin.String(Icons)]/audio/dtsx.png</value>
+        <value condition="String.Contains(VideoPlayer.AudioCodec,truehd) + String.Contains(Player.Filenameandpath,.Atmos.)">flags/$INFO[Skin.String(Icons)]/audio/atmos.png</value>
+        <value condition="String.Contains(VideoPlayer.AudioCodec,eac3) + String.Contains(Player.Filenameandpath,.Atmos.)">flags/$INFO[Skin.String(Icons)]/audio/atmos.png</value>
+        <value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">flags/$INFO[Skin.String(Icons)]/audio/dtsx.png</value>
+        <value condition="String.Contains(VideoPlayer.AudioCodec,dtsma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">flags/$INFO[Skin.String(Icons)]/audio/dtsx.png</value>
         <value>flags/$INFO[Skin.String(Icons)]/audio/$INFO[ListItem.AudioCodec].png</value>
     </variable>
 
