@@ -33,8 +33,8 @@
             <control type="group">
                 <include>$PARAM[side]</include>
                 <bottom>view_pad</bottom>
-                <width>218</width>
-                <height>218</height>
+                <width>248</width>
+                <height>248</height>
                 <control type="image">
                     <right>-15</right>
                     <bottom>-15</bottom>
@@ -68,12 +68,26 @@
 
     <include name="OSD_Music_Info_Image_Square">
         <param name="side" default="OSD_LeftSide" />
+        <param name="cdspin" default="false" />
         <definition>
+            <control type="group">
+                <bottom>200</bottom>
+                <include>$PARAM[side]</include>
+                <width>248</width>
+                <height>248</height>
+                <control type="image">
+                    <bordersize>10</bordersize>
+                    <texture background="true">$VAR[Image_DiscArt]</texture>
+                    <animation effect="rotate" start="0" end="-360" loop="true" time="50000" center="auto" reversible="false" condition="!Player.Paused">Conditional</animation>
+                    <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+                </control>
+                <visible>$PARAM[cdspin] + !Skin.HasSetting(Music.HideCD)</visible>
+            </control>
             <control type="group">
                 <bottom>view_pad</bottom>
                 <include>$PARAM[side]</include>
-                <width>218</width>
-                <height>218</height>
+                <width>248</width>
+                <height>248</height>
                 <control type="image">
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <include>Defs_Shadow_24</include>
@@ -105,6 +119,7 @@
                     <!-- Album Cover -->
                     <include content="OSD_Music_Info_Image_Square">
                         <param name="artwork" value="$PARAM[artwork]" />
+                        <param name="cdspin" value="true" />
                     </include>
 
                     <!-- Artist Image -->

@@ -2176,3 +2176,8 @@ msgstr ""
 msgctxt "#31496"
 msgid "Last aired"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31497"
+msgid "Hide CD Spin"
+msgstr ""

@@ -1622,6 +1622,18 @@
                 <onclick>RunScript(script.cu.lrclyrics)</onclick>
                 <enable>System.HasAddon(script.cu.lrclyrics)</enable>
             </item> -->
+
+            <!-- CD Spin Animation -->
+            <item>
+                <label>$LOCALIZE[31497]: $LOCALIZE[16041]</label>
+                <visible>Skin.HasSetting(Music.HideCD)</visible>
+                <onclick>Skin.ToggleSetting(Music.HideCD)</onclick>
+            </item>
+            <item>
+                <label>$LOCALIZE[31497]: $LOCALIZE[16039]</label>
+                <visible>!Skin.HasSetting(Music.HideCD)</visible>
+                <onclick>Skin.ToggleSetting(Music.HideCD)</onclick>
+            </item>
         </content>
     </include>
 

@@ -884,6 +884,12 @@
                             <selected>Skin.HasSetting(MusicOSDSquareArtist)</selected>
                             <onclick>Skin.ToggleSetting(MusicOSDSquareArtist)</onclick>
                         </control>
+                        <control type="radiobutton" id="19952" description="Hide CD Spin">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31497]</label>
+                            <selected>Skin.HasSetting(Music.HideCD)</selected>
+                            <onclick>Skin.ToggleSetting(Music.HideCD)</onclick>
+                        </control>
                     </control>
 
                     <!-- ============= -->
