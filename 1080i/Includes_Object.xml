@@ -596,7 +596,7 @@
                         <param name="usealt" value="$EXP[FontSetIsLarger]" />
                     </include>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">$VAR[Image_VideoPlayer_HDRCodec]</texture>
+                    <texture colordiffuse="main_fg_100">$VAR[Image_HDRCodec]</texture>
                     <visible>String.Contains(ListItem.FileNameAndPath,HDR) | !String.IsEmpty(Listitem.HdrType)</visible>
                 </control>
                 <control type="image" id="77881">
