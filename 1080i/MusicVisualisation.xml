@@ -84,5 +84,13 @@
         </control>
 
         <include>OSD_Music_Info</include>
+
+        <control type="image">
+            <texture colordiffuse="7f000000">common/white.png</texture>
+            <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+            <animation effect="fade" end="0" start="100" time="300">WindowClose</animation>
+            <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+        </control>
     </controls>
 </window>

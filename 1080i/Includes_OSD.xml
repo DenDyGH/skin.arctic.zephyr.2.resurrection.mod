@@ -1504,7 +1504,6 @@
             <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(musicosd)</visible>
             <visible>!VideoPlayer.Content(livetv)</visible>
-            <visible>String.IsEmpty(Window(Home).Property(culrc.running))</visible>
             <onclick>Close</onclick>
             <onclick>RunScript(script.cu.lrclyrics)</onclick>
         </control>
