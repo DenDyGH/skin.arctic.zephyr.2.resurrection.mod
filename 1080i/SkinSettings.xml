@@ -544,6 +544,8 @@
                             <label>$LOCALIZE[31019]</label>
                             <label2>$VAR[Label_Setting_TitleLogo]</label2>
                             <onclick>Skin.ToggleSetting(ShowClearlogo)</onclick>
+                            <onclick condition="!Skin.HasSetting(TMDbHelper.EnableCrop) + ![Skin.HasSetting(ShowClearlogo) | Skin.HasSetting(EI_Clearlogo)]">Skin.SetBool(TMDbHelper.EnableCrop)</onclick>
+                            <onclick condition="Skin.HasSetting(TMDbHelper.EnableCrop) + [Skin.HasSetting(ShowClearlogo) + !Skin.HasSetting(EI_Clearlogo)]">Skin.Reset(TMDbHelper.EnableCrop)</onclick>
                         </control>
 
                         <control type="button" id="19951" description="Clearlogo in extended info dialog">
@@ -551,6 +553,8 @@
                             <label>$LOCALIZE[31485]</label>
                             <label2>$VAR[Label_Setting_TitleLogo2]</label2>
                             <onclick>Skin.ToggleSetting(EI_Clearlogo)</onclick>
+                            <onclick condition="!Skin.HasSetting(TMDbHelper.EnableCrop) + ![Skin.HasSetting(ShowClearlogo) | Skin.HasSetting(EI_Clearlogo)]">Skin.SetBool(TMDbHelper.EnableCrop)</onclick>
+                            <onclick condition="Skin.HasSetting(TMDbHelper.EnableCrop) + [!Skin.HasSetting(ShowClearlogo) + Skin.HasSetting(EI_Clearlogo)]">Skin.Reset(TMDbHelper.EnableCrop)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19408" description="Default list labels">

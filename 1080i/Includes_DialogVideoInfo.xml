@@ -39,17 +39,17 @@
                                 <usecontrolcoords>true</usecontrolcoords>
                                 <itemgap>0</itemgap>
                                 <control type="group">
-                                    <visible>!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(EI_Clearlogo)</visible>
+                                    <visible>!$EXP[Exp_HasClearlogoCrop] | !Skin.HasSetting(EI_Clearlogo)</visible>
                                     <height>80</height>
                                     <include>Object_Info_Title</include>
                                 </control>
                                 <control type="group">
-                                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(EI_Clearlogo)</visible>
-                                    <height>150</height>
+                                    <visible>$EXP[Exp_HasClearlogoCrop] + Skin.HasSetting(EI_Clearlogo)</visible>
+                                    <height>155</height>
                                     <control type="image">
-                                        <width>640</width>
+                                        <width>620</width>
                                         <aspectratio align="left" aligny="center">keep</aspectratio>
-                                        <texture background="true">$VAR[Image_ClearLogo]</texture>
+                                        <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.CropImage)]</texture>
                                     </control>
                                 </control>
                                 <include>Object_Info_Line</include>
