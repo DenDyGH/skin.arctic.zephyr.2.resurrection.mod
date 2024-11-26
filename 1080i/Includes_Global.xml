@@ -153,6 +153,7 @@
                 <aspectratio>scale</aspectratio>
                 <fadetime>600</fadetime>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+                <animation effect="fade" start="60" end="45" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + [Skin.HasSetting(TMDbHelper.EnableBlur) | [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation>
                 <animation effect="fade" start="100" end="75" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + !Skin.HasSetting(TMDbHelper.EnableBlur)">Conditional</animation>
                 <visible>Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml) + !Player.HasVideo</visible>
             </control>
