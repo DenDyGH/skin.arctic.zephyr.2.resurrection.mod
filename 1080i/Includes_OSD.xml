@@ -721,14 +721,15 @@
                     <bottom>130</bottom>
                     <control type="grouplist">
                         <left>0</left>
-                        <usecontrolcoords>true</usecontrolcoords>
+                        <usecontrolcoords>false</usecontrolcoords>
+                        <itemgap>-2</itemgap>
                         <bottom>0</bottom>
                         <right>0</right>
                         <align>bottom</align>
                         <control type="label">
                             <top>25</top>
                             <aligny>top</aligny>
-                            <height>100</height>
+                            <height>80</height>
                             <width>1430</width>
                             <scroll>false</scroll>
                             <font>font_title_medium</font>
