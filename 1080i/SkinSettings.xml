@@ -811,6 +811,13 @@
                             <onclick>Skin.ToggleSetting(EI_HideBG)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19955" description="Hide CD Spin VideoOSD">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31500]</label>
+                            <selected>Skin.HasSetting(Video.HideCD)</selected>
+                            <onclick>Skin.ToggleSetting(Video.HideCD)</onclick>
+                        </control>
+
                         <control type="label" id="19507" description="LABEL MUSIC OSD">
                             <include>Dialog_Standard_HintLabel</include>
                             <label>$LOCALIZE[31347]</label>

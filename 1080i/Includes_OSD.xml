@@ -580,7 +580,7 @@
                                     <effect type="fade" start="100" end="0" time="600"/>
                                 </animation>
                                 <animation effect="rotate" start="0" end="-360" loop="true" time="20000" center="auto" reversible="false" condition="Player.Playing">Conditional</animation>
-                                <visible>!Pvr.IsPlayingTv + !String.IsEmpty(Player.Art(discart)) + !Skin.HasSetting(Music.HideCD)</visible>
+                                <visible>!Pvr.IsPlayingTv + !String.IsEmpty(Player.Art(discart)) + !Skin.HasSetting(Video.HideCD)</visible>
                             </control>
                             <control type="image">
                                 <bordersize>15</bordersize>

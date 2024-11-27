@@ -2193,3 +2193,8 @@ msgstr ""
 msgctxt "#31499"
 msgid "Show codecs as text in OSD"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31500"
+msgid "Hide CD Spin in VideoOSD"
+msgstr ""
