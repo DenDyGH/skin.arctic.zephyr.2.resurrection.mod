@@ -1059,6 +1059,22 @@
                             <onclick>Skin.ToggleSetting(DisableCodecs)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19953" description="Codecs as text">
+                            <include>Defs_Settings_Button</include>
+                            <label> - $LOCALIZE[31498]</label>
+                            <selected>Skin.HasSetting(TextCodecs)</selected>
+                            <onclick>Skin.ToggleSetting(TextCodecs)</onclick>
+                            <enable>!Skin.HasSetting(DisableCodecs)</enable>
+                        </control>
+
+                        <control type="radiobutton" id="19954" description="Codecs as text in OSD">
+                            <include>Defs_Settings_Button</include>
+                            <label> - $LOCALIZE[31499]</label>
+                            <selected>Skin.HasSetting(TextCodecs_OSD)</selected>
+                            <onclick>Skin.ToggleSetting(TextCodecs_OSD)</onclick>
+                            <enable>!Skin.HasSetting(DisableCodecs)</enable>
+                        </control>
+
                         <control type="radiobutton" id="19705" description="Now Playing">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31029]</label>

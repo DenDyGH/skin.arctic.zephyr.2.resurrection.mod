@@ -726,8 +726,8 @@ msgstr "Fuentes e ilustraciones"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
-msgid "Display concise information about the currently playing video"
-msgstr "Mostrar información adicional en pantalla con controles o cuando se esta en pausa"
+msgid "Always show info panel with seekbar"
+msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31146"
@@ -2177,4 +2177,14 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31497"
 msgid "Hide CD Spin"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31498"
+msgid "Show codecs as text"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31499"
+msgid "Show codecs as text in OSD"
 msgstr ""

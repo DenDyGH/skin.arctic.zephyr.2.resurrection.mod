@@ -721,8 +721,8 @@ msgstr "Czcionki i grafiki"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
-msgid "Display concise information about the currently playing video"
-msgstr "Wyświetlaj zwięzłe informacje o odtwarzanym materiale"
+msgid "Always show info panel with seekbar"
+msgstr "Zawsze pokazuj panel informacji nad paskiem postępu"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31146"
@@ -2158,3 +2158,13 @@ msgstr "Ostatnia emisja"
 msgctxt "#31497"
 msgid "Hide CD Spin"
 msgstr "Ukryj CD"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31498"
+msgid "Show codecs as text"
+msgstr "Wyświetlaj kodeki w formie tekstu"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31499"
+msgid "Show codecs as text in OSD"
+msgstr "Wyświetlaj kodeki w formie tekstu w OSD"

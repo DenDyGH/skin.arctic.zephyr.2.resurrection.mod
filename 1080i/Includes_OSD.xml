@@ -658,96 +658,7 @@
                                 <font>font_small</font>
                                 <visible>Pvr.IsPlayingTv</visible>
                             </control>
-                            <control type="grouplist">
-                                <top>-10</top>
-                                <orientation>horizontal</orientation>
-                                <align>right</align>
-                                <itemgap>20</itemgap>
-                                <usecontrolcoords>true</usecontrolcoords>
-                                <control type="image">
-                                    <fadetime>100</fadetime>
-                                    <centertop>50%</centertop>
-                                    <width>64</width>
-                                    <height>56</height>
-                                    <aspectratio align="left">keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/other/3D.png</texture>
-                                    <visible>VideoPlayer.IsStereoscopic</visible>
-                                </control>
-                                <control type="image" id="78880">
-                                    <fadetime>100</fadetime>
-                                    <centertop>50%</centertop>
-                                    <width>62</width>
-                                    <height>56</height>
-                                    <aspectratio align="left">keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">$VAR[Image_VideoPlayer_HDRCodec]</texture>
-                                    <visible>!String.IsEmpty(Control.GetLabel(78880))</visible>
-                                </control>
-                                <control type="image" id="78881">
-                                    <fadetime>100</fadetime>
-                                    <centertop>50%</centertop>
-                                    <width>62</width>
-                                    <height>56</height>
-                                    <aspectratio align="left">keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">$VAR[Image_VideoPlayer_RipSource]</texture>
-                                    <visible>!String.IsEmpty(Control.GetLabel(78881))</visible>
-                                </control>
-                                <control type="image" id="78882">
-                                    <fadetime>100</fadetime>
-                                    <centertop>50%</centertop>
-                                    <width>64</width>
-                                    <height>42</height>
-                                    <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[VideoPlayer.VideoResolution].png</texture>
-                                    <visible>!String.IsEmpty(Control.GetLabel(78882))</visible>
-                                </control>
-                                <control type="image" id="78883">
-                                    <fadetime>100</fadetime>
-                                    <centertop>50%</centertop>
-                                    <width>71</width>
-                                    <height>48</height>
-                                    <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/source/$INFO[VideoPlayer.VideoCodec].png</texture>
-                                    <visible>!String.IsEmpty(Control.GetLabel(78883))</visible>
-                                </control>
-                                <control type="group">
-                                    <width>71</width>
-                                    <height>48</height>
-                                    <centertop>50%</centertop>
-                                    <visible>!String.IsEmpty(Player.Process(VideoFPS)) + Integer.IsGreater(Player.Process(VideoFPS),0)</visible>
-                                    <control type="image">
-                                        <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/other/fps.png</texture>
-                                        <aspectratio align="center">keep</aspectratio>
-                                    </control>
-                                    <control type="label">
-                                        <height>24</height>
-                                        <bottom>2</bottom>
-                                        <textcolor>panel_fg_100</textcolor>
-                                        <font>font_fps</font>
-                                        <label>$INFO[Player.Process(VideoFPS)]</label>
-                                        <align>center</align>
-                                        <aligny>center</aligny>
-                                    </control>
-                                </control>
-                                <control type="image" id="78884">
-                                    <fadetime>100</fadetime>
-                                    <centertop>50%</centertop>
-                                    <width>71</width>
-                                    <height>48</height>
-                                    <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">$VAR[Image_VideoPlayer_AudioCodec]</texture>
-                                    <visible>!String.IsEmpty(Control.GetLabel(78884))</visible>
-                                </control>
-                                <control type="image" id="78885">
-                                    <left>7</left>
-                                    <fadetime>100</fadetime>
-                                    <centertop>50%</centertop>
-                                    <width>32</width>
-                                    <height>32</height>
-                                    <aspectratio>scale</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[VideoPlayer.AudioChannels].png</texture>
-                                    <visible>!String.IsEmpty(Control.GetLabel(78885))</visible>
-                                </control>
-                            </control>
+                            <include condition="!Skin.HasSetting(DisableOSDInfo)">Object_Codecs_OSD</include>
                         </control>
                         <control type="textbox">
                             <aligny>top</aligny>
@@ -834,6 +745,9 @@
                                 <textcolor>$VAR[ColorHighlight]</textcolor>
                                 <font>font_small</font>
                             </control>
+                            <include content="Object_Codecs_OSD" condition="Skin.HasSetting(DisableOSDInfo)">
+                                <param name="width" value="1760" />
+                            </include>
                         </control>
                     </control>
                 </control>
