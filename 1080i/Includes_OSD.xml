@@ -78,7 +78,7 @@
                 <control type="image">
                     <bordersize>10</bordersize>
                     <texture background="true" diffuse="diffuse/cdart_mask.png">$VAR[Image_DiscArt]</texture>
-                    <animation effect="slide" start="0,100" end="0,0" tween="sine" easing="out" time="600" delay="600">WindowOpen</animation>
+                    <animation effect="slide" start="0,100" end="0,0" tween="sine" easing="out" time="600" delay="370">WindowOpen</animation>
                     <animation effect="rotate" start="0" end="-360" loop="true" time="20000" center="auto" reversible="false" condition="Player.Playing">Conditional</animation>
                     <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
                 </control>
@@ -574,11 +574,8 @@
                                 <height>200</height>
                                 <texture background="true">$INFO[Player.Art(discart)]</texture>
                                 <aspectratio aligny="bottom">keep</aspectratio>
-                                <animation effect="slide" start="0,50" end="0,-130" tween="sine" easing="out" time="600" delay="200">WindowOpen</animation>
-                                <animation type="WindowClose" reversible="false">
-                                    <effect type="slide" start="0,-130" end="0,50" tween="sine" easing="out" time="400" delay="0"/>
-                                    <effect type="fade" start="100" end="0" time="600"/>
-                                </animation>
+                                <animation effect="slide" start="0,50" end="0,-130" tween="sine" easing="out" time="600" delay="370">WindowOpen</animation>
+                                <animation effect="slide" start="0,-130" end="0,50" tween="sine" easing="out" time="400" delay="0">WindowClose</animation>
                                 <animation effect="rotate" start="0" end="-360" loop="true" time="20000" center="auto" reversible="false" condition="Player.Playing">Conditional</animation>
                                 <visible>!Pvr.IsPlayingTv + !String.IsEmpty(Player.Art(discart)) + !Skin.HasSetting(Video.HideCD)</visible>
                             </control>
