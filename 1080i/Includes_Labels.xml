@@ -109,7 +109,7 @@
         <value condition="Integer.IsEqual(ListItem.AudioChannels,4)">4.0</value>
         <value condition="Integer.IsEqual(ListItem.AudioChannels,3)">2.1</value>
         <value condition="Integer.IsEqual(ListItem.AudioChannels,2)">2.0</value>
-        <value condition="Integer.IsEqual(ListItem.AudioChannels,1)">Mono</value>      
+        <value condition="Integer.IsEqual(ListItem.AudioChannels,1)">Mono</value>
         <value>$INFO[ListItem.AudioChannels,,.0]</value>
     </variable>
     <variable name="Label_VideoPlayer_AudioChannels">
@@ -119,10 +119,10 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">6.1</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">5.1</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,5)">4.1</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,4)">4.0</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,4)">4.0</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,3)">2.1</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2)">2.0</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1)">Mono</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2)">2.0</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1)">Mono</value>
         <value>$INFO[VideoPlayer.AudioChannels,,.0]</value>
     </variable>
 
@@ -141,11 +141,11 @@
         <value condition="String.IsEqual(ListItem.AudioCodec,dolbydigital)">Dolby D</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dts)">DTS</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTSHD-HRA</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma) + String.Contains(ListItem.Filenameandpath,DTSX)">DTS-X</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma) + String.Contains(ListItem.Filenameandpath,DTS-X)">DTS-X</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma) + String.Contains(ListItem.FileNameAndPath,DTSX)">DTS-X</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma) + String.Contains(ListItem.FileNameAndPath,DTS-X)">DTS-X</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma)">DTSHD-MA</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,dtsma) + String.Contains(ListItem.Filenameandpath,DTSX)">DTS-X</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,dtsma) + String.Contains(ListItem.Filenameandpath,DTS-X)">DTS-X</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtsma) + String.Contains(ListItem.FileNameAndPath,DTSX)">DTS-X</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtsma) + String.Contains(ListItem.FileNameAndPath,DTS-X)">DTS-X</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dtsma)">DTSHD-MA</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,eac3)">Dolby D+</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,flac)">FLAC</value>
@@ -158,7 +158,7 @@
         <value condition="String.IsEqual(ListItem.AudioCodec,pcm_bluray)">PCM</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s16le)">PCM</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,truehd) + String.Contains(ListItem.Filenameandpath,ATMOS.)">Dolby Atmos</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,truehd) + String.Contains(ListItem.FileNameAndPath,atmos)">Dolby Atmos</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,truehd)">TrueHD</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,vorbis)">Vorbis</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,wav)">WAV</value>
@@ -182,8 +182,8 @@
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dolbydigital)">Dolby D</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dts)">DTS</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_hra)">DTSHD-HRA</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">DTS-X</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtsma) + [String.Contains(Player.Filenameandpath,DTS-X) | String.Contains(Player.Filenameandpath,DTSX)]">DTS-X</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma) + [String.Contains(Player.FileNameAndPath,DTS-X) | String.Contains(Player.FileNameAndPath,DTSX)]">DTS-X</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtsma) + [String.Contains(Player.FileNameAndPath,DTS-X) | String.Contains(Player.FileNameAndPath,DTSX)]">DTS-X</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma)">DTSHD-MA</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtsma)">DTSHD-MA</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">Dolby D+</value>
@@ -197,7 +197,7 @@
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm_bluray)">PCM</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm_s16le)">PCM</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd) + String.Contains(Player.Filenameandpath,Atmos.)">Dolby Atmos</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd) + String.Contains(Player.FileNameAndPath,atmos)">Dolby Atmos</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd)">TrueHD</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,vorbis)">Vorbis</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,wav)">WAV</value>
@@ -271,7 +271,7 @@
     </variable>
     <variable name="Label_VideoPlayer_HDRType">
         <value condition="String.IsEqual(VideoPlayer.HdrType,dolbyvision)">Dolby Vision</value>
-        <value condition="String.IsEqual(ListItem.HdrType,hdr10) + String.Contains(ListItem.FileNameAndPath,hdr10plus)">HDR10 +</value>
+        <value condition="String.IsEqual(VideoPlayer.HdrType,hdr10) + String.Contains(Player.FileNameAndPath,hdr10plus)">HDR10 +</value>
         <value condition="String.IsEqual(VideoPlayer.HdrType,hdr10)">HDR10</value>
         <value condition="String.IsEqual(VideoPlayer.HdrType,hlg)">HLG</value>
         <value>$INFO[VideoPlayer.HdrType]</value>
@@ -282,9 +282,9 @@
         <value condition="String.IsEqual(ListItem.VideoResolution,540)">SD</value>
         <value condition="String.IsEqual(ListItem.VideoResolution,576)">SD</value>
         <value condition="String.IsEqual(ListItem.VideoResolution,720)">HD</value>
-        <value condition="String.IsEqual(ListItem.VideoResolution,1080)">HD</value>			
+        <value condition="String.IsEqual(ListItem.VideoResolution,1080)">HD</value>
         <value condition="String.IsEqual(ListItem.VideoResolution,4K)">UHD</value>
-        <value condition="String.IsEqual(ListItem.VideoResolution,8K)">UHD</value>	
+        <value condition="String.IsEqual(ListItem.VideoResolution,8K)">UHD</value>
     </variable>
 
     <variable name="Label_SkinShortcuts_SubmenuWidget">
