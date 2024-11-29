@@ -27,8 +27,8 @@
                     </control>
                     <include condition="!$EXP[InGameMode]">Object_Info_Line</include>
                     <include condition="$EXP[InGameMode]">View_540_ROM_Details</include>
-                    <include content="Object_Info_Ratings">
-                        <param name="top" value="-30" />
+                    <include content="Object_Ratings_Content">
+                        <param name="top" value="10" />
                         <param name="top250" value="false" />
                         <param name="oscars" value="false" />
                     </include>

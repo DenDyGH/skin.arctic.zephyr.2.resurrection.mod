@@ -655,10 +655,10 @@
                             <height>44</height>
                             <control type="group">
                                 <visible>!Pvr.IsPlayingTv</visible>
-                                <include content="Object_OSD_Ratings">
+                                <include content="Object_Ratings_Content">
                                     <param name="align" value="left" />
                                     <param name="imdbvotes" value="false" />
-                                    <param name="colordiffuse" value="panel_fg" />
+                                    <param name="is_player" value="true" />
                                 </include>
                             </control>
                             <control type="label">

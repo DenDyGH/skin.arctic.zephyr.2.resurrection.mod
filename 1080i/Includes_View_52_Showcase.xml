@@ -135,8 +135,8 @@
                             <param name="label" value="$INFO[Container($PARAM[id]).ListItem.MPAA]" />
                             <param name="container" value="Container($PARAM[id])." />
                         </include>
-                        <include content="Object_Info_Ratings">
-                            <param name="top" value="-30" />
+                        <include content="Object_Ratings_Content">
+                            <param name="top" value="10" />
                             <param name="imdbvotes" value="false" />
                             <param name="top250" value="false" />
                             <param name="oscars" value="false" />
@@ -148,7 +148,7 @@
                             <textcolor>main_fg_70</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
-                            <height>240</height>
+                            <height>210</height>
                             <label>$PARAM[plot]</label>
                         </control>
                         <control type="grouplist">
@@ -294,7 +294,10 @@
             <control type="group">
                 <width>1770</width>
                 <top>532.5</top>
-                <include>Flix_Object_Info_Ratings</include>
+                <include content="Object_Ratings_Content">
+                    <param name="top" value="15" />
+                    <param name="align" value="right" />
+                </include>
             </control>
         </definition>
     </include>
@@ -349,7 +352,10 @@
             <control type="group">
                 <width>1770</width>
                 <top>395</top>
-                <include>Flix_Object_Info_Ratings</include>
+                <include content="Object_Ratings_Content">
+                    <param name="top" value="15" />
+                    <param name="align" value="right" />
+                </include>
             </control>
         </definition>
     </include>
@@ -381,7 +387,9 @@
                 <include content="Object_Info_Line">
                     <param name="fullgenre" value="true" />
                 </include>
-                <include>Object_Info_Ratings</include>
+                <include content="Object_Ratings_Content">
+                    <param name="top" value="10" />
+                </include>
                 <control type="group">
                     <visible>!$EXP[Exp_HasClearlogoCrop] | !Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Object_Info_Plot">

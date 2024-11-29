@@ -53,7 +53,9 @@
                                     </control>
                                 </control>
                                 <include>Object_Info_Line</include>
-                                <include>Object_Info_Ratings</include>
+                                <include content="Object_Ratings_Content">
+                                    <param name="top" value="10" />
+                                </include>
                                 <include>Object_Info_Plot</include>
                                 <include condition="!Window.IsVisible(1140)">Object_Info_Details</include>
                                 <include condition="Window.IsVisible(1140)">Object_InfoSets_Details</include>
