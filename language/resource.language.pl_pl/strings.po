@@ -2173,3 +2173,8 @@ msgstr "Wyświetlaj kodeki w formie tekstu w OSD"
 msgctxt "#31500"
 msgid "Hide CD Spin in VideoOSD"
 msgstr "Nie wyświetlaj płyty CD w VideoOSD"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31501"
+msgid "Use TMDBHelper to crop clearlogo"
+msgstr "Użyj TMDBHelper do przycinania clearlogo"

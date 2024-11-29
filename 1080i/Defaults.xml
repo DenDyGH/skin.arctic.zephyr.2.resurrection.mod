@@ -249,8 +249,8 @@
 
     <expression name="Exp_HasAutoCompletion">[System.HasAddon(plugin.program.autocompletion) + System.AddonIsEnabled(plugin.program.autocompletion)]</expression>
 
-    <expression name="Exp_HasClearlogo">!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(artist.clearlogo))</expression>
-    <expression name="Exp_HasClearlogoCrop">!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.CropImage))</expression>
+    <expression name="Exp_HasClearlogo">!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(artist.clearlogo)) | [Skin.HasSetting(TMDBhCrop) + !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.CropImage))]</expression>
+    <expression name="Exp_Player_HasClearlogo">!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(artist.clearlogo)) | [Skin.HasSetting(TMDBhCrop) + !String.IsEmpty(Window(Home).Property(TMDBHelper.Player.CropImage))]</expression>
 
     <expression name="RatingsVisiblity">
         [[!String.IsEmpty(ListItem.Rating) | !String.IsEmpty(VideoPlayer.Rating)] + !Skin.HasSetting(DisableStarRating)] |

@@ -732,15 +732,15 @@
                             <font>font_title_medium</font>
                             <textcolor>panel_fg_100</textcolor>
                             <label>$VAR[Label_OSD_Title]</label>
-                            <visible>!Skin.HasSetting(ShowClearlogo) | String.IsEmpty(Window(Home).Property(TMDBHelper.Player.CropImage))</visible>
+                            <visible>!Skin.HasSetting(ShowClearlogo) | !$EXP[Exp_Player_HasClearlogo]</visible>
                         </control>
                         <control type="group">
                             <height>155</height>
                             <width>620</width>
-                            <visible>Skin.HasSetting(ShowClearlogo) + !String.IsEmpty(Window(Home).Property(TMDBHelper.Player.CropImage))</visible>
+                            <visible>Skin.HasSetting(ShowClearlogo) + $EXP[Exp_Player_HasClearlogo]</visible>
                             <control type="image">
                                 <aspectratio align="left" aligny="center">keep</aspectratio>
-                                <texture background="true">$INFO[Window(Home).Property(TMDbHelper.Player.CropImage)]</texture>
+                                <texture background="true">$VAR[Image_Player_Clearlogo]</texture>
                             </control>
                         </control>
                         <control type="grouplist">

@@ -418,7 +418,7 @@
                         <aspectratio align="left">keep</aspectratio>
                         <bordersize>90</bordersize>
                         <height>350</height>
-                        <texture background="true">$VAR[Image_ClearLogo]</texture>
+                        <texture background="true">$VAR[Image_Clearlogo]</texture>
                         <visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
                     </control>
                 </itemlayout>
@@ -434,7 +434,7 @@
                         <aspectratio align="left">keep</aspectratio>
                         <bordersize>90</bordersize>
                         <height>350</height>
-                        <texture background="true">$VAR[Image_ClearLogo]</texture>
+                        <texture background="true">$VAR[Image_Clearlogo]</texture>
                         <visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
                     </control>
                     <control type="button">

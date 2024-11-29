@@ -2193,3 +2193,8 @@ msgstr ""
 msgctxt "#31500"
 msgid "Hide CD Spin in VideoOSD"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31501"
+msgid "Use TMDBHelper to crop clearlogo"
+msgstr ""

@@ -100,7 +100,7 @@
                     <right>50</right>
                     <width>200</width>
                     <height>390</height>
-                    <texture background="true">$VAR[Image_ClearLogo]</texture>
+                    <texture background="true">$VAR[Image_Clearlogo]</texture>
                     <aspectratio align="right" aligny="bottom">keep</aspectratio>
                     <visible>!$EXP[InGameMode] + ![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]</visible>
                 </control>
@@ -235,13 +235,13 @@
                         <param name="shadowcolor" value="ff000000" />
                         <param name="titleheight" value="$PARAM[titleheight]" />
                         <param name="top" value="80" />
-                        <param name="visible" value="!$EXP[Exp_HasClearlogoCrop]" />
+                        <param name="visible" value="!$EXP[Exp_HasClearlogo]" />
                     </include>
                     <control type="image">
                         <width>620</width>
                         <aspectratio align="left" aligny="center">keep</aspectratio>
-                        <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.CropImage)]</texture>
-                        <visible>$EXP[Exp_HasClearlogoCrop]</visible>
+                        <texture background="true">$VAR[Image_Clearlogo]</texture>
+                        <visible>$EXP[Exp_HasClearlogo]</visible>
                     </control>
                 </control>
                 <include>Flix_Object_Info_Line</include>
@@ -311,7 +311,7 @@
                 <itemgap>0</itemgap>
                 <top>-50</top>
                 <control type="group">
-                    <visible>!$EXP[Exp_HasClearlogoCrop] | !Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(ShowClearlogo)</visible>
                     <height>90</height>
                     <include content="Flix_Object_Info_Title">
                         <param name="font" value="font_title_medium" />
@@ -321,19 +321,19 @@
                     </include>
                 </control>
                 <control type="group">
-                    <visible>$EXP[Exp_HasClearlogoCrop] + Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(ShowClearlogo)</visible>
                     <height>160</height>
                     <width>660</width>
                     <control type="image">
                         <aspectratio align="left" aligny="center">keep</aspectratio>
-                        <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.CropImage)]</texture>
+                        <texture background="true">$VAR[Image_Clearlogo]</texture>
                     </control>
                 </control>
                 <include content="Flix_Object_Info_Line">
                     <param name="percentrating" value="false" />
                 </include>
                 <control type="group">
-                    <visible>$EXP[Exp_HasClearlogoCrop] + Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Flix_Object_Info_Plot">
                         <param name="height" value="$PARAM[plotheight]" />
                         <param name="top" value="10" />
@@ -341,7 +341,7 @@
                     </include>
                 </control>
                 <control type="group">
-                    <visible>!$EXP[Exp_HasClearlogoCrop] | !Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Flix_Object_Info_Plot">
                         <param name="height" value="320" />
                         <param name="top" value="10" />
@@ -373,15 +373,15 @@
                 <include content="Flix_Object_Info_Title">
                     <param name="font" value="$PARAM[font]" />
                     <param name="titleheight" value="$PARAM[titleheight]" />
-                    <param name="visible" value="!$EXP[Exp_HasClearlogoCrop] | !Skin.HasSetting(ShowClearlogo)" />
+                    <param name="visible" value="!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(ShowClearlogo)" />
                 </include>
                 <control type="group">
-                    <visible>$EXP[Exp_HasClearlogoCrop] + Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(ShowClearlogo)</visible>
                     <height>140</height>
                     <control type="image">
                         <width>640</width>
                         <aspectratio align="left" aligny="center">keep</aspectratio>
-                        <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.CropImage)]</texture>
+                        <texture background="true">$VAR[Image_Clearlogo]</texture>
                     </control>
                 </control>
                 <include content="Object_Info_Line">
@@ -391,13 +391,13 @@
                     <param name="top" value="10" />
                 </include>
                 <control type="group">
-                    <visible>!$EXP[Exp_HasClearlogoCrop] | !Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>!$EXP[Exp_HasClearlogo] | !Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Object_Info_Plot">
                         <param name="maxheight" value="$PARAM[plotheight]" />
                     </include>
                 </control>
                 <control type="group">
-                    <visible>$EXP[Exp_HasClearlogoCrop] + Skin.HasSetting(ShowClearlogo)</visible>
+                    <visible>$EXP[Exp_HasClearlogo] + Skin.HasSetting(ShowClearlogo)</visible>
                     <include content="Object_Info_Plot">
                         <param name="maxheight" value="$PARAM[plotheight_clearlogo]" />
                     </include>

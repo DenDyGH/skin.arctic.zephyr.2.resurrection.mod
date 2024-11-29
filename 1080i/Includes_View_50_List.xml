@@ -193,7 +193,7 @@
                                 <bottom>30</bottom>
                                 <width>25%</width>
                                 <aspectratio align="right" aligny="center">keep</aspectratio>
-                                <texture>$VAR[Image_ClearLogo]</texture>
+                                <texture>$VAR[Image_Clearlogo]</texture>
                                 <visible>String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(banner))</visible>
                             </control>
                         </control>
@@ -401,7 +401,7 @@
                     <right>40</right>
                     <width>150</width>
                     <height>322</height>
-                    <texture background="true">$VAR[Image_ClearLogo]</texture>
+                    <texture background="true">$VAR[Image_Clearlogo]</texture>
                     <aspectratio align="right" aligny="bottom">keep</aspectratio>
                     <visible>![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]</visible>
                 </control>
@@ -477,7 +477,7 @@
                     <right>50</right>
                     <width>200</width>
                     <height>360</height>
-                    <texture background="true">$VAR[Image_ClearLogo]</texture>
+                    <texture background="true">$VAR[Image_Clearlogo]</texture>
                     <aspectratio align="right" aligny="bottom">keep</aspectratio>
                     <visible>![String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)] + [[String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)] + [String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)]]</visible>
                 </control>

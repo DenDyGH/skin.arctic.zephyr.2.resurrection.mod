@@ -305,7 +305,7 @@
                         <bottom>30</bottom>
                         <width>33%</width>
                         <aspectratio align="right" aligny="bottom">keep</aspectratio>
-                        <texture>$VAR[Image_ClearLogo]</texture>
+                        <texture>$VAR[Image_Clearlogo]</texture>
                         <visible>$PARAM[clearlogo]</visible>
                     </control>
                 </control>
@@ -416,7 +416,7 @@
                         <bottom>30</bottom>
                         <width>33%</width>
                         <aspectratio align="right" aligny="bottom">keep</aspectratio>
-                        <texture>$VAR[Image_ClearLogo]</texture>
+                        <texture>$VAR[Image_Clearlogo]</texture>
                         <visible>$PARAM[clearlogo]</visible>
                     </control>
                 </control>

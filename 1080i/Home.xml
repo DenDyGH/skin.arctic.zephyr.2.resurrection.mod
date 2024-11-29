@@ -13,7 +13,7 @@
 
     <onload>Skin.Reset(TMDbHelper.MonitorContainer)</onload>
     <onload>SetProperty(TMDbHelper.Blur.SourceImage,Art(fanart)|Art(poster),Home)</onload>
-    <onload condition="!Skin.HasSetting(TMDbHelper.EnableCrop) + [Skin.HasSetting(ShowClearlogo) | Skin.HasSetting(EI_Clearlogo)]">Skin.SetBool(TMDbHelper.EnableCrop)</onload>
+    <onload condition="!Skin.HasSetting(TMDBhCrop)">Skin.Reset(TMDbHelper.EnableCrop)</onload>
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
 
     <controls>
