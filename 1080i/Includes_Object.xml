@@ -1212,13 +1212,14 @@
         <param name="icon_w">32</param>
         <param name="icon_h">32</param>
         <param name="bordersize">0</param>
+        <param name="colordiffuse">$VAR[IconsDiffuse_Var]</param>
         <definition>
             <control type="image">
                 <width>$PARAM[icon_w]</width>
                 <height>$PARAM[icon_h]</height>
                 <aspectratio>keep</aspectratio>
                 <centertop>50%</centertop>
-                <texture>$PARAM[icon]</texture>
+                <texture colordiffuse="$PARAM[colordiffuse]">$PARAM[icon]</texture>
                 <visible>$PARAM[visible]</visible>
                 <bordersize>$PARAM[bordersize]</bordersize>
             </control>
@@ -2346,17 +2347,20 @@
                     <param name="icon" value="flags/star10_n.png" />
                     <param name="label" value="$INFO[ListItem.Rating,,   ]" />
                     <param name="visible" value="!String.IsEmpty(ListItem.Rating)" />
+                    <param name="colordiffuse" value="main_fg_100" />
                 </include>
                 <include content="Object_Rating_Line_Label" condition="$PARAM[is_player] + !Skin.HasSetting(DisableStarRating)">
                     <param name="icon" value="flags/star10_n.png" />
                     <param name="label" value="$INFO[VideoPlayer.Rating,,   ]" />
                     <param name="visible" value="!String.IsEmpty(VideoPlayer.Rating)" />
+                    <param name="colordiffuse" value="main_fg_100" />
                 </include>
 
                 <include content="Object_Rating_Line_Label" condition="!$PARAM[is_player] + !Skin.HasSetting(Ratings.User)">
                     <param name="icon" value="flags/$PARAM[directory]/ratings/user_rating.png" />
                     <param name="label" value="$INFO[ListItem.UserRating,,.0   ]" />
                     <param name="visible" value="!String.IsEmpty(ListItem.UserRating)" />
+                    <param name="colordiffuse" value="main_fg_100" />
                 </include>
 
                 <include content="Object_Rating_Line_Label" condition="!$PARAM[is_player] + !Skin.HasSetting(Ratings.Oscars)">
