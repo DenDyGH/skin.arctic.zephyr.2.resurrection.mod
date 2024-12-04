@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <include name="Object_Control">
+        <control type="$PARAM[control]" id="$PARAM[id]">
+            <nested />
+        </control>
+    </include>
+    <include name="Object_TextColor"><textcolor>$PARAM[textcolor]</textcolor></include>
+    <include name="Object_ColorDiffuse"><colordiffuse>$PARAM[colordiffuse]</colordiffuse></include>
+
     <include name="Object_ShadowSpot_Label">
         <param name="font" default="font_tiny" />
         <param name="textcolor" default="panel_fg_70" />
@@ -3169,6 +3177,108 @@
                     <param name="visible">String.IsEqual($PARAM[listitem].Property(episode_type),mid_season_finale)</param>
                     <param name="label">$LOCALIZE[31470]</param>
                 </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_MenuHeader">
+        <param name="icon">special://skin/extras/icons/kodi.png</param>
+        <param name="bordersize">-8</param>
+        <param name="label">$LOCALIZE[33063]</param>
+        <param name="has_icon">true</param>
+        <param name="colordiffuse">$VAR[ColorHighlight]</param>
+        <param name="textcolor">dialog_fg</param>
+        <param name="font">font_small_bold</param>
+        <param name="height">120</param>
+        <definition>
+            <control type="group" id="$PARAM[id]">
+                <height>$PARAM[height]</height>
+                <control type="label">
+                    <label>$PARAM[label]</label>
+                    <textoffsetx>40</textoffsetx>
+                    <font>$PARAM[font]</font>
+                    <aligny>center</aligny>
+                    <textcolor>$PARAM[textcolor]_90</textcolor>
+                </control>
+                <include content="Object_Control" condition="$PARAM[has_icon]">
+                    <param name="control">group</param>
+                    <right>40</right>
+                    <centertop>50%</centertop>
+                    <height>40</height>
+                    <width>40</width>
+                    <control type="image">
+                        <bordersize>$PARAM[bordersize]</bordersize>
+                        <texture colordiffuse="$PARAM[textcolor]_90">$PARAM[icon]</texture>
+                    </control>
+                </include>
+                <control type="image">
+                    <bottom>0</bottom>
+                    <height>1</height>
+                    <left>40</left>
+                    <right>40</right>
+                    <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_InfoCircle_Text_Top">
+        <control type="label" id="$PARAM[id]">
+            <include>Dimension_Object_InfoCircle_Text_Top</include>
+            <nested />
+            <font>font_mini_bold</font>
+            <textcolor>main_fg_90</textcolor>
+            <selectedcolor>main_fg_90</selectedcolor>
+        </control>
+    </include>
+    <include name="Object_InfoCircle_Text_Sub">
+        <control type="label" id="$PARAM[id]">
+            <include>Dimension_Object_InfoCircle_Text_Sub</include>
+            <nested />
+            <font>font_tiny</font>
+            <textcolor>main_fg_70</textcolor>
+            <selectedcolor>main_fg_70</selectedcolor>
+        </control>
+    </include>
+
+    <include name="Object_InfoCircle">
+        <param name="textcolor_top">main_fg_90</param>
+        <param name="textcolor_sub">main_fg_70</param>
+        <param name="font_top">font_small_bold</param>
+        <param name="font_sub">font_mini</param>
+        <param name="include_labels">true</param>
+        <definition>
+            <control type="group">
+                <height>80</height>
+                <nested />
+                <left>15</left>
+                <include content="Object_InfoCircle_Text_Top" condition="$PARAM[include_labels]">
+                    <left>40</left>
+                    <textcolor>$PARAM[textcolor_top]</textcolor>
+                    <selectedcolor>$PARAM[textcolor_top]</selectedcolor>
+                    <label fallback="$PARAM[fallback_role]">$PARAM[role]</label>
+                </include>
+                <include content="Object_InfoCircle_Text_Sub" condition="$PARAM[include_labels]">
+                    <left>40</left>
+                    <textcolor>$PARAM[textcolor_sub]</textcolor>
+                    <selectedcolor>$PARAM[textcolor_sub]</selectedcolor>
+                    <label fallback="$PARAM[fallback_name]">$PARAM[name]</label>
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Settings_Button">
+        <param name="control">button</param>
+        <definition>
+            <control type="$PARAM[control]" id="$PARAM[id]">
+                <nested />
+                <align>left</align>
+                <font>font_small</font>
+                <height>80</height>
+                <textoffsetx>40</textoffsetx>
+                <texturenofocus />
+                <alttexturenofocus />
             </control>
         </definition>
     </include>

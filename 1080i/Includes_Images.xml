@@ -279,4 +279,9 @@
         <value condition="!String.IsEmpty(Player.Art(album.discart))">$INFO[Player.Art(album.discart)]</value>
         <value>$INFO[Player.Art(albumartist.thumb)]</value>
     </variable>
+
+    <variable name="Image_IsCurrentStream">
+        <value condition="!String.IsEmpty(ListItem.Property(iscurrent))">buttons/check-on.png</value>
+        <value>buttons/check-off.png</value>
+    </variable>
 </includes>

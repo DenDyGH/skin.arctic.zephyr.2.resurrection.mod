@@ -39,6 +39,11 @@
             <size>26</size>
         </font>
         <font>
+            <name>font_tiny_23</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
             <name>font_tiny_bold</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>26</size>
@@ -282,6 +287,11 @@
             <name>font_tiny</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>26</size>
+        </font>
+        <font>
+            <name>font_tiny_23</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>23</size>
         </font>
         <font>
             <name>font_tiny_bold</name>

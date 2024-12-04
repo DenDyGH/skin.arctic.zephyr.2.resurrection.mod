@@ -20,10 +20,10 @@
         <param name="alt" default="" />
         <param name="usealt" default="false" />
         <definition>
-            <include content="Object_TextColor" condition="!$PARAM[usealt]">
+            <include content="Object_TextColor_Item" condition="!$PARAM[usealt]">
                 <param name="item" value="$PARAM[std]" />
             </include>
-            <include content="Object_TextColor" condition="$PARAM[usealt]">
+            <include content="Object_TextColor_Item" condition="$PARAM[usealt]">
                 <param name="item" value="$PARAM[alt]" />
             </include>
         </definition>
@@ -63,7 +63,7 @@
         </definition>
     </include>
 
-    <include name="Object_TextColor">
+    <include name="Object_TextColor_Item">
         <definition>
             <textcolor>$PARAM[item]</textcolor>
         </definition>

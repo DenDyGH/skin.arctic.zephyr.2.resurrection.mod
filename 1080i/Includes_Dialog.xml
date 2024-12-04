@@ -651,6 +651,68 @@
         <textcolor>dialog_fg_70</textcolor>
     </include>
 
+    <include name="Dialog_Background_Standard">
+        <param name="border">20</param>
+        <param name="transparency">false</param>
+        <definition>
+            <control type="group">
+                <include condition="$PARAM[transparency]">Dialog_Background_Transparency</include>
+                <control type="image">
+                    <texture border="20">special://skin/extras/backgrounds/dialogs/coal_blur.png</texture>
+                </control>
+                <control type="image">
+                    <texture colordiffuse="dialog_overlay" border="20">common/dialog.png</texture>
+                </control>
+            </control>
+        </definition>
+    </include>
+    <include name="Dialog_Background_Transparency">
+        <animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
+    </include>
+
+    <include name="Dialog_Menu_Button">
+        <param name="bordersize">16</param>
+        <definition>
+            <include content="Settings_Button">
+                <param name="id">$PARAM[id]</param>
+                <param name="control">$PARAM[control]</param>
+                <visible>Control.IsEnabled($PARAM[id])</visible>
+                <textoffsetx>40</textoffsetx>
+                <textwidth>356</textwidth>
+                <radioposx>340</radioposx>
+                <textcolor>dialog_fg_70</textcolor>
+                <selectedcolor>dialog_fg_70</selectedcolor>
+                <nested />
+            </include>
+            <control type="group" id="$PARAM[groupid]">
+                <width>80</width>
+                <height>80</height>
+                <top>-80</top>
+                <right>20</right>
+                <visible>Control.IsEnabled($PARAM[id]) + Control.IsVisible($PARAM[id])</visible>
+
+                <control type="group">
+                    <height>40</height>
+                    <width>40</width>
+                    <centerleft>50%</centerleft>
+                    <centertop>50%</centertop>
+                    <control type="image">
+                        <bordersize>$PARAM[bordersize]</bordersize>
+                        <aspectratio align="right">keep</aspectratio>
+                        <texture colordiffuse="dialog_fg_70">$PARAM[icon]</texture>
+                        <visible>!Control.HasFocus($PARAM[id])</visible>
+                    </control>
+                    <control type="image">
+                        <bordersize>$PARAM[bordersize]</bordersize>
+                        <aspectratio align="right">keep</aspectratio>
+                        <texture colordiffuse="$VAR[ColorSelected]">$PARAM[icon]</texture>
+                        <visible>Control.HasFocus($PARAM[id])</visible>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <!-- ============ -->
     <!-- Info Dialogs -->
     <!-- ============ -->

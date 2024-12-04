@@ -1384,8 +1384,8 @@ msgstr "Felirat beállítások"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31409"
-msgid "Subtitles button opens subtitle settings"
-msgstr "Felirat beállítása a felirat beállító menüt nyitja meg"
+msgid "Disable auto pop-up OSD dialogs"
+msgstr ""
 
 #: /1080i/DialogPVRChannelManager.xml
 msgctxt "#31412"
@@ -1865,11 +1865,6 @@ msgid "Enable zoom on hover"
 msgstr "Zoom engedélyezése kiválasztáskor"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#30110"
-msgid "Show player tempo controls in OSD"
-msgstr "Az OSD-ben a lejátszási tempó megjelenítése"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#30111"
 msgid "Set delay to playing Trailers in Flix View"
 msgstr "ÁA késleltetés beállítása az előzetesek lejátszásához, a Flix nézet-ben"
@@ -1963,11 +1958,6 @@ msgstr "Beállítás gomb elrejtése"
 msgctxt "#31454"
 msgid "Hide player process info button"
 msgstr "Lejátszási infó gomb elrejtése"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31455"
-msgid "Audio button opens audio settings"
-msgstr "Az audio gomb megnyitja a hangbeállításokat"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31456"
@@ -2197,4 +2187,12 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31501"
 msgid "Use TMDBHelper to crop clearlogo"
+msgstr ""
+
+msgctxt "#31502"
+msgid "Playback Speed"
+msgstr ""
+
+msgctxt "#31503"
+msgid "Codecs"
 msgstr ""

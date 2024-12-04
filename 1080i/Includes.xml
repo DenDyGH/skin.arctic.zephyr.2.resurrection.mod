@@ -194,6 +194,15 @@
         <height>925</height>
     </include>
 
+    <include name="Dimension_Object_InfoCircle_Text_Top">
+        <height>10</height>
+        <centertop>24</centertop>
+    </include>
+    <include name="Dimension_Object_InfoCircle_Text_Sub">
+        <height>10</height>
+        <centerbottom>25</centerbottom>
+    </include>
+
     <include name="AutoCompletion">
         <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
     </include>

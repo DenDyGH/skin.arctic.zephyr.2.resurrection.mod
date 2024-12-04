@@ -726,18 +726,11 @@
                             <onclick>Skin.ToggleSetting(DontPauseOSD)</onclick>
                         </control>
 
-                        <control type="radiobutton" id="19505" description="Subs button opens subtitle settings">
+                        <control type="radiobutton" id="19505" description="Auto pop-up OSD dialogs">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31409]</label>
-                            <selected>Skin.HasSetting(OSDSubtitleSettings)</selected>
-                            <onclick>Skin.ToggleSetting(OSDSubtitleSettings)</onclick>
-                        </control>
-
-                        <control type="radiobutton" id="19528" description="Audio button opens audio settings">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31455]</label>
-                            <selected>Skin.HasSetting(OSDAudioSettings)</selected>
-                            <onclick>Skin.ToggleSetting(OSDAudioSettings)</onclick>
+                            <selected>Skin.HasSetting(OSD.DisablePopUpDialogs)</selected>
+                            <onclick>Skin.ToggleSetting(OSD.DisablePopUpDialogs)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19523" description="Scroll seekbar instead of showing info panel">
@@ -794,13 +787,6 @@
                             <label>$LOCALIZE[31454]</label>
                             <selected>Skin.HasSetting(HidePlayerInfoButton)</selected>
                             <onclick>Skin.ToggleSetting(HidePlayerInfoButton)</onclick>
-                        </control>
-
-                        <control type="radiobutton" id="19517" description="Show player tempo controls">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[30110]</label>
-                            <selected>Skin.HasSetting(PlayerTempoControls)</selected>
-                            <onclick>Skin.ToggleSetting(PlayerTempoControls)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19529" description="Show remaining time instead of end time">

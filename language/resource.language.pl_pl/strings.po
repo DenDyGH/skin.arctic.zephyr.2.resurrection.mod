@@ -1384,8 +1384,8 @@ msgstr "Ustawienia napisów"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31409"
-msgid "Subtitles button opens subtitle settings"
-msgstr "Przycisk do napisów otwiera ustawienia napisów"
+msgid "Disable auto pop-up OSD dialogs"
+msgstr "Wyłącz wyskakujące okna dialogowe w OSD"
 
 #: /1080i/DialogPVRChannelManager.xml
 msgctxt "#31412"
@@ -1845,11 +1845,6 @@ msgid "Enable zoom on hover"
 msgstr "Włącz przybliżenie po najechaniu"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#30110"
-msgid "Show player tempo controls in OSD"
-msgstr "Pokaż kontrolki do zmiany tempa odtwarzania na OSD"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#30111"
 msgid "Set delay to playing Trailers in Flix View"
 msgstr "Ustaw opóźnienie do odtwarzania zwiastunów w widoku Flix"
@@ -1943,11 +1938,6 @@ msgstr "Ukryj przycisk ustawień"
 msgctxt "#31454"
 msgid "Hide player process info button"
 msgstr "Ukryj przycisk informacji o procesie odtwarzacza"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31455"
-msgid "Audio button opens audio settings"
-msgstr "Przycisk od dźwięku otwiera ustawienia dźwięku"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31456"
@@ -2178,3 +2168,11 @@ msgstr "Nie wyświetlaj płyty CD w VideoOSD"
 msgctxt "#31501"
 msgid "Use TMDBHelper to crop clearlogo"
 msgstr "Użyj TMDBHelper do przycinania clearlogo"
+
+msgctxt "#31502"
+msgid "Playback Speed"
+msgstr "Prędkość odtwarzania"
+
+msgctxt "#31503"
+msgid "Codecs"
+msgstr "Kodeki"

@@ -1380,8 +1380,8 @@ msgstr "Impostazioni sottotitoli"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31409"
-msgid "Subtitles button opens subtitle settings"
-msgstr "Il pulsante Sottotitoli apre le impostazioni dei sottotitoli"
+msgid "Disable auto pop-up OSD dialogs"
+msgstr ""
 
 #: /1080i/DialogPVRChannelManager.xml
 msgctxt "#31412"
@@ -1861,11 +1861,6 @@ msgid "Enable zoom on hover"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
-msgctxt "#30110"
-msgid "Show player tempo controls in OSD"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
 msgctxt "#30111"
 msgid "Set delay to playing Trailers in Flix View"
 msgstr ""
@@ -1958,11 +1953,6 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31454"
 msgid "Hide player process info button"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31455"
-msgid "Audio button opens audio settings"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -2193,4 +2183,12 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31501"
 msgid "Use TMDBHelper to crop clearlogo"
+msgstr ""
+
+msgctxt "#31502"
+msgid "Playback Speed"
+msgstr ""
+
+msgctxt "#31503"
+msgid "Codecs"
 msgstr ""
