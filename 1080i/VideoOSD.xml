@@ -239,7 +239,8 @@
                     <onup condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo))">ClearProperty(OSDInfo,Home)</onup>
                     <ondown condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo))">14</ondown>
                     <ondown condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo))">ClearProperty(OSDInfo,Home)</ondown>
-                    <onright>StepForward</onright>
+                    <onright condition="!Player.Paused">StepForward</onright>
+				    <onright condition="Player.Paused">PlayerControl(FrameAdvance(1))</onright>
                     <onleft>StepBack</onleft>
                     <onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
                     <lefttexture />
