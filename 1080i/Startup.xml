@@ -10,8 +10,8 @@
     <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.DirectCallAuto)</onload>
 
     <!-- Skin Init -->
-    <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff0091ea)</onload>
-    <onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ff00bfa5)</onload>
+    <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff283ba8)</onload>
+    <onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ff3949ab)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(weather.icons.path,resource://resource.images.weathericons.outline-hd/)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(SubmenuOnly)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(widgetPath,special://skin/extras/playlists/RandomMovies.xsp)</onload>
