@@ -9,6 +9,7 @@
     <onunload>ClearProperty(OSD_Menu,Home)</onunload>
     <onunload>ClearProperty(HasTrailer,Home)</onunload>
     <onload>SetProperty(TMDBHelper.Info.OriginalPath,$INFO[ListItem.FolderPath],Home)</onload>
+    <onload>ClearProperty(TMDbHelper.WidgetContainer)</onload>
     <controls>
 
         <!-- Top Info -->

@@ -2176,3 +2176,8 @@ msgstr "Prędkość odtwarzania"
 msgctxt "#31503"
 msgid "Codecs"
 msgstr "Kodeki"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31504"
+msgid "Disable cast dialog in VideoOSD"
+msgstr "Wyłącz okno z obsadą w VideoOSD"

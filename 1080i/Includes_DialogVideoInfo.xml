@@ -377,7 +377,7 @@
     </include>
 
     <include name="DialogPersonInfo">
-
+        <include condition="Window.IsVisible(fullscreenvideo)">OSD_ExtendedInfo_Background</include>
         <!-- Person Info -->
         <control type="group">
             <top>view_top</top>
@@ -427,7 +427,7 @@
                                     <param name="divider" value="false" />
                                 </include>
                                 <include content="Object_Info_Plot">
-                                    <param name="label" value="$INFO[ListItem.Property(biography)]" />
+                                    <param name="label" value="$VAR[Label_DialogInfo_Biography]" />
                                     <param name="maxheight" value="600" />
                                     <param name="height" value="600" />
                                 </include>

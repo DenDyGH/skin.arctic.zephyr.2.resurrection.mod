@@ -636,4 +636,9 @@
     <variable name="Label_PlayerStream_IsOriginal">
         <value condition="ListItem.Property(IsOriginal)">$LOCALIZE[39111]</value>
     </variable>
+
+    <variable name="Label_DialogInfo_Biography">
+        <value condition="!String.IsEmpty(ListItem.Property(biography))">$INFO[ListItem.Property(biography)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.biography))">$INFO[Window(Home).Property(TMDbHelper.ListItem.biography)]</value>
+    </variable>
 </includes>

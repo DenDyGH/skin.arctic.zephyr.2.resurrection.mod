@@ -89,8 +89,10 @@
     </variable>
 
     <variable name="Image_OSD_Artwork">
-        <value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
+        <value condition="!String.IsEmpty(VideoPlayer.Art(poster))">$INFO[VideoPlayer.Art(poster)]</value>
+        <value condition="!String.IsEmpty(VideoPlayer.Art(tvshow.poster))">$INFO[VideoPlayer.Art(tvshow.poster)]</value>
         <value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
+        <value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
         <value>$INFO[VideoPlayer.Cover]</value>
     </variable>
 

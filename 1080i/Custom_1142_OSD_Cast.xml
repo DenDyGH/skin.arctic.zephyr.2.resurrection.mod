@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1142">
+    <defaultcontrol always="true">6501</defaultcontrol>
+    <onload>CancelAlarm(osd_timeout,true)</onload>
+    <onload>SetProperty(TMDbHelper.WidgetContainer,6501,1142)</onload>
+    <onload>Skin.SetString(VideoOSD.PersonCredits.CastCrew,cast)</onload>
+    <include>Animation_FadeIn</include>
+    <include>Animation_FadeOut</include>
+    <controls>
+        <control type="image">
+            <height>730</height>
+            <bottom>0</bottom>
+            <texture>common/osd-dim.png</texture>
+        </control>
+        <control type="group">
+            <height>400</height>
+            <bottom>100</bottom>
+            <left>30</left>
+            <right>30</right>
+            <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+
+            <!-- Cast List -->
+            <include content="Info_Widget_Poster">
+                <param name="id" value="6501" />
+                <param name="label" value="$VAR[Label_OSD_Title,$LOCALIZE[31058] ,]" />
+                <param name="labelinclude" value="View_Cast_Label" />
+                <content>$VAR[Path_OSD_Cast]</content>
+                <top>105</top>
+                <onfocus>SetProperty(TMDbHelper.WidgetContainer,6501,1142)</onfocus>
+                <onup condition="Skin.String(VideoOSD.PersonCredits.CastCrew,cast)">PreviousMenu</onup>
+                <ondown condition="Skin.String(VideoOSD.PersonCredits.CastCrew,cast)">PreviousMenu</ondown>
+                <onclick>Action(Info)</onclick>
+            </include>
+        </control>
+    </controls>
+</window>

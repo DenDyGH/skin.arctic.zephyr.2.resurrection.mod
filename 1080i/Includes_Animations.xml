@@ -347,6 +347,8 @@
         <animation effect="fade" start="0" end="90" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),10)">WindowOpen</animation>
         <animation effect="fade" start="0" end="95" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),5)">Visible</animation>
         <animation effect="fade" start="0" end="95" time="350" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(AlphaValue),5)">WindowOpen</animation>
+        <animation effect="fade" start="0" end="60" time="350" tween="cubic" easing="inout" condition="[String.IsEmpty(Skin.String(AlphaValue)) | String.IsEqual(Skin.String(AlphaValue),0)] + Window.IsVisible(fullscreenvideo)">Visible</animation>
+        <animation effect="fade" start="0" end="60" time="350" tween="cubic" easing="inout" condition="[String.IsEmpty(Skin.String(AlphaValue)) | String.IsEqual(Skin.String(AlphaValue),0)] + Window.IsVisible(fullscreenvideo)">WindowOpen</animation>
         <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout" condition="String.IsEmpty(Skin.String(AlphaValue)) | String.IsEqual(Skin.String(AlphaValue),0)">Visible</animation>
         <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout" condition="String.IsEmpty(Skin.String(AlphaValue)) | String.IsEqual(Skin.String(AlphaValue),0)">WindowOpen</animation>
     </include>
@@ -374,5 +376,4 @@
         <animation effect="fade" time="0" end="95" condition="String.IsEqual(Skin.String(AlphaValue_Highlight),5)">Conditional</animation>
         <animation effect="fade" time="0" end="100" condition="String.IsEmpty(Skin.String(AlphaValue_Highlight)) | String.IsEqual(Skin.String(AlphaValue_Highlight),0)">Conditional</animation>
     </include>
-
 </includes>

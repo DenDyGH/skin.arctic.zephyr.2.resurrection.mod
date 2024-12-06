@@ -733,6 +733,13 @@
                             <onclick>Skin.ToggleSetting(OSD.DisablePopUpDialogs)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19957" description="Disable OSD Cast dialog">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31504]</label>
+                            <selected>Skin.HasSetting(OSD.DisableCastDialog)</selected>
+                            <onclick>Skin.ToggleSetting(OSD.DisableCastDialog)</onclick>
+                        </control>
+
                         <control type="radiobutton" id="19523" description="Scroll seekbar instead of showing info panel">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31450]</label>
