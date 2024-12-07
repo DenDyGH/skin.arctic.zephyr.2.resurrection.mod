@@ -77,66 +77,43 @@
                         <itemgap>-52</itemgap>
                         <usecontrolcoords>true</usecontrolcoords>
                         <control type="group" id="7599"><height>0</height></control>
-                        <include content="View_Cast_Toplabel">
-                            <param name="groupid" value="7500" />
+                        <!-- Cast -->
+                        <include content="Info_Widget_Poster" condition="Skin.HasSetting(DisableExtendedInfo)">
                             <param name="id" value="50" />
-                            <param name="altid" value="5000" />
-                            <param name="label" value="$INFO[ListItem.Title,$LOCALIZE[31058] ,]" />
-                            <visible>Control.IsVisible(50) | Control.IsVisible(5000)</visible>
-                        </include>
-                        <control type="group" id="5999">
-                            <height>52</height>
-                            <visible>Integer.IsGreater(Container(50).NumItems,0) | Container(50).IsUpdating</visible>
-                            <control type="button" id="5000">
-                                <texturefocus />
-                                <texturenofocus />
-                                <font />
-                                <textcolor />
-                                <onclick condition="Skin.HasSetting(DisableExtendedInfo)">SetFocus(50)</onclick>
-                                <onclick>SetFocus(5000)</onclick>
-                                <onclick>SetFocus(300)</onclick>
-                                <onclick>RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(50).ListItem.Label],type=person,call_auto=1190)</onclick>
-                                <onback>300</onback>
-                                <onup>300</onup>
-                                <ondown>5001</ondown>
-                                <onleft>SetFocus(50)</onleft>
-                                <onleft>Left</onleft>
-                                <onright>SetFocus(50)</onright>
-                                <onright>Right</onright>
-                                <visible>!Skin.HasSetting(DisableExtendedInfo)</visible>
-                            </control>
-                        </control>
-                        <include content="View_51_Wall_Container">
-                            <param name="controllayout" value="View_Cast" />
-                            <param name="controltype" value="fixedlist" />
-                            <param name="id" value="50" />
-                            <param name="altid" value="5000" />
-                            <param name="height" value="item_cast_height" />
-                            <param name="orientation" value="horizontal" />
+                            <param name="groupid" value="5000" />
+                            <param name="label" value="$LOCALIZE[206]" />
                             <param name="labelinclude" value="View_Cast_Label" />
-                            <param name="focusbounce" value="Skin.HasSetting(DisableExtendedInfo)" />
-                            <param name="onleft" value="50" />
-                            <param name="onright" value="50" />
-                            <param name="visible" value="Integer.IsGreater(Container(50).NumItems,0) | Container(50).IsUpdating" />
-                            <onfocus condition="!Skin.HasSetting(DisableExtendedInfo)">SetFocus(5000)</onfocus>
-                            <onback condition="Skin.HasSetting(DisableExtendedInfo)">SetFocus(50)</onback>
-                            <onback>SetFocus(5000)</onback>
-                            <onback>300</onback>
-                            <animation effect="fade" start="100" end="30" time="200" condition="![Control.HasFocus(50) | Control.HasFocus(5000)]">Conditional</animation>
-                            <movement>6</movement>
+                            <include>Defs_InfoList_OnClick</include>
                         </include>
-                        <!-- Sets -->
-                        <include content="Info_Widget_Poster">
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo)">
+                            <param name="id" value="50" />
+                            <param name="groupid" value="5000" />
+                            <param name="label" value="$LOCALIZE[206]" />
+                            <param name="labelinclude" value="View_Cast_Label" />
+                            <include>Defs_InfoList_OnClick</include>
+                            <content>$VAR[Path_VideoInfo_Generic,,&amp;info=cast&amp;aggregate=true]</content>
+                        </include>
+
+                        <!-- Collection / Sets -->
+                        <include content="Info_Widget_Poster" condition="Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets)">
                             <param name="includecondition" value="true" />
                             <param name="id" value="5001" />
                             <param name="groupid" value="7501" />
-                            <param name="label" value="$VAR[Label_SetName,$LOCALIZE[31057] ,]" />
+                            <param name="label" value="$VAR[Label_SetName]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <visible>!String.IsEmpty(ListItem.Set) | ListItem.IsCollection</visible>
-                            <visible>!Skin.HasSetting(DisableInfoListSets)</visible>
-                            <content target="videos" sortby="year" sortorder="ascending">$VAR[Def_Set_List]</content>
+                            <content>$VAR[Def_Set_List]</content>
                         </include>
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets)">
+                            <param name="includecondition" value="true" />
+                            <param name="id" value="5001" />
+                            <param name="groupid" value="7501" />
+                            <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Set.Name)]" />
+                            <include>Defs_InfoList_OnClick</include>
+                            <include>Defs_InfoList_OnBack</include>
+                            <content>$INFO[Window(Home).Property(TMDbHelper.ListItem.Set.TMDb_ID),plugin://plugin.video.themoviedb.helper/?info=collection&amp;tmdb_type=collection&amp;tmdb_id=,]$VAR[Path_Param_Widget]</content>
+                        </include>
+
                         <!-- 1140 Set Cast -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="Window.IsVisible(1140)" />
@@ -152,6 +129,7 @@
                             <visible>!String.IsEmpty(Container(5001).ListItem.Property(tmdb_id)) + !Container(5001).IsUpdating</visible>
                             <content limit="25" target="videos">$VAR[Def_Cast_List]</content>
                         </include>
+
                         <!-- NextUp -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="!Skin.HasSetting(DisableInfoListNextUp)" />
@@ -171,6 +149,7 @@
                             <content limit="3" sortby="playcount" sortorder="ascending">videodb://inprogresstvshows/$INFO[ListItem.DBID]/-2/?tvshowid=$INFO[ListItem.DBID]</content>
                             <visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)</visible>
                         </include>
+
                         <!-- Seasons -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="!Skin.HasSetting(DisableInfoListSeasons)" />
@@ -185,6 +164,7 @@
                             <visible>String.IsEqual(ListItem.DBTYPE,tvshow)</visible>
                             <content limit="25" target="videos">$INFO[ListItem.DBID,videodb://tvshows/titles/,/]</content>
                         </include>
+
                         <!-- Director -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="!Skin.HasSetting(DisableInfoListDirector)" />
@@ -198,6 +178,7 @@
                             <content limit="1">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=details&amp;type=person]$VAR[Path_Param_Widget]</content>
                             <content sortby="year" sortorder="descending">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;type=person&amp;filter_key=job&amp;filter_value=Director]$VAR[Path_Param_Widget]</content>
                         </include>
+
                         <!-- Crew -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListCrew)" />
@@ -240,6 +221,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <content target="videos">plugin://plugin.video.themoviedb.helper/?info=recommendations&amp;type=$VAR[tmdb_type]$VAR[Path_Param_Query]$VAR[Path_Param_Widget]</content>
                         </include>
+
                         <!-- Similar -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSimilar)" />
@@ -263,6 +245,7 @@
                             <visible>!String.IsEmpty(ListItem.Year)</visible>
                             <content>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),plugin://plugin.video.themoviedb.helper/?info=discover&amp;first_air_date_year=,&amp;vote_count.gte=10]$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),&amp;primary_release_year=,]$VAR[Path_Param_Type,&amp;,]$VAR[Path_Param_Widget]</content>
                         </include>
+
                         <!-- Genre -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListGenre)" />
@@ -280,7 +263,7 @@
                             <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListStudio)" />
                             <param name="id" value="5005" />
                             <param name="groupid" value="7505" />
-                            <param name="label" value="$INFO[ListItem.Studio]" />
+                            <param name="label" value="$VAR[Label_FromStudio]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>!String.IsEmpty(ListItem.Studio)</visible>

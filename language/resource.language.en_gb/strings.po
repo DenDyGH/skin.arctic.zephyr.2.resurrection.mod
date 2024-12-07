@@ -296,11 +296,6 @@ msgid "Special Features and Extras"
 msgstr ""
 
 #: /1080i/DialogVideoInfo.xml
-msgctxt "#31057"
-msgid "Films in the"
-msgstr ""
-
-#: /1080i/DialogVideoInfo.xml
 msgctxt "#31058"
 msgid "Cast of"
 msgstr ""

@@ -186,6 +186,14 @@
         <value condition="VideoPlayer.Content(episodes)">plugin://plugin.video.themoviedb.helper/?info=$INFO[Skin.String(VideoOSD.PersonCredits.CastCrew)]&amp;type=tv$INFO[Window(Home).Property(TMDbHelper.Player.TVShow.TMDb_ID),&amp;tmdb_id=,]$INFO[VideoPlayer.TVShowTitle,&amp;query=,]$INFO[VideoPlayer.Season,&amp;season=,]$INFO[VideoPlayer.Episode,&amp;episode=,]$INFO[VideoPlayer.Year,&amp;episode_year=,]</value>
     </variable>
 
+    <variable name="Path_VideoInfo_Generic">
+        <value condition="String.IsEqual(ListItem.DBType,movie)">plugin://plugin.video.themoviedb.helper?tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]&amp;tmdb_type=movie$VAR[Path_Param_Widget]</value>
+        <value condition="String.IsEqual(ListItem.DBType,tvshow)">plugin://plugin.video.themoviedb.helper?tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]&amp;tmdb_type=tv$VAR[Path_Param_Widget]</value>
+        <value condition="String.IsEqual(ListItem.DBType,season)">plugin://plugin.video.themoviedb.helper?tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TVShow.TMDb_ID)]&amp;tmdb_type=tv$INFO[Window(Home).Property(TMDbHelper.ListItem.Season),&amp;season=,]$VAR[Path_Param_Widget]</value>
+        <value condition="String.IsEqual(ListItem.DBType,episode)">plugin://plugin.video.themoviedb.helper?tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TVShow.TMDb_ID)]&amp;tmdb_type=tv$INFO[Window(Home).Property(TMDbHelper.ListItem.Season),&amp;season=,]$INFO[Window(Home).Property(TMDbHelper.ListItem.Episode),&amp;episode=,]$VAR[Path_Param_Widget]</value>
+        <value>-</value>
+    </variable>
+
     <include name="Dimensions_Fullscreen">
         <left>0</left>
         <top>0</top>
