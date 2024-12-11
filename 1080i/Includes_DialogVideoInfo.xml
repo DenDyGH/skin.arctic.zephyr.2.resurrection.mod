@@ -7,7 +7,6 @@
             <right>view_pad</right>
             <include>Object_Info_Arrows</include>
             <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
-            <include>Animation_FadeInOut</include>
             <control type="grouplist" id="9000">
                 <top>-15</top>
                 <left>-15</left>
@@ -84,6 +83,7 @@
                             <param name="label" value="$LOCALIZE[206]" />
                             <param name="labelinclude" value="View_Cast_Label" />
                             <include>Defs_InfoList_OnClick</include>
+                            <include>Defs_InfoList_OnBack</include>
                         </include>
                         <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo)">
                             <param name="id" value="50" />
@@ -91,12 +91,12 @@
                             <param name="label" value="$LOCALIZE[206]" />
                             <param name="labelinclude" value="View_Cast_Label" />
                             <include>Defs_InfoList_OnClick</include>
-                            <content>$VAR[Path_VideoInfo_Generic,,&amp;info=cast&amp;aggregate=true]</content>
+                            <include>Defs_InfoList_OnBack</include>
+                            <content target="videos">$VAR[Path_VideoInfo_Generic,,&amp;info=cast&amp;aggregate=true]</content>
                         </include>
 
                         <!-- Collection / Sets -->
                         <include content="Info_Widget_Poster" condition="Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets)">
-                            <param name="includecondition" value="true" />
                             <param name="id" value="5001" />
                             <param name="groupid" value="7501" />
                             <param name="label" value="$VAR[Label_SetName]" />
@@ -105,7 +105,6 @@
                             <content>$VAR[Def_Set_List]</content>
                         </include>
                         <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets)">
-                            <param name="includecondition" value="true" />
                             <param name="id" value="5001" />
                             <param name="groupid" value="7501" />
                             <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Set.Name)]" />
@@ -115,8 +114,7 @@
                         </include>
 
                         <!-- 1140 Set Cast -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="Window.IsVisible(1140)" />
+                        <include content="Info_Widget_Poster" condition="Window.IsVisible(1140)">
                             <param name="id" value="5077" />
                             <param name="groupid" value="7577" />
                             <param name="labelinclude" value="View_Cast_Label" />
@@ -131,8 +129,7 @@
                         </include>
 
                         <!-- NextUp -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListNextUp)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListNextUp)">
                             <param name="id" value="5047" />
                             <param name="groupid" value="7547" />
                             <param name="label" value="$LOCALIZE[31054]" />
@@ -151,8 +148,7 @@
                         </include>
 
                         <!-- Seasons -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListSeasons)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListSeasons)">
                             <param name="id" value="5008" />
                             <param name="groupid" value="7508" />
                             <param name="label" value="Seasons" />
@@ -166,22 +162,19 @@
                         </include>
 
                         <!-- Director -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListDirector)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListDirector)">
                             <param name="id" value="5004" />
                             <param name="groupid" value="7504" />
-                            <param name="label" value="$INFO[ListItem.Director,$LOCALIZE[31052] ,]" />
+                            <param name="label" value="$LOCALIZE[31052]$VAR[Label_FromDirector, ,]" />
                             <param name="labelinclude" value="View_Cast_Label" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <visible>!String.IsEmpty(ListItem.Director)</visible>
                             <content limit="1">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=details&amp;type=person]$VAR[Path_Param_Widget]</content>
                             <content sortby="year" sortorder="descending">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;type=person&amp;filter_key=job&amp;filter_value=Director]$VAR[Path_Param_Widget]</content>
                         </include>
 
                         <!-- Crew -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListCrew)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListCrew)">
                             <param name="id" value="5011" />
                             <param name="groupid" value="7511" />
                             <param name="label" value="$LOCALIZE[30072]" />
@@ -192,8 +185,7 @@
                         </include>
                         
                         <!-- Extras -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableInfoListExtras)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListExtras)">
                             <param name="id" value="5048" />
                             <param name="groupid" value="7548" />
                             <param name="label" value="$LOCALIZE[31056]" />
@@ -212,8 +204,7 @@
                         </include>
 
                         <!-- Recommended -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListRecommended)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListRecommended)">
                             <param name="id" value="5002" />
                             <param name="groupid" value="7502" />
                             <param name="label" value="$LOCALIZE[30042]" />
@@ -223,56 +214,47 @@
                         </include>
 
                         <!-- Similar -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSimilar)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSimilar)">
                             <param name="id" value="5003" />
                             <param name="groupid" value="7503" />
                             <param name="label" value="$INFO[ListItem.Title,$LOCALIZE[31051] ,]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <visible>!String.IsEmpty(ListItem.IMDBNumber)</visible>
                             <content target="videos">$VAR[Def_Similar_List]</content>
                         </include>
 
                         <!-- Year -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListYear)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListYear)">
                             <param name="id" value="5006" />
                             <param name="groupid" value="7506" />
                             <param name="label" value="$INFO[ListItem.Year,$LOCALIZE[31053] ,]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <visible>!String.IsEmpty(ListItem.Year)</visible>
                             <content>$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),plugin://plugin.video.themoviedb.helper/?info=discover&amp;first_air_date_year=,&amp;vote_count.gte=10]$INFO[Window(Home).Property(TMDbHelper.ListItem.Year),&amp;primary_release_year=,]$VAR[Path_Param_Type,&amp;,]$VAR[Path_Param_Widget]</content>
                         </include>
 
                         <!-- Genre -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListGenre)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListGenre)">
                             <param name="id" value="5007" />
                             <param name="groupid" value="7507" />
                             <param name="label" value="$INFO[ListItem.Genre]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <visible>!String.IsEmpty(ListItem.Genre)</visible>
                             <content target="videos">plugin://plugin.video.themoviedb.helper/?info=discover&amp;type=$VAR[tmdb_type]&amp;with_genres=$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre)]&amp;exclude_key=title&amp;exclude_value=$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]$VAR[Path_Param_Widget]&amp;vote_count.gte=10</content>
                         </include>
 
                         <!-- Studio -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListStudio)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListStudio)">
                             <param name="id" value="5005" />
                             <param name="groupid" value="7505" />
                             <param name="label" value="$VAR[Label_FromStudio]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <visible>!String.IsEmpty(ListItem.Studio)</visible>
                             <content>$VAR[Path_FromStudio,plugin://plugin.video.themoviedb.helper/?info=discover]$VAR[Path_Param_Widget]</content>
                         </include>
 
                         <!-- Youtube -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="System.HasAddon(plugin.video.youtube) + !Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListYouTube)" />
+                        <include content="Info_Widget_Poster" condition="System.HasAddon(plugin.video.youtube) + !Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListYouTube)">
                             <param name="id" value="5049" />
                             <param name="groupid" value="7549" />
                             <param name="label" value="$LOCALIZE[31141]" />
@@ -292,8 +274,7 @@
                         </include>
                         
                         <!-- Posters -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListPosters)" />
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListPosters)">
                             <param name="id" value="5059" />
                             <param name="groupid" value="7559" />
                             <param name="label" value="$LOCALIZE[30043]" />
@@ -306,18 +287,16 @@
                     </control>
                 </control>
 
-                <include content="Info_Gallery">
+                <include content="Info_Gallery" condition="!Skin.HasSetting(DisableInfoListFanarts)">
                     <param name="id" value="6000" />
                     <onleft>noop</onleft>
                     <onright>noop</onright>
-                    <onback condition="Skin.HasSetting(DisableExtendedInfo)">SetFocus(50)</onback>
-                    <onback>SetFocus(5000)</onback>
+                    <onback>SetFocus(50)</onback>
                     <onback>300</onback>
                     <onclick>SetFocus(9569)</onclick>
                     <!-- <include condition="String.IsEmpty(ListItem.Property(tmdb_id)) + [!String.IsEmpty(ListItem.Art(fanart1)) | !String.IsEmpty(ListItem.Art(discart))]">Items_Info_Gallery</include> -->
                     <content target="images">plugin://plugin.video.themoviedb.helper/?info=fanart&amp;type=$VAR[tmdb_type]$VAR[Path_Param_Query]$VAR[Path_Param_Widget]</content>
                     <visible>Integer.IsGreater(Container(6000).NumItems,0) | Container(6000).IsUpdating</visible>
-                    <visible>!Skin.HasSetting(DisableInfoListFanarts)</visible>
                 </include>
                 <control type="group"></control>
             </control>
@@ -369,7 +348,6 @@
             <include content="Object_Info_Arrows">
                 <param name="artworkid" value="750" />
             </include>
-            <include>Animation_FadeInOut</include>
             <control type="grouplist" id="9000">
                 <top>-15</top>
                 <left>-15</left>
@@ -438,59 +416,42 @@
                         <control type="group" id="7599"><height>0</height></control>
                         <!-- List 01 -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="true" />
                             <param name="id" value="5001" />
                             <param name="groupid" value="7501" />
-                            <param name="label" value="Movies as Cast Member" />
+                            <param name="label" value="$LOCALIZE[20342]" />
                             <param name="labelinclude" value="View_Cast_Character_Label" />
-                            <include content="Defs_InfoList_OnClick">
-                                <param name="prevent_del" value="noop" />
-                            </include>
+                            <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=stars_in_movies&amp;limit=80&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]$VAR[Path_Param_Widget]</content>
+                            <onclick condition="Window.IsActive(videoosd)">Dialog.Close(videoosd,true)</onclick>
+                            <onclick condition="Window.IsActive(1142)">Dialog.Close(1142,true)</onclick>
+                            <content>$INFO[ListItem.Property(tmdb_id),plugin://plugin.video.themoviedb.helper/?info=stars_in_movies&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=100&amp;sort_key=release_date]$VAR[Path_Param_Widget]</content>
                         </include>
                         <!-- List 02 -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="true" />
                             <param name="id" value="5002" />
                             <param name="groupid" value="7502" />
-                            <param name="label" value="TV Shows as Cast Member" />
+                            <param name="label" value="$LOCALIZE[20343]" />
                             <param name="labelinclude" value="View_Cast_Character_Label" />
-                            <include content="Defs_InfoList_OnClick">
-                                <param name="prevent_del" value="noop" />
-                            </include>
+                            <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=stars_in_tvshows&amp;limit=80&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]$VAR[Path_Param_Widget]</content>
+                            <onclick condition="Window.IsActive(videoosd)">Dialog.Close(videoosd,true)</onclick>
+                            <onclick condition="Window.IsActive(1142)">Dialog.Close(1142,true)</onclick>
+                            <content>$INFO[ListItem.Property(tmdb_id),plugin://plugin.video.themoviedb.helper/?info=stars_in_tvshows&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=100&amp;sort_key=first_air_date]$VAR[Path_Param_Widget]</content>
                         </include>
                         <!-- List 03 -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="true" />
                             <param name="id" value="5003" />
                             <param name="groupid" value="7503" />
-                            <param name="label" value="Movies as Crew Member" />
+                            <param name="label" value="$LOCALIZE[30072]" />
                             <param name="labelinclude" value="View_Cast_Job_Label" />
-                            <include content="Defs_InfoList_OnClick">
-                                <param name="prevent_del" value="noop" />
-                            </include>
+                            <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=crew_in_movies&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]$VAR[Path_Param_Widget]</content>
+                            <onclick condition="Window.IsActive(videoosd)">Dialog.Close(videoosd,true)</onclick>
+                            <onclick condition="Window.IsActive(1142)">Dialog.Close(1142,true)</onclick>
+                            <content>$INFO[ListItem.Property(tmdb_id),plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=100&amp;sort_key=year]$VAR[Path_Param_Widget]</content>
                         </include>
-                        <!-- List 05 -->
+                        <!-- List 04 -->
                         <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="true" />
-                            <param name="id" value="5005" />
-                            <param name="groupid" value="7505" />
-                            <param name="label" value="TV Shows as Crew Member" />
-                            <param name="labelinclude" value="View_Cast_Job_Label" />
-                            <include content="Defs_InfoList_OnClick">
-                                <param name="prevent_del" value="noop" />
-                            </include>
-                            <include>Defs_InfoList_OnBack</include>
-                            <content target="videos">plugin://plugin.video.themoviedb.helper?info=crew_in_tvshows&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]$VAR[Path_Param_Widget]</content>
-                        </include>
-                        <!-- List 06 -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="true" />
                             <param name="id" value="5006" />
                             <param name="groupid" value="7506" />
                             <param name="label" value="Images" />
