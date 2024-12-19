@@ -1143,7 +1143,6 @@
             <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
-            <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6207)</onup>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
@@ -1165,7 +1164,6 @@
             <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
             <onclick>ActivateWindow(osdaudiosettings)</onclick>
             <include>OSD_Button_OnFocus</include>
-            <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6206)</onup>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
@@ -1180,7 +1178,6 @@
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
             <onclick>ActivateWindow(osdvideosettings)</onclick>
-            <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(7800)</onup>
             <visible>!VideoPlayer.Content(musicvideos) + !Window.IsVisible(musicosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>

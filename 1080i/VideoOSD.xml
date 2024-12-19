@@ -40,9 +40,12 @@
                     <include condition="VideoPlayer.Content(LiveTV)">OSD_LiveTVPosition</include>
                     <itemgap>32</itemgap>
 
-                    <onup condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo)) + !Skin.HasSetting(PlayerScrollSeekbar)">SetProperty(OSDInfo,1,Home)</onup>
+                    <onup condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo)) + !Skin.HasSetting(PlayerScrollSeekbar) + [[!Skin.HasSetting(OSD.DisablePopUpDialogs) + ![Control.HasFocus(18) | Control.HasFocus(10018) | Control.HasFocus(41)]] | Skin.HasSetting(OSD.DisablePopUpDialogs)]">SetProperty(OSDInfo,1,Home)</onup>
                     <onup condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo)) + !Skin.HasSetting(PlayerScrollSeekbar)">ClearProperty(OSDInfo,Home)</onup>
-                    <onup condition="!VideoPlayer.Content(LiveTV) + Skin.HasSetting(PlayerScrollSeekbar)">6501</onup>
+                    <onup condition="!VideoPlayer.Content(LiveTV) + Skin.HasSetting(PlayerScrollSeekbar) + [[!Skin.HasSetting(OSD.DisablePopUpDialogs) + ![Control.HasFocus(18) | Control.HasFocus(10018) | Control.HasFocus(41)]] | Skin.HasSetting(OSD.DisablePopUpDialogs)]">6501</onup>
+                    <onup condition="!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(OSD.DisablePopUpDialogs) + Control.HasFocus(18)">SetFocus(6207)</onup>
+                    <onup condition="!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(OSD.DisablePopUpDialogs) + Control.HasFocus(10018)">SetFocus(6206)</onup>
+                    <onup condition="!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(OSD.DisablePopUpDialogs) + Control.HasFocus(41)">SetFocus(7800)</onup>
                     <ondown condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo)) + !Skin.HasSetting(OSD.DisableCastDialog)">ActivateWindow(1142)</ondown>
                     <ondown condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo)) + Skin.HasSetting(OSD.DisableCastDialog)">Close</ondown>
                     <ondown condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo))">ClearProperty(OSDInfo,Home)</ondown>
