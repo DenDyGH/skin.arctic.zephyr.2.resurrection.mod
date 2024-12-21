@@ -2176,3 +2176,8 @@ msgstr "Kodeki"
 msgctxt "#31504"
 msgid "Disable cast dialog in VideoOSD"
 msgstr "Wyłącz okno z obsadą w VideoOSD"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31505"
+msgid "Disable playlist/episodes dialog in VideoOSD"
+msgstr "Wyłącz okno z playlistą/odcinkami w VideoOSD"

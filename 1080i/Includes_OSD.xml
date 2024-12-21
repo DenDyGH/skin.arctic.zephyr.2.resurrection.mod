@@ -529,7 +529,7 @@
             <visible>!VideoPlayer.Content(musicvideos)</visible>
             <visible>!Window.IsVisible(VideoOSDBookmarks.xml)</visible>
             <visible>!String.IsEmpty(Window(Home).Property(OSDInfo)) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
-            <visible>!Window.IsVisible(1142)</visible>
+            <visible>!Window.IsVisible(1142) + !Window.IsVisible(1143)</visible>
             <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
             <animation effect="fade" start="0" end="100" time="300" condition="![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml)]">WindowOpen</animation>
             <control type="image">
@@ -2139,4 +2139,10 @@
             </control>
         </definition>
     </include>
+
+    <variable name="Action_OSD_Main_OnDown">
+        <value condition="!Skin.HasSetting(OSD.DisableCastDialog)">ActivateWindow(1142)</value>
+        <value condition="$EXP[Exp_OSD_HasPlaylist] + !Skin.HasSetting(OSD.DisableEpisodesDialog)">ActivateWindow(1143)</value>
+        <value>Close</value>
+    </variable>
 </includes>

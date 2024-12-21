@@ -36,6 +36,7 @@
         <param name="groupid" default="7001" />
         <param name="label" default="$INFO[ListItem.Title]" />
         <param name="labelinclude" default="Defs_Null" />
+        <param name="movement" default="6" />
         <definition>
             <include content="View_Cast_Toplabel">
                 <param name="groupid" value="$PARAM[groupid]" />
@@ -57,7 +58,7 @@
                 <param name="visible" value="[Container($PARAM[id]).IsUpdating | !Integer.IsEqual(Container($PARAM[id]).NumItems,0)]" />
                 <animation effect="fade" start="100" end="0" condition="[!Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating]">Conditional</animation>
                 <animation effect="fade" start="100" end="30" time="200" condition="![Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])]">Conditional</animation>
-                <movement>6</movement>
+                <movement>$PARAM[movement]</movement>
                 <nested />
             </include>
         </definition>

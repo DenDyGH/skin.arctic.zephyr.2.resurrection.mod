@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1143">
+    <defaultcontrol always="true">7000</defaultcontrol>
+    <onload>CancelAlarm(osd_timeout,true)</onload>
+    <include>Animation_FadeIn</include>
+    <include>Animation_FadeOut</include>
+    <controls>
+        <control type="image">
+            <height>730</height>
+            <bottom>0</bottom>
+            <texture>common/osd-dim.png</texture>
+        </control>
+        <control type="group">
+            <visible>!Window.IsActive(pvrchannelguide)</visible>
+            <visible>!Window.IsActive(pvrosdchannels)</visible>
+            <visible>!Window.IsActive(videobookmarks)</visible>
+            <visible>!Window.IsActive(1142)</visible>
+
+            <control type="group">
+                <height>400</height>
+                <bottom>100</bottom>
+                <left>30</left>
+                <right>30</right>
+
+                <!-- Episodes List -->
+                <include content="Info_Widget_Poster">
+                    <param name="id" value="7000" />
+                    <param name="label" value="$LOCALIZE[31054]" />
+                    <param name="itemwidth" value="item_landscape_width" />
+                    <param name="iconheight" value="item_icon_height" />
+                    <param name="diffuse" value="diffuse/landscape-wall.png" />
+                    <param name="labelinclude" value="View_Cast_Video_Label" />
+                    <param name="icon" value="$VAR[Image_Landscape]" />
+                    <param name="movement" value="2" />
+                    <content>$VAR[Path_OSD_Episodes]</content>
+                    <top>105</top>
+                    <onup>Close</onup>
+                    <ondown>Close</ondown>
+                    <onfocus>SetProperty(TMDbHelper.WidgetContainer,7000,1143)</onfocus>
+                    <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,1143)</onunfocus>
+                </include>
+            </control>
+        </control>
+    </controls>
+</window>

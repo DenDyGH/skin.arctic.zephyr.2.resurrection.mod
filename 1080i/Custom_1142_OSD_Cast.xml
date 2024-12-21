@@ -18,6 +18,8 @@
             <left>30</left>
             <right>30</right>
             <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+            <visible>!Window.IsActive(videobookmarks)</visible>
+            <visible>!Window.IsActive(1143)</visible>
 
             <!-- Cast List -->
             <include content="Info_Widget_Poster">
@@ -27,8 +29,9 @@
                 <content>$VAR[Path_OSD_Cast]</content>
                 <top>105</top>
                 <onfocus>SetProperty(TMDbHelper.WidgetContainer,6501,1142)</onfocus>
-                <onup condition="Skin.String(VideoOSD.PersonCredits.CastCrew,cast)">PreviousMenu</onup>
-                <ondown condition="Skin.String(VideoOSD.PersonCredits.CastCrew,cast)">PreviousMenu</ondown>
+                <onup>Close</onup>
+                <ondown>Close</ondown>
+                <ondown condition="$EXP[Exp_OSD_HasPlaylist] + !Skin.HasSetting(OSD.DisableEpisodesDialog)">ActivateWindow(1143)</ondown>
                 <onclick>Action(Info)</onclick>
             </include>
         </control>

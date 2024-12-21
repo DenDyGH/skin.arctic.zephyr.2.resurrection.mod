@@ -28,7 +28,7 @@
 
         <control type="group">
             <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
-            <visible>!Window.IsVisible(1142)</visible>
+            <visible>!Window.IsVisible(1142) + !Window.IsVisible(1143)</visible>
             <control type="group">
                 <visible>!Window.IsVisible(DialogSlider.xml)</visible>
                 <visible>!Window.IsVisible(VideoOSDBookmarks.xml)</visible>
@@ -46,8 +46,7 @@
                     <onup condition="!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(OSD.DisablePopUpDialogs) + Control.HasFocus(18)">SetFocus(6207)</onup>
                     <onup condition="!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(OSD.DisablePopUpDialogs) + Control.HasFocus(10018)">SetFocus(6206)</onup>
                     <onup condition="!VideoPlayer.Content(LiveTV) + !Skin.HasSetting(OSD.DisablePopUpDialogs) + Control.HasFocus(41)">SetFocus(7800)</onup>
-                    <ondown condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo)) + !Skin.HasSetting(OSD.DisableCastDialog)">ActivateWindow(1142)</ondown>
-                    <ondown condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo)) + Skin.HasSetting(OSD.DisableCastDialog)">Close</ondown>
+                    <ondown condition="!VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(Home).Property(OSDInfo))">$VAR[Action_OSD_Main_OnDown]</ondown>
                     <ondown condition="!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(Home).Property(OSDInfo))">ClearProperty(OSDInfo,Home)</ondown>
 
                     <onup condition="VideoPlayer.Content(LiveTV)">Close</onup>

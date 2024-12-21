@@ -373,7 +373,7 @@
                         <visible>$PARAM[circle]</visible>
                     </control>
 
-                    <include content="$PARAM[labelinclude]" condition="Window.IsVisible(DialogVideoInfo.xml)">
+                    <include content="$PARAM[labelinclude]" condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(1143)">
                         <param name="bordersize" value="$PARAM[bordersize]" />
                         <param name="diffuse" value="$PARAM[diffuse]" />
                         <param name="iconheight" value="$PARAM[iconheight]" />
@@ -397,7 +397,7 @@
                     </control>
                     <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
                 </control>
-                <include content="$PARAM[labelinclude]" condition="!Window.IsVisible(DialogVideoInfo.xml)">
+                <include content="$PARAM[labelinclude]" condition="!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(1143)">
                     <param name="bordersize" value="$PARAM[bordersize]" />
                     <param name="diffuse" value="$PARAM[diffuse]" />
                     <param name="iconheight" value="$PARAM[iconheight]" />
