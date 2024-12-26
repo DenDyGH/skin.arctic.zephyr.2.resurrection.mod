@@ -98,7 +98,7 @@
             <height>80%</height>
             <centertop>50%</centertop>
             <centerleft>50%</centerleft>
-            <visible>!Control.HasFocus(300) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)</visible>
+            <visible>![Control.HasFocus(300) | Window.IsVisible(settings) | Window.IsVisible(filemanager) | Window.IsVisible(favouritesbrowser) | Window.IsVisible(addonbrowser) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)]</visible>
         </control>
     </include>
 
