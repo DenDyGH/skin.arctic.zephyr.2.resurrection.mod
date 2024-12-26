@@ -117,7 +117,7 @@
     </include>
 
     <include name="Global_Background">
-        <include condition="Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView)">Global_Videowindow</include>
+        <include condition="Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView) | [Skin.HasSetting(HomeMultiFlixView) + !Window.IsVisible(Home.xml)]">Global_Videowindow</include>
         <include condition="!Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView)">Global_Videowindow_Hidden</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
         <control type="group">
