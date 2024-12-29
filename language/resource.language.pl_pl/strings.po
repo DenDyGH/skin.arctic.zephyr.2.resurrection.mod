@@ -1941,7 +1941,7 @@ msgstr "Ukryj przycisk informacji o procesie odtwarzacza"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31456"
-msgid "Show remaining time instead of end time"
+msgid "Show time remaining instead of end time"
 msgstr "Pokaż pozostały czas zamiast godzinę zakończenia"
 
 #: /1080i/Includes_OSD.xml
@@ -2186,3 +2186,8 @@ msgstr "Wyłącz okno z obsadą w VideoOSD"
 msgctxt "#31505"
 msgid "Disable playlist/episodes dialog in VideoOSD"
 msgstr "Wyłącz okno z playlistą/odcinkami w VideoOSD"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31506"
+msgid "Show time remaining instead of duration"
+msgstr "Pokaż pozostały czas zamiast czas trwania"

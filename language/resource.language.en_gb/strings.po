@@ -1966,7 +1966,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31456"
-msgid "Show remaining time instead of end time"
+msgid "Show time remaining instead of end time"
 msgstr ""
 
 #: /1080i/Includes_OSD.xml
@@ -2210,4 +2210,9 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31505"
 msgid "Disable playlist/episodes dialog in VideoOSD"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31506"
+msgid "Show time remaining instead of duration"
 msgstr ""

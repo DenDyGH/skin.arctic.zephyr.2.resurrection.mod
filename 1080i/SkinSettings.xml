@@ -803,11 +803,18 @@
                             <onclick>Skin.ToggleSetting(HidePlayerInfoButton)</onclick>
                         </control>
 
-                        <control type="radiobutton" id="19529" description="Show remaining time instead of end time">
+                        <control type="radiobutton" id="19529" description="Show time remaining instead of end time">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31456]</label>
                             <selected>Skin.HasSetting(ShowTimeRemaining)</selected>
                             <onclick>Skin.ToggleSetting(ShowTimeRemaining)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19533" description="Show time remaining instead of duration">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31506]</label>
+                            <selected>Skin.HasSetting(ShowTimeRemaining2)</selected>
+                            <onclick>Skin.ToggleSetting(ShowTimeRemaining2)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19937" description="Hide extra info background">
