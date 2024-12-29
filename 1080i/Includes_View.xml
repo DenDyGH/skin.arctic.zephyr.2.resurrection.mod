@@ -605,6 +605,7 @@
                     <right>25</right>
                     <font>font_statusbar</font>
                     <textcolor>panel_fg_100</textcolor>
+                    <selectedcolor>panel_fg_100</selectedcolor>
                     <bottom>45</bottom>
                     <height>30</height>
                     <aligny>center</aligny>
@@ -617,6 +618,7 @@
                     <right>25</right>
                     <font>font_statusbar</font>
                     <textcolor>panel_fg_70</textcolor>
+                    <selectedcolor>panel_fg_70</selectedcolor>
                     <height>30</height>
                     <bottom>20</bottom>
                     <aligny>center</aligny>
