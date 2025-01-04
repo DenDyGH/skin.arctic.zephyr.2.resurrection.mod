@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <!-- Defaults -->
-    <variable name="Defs_PercentPlayed" containers="50" types="listitem,listitemposition">
+    <variable name="Defs_PercentPlayed" containers="50" types="listitem">
         <value condition="!String.IsEmpty({listitem}.Property(WatchedEpisodePercent)) + !Integer.IsEqual({listitem}.Property(WatchedEpisodePercent),0) + !Integer.IsEqual({listitem}.Property(WatchedEpisodePercent),100)">$INFO[{listitem}.Property(WatchedEpisodePercent)]</value>
         <value condition="!String.IsEmpty({listitem}.PercentPlayed) + [!Integer.IsEqual({listitem}.PercentPlayed,0) | {listitem}.IsResumable]">$INFO[{listitem}.PercentPlayed]</value>
         <value condition="!String.IsEmpty({listitem}.Property(WatchedProgress)) + !Integer.IsEqual({listitem}.Property(WatchedProgress),0) + !Integer.IsEqual({listitem}.Property(WatchedProgress),100)">$INFO[{listitem}.Property(WatchedProgress)]</value>
-        <value condition="String.IsEqual({listitem}.Overlay,OverlayWatched.png)">100</value>
+        <value condition="[String.IsEqual({listitem}.Overlay,OverlayWatched.png) | !Integer.IsEqual({listitem}.PlayCount,0)]">100</value>
     </variable>
 </includes>

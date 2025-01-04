@@ -5,24 +5,12 @@
         <value condition="!String.IsEmpty(Container(50).ListItem.Property(WatchedEpisodePercent)) + !Integer.IsEqual(Container(50).ListItem.Property(WatchedEpisodePercent),0) + !Integer.IsEqual(Container(50).ListItem.Property(WatchedEpisodePercent),100)">$INFO[Container(50).ListItem.Property(WatchedEpisodePercent)]</value>
         <value condition="!String.IsEmpty(Container(50).ListItem.PercentPlayed) + [!Integer.IsEqual(Container(50).ListItem.PercentPlayed,0) | Container(50).ListItem.IsResumable]">$INFO[Container(50).ListItem.PercentPlayed]</value>
         <value condition="!String.IsEmpty(Container(50).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container(50).ListItem.Property(WatchedProgress),0) + !Integer.IsEqual(Container(50).ListItem.Property(WatchedProgress),100)">$INFO[Container(50).ListItem.Property(WatchedProgress)]</value>
-        <value condition="String.IsEqual(Container(50).ListItem.Overlay,OverlayWatched.png)">100</value>
+        <value condition="[String.IsEqual(Container(50).ListItem.Overlay,OverlayWatched.png) | !Integer.IsEqual(Container(50).ListItem.PlayCount,0)]">100</value>
     </variable>
     <variable name="Defs_PercentPlayed">
         <value condition="!String.IsEmpty(ListItem.Property(WatchedEpisodePercent)) + !Integer.IsEqual(ListItem.Property(WatchedEpisodePercent),0) + !Integer.IsEqual(ListItem.Property(WatchedEpisodePercent),100)">$INFO[ListItem.Property(WatchedEpisodePercent)]</value>
         <value condition="!String.IsEmpty(ListItem.PercentPlayed) + [!Integer.IsEqual(ListItem.PercentPlayed,0) | ListItem.IsResumable]">$INFO[ListItem.PercentPlayed]</value>
         <value condition="!String.IsEmpty(ListItem.Property(WatchedProgress)) + !Integer.IsEqual(ListItem.Property(WatchedProgress),0) + !Integer.IsEqual(ListItem.Property(WatchedProgress),100)">$INFO[ListItem.Property(WatchedProgress)]</value>
-        <value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">100</value>
-    </variable>
-    <variable name="Defs_PercentPlayed_LIP_C50">
-        <value condition="!String.IsEmpty(Container(50).ListItem.Property(WatchedEpisodePercent)) + !Integer.IsEqual(Container(50).ListItem.Property(WatchedEpisodePercent),0) + !Integer.IsEqual(Container(50).ListItem.Property(WatchedEpisodePercent),100)">$INFO[Container(50).ListItem.Property(WatchedEpisodePercent)]</value>
-        <value condition="!String.IsEmpty(Container(50).ListItem.PercentPlayed) + [!Integer.IsEqual(Container(50).ListItem.PercentPlayed,0) | Container(50).ListItem.IsResumable]">$INFO[Container(50).ListItem.PercentPlayed]</value>
-        <value condition="!String.IsEmpty(Container(50).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container(50).ListItem.Property(WatchedProgress),0) + !Integer.IsEqual(Container(50).ListItem.Property(WatchedProgress),100)">$INFO[Container(50).ListItem.Property(WatchedProgress)]</value>
-        <value condition="String.IsEqual(Container(50).ListItem.Overlay,OverlayWatched.png)">100</value>
-    </variable>
-    <variable name="Defs_PercentPlayed_LIP">
-        <value condition="!String.IsEmpty(ListItem.Property(WatchedEpisodePercent)) + !Integer.IsEqual(ListItem.Property(WatchedEpisodePercent),0) + !Integer.IsEqual(ListItem.Property(WatchedEpisodePercent),100)">$INFO[ListItem.Property(WatchedEpisodePercent)]</value>
-        <value condition="!String.IsEmpty(ListItem.PercentPlayed) + [!Integer.IsEqual(ListItem.PercentPlayed,0) | ListItem.IsResumable]">$INFO[ListItem.PercentPlayed]</value>
-        <value condition="!String.IsEmpty(ListItem.Property(WatchedProgress)) + !Integer.IsEqual(ListItem.Property(WatchedProgress),0) + !Integer.IsEqual(ListItem.Property(WatchedProgress),100)">$INFO[ListItem.Property(WatchedProgress)]</value>
-        <value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">100</value>
+        <value condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | !Integer.IsEqual(ListItem.PlayCount,0)]">100</value>
     </variable>
 </includes>
