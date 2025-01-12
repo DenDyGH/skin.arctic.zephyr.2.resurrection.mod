@@ -34,7 +34,7 @@
                     </include>
                     <control type="textbox">
                         <top>5</top>
-                        <label fallback="19055">$VAR[Label_Plot]</label>
+                        <label>$VAR[Label_Plot]</label>
                         <height>120</height>
                         <aligny>top</aligny>
                         <textcolor>main_fg_70</textcolor>

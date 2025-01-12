@@ -1250,7 +1250,6 @@
     <include name="Flix_Object_Info_Line_Label">
         <param name="divider" default="true" />
         <param name="visible" default="true" />
-        <param name="fallback" default="" />
         <param name="font" default="font13" />
         <definition>
             <control type="label">
@@ -1272,7 +1271,7 @@
             </control>
             <control type="label" id="$PARAM[id]">
                 <width>auto</width>
-                <label fallback="$PARAM[fallback]">$PARAM[label]</label>
+                <label>$PARAM[label]</label>
                 <height>40</height>
                 <aligny>top</aligny>
                 <font>$PARAM[font]</font>
@@ -1291,7 +1290,6 @@
     <include name="Object_Info_Line_Label">
         <param name="divider" default="true" />
         <param name="visible" default="true" />
-        <param name="fallback" default="" />
         <definition>
             <control type="label">
                 <width>auto</width>
@@ -1311,7 +1309,7 @@
             </control>
             <control type="label" id="$PARAM[id]">
                 <width>auto</width>
-                <label fallback="$PARAM[fallback]">$PARAM[label]</label>
+                <label>$PARAM[label]</label>
                 <height>40</height>
                 <aligny>top</aligny>
                 <textcolor>$PARAM[textcolor]</textcolor>
@@ -1351,42 +1349,36 @@
                     <param name="font" value="font_title_mini" />
                     <param name="textcolor" value="$PARAM[green]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="!String.IsEmpty(ListItem.Rating) + $PARAM[percentrating]" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Year]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="!String.IsEqual($PARAM[container]ListItem.DBType,set) + !String.IsEqual($PARAM[container]ListItem.DBType,artist) + !String.IsEqual($PARAM[container]ListItem.DBType,album) + !String.IsEqual($PARAM[container]ListItem.DBType,song) + [!String.IsEqual($PARAM[container]ListItem.DBType,episode) | String.IsEmpty($PARAM[container]ListItem.Premiered)]" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Premiered]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,episode) + !String.IsEmpty($PARAM[container]ListItem.Premiered)" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Year)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,set)" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Property(Artist_Genre)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,artist)" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Artist]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,album) | String.IsEqual($PARAM[container]ListItem.DBType,song)" />
                 </include>
 
@@ -1485,35 +1477,30 @@
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Year]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="!String.IsEqual($PARAM[container]ListItem.DBType,set) + !String.IsEqual($PARAM[container]ListItem.DBType,artist) + !String.IsEqual($PARAM[container]ListItem.DBType,album) + !String.IsEqual($PARAM[container]ListItem.DBType,song) + [!String.IsEqual($PARAM[container]ListItem.DBType,episode) | String.IsEmpty($PARAM[container]ListItem.Premiered)]" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Premiered]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,episode) + !String.IsEmpty($PARAM[container]ListItem.Premiered)" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Year)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,set)" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Property(Artist_Genre)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,artist)" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$INFO[$PARAM[container]ListItem.Artist]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
                     <param name="visible" value="String.IsEqual($PARAM[container]ListItem.DBType,album) | String.IsEqual($PARAM[container]ListItem.DBType,song)" />
                 </include>
 
@@ -1684,7 +1671,7 @@
             <control type="textbox">
                 <nested />
                 <top>$PARAM[top]</top>
-                <label fallback="19055">$PARAM[label]</label>
+                <label>$PARAM[label]</label>
                 <height>$PARAM[height]</height>
                 <width max="$PARAM[maxwidth]">$PARAM[width]</width>
                 <aligny>top</aligny>
@@ -1703,7 +1690,7 @@
             <control type="textbox">
                 <nested />
                 <top>10</top>
-                <label fallback="19055">$PARAM[label]</label>
+                <label>$PARAM[label]</label>
                 <height max="$PARAM[maxheight]">$PARAM[height]</height>
                 <aligny>top</aligny>
                 <textcolor>main_fg_70</textcolor>

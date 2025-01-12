@@ -539,8 +539,6 @@
         <value condition="[Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRGuide.xml)]">$VAR[Label_SeasonEpisodeLabel_NoColon,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.EpisodeName,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.Genre,[COLOR=main_fg_100],[/COLOR]]</value>
 
         <value condition="!String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre,[COLOR=main_fg_100],[/COLOR]]</value>
-
-        <value>[COLOR=main_fg_100]$LOCALIZE[19055][/COLOR]</value>
     </variable>
 
     <variable name="Label_Title">
