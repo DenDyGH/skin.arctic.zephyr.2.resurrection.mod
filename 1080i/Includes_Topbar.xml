@@ -87,7 +87,7 @@
             <textcolor>$PARAM[fgcolor]_70</textcolor>
             <label>$VAR[Label_Header_Center]</label>
             <visible>!Control.HasFocus(300) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)</visible>
-            <visible>[Skin.HasSetting(EnableClearlogo) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</visible>
+            <visible>[Skin.HasSetting(EnableClearlogo) + !Skin.HasSetting(TMDBhCrop) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo)) | [Skin.HasSetting(EnableClearlogo) + Skin.HasSetting(TMDBhCrop) + String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.CropImage))]]</visible>
         </control>
         <control type="image">
             <visible>$PARAM[visible]</visible>

@@ -560,7 +560,7 @@
                             <onclick>Skin.ToggleSetting(TMDBhCrop)</onclick>
                             <onclick condition="!Skin.HasSetting(TMDbHelper.EnableCrop)">Skin.SetBool(TMDbHelper.EnableCrop)</onclick>
                             <onclick condition="Skin.HasSetting(TMDbHelper.EnableCrop)">Skin.Reset(TMDbHelper.EnableCrop)</onclick>
-                            <enable>Skin.HasSetting(ShowClearlogo) | Skin.HasSetting(EI_Clearlogo)</enable>
+                            <enable>Skin.HasSetting(ShowClearlogo) | Skin.HasSetting(EI_Clearlogo) | Skin.HasSetting(EnableClearlogo)</enable>
                         </control>
 
                         <control type="radiobutton" id="19408" description="Default list labels">
