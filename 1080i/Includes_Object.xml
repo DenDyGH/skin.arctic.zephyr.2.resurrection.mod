@@ -87,7 +87,7 @@
                 <visible>Control.IsVisible($PARAM[id])</visible>
             </include>
             <include content="Object_Widget_Spotlight">
-                <param name="controltype" value="list" />
+                <param name="controltype" value="fixedlist" />
                 <param name="id" value="$PARAM[id]" />
                 <param name="top" value="52" />
                 <param name="left" value="0" />
@@ -109,6 +109,7 @@
                 <onback>301</onback>
                 <movement>6</movement>
                 <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating">Conditional</animation>
+                <animation effect="fade" start="100" end="30" time="200" condition="![Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])]">Conditional</animation>
                 <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
             </include>
         </definition>
