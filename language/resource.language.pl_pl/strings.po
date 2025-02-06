@@ -2191,3 +2191,8 @@ msgstr "Wyłącz okno z playlistą/odcinkami w VideoOSD"
 msgctxt "#31506"
 msgid "Show time remaining instead of duration"
 msgstr "Pokaż pozostały czas zamiast czas trwania"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31507"
+msgid "Hide info panel"
+msgstr "Ukryj panel z informacjami"

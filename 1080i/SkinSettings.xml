@@ -706,17 +706,27 @@
                             <include>Dialog_Standard_HintLabel</include>
                             <label>$LOCALIZE[31346]</label>
                         </control>
+
                         <control type="radiobutton" id="19502" description="Show detailed info on pause">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31145]</label>
                             <selected>Skin.HasSetting(ShowInfoPaused)</selected>
                             <onclick>Skin.ToggleSetting(ShowInfoPaused)</onclick>
                         </control>
-                        <control type="radiobutton" id="19503" description="Only show seekbar on pressing info">
+
+                        <control type="radiobutton" id="19503" description="Simple on-screen info">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31201]</label>
                             <selected>Skin.HasSetting(DisableOSDInfo)</selected>
                             <onclick>Skin.ToggleSetting(DisableOSDInfo)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19534" description="Simple on-screen info - Hide info panel">
+                            <include>Defs_Settings_Button</include>
+                            <label> - $LOCALIZE[31507]</label>
+                            <selected>Skin.HasSetting(HideOSDInfoPanel)</selected>
+                            <onclick>Skin.ToggleSetting(HideOSDInfoPanel)</onclick>
+                            <enable>Skin.HasSetting(DisableOSDInfo)</enable>
                         </control>
 
                         <control type="radiobutton" id="19504" description="Dont pause on information">

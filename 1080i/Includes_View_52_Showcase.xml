@@ -907,6 +907,7 @@
                 <onleft>523</onleft>
                 <onright>523</onright>
                 <onup>300</onup>
+                <ondown>62</ondown>
                 <centerleft>50%</centerleft>
                 <orientation>horizontal</orientation>
                 <width>1760</width>

@@ -2211,3 +2211,8 @@ msgstr ""
 msgctxt "#31506"
 msgid "Show time remaining instead of duration"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31507"
+msgid "Hide info panel"
+msgstr ""
