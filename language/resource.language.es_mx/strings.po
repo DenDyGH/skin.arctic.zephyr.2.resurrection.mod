@@ -2216,3 +2216,8 @@ msgstr ""
 msgctxt "#31507"
 msgid "Hide info panel"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31508"
+msgid "Blur background for some Flix views only"
+msgstr ""

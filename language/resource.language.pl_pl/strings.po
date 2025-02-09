@@ -2196,3 +2196,8 @@ msgstr "Pokaż pozostały czas zamiast czas trwania"
 msgctxt "#31507"
 msgid "Hide info panel"
 msgstr "Ukryj panel z informacjami"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31508"
+msgid "Blur background for some Flix views only"
+msgstr "Rozmycie tła tylko dla niektórych widoków flix"

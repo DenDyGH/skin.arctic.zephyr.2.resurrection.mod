@@ -30,4 +30,10 @@
     <constant name="dialog_side_grouplist">400</constant>
     <constant name="dialog_right_iconwidth">340</constant>
     <constant name="dialog_settings_grouplist_height">640</constant>
+
+    <!-- FlixArt -->
+    <constant name="flixart_size_w">1280</constant>
+    <constant name="flixart_size_h">720</constant>
+    <!-- Background Fadetime -->
+    <constant name="background_fadetime">400</constant>
 </includes>

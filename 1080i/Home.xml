@@ -13,8 +13,8 @@
 
     <onload>RunScript(script.skinvariables,action=buildviews,no_reload)</onload>
     <onload>Skin.Reset(TMDbHelper.MonitorContainer)</onload>
-    <onload>SetProperty(TMDbHelper.Blur.SourceImage,Art(fanart)|Art(poster),Home)</onload>
-    <onload condition="!Skin.HasSetting(TMDBhCrop)">Skin.Reset(TMDbHelper.EnableCrop)</onload>
+    <onload>SetProperty(TMDbHelper.Blur.SourceImage,Art(fanart),Home)</onload>
+    <onload>SetProperty(TMDbHelper.Blur.Fallback,$VAR[Image_SimpleBackground],Home)</onload>
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
 
     <controls>

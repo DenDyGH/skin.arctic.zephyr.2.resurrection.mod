@@ -286,4 +286,13 @@
         <value condition="!String.IsEmpty(ListItem.Property(iscurrent))">buttons/check-on.png</value>
         <value>buttons/check-off.png</value>
     </variable>
+
+    <variable name="Image_Foreground">
+        <value>$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original)]</value>
+    </variable>
+
+    <variable name="Image_SimpleBackground">
+        <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
+        <value>common/bg2.png</value>
+    </variable>
 </includes>

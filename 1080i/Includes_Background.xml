@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="Background_FlixArt">
+        <param name="flixart_size_w">flixart_size_w</param>
+        <param name="flixart_size_h">flixart_size_h</param>
+        <param name="right">0</param>
+        <param name="diffuse">diffuse/flixart/flixart.png</param>
+        <param name="aspectratio">scale</param>
+        <param name="fadetime">background_fadetime</param>
+        <definition>
+            <control type="image">
+                <fadetime>$PARAM[fadetime]</fadetime>
+                <right>$PARAM[right]</right>
+                <top>0</top>
+                <height>$PARAM[flixart_size_h]</height>
+                <width>$PARAM[flixart_size_w]</width>
+                <aspectratio scalediffuse="false">$PARAM[aspectratio]</aspectratio>
+                <texture background="true" diffuse="$PARAM[diffuse]">$VAR[Image_Foreground]</texture>
+                <animation effect="fade" start="100" end="30" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
+                <include>Background_NotVideo</include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Background_Blur_Quadrants">
+        <control type="group">
+            <!-- Left -->
+            <control type="group">
+                <right>$PARAM[flixart_size_w]</right>
+                <width>150%</width>
+                <!-- Top  -->
+                <control type="image">
+                    <fadetime>$PARAM[fadetime]</fadetime>
+                    <height>$PARAM[flixart_size_h]</height>
+                    <texture background="true" flipx="true" flipy="false">$VAR[Global_Background_Blur_Var]</texture>
+                </control>
+                <!-- Bottom -->
+                <control type="image">
+                    <fadetime>$PARAM[fadetime]</fadetime>
+                    <height>$PARAM[flixart_size_h]</height>
+                    <top>$PARAM[flixart_size_h]</top>
+                    <texture background="true" flipx="true" flipy="true">$VAR[Global_Background_Blur_Var]</texture>
+                </control>
+            </control>
+
+            <!-- Right -->
+            <control type="group">
+                <right>0</right>
+                <width>$PARAM[flixart_size_w]</width>
+                <!-- Top  -->
+                <control type="image">
+                    <fadetime>$PARAM[fadetime]</fadetime>
+                    <height>$PARAM[flixart_size_h]</height>
+                    <texture background="true" flipx="false" flipy="false">$VAR[Global_Background_Blur_Var]</texture>
+                </control>
+                <!-- Bottom -->
+                <control type="image">
+                    <fadetime>$PARAM[fadetime]</fadetime>
+                    <height>$PARAM[flixart_size_h]</height>
+                    <top>$PARAM[flixart_size_h]</top>
+                    <texture background="true" flipx="false" flipy="true">$VAR[Global_Background_Blur_Var]</texture>
+                </control>
+            </control>
+        </control>
+    </include>
+
+    <include name="Background_Blur">
+        <param name="flixart_size_w">flixart_size_w</param>
+        <param name="flixart_size_h">flixart_size_h</param>
+        <param name="fadetime">background_fadetime</param>
+        <definition>
+            <control type="group">
+                <include>Background_NotVideo</include>
+                <include content="Background_Blur_Quadrants" condition="Skin.HasSetting(TMDbHelper.EnableBlur)">
+                    <param name="flixart_size_w">$PARAM[flixart_size_w]</param>
+                    <param name="flixart_size_h">$PARAM[flixart_size_h]</param>
+                    <param name="fadetime">$PARAM[fadetime]</param>
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Background_NotVideo">
+        <param name="fade_end">0</param>
+        <definition>
+            <visible>!Player.HasVideo</visible>
+            <animation effect="fade" start="100" end="0" time="400" tween="sine" easing="in" reversible="false">Hidden</animation>
+            <animation effect="fade" start="0" end="100" time="400" tween="sine" easing="in" reversible="false">Visible</animation>
+        </definition>
+    </include>
+
+    <include name="Background_Video">
+        <control type="group">
+            <description>On-screen videowindow for background video</description>
+            <control type="group">
+                <top>0</top>
+                <height>flixart_size_h</height>
+                <visible>Player.HasVideo</visible>
+                <control type="videowindow">
+                    <right>0</right>
+                    <width>flixart_size_w</width>
+                </control>
+                <control type="image">
+                    <right>0</right>
+                    <width>flixart_size_w</width>
+                    <texture colordiffuse="black">diffuse/flixart/flixart_invert.png</texture>
+                </control>
+                <control type="image">
+                    <left>0</left>
+                    <right>flixart_size_w</right>
+                    <texture colordiffuse="black">common/white.png</texture>
+                </control>
+            </control>
+            <control type="image">
+                <top>flixart_size_h</top>
+                <texture colordiffuse="black">common/white.png</texture>
+            </control>
+        </control>
+    </include>
+
+    <include name="Background_Main_Plain">
+        <control type="group">
+            <description>Plain background used to prevent fadetime transitions</description>
+            <include content="Background_Blur">
+                <param name="fadetime">0</param>
+            </include>
+            <include content="Background_FlixArt">
+                <param name="fadetime">background_fadetime</param>
+            </include>
+        </control>
+    </include>
+
+    <include name="Background_Main_Overlay">
+        <control type="image">
+            <texture colordiffuse="ff000000">background/combined_flixart.png</texture>
+        </control>
+        <control type="image">
+            <texture colordiffuse="4D000000">background/combined_overlay.png</texture>
+        </control>
+    </include>
+
+    <include name="Background_Main">
+        <definition>
+            <include condition="Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_Video</include>
+            <include>Background_Main_Plain</include>
+            <include>Background_Main_Overlay</include>
+        </definition>
+    </include>
+
+    <include name="Background_FlixArt_Basic">
+        <definition>
+            <control type="group">
+                <control type="multiimage">
+                    <include>Defs_TimePerImage</include>
+                    <randomize>true</randomize>
+                    <top>0</top>
+                    <left>560</left>
+                    <width>1366</width>
+                    <height>768</height>
+                    <aspectratio>scale</aspectratio>
+                    <fadetime>600</fadetime>
+                    <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
+                    <animation effect="fade" start="100" end="75" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay)">Conditional</animation>
+                    <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)] + $EXP[Exp_GlobalBackground]</visible>
+                </control>
+                <control type="multiimage">
+                    <include>Defs_TimePerImage</include>
+                    <randomize>true</randomize>
+                    <width>1920</width>
+                    <height>1080</height>
+                    <aspectratio>scale</aspectratio>
+                    <imagepath background="true">common/vignette-flix-basic.png</imagepath>
+                    <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]</visible>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Background_FlixArt_Basic_Home">
+        <definition>
+            <control type="group">
+                <control type="multiimage">
+                    <include>Defs_TimePerImage</include>
+                    <randomize>true</randomize>
+                    <top>0</top>
+                    <left>560</left>
+                    <width>1366</width>
+                    <height>768</height>
+                    <aspectratio>scale</aspectratio>
+                    <fadetime>600</fadetime>
+                    <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
+                    <animation effect="fade" start="100" end="75" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + !Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
+                    <animation effect="fade" start="100" end="30" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
+                    <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <visible>Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml) + !Player.HasVideo</visible>
+                </control>
+                <control type="multiimage">
+                    <include>Defs_TimePerImage</include>
+                    <randomize>true</randomize>
+                    <width>1920</width>
+                    <height>1080</height>
+                    <aspectratio>scale</aspectratio>
+                    <imagepath background="true">common/vignette-flix-basic.png</imagepath>
+                    <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+                    <visible>Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)</visible>
+                </control>
+            </control>
+        </definition>
+    </include>
+</includes>
