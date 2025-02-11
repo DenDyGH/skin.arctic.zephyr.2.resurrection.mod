@@ -172,7 +172,7 @@
         <alttexturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</alttexturefocus>
     </include>
 
-    <include name="Dialog_ColorPicker_WatchedIndicator_Group">
+    <!-- <include name="Dialog_ColorPicker_WatchedIndicator_Group">
         <param name="colordiffuse" default="$VAR[ColorWatchedProgress]" />
         <definition>
             <control type="grouplist">
@@ -209,9 +209,9 @@
                 </include>
             </control>
         </definition>
-    </include>
+    </include> -->
 
-    <include name="Dialog_ColorPicker_WatchedIndicator">
+    <!-- <include name="Dialog_ColorPicker_WatchedIndicator">
         <param name="selected" default="false" />
         <param name="progress" default="100" />
         <param name="colordiffuse-progress" default="$VAR[ColorWatchedProgress]" />
@@ -251,7 +251,7 @@
                 </control>
             </control>
         </definition>
-    </include>
+    </include> -->
 
     <include name="Dialog_ColorPicker_SwatchLabel">
         <control type="label">

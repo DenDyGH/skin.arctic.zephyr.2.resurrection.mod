@@ -105,7 +105,7 @@
                     <itemgap>0</itemgap>
                     <usecontrolcoords>true</usecontrolcoords>
                     <!-- Watched Preview -->
-                    <control type="group">
+                    <!-- <control type="group">
                         <left>40</left>
                         <right>40</right>
                         <height>140</height>
@@ -121,7 +121,7 @@
                             <param name="colordiffuse" value="$INFO[Container(3110).ListItem.Label]" />
                             <visible>Control.HasFocus(3110)</visible>
                         </include>
-                    </control>
+                    </control> -->
 
                     <!-- Gradient Preview -->
                     <control type="group">

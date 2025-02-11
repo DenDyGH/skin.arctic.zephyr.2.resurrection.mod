@@ -850,4 +850,13 @@
         </definition>
     </include>
 
+    <include name="Defs_Pad">
+        <param name="pad" default="5" />
+        <definition>
+            <left>$PARAM[pad]</left>
+            <right>$PARAM[pad]</right>
+            <bottom>$PARAM[pad]</bottom>
+            <top>$PARAM[pad]</top>
+        </definition>
+    </include>
 </includes>
