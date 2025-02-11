@@ -668,12 +668,13 @@
                         <height>item_list_height</height>
                         <include>Animation_Left</include>
                         <visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(3002)</visible>
+                        <visible>!Skin.HasSetting(Home.HideHeader)</visible>
                     </control>
                     <control type="panel" id="302">
                         <include>Animation_Left</include>
                         <visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(3002)</visible>
-                        <onup>3002</onup>
-                        <ondown>3002</ondown>
+                        <onup condition="!Skin.HasSetting(Home.HideHeader)">3002</onup>
+                        <ondown condition="!Skin.HasSetting(Home.HideHeader)">3002</ondown>
                         <onleft>301</onleft>
                         <onright>301</onright>
                         <onback>301</onback>
@@ -684,7 +685,7 @@
                         <width>257.14</width>
                         <onright>3000</onright>
                         <orientation>vertical</orientation>
-                        <itemlayout width="257.14" height="item_list_height">
+                        <itemlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                             <control type="label">
                                 <right>40</right>
                                 <font>font_submenu_small</font>
@@ -694,7 +695,7 @@
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>
-                        <focusedlayout width="257.14" height="item_list_height">
+                        <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                             <control type="label">
                                 <right>40</right>
                                 <font>font_submenu</font>
@@ -702,6 +703,26 @@
                                 <aligny>center</aligny>
                                 <textcolor>main_fg_100</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </focusedlayout>
+                        <itemlayout width="400" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
+                            <control type="image">
+                                <centertop>53%</centertop>
+                                <height>64</height>
+                                <right>330</right>
+                                <aspectratio>keep</aspectratio>
+                                <width>item_list_height</width>
+                                <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="400" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
+                            <control type="image">
+                                <centertop>53%</centertop>
+                                <height>64</height>
+                                <right>330</right>
+                                <aspectratio>keep</aspectratio>
+                                <width>item_list_height</width>
+                                <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
                             </control>
                         </focusedlayout>
                         <content>

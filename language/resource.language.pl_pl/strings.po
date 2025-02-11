@@ -2201,3 +2201,8 @@ msgstr "Ukryj panel z informacjami"
 msgctxt "#31508"
 msgid "Blur background for some Flix views only"
 msgstr "Rozmycie tła tylko dla niektórych widoków flix"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31509"
+msgid "Hide header"
+msgstr "Ukryj nagłówek"
