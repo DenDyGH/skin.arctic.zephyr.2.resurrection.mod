@@ -550,11 +550,17 @@
                 <onright condition="!String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">3000</onright>
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Settings)">5000</onright>
                 <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">6000</onright>
-                <top>293</top>
-                <left>62</left>
+                <include content="Defs_Margins" condition="!Skin.HasSetting(DisabledProfileInfo)">
+                    <param name="top" value="293" />
+                    <param name="left" value="62" />
+                </include>
+                <include content="Defs_Margins_Centertop" condition="Skin.HasSetting(DisabledProfileInfo)">
+                    <param name="centertop" value="50%" />
+                    <param name="left" value="32" />
+                </include>
                 <width>714</width>
                 <height>787</height>
-                <onup>303</onup>
+                <onup condition="!Skin.HasSetting(DisabledProfileInfo)">303</onup>
                 <orientation>vertical</orientation>
                 <itemlayout width="714" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(VerticalIconsOnly)">
                     <control type="label">
@@ -562,7 +568,7 @@
                         <font>font_topbar_small</font>
                         <align>left</align>
                         <aligny>center</aligny>
-                        <textcolor>main_fg_100</textcolor>
+                        <textcolor>main_fg_30</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
@@ -584,15 +590,16 @@
                         <left>0</left>
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
-                        <texture colordiffuse="main_fg_100">$INFO[ListItem.Icon]</texture>
-                        <animation effect="slide" start="0" end="444" time="200" reversible="false" condition="ControlGroup(3000).HasFocus() + !Skin.HasSetting(FlixHideMenu)">Conditional</animation>
+                        <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
+                        <animation effect="slide" start="0" end="444" time="200" reversible="false" condition="ControlGroup(3000).HasFocus() + !Skin.HasSetting(FlixHideMenu) + !Skin.HasSetting(DisabledProfileInfo)">Conditional</animation>
+                        <animation effect="slide" start="0" end="484" time="200" reversible="false" condition="ControlGroup(3000).HasFocus() + !Skin.HasSetting(FlixHideMenu) + Skin.HasSetting(DisabledProfileInfo)">Conditional</animation>
                     </control>
                     <control type="label">
                         <left>80</left>
                         <font>font_topbar_small</font>
                         <align>left</align>
                         <aligny>center</aligny>
-                        <textcolor>main_fg_100</textcolor>
+                        <textcolor>main_fg_30</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
@@ -623,7 +630,8 @@
                         <aspectratio>keep</aspectratio>
                         <width>item_list_height</width>
                         <texture colordiffuse="main_fg_30">$INFO[ListItem.Icon]</texture>
-                        <animation effect="slide" start="0" end="454" time="200" reversible="false" condition="ControlGroup(3000).HasFocus() + !Skin.HasSetting(FlixHideMenu)">Conditional</animation>
+                        <animation effect="slide" start="0" end="454" time="200" reversible="false" condition="ControlGroup(3000).HasFocus() + !Skin.HasSetting(FlixHideMenu) + !Skin.HasSetting(DisabledProfileInfo)">Conditional</animation>
+                        <animation effect="slide" start="0" end="484" time="200" reversible="false" condition="ControlGroup(3000).HasFocus() + !Skin.HasSetting(FlixHideMenu) + Skin.HasSetting(DisabledProfileInfo)">Conditional</animation>
                     </control>
                 </itemlayout>
                 <focusedlayout width="400" height="item_list_height" condition="!Skin.HasSetting(HomeIcons) + Skin.HasSetting(VerticalIconsOnly)">
@@ -691,7 +699,7 @@
                                 <font>font_submenu_small</font>
                                 <align>right</align>
                                 <aligny>center</aligny>
-                                <textcolor>main_fg_100</textcolor>
+                                <textcolor>main_fg_30</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>

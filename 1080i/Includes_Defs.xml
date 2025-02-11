@@ -859,4 +859,18 @@
             <top>$PARAM[pad]</top>
         </definition>
     </include>
+
+    <include name="Defs_Margins">
+        <left>$PARAM[left]</left>
+        <right>$PARAM[right]</right>
+        <top>$PARAM[top]</top>
+        <bottom>$PARAM[bottom]</bottom>
+    </include>
+
+    <include name="Defs_Margins_Centertop">
+        <left>$PARAM[left]</left>
+        <right>$PARAM[right]</right>
+        <centertop>$PARAM[centertop]</centertop>
+        <bottom>$PARAM[bottom]</bottom>
+    </include>
 </includes>
