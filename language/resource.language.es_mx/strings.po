@@ -2221,3 +2221,8 @@ msgstr ""
 msgctxt "#31508"
 msgid "Blur background for some Flix views only"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31509"
+msgid "Hide header"
+msgstr ""
