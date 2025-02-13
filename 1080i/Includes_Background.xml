@@ -17,7 +17,7 @@
                 <width>$PARAM[flixart_size_w]</width>
                 <aspectratio scalediffuse="false">$PARAM[aspectratio]</aspectratio>
                 <texture background="true" diffuse="$PARAM[diffuse]">$VAR[Image_Foreground]</texture>
-                <animation effect="fade" start="100" end="30" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
+                <animation effect="fade" start="100" end="30" reversible="false" condition="Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
                 <include>Background_NotVideo</include>
             </control>
         </definition>
@@ -161,7 +161,7 @@
                     <aspectratio>scale</aspectratio>
                     <fadetime>600</fadetime>
                     <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
-                    <animation effect="fade" start="100" end="75" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay)">Conditional</animation>
+                    <animation effect="fade" start="100" end="75" reversible="false" condition="true">Conditional</animation>
                     <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                     <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                     <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)] + $EXP[Exp_GlobalBackground]</visible>
@@ -194,8 +194,8 @@
                     <aspectratio>scale</aspectratio>
                     <fadetime>600</fadetime>
                     <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
-                    <animation effect="fade" start="100" end="75" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + !Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
-                    <animation effect="fade" start="100" end="30" reversible="false" condition="!Skin.HasSetting(DisableBackgroundOverlay) + Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
+                    <animation effect="fade" start="100" end="75" reversible="false" condition="!Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
+                    <animation effect="fade" start="100" end="30" reversible="false" condition="Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
                     <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                     <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                     <visible>Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml) + !Player.HasVideo</visible>

@@ -1810,11 +1810,6 @@ msgid "Color Highlight"
 msgstr "Color de Resaltado"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#30099"
-msgid "Disable background overlay"
-msgstr "Deshabilitar la superposición de fondo"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#30100"
 msgid "Disable skin splash art on startup"
 msgstr "Deshabilitar Logo de skin en el inicio"

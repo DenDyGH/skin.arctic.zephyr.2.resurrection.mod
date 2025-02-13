@@ -1810,11 +1810,6 @@ msgid "Color Highlight"
 msgstr "Színes kiemelés"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#30099"
-msgid "Disable background overlay"
-msgstr "Háttér elmosás tiltása"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#30100"
 msgid "Disable skin splash art on startup"
 msgstr "Felszín betöltőkép tiltása indításkor"
