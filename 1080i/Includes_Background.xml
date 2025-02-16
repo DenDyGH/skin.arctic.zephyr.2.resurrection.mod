@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <include name="Background_Notification_Overlay">
+        <param name="colordiffuse">main_bg_70</param>
+        <definition>
+            <control type="image">
+                <right>0</right>
+                <top>0</top>
+                <height>50%</height>
+                <width>100%</width>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="$PARAM[colordiffuse]">shadows/cornerspot.png</texture>
+                <animation effect="fade" start="0" end="100" delay="150" time="300" tween="sine" easing="in" reversible="true" condition="true">Visible</animation>
+                <animation effect="fade" start="100" end="0" delay="0" time="300" tween="sine" easing="in" reversible="true" condition="true">Hidden</animation>
+            </control>
+        </definition>
+    </include>
+
     <include name="Background_FlixArt">
         <param name="flixart_size_w">flixart_size_w</param>
         <param name="flixart_size_h">flixart_size_h</param>
@@ -17,7 +33,6 @@
                 <width>$PARAM[flixart_size_w]</width>
                 <aspectratio scalediffuse="false">$PARAM[aspectratio]</aspectratio>
                 <texture background="true" diffuse="$PARAM[diffuse]">$VAR[Image_Foreground]</texture>
-                <animation effect="fade" start="100" end="30" reversible="false" condition="Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
                 <include>Background_NotVideo</include>
             </control>
         </definition>
@@ -135,8 +150,12 @@
         <control type="image">
             <texture colordiffuse="ff000000">background/combined_flixart.png</texture>
         </control>
+        <include>Background_Notification_Overlay</include>
         <control type="image">
-            <texture colordiffuse="4D000000">background/combined_overlay.png</texture>
+            <visible>[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)]</visible>
+            <texture colordiffuse="ff000000">background/combined_overlay.png</texture>
+            <animation effect="fade" start="0" end="100" delay="0" time="400" tween="sine" easing="in" reversible="false" condition="true">Visible</animation>
+            <animation effect="fade" start="100" end="0" delay="0" time="300" tween="sine" easing="in" reversible="false" condition="true">Hidden</animation>
         </control>
     </include>
 
