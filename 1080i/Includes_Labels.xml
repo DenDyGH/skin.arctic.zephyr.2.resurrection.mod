@@ -375,12 +375,12 @@
 
     <variable name="Label_OSD_Time">
         <value condition="PVR.IsPlayingTV + !String.IsEmpty(PVR.EpgEventElapsedTime)">$INFO[PVR.EpgEventElapsedTime]</value>
-        <value condition="Skin.HasSetting(ShowTimeRemaining2) + !String.IsEmpty(Player.TimeRemaining)">$INFO[Player.TimeRemaining]</value>
         <value>$INFO[Player.Time]</value>
     </variable>
 
     <variable name="Label_OSD_Duration">
         <value condition="PVR.IsPlayingTV + !String.IsEmpty(PVR.EpgEventDuration)">$INFO[PVR.EpgEventDuration]</value>
+        <value condition="Skin.HasSetting(ShowTimeRemaining2) + !String.IsEmpty(Player.TimeRemaining)">$INFO[Player.TimeRemaining]</value>
         <value>$INFO[Player.Duration]</value>
     </variable>
     
