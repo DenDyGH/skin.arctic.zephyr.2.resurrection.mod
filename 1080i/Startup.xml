@@ -19,8 +19,6 @@
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(HomeMultiVertical)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(HomeMulti)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(Icons,monochrome)</onload>
-    <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(homebackgroundimage,special://skin/media/common/bg2.jpg)</onload>
-    <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(fanart.fallback,special://skin/media/common/bg2.jpg)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(PosterHighlight,Mix)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(SkinInit)</onload>

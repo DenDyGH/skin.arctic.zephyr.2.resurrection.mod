@@ -15,6 +15,8 @@
     <onload>Skin.Reset(TMDbHelper.MonitorContainer)</onload>
     <onload>SetProperty(TMDbHelper.Blur.SourceImage,Art(fanart),Home)</onload>
     <onload>SetProperty(TMDbHelper.Blur.Fallback,$VAR[Image_SimpleBackground],Home)</onload>
+    <onload condition="String.IsEqual(Skin.String(HomeBackgroundImage),special://skin/media/common/bg2.jpg)">Skin.Reset(HomeBackgroundImage)</onload>
+    <onload condition="String.IsEqual(Skin.String(fanart.fallback),special://skin/media/common/bg2.jpg)">Skin.Reset(fanart.fallback)</onload>
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
 
     <controls>

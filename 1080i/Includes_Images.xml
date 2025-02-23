@@ -293,6 +293,6 @@
 
     <variable name="Image_SimpleBackground">
         <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
-        <value>common/bg2.png</value>
+        <value>common/bg2.jpg</value>
     </variable>
 </includes>
