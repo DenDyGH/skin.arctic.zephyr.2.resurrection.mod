@@ -747,8 +747,9 @@
         </font>
         <font>
             <name>font_medium_bold</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>38</size>
+            <style>bold</style>
         </font>
         <font>
             <name>font_small</name>
@@ -757,14 +758,16 @@
         </font>
         <font>
             <name>font_small_mono</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>30</size>
             <aspect>0.8</aspect>
+            <style>bold</style>
         </font>
         <font>
             <name>font_small_bold</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>30</size>
+            <style>bold</style>
         </font>
         <font>
             <name>font_tiny</name>
@@ -773,8 +776,9 @@
         </font>
         <font>
             <name>font_tiny_bold</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>26</size>
+            <style>bold</style>
         </font>
         <font>
             <name>font_button</name>
@@ -799,19 +803,21 @@
         </font>
         <font>
             <name>font_statusbar_bold</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>22</size>
+            <style>bold</style>
         </font>
         <font>
             <name>font_info_buttons</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>20</size>
-            <style>uppercase</style>
+            <style>uppercase bold</style>
         </font>
         <font>
             <name>font_unwatched</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>16</size>
+            <style>bold</style>
         </font>
         <font>
             <name>font_mini</name>
@@ -840,26 +846,27 @@
         <!-- Music visualisation info -->
         <font>
             <name>font_lyrics_bold</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>70</size>
+            <style>bold</style>
         </font>
 
         <font>
             <name>font_splash</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>80</size>
             <style>bold</style>
         </font>
         <!-- Big weather temp -->        
         <font>
             <name>font_weather_currenttemp</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>150</size>
             <style>bold</style>
         </font>
         <font>
             <name>font_weather_bold</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>38</size>
             <style>bold</style>
         </font>
@@ -867,7 +874,7 @@
         <!-- Plot info overlay -->
         <font>
             <name>font_overlay_title</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>100</size>
             <aspect>0.9</aspect>
             <style>bold</style>
@@ -877,42 +884,42 @@
         <!-- Showcase title font -->
         <font>
             <name>font_title_large</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>64</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_title_medium</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>52</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_title</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>48</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_title_small</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>40</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_title_mini</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>30</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_topbar</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>40</size>
             <aspect>0.9</aspect>
             <style>bold</style>
@@ -924,7 +931,7 @@
         </font>
         <font>
             <name>font_submenu</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>30</size>
             <aspect>0.9</aspect>
             <style>bold</style>
@@ -936,7 +943,7 @@
         </font>
         <font>
             <name>font_notification</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>30</size>
             <aspect>0.9</aspect>
             <style>bold</style>
@@ -964,8 +971,9 @@
         </font>
         <font>
             <name>Clock</name>
-            <filename>arialbd.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>130</size>
+            <style>bold</style>
         </font>
 
         <include>VideoLyrics_Fonts</include>
