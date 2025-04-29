@@ -737,7 +737,7 @@ msgstr "Nome sezione"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31149"
-msgid "Clock and weather"
+msgid "Clock and weather in all windows (except home)"
 msgstr "Ora e meteo"
 
 msgctxt "#31150"
@@ -2216,4 +2216,9 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31509"
 msgid "Hide header"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31510"
+msgid "Clock and weather in home window"
 msgstr ""

@@ -736,8 +736,8 @@ msgstr "Nazwa sekcji"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31149"
-msgid "Clock and weather"
-msgstr "Zegar i pogoda"
+msgid "Clock and weather in all windows (except home)"
+msgstr "Zegar i pogoda we wszystkich oknach (oprócz głównego)"
 
 msgctxt "#31150"
 msgid "Home background image"
@@ -2201,3 +2201,8 @@ msgstr "Rozmycie tła tylko dla niektórych widoków flix"
 msgctxt "#31509"
 msgid "Hide header"
 msgstr "Ukryj nagłówek"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31510"
+msgid "Clock and weather in home window"
+msgstr "Zegar i pogoda w oknie głównym"

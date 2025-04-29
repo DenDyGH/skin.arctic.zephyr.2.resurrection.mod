@@ -1089,6 +1089,13 @@
                             <onclick>Skin.ToggleSetting(DisableClock)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19537" description="Clock home window">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31510]</label>
+                            <selected>!Skin.HasSetting(DisableClockHome)</selected>
+                            <onclick>Skin.ToggleSetting(DisableClockHome)</onclick>
+                        </control>
+
                         <control type="radiobutton" id="19945" description="Show date">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31477]</label>

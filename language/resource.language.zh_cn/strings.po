@@ -742,7 +742,7 @@ msgstr "版块名称"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31149"
-msgid "Clock and weather"
+msgid "Clock and weather in all windows (except home)"
 msgstr "时钟和天气"
 
 msgctxt "#31150"
@@ -2238,3 +2238,8 @@ msgstr "仅对部分 Flix 视图模糊背景"
 msgctxt "#31509"
 msgid "Hide header"
 msgstr "隐藏页眉"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31510"
+msgid "Clock and weather in home window"
+msgstr ""

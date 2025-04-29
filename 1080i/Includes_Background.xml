@@ -150,7 +150,7 @@
         <control type="image">
             <texture colordiffuse="ff000000">background/combined_flixart.png</texture>
         </control>
-        <include condition="[[!Skin.HasSetting(HomeMultiFlixView)] | [Skin.HasSetting(HomeMultiFlixView) + !Window.IsVisible(Home)]] + [!Skin.HasSetting(DisableClock) | Skin.HasSetting(ShowDate)]">Background_Notification_Overlay</include>
+        <include condition="[!Skin.HasSetting(DisableClockHome) + Window.IsVisible(Home)] | [!Window.IsVisible(Home) + [!Skin.HasSetting(DisableClock) | Skin.HasSetting(ShowDate)]]">Background_Notification_Overlay</include>
         <control type="image">
             <visible>[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)]</visible>
             <texture colordiffuse="ff000000">background/combined_overlay.png</texture>
