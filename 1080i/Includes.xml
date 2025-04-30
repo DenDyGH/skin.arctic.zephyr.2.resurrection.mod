@@ -227,4 +227,25 @@
     <include name="AutoCompletion">
         <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
     </include>
+
+    <include name="RSS_Feeds">
+        <visible>Window.IsVisible(Home)</visible>
+        <control type="image">
+            <bottom>0</bottom>
+            <height>70</height>
+            <texture>common/osd-dim.png</texture>
+            <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
+        </control>
+        <control type="rss">
+            <left>0</left>
+            <bottom>12</bottom>
+            <height>32</height>
+            <right>0</right>
+            <font>font_tiny</font>
+            <textcolor>main_fg_70</textcolor>
+            <headlinecolor>main_fg_70</headlinecolor>
+            <titlecolor>main_fg_100</titlecolor>
+            <shadowcolor>Shadow</shadowcolor>
+        </control>
+    </include>
 </includes>

@@ -76,6 +76,7 @@
             <include condition="Skin.HasSetting(HomeMultiVertical) | ![Skin.HasSetting(HomeMultiFlixView) | Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiHorizontal) | Skin.HasSetting(HomeBasic)]">Home_Multi_Vertical</include>
             <include condition="Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Horizontal</include>
             <include condition="Skin.HasSetting(HomeBasic)">Home_Simple</include>
+            <include condition="System.GetBool(lookandfeel.enablerssfeeds) + [!Window.IsVisible(screencalibration) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(slideshow)]">RSS_Feeds</include>
         </control>
         <include>Object_PlotOverlay</include>
 
