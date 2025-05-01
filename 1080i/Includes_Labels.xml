@@ -312,8 +312,8 @@
         <value>$INFO[ListItem.Label]</value>
     </variable>
     <variable name="Label_List_Right">
-        <value condition="[String.IsEqual(Container.SortMethod,$LOCALIZE[562]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[552])] + !Skin.HasSetting(ItemDuration_ListView)">$INFO[ListItem.Rating]</value>
-        <value condition="[String.IsEqual(Container.SortMethod,$LOCALIZE[562]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[552])] + Skin.HasSetting(ItemDuration_ListView)">$INFO[ListItem.Duration]</value>
+        <value condition="!Skin.HasSetting(ItemDuration_ListView) + !String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]</value>
+        <value condition="Skin.HasSetting(ItemDuration_ListView) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration]</value>
         <value>$INFO[ListItem.Label2]</value>
     </variable>
 

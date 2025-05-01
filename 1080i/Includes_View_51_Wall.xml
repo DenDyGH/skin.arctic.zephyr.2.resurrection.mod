@@ -78,7 +78,7 @@
             <font>font_statusbar</font>
             <selectedcolor>main_fg_100</selectedcolor>
             <textcolor>main_fg_100</textcolor>
-            <top>$PARAM[iconheight]</top>
+            <top>370</top>
             <bottom>25</bottom>
             <aligny>center</aligny>
             <align>left</align>
@@ -90,11 +90,11 @@
             <font>font_statusbar</font>
             <selectedcolor>main_fg_100</selectedcolor>
             <textcolor>main_fg_100</textcolor>
-            <top>$PARAM[iconheight]</top>
+            <top>370</top>
             <bottom>25</bottom>
             <aligny>center</aligny>
             <align>right</align>
-            <label>$INFO[ListItem.Label2]</label>
+            <label>$VAR[Label_List_Right]</label>
         </control>
     </include>
 
@@ -373,7 +373,7 @@
                         <visible>$PARAM[circle]</visible>
                     </control>
 
-                    <include content="$PARAM[labelinclude]" condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(1143)">
+                    <include content="$PARAM[labelinclude]">
                         <param name="bordersize" value="$PARAM[bordersize]" />
                         <param name="diffuse" value="$PARAM[diffuse]" />
                         <param name="iconheight" value="$PARAM[iconheight]" />
@@ -397,7 +397,7 @@
                     </control>
                     <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
                 </control>
-                <include content="$PARAM[labelinclude]" condition="!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(1143)">
+                <!-- <include content="$PARAM[labelinclude]" condition="!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(1143)">
                     <param name="bordersize" value="$PARAM[bordersize]" />
                     <param name="diffuse" value="$PARAM[diffuse]" />
                     <param name="iconheight" value="$PARAM[iconheight]" />
@@ -407,7 +407,7 @@
                     <param name="textfade_start" value="$PARAM[textfade_start]" />
                     <param name="id" value="$PARAM[id]" />
                     <param name="selectbox" value="$PARAM[selectbox]" />
-                </include>
+                </include> -->
 
                 <control type="group">
                     <height>$PARAM[iconheight]</height>
@@ -868,7 +868,7 @@
                 <param name="diffuse" value="diffuse/landscape-small-wall.png" />
                 <param name="viewtype" value="Landscape Wall Small" />
                 <param name="viewtypename" value="wide" />
-                <param name="labelinclude" value="Defs_Null" />
+                <param name="labelinclude" value="View_Inside_Label" />
                 <param name="visible" value="$EXP[Exp_View_515] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
