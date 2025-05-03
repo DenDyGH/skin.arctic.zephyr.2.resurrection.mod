@@ -1033,6 +1033,7 @@
                 <texturebg colordiffuse="00ffffff">progress/marker-bg.png</texturebg>
                 <righttexture colordiffuse="panel_fg_50">progress/marker.png</righttexture>
                 <info>Player.CutList</info>
+                <visible>!Skin.HasSetting(HideChaptersMark)</visible>
             </control>
             <control type="ranges">
                 <width>100%</width>
@@ -1040,6 +1041,7 @@
                 <texturebg colordiffuse="00ffffff">progress/marker-bg.png</texturebg>
                 <righttexture colordiffuse="panel_fg_50">progress/marker.png</righttexture>
                 <info>Player.Chapters</info>
+                <visible>!Skin.HasSetting(HideChaptersMark)</visible>
             </control>
         </control>
     </include>

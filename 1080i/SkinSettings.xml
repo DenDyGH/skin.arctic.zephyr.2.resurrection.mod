@@ -803,7 +803,14 @@
                             <selected>Skin.HasSetting(HideChaptersButton)</selected>
                             <onclick>Skin.ToggleSetting(HideChaptersButton)</onclick>
                         </control>
-                
+
+                        <control type="radiobutton" id="19538" description="Hide chapters mark">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31511]</label>
+                            <selected>Skin.HasSetting(HideChaptersMark)</selected>
+                            <onclick>Skin.ToggleSetting(HideChaptersMark)</onclick>
+                        </control>
+
                         <control type="radiobutton" id="19526" description="Hide settings button">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31453]</label>

@@ -2243,3 +2243,8 @@ msgstr "隐藏页眉"
 msgctxt "#31510"
 msgid "Clock and weather in home window"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31511"
+msgid "Hide chapters mark"
+msgstr ""

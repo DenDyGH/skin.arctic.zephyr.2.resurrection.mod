@@ -2206,3 +2206,8 @@ msgstr "Ukryj nagłówek"
 msgctxt "#31510"
 msgid "Clock and weather in home window"
 msgstr "Zegar i pogoda w oknie głównym"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31511"
+msgid "Hide chapters mark"
+msgstr "Ukryj znaczniki rozdziałów"
