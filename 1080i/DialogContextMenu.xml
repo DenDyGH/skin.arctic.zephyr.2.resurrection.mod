@@ -32,7 +32,7 @@
                 <bottom>0</bottom>
                 <width>506</width>
                 <height>914</height>
-                <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
+                <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
                 <bordersize>24</bordersize>
                 <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
             </control>
