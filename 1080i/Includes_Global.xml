@@ -31,7 +31,7 @@
         </control>
         <!-- <control type="image" description="Background">
             <include>Dimensions_TrailerScreen</include>
-            <texture colordiffuse="HomePanel">common/bg.jpg</texture>
+            <texture colordiffuse="HomePanel">special://skin/extras/backgrounds/bg.jpg</texture>
             <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [Skin.HasSetting(HomeMulti) | $EXP[Exp_InfoVisible]]]</visible>
         </control> -->
     </include>
@@ -54,7 +54,7 @@
         </control>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
-            <texture colordiffuse="HomePanel">common/bg.jpg</texture>
+            <texture colordiffuse="HomePanel">special://skin/extras/backgrounds/bg.jpg</texture>
             <visible>Skin.HasSetting(global.showvideo)</visible>
             <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [Skin.HasSetting(HomeMulti) | $EXP[Exp_InfoVisible]]]</visible>
         </control>
@@ -81,7 +81,7 @@
             </control>
             <control type="image">
                 <include>Animation_Alpha_Value</include>
-                <texture colordiffuse="HomePanel">common/bg.jpg</texture>
+                <texture colordiffuse="HomePanel">special://skin/extras/backgrounds/bg.jpg</texture>
             </control>
         </control>
     </include>
@@ -124,7 +124,7 @@
             <visible>$EXP[Exp_GlobalBackground]</visible>
             <visible>[!Skin.HasSetting(HomeMultiFlixView) | [Skin.HasSetting(HomeMultiFlixView) + !Window.IsVisible(Home.xml)]]</visible>
             <control type="image">
-                <texture colordiffuse="Background">common/bg.jpg</texture>
+                <texture colordiffuse="Background">special://skin/extras/backgrounds/bg.jpg</texture>
             </control>
             <control type="multiimage">
                 <visible>[[!Control.IsVisible(528) + !Control.IsVisible(529)] | [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]</visible>
@@ -165,13 +165,13 @@
         <value condition="[Window.IsVisible(home) | Window.IsVisible(1135)] + !String.IsEmpty(Container(301).ListItem.Property(backgroundPlaylist))">$INFO[Container(9988).ListItem.Art(fanart)]</value>
         <value condition="[Window.IsVisible(home) | Window.IsVisible(1135)] + !String.IsEmpty(Container(301).ListItem.Property(Background))">$INFO[Container(301).ListItem.Property(Background)]</value>
         <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
-        <value>common/bg2.jpg</value>
+        <value>special://skin/extras/backgrounds/bg2.jpg</value>
     </variable>
 
     <variable name="Global_Background_Blur_Var">
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.BlurImage))">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
-        <value>common/bg2.jpg</value>
+        <value>special://skin/extras/backgrounds/bg2.jpg</value>
     </variable>
 
     <variable name="Global_Background_Image">

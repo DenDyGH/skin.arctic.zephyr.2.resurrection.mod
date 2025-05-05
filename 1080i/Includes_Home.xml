@@ -227,7 +227,7 @@
             <animation effect="slide" end="0" start="0,465" time="300" tween="quadratic" condition="Control.HasFocus(302) + !String.IsEqual(Window(Home).Property(WidgetFocus),5610) + [Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)]">WindowOpen</animation>
             <!-- Back Panel -->
             <control type="image">
-                <texture colordiffuse="HomePanel">common/bg.jpg</texture>
+                <texture colordiffuse="HomePanel">special://skin/extras/backgrounds/bg.jpg</texture>
             </control>
             <!-- Topbar For Submenu or Widget -->
             <control type="group">
