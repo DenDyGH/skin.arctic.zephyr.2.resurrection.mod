@@ -159,8 +159,8 @@
     </variable>
 
     <variable name="Path_FromGenre">
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre)) + String.IsEqual(ListItem.DBType,movie)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre),&amp;with_genres=,&amp;exclude_key=title&amp;exclude_value=$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]&amp;vote_count.gte=10&amp;detailed=true&amp;tmdb_type=movie]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre),&amp;with_genres=,&amp;exclude_key=title&amp;exclude_value=$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]&amp;vote_count.gte=10&amp;detailed=true&amp;tmdb_type=tv]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre)) + String.IsEqual(ListItem.DBType,movie)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre),&amp;with_genres=,&amp;exclude_key=title&amp;exclude_value=$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]&amp;vote_count.gte=10&amp;tmdb_type=movie]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre),&amp;with_genres=,&amp;exclude_key=title&amp;exclude_value=$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]&amp;vote_count.gte=10&amp;tmdb_type=tv]</value>
     </variable>
 
     <variable name="Path_FromYear">

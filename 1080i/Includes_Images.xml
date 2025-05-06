@@ -167,7 +167,7 @@
         <value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,66)">indicator/inprogress-75.png</value>
         <value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,33)">indicator/inprogress-50.png</value>
         <value condition="[ListItem.IsResumable + !Integer.IsEqual(ListItem.PercentPlayed,100)] | [!String.IsEmpty(ListItem.Property(WatchedProgress)) + !Integer.IsEqual(ListItem.Property(WatchedProgress),0) + !Integer.IsEqual(ListItem.Property(WatchedProgress),100)] | [!Integer.IsEqual(ListItem.Progress,0) + !Integer.IsEqual(ListItem.Progress,100)]">indicator/inprogress-25.png</value>
-        <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Integer.IsEqual(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable">common/null.png</value>
+        <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Integer.IsEqual(ListItem.Property(UnWatchedEpisodes),0) + !Integer.IsEqual(ListItem.Property(WatchedEpisodes),0) + !ListItem.IsResumable">common/null.png</value>
         <value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.PlayCount,0)">indicator/checkmark.png</value>
         <value condition="[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(1190) | Window.IsVisible(1140)]+ !String.IsEmpty(ListItem.DBID)">indicator/library.png</value>
         <value condition="ListItem.IsCollection | ListItem.HasVideoVersions">indicator/movieset.png</value>
@@ -177,7 +177,7 @@
         <value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,66)">indicator/inprogress-75.png</value>
         <value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,33)">indicator/inprogress-50.png</value>
         <value condition="[ListItem.IsResumable + !Integer.IsEqual(ListItem.PercentPlayed,100)] | [!String.IsEmpty(ListItem.Property(WatchedProgress)) + !Integer.IsEqual(ListItem.Property(WatchedProgress),0) + !Integer.IsEqual(ListItem.Property(WatchedProgress),100)] | [!Integer.IsEqual(ListItem.Progress,0) + !Integer.IsEqual(ListItem.Progress,100)]">indicator/inprogress-25.png</value>
-        <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Integer.IsEqual(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable">common/null.png</value>
+        <value condition="[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Integer.IsEqual(ListItem.Property(UnWatchedEpisodes),0) + !Integer.IsEqual(ListItem.Property(WatchedEpisodes),0) + !ListItem.IsResumable">common/null.png</value>
         <value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.PlayCount,0)">indicator/checkmark.png</value>
         <value condition="[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(1190) | Window.IsVisible(1140)]+ !String.IsEmpty(ListItem.DBID)">indicator/library.png</value>
         <value condition="ListItem.IsCollection | ListItem.HasVideoVersions">indicator/movieset.png</value>
