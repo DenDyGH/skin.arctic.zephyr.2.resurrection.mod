@@ -6,10 +6,6 @@
         <value condition="String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">tv</value>
     </variable>
 
-    <variable name="Info_Keywords">
-        <value condition="[String.IsEqual(ListItem.DBTYPE,movie)] + !Skin.HasSetting(DisableExtendedInfo) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=movie_keywords&amp;type=$VAR[tmdb_type]&amp;$VAR[info_query]&amp;nextpage=false</value>
-    </variable>
-
     <variable name="Info_Cast_List01">
         <value condition="!Container(3100).IsUpdating + Integer.IsGreater(Container(3100).NumItems,0)">$INFO[Container(3100).ListItemAbsolute(1).FolderPath]</value>
         <value>videodb://</value>
