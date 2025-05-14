@@ -18,7 +18,7 @@
 
             <control type="group">
                 <height>400</height>
-                <bottom>150</bottom>
+                <bottom>100</bottom>
                 <left>30</left>
                 <right>30</right>
 
@@ -26,8 +26,8 @@
                 <include content="Info_Widget_Poster">
                     <param name="id" value="7000" />
                     <param name="label" value="$LOCALIZE[31054]" />
-                    <param name="itemwidth" value="420" />
-                    <param name="iconheight" value="270" />
+                    <param name="itemwidth" value="item_landscape_width" />
+                    <param name="iconheight" value="item_icon_height" />
                     <param name="diffuse" value="diffuse/landscape-wall.png" />
                     <param name="labelinclude" value="View_Cast_Video_Label" />
                     <param name="icon" value="$VAR[Image_Landscape]" />
@@ -39,38 +39,6 @@
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,7000,1143)</onfocus>
                     <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,1143)</onunfocus>
                 </include>
-            </control>
-            
-            <!-- Episode Information -->
-            <control type="group">
-                <bottom>30</bottom>
-                <height>120</height>
-                <left>30</left>
-                <right>30</right>
-                
-                <!-- Episode Poster (with fallbacks) -->
-                <control type="image">
-                    <left>0</left>
-                    <width>120</width>
-                    <height>120</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>$INFO[Container(7000).ListItem.Art(tvshow.poster)]</texture>
-                </control>
-                
-                <!-- Episode Info -->
-                <control type="label">
-                    <left>140</left>
-                    <height>30</height>
-                    <font>font_tiny_bold</font>
-                    <label>$INFO[Container(7000).ListItem.Label] • $INFO[Container(7000).ListItem.Year] • $INFO[Container(7000).ListItem.Genre]</label>
-                </control>
-                <control type="textbox">
-                    <left>140</left>
-                    <top>30</top>
-                    <height>90</height>
-                    <font>font_tiny</font>
-                    <label>$INFO[Container(7000).ListItem.Plot]</label>
-                </control>
             </control>
         </control>
     </controls>
