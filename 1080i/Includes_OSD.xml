@@ -104,7 +104,7 @@
         <definition>
             <control type="group">
                 <visible>[Window.IsVisible(VideoFullScreen.xml) + VideoPlayer.Content(musicvideos)] | !Window.IsVisible(VideoFullScreen.xml)</visible>
-                <visible>Window.IsVisible(musicosd) | Player.ShowInfo | [Window.IsVisible(VideoFullScreen.xml) + [!String.IsEmpty(Window(Home).Property(OSDInfo)) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml) | [!Skin.HasSetting(DisableMusicVideoAutoInfo) + [Integer.IsEqual(Player.Time(hh),0) + Integer.IsEqual(Player.Time(mm),0) + Integer.IsGreater(Player.Time(ss),5) + Integer.IsLess(Player.Time(ss),15)] | [Integer.IsEqual(Player.TimeRemaining(hh),0) + Integer.IsEqual(Player.TimeRemaining(mm),0) + Integer.IsGreater(Player.TimeRemaining(ss),5) + Integer.IsLess(Player.TimeRemaining(ss),15)]]]]</visible>
+                <visible>Window.IsVisible(musicosd) | Player.HasAudio | [Window.IsVisible(VideoFullScreen.xml) + [!String.IsEmpty(Window(Home).Property(OSDInfo)) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml) | [!Skin.HasSetting(DisableMusicVideoAutoInfo) + [Integer.IsEqual(Player.Time(hh),0) + Integer.IsEqual(Player.Time(mm),0) + Integer.IsGreater(Player.Time(ss),5) + Integer.IsLess(Player.Time(ss),15)] | [Integer.IsEqual(Player.TimeRemaining(hh),0) + Integer.IsEqual(Player.TimeRemaining(mm),0) + Integer.IsGreater(Player.TimeRemaining(ss),5) + Integer.IsLess(Player.TimeRemaining(ss),15)]]]]</visible>
                 <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
 
                 <control type="image">
@@ -112,7 +112,7 @@
                     <texture>common/vignette.png</texture>
                 </control>
                 <control type="group">
-                    <visible>Window.IsVisible(musicosd) | Player.ShowInfo | [Window.IsVisible(VideoFullScreen.xml) + [!String.IsEmpty(Window(Home).Property(OSDInfo)) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml) | [!Skin.HasSetting(DisableMusicVideoAutoInfo) + [Integer.IsEqual(Player.Time(hh),0) + Integer.IsEqual(Player.Time(mm),0) + Integer.IsGreater(Player.Time(ss),5) + Integer.IsLess(Player.Time(ss),15)] | [Integer.IsEqual(Player.TimeRemaining(hh),0) + Integer.IsEqual(Player.TimeRemaining(mm),0) + Integer.IsGreater(Player.TimeRemaining(ss),5) + Integer.IsLess(Player.TimeRemaining(ss),15)]]]]</visible>
+                    <visible>Window.IsVisible(musicosd) | Player.HasAudio | [Window.IsVisible(VideoFullScreen.xml) + [!String.IsEmpty(Window(Home).Property(OSDInfo)) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml) | [!Skin.HasSetting(DisableMusicVideoAutoInfo) + [Integer.IsEqual(Player.Time(hh),0) + Integer.IsEqual(Player.Time(mm),0) + Integer.IsGreater(Player.Time(ss),5) + Integer.IsLess(Player.Time(ss),15)] | [Integer.IsEqual(Player.TimeRemaining(hh),0) + Integer.IsEqual(Player.TimeRemaining(mm),0) + Integer.IsGreater(Player.TimeRemaining(ss),5) + Integer.IsLess(Player.TimeRemaining(ss),15)]]]]</visible>
                     <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
                     <include>Animation_FadeIn</include>
                     <include>Animation_FadeOut</include>
@@ -1033,7 +1033,6 @@
                 <texturebg colordiffuse="00ffffff">progress/marker-bg.png</texturebg>
                 <righttexture colordiffuse="panel_fg_50">progress/marker.png</righttexture>
                 <info>Player.CutList</info>
-                <visible>!Skin.HasSetting(HideChaptersMark)</visible>
             </control>
             <control type="ranges">
                 <width>100%</width>
@@ -1041,7 +1040,6 @@
                 <texturebg colordiffuse="00ffffff">progress/marker-bg.png</texturebg>
                 <righttexture colordiffuse="panel_fg_50">progress/marker.png</righttexture>
                 <info>Player.Chapters</info>
-                <visible>!Skin.HasSetting(HideChaptersMark)</visible>
             </control>
         </control>
     </include>
