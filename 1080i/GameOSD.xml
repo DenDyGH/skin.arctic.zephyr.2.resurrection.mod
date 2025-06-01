@@ -134,20 +134,26 @@
                                 <description>Pause / Resume button</description>
                                 <label>$LOCALIZE[35224]</label>
                                 <label2>Select + X</label2>
-                                <icon>osd/fullscreen/buttons/play.png</icon>
+                                <icon>special://skin/extras/icons/play.png</icon>
                                 <onclick>Play</onclick>
+                            </item>
+                            <item id="2104">
+                                <description>Save / Load button</description>
+                                <label>$LOCALIZE[35249]</label>
+                                <icon>special://skin/extras/icons/files.png</icon>
+                                <onclick>ActivateWindow(InGameSaves)</onclick>
                             </item>
                             <item id="2102">
                                 <description>Reset button</description>
                                 <label>$LOCALIZE[13007]</label>
-                                <icon>osd/fullscreen/buttons/reset.png</icon>
+                                <icon>special://skin/extras/icons/update.png</icon>
                                 <onclick>PlayerControl(Reset)</onclick>
                             </item>
                             <item id="2103">
                                 <description>Stop button</description>
                                 <label>$LOCALIZE[35222]</label>
                                 <label2>Select + Start</label2>
-                                <icon>osd/fullscreen/buttons/stop.png</icon>
+                                <icon>osd/stop.png</icon>
                                 <onclick>Stop</onclick>
                             </item>
 

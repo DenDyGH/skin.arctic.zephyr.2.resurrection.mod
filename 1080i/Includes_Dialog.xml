@@ -852,6 +852,72 @@
         </definition>
     </include>
 
+    <include name="Dialog_Standard_List_Itemlayout_Game">
+        <param name="left_pad" default="140" />
+        <param name="right_pad" default="0" />
+        <definition>
+            <control type="group">
+                <left>0</left>
+                <width>100</width>
+                <control type="group">
+                    <left>40</left>
+                    <top>20</top>
+                    <bottom>20</bottom>
+                    <width>100</width>
+                    <control type="image">
+                        <aspectratio>scale</aspectratio>
+                        <texture border="4">$INFO[ListItem.Icon]</texture>
+                        <bordertexture colordiffuse="black">common/white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                    <control type="gamewindow">
+                        <videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+                        <stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+                        <rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
+                        <visible>String.IsEmpty(ListItem.Art(screenshot))</visible>
+                    </control>
+                    <control type="image">
+                        <aspectratio>scale</aspectratio>
+                        <texture border="4">$INFO[ListItem.Art(screenshot)]</texture>
+                        <bordertexture colordiffuse="black">common/white.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <left>$PARAM[left_pad]</left>
+                <right>$PARAM[right_pad]</right>
+                <control type="label">
+                    <textoffsetx>40</textoffsetx>
+                    <textcolor>$PARAM[color_70]</textcolor>
+                    <selectedcolor>$PARAM[color_highlight]</selectedcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>String.IsEmpty(ListItem.Label2)</visible>
+                </control>
+                <control type="label">
+                    <textoffsetx>40</textoffsetx>
+                    <font>font_small_bold</font>
+                    <textcolor>$PARAM[color_70]</textcolor>
+                    <selectedcolor>$PARAM[color_highlight]</selectedcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>!String.IsEmpty(ListItem.Label2)</visible>
+                    <top>15</top>
+                    <height>30</height>
+                </control>
+                <control type="label">
+                    <textoffsetx>40</textoffsetx>
+                    <font>font_tiny</font>
+                    <textcolor>$PARAM[color_70]</textcolor>
+                    <selectedcolor>$PARAM[color_highlight]</selectedcolor>
+                    <label>$INFO[ListItem.Label2]</label>
+                    <visible>!String.IsEmpty(ListItem.Label2)</visible>
+                    <bottom>15</bottom>
+                    <height>30</height>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="Dialog_Standard_List_Itemlayout_ChannelManager">
         <control type="label">
             <left>30</left>
@@ -1184,6 +1250,57 @@
     </include>
 
     <include name="Dialog_Select_Game">
+        <include>Global_Overlay</include>
+
+        <control type="group">
+            <include content="Dialog_Standard_Group">
+                <param name="width" value="600" />
+                <param name="height" value="550" />
+            </include>
+            <control type="label">
+                <top>0</top>
+                <width>458</width>
+                <height>dialog_top</height>
+                <left>-10</left>
+                <right>30</right>
+                <textcolor>dialog_fg_70</textcolor>
+                <font>font_medium_bold</font>
+                <label>$LOCALIZE[35221]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textoffsetx>30</textoffsetx>
+            </control>
+            <control type="image">
+                <top>25</top>
+                <width>590</width>
+                <height>64</height>
+                <left>10</left>
+                <aspectratio align="right">keep</aspectratio>
+                <texture colordiffuse="dialog_fg_70">special://skin/extras/icons/kodi.png</texture>
+            </control>
+
+            <include content="Dialog_Standard_List" condition="Window.IsActive(gamesaves)">
+                <param name="id" value="3" />
+                <param name="itemheight" value="item_biglist_height" />
+                <param name="list_style" value="Dialog_Standard_List_Itemlayout_Game" />
+                <param name="width" default="600" />
+                <param name="checkmark" value="false" />
+                <param name="onup" value="3" />
+                <param name="ondown" value="3" />
+            </include>
+            <include content="Dialog_Standard_List" condition="[Window.IsActive(gamevideofilter) | Window.IsActive(gamestretchmode) | Window.IsActive(gamevideorotation) | Window.IsActive(ingamesaves)]">
+                <param name="id" value="10811" />
+                <param name="itemheight" value="item_biglist_height" />
+                <param name="list_style" value="Dialog_Standard_List_Itemlayout_Game" />
+                <param name="width" default="600" />
+                <param name="checkmark" value="false" />
+                <param name="onup" value="10811" />
+                <param name="ondown" value="10811" />
+            </include>
+        </control>
+    </include>
+
+    <!-- <include name="Dialog_Select_Game">
         <control type="group">
             <bottom>0</bottom>
             <height>520</height>
@@ -1302,7 +1419,7 @@
                 </control>
             </control>
         </control>
-    </include>
+    </include> -->
 
     <include name="Dialog_Select_Video">
         <include>Global_Overlay</include>
@@ -1316,15 +1433,13 @@
                 <include>Dialog_Standard_Header</include>
             </control>
 
-            <include>Dialog_Standard_List</include>
             <include content="Dialog_Standard_List">
-                <param name="id" value="6" />
+                <param name="id" value="3" />
                 <param name="itemheight" value="item_biglist_height" />
                 <param name="list_style" value="Dialog_Standard_List_Itemlayout_Video" />
                 <param name="checkmark" value="false" />
-                <param name="onup" value="6" />
-                <param name="ondown" value="6" />
-                <param name="onright" value="8000" />
+                <param name="onup" value="3" />
+                <param name="ondown" value="3" />
             </include>
 
             <control type="group">
@@ -1346,7 +1461,9 @@
                     </control>
                 </control>
             </control>
-            <include>Dialog_Scrollbar</include>
+            <include content="Dialog_Scrollbar">
+                <param name="onleft" value="3" />
+            </include>
         </control>
     </include>
 </includes>

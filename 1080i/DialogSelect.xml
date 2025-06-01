@@ -4,9 +4,8 @@
     <defaultcontrol always="true">3</defaultcontrol>
 
     <controls>
-        <include condition="![Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation) | Window.IsActive(selectvideoversion) | Window.IsActive(selectvideoextra)]">Dialog_Select_Standard</include>
-        <include condition="Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)">Dialog_Select_Game</include>
+        <include condition="![Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation) | Window.IsActive(gamesaves) | Window.IsActive(ingamesaves) | Window.IsActive(selectvideoversion) | Window.IsActive(selectvideoextra)]">Dialog_Select_Standard</include>
+        <include condition="[Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation) | Window.IsActive(gamesaves) | Window.IsActive(ingamesaves)]">Dialog_Select_Game</include>
         <include condition="Window.IsActive(selectvideoversion)">Dialog_Select_Video</include>
-        <include condition="Window.IsActive(selectvideoextra)">Dialog_Select_Video</include>
     </controls>
 </window>
