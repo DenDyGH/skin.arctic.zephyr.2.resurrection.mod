@@ -552,6 +552,7 @@
         <param name="viewtypename" default="list" />
         <param name="flipsides" default="false" />
         <param name="focustrailer" default="false" />
+        <param name="panelcolor" default="main_fg_100" />
         <definition>
             <control type="$PARAM[controltype]" id="$PARAM[id]">
                 <nested />
@@ -584,17 +585,17 @@
                     </control>
                     <control type="group">
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <include content="$PARAM[itemlayout]" condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] + !Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor) | Window.IsVisible(tvchannels)]">
+                        <include content="$PARAM[itemlayout]" condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))] + !Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + Skin.HasSetting(InvertTextColor)]">
                             <param name="fgcolor" value="main_bg" />
                             <param name="bgcolor" value="main_fg" />
-                            <param name="panelcolor" value="main_fg_100" />
+                            <param name="panelcolor" value="$PARAM[panelcolor]" />
                             <param name="selectbox" value="true" />
                             <param name="itemheight" value="$PARAM[itemheight]" />
                         </include>
-                        <include content="$PARAM[itemlayout]" condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White)] + Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor) + !Window.IsVisible(tvchannels)]">
+                        <include content="$PARAM[itemlayout]" condition="[[String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),White)] + Skin.HasSetting(InvertTextColor)] | [String.IsEqual(Skin.String(PosterHighlight),Highlight) + !Skin.HasSetting(InvertTextColor)]">
                             <param name="fgcolor" value="main_fg" />
                             <param name="bgcolor" value="main_bg" />
-                            <param name="panelcolor" value="main_fg_100" />
+                            <param name="panelcolor" value="$PARAM[panelcolor]" />
                             <param name="selectbox" value="true" />
                             <param name="itemheight" value="$PARAM[itemheight]" />
                         </include>
@@ -923,8 +924,16 @@
                 <left>0</left>
                 <width>517</width>
                 <top>4</top>
+                <include condition="!$PARAM[visible] + Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                 <texture colordiffuse="$PARAM[panelcolor]" border="10">diffuse/box.png</texture>
                 <visible>$PARAM[visible]</visible>
+            </control>
+            <control type="image" id="2">
+                <left>0</left>
+                <width>517</width>
+                <top>4</top>
+                <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">common/selectbox2.png</texture>
+                <visible>!$PARAM[visible] + Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
             </control>
             <control type="image" id="2">
                 <aspectratio align="right">keep</aspectratio>
@@ -1020,7 +1029,12 @@
                 <top>4</top>
                 <right>4</right>
                 <control type="image">
+                    <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                     <texture colordiffuse="$PARAM[panelcolor]" border="10">diffuse/box.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
+                    <texture colordiffuse="$PARAM[panelcolor]" border="10">common/selectbox2.png</texture>
                 </control>
                 <control type="image">
                     <texture colordiffuse="$PARAM[fgcolor]_12">common/selected.png</texture>
@@ -1104,7 +1118,12 @@
                     <top>4</top>
                     <right>4</right>
                     <control type="image">
+                        <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
                         <texture colordiffuse="$PARAM[panelcolor]" border="10">diffuse/box.png</texture>
+                    </control>
+                    <control type="image">
+                        <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
+                        <texture colordiffuse="$PARAM[panelcolor]" border="10">common/selectbox2.png</texture>
                     </control>
                     <control type="image">
                         <texture colordiffuse="$PARAM[fgcolor]_12">common/selected.png</texture>
