@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: wabisabi926\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -269,7 +269,7 @@ msgstr "系列合集"
 #: /1080i/Custom_1136_VideoInfo.xml
 msgctxt "#31050"
 msgid "Searching"
-msgstr "搜索中..."
+msgstr "搜索中"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31051"
@@ -494,7 +494,7 @@ msgstr "附加列表视图类型使用默认标签"
 #: /1080i/SkinSettings.xml
 msgctxt "#31096"
 msgid "Songs use track-naming template"
-msgstr "歌曲使用轨道命名模板"
+msgstr "歌曲使用曲目命名模板"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31097"
@@ -2192,7 +2192,7 @@ msgstr "在屏显中以文本显示编解码器"
 #: /1080i/SkinSettings.xml
 msgctxt "#31500"
 msgid "Hide CD Spin in VideoOSD"
-msgstr "隐藏视频屏显中的CD 旋转"
+msgstr "隐藏视频屏显中的 CD 旋转"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31501"
@@ -2242,9 +2242,9 @@ msgstr "隐藏页眉"
 #: /1080i/SkinSettings.xml
 msgctxt "#31510"
 msgid "Clock and weather in home window"
-msgstr ""
+msgstr "主页窗口中的时钟和天气"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31511"
 msgid "Hide chapters mark"
-msgstr ""
+msgstr "隐藏章节标记"
