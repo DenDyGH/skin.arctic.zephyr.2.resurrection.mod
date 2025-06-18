@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: wabisabi926\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr "暂无可用内容..."
 #: /1080i/DialogGameControllers.xml
 msgctxt "#31001"
 msgid "Controllers"
-msgstr "控件"
+msgstr "控制器"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31002"
@@ -59,7 +59,7 @@ msgstr "使用本地媒体库信息生成推荐"
 #: /1080i/SkinSettings.xml
 msgctxt "#31008"
 msgid "Install weather fanart"
-msgstr "安装天气背景图"
+msgstr "安装天气同人画"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31009"
@@ -79,7 +79,7 @@ msgstr "宽高比"
 #: /1080i/MyWeather.xml
 msgctxt "#31012"
 msgid "Weather fanart installed"
-msgstr "已安装天气背景图"
+msgstr "已安装天气同人画"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31013"
@@ -89,7 +89,7 @@ msgstr "选择框"
 #: /1080i/MyVideoNav.xml
 msgctxt "#31014"
 msgid "Extra fanart"
-msgstr "额外背景图"
+msgstr "额外同人画"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31015"
@@ -129,7 +129,7 @@ msgstr "颜色"
 #: /1080i/SkinSettings.xml
 msgctxt "#31022"
 msgid "Animated artwork"
-msgstr "动态艺术作品"
+msgstr "动态艺术图"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31023"
@@ -604,7 +604,7 @@ msgstr "启用艺术家幻灯片的动态效果"
 
 msgctxt "#31121"
 msgid "Fanart"
-msgstr "背景图"
+msgstr "同人画"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31122"
@@ -718,7 +718,7 @@ msgstr "杂项"
 #: /1080i/SkinSettings.xml
 msgctxt "#31144"
 msgid "Fonts and Artwork"
-msgstr "字体和艺术作品"
+msgstr "字体和艺术图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
@@ -846,7 +846,7 @@ msgstr "编辑自定义搜索列表"
 #: /1080i/SkinSettings.xml
 msgctxt "#31170"
 msgid "Clearlogo"
-msgstr "透明标志"
+msgstr "透明徽标"
 
 #: /1080i/Includes_View_52_Showcase.xml
 msgctxt "#31171"
@@ -864,7 +864,7 @@ msgstr "最近添加"
 #: /1080i/SkinSettings.xml
 msgctxt "#31174"
 msgid "Landscape art"
-msgstr "横版艺术图"
+msgstr "横向艺术图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31175"
@@ -947,14 +947,10 @@ msgctxt "#31191"
 msgid "Info List"
 msgstr "信息列表"
 
-msgctxt "#31192"
-msgid "Resurrection"
-msgstr "复活"
-
 #: /1080i/Includes_Items.xml
 msgctxt "#31193"
 msgid "Select Art (Kodi)"
-msgstr "选择艺术作品（Kodi）"
+msgstr "选择艺术图（Kodi）"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31194"
@@ -964,7 +960,7 @@ msgstr "最近播放的电视节目"
 #: /1080i/Includes_Items.xml
 msgctxt "#31195"
 msgid "Select Art (Artwork Beef)"
-msgstr "选择艺术作品（Artwork Beef）"
+msgstr "选择艺术图（Artwork Beef）"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31196"
@@ -974,7 +970,7 @@ msgstr "正在播出的电视节目"
 #: /1080i/Includes_Items.xml
 msgctxt "#31197"
 msgid "Download all art"
-msgstr "下载所有艺术作品"
+msgstr "下载所有艺术图"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31198"
@@ -1002,7 +998,7 @@ msgstr "随机剧集"
 
 msgctxt "#31203"
 msgid "Artwork"
-msgstr "下载现有艺术作品"
+msgstr "下载现有艺术图"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31204"
@@ -1475,7 +1471,7 @@ msgstr "小横向背景墙"
 #: /1080i/Custom_1138_Search.xml
 msgctxt "#31432"
 msgid "Music Videos by Artist Named"
-msgstr "按艺术家名称搜索MV"
+msgstr "按艺术家名称搜索 MV"
 
 #: /1080i/script-skin_helper_service-ColorPicker.xml
 msgctxt "#31433"
@@ -1529,7 +1525,7 @@ msgctxt "#30038"
 msgid "This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations."
 msgstr ""
 "该皮肤为 heppen 制作的 Arctic Zephyr 2 轻量修改版。\n"
-"原版由 jurialmunkey 创作，pkscout 适配 Kodi 19及以上。\n"
+"原版由 jurialmunkey 创作，pkscout适配 Kodi 19 Matrix 及以上。\n"
 "皮肤设计简约以突出媒体内容，除默认浅色主题外还包含多个深色变体。"
 
 #: /1080i/SkinSettings.xml
@@ -1835,7 +1831,7 @@ msgstr "禁用启动画面"
 #: /1080i/SkinSettings.xml
 msgctxt "#30101"
 msgid "Flix View | Multiple widgets"
-msgstr "Flix 视图 | 多小部件"
+msgstr "影视艺术图视图 | 多小部件"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#30102"
@@ -1865,7 +1861,7 @@ msgstr "匹配度"
 #: /1080i/SkinSettings.xml
 msgctxt "#30107"
 msgid "Play Trailer in background in Flix View"
-msgstr "在 Flix 视图后台播放预告片"
+msgstr "在影视艺术图视图后台播放预告片"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30108"
@@ -1880,7 +1876,7 @@ msgstr "启用悬停缩放"
 #: /1080i/SkinSettings.xml
 msgctxt "#30111"
 msgid "Set delay to playing Trailers in Flix View"
-msgstr "设置 Flix 视图预告片播放延迟"
+msgstr "设置影视艺术图视图预告片播放延迟"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30112"
@@ -1940,7 +1936,7 @@ msgstr "首映时间"
 #: /1080i/SkinSettings.xml
 msgctxt "#31448"
 msgid "Fanart fallback image"
-msgstr "背景图备选图像"
+msgstr "同人画备选图像"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31449"
@@ -2131,7 +2127,7 @@ msgstr "文本"
 #: /1080i/SkinSettings.xml
 msgctxt "#31487"
 msgid "Clearlogo"
-msgstr "透明标志"
+msgstr "透明徽标"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31488"
@@ -2201,7 +2197,7 @@ msgstr "隐藏视频屏显中的 CD 旋转"
 #: /1080i/SkinSettings.xml
 msgctxt "#31501"
 msgid "Use TMDBHelper to crop clearlogo"
-msgstr "使用 TMDBHelper 裁剪透明标志"
+msgstr "使用 TMDBHelper 裁剪透明徽标"
 
 msgctxt "#31502"
 msgid "Playback Speed"
@@ -2236,7 +2232,7 @@ msgstr "隐藏信息面板"
 #: /1080i/SkinSettings.xml
 msgctxt "#31508"
 msgid "Blur background for some Flix views only"
-msgstr "仅对部分 Flix 视图模糊背景"
+msgstr "仅对部分影视艺术图视图模糊背景"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31509"
