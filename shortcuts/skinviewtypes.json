@@ -52,7 +52,7 @@
         },
         "sets": {
             "rule": "Container.Content(sets)",
-            "viewtypes": ["50", "51", "52", "53", "500", "501", "502", "503", "504", "511", "514", "515", "516", "521", "525", "526", "528", "529"],
+            "viewtypes": ["50", "51", "52", "53", "500", "501", "502", "503", "504", "511", "514", "515", "516", "510", "517", "521", "525", "526", "528", "529"],
             "library": "50",
             "plugins": "50"
         },
@@ -106,49 +106,49 @@
         },
         "studios": {
             "rule": "Container.Content(studios)",
-            "viewtypes": ["50", "500", "512", "516"],
+            "viewtypes": ["50", "500", "512", "516", "510", "517"],
             "library": "500",
             "plugins": "500"
         },
         "directors": {
             "rule": "Container.Content(directors)",
-            "viewtypes": ["50", "51", "500", "513"],
+            "viewtypes": ["50", "51", "500", "513", "510", "517"],
             "library": "500",
             "plugins": "500"
         },
         "countries": {
             "rule": "Container.Content(countries)",
-            "viewtypes": ["50", "500", "512", "516"],
+            "viewtypes": ["50", "500", "512", "516", "510", "517"],
             "library": "500",
             "plugins": "500"
         },
         "tags": {
             "rule": "Container.Content(tags)",
-            "viewtypes": ["50", "500", "512", "516"],
+            "viewtypes": ["50", "500", "512", "516", "510", "517"],
             "library": "500",
             "plugins": "500"
         },
         "roles": {
             "rule": "Container.Content(roles)",
-            "viewtypes": ["50", "51", "500", "513"],
+            "viewtypes": ["50", "51", "500", "513", "510", "517"],
             "library": "500",
             "plugins": "500"
         },
         "actors": {
             "rule": "Container.Content(actors)",
-            "viewtypes": ["50", "51", "513"],
+            "viewtypes": ["50", "51", "513", "510", "517"],
             "library": "50",
             "plugins": "50"
         },
         "playlists": {
             "rule": "Container.Content(playlists)",
-            "viewtypes": ["50", "500"],
+            "viewtypes": ["50", "500", "510", "517"],
             "library": "500",
             "plugins": "500"
         },
         "musicvideos": {
             "rule": "Container.Content(musicvideos)",
-            "viewtypes": ["50", "500"],
+            "viewtypes": ["50", "500", "510", "517"],
             "library": "500",
             "plugins": "500"
         },
@@ -166,7 +166,7 @@
         },
         "songs": {
             "rule": "Container.Content(songs)",
-            "viewtypes": ["50", "500"],
+            "viewtypes": ["50", "500", "510", "517"],
             "library": "500",
             "plugins": "500"
         },
@@ -184,7 +184,7 @@
         },
         "addons": {
             "rule": "Container.Content(addons)",
-            "viewtypes": ["50", "500", "510", "512", "517", "527"],
+            "viewtypes": ["50", "500", "512", "510", "517", "527"],
             "library": "500",
             "plugins": "500"
         },
@@ -196,7 +196,7 @@
         },
         "favourites": {
             "rule": "Container.Content(favourites)",
-            "viewtypes": ["50", "51", "510", "512", "517"],
+            "viewtypes": ["50", "51", "512", "510", "517"],
             "library": "50",
             "plugins": "50"
         },

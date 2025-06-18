@@ -201,7 +201,12 @@
                         <right>4</right>
                         <top>4</top>
                         <control type="image">
-                            <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+                            <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
+                            <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">diffuse/box.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
+                            <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">common/selectbox2.png</texture>
                         </control>
                         <control type="image">
                             <texture colordiffuse="main_bg_12">common/selected.png</texture>
@@ -220,8 +225,8 @@
             </itemlayout>
             <focusedlayout height="item_pvr_height" width="521">
                 <include content="View_50_EPG_Itemlayout">
-                    <param name="panelcolor" value="main_fg_100" />
-                    <param name="fgcolor" value="main_bg_100" />
+                    <param name="panelcolor" value="$VAR[ColorFG_Highlight]" />
+                    <param name="fgcolor" value="$VAR[ColorSelected_100]" />
                     <param name="visible" value="Control.HasFocus(10)" />
                 </include>
                 <include content="View_50_EPG_Itemlayout">
@@ -354,7 +359,12 @@
                         <right>4</right>
                         <top>4</top>
                         <control type="image">
-                            <texture colordiffuse="main_fg_100" border="10">diffuse/box.png</texture>
+                            <include condition="Skin.HasSetting(HighlightTransparency)">Alpha_Value_Highlight</include>
+                            <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">diffuse/box.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>Skin.HasSetting(HighlightTransparency) + Integer.IsGreater(Skin.String(AlphaValue_Highlight),0)</visible>
+                            <texture colordiffuse="$VAR[ColorFG_Highlight]" border="10">common/selectbox2.png</texture>
                         </control>
                         <control type="image">
                             <texture colordiffuse="main_bg_12">common/selected.png</texture>
@@ -365,8 +375,8 @@
                             <left>15</left>
                             <right>110</right>
                             <font>font_tiny_bold</font>
-                            <textcolor>main_bg_100</textcolor>
-                            <selectedcolor>main_bg_100</selectedcolor>
+                            <textcolor>$VAR[ColorSelected_100]</textcolor>
+                            <selectedcolor>$VAR[ColorSelected_100]</selectedcolor>
                             <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
                             <visible>!Skin.HasSetting(DisableChannelLabel) + !Skin.HasSetting(HideChannelsIcon)</visible>
                         </control>
@@ -374,8 +384,8 @@
                             <left>15</left>
                             <right>15</right>
                             <font>font_tiny_bold</font>
-                            <textcolor>main_bg_100</textcolor>
-                            <selectedcolor>main_bg_100</selectedcolor>
+                            <textcolor>$VAR[ColorSelected_100]</textcolor>
+                            <selectedcolor>$VAR[ColorSelected_100]</selectedcolor>
                             <label>$VAR[Label_PVRGuide_ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
                             <visible>!Skin.HasSetting(DisableChannelLabel) + Skin.HasSetting(HideChannelsIcon)</visible>
                         </control>
@@ -406,8 +416,8 @@
             <focusedlayout height="item_list_height" width="521">
                 <include content="View_50_EPG_Itemlayout">
                     <param name="sublabel" value="false" />
-                    <param name="panelcolor" value="main_fg_100" />
-                    <param name="fgcolor" value="main_bg_100" />
+                    <param name="panelcolor" value="$VAR[ColorFG_Highlight]" />
+                    <param name="fgcolor" value="$VAR[ColorSelected_100]" />
                     <param name="visible" value="Control.HasFocus(10)" />
                 </include>
                 <include content="View_50_EPG_Itemlayout">
