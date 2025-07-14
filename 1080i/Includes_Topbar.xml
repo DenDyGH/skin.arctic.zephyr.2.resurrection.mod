@@ -44,10 +44,12 @@
             <usecontrolcoords>true</usecontrolcoords>
             <control type="label">
                 <aligny>center</aligny>
-                <width max="1140">auto</width>
+                <width max="680">auto</width>
                 <font>font_topbar</font>
                 <textcolor>$PARAM[fgcolor]_70</textcolor>
                 <label>$VAR[Label_Header_Content]</label>
+                <scroll>true</scroll>
+                <scrollspeed>50</scrollspeed>
                 <visible>!Control.HasFocus(300) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(eventlog) | Window.IsVisible(SettingsSystemInfo.xml)</visible>
             </control>
             <control type="label">
