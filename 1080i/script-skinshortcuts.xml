@@ -177,7 +177,7 @@
                         <label>$LOCALIZE[31098]</label>
                         <label2>$INFO[Container(211).ListItem.Property(path)]</label2>
                         <onclick>SetProperty(custom-grouping,widget)</onclick>
-                        <onclick>SendClick(401)</onclick>
+                        <onclick>SendClick(307)</onclick>
                         <include>Dialog_Standard_Button</include>
                         <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
 
