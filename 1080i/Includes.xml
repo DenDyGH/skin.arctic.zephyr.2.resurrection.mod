@@ -123,10 +123,6 @@
         <value>$INFO[PVR.EpgEventRemainingTime(ss)]s</value>
     </variable>
 
-    <variable name="Path_Param_Widget">
-        <value>&amp;nextpage=false&amp;fanarttv=false&amp;cacheonly=true&amp;length=1</value>
-    </variable>
-
     <variable name="Path_Param_Query">
         <value condition="[String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),movie) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.tmdb_id))">&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.tmdb_id)]</value>
         <value condition="[String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),season) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.base_dbtype),episode)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.tvshow.tmdb_id))">&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.tvshow.tmdb_id)]</value>
@@ -182,33 +178,100 @@
         <value>$INFO[ListItem.Director,&amp;query=,]</value>
     </variable>
 
-    <variable name="Path_FromStudio">
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.1.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.1.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.2.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.2.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.3.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.3.TMDb_ID),&amp;type=tv&amp;with_networks=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.2.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.2.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.3.TMDb_ID))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.3.TMDb_ID),&amp;type=movie&amp;with_companies=,&amp;with_id=True]</value>
-    </variable>
-
     <variable name="Path_OSD_Cast">
-        <value condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.IMDBNumber) + String.StartsWith(VideoPlayer.IMDBNumber,tt)">plugin://plugin.video.themoviedb.helper/?info=$INFO[Skin.String(VideoOSD.PersonCredits.CastCrew)]&amp;type=movie$INFO[VideoPlayer.IMDBNumber,&amp;imdb_id=,]</value>
-        <value condition="VideoPlayer.Content(movies)">plugin://plugin.video.themoviedb.helper/?info=$INFO[Skin.String(VideoOSD.PersonCredits.CastCrew)]&amp;type=movie$INFO[Window(Home).Property(TMDbHelper.Player.TMDb_ID),&amp;tmdb_id=,]$INFO[Player.Title,&amp;query=,]$INFO[VideoPlayer.Year,&amp;year=,]</value>
-        <value condition="VideoPlayer.Content(episodes)">plugin://plugin.video.themoviedb.helper/?info=$INFO[Skin.String(VideoOSD.PersonCredits.CastCrew)]&amp;type=tv$INFO[Window(Home).Property(TMDbHelper.Player.TVShow.TMDb_ID),&amp;tmdb_id=,]$INFO[VideoPlayer.TVShowTitle,&amp;query=,]$INFO[VideoPlayer.Season,&amp;season=,]$INFO[VideoPlayer.Episode,&amp;episode=,]$INFO[VideoPlayer.Year,&amp;episode_year=,]</value>
+        <value condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.IMDBNumber) + String.StartsWith(VideoPlayer.IMDBNumber,tt)">plugin://plugin.video.themoviedb.helper/?info=$INFO[Skin.String(VideoOSD.PersonCredits.CastCrew)]&amp;tmdb_type=movie$INFO[VideoPlayer.IMDBNumber,&amp;imdb_id=,]</value>
+        <value condition="VideoPlayer.Content(movies)">plugin://plugin.video.themoviedb.helper/?info=$INFO[Skin.String(VideoOSD.PersonCredits.CastCrew)]&amp;tmdb_type=movie$INFO[Window(Home).Property(TMDbHelper.Player.TMDb_ID),&amp;tmdb_id=,]$INFO[Player.Title,&amp;query=,]$INFO[VideoPlayer.Year,&amp;year=,]</value>
+        <value condition="VideoPlayer.Content(episodes)">plugin://plugin.video.themoviedb.helper/?info=$INFO[Skin.String(VideoOSD.PersonCredits.CastCrew)]&amp;tmdb_type=tv$INFO[Window(Home).Property(TMDbHelper.Player.TVShow.TMDb_ID),&amp;tmdb_id=,]$INFO[VideoPlayer.TVShowTitle,&amp;query=,]$INFO[VideoPlayer.Season,&amp;season=,]$INFO[VideoPlayer.Episode,&amp;episode=,]$INFO[VideoPlayer.Year,&amp;episode_year=,]</value>
     </variable>
 
     <variable name="Path_OSD_Episodes">
         <value condition="!Integer.IsEqual(VideoPlayer.PlaylistLength,1) + !Integer.IsEqual(VideoPlayer.PlaylistLength,0) + Integer.IsLess(VideoPlayer.PlaylistPosition,VideoPlayer.PlaylistLength)">playlistvideo://?reload=$INFO[VideoPlayer.Season,,_]$INFO[VideoPlayer.Episode,,_]$INFO[VideoPlayer.PlaylistPosition,,_]</value>
         <value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.TvShowDBID) + !String.IsEmpty(VideoPlayer.Season)">videodb://tvshows/titles/$INFO[VideoPlayer.TvShowDBID]/$INFO[VideoPlayer.Season]/?tvshowid=$INFO[VideoPlayer.TvShowDBID]</value>
-        <value condition="VideoPlayer.Content(episodes)">plugin://plugin.video.themoviedb.helper/?info=episodes&amp;type=tv$INFO[Window(Home).Property(TMDbHelper.Player.TVShow.TMDb_ID),&amp;tmdb_id=,]$INFO[VideoPlayer.TVShowTitle,&amp;query=,]$INFO[VideoPlayer.Season,&amp;season=,]$VAR[Path_Param_Widget]</value>
+        <value condition="VideoPlayer.Content(episodes)">plugin://plugin.video.themoviedb.helper/?info=episodes&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;tmdb_type=tv$INFO[Window(Home).Property(TMDbHelper.Player.TVShow.TMDb_ID),&amp;tmdb_id=,]$INFO[VideoPlayer.TVShowTitle,&amp;query=,]$INFO[VideoPlayer.Season,&amp;season=,]</value>
     </variable>
 
-    <variable name="Path_VideoInfo_Generic">
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)) + String.IsEqual(ListItem.DBType,movie)">$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID),plugin://plugin.video.themoviedb.helper?tmdb_id=,&amp;tmdb_type=movie]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)) + String.IsEqual(ListItem.DBType,tvshow)">$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID),plugin://plugin.video.themoviedb.helper?tmdb_id=,&amp;tmdb_type=tv]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TVShow.TMDb_ID)) + String.IsEqual(ListItem.DBType,season)">$INFO[Window(Home).Property(TMDbHelper.ListItem.TVShow.TMDb_ID),plugin://plugin.video.themoviedb.helper?tmdb_id=,&amp;tmdb_type=tv]$INFO[Window(Home).Property(TMDbHelper.ListItem.Season),&amp;season=,]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TVShow.TMDb_ID)) + String.IsEqual(ListItem.DBType,episode)">$INFO[Window(Home).Property(TMDbHelper.ListItem.TVShow.TMDb_ID),plugin://plugin.video.themoviedb.helper?tmdb_id=,&amp;tmdb_type=tv]$INFO[Window(Home).Property(TMDbHelper.ListItem.Season),&amp;season=,]$INFO[Window(Home).Property(TMDbHelper.ListItem.Episode),&amp;episode=,]</value>
-        <value>-</value>
+    <variable name="Path_VideoInfo_OnlineCast">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_ID))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.DBType))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),movie)">plugin://plugin.video.themoviedb.helper?info=cast&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=movie&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),tvshow)">plugin://plugin.video.themoviedb.helper?info=cast&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Season),0)">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),season)">plugin://plugin.video.themoviedb.helper?info=cast&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]&amp;season=$INFO[Window(Home).Property(TMDbHelper.ListItem.Season)]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Episode),0)">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),episode)">plugin://plugin.video.themoviedb.helper?info=cast&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]&amp;season=$INFO[Window(Home).Property(TMDbHelper.ListItem.Season)]&amp;episode=$INFO[Window(Home).Property(TMDbHelper.ListItem.Episode)]</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlineCollection">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Set.TMDb_ID))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.DBType))">special://skin/extras/playlists/Null.xsp</value>
+        <value>plugin://plugin.video.themoviedb.helper?info=collection&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=collection&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.Set.TMDb_ID)]</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlineCrew">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_ID))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),movie)">plugin://plugin.video.themoviedb.helper/?info=crew&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;tmdb_type=movie&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),tv)">plugin://plugin.video.themoviedb.helper/?info=crew&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlineRecommendations">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_ID))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),movie)">plugin://plugin.video.themoviedb.helper/?info=recommendations&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;tmdb_type=movie&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),tv)">plugin://plugin.video.themoviedb.helper/?info=recommendations&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlineSimilar">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_ID))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),movie)">plugin://plugin.video.themoviedb.helper/?info=similar&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;tmdb_type=movie&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),tv)">plugin://plugin.video.themoviedb.helper/?info=similar&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlineYear">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Year))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),movie)">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;vote_count.gte=10&amp;tmdb_type=movie&amp;primary_release_year=$INFO[Window(Home).Property(TMDbHelper.ListItem.Year)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),tv)">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;vote_count.gte=10&amp;tmdb_type=tv&amp;first_air_date_year=$INFO[Window(Home).Property(TMDbHelper.ListItem.Year)]</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlineGenre">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),movie)">plugin://plugin.video.themoviedb.helper/?info=discover&amp;with_genres=$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre)]&amp;exclude_key=title&amp;exclude_value=$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]&amp;vote_count.gte=10&amp;tmdb_type=movie&amp;nextpage=false&amp;cacheonly=true&amp;length=1</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.TMDb_Type),tv)">plugin://plugin.video.themoviedb.helper/?info=discover&amp;with_genres=$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre)]&amp;exclude_key=title&amp;exclude_value=$INFO[Window(Home).Property(TMDbHelper.ListItem.Title)]&amp;vote_count.gte=10&amp;tmdb_type=tv&amp;nextpage=false&amp;cacheonly=true&amp;length=1</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlineStudio">
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.1.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=tv&amp;with_networks=$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.1.TMDb_ID)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.2.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=tv&amp;with_networks=$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.2.TMDb_ID)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.3.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=tv&amp;with_networks=$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.3.TMDb_ID)]</value>
+
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.2.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.2.TMDb_ID)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.3.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.3.TMDb_ID)]</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlinePoster">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_ID))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.DBType))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),movie)">plugin://plugin.video.themoviedb.helper?info=posters&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=movie&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),tvshow)">plugin://plugin.video.themoviedb.helper?info=posters&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Season),0)">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),season)">plugin://plugin.video.themoviedb.helper?info=posters&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]&amp;season=$INFO[Window(Home).Property(TMDbHelper.ListItem.Season)]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Episode),0)">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),episode)">plugin://plugin.video.themoviedb.helper?info=posters&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]&amp;season=$INFO[Window(Home).Property(TMDbHelper.ListItem.Season)]&amp;episode=$INFO[Window(Home).Property(TMDbHelper.ListItem.Episode)]</value>
+    </variable>
+
+    <variable name="Path_VideoInfo_OnlineFanart">
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_ID))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.DBType))">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),movie)">plugin://plugin.video.themoviedb.helper?info=fanart&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=movie&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),tvshow)">plugin://plugin.video.themoviedb.helper?info=fanart&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Season),0)">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),season)">plugin://plugin.video.themoviedb.helper?info=fanart&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]&amp;season=$INFO[Window(Home).Property(TMDbHelper.ListItem.Season)]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Episode),0)">special://skin/extras/playlists/Null.xsp</value>
+        <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.DBType),episode)">plugin://plugin.video.themoviedb.helper?info=fanart&amp;aggregate=true&amp;nextpage=false&amp;cacheonly=true&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_ID)]&amp;season=$INFO[Window(Home).Property(TMDbHelper.ListItem.Season)]&amp;episode=$INFO[Window(Home).Property(TMDbHelper.ListItem.Episode)]</value>
     </variable>
 
     <include name="Dimensions_Fullscreen">

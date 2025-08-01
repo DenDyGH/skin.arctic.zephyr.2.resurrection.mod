@@ -302,19 +302,12 @@
     </variable>
 
     <variable name="Def_Cast_List">
-        <value condition="!String.IsEmpty(ListItem.Cast)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=movie&amp;imdb_id=$INFO[ListItem.IMDBNumber]</value>
+        <value condition="!String.IsEmpty(ListItem.Cast)">plugin://plugin.video.themoviedb.helper?info=cast&amp;tmdb_type=movie&amp;imdb_id=$INFO[ListItem.IMDBNumber]</value>
     </variable>
 
     <variable name="Def_Set_List">
         <value condition="!String.IsEmpty(ListItem.SetID)">$INFO[ListItem.SetID,videodb://movies/sets/,/]</value>
         <value>-</value>
-    </variable>
-
-    <variable name="Def_Similar_List">
-        <value condition="!Skin.HasSetting(DisableExtendedInfo) + String.IsEqual(ListItem.DBType,tvshow)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=tv$VAR[Path_Param_Query]$VAR[Path_Param_Widget]</value>
-        <value condition="!Skin.HasSetting(DisableExtendedInfo) + String.IsEqual(ListItem.DBType,movie)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=movie$VAR[Path_Param_Query]$VAR[Path_Param_Widget]</value>
-        <value condition="String.IsEqual(ListItem.DBType,movie)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=movie&amp;imdb_id=$INFO[ListItem.IMDBNumber]$VAR[Path_Param_Widget]</value>
-        <value condition="String.IsEqual(ListItem.DBType,tvshow)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=tv&amp;imdb_id=$INFO[ListItem.IMDBNumber]$VAR[Path_Param_Widget]</value>
     </variable>
 
     <variable name="Def_Percentage_Rating">

@@ -94,11 +94,11 @@
                             <param name="labelinclude" value="View_Cast_Label" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content target="videos">$VAR[Path_VideoInfo_Generic,,&amp;info=cast&amp;aggregate=true]$VAR[Path_Param_Widget]</content>
+                            <content target="videos">$VAR[Path_VideoInfo_OnlineCast]</content>
                         </include>
 
                         <!-- Collection / Sets -->
-                        <include content="Info_Widget_Poster" condition="Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets)">
+                        <include content="Info_Widget_Poster" condition="Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets) + [String.IsEqual(ListItem.DBType,movie)]">
                             <param name="id" value="5001" />
                             <param name="groupid" value="7501" />
                             <param name="label" value="$VAR[Label_SetName]" />
@@ -106,13 +106,13 @@
                             <include>Defs_InfoList_OnBack</include>
                             <content>$VAR[Def_Set_List]</content>
                         </include>
-                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets)">
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets) + [String.IsEqual(ListItem.DBType,movie)]">
                             <param name="id" value="5001" />
                             <param name="groupid" value="7501" />
                             <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Set.Name)]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content>$INFO[Window(Home).Property(TMDbHelper.ListItem.Set.TMDb_ID),plugin://plugin.video.themoviedb.helper/?info=collection&amp;tmdb_type=collection&amp;tmdb_id=,]$VAR[Path_Param_Widget]</content>
+                            <content>$VAR[Path_VideoInfo_OnlineCollection]</content>
                         </include>
 
                         <!-- 1140 Set Cast -->
@@ -131,7 +131,7 @@
                         </include>
 
                         <!-- NextUp -->
-                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListNextUp)">
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListNextUp) + [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)]">
                             <param name="id" value="5047" />
                             <param name="groupid" value="7547" />
                             <param name="label" value="$LOCALIZE[31054]" />
@@ -145,12 +145,11 @@
                             <onclick>Dialog.Close(all,force)</onclick>
                             <onclick>PlayMedia($INFO[Container(5047).ListItem.FileNameAndPath])</onclick>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="3" sortby="playcount" sortorder="ascending">videodb://inprogresstvshows/$INFO[ListItem.DBID]/-2/?tvshowid=$INFO[ListItem.DBID]</content>
-                            <visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)</visible>
+                            <content limit="3" target="videos" sortby="playcount" sortorder="ascending" browse="never">videodb://inprogresstvshows/$INFO[ListItem.DBID]/-2/?tvshowid=$INFO[ListItem.DBID]</content>
                         </include>
 
                         <!-- Seasons -->
-                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListSeasons)">
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListSeasons) + [String.IsEqual(ListItem.DBType,tvshow)]">
                             <param name="id" value="5008" />
                             <param name="groupid" value="7508" />
                             <param name="label" value="Seasons" />
@@ -159,7 +158,6 @@
                             <onclick>Dialog.Close(all,force)</onclick>
                             <onclick>ActivateWindow(videos,$INFO[Container(5008).ListItem.FolderPath])</onclick>
                             <include>Defs_InfoList_OnBack</include>
-                            <visible>String.IsEqual(ListItem.DBTYPE,tvshow)</visible>
                             <content limit="25" target="videos">$INFO[ListItem.DBID,videodb://tvshows/titles/,/]</content>
                         </include>
 
@@ -171,8 +169,8 @@
                             <param name="labelinclude" value="View_Cast_Label" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content limit="1">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=details&amp;type=person]$VAR[Path_Param_Widget]</content>
-                            <content sortby="year" sortorder="descending">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;type=person&amp;filter_key=job&amp;filter_value=Director]$VAR[Path_Param_Widget]</content>
+                            <content limit="1">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=details&amp;tmdb_type=person&amp;nextpage=false&amp;cacheonly=true&amp;length=1]</content>
+                            <content>$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;tmdb_type=person&amp;filter_key=job&amp;filter_value=Director&amp;sort_by=premiered&amp;tmdb_id=,&amp;nextpage=false&amp;cacheonly=true&amp;length=1]</content>
                         </include>
 
                         <!-- Crew -->
@@ -183,7 +181,7 @@
                             <param name="labelinclude" value="View_Cast_Job_Label" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content target="videos">$VAR[Path_VideoInfo_Generic,,&amp;info=crew]$VAR[Path_Param_Widget]</content>
+                            <content target="videos">$VAR[Path_VideoInfo_OnlineCrew]</content>
                         </include>
                         
                         <!-- Extras -->
@@ -212,7 +210,7 @@
                             <param name="label" value="$LOCALIZE[30042]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content>$VAR[Path_VideoInfo_Generic,,&amp;info=recommendations]$VAR[Path_Param_Widget]</content>
+                            <content>$VAR[Path_VideoInfo_OnlineRecommendations]</content>
                         </include>
 
                         <!-- Similar -->
@@ -222,7 +220,7 @@
                             <param name="label" value="$INFO[ListItem.Title,$LOCALIZE[31051] ,]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content>$VAR[Path_VideoInfo_Generic,,&amp;info=similar]$VAR[Path_Param_Widget]</content>
+                            <content>$VAR[Path_VideoInfo_OnlineSimilar]</content>
                         </include>
 
                         <!-- Year -->
@@ -232,7 +230,7 @@
                             <param name="label" value="$INFO[ListItem.Year,$LOCALIZE[31053] ,]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content>$VAR[Path_FromYear,plugin://plugin.video.themoviedb.helper/?info=discover]$VAR[Path_Param_Widget]</content>
+                            <content>$VAR[Path_VideoInfo_OnlineYear]</content>
                         </include>
 
                         <!-- Genre -->
@@ -242,7 +240,7 @@
                             <param name="label" value="$INFO[ListItem.Genre]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content>$VAR[Path_FromGenre,plugin://plugin.video.themoviedb.helper/?info=discover]$VAR[Path_Param_Widget]</content>
+                            <content>$VAR[Path_VideoInfo_OnlineGenre]</content>
                         </include>
 
                         <!-- Studio -->
@@ -252,7 +250,7 @@
                             <param name="label" value="$VAR[Label_FromStudio]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
-                            <content>$VAR[Path_FromStudio,plugin://plugin.video.themoviedb.helper/?info=discover]$VAR[Path_Param_Widget]</content>
+                            <content>$VAR[Path_VideoInfo_OnlineStudio]</content>
                         </include>
 
                         <!-- Youtube -->
@@ -283,7 +281,7 @@
                             <onclick>SetFocus(9559)</onclick>
                             <include>Defs_InfoList_OnBack</include>
                             <visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)</visible>
-                            <content target="images">$VAR[Path_VideoInfo_Generic,,&amp;info=posters]$VAR[Path_Param_Widget]</content>
+                            <content target="images">$VAR[Path_VideoInfo_OnlinePoster]</content>
                         </include>
                         
                     </control>
@@ -297,7 +295,7 @@
                     <onback>300</onback>
                     <onclick>SetFocus(9569)</onclick>
                     <!-- <include condition="String.IsEmpty(ListItem.Property(tmdb_id)) + [!String.IsEmpty(ListItem.Art(fanart1)) | !String.IsEmpty(ListItem.Art(discart))]">Items_Info_Gallery</include> -->
-                    <content target="images">$VAR[Path_VideoInfo_Generic,,&amp;info=fanart]$VAR[Path_Param_Widget]</content>
+                    <content target="images">$VAR[Path_VideoInfo_OnlineFanart]</content>
                     <visible>Integer.IsGreater(Container(6000).NumItems,0) | Container(6000).IsUpdating</visible>
                 </include>
                 <control type="group"></control>
@@ -369,7 +367,7 @@
                         <include content="View_50_Poster">
                             <param name="include" value="Animation_Left_Delay" />
                             <param name="defaulticonvisible" value="false" />
-                            <param name="icon" value="$INFO[ListItem.Art(poster)]" />
+                            <param name="icon" value="$VAR[Image_Poster]" />
                             <param name="diffuse" value="diffuse/poster-big.png" />
                         </include>
 
@@ -427,7 +425,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <onclick condition="Window.IsActive(videoosd)">Dialog.Close(videoosd,true)</onclick>
                             <onclick condition="Window.IsActive(1142)">Dialog.Close(1142,true)</onclick>
-                            <content>$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDB_ID),plugin://plugin.video.themoviedb.helper/?info=stars_in_movies&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=250&amp;sort_key=release_date]$VAR[Path_Param_Widget]</content>
+                            <content>$INFO[ListItem.UniqueID(tmdb),plugin://plugin.video.themoviedb.helper/?info=stars_in_movies&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=250&amp;sort_by=premiered&amp;nextpage=false&amp;cacheonly=true&amp;length=1]</content>
                         </include>
                         <!-- List 02 -->
                         <include content="Info_Widget_Poster">
@@ -439,7 +437,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <onclick condition="Window.IsActive(videoosd)">Dialog.Close(videoosd,true)</onclick>
                             <onclick condition="Window.IsActive(1142)">Dialog.Close(1142,true)</onclick>
-                            <content>$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDB_ID),plugin://plugin.video.themoviedb.helper/?info=stars_in_tvshows&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=250&amp;sort_key=first_air_date]$VAR[Path_Param_Widget]</content>
+                            <content>$INFO[ListItem.UniqueID(tmdb),plugin://plugin.video.themoviedb.helper/?info=stars_in_tvshows&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=250&amp;sort_by=premiered&amp;nextpage=false&amp;cacheonly=true&amp;length=1]</content>
                         </include>
                         <!-- List 03 -->
                         <include content="Info_Widget_Poster">
@@ -451,7 +449,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <onclick condition="Window.IsActive(videoosd)">Dialog.Close(videoosd,true)</onclick>
                             <onclick condition="Window.IsActive(1142)">Dialog.Close(1142,true)</onclick>
-                            <content>$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDB_ID),plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=250&amp;sort_key=year]$VAR[Path_Param_Widget]</content>
+                            <content>$INFO[ListItem.UniqueID(tmdb),plugin://plugin.video.themoviedb.helper/?info=crew_in_both&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=250&amp;sort_by=premiered&amp;nextpage=false&amp;cacheonly=true&amp;length=1]</content>
                         </include>
                         <!-- List 04 -->
                         <include content="Info_Widget_Poster">
@@ -460,7 +458,7 @@
                             <param name="label" value="Images" />
                             <onclick>SetFocus(9506)</onclick>
                             <include>Defs_InfoList_OnBack</include>
-                            <content target="images" limit="20" browse="never">$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDB_ID),plugin://plugin.video.themoviedb.helper/?info=images&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=100]$VAR[Path_Param_Widget]</content>
+                            <content target="images" limit="20" browse="never">$INFO[ListItem.UniqueID(tmdb),plugin://plugin.video.themoviedb.helper/?info=images&amp;tmdb_type=person&amp;tmdb_id=,&amp;limit=100&amp;nextpage=false&amp;cacheonly=true&amp;length=1]</content>
                         </include>
                     </control>
                 </control>

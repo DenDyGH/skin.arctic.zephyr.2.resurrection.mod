@@ -58,9 +58,9 @@
             <property name="path" tag="property" attribute="name|list" value="DefaultSearch-SpotifyPlaylists">plugin://plugin.audio.spotify/?action=search_songs&amp;playlistid=</property>
             <property name="path" tag="property" attribute="name|list" value="DefaultSearch-SpotifyPlaylists">plugin://plugin.audio.spotify/?action=search_playlists&amp;playlistid=</property>
 
-            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-TMDBMovies">plugin://plugin.video.themoviedb.helper?info=search&amp;type=movie&amp;query=</property>
-            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-TMDBShows">plugin://plugin.video.themoviedb.helper?info=search&amp;type=tv&amp;query=</property>
-            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-TMDBPeople">plugin://plugin.video.themoviedb.helper?info=search&amp;type=person&amp;query=</property>
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-TMDBMovies">plugin://plugin.video.themoviedb.helper?info=search&amp;tmdb_type=movie&amp;query=</property>
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-TMDBShows">plugin://plugin.video.themoviedb.helper?info=search&amp;tmdb_type=tv&amp;query=</property>
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-TMDBPeople">plugin://plugin.video.themoviedb.helper?info=search&amp;tmdb_type=person&amp;query=</property>
 
             <property name="path" tag="property" attribute="name|list"/>
 
