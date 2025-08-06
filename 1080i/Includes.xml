@@ -12,6 +12,7 @@
     <include file="Includes_Info.xml" />
     <include file="Includes_Home.xml" />
     <include file="Includes_Background.xml" />
+    <include file="Includes_Expressions.xml" />
     <include file="Includes_DialogVideoInfo.xml" />
     <include file="Includes_DialogMusicInfo.xml" />
 
