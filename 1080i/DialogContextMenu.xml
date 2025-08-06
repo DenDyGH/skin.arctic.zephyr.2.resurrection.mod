@@ -71,6 +71,15 @@
                 <aspectratio align="right">keep</aspectratio>
                 <texture colordiffuse="dialog_fg_70">special://skin/extras/icons/kodi.png</texture>
             </control>
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>25</top>
+                <width>418</width>
+                <height>1</height>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>45</left>
+            </include>
             <control type="grouplist" id="996">
                 <description>grouplist for context buttons</description>
                 <left>24</left>

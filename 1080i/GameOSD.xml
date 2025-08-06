@@ -88,7 +88,7 @@
                         <height>80</height>
                         <left>8</left>
                         <textcolor>dialog_fg_70</textcolor>
-                        <font>font_small_bold</font>
+                        <font>font_medium_bold</font>
                         <label>$LOCALIZE[35221]</label>
                         <align>left</align>
                         <textoffsetx>30</textoffsetx>
@@ -97,10 +97,19 @@
                         <top>-56</top>
                         <width>458</width>
                         <height>64</height>
-                        <left>-8</left>
+                        <left>-5</left>
                         <aspectratio align="right">keep</aspectratio>
                         <texture colordiffuse="dialog_fg_70">special://skin/extras/icons/kodi.png</texture>
                     </control>
+                    <include content="Object_Control">
+                        <param name="control">image</param>
+                        <top>5</top>
+                        <width>420</width>
+                        <height>1</height>
+                        <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                        <align>center</align>
+                        <left>25</left>
+                    </include>
                     <control type="list" id="1103">
                         <onleft>Back</onleft>
                         <onright>Back</onright>

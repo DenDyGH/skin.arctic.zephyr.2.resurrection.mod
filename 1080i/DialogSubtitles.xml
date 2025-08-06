@@ -14,6 +14,17 @@
                 <label>$LOCALIZE[31037]</label>
             </control>
 
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1770</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
+
             <control type="label">
                 <description>Path</description>
                 <bottom>10</bottom>
@@ -34,7 +45,7 @@
                 <left>0</left>
                 <top>dialog_top</top>
                 <right>dialog_side_grouplist</right>
-                <height>680</height>
+                <height>690</height>
                 <onleft>8000</onleft>
                 <onright>61</onright>
                 <onup>450</onup>

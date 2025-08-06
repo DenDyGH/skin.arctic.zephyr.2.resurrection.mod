@@ -213,7 +213,6 @@
         <textcolor>dialog_fg_70</textcolor>
         <shadowcolor/>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <pagecontrol>61</pagecontrol>
         <autoscroll delay="6000" time="3000" repeat="10000"/>
     </default>
 

@@ -11,12 +11,23 @@
             <visible>!Window.IsVisible(SliderDialog)</visible>
             <include content="Dialog_Standard_Group">
                 <param name="width" value="1420" />
-                <param name="height" value="850" />
+                <param name="height" value="840" />
             </include>
 
             <control type="label" id="2">
                 <include>Dialog_Standard_Header</include>
             </control>
+
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1370</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
 
             <control type="grouplist" id="5">
                 <description>control area</description>

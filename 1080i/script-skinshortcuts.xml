@@ -16,7 +16,7 @@
                 <description>header label</description>
                 <left>30</left>
                 <height>90</height>
-                <font>font_small_bold</font>
+                <font>font_medium_bold</font>
                 <align>left</align>
                 <textcolor>dialog_fg_70</textcolor>
                 <visible>![String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)]</visible>
@@ -26,12 +26,23 @@
                 <description>header label</description>
                 <left>30</left>
                 <height>90</height>
-                <font>font_small_bold</font>
+                <font>font_medium_bold</font>
                 <align>left</align>
                 <textcolor>dialog_fg_70</textcolor>
                 <label>$LOCALIZE[30062]</label>
                 <visible>[String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)]</visible>
             </control>
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1570</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
+
 
             <!-- Shortcuts List -->
             <control type="list" id="211">

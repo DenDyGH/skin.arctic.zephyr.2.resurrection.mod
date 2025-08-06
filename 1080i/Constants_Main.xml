@@ -25,7 +25,7 @@
 
     <constant name="menu_itemgap">30</constant>
 
-    <constant name="dialog_top">120</constant>
+    <constant name="dialog_top">90</constant>
     <constant name="dialog_pad">30</constant>
     <constant name="dialog_side_grouplist">400</constant>
     <constant name="dialog_right_iconwidth">340</constant>

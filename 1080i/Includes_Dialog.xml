@@ -123,13 +123,22 @@
                         <textoffsetx>30</textoffsetx>
                     </control>
                     <control type="image">
-                        <top>-56</top>
+                        <top>-54</top>
                         <width>458</width>
                         <height>64</height>
                         <left>-8</left>
                         <aspectratio align="right">keep</aspectratio>
                         <texture colordiffuse="dialog_fg_70">special://skin/extras/icons/kodi.png</texture>
                     </control>
+                    <include content="Object_Control">
+                        <param name="control">image</param>
+                        <top>10</top>
+                        <width>418</width>
+                        <height>1</height>
+                        <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                        <align>center</align>
+                        <left>20</left>
+                    </include>
                     <control type="list" id="$PARAM[id]">
                         <onleft>Back</onleft>
                         <onright>Back</onright>
@@ -469,7 +478,7 @@
             <include condition="$PARAM[animation]">Animation_FadeIn_Slide</include>
             <control type="image">
                 <include>Defs_Shadow_24</include>
-                <texture border="16" colordiffuse="dialog_bg_100">common/rounded-dialog.png</texture>
+                <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
             </control>
         </definition>
     </include>
@@ -750,7 +759,7 @@
                 <height>488</height>
                 <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
                 <bordersize>24</bordersize>
-                <texture border="16" colordiffuse="dialog_bg_100">common/rounded-dialog.png</texture>
+                <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
             </control>
 
             <control type="label" id="$PARAM[header_id]">
@@ -762,7 +771,18 @@
                 <align>left</align>
                 <label>$PARAM[header_label]</label>
             </control>
-            
+
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>70</top>
+                <width>1040</width>
+                <height>1</height>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>10</left>
+                <right>10</right>
+            </include>
+
             <control type="textbox" id="$PARAM[textbox_id]">
                 <description>Line 1</description>
                 <left>15</left>
@@ -770,6 +790,39 @@
                 <top>108</top>
                 <height>300</height>
                 <label>$PARAM[textbox_label]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Dialog_InfoText">
+        <param name="colordiffuse">dialog_fg_70</param>
+        <param name="fallback">19055</param>
+        <param name="left">50</param>
+        <param name="right">50</param>
+        <param name="width">1350</param>
+        <param name="centerbottom">35</param>
+        <definition>
+            <control type="group">
+                <height>50</height>
+                <width>$PARAM[width]</width>
+                <centerbottom>$PARAM[centerbottom]</centerbottom>
+                <left>$PARAM[left]</left>
+                <right>$PARAM[right]</right>
+                <control type="image">
+                    <left>-25</left>
+                    <width>50</width>
+                    <bordersize>-4</bordersize>
+                    <texture colordiffuse="$PARAM[colordiffuse]">special://skin/extras/icons/infobubble.png</texture>
+                </control>
+                <control type="textbox">
+                    <font>font_tiny</font>
+                    <left>40</left>
+                    <height>40</height>
+                    <centertop>50%</centertop>
+                    <aligny>center</aligny>
+                    <textcolor>$PARAM[colordiffuse]</textcolor>
+                    <label fallback="$PARAM[fallback]">$PARAM[label]</label>
+                </control>
             </control>
         </definition>
     </include>
@@ -1189,11 +1242,22 @@
         <control type="group">
             <include content="Dialog_Standard_Group">
                 <param name="width" value="1336" />
-                <param name="height" value="950" />
+                <param name="height" value="920" />
             </include>
             <control type="label" id="1">
                 <include>Dialog_Standard_Header</include>
             </control>
+
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1286</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
 
             <include>Dialog_Standard_List</include>
             <include content="Dialog_Standard_List">
@@ -1261,23 +1325,30 @@
                 <top>0</top>
                 <width>458</width>
                 <height>dialog_top</height>
-                <left>-10</left>
+                <left>30</left>
                 <right>30</right>
                 <textcolor>dialog_fg_70</textcolor>
                 <font>font_medium_bold</font>
                 <label>$LOCALIZE[35221]</label>
                 <align>left</align>
                 <aligny>center</aligny>
-                <textoffsetx>30</textoffsetx>
             </control>
             <control type="image">
-                <top>25</top>
+                <top>15</top>
                 <width>590</width>
                 <height>64</height>
-                <left>10</left>
                 <aspectratio align="right">keep</aspectratio>
                 <texture colordiffuse="dialog_fg_70">special://skin/extras/icons/kodi.png</texture>
             </control>
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>75</top>
+                <width>550</width>
+                <height>1</height>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+            </include>
 
             <include content="Dialog_Standard_List" condition="Window.IsActive(gamesaves)">
                 <param name="id" value="3" />
@@ -1432,6 +1503,17 @@
             <control type="label" id="1">
                 <include>Dialog_Standard_Header</include>
             </control>
+
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1280</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
 
             <include content="Dialog_Standard_List">
                 <param name="id" value="3" />

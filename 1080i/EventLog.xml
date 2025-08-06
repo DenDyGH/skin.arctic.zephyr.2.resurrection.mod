@@ -33,6 +33,17 @@
                 <label>$LOCALIZE[14111]</label>
             </control>
 
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1280</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
+
             <include content="Dialog_Standard_List">
                 <param name="id" value="570" />
                 <param name="itemheight" value="item_biglist_height" />

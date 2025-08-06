@@ -11,17 +11,29 @@
         <control type="group">
             <include content="Dialog_Standard_Group">
                 <param name="width" value="1820" />
-                <param name="height" value="930" />
+                <param name="height" value="950" />
             </include>
 
             <control type="label" id="2">
                 <include>Dialog_Standard_Header</include>
             </control>
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1770</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
+
 
             <control type="grouplist" id="3">
                 <description>button area</description>
                 <left>0</left>
                 <top>dialog_top</top>
+                <height>780</height>
                 <width>dialog_side_grouplist</width>
                 <bottom>dialog_pad</bottom>
                 <itemgap>0</itemgap>
@@ -31,12 +43,20 @@
                 <ondown>3</ondown>
             </control>
 
-            <include>Dialog_Separator</include>
+            <control type="image">
+                <left>dialog_side_grouplist</left>
+                <width>1</width>
+                <height>770</height>
+                <top>dialog_top</top>
+                <bottom>dialog_pad</bottom>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+            </control>
 
             <control type="grouplist" id="5">
                 <description>control area</description>
                 <left>dialog_side_grouplist</left>
                 <top>dialog_top</top>
+                <height>780</height>
                 <right>dialog_side_grouplist</right>
                 <bottom>dialog_pad</bottom>
                 <itemgap>0</itemgap>
@@ -50,6 +70,24 @@
 
             <include content="Dialog_Scrollbar">
                 <param name="onleft" value="5" />
+            </include>
+
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>880</top>
+                <height>1</height>
+                <width>1370</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>left</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
+
+            <control type="label" id="6">
+                <visible>false</visible>
+            </control>
+            <include content="Dialog_InfoText">
+                <param name="label">$INFO[Control.GetLabel(6)]</param>
             </include>
            
             <control type="group">

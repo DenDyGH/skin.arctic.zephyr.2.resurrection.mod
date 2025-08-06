@@ -482,7 +482,7 @@
             <bottom>-16</bottom>
             <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
             <bordersize>24</bordersize>
-            <texture border="16" colordiffuse="dialog_bg_100">common/rounded-dialog.png</texture>
+            <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
         </control>
     </include>
     <include name="Defs_Options_Grouplist">

@@ -11,11 +11,22 @@
         <control type="group">
             <include content="Dialog_Standard_Group">
                 <param name="width" value="1336" />
-                <param name="height" value="990" />
+                <param name="height" value="980" />
             </include>
             <control type="label" id="411">
                 <include>Dialog_Standard_Header</include>
             </control>
+
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1280</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
 
             <control type="label" id="412">
                 <bottom>0</bottom>
