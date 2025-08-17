@@ -2738,4 +2738,40 @@
             <onclick>Skin.SetString(AlphaValue_Highlight,0)</onclick>
         </control>
     </include>
+    <include name="Items_SettingsDialog_FlixBlur">
+        <control type="button" id="9001">
+            <label>$LOCALIZE[31512]</label>
+            <include>Dialog_Standard_Button</include>
+            <onclick>Skin.ToggleSetting(EnableBlur.FlixViews)</onclick>
+            <onclick condition="Skin.HasSetting(FlixViews.Simple)">Skin.Reset(FlixViews.Simple)</onclick>
+            <onclick condition="!Skin.HasSetting(TMDbHelper.EnableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onclick>
+            <onclick condition="Skin.HasSetting(TMDbHelper.EnableBlur) + Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(EnableBlur.Background)">Skin.Reset(TMDbHelper.EnableBlur)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>ReloadSkin()</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,1),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19535),00:00,silent)</onclick>
+        </control>
+        <control type="button" id="9002">
+            <label>$LOCALIZE[31513]</label>
+            <include>Dialog_Standard_Button</include>
+            <onclick condition="Skin.HasSetting(EnableBlur.FlixViews)">Skin.Reset(EnableBlur.FlixViews)</onclick>
+            <onclick condition="Skin.HasSetting(FlixViews.Simple)">Skin.Reset(FlixViews.Simple)</onclick>
+            <onclick condition="Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(EnableBlur.Background)">Skin.Reset(TMDbHelper.EnableBlur)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>ReloadSkin()</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,1),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19535),00:00,silent)</onclick>
+        </control>
+        <control type="button" id="9003">
+            <label>$LOCALIZE[31514]</label>
+            <include>Dialog_Standard_Button</include>
+            <onclick>Skin.SetBool(FlixViews.Simple)</onclick>
+            <onclick condition="Skin.HasSetting(EnableBlur.FlixViews)">Skin.Reset(EnableBlur.FlixViews)</onclick>
+            <onclick condition="Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(EnableBlur.Background)">Skin.Reset(TMDbHelper.EnableBlur)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+            <onclick>ReloadSkin()</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,1),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19535),00:00,silent)</onclick>
+        </control>
+    </include>
 </includes>

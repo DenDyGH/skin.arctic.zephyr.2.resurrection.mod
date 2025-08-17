@@ -99,6 +99,12 @@
         <value>$LOCALIZE[30057]</value>
     </variable>
 
+    <variable name="Label_SkinSettings_Flix_Background_Blur">
+        <value condition="Skin.HasSetting(EnableBlur.FlixViews)">$LOCALIZE[31512]</value>
+        <value condition="!Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple)">$LOCALIZE[31513]</value>
+        <value condition="Skin.HasSetting(FlixViews.Simple)">$LOCALIZE[31514]</value>
+    </variable>
+
     <variable name="Label_ListItem_AudioChannels">
         <value condition="Integer.IsEqual(ListItem.AudioChannels,10)">9.1</value>
         <value condition="Integer.IsEqual(ListItem.AudioChannels,9)">8.1</value>

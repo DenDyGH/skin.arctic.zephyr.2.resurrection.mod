@@ -146,14 +146,16 @@
 
         <control type="group">
             <visible>Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)</visible>
-            <include condition="Skin.HasSetting(EnableBlur.FlixViews) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_Main</include>
-            <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_FlixArt_Basic_Home</include>
+            <include condition="Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_Main</include>
+            <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_Main</include>
+            <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + Skin.HasSetting(FlixViews.Simple) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_FlixArt_Basic_Home</include>
         </control>
 
         <control type="group">
             <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)] + $EXP[Exp_GlobalBackground]</visible>
-            <include condition="Skin.HasSetting(EnableBlur.FlixViews)">Background_Main</include>
-            <include condition="!Skin.HasSetting(EnableBlur.FlixViews)">Background_FlixArt_Basic</include>
+            <include condition="Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple)">Background_Main</include>
+            <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple)">Background_Main</include>
+            <include condition="Skin.HasSetting(FlixViews.Simple) + !Skin.HasSetting(EnableBlur.FlixViews)">Background_FlixArt_Basic</include>
         </control>
 
         <include>Object_NowPlaying</include>
@@ -164,12 +166,6 @@
     <variable name="Global_Background_Image_NoFanart">
         <value condition="[Window.IsVisible(home) | Window.IsVisible(1135)] + !String.IsEmpty(Container(301).ListItem.Property(backgroundPlaylist))">$INFO[Container(9988).ListItem.Art(fanart)]</value>
         <value condition="[Window.IsVisible(home) | Window.IsVisible(1135)] + !String.IsEmpty(Container(301).ListItem.Property(Background))">$INFO[Container(301).ListItem.Property(Background)]</value>
-        <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
-        <value>special://skin/extras/backgrounds/bg2.jpg</value>
-    </variable>
-
-    <variable name="Global_Background_Blur_Var">
-        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.BlurImage))">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
         <value>special://skin/extras/backgrounds/bg2.jpg</value>
     </variable>

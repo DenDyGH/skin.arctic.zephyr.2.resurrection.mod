@@ -2231,8 +2231,8 @@ msgstr "隐藏信息面板"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31508"
-msgid "Blur background for some Flix views only"
-msgstr "仅对部分 Flix 视图模糊背景"
+msgid "Flix2 Views: background blur"
+msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31509"
@@ -2247,4 +2247,19 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31511"
 msgid "Hide chapters mark"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31512"
+msgid "Blur (Quality)"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31513"
+msgid "Blur (Performance)"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31514"
+msgid "Simple"
 msgstr ""

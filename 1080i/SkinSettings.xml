@@ -262,14 +262,14 @@
                             <enable>!Skin.HasSetting(NoFanart)</enable>
                         </control>
 
-                        <control type="radiobutton" id="19535" description="Enable blur for Flix views">
+                        <control type="button" id="19535" description="Flix2 Views: background blur">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31508]</label>
-                            <selected>Skin.HasSetting(EnableBlur.FlixViews)</selected>
-                            <onclick>Skin.ToggleSetting(EnableBlur.FlixViews)</onclick>
-                            <onclick condition="!Skin.HasSetting(TMDbHelper.EnableBlur)">Skin.SetBool(TMDbHelper.EnableBlur)</onclick>
-                            <onclick condition="Skin.HasSetting(TMDbHelper.EnableBlur) + [Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(EnableBlur.Background)]">Skin.Reset(TMDbHelper.EnableBlur)</onclick>
-                            <enable>!Skin.HasSetting(NoFanart)</enable>
+                            <label2>$VAR[Label_SkinSettings_Flix_Background_Blur]</label2>
+                            <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31508],home)</onclick>
+                            <onclick>SetProperty(CustomDialogWindow.items,Flix_Background_Blur,home)</onclick>
+                            <onclick>ActivateWindow(1150)</onclick>
+                            <visible>!Skin.HasSetting(NoFanart)</visible>
                         </control>
 
                         <control type="button" id="19106" description="Set home background image">

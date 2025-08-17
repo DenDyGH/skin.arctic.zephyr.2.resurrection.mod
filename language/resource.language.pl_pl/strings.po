@@ -2194,8 +2194,8 @@ msgstr "Ukryj panel z informacjami"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31508"
-msgid "Blur background for some Flix views only"
-msgstr "Rozmycie tła tylko dla niektórych widoków flix"
+msgid "Flix2 Views: background blur"
+msgstr "Widoki Flix2: rozmycie tła"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31509"
@@ -2211,3 +2211,18 @@ msgstr "Zegar i pogoda w oknie głównym"
 msgctxt "#31511"
 msgid "Hide chapters mark"
 msgstr "Ukryj znaczniki rozdziałów"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31512"
+msgid "Blur (Quality)"
+msgstr "Rozmycie (Jakość)"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31513"
+msgid "Blur (Performance)"
+msgstr "Rozmycie (Wydajność)"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31514"
+msgid "Simple"
+msgstr "Zwykły"

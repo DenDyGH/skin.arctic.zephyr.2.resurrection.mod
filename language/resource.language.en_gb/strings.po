@@ -2219,7 +2219,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31508"
-msgid "Blur background for some Flix views only"
+msgid "Flix2 Views: background blur"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -2235,4 +2235,19 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31511"
 msgid "Hide chapters mark"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31512"
+msgid "Blur (Quality)"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31513"
+msgid "Blur (Performance)"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31514"
+msgid "Simple"
 msgstr ""
