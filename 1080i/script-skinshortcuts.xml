@@ -186,9 +186,8 @@
                     <control type="button" id="4001" description="Choose Widget">
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <label>$LOCALIZE[31098]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(path)]</label2>
                         <onclick>SetProperty(custom-grouping,widget)</onclick>
-                        <onclick>SendClick(307)</onclick>
+                        <onclick>SendClick(401)</onclick>
                         <include>Dialog_Standard_Button</include>
                         <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
 
@@ -251,7 +250,6 @@
                         <onclick>SendClick(307)</onclick>
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <include>Dialog_Standard_Button</include>
-                        <visible>String.IsEqual(Window.Property(groupname),searchmenu)</visible>
                     </control>
 
                     <control type="button" id="19312" description="Custom Hub Node">
