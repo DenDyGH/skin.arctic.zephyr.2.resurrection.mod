@@ -228,8 +228,8 @@
                     <control type="button" id="307" description="Action">
                         <label>$LOCALIZE[31267]</label>
                         <label2>$INFO[Container(211).ListItem.Property(Path)]</label2>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <include>Dialog_Standard_Button</include>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
                         <visible>!String.IsEqual(Window.Property(groupname),searchmenu)</visible>
                     </control>
@@ -246,10 +246,12 @@
                     <control type="button" id="3007" description="Action">
                         <label>$LOCALIZE[31267]</label>
                         <label2>$INFO[Container(211).ListItem.Property(Path)]</label2>
-                        <onclick>SetProperty(custom-grouping,customsearch)</onclick>
+                        <onclick condition="!String.IsEqual(Window.Property(groupname),searchmenu)">SetProperty(custom-grouping,widget)</onclick>
+                        <onclick condition="String.IsEqual(Window.Property(groupname),searchmenu)">SetProperty(custom-grouping,customsearch)</onclick>
                         <onclick>SendClick(307)</onclick>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <include>Dialog_Standard_Button</include>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <visible>String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)</visible>
                     </control>
 
                     <control type="button" id="19312" description="Custom Hub Node">
