@@ -16,6 +16,17 @@
                 <include>Dialog_Standard_Header</include>
             </control>
 
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1130</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
+
             <control type="grouplist" id="9000">
                 <onright>61</onright>
                 <description>Control Area</description>

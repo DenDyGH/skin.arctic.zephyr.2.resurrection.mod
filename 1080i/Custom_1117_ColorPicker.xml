@@ -20,6 +20,17 @@
                 <label>$LOCALIZE[30087]</label>
             </control>
 
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>75</top>
+                <height>1</height>
+                <width>930</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
+
             <!-- Dialog Content -->
             <control type="group">
                 <left>dialog_pad</left>
@@ -250,6 +261,9 @@
                             <label>$LOCALIZE[15067]</label>
                             <include>Dialog_Standard_Right_Buttons</include>
                             <onclick>ReloadSkin()</onclick>
+                            <onclick>AlarmClock(refocus1,SetFocus(9000,2),00:00,silent)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">AlarmClock(refocus2,SetFocus(19301),00:00,silent)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">AlarmClock(refocus2,SetFocus(19305),00:00,silent)</onclick>
                         </control>
                     </control>
                 </control>
