@@ -122,7 +122,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
-        <!-- Big weather temp -->        
+        <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
@@ -372,7 +372,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
-        <!-- Big weather temp -->        
+        <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
             <filename>Roboto-Bold.ttf</filename>
@@ -610,7 +610,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
-        <!-- Big weather temp -->        
+        <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
             <filename>Roboto-Bold.ttf</filename>
@@ -857,7 +857,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
-        <!-- Big weather temp -->        
+        <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
             <filename>arial.ttf</filename>
@@ -979,4 +979,253 @@
         <include>VideoLyrics_Fonts</include>
 
     </fontset>
+
+    <!-- AmazonEmberDisplay_Rg -->
+
+    <fontset id="AmazonEmberDisplay_Rg" unicode="true">
+
+        <include condition="Skin.HasSetting(FauneFonts)">Defaults_FauneFonts</include>
+        <include condition="!Skin.HasSetting(FauneFonts)">Defaults_AmazonEmberDisplay_RgFonts</include>
+
+        <!-- Standard Fonts -->
+        <font>
+            <name>font_medium</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>38</size>
+        </font>
+        <font>
+            <name>font_medium_bold</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>38</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_small</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
+            <name>font_small_mono</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>30</size>
+            <aspect>0.8</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_small_bold</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>30</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_tiny</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
+            <name>font_tiny_bold</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>26</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_button</name>
+            <style>uppercase</style>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>24</size>
+        </font>
+        <font>
+            <name>font_statusbar</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>22</size>
+        </font>
+        <font>
+            <name>font_fps</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>16</size>
+        </font>
+        <font>
+            <name>font_osd_lang</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>10</size>
+        </font>
+        <font>
+            <name>font_statusbar_bold</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>22</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_info_buttons</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>20</size>
+            <style>uppercase bold</style>
+        </font>
+        <font>
+            <name>font_unwatched</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>16</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_mini</name>
+            <style>uppercase</style>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>20</size>
+        </font>
+
+        <!-- Music visualisation scrolling text -->
+        <font>
+            <name>font_musicvis_biggest</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>230</size>
+        </font>
+        <font>
+            <name>font_musicvis_bigger</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>130</size>
+        </font>
+        <font>
+            <name>font_musicvis_big</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>80</size>
+        </font>
+
+        <!-- Music visualisation info -->
+        <font>
+            <name>font_lyrics_bold</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>70</size>
+            <style>bold</style>
+        </font>
+
+        <font>
+            <name>font_splash</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>80</size>
+            <style>bold</style>
+        </font>
+        <!-- Big weather temp -->
+        <font>
+            <name>font_weather_currenttemp</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>150</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_weather_bold</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>38</size>
+            <style>bold</style>
+        </font>
+
+        <!-- Plot info overlay -->
+        <font>
+            <name>font_overlay_title</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>100</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+
+
+        <!-- Showcase title font -->
+        <font>
+            <name>font_title_large</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>64</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_title_medium</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>52</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_title</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>48</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_title_small</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>40</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_title_mini</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>30</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_topbar</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>40</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_topbar_small</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
+            <name>font_submenu</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>30</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_submenu_small</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
+            <name>font_notification</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>30</size>
+            <aspect>0.9</aspect>
+            <style>bold</style>
+        </font>
+
+        <!-- Small Byline -->
+        <font>
+            <name>font_byline</name>
+            <style>uppercase</style>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>22</size>
+        </font>
+        <font>
+            <name>font_hintlabel</name>
+            <style>uppercase bold</style>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>18</size>
+        </font>
+
+        <!-- Required for system -->
+        <font>
+            <name>font13</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
+            <name>Clock</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>130</size>
+            <style>bold</style>
+        </font>
+
+        <include>VideoLyrics_Fonts</include>
+
+    </fontset>
+
 </fonts>
