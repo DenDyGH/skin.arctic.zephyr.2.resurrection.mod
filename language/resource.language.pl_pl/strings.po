@@ -483,7 +483,7 @@ msgstr "Ustaw redukcje kolorów do ikon"
 #: /1080i/SkinSettings.xml
 msgctxt "#31095"
 msgid "Add-on list viewtypes use default labels"
-msgstr "Typy listy wtyczek uzywają standardowych etykiet"
+msgstr "Stosuj domyślne etykiety dla widoku list"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31096"
@@ -512,7 +512,7 @@ msgstr "Typ zawartości"
 
 msgctxt "#31101"
 msgid "items"
-msgstr "przedmioty"
+msgstr "pozycji"
 
 msgctxt "#31102"
 msgid "min"

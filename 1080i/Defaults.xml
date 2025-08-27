@@ -342,6 +342,7 @@
             <filename>arial.ttf</filename>
             <size>30</size>
             <aspect>0.9</aspect>
+            <linespacing>1.12</linespacing>
         </font>
         <font>
             <name>font_weather_small</name>
@@ -369,8 +370,8 @@
         <font>
             <name>font_plotbox</name>
             <filename>AmazonEmberDisplay_Rg.ttf</filename>
-            <linespacing>1.14</linespacing>
             <size>29</size>
+            <linespacing>1.14</linespacing>
         </font>
         <font>
             <name>font_weather_small</name>
@@ -380,8 +381,8 @@
         <font>
             <name>font_overlay_plotbox</name>
             <filename>AmazonEmberDisplay_Rg.ttf</filename>
-            <linespacing>1.14</linespacing>
             <size>48</size>
+            <linespacing>1.14</linespacing>
         </font>
         <font>
             <name>font_info_display</name>
