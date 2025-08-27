@@ -364,4 +364,31 @@
         </font>
     </include>
 
+    <include name="Defaults_AmazonEmberFonts">
+        <!-- Plot Font -->
+        <font>
+            <name>font_plotbox</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <linespacing>1.14</linespacing>
+            <size>29</size>
+        </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <linespacing>1.14</linespacing>
+            <size>48</size>
+        </font>
+        <font>
+            <name>font_info_display</name>
+            <style>bold</style>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>64</size>
+        </font>
+    </include>
+
 </includes>

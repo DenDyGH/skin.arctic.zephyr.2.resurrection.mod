@@ -982,10 +982,10 @@
 
     <!-- AmazonEmberDisplay_Rg -->
 
-    <fontset id="AmazonEmberDisplay_Rg" unicode="true">
+    <fontset id="Amazon Ember" unicode="true">
 
         <include condition="Skin.HasSetting(FauneFonts)">Defaults_FauneFonts</include>
-        <include condition="!Skin.HasSetting(FauneFonts)">Defaults_AmazonEmberDisplay_RgFonts</include>
+        <include condition="!Skin.HasSetting(FauneFonts)">Defaults_AmazonEmberFonts</include>
 
         <!-- Standard Fonts -->
         <font>
