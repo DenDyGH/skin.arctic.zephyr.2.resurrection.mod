@@ -122,7 +122,7 @@
                             <align>left</align>
                             <aligny>top</aligny>
                             <height>50</height>
-                            <width>630</width>
+                            <width>730</width>
                             <label>$PARAM[title]</label>
                         </control>
                         <include condition="$EXP[InGameMode]" content="View_540_ROM_Details">

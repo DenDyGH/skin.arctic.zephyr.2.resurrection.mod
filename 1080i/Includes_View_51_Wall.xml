@@ -71,6 +71,22 @@
         </control>
     </include>
 
+    <include name="View_InfoWall_Label">
+        <control type="label">
+            <left>15</left>
+            <right>15</right>
+            <font>font_statusbar</font>
+            <selectedcolor>main_fg_100</selectedcolor>
+            <textcolor>main_fg_100</textcolor>
+            <top>377</top>
+            <bottom>100</bottom>
+            <aligny>center</aligny>
+            <align>center</align>
+            <scrollspeed>20</scrollspeed>
+            <label>$INFO[ListItem.Label]</label>
+        </control>
+    </include>
+
     <include name="View_51_Wall_Landscape_Label">
         <control type="label">
             <left>15</left>
@@ -810,6 +826,7 @@
                 <param name="height" value="view_height" />
                 <param name="viewtype" value="Info Wall" />
                 <param name="viewtypename" value="icon" />
+                <param name="labelinclude" value="View_InfoWall_Label" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
                 <param name="visible" value="$EXP[Exp_View_514] | $EXP[InGameAEL]" />
                 <width>1028.56</width>
@@ -835,6 +852,7 @@
                 <param name="height" value="view_height" />
                 <param name="viewtype" value="Info Wall 2" />
                 <param name="viewtypename" value="icon" />
+                <param name="labelinclude" value="View_InfoWall_Label" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
                 <param name="visible" value="$EXP[Exp_View_516]" />
                 <width>1028.56</width>

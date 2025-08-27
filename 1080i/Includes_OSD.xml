@@ -324,9 +324,13 @@
                     <right>30</right>
                     <top>25</top>
                     <bottom>25</bottom>
-                    <control type="label">
-                        <left>-285</left>
+                    <control type="textbox">
+                        <top>-15</top>
+                        <left>-300</left>
+                        <width>300</width>
+                        <height>60</height>
                         <font>font_button</font>
+                        <align>center</align>
                         <aligny>top</aligny>
                         <textcolor>ffededed</textcolor>
                         <selectedcolor>ffededed</selectedcolor>

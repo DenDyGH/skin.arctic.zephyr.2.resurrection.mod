@@ -423,7 +423,7 @@
                             <align>left</align>
                             <aligny>top</aligny>
                             <height>50</height>
-                            <width>500</width>
+                            <width>610</width>
                             <label>$PARAM[title]</label>
                         </control>
                         <include condition="!$EXP[InGameMode]" content="Object_Info_Line">
