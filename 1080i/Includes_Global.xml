@@ -172,7 +172,7 @@
 
     <variable name="Global_Background_Image">
         <value condition="Skin.HasSetting(NoFanart)">$VAR[Global_Background_Image_NoFanart]</value>
-        <value condition="Skin.HasSetting(EnableBlur.Background)">$VAR[Global_Background_Blur_Var]</value>
+        <value condition="Skin.HasSetting(EnableBlur.Background)">$VAR[Image_Background_Blur]</value>
         <value>$VAR[Global_Background_Image_Var]</value>
     </variable>
 
