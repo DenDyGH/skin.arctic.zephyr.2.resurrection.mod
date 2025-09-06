@@ -2246,3 +2246,13 @@ msgstr ""
 msgctxt "#31514"
 msgid "Simple"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31515"
+msgid "Notification style"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31516"
+msgid "Extended"
+msgstr ""

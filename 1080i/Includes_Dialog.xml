@@ -425,9 +425,137 @@
                     <label>$INFO[Control.GetLabel(32),,%]</label>
                     <visible>Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)</visible>
                 </control>
-                
             </control>
+        </definition>
+    </include>
 
+    <include name="Dialog_Notification_Extended">
+        <param name="main_id" default="30" />
+        <param name="sub_id" default="31" />
+        <param name="progress" default="Control.GetLabel(32)" />
+        <param name="icon" default="buttons/info.png" />
+        <param name="fgcolor" default="main_fg" />
+        <param name="height" default="150" />
+        <definition>
+            <top>10</top>
+            <right>0</right>
+            <width>660</width>
+            <height>$PARAM[height]</height>
+            <visible>!$EXP[Exp_ShowPlotOverlay]</visible>
+            <control type="image">
+                <bottom>0</bottom>
+                <left>-40</left>
+                <width>660</width>
+                <height>$PARAM[height]</height>
+                <bordersize>2</bordersize>
+                <texture border="40" colordiffuse="80000000">shadows/shadow-20.png</texture>
+            </control>
+            <control type="image">
+                <bottom>0</bottom>
+                <left>-40</left>
+                <width>660</width>
+                <height>$PARAM[height]</height>
+                <bordersize>24</bordersize>
+                <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
+                <animation effect="fade" time="0" end="85" condition="True">Conditional</animation>
+            </control>
+            <control type="image">
+                <bottom>0</bottom>
+                <left>-40</left>
+                <width>660</width>
+                <height>$PARAM[height]</height>
+                <bordersize>24</bordersize>
+                <texture colordiffuse="dialog_fg_12" border="20">common/dialog-outline.png</texture>
+            </control>
+            <control type="group">
+                <left>-16</left>
+                <centertop>50%</centertop>
+                <width>80</width>
+                <height>80</height>
+                <visible>Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)</visible>
+                <control type="image" description="Back">
+                    <centerleft>50%</centerleft>
+                    <centertop>50%</centertop>
+                    <width>80</width>
+                    <height>80</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture>dialog/loading-back-busy.png</texture>
+                    <colordiffuse>$PARAM[fgcolor]_70</colordiffuse>
+                </control>
+                <control type="image">
+                    <texture flipx="true" flipy="true" colordiffuse="$VAR[ColorHighlight]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <texture flipx="true" flipy="true" colordiffuse="$VAR[ColorGradient]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
+                    <animation effect="fade" end="66" condition="true">Conditional</animation>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <include content="Defs_Progress_Colorfade">
+                        <param name="id" value="$PARAM[progress-id]" />
+                    </include>
+                    <visible>!Skin.HasSetting(EnableMonochromeHighlight)</visible>
+                </control>
+                <control type="label" id="$PARAM[main_id]">
+                    <left>80</left>
+                    <centertop>30%</centertop>
+                    <height>26</height>
+                    <width>450</width>
+                    <font>font_small_bold</font>
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                </control>
+                <control type="label" id="$PARAM[sub_id]">
+                    <centertop>75%</centertop>
+                    <left>80</left>
+                    <height>26</height>
+                    <width>450</width>
+                    <font>font_small</font>
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                </control>
+                <control type="label">
+                    <centertop>50%</centertop>
+                    <left>540</left>
+                    <height>26</height>
+                    <width>auto</width>
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                    <font>font_small</font>
+                    <label>$INFO[Control.GetLabel(32),,%]</label>
+                </control>
+            </control>
+            <control type="grouplist">
+                <left>8</left>
+                <centertop>50%</centertop>
+                <height>160</height>
+                <orientation>horizontal</orientation>
+                <itemgap>16</itemgap>
+                <align>left</align>
+                <usecontrolcoords>true</usecontrolcoords>
+                <visible>![Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)]</visible>
+                <control type="image" id="400">
+                    <centertop>50%</centertop>
+                    <width>64</width>
+                    <height>64</height>
+                    <aspectratio align="left">keep</aspectratio>
+                    <texture colordiffuse="$PARAM[fgcolor]_100">$PARAM[icon]</texture>
+                </control>
+                <control type="label" id="$PARAM[main_id]">
+                    <left>-1</left>
+                    <centertop>38%</centertop>
+                    <height>26</height>
+                    <label>$PARAM[label]</label>
+                    <width>490</width>
+                    <font>font_small_bold</font>
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                </control>
+                <control type="label" id="$PARAM[sub_id]">
+                    <centertop>62%</centertop>
+                    <right>16</right>
+                    <height>26</height>
+                    <label>$PARAM[label2]</label>
+                    <width>490</width>
+                    <font>font_small</font>
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                </control>
+            </control>
         </definition>
     </include>
 

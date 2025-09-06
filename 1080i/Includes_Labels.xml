@@ -85,6 +85,11 @@
         <value>$LOCALIZE[30059]</value>
     </variable>
 
+    <variable name="Label_SkinSettings_ExtendedNotification">
+        <value condition="Skin.HasSetting(ExtendedNotification)">$LOCALIZE[31516]</value>
+        <value>$LOCALIZE[31514]</value>
+    </variable>
+
     <variable name="Label_SkinSettings_CornerIcon">
         <value condition="!String.IsEmpty(Skin.String(CornerIcon))">$INFO[Skin.String(CornerIcon)]</value>
         <value>$LOCALIZE[30060]</value>

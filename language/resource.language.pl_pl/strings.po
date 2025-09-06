@@ -2226,3 +2226,13 @@ msgstr "Rozmycie (Wydajność)"
 msgctxt "#31514"
 msgid "Simple"
 msgstr "Zwykły"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31515"
+msgid "Notification style"
+msgstr "Styl powiadomień"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31516"
+msgid "Extended"
+msgstr "Rozszerzony"

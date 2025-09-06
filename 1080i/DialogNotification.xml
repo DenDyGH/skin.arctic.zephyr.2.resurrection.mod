@@ -8,18 +8,17 @@
             <control type="group">
                 <visible>!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)</visible>
                 <visible>!Window.IsVisible(Home.xml) | Skin.HasSetting(HomeMulti) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Control.HasFocus(5610) | String.IsEqual(Window(Home).Property(WidgetFocus),5610)</visible>
-                <include content="Dialog_Notification_Group" condition="![Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SettingsSystemInfo.xml)]">
+                <include content="Dialog_Notification_Group" condition="!Skin.HasSetting(ExtendedNotification)">
                     <param name="main_id" value="9401" />
                     <param name="sub_id" value="9402" />
                     <param name="label" value="$INFO[Control.GetLabel(401)]" />
                     <param name="label2" value="$INFO[Control.GetLabel(402)]" />
                 </include>
-                <include content="Dialog_Notification_Group" condition="[Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SettingsSystemInfo.xml)]">
+                <include content="Dialog_Notification_Extended" condition="Skin.HasSetting(ExtendedNotification)">
                     <param name="main_id" value="9401" />
                     <param name="sub_id" value="9402" />
                     <param name="label" value="$INFO[Control.GetLabel(401)]" />
                     <param name="label2" value="$INFO[Control.GetLabel(402)]" />
-                    <param name="fgcolor" value="panel_fg" />
                 </include>
             </control>
 

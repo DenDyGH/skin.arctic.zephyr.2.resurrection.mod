@@ -215,6 +215,13 @@
                             <onclick>Skin.ToggleSetting(DisableAutoScrollWidgets)</onclick>
                         </control>
 
+                        <control type="button" id="19539" description="Extended notification">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31515]</label>
+                            <label2>$VAR[Label_SkinSettings_ExtendedNotification]</label2>
+                            <onclick>Skin.ToggleSetting(ExtendedNotification)</onclick>
+                        </control>
+
                         <control type="radiobutton" id="19111" description="Disable skin splash on startup">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[30100]</label>
