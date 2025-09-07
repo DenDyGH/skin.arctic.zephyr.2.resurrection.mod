@@ -21,7 +21,7 @@
     <shortcut>
         <label>Genres</label>
         <label2>$LOCALIZE[571]</label2>
-        <icon>special://skin/extras/icons/genres.png</icon>
+        <icon>special://skin/extras/icons/genre.png</icon>
         <action>DefaultSearch-Genres</action>
     </shortcut>
     <shortcut>
@@ -33,13 +33,13 @@
     <shortcut>
         <label>Studio</label>
         <label2>$LOCALIZE[571]</label2>
-        <icon>special://skin/extras/icons/studio.png</icon>
+        <icon>special://skin/extras/icons/film.png</icon>
         <action>DefaultSearch-Studio</action>
     </shortcut>
     <shortcut>
         <label>Country</label>
         <label2>$LOCALIZE[571]</label2>
-        <icon>special://skin/extras/icons/country.png</icon>
+        <icon>special://skin/extras/icons/world.png</icon>
         <action>DefaultSearch-Country</action>
     </shortcut>
     <shortcut>

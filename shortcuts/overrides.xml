@@ -326,10 +326,15 @@
         <shortcut label="Movies" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-Movies</shortcut>
         <shortcut label="Tv Shows" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-TvShows</shortcut>
         <shortcut label="Episodes" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-Episodes</shortcut>
-        <shortcut label="Genres" type="571" icon="special://skin/extras/icons/genres.png">DefaultSearch-Genres</shortcut>
+        <shortcut label="Genres" type="571" icon="special://skin/extras/icons/genre.png">DefaultSearch-Genres</shortcut>
         <shortcut label="Year" type="571" icon="special://skin/extras/icons/years.png">DefaultSearch-Year</shortcut>
-        <shortcut label="Studio" type="571" icon="special://skin/extras/icons/studio.png">DefaultSearch-Studio</shortcut>
-        <shortcut label="Country" type="571" icon="special://skin/extras/icons/country.png">DefaultSearch-Country</shortcut>
+        <shortcut label="Plot" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-Plot</shortcut>
+        <shortcut label="Plot Outline" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-PlotOutline</shortcut>
+        <shortcut label="Tagline" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-Tagline</shortcut>
+        <shortcut label="Tags" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-Tags</shortcut>
+        <shortcut label="Rating" type="571" icon="special://skin/extras/icons/userrating.png">DefaultSearch-Rating</shortcut>
+        <shortcut label="Studio" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-Studio</shortcut>
+        <shortcut label="Country" type="571" icon="special://skin/extras/icons/world.png">DefaultSearch-Country</shortcut>
         <shortcut label="Actor" type="571" icon="special://skin/extras/icons/person.png">DefaultSearch-Actor</shortcut>
         <shortcut label="Director" type="571" icon="special://skin/extras/icons/person.png">DefaultSearch-Director</shortcut>
         <shortcut label="Albums" type="571" icon="special://skin/extras/icons/songs.png">DefaultSearch-Albums</shortcut>
@@ -343,9 +348,9 @@
         <shortcut label="Spotify Albums" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifyAlbums</shortcut>
         <shortcut label="Spotify Songs" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifySongs</shortcut>
         <shortcut label="Spotify Playlists" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifyPlaylists</shortcut>
-        <shortcut label="TMDB Movies" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-TMDBMovies</shortcut>
-        <shortcut label="TMDB Shows" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-TMDBShows</shortcut>
-        <shortcut label="TMDB People" type="571" icon="special://skin/extras/icons/person3.png">DefaultSearch-TMDBPeople</shortcut>
+        <shortcut label="TMDB Movies" type="571" icon="special://skin/extras/icons/tmdb.png">DefaultSearch-TMDBMovies</shortcut>
+        <shortcut label="TMDB Shows" type="571" icon="special://skin/extras/icons/tmdb.png">DefaultSearch-TMDBShows</shortcut>
+        <shortcut label="TMDB People" type="571" icon="special://skin/extras/icons/tmdb.png">DefaultSearch-TMDBPeople</shortcut>
     </customsearchdefaultitems-groupings>
 
     <!-- Hub Grouping -->

@@ -22,6 +22,21 @@
             <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Year">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22year%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
             <property name="path2" tag="property" attribute="name|list" value="DefaultSearch-Year">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
 
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Plot">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22plot%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+            <property name="path2" tag="property" attribute="name|list" value="DefaultSearch-Plot">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-PlotOutline">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22plotoutline%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+            <property name="path2" tag="property" attribute="name|list" value="DefaultSearch-PlotOutline">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Tagline">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22tagline%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+            <property name="path2" tag="property" attribute="name|list" value="DefaultSearch-Tagline">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Tags">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22tag%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+            <property name="path2" tag="property" attribute="name|list" value="DefaultSearch-Tags">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Rating">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22rating%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+            <property name="path2" tag="property" attribute="name|list" value="DefaultSearch-Rating">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
             <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Studio">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
             <property name="path2" tag="property" attribute="name|list" value="DefaultSearch-Studio">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
 
