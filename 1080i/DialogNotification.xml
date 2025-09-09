@@ -29,7 +29,7 @@
                     <param name="height" value="50" />
                     <param name="width" value="700" />
                 </include>
-                <include content="Dialog_Notification_Group">
+                <include content="Dialog_Notification_Group" condition="!Skin.HasSetting(ExtendedNotification)">
                     <param name="main_id" value="9401" />
                     <param name="sub_id" value="9402" />
                     <param name="label" value="$INFO[Control.GetLabel(401)]" />
@@ -37,6 +37,12 @@
                     <param name="fgcolor" value="panel_fg" />
                     <param name="topalign" value="true" />
                     <param name="height" value="view_top" />
+                </include>
+                <include content="Dialog_Notification_Extended" condition="Skin.HasSetting(ExtendedNotification)">
+                    <param name="main_id" value="9401" />
+                    <param name="sub_id" value="9402" />
+                    <param name="label" value="$INFO[Control.GetLabel(401)]" />
+                    <param name="label2" value="$INFO[Control.GetLabel(402)]" />
                 </include>
             </control>
         </control>

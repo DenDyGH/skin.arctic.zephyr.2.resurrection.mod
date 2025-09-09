@@ -457,7 +457,7 @@
                 <height>$PARAM[height]</height>
                 <bordersize>24</bordersize>
                 <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
-                <animation effect="fade" time="0" end="85" condition="True">Conditional</animation>
+                <animation effect="fade" time="0" end="90" condition="True">Conditional</animation>
             </control>
             <control type="image">
                 <bottom>0</bottom>
