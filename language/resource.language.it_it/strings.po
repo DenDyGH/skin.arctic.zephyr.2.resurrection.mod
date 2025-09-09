@@ -1410,7 +1410,7 @@ msgstr ""
 
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
-msgid "Media Info 2"
+msgid "MediaInfo Extended"
 msgstr ""
 
 #: /1080i/Includes_View_51_Wall.xml

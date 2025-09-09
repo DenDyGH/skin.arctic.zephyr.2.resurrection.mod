@@ -1412,8 +1412,8 @@ msgstr "TV en direct / Enregistreur"
 
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
-msgid "Media Info 2"
-msgstr "Informations du média 2"
+msgid "MediaInfo Extended"
+msgstr ""
 
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31424"

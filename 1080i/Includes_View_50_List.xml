@@ -81,7 +81,7 @@
                 <param name="left" value="-20" />
                 <param name="right" value="771.44" />
                 <param name="id" value="501" />
-                <param name="viewtype" value="Media Info" />
+                <param name="viewtype" value="MediaInfo" />
                 <param name="viewtypename" value="info" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
                 <param name="visible" value="$EXP[Exp_View_501] | $EXP[InGameAEL]" />
@@ -105,7 +105,7 @@
                 <param name="left" value="-20" />
                 <param name="right" value="1038.53" />
                 <param name="id" value="502" />
-                <param name="viewtype" value="Media Info 2" />
+                <param name="viewtype" value="MediaInfo Extended" />
                 <param name="viewtypename" value="biginfo" />
                 <param name="flipsides" value="Skin.HasSetting(FlipSide)" />
                 <param name="visible" value="$EXP[Exp_View_502] | $EXP[InGameAEL]" />
