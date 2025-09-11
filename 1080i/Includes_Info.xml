@@ -51,9 +51,9 @@
                 <param name="diffuse" value="$PARAM[diffuse]" />
                 <param name="icon" value="$PARAM[icon]" />
                 <param name="labelinclude" value="$PARAM[labelinclude]" />
-                <param name="visible" value="[Container($PARAM[id]).IsUpdating | !Integer.IsEqual(Container($PARAM[id]).NumItems,0)]" />
-                <animation effect="fade" start="100" end="0" condition="[!Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating]">Conditional</animation>
-                <animation effect="fade" start="100" end="30" time="200" condition="![Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])]">Conditional</animation>
+                <param name="visible" value="Container($PARAM[id]).IsUpdating | !Integer.IsEqual(Container($PARAM[id]).NumItems,0)" />
+                <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating">Conditional</animation>
+                <animation effect="fade" start="100" end="30" time="200" condition="!Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])">Conditional</animation>
                 <movement>$PARAM[movement]</movement>
                 <nested />
             </include>

@@ -98,7 +98,7 @@
                         </include>
 
                         <!-- Collection / Sets -->
-                        <include content="Info_Widget_Poster" condition="Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets) + [String.IsEqual(ListItem.DBType,movie)]">
+                        <include content="Info_Widget_Poster" condition="Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets) + String.IsEqual(ListItem.DBType,movie)">
                             <param name="id" value="5001" />
                             <param name="groupid" value="7501" />
                             <param name="label" value="$VAR[Label_SetName]" />
@@ -106,7 +106,7 @@
                             <include>Defs_InfoList_OnBack</include>
                             <content>$VAR[Def_Set_List]</content>
                         </include>
-                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets) + [String.IsEqual(ListItem.DBType,movie)]">
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableExtendedInfo) + !Skin.HasSetting(DisableInfoListSets) + String.IsEqual(ListItem.DBType,movie)">
                             <param name="id" value="5001" />
                             <param name="groupid" value="7501" />
                             <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Set.Name)]" />
@@ -149,7 +149,7 @@
                         </include>
 
                         <!-- Seasons -->
-                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListSeasons) + [String.IsEqual(ListItem.DBType,tvshow)]">
+                        <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListSeasons) + String.IsEqual(ListItem.DBType,tvshow)">
                             <param name="id" value="5008" />
                             <param name="groupid" value="7508" />
                             <param name="label" value="Seasons" />

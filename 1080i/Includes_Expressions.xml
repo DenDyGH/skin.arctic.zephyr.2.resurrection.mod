@@ -23,10 +23,10 @@
         [!String.IsEmpty(ListItem.UserRating) + !Skin.HasSetting(Ratings.User)] |
         [[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.TMDb_Rating))] + !Skin.HasSetting(Ratings.TheMovieDB)] |
         [[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Trakt_Rating))] + !Skin.HasSetting(Ratings.Trakt)] |
-        [[!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(home).Property(TMDbHelper.Player.IMDb_Rating))] + [!Skin.HasSetting(Ratings.IMDB) | !Skin.HasSetting(Ratings.IMDB.Votes)] |
+        [[!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(home).Property(TMDbHelper.Player.IMDb_Rating))] + [!Skin.HasSetting(Ratings.IMDB) | !Skin.HasSetting(Ratings.IMDB.Votes)]] |
         [[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Metacritic_Rating))] + !Skin.HasSetting(Ratings.Metacritic)] |
         [[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.RottenTomatoes_Rating))] + !Skin.HasSetting(Ratings.RottenTomatoes)] |
-        [String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won) + !Skin.HasSetting(Ratings.Oscars)]]
+        [String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won) + !Skin.HasSetting(Ratings.Oscars)]
     </expression>
 
     <!-- FONTS -->
