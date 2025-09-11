@@ -34,6 +34,26 @@
             <size>30</size>
         </font>
         <font>
+            <name>font_small_29</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>29</size>
+        </font>
+        <font>
+            <name>font_small_bold_29</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>29</size>
+        </font>
+        <font>
+            <name>font_small_28</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>font_small_bold_28</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
             <name>font_tiny</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>26</size>
@@ -230,10 +250,36 @@
 
         <!-- Required for system -->
         <font>
+            <name>font10</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
+            <name>font12</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
             <name>font13</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>30</size>
         </font>
+        <font>
+            <name>font14</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>34</size>
+        </font>
+        <font>
+            <name>font45</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>45</size>
+        </font>
+        <font>
+            <name>font60</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>60</size>
+        </font>
+
         <font>
             <name>Clock</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
@@ -282,6 +328,26 @@
             <name>font_small_bold</name>
             <filename>Roboto-Medium.ttf</filename>
             <size>30</size>
+        </font>
+        <font>
+            <name>font_small_29</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>29</size>
+        </font>
+        <font>
+            <name>font_small_bold_29</name>
+            <filename>Roboto-Medium.ttf</filename>
+            <size>29</size>
+        </font>
+        <font>
+            <name>font_small_28</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>font_small_bold_28</name>
+            <filename>Roboto-Medium.ttf</filename>
+            <size>28</size>
         </font>
         <font>
             <name>font_tiny</name>
@@ -480,10 +546,36 @@
 
         <!-- Required for system -->
         <font>
+            <name>font10</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
+            <name>font12</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
             <name>font13</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>30</size>
         </font>
+        <font>
+            <name>font14</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>34</size>
+        </font>
+        <font>
+            <name>font45</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>45</size>
+        </font>
+        <font>
+            <name>font60</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>60</size>
+        </font>
+
         <font>
             <name>Clock</name>
             <filename>Roboto-Bold.ttf</filename>
@@ -770,6 +862,28 @@
             <style>bold</style>
         </font>
         <font>
+            <name>font_small_29</name>
+            <filename>arial.ttf</filename>
+            <size>29</size>
+        </font>
+        <font>
+            <name>font_small_bold_29</name>
+            <filename>arial.ttf</filename>
+            <size>29</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_small_28</name>
+            <filename>arial.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>font_small_bold_28</name>
+            <filename>arial.ttf</filename>
+            <size>28</size>
+            <style>bold</style>
+        </font>
+        <font>
             <name>font_tiny</name>
             <filename>arial.ttf</filename>
             <size>26</size>
@@ -965,10 +1079,36 @@
 
         <!-- Required for system -->
         <font>
+            <name>font10</name>
+            <filename>arial.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
+            <name>font12</name>
+            <filename>arial.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
             <name>font13</name>
             <filename>arial.ttf</filename>
             <size>30</size>
         </font>
+        <font>
+            <name>font14</name>
+            <filename>arial.ttf</filename>
+            <size>34</size>
+        </font>
+        <font>
+            <name>font45</name>
+            <filename>arial.ttf</filename>
+            <size>45</size>
+        </font>
+        <font>
+            <name>font60</name>
+            <filename>arial.ttf</filename>
+            <size>60</size>
+        </font>
+
         <font>
             <name>Clock</name>
             <filename>arial.ttf</filename>
@@ -1018,6 +1158,28 @@
             <style>bold</style>
         </font>
         <font>
+            <name>font_small_29</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>29</size>
+        </font>
+        <font>
+            <name>font_small_bold_29</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>29</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>font_small_28</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>font_small_bold_28</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>28</size>
+            <style>bold</style>
+        </font>
+        <font>
             <name>font_tiny</name>
             <filename>AmazonEmberDisplay_Rg.ttf</filename>
             <size>26</size>
@@ -1213,10 +1375,36 @@
 
         <!-- Required for system -->
         <font>
+            <name>font10</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
+            <name>font12</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
             <name>font13</name>
             <filename>AmazonEmberDisplay_Rg.ttf</filename>
             <size>30</size>
         </font>
+        <font>
+            <name>font14</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>34</size>
+        </font>
+        <font>
+            <name>font45</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>45</size>
+        </font>
+        <font>
+            <name>font60</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>60</size>
+        </font>
+
         <font>
             <name>Clock</name>
             <filename>AmazonEmberDisplay_Rg.ttf</filename>
