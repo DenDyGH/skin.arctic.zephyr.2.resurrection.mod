@@ -447,17 +447,17 @@
                 <left>-40</left>
                 <width>660</width>
                 <height>$PARAM[height]</height>
-                <bordersize>2</bordersize>
+                <bordersize>5</bordersize>
                 <texture border="40" colordiffuse="80000000">shadows/shadow-20.png</texture>
             </control>
             <control type="image">
+                <include>Dialog_Background_Transparency</include>
                 <bottom>0</bottom>
                 <left>-40</left>
                 <width>660</width>
                 <height>$PARAM[height]</height>
                 <bordersize>24</bordersize>
                 <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
-                <animation effect="fade" time="0" end="90" condition="True">Conditional</animation>
             </control>
             <control type="image">
                 <bottom>0</bottom>
@@ -500,7 +500,7 @@
                     <centertop>30%</centertop>
                     <height>26</height>
                     <width>450</width>
-                    <font>font_small_bold</font>
+                    <font>font_small_bold_28</font>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
                 </control>
                 <control type="label" id="$PARAM[sub_id]">
@@ -508,16 +508,16 @@
                     <left>80</left>
                     <height>26</height>
                     <width>450</width>
-                    <font>font_small</font>
+                    <font>font_small_28</font>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
                 </control>
                 <control type="label">
                     <centertop>50%</centertop>
-                    <left>540</left>
+                    <left>530</left>
                     <height>26</height>
                     <width>auto</width>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
-                    <font>font_small</font>
+                    <font>font_small_28</font>
                     <label>$INFO[Control.GetLabel(32),,%]</label>
                 </control>
             </control>
@@ -543,7 +543,7 @@
                     <height>26</height>
                     <label>$PARAM[label]</label>
                     <width>490</width>
-                    <font>font_small_bold</font>
+                    <font>font_small_bold_28</font>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
                 </control>
                 <control type="label" id="$PARAM[sub_id]">
@@ -552,7 +552,7 @@
                     <height>26</height>
                     <label>$PARAM[label2]</label>
                     <width>490</width>
-                    <font>font_small</font>
+                    <font>font_small_28</font>
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
                 </control>
             </control>
