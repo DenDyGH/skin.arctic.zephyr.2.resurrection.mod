@@ -63,29 +63,26 @@
     </variable>
 
     <variable name="Image_HDRCodec">
-        <value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">flags/$INFO[Skin.String(Icons)]/other/dolbyvision.png</value>
-        <value condition="String.Contains(ListItem.FileNameAndPath,hdr10plus)">flags/$INFO[Skin.String(Icons)]/other/hdr10plus.png</value>
-        <value condition="String.IsEqual(ListItem.HdrType,hdr10)">flags/$INFO[Skin.String(Icons)]/other/hdr10.png</value>
-        <value condition="String.IsEqual(ListItem.HdrType,hlg)">flags/$INFO[Skin.String(Icons)]/other/hlg.png</value>
-        <value condition="String.Contains(ListItem.FileNameAndPath,hdr)">flags/$INFO[Skin.String(Icons)]/other/HDR.png</value>
-    </variable>
-    <variable name="Image_VideoPlayer_HDRCodec">
-        <value condition="String.IsEqual(VideoPlayer.HdrType,dolbyvision)">flags/$INFO[Skin.String(Icons)]/other/dolbyvision.png</value>
-        <value condition="String.Contains(Player.FileNameAndPath,hdr10plus)">flags/$INFO[Skin.String(Icons)]/other/hdr10plus.png</value>
-        <value condition="String.IsEqual(VideoPlayer.HdrType,hdr10)">flags/$INFO[Skin.String(Icons)]/other/hdr10.png</value>
-        <value condition="String.IsEqual(VideoPlayer.HdrType,hlg)">flags/$INFO[Skin.String(Icons)]/other/hlg.png</value>
-        <value condition="String.Contains(Player.FileNameAndPath,hdr)">flags/$INFO[Skin.String(Icons)]/other/HDR.png</value>
+        <value condition="String.IsEqual(ListItem.HdrType,dolbyvision) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.HdrType,dolbyvision)]">flags/$INFO[Skin.String(Icons)]/other/dolbyvision.png</value>
+        <value condition="String.Contains(ListItem.FileNameAndPath,hdr10plus) | [Window.IsActive(fullscreenvideo) + String.Contains(Player.FileNameAndPath,hdr10plus)]">flags/$INFO[Skin.String(Icons)]/other/hdr10plus.png</value>
+        <value condition="String.IsEqual(ListItem.HdrType,hdr10) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.HdrType,hdr10)]">flags/$INFO[Skin.String(Icons)]/other/hdr10.png</value>
+        <value condition="String.IsEqual(ListItem.HdrType,hlg) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.HdrType,hlg)]">flags/$INFO[Skin.String(Icons)]/other/hlg.png</value>
+        <value condition="String.Contains(ListItem.FileNameAndPath,hdr) | [Window.IsActive(fullscreenvideo) + String.Contains(Player.FileNameAndPath,hdr)]">flags/$INFO[Skin.String(Icons)]/other/HDR.png</value>
     </variable>
 
     <variable name="Image_AudioCodec">
-        <value condition="[String.IsEqual(ListItem.AudioCodec,truehd) | String.IsEqual(ListItem.AudioCodec,eac3)] + String.Contains(ListItem.FileNameAndPath,atmos)">flags/$INFO[Skin.String(Icons)]/audio/atmos.png</value>
-        <value condition="[String.IsEqual(ListItem.AudioCodec,dtshd_ma) | String.IsEqual(ListItem.AudioCodec,dtsma)] + [String.Contains(ListItem.FileNameAndPath,dts-x) | String.Contains(ListItem.FileNameAndPath,dtsx)]">flags/$INFO[Skin.String(Icons)]/audio/dtsx.png</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,aac_latm) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,aac_latm)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,aac_latm)]">flags/$INFO[Skin.String(Icons)]/audio/aac.png</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,avc) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,avc)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,avc)]">flags/$INFO[Skin.String(Icons)]/source/avc1.png</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dca) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,dca)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,dca)]">flags/$INFO[Skin.String(Icons)]/audio/dts.png</value>
+        <value condition="[String.IsEqual(ListItem.AudioCodec,dtshd_ma) + [String.Contains(ListItem.FileNameAndPath,dts-x) | String.Contains(ListItem.FileNameAndPath,dtsx)]] | [Window.IsActive(fullscreenvideo) + [String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma) + [String.Contains(Player.FileNameAndPath,dts-x) | String.Contains(Player.FileNameAndPath,dtsx)]]] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,dtshd_ma)]">flags/$INFO[Skin.String(Icons)]/audio/dtsx.png</value>
+        <value condition="[String.IsEqual(ListItem.AudioCodec,dtsma) + [String.Contains(ListItem.FileNameAndPath,dts-x) | String.Contains(ListItem.FileNameAndPath,dtsx)]] | [Window.IsActive(fullscreenvideo) + [String.IsEqual(VideoPlayer.AudioCodec,dtsma) + [String.Contains(Player.FileNameAndPath,dts-x) | String.Contains(Player.FileNameAndPath,dtsx)]]] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,dtsma)]">flags/$INFO[Skin.String(Icons)]/audio/dtsx.png</value>
+        <value condition="[String.IsEqual(ListItem.AudioCodec,eac3) + String.Contains(ListItem.FileNameAndPath,atmos)] | [Window.IsActive(fullscreenvideo) + [String.IsEqual(VideoPlayer.AudioCodec,eac3) + String.Contains(Player.FileNameAndPath,atmos)]] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,eac3)]">flags/$INFO[Skin.String(Icons)]/audio/atmos.png</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,eac3) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,eac3)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,eac3)]">flags/$INFO[Skin.String(Icons)]/audio/eac3.png</value>
+        <value condition="[String.IsEqual(ListItem.AudioCodec,truehd) + String.Contains(ListItem.FileNameAndPath,atmos)] | [Window.IsActive(fullscreenvideo) + [String.IsEqual(VideoPlayer.AudioCodec,truehd) + String.Contains(Player.FileNameAndPath,atmos)]] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,truehd)]">flags/$INFO[Skin.String(Icons)]/audio/atmos.png</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,wavpack) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,wavpack)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,wavpack)]">flags/$INFO[Skin.String(Icons)]/audio/wav.png</value>
+        <value condition="Window.IsActive(fullscreenvideo)">flags/$INFO[Skin.String(Icons)]/audio/$INFO[VideoPlayer.AudioCodec].png</value>
+        <value condition="Window.IsActive(visualisation)">flags/$INFO[Skin.String(Icons)]/audio/$INFO[MusicPlayer.Codec].png</value>
         <value>flags/$INFO[Skin.String(Icons)]/audio/$INFO[ListItem.AudioCodec].png</value>
-    </variable>
-    <variable name="Image_VideoPlayer_AudioCodec">
-        <value condition="[String.IsEqual(VideoPlayer.AudioCodec,truehd) | String.IsEqual(VideoPlayer.AudioCodec,eac3)] + String.Contains(Player.FileNameAndPath,atmos)">flags/$INFO[Skin.String(Icons)]/audio/atmos.png</value>
-        <value condition="[String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma) | String.IsEqual(VideoPlayer.AudioCodec,dtsma)] + [String.Contains(Player.FileNameAndPath,dts-x) | String.Contains(Player.FileNameAndPath,dtsx)]">flags/$INFO[Skin.String(Icons)]/audio/dtsx.png</value>
-        <value>flags/$INFO[Skin.String(Icons)]/audio/$INFO[VideoPlayer.AudioCodec].png</value>
     </variable>
 
     <variable name="Image_OSD_Artwork">
