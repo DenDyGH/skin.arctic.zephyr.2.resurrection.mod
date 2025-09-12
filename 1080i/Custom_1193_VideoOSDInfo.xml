@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1193">
+    <onload>SetProperty(TMDbHelper.WidgetContainer,50)</onload>
+    <defaultcontrol always="true">9001</defaultcontrol>
+    <onload>SetFocus(9001)</onload>
+    <zorder>3</zorder>
+    <controls>
+        <control type="button" id="9001">
+            <texturefocus />
+            <texturenofocus />
+            <onfocus>AlarmClock(RepWin,SetFocus(9002),00:01,silent)</onfocus>
+        </control>
+
+        <control type="button" id="9002">
+            <texturefocus />
+            <texturenofocus />
+            <onfocus condition="!Container(50).IsUpdating + !Integer.IsEqual(Container(50).NumItems,0)">SetFocus(50)</onfocus>
+            <onfocus condition="!Container(50).IsUpdating + Integer.IsEqual(Container(50).NumItems,0)">PreviousMenu</onfocus>
+            <onfocus condition="Container(50).IsUpdating">AlarmClock(ReFocus,SetFocus(9001),00:00,silent)</onfocus>
+            <onfocus condition="Container(50).IsUpdating">AlarmClock(RepWin,SetFocus(50),00:01,silent)</onfocus>
+        </control>
+
+        <include content="Object_Hidden_List">
+            <param name="id">50</param>
+            <content limit="1">$VAR[Path_VideoOSD_TMDbType,plugin://plugin.video.themoviedb.helper/?info=details&amp;tmdb_type=,]$VAR[Path_VideoOSD_TMDbQuery]</content>
+            <onfocus>Action(Info)</onfocus>
+            <onfocus>Dialog.Close(1193,force)</onfocus>
+        </include>
+
+        <include>OSD_ExtendedInfo_Background</include>
+
+        <control type="group">
+            <visible>!$EXP[Exp_InfoVisible]</visible>
+            <include>Dialog_Busy_Minimal</include>
+        </control>
+    </controls>
+</window>

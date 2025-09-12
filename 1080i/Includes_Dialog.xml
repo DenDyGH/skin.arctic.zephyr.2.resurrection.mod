@@ -49,6 +49,37 @@
         </control>
     </include>
 
+    <include name="Dialog_Busy_Minimal">
+        <control type="group">
+            <visible>!Window.IsVisible(DialogConfirm.xml)</visible>
+            <visible>!Window.IsVisible(DialogNotification.xml)</visible>
+            <visible>!Window.IsVisible(Startup.xml)</visible>
+            <visible>!Window.IsVisible(Home.xml) | [Control.HasFocus(302) | Control.HasFocus(5610)]</visible>
+
+            <control type="group">
+                <description>Busy animation</description>
+                <left>-16</left>
+                <centertop>50%</centertop>
+                <width>80</width>
+                <height>80</height>
+                <animation effect="rotate" condition="true" start="360" end="0" loop="true" time="1000" center="auto">Conditional</animation>
+                <control type="image">
+                    <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
+                    <aspectratio>keep</aspectratio>
+                    <animation effect="fade" condition="true" start="75" end="0" pulse="true" time="1000">Conditional</animation>
+                </control>
+            </control>
+
+            <include content="Dialog_Notification_Group">
+                <param name="label" value="$LOCALIZE[20186]..." />
+            </include>
+        </control>
+    </include>
+
     <include name="Dialog_PowerMenu">
         <definition>
             <control type="group">

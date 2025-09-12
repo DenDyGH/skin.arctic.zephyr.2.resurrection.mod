@@ -400,11 +400,6 @@ msgctxt "#31078"
 msgid "This category allows you to view$COMMA install and customise add-ons supported by Arctic Zephyr 2."
 msgstr "Ez a kategória beállítás engedélyezi$COMMA  hogy telepíts olyan kiegészítőket amiket az Arctic Zephyr 2 támogat"
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31079"
-msgid "Pause when opening info dialog"
-msgstr "Szünet az infó dialóg megjelenítésekor"
-
 #: /1080i/Includes_Labels.xml
 msgctxt "#31080"
 msgid "This category contains options for backing-up$COMMA restoring and reseting Arctic Zephyr 2 skin settings."
@@ -1983,11 +1978,6 @@ msgstr "Hibakeresés: mutasd az "art" elérési utat"
 msgctxt "#31461"
 msgid "Alpha value for some dialogs"
 msgstr "Áttetszőség néhány dialóghoz"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31462"
-msgid "Hide extended info background"
-msgstr "Extra információs háttér elrejtése"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31463"

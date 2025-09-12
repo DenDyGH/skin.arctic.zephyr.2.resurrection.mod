@@ -1,0 +1,9 @@
+{
+    "actions": [
+        "Dialog.Close(musicosd)",
+        "Dialog.Close(videoosd)",
+        "Dialog.Close(1142)",
+        "Dialog.Close(1143)",
+        "{command}"
+    ]
+}

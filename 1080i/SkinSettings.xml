@@ -748,13 +748,6 @@
                             <enable>Skin.HasSetting(DisableOSDInfo)</enable>
                         </control>
 
-                        <control type="radiobutton" id="19504" description="Dont pause on information">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31079]</label>
-                            <selected>!Skin.HasSetting(DontPauseOSD)</selected>
-                            <onclick>Skin.ToggleSetting(DontPauseOSD)</onclick>
-                        </control>
-
                         <control type="radiobutton" id="19505" description="Auto pop-up OSD dialogs">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31409]</label>
@@ -851,13 +844,6 @@
                             <label>$LOCALIZE[31506]</label>
                             <selected>Skin.HasSetting(ShowTimeRemaining2)</selected>
                             <onclick>Skin.ToggleSetting(ShowTimeRemaining2)</onclick>
-                        </control>
-
-                        <control type="radiobutton" id="19937" description="Hide extra info background">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31462]</label>
-                            <selected>Skin.HasSetting(EI_HideBG)</selected>
-                            <onclick>Skin.ToggleSetting(EI_HideBG)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19955" description="Hide CD Spin VideoOSD">
