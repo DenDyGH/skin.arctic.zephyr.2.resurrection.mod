@@ -924,7 +924,15 @@
                 <height>488</height>
                 <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
                 <bordersize>24</bordersize>
-                <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
+                <texture border="20" colordiffuse="dialog_bg_100">common/dialog.png</texture>
+            </control>
+            <control type="image">
+                <left>-46</left>
+                <right>-46</right>
+                <top>-46</top>
+                <height>488</height>
+                <bordersize>24</bordersize>
+                <texture colordiffuse="dialog_fg_12" border="20">common/dialog-outline.png</texture>
             </control>
 
             <control type="label" id="$PARAM[header_id]">

@@ -8,7 +8,6 @@
     <onunload>ClearProperty(FilePath,home)</onunload>
     <onunload>ClearProperty(OSD_Menu,Home)</onunload>
     <onunload>ClearProperty(HasTrailer,Home)</onunload>
-    <onload>SetProperty(TMDBHelper.Info.OriginalPath,$INFO[ListItem.FolderPath],Home)</onload>
     <onload>ClearProperty(TMDbHelper.WidgetContainer)</onload>
     <controls>
 
@@ -21,8 +20,8 @@
         </control>
 
         <!-- Main Group -->
-        <include condition="!String.IsEqual(ListItem.DBType,musicvideo) + !String.Contains(ListItem.FolderPath,type=person)">DialogVideoInfo</include>
-        <include condition="!String.IsEqual(ListItem.DBType,musicvideo) + String.Contains(ListItem.FolderPath,type=person)">DialogPersonInfo</include>
+        <include condition="!String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEqual(ListItem.Property(tmdb_type),person)">DialogVideoInfo</include>
+        <include condition="!String.IsEqual(ListItem.DBType,musicvideo) + String.IsEqual(ListItem.Property(tmdb_type),person)">DialogPersonInfo</include>
         <include condition="String.IsEqual(ListItem.DBType,musicvideo)">DialogMusicInfo</include>
 
         <control type="group">
