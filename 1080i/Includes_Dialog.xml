@@ -636,8 +636,11 @@
             <height>$PARAM[height]</height>
             <include condition="$PARAM[animation]">Animation_FadeIn_Slide</include>
             <control type="image">
-                <include>Defs_Shadow_24</include>
-                <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
+                <include>Defs_Shadow_20</include>
+                <texture border="20" colordiffuse="dialog_bg_100">common/dialog.png</texture>
+            </control>
+            <control type="image">
+                <texture colordiffuse="dialog_fg_12" border="20">common/dialog-outline.png</texture>
             </control>
         </definition>
     </include>
@@ -831,6 +834,9 @@
                 <control type="image">
                     <texture colordiffuse="dialog_overlay" border="20">common/dialog.png</texture>
                 </control>
+            </control>
+            <control type="image">
+                <texture colordiffuse="dialog_fg_12" border="20">common/dialog-outline.png</texture>
             </control>
         </definition>
     </include>

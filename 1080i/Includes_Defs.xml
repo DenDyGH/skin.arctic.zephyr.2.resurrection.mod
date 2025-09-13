@@ -754,6 +754,14 @@
         <textureradiooffnofocus />
     </include>
     <!-- Shadows -->
+    <include name="Defs_Shadow_20">
+        <left>-20</left>
+        <right>-20</right>
+        <top>-20</top>
+        <bottom>-20</bottom>
+        <bordersize>20</bordersize>
+        <bordertexture border="32" colordiffuse="80000000">shadows/shadow-20.png</bordertexture>
+    </include>
     <include name="Defs_Shadow_24">
         <left>-24</left>
         <right>-24</right>

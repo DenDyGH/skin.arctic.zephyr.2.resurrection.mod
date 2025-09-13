@@ -28,7 +28,7 @@
     <color name="dialog_bg_30">4D181818</color>
     <color name="dialog_bg_12">1F181818</color>
 
-    <color name="dialog_overlay">D9000008</color>
+    <color name="dialog_overlay">BF000008</color>
 
     <!-- Panels -->
     <color name="panel_bg">c5000000</color>
