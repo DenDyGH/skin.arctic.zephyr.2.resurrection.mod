@@ -507,7 +507,6 @@
                 <bottom>0</bottom>
                 <itemgap>20</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
-                <visible>[!String.IsEmpty(ListItem.VideoCodec) + !String.IsEmpty(ListItem.AudioCodec)] | !String.IsEmpty(ListItem.VideoResolution)</visible>
                 <control type="image">
                     <fadetime>100</fadetime>
                     <centertop>50%</centertop>
@@ -560,7 +559,8 @@
                     <aspectratio align="left">keep</aspectratio>
                     <texture colordiffuse="main_fg_100">$VAR[Image_RipSource]</texture>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(77881))</visible>
+                    <visible>$EXP[Exp_RipSource]</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77881))</visible> -->
                 </control>
                 <control type="image" id="77882">
                     <fadetime>100</fadetime>
@@ -579,7 +579,7 @@
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[ListItem.VideoResolution].png</texture>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(77882))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77882))</visible> -->
                 </control>
                 <control type="image" id="77883">
                     <fadetime>100</fadetime>
@@ -598,7 +598,7 @@
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/source/$INFO[ListItem.VideoCodec].png</texture>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(77883))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77883))</visible> -->
                 </control>
                 <control type="image" id="77884">
                     <fadetime>100</fadetime>
@@ -617,7 +617,7 @@
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/aspectratio/$INFO[ListItem.VideoAspect].png</texture>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(77884))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77884))</visible> -->
                 </control>
                 <control type="image" id="77885">
                     <fadetime>100</fadetime>
@@ -636,7 +636,7 @@
                     <texture colordiffuse="main_fg_100">$VAR[Image_AudioCodec]</texture>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(77885))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77885))</visible> -->
                 </control>
                 <control type="image" id="77886">
                     <left>7</left>
@@ -656,7 +656,7 @@
                     <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[ListItem.AudioChannels].png</texture>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(77886))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77886))</visible> -->
                 </control>
                 <control type="image">
                     <centertop>50%</centertop>
@@ -726,7 +726,7 @@
                     <aspectratio align="left">keep</aspectratio>
                     <texture colordiffuse="panel_fg_100">$VAR[Image_HDRCodec]</texture>
                     <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78880))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(78880))</visible> -->
                 </control>
                 <control type="image" id="78881">
                     <fadetime>100</fadetime>
@@ -736,7 +736,8 @@
                     <aspectratio align="left">keep</aspectratio>
                     <texture colordiffuse="panel_fg_100">$VAR[Image_VideoPlayer_RipSource]</texture>
                     <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78881))</visible>
+                    <visible>$EXP[Exp_RipSource_Player]</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(78881))</visible> -->
                 </control>
                 <control type="image" id="78882">
                     <fadetime>100</fadetime>
@@ -746,7 +747,7 @@
                     <aspectratio>keep</aspectratio>
                     <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[VideoPlayer.VideoResolution].png</texture>
                     <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78882))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(78882))</visible> -->
                 </control>
                 <control type="image" id="78883">
                     <fadetime>100</fadetime>
@@ -756,7 +757,7 @@
                     <aspectratio>keep</aspectratio>
                     <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/source/$INFO[VideoPlayer.VideoCodec].png</texture>
                     <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78883))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(78883))</visible> -->
                 </control>
                 <control type="group">
                     <width>71</width>
@@ -786,7 +787,7 @@
                     <aspectratio>keep</aspectratio>
                     <texture colordiffuse="panel_fg_100">$VAR[Image_AudioCodec]</texture>
                     <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78884))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(78884))</visible> -->
                 </control>
                 <control type="image" id="78885">
                     <left>7</left>
@@ -797,7 +798,7 @@
                     <aspectratio>scale</aspectratio>
                     <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[VideoPlayer.AudioChannels].png</texture>
                     <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78885))</visible>
+                    <!-- <visible>!String.IsEmpty(Control.GetLabel(78885))</visible> -->
                 </control>
                 <control type="label">
                     <centertop>50%</centertop>

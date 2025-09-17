@@ -1975,7 +1975,7 @@
                 <centertop>50%</centertop>
                 <height>80</height>
                 <include content="Object_InfoCircle">
-                    <param name="name">[UPPERCASE]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoCodec, • ,]$VAR[Label_HDRType, • ,]$INFO[VideoPlayer.VideoAspect, • ,:1]$INFO[VideoPlayer.AudioCodec, • ,]$VAR[Label_VideoPlayer_AudioChannels, • ,][/UPPERCASE]</param>
+                    <param name="name">[UPPERCASE]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoCodec, • ,]$VAR[Label_HDRType, • ,]$INFO[VideoPlayer.VideoAspect, • ,:1]$VAR[Label_AudioCodec, • ,]$VAR[Label_VideoPlayer_AudioChannels, • ,][/UPPERCASE]</param>
                     <param name="role">$INFO[VideoPlayer.VideoVersionName]</param>
                     <param name="fallback_role">$LOCALIZE[31503]</param>
                     <param name="textcolor_top">$PARAM[textcolor_top]</param>
