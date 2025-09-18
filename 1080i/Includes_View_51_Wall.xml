@@ -693,6 +693,7 @@
                 <param name="height" value="view_height" />
                 <param name="viewtype" value="Poster Wall" />
                 <param name="viewtypename" value="icon" />
+                <param name="labelinclude" value="View_InfoWall_Label" />
                 <param name="visible" value="$EXP[Exp_View_51] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
