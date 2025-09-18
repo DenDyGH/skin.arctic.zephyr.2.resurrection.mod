@@ -1061,7 +1061,7 @@
                     <font>font_small_bold</font>
                     <textcolor>$PARAM[color_70]</textcolor>
                     <aligny>center</aligny>
-                    <label>$VAR[MediaInfoListLabelVar]</label>
+                    <label>$INFO[ListItem.Label]</label>
                     <selectedcolor>$PARAM[color_highlight]</selectedcolor>
                 </control>
                 <control type="label">
@@ -1071,7 +1071,7 @@
                     <textcolor>$PARAM[color_70]</textcolor>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <label>$VAR[MediaInfoListLabel2Var]</label>
+                    <label>$INFO[ListItem.Duration,$LOCALIZE[180]: ][CR]$VAR[MediaInfoListLabel2Var]</label>
                     <selectedcolor>$PARAM[color_highlight]</selectedcolor>
                 </control>
             </control>
@@ -1664,61 +1664,4 @@
             </control>
         </control>
     </include> -->
-
-    <include name="Dialog_Select_Video">
-        <include>Global_Overlay</include>
-
-        <control type="group">
-            <include content="Dialog_Standard_Group">
-                <param name="width" value="1336" />
-                <param name="height" value="950" />
-            </include>
-            <control type="label" id="1">
-                <include>Dialog_Standard_Header</include>
-            </control>
-
-            <include content="Object_Control">
-                <param name="control">image</param>
-                <top>80</top>
-                <height>1</height>
-                <width>1280</width>
-                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
-                <left>25</left>
-                <right>25</right>
-            </include>
-
-            <include content="Dialog_Standard_List">
-                <param name="id" value="3" />
-                <param name="itemheight" value="item_biglist_height" />
-                <param name="list_style" value="Dialog_Standard_List_Itemlayout_Video" />
-                <param name="checkmark" value="false" />
-                <param name="onup" value="3" />
-                <param name="ondown" value="3" />
-            </include>
-
-            <control type="group">
-                <include>Dialog_Standard_Right_Group</include>
-                <include content="Dialog_Standard_Image">
-                    <param name="image" value="ListItem.Art(poster)" />
-                </include>
-                <control type="grouplist" id="8000">
-                    <onleft>61</onleft>
-                    <orientation>vertical</orientation>
-                    <itemgap>0</itemgap>
-                    <control type="button" id="5">
-                        <label>$LOCALIZE[368]</label>
-                        <include>Dialog_Standard_Right_Buttons</include>
-                    </control>
-                    <control type="button" id="7">
-                        <label>$LOCALIZE[222]</label>
-                        <include>Dialog_Standard_Right_Buttons</include>
-                    </control>
-                </control>
-            </control>
-            <include content="Dialog_Scrollbar">
-                <param name="onleft" value="3" />
-            </include>
-        </control>
-    </include>
 </includes>

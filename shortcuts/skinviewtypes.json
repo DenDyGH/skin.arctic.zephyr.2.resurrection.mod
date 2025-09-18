@@ -77,8 +77,8 @@
         "videoversions": {
             "rule": "Container.Content(videoversions)",
             "viewtypes": ["50", "51", "52", "53", "500", "501", "502", "503", "504", "511", "514", "515", "516", "521", "523", "525", "526", "528", "529"],
-            "library": "500",
-            "plugins": "500"
+            "library": "50",
+            "plugins": "50"
         },
         "genres": {
             "rule": "!Window.IsVisible(MyMusicNav.xml) + Container.Content(genres)",

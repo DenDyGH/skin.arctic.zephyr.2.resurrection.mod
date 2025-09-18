@@ -627,6 +627,7 @@
                 <right>$PARAM[pad]</right>
                 <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set)</visible>
                 <visible>Skin.HasSetting(EnhancedAddonLabels) | String.IsEmpty(Container.PluginName)</visible>
+                <visible>!$EXP[Exp_Videoasset]</visible>
                 <!-- LEFT SIDE -->
                 <control type="label">
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
@@ -656,6 +657,41 @@
                     <textcolor>$PARAM[fgcolor]_100</textcolor>
                     <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
                     <label>$VAR[Label_List_Right]</label>
+                </control>
+            </control>
+            <!-- Videoversions -->
+            <control type="group">
+                <left>$PARAM[pad]</left>
+                <right>$PARAM[pad]</right>
+                <visible>$EXP[Exp_Videoasset] + String.IsEqual(ListItem.DBType,movie)</visible>
+                <control type="label">
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                    <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
+                    <label>$VAR[Label_List_Left]</label>
+                </control>
+                <control type="label">
+                    <animation effect="slide" end="$VAR[Defs_ItemLayout_LeftSideObjectSlideVertical]" />
+                    <top>-35</top>
+                    <left>122</left>
+                    <font>font_small_bold</font>
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                    <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <animation effect="slide" end="$VAR[Defs_ItemLayout_LeftSideObjectSlideVertical]" />
+                    <top>35</top>
+                    <left>122</left>
+                    <font>font_small_28</font>
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                    <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
+                    <label>$VAR[MediaInfoListLabel2Var]</label>
+                </control>
+                <control type="label">
+                    <align>right</align>
+                    <textcolor>$PARAM[fgcolor]_100</textcolor>
+                    <selectedcolor>$PARAM[fgcolor]_100</selectedcolor>
+                    <label>$INFO[ListItem.Duration]</label>
                 </control>
             </control>
 

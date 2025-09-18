@@ -591,13 +591,9 @@
         <value>$LOCALIZE[31487]</value>
     </variable>
 
-    <variable name="MediaInfoListLabelVar">
-        <value condition="Window.IsVisible(selectvideoversion)">$INFO[ListItem.VideoVersionName]</value>
-        <value>$INFO[ListItem.Label]</value>
-    </variable>
     <variable name="MediaInfoListLabel2Var">
-        <value condition="ListItem.IsStereoscopic">$INFO[ListItem.Duration,$LOCALIZE[180]: ][CR]$VAR[Label_ListItem_VideoCodec,, ]$INFO[ListItem.VideoResolution,| , ]$VAR[Label_ListItem_VideoResolution,, ]$VAR[Label_HDRType,| , ]| 3D $INFO[ListItem.VideoAspect,| ,:1 ]$VAR[Label_AudioCodec,| , ]$VAR[Label_ListItem_AudioChannels]</value>
-        <value>$INFO[ListItem.Duration,$LOCALIZE[180]: ][CR]$VAR[Label_ListItem_VideoCodec,, ]$INFO[ListItem.VideoResolution,| , ]$VAR[Label_ListItem_VideoResolution,, ]$VAR[Label_HDRType,| , ]$INFO[ListItem.VideoAspect,| ,:1 ]$VAR[Label_AudioCodec,| , ]$VAR[Label_ListItem_AudioChannels]</value>
+        <value condition="ListItem.IsStereoscopic">$VAR[Label_ListItem_VideoCodec,, ]$INFO[ListItem.VideoResolution,| , ]$VAR[Label_ListItem_VideoResolution,, ]$VAR[Label_HDRType,| , ]| 3D $INFO[ListItem.VideoAspect,| ,:1 ]$VAR[Label_AudioCodec,| , ]$VAR[Label_ListItem_AudioChannels]</value>
+        <value>$VAR[Label_ListItem_VideoCodec,, ]$INFO[ListItem.VideoResolution,| , ]$VAR[Label_ListItem_VideoResolution,, ]$VAR[Label_HDRType,| , ]$INFO[ListItem.VideoAspect,| ,:1 ]$VAR[Label_AudioCodec,| , ]$VAR[Label_ListItem_AudioChannels]</value>
     </variable>
 
     <variable name="Label_OSD_SubtitlesLanguage">
