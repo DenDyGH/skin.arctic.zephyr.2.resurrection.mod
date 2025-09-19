@@ -110,6 +110,11 @@
         <value condition="Skin.HasSetting(FlixViews.Simple)">$LOCALIZE[31514]</value>
     </variable>
 
+    <variable name="Label_SkinSettings_SelectboxStyle">
+        <value condition="Skin.HasSetting(SelectBox.Thin)">$LOCALIZE[30068]</value>
+        <value>$LOCALIZE[30067]</value>
+    </variable>
+
     <variable name="Label_ListItem_AudioChannels">
         <value condition="Integer.IsEqual(ListItem.AudioChannels,10)">9.1</value>
         <value condition="Integer.IsEqual(ListItem.AudioChannels,9)">8.1</value>
