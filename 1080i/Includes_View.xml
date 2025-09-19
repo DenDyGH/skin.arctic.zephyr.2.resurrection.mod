@@ -84,8 +84,8 @@
                 </control>
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[id])</visible>
-                    <include condition="$PARAM[selectbox] + [String.IsEqual(Skin.String(FocusBorderSize),Bold) | String.IsEmpty(Skin.String(FocusBorderSize))]">View_Selectbox_Bold</include>
-                    <include condition="$PARAM[selectbox] + String.IsEqual(Skin.String(FocusBorderSize),Thin)">View_Selectbox_Thin</include>
+                    <include condition="$PARAM[selectbox] + !Skin.HasSetting(SelectBox.Thin)">View_Selectbox_Bold</include>
+                    <include condition="$PARAM[selectbox] + Skin.HasSetting(SelectBox.Thin)">View_Selectbox_Thin</include>
                 </control>
             </control>
 
@@ -918,10 +918,10 @@
                     <param name="diffuse" value="$PARAM[diffuse]" />
                     <control type="group">
                         <visible>Control.HasFocus($PARAM[id])</visible>
-                        <include condition="String.IsEqual(Skin.String(FocusBorderSize),Bold) | String.IsEmpty(Skin.String(FocusBorderSize))" content="View_Selectbox_Bold">
+                        <include condition="!Skin.HasSetting(SelectBox.Thin)" content="View_Selectbox_Bold">
                             <param name="overlay" value="false" />
                         </include>
-                        <include condition="String.IsEqual(Skin.String(FocusBorderSize),Thin)" content="View_Selectbox_Thin">
+                        <include condition="Skin.HasSetting(SelectBox.Thin)" content="View_Selectbox_Thin">
                             <param name="overlay" value="false" />
                         </include>
                     </control>

@@ -2468,20 +2468,6 @@
             <onclick>Dialog.Close(1150)</onclick>
         </control>
     </include>
-    <include name="Items_SettingsDialog_FocusBorder">
-        <control type="button" id="9001">
-            <label>$LOCALIZE[30067]</label>
-            <include>Dialog_Standard_Button</include>
-            <onclick>Skin.SetString(FocusBorderSize,$LOCALIZE[30067])</onclick>
-            <onclick>Dialog.Close(1150)</onclick>
-        </control>
-        <control type="button" id="9002">
-            <label>$LOCALIZE[30068]</label>
-            <include>Dialog_Standard_Button</include>
-            <onclick>Skin.SetString(FocusBorderSize,$LOCALIZE[30068])</onclick>
-            <onclick>Dialog.Close(1150)</onclick>
-        </control>
-    </include>
     <include name="Items_Dialog_AlphaValue">
         <control type="button" id="9001">
             <height>item_list_height</height>
