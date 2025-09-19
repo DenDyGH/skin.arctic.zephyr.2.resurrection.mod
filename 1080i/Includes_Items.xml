@@ -2396,7 +2396,7 @@
     </include>
     <include name="Items_SettingsDialog_IconStyle">
         <control type="button" id="9001">
-            <label>Monochrome</label>
+            <label>$LOCALIZE[31517]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.SetString(Icons,monochrome)</onclick>
             <onclick>Skin.SetString(icons.diffuse,main_fg_100)</onclick>
@@ -2404,7 +2404,7 @@
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9002">
-            <label>Colorful</label>
+            <label>$LOCALIZE[31518]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.SetString(Icons,colorful)</onclick>
             <onclick>Skin.SetString(icons.diffuse, '')</onclick>

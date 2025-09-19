@@ -1627,7 +1627,17 @@ msgstr "Automatycznie przewijaj widgety"
 #: /1080i/SkinSettings.xml
 msgctxt "#30066"
 msgid "Choose between focus border sizes"
-msgstr "Wybierz pomiędzy rozmiarami obramowania"
+msgstr "Styl obramowania"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30067"
+msgid "Bold"
+msgstr "Pogrubiony"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#30068"
+msgid "Thin"
+msgstr "Cienki"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30070"
@@ -2226,3 +2236,13 @@ msgstr "Styl powiadomień"
 msgctxt "#31516"
 msgid "Extended"
 msgstr "Rozszerzony"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31517"
+msgid "Monochrome"
+msgstr "Monochromatyczne"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31518"
+msgid "Colorful"
+msgstr "Kolorowe"

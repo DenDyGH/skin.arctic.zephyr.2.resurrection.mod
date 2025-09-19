@@ -45,11 +45,13 @@
 
     <!-- Highlight Color -->
     <variable name="ColorHighlight">
+        <value condition="String.IsEmpty(Skin.String(focuscolor.name))">ff283ba8</value>
         <value>$INFO[Skin.String(focuscolor.name)]</value>
     </variable>
 
     <!-- Gradient Color -->
     <variable name="ColorGradient">
+        <value condition="String.IsEmpty(Skin.String(gradientcolor.name))">ff3949ab</value>
         <value>$INFO[Skin.String(gradientcolor.name)]</value>
     </variable>
 
@@ -101,8 +103,9 @@
     </variable>
 
     <variable name="IconsColorLabel_Var">
-        <value condition="String.IsEmpty(Skin.String(icons.label))">Monochrome</value>
-        <value>$INFO[Skin.String(icons.label)]</value>
+        <value condition="String.IsEqual(Skin.String(icons.label),Monochrome)">$LOCALIZE[31517]</value>
+        <value condition="String.IsEqual(Skin.String(icons.label),Colorful)">$LOCALIZE[31518]</value>
+        <value>$LOCALIZE[31517]</value>
     </variable>
 
     <variable name="PVRTimeRemainingMMVar">
