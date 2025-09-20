@@ -115,6 +115,13 @@
         <value>$LOCALIZE[30067]</value>
     </variable>
 
+    <variable name="Label_SkinSettings_SelectionHighlight">
+        <value condition="String.IsEqual(Skin.String(PosterHighlight),Mix)">$LOCALIZE[31519]</value>
+        <value condition="String.IsEqual(Skin.String(PosterHighlight),White)">$LOCALIZE[31520]</value>
+        <value condition="String.IsEqual(Skin.String(PosterHighlight),Highlight)">$LOCALIZE[31521]</value>
+        <value>$LOCALIZE[31519]</value>
+    </variable>
+
     <variable name="Label_ListItem_AudioChannels">
         <value condition="Integer.IsEqual(ListItem.AudioChannels,10)">9.1</value>
         <value condition="Integer.IsEqual(ListItem.AudioChannels,9)">8.1</value>

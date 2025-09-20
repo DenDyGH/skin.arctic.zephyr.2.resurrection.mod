@@ -2273,3 +2273,18 @@ msgstr ""
 msgctxt "#31518"
 msgid "Colorful"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31519"
+msgid "Mix"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31520"
+msgid "White"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31521"
+msgid "Highlight"
+msgstr ""
