@@ -2246,3 +2246,18 @@ msgstr "Monochromatyczne"
 msgctxt "#31518"
 msgid "Colorful"
 msgstr "Kolorowe"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31519"
+msgid "Mix"
+msgstr "Mieszane"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31520"
+msgid "White"
+msgstr "Białe"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31521"
+msgid "Highlight"
+msgstr "Kolor podświetlenia"
