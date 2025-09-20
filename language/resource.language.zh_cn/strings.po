@@ -1521,7 +1521,7 @@ msgid "This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a mi
 msgstr ""
 "该皮肤为 heppen 制作的 Arctic Zephyr 2 轻量修改版。\n"
 "原版由 jurialmunkey 创作，pkscout 适配 Matrix 及以上。\n"
-"皮肤设计简约以突出媒体内容，除默认浅色主题外还包含多个深色变体。"
+"该皮肤采用简约设计，旨在让用户能专注于自身的媒体内容。除默认的浅色配色方案外，这款皮肤还包含多款深色变体。"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30039"
