@@ -7,7 +7,7 @@ The skin is designed to be simple, allowing users to focus on their media conten
 # Installation & Updates
 
 *Install from repository*
-- Download repository: [repository.dendygh](https://dendygh.github.io/repository.dendygh-1.2.zip)
+- Download repository: [repository.dendygh](https://dendygh.github.io/repository.dendygh-1.3.zip)
 - Or install it via Kodi file-manager
 	- add source: https://dendygh.github.io
 
