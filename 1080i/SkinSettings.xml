@@ -1254,6 +1254,14 @@
                             <selected>System.HasAddon(script.artwork.dump)</selected>
                             <include>Defs_Settings_Button</include>
                         </control>
+                        <control type="radiobutton" id="19823">
+                            <label>script.image.resource.select</label>
+                            <label2>$INFO[System.AddonVersion(script.image.resource.select)]        </label2>
+                            <onclick>Addon.OpenSettings(script.image.resource.select)</onclick>
+                            <onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                            <selected>System.HasAddon(script.image.resource.select)</selected>
+                            <include>Defs_Settings_Button</include>
+                        </control>
                     </control>
 
                     <!-- =============================== -->
