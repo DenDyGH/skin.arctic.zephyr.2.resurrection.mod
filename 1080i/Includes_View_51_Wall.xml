@@ -87,6 +87,22 @@
         </control>
     </include>
 
+    <include name="View_SquareWall_Label">
+        <control type="label">
+            <left>15</left>
+            <right>15</right>
+            <font>font_statusbar</font>
+            <selectedcolor>main_fg_100</selectedcolor>
+            <textcolor>main_fg_100</textcolor>
+            <top>317</top>
+            <bottom>100</bottom>
+            <aligny>center</aligny>
+            <align>center</align>
+            <scrollspeed>20</scrollspeed>
+            <label>$INFO[ListItem.Label]</label>
+        </control>
+    </include>
+
     <include name="View_51_Wall_Landscape_Label">
         <control type="label">
             <left>15</left>
@@ -714,6 +730,7 @@
                 <param name="viewtype" value="Square Wall" />
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
+                <param name="labelinclude" value="View_InfoWall_Label" />
                 <param name="visible" value="$EXP[Exp_View_510] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
@@ -734,7 +751,7 @@
                 <param name="viewtype" value="Square Wall2" />
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
-                <param name="labelinclude" value="View_517_Wall_Label" />
+                <param name="labelinclude" value="View_SquareWall_Label" />
                 <param name="visible" value="$EXP[Exp_View_517] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>
@@ -802,6 +819,7 @@
                 <param name="circle" value="true" />
                 <param name="viewtype" value="Circle Wall" />
                 <param name="viewtypename" value="icon" />
+                <param name="labelinclude" value="View_InfoWall_Label" />
                 <param name="visible" value="$EXP[Exp_View_513] | $EXP[InGameAEL]" />
                 <include>View_Vertical_Movement</include>
             </include>

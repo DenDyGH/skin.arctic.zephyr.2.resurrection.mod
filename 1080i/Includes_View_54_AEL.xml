@@ -191,6 +191,7 @@
                 <param name="viewtype" value="$LOCALIZE[31440]" />
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
+                <param name="labelinclude" value="View_InfoWall_Label" />
                 <param name="visible" value="$EXP[Exp_View_541] | $EXP[InGameAEL]" />
                 <param name="focustrailer" value="true" />
                 <param name="aspectratio" value="keep" />
