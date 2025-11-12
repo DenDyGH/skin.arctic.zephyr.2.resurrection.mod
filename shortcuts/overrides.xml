@@ -28,7 +28,7 @@
         <action>SetProperty(1134_Node,$INFO[ListItem.Property(1134_Node)],home)</action>
         <action>ActivateWindow(1134)</action>
     </override>
-    
+
     <!-- Warning to Remove Settings -->
     <warn heading="31176" message="31177">ActivateWindow(Settings)</warn>
 
@@ -90,7 +90,8 @@
     <property property="widgetSortby">album</property>
     <property property="widgetSortby">lastupdated</property>
     <property property="widgetSortby">lastused</property>
-    
+    <property property="widgetSortby">userpreference</property>
+
     <propertySettings property="widgetSortby" buttonID="9903" title="Widget Sort Method" />
 
     <!-- Widget Direction -->
