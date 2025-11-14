@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="147">
     <defaultcontrol>61</defaultcontrol>
-
     <controls>
-
         <include>Global_Overlay</include>
 
         <control type="group">
-            <height>500</height>
-            <include>Dialog_Standard_Group</include>
-
+            <include content="Dialog_Standard_Group">
+                <param name="width" value="1420" />
+                <param name="height" value="700" />
+            </include>
             <!-- Header -->
             <control type="label" id="1">
                 <include>Dialog_Standard_Header</include>
                 <label>13406</label>
             </control>
+            <include content="Object_Control">
+                <param name="control">image</param>
+                <top>80</top>
+                <height>1</height>
+                <width>1370</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <align>center</align>
+                <left>25</left>
+                <right>25</right>
+            </include>
 
             <control type="textbox" id="5">
                 <description>textarea</description>
@@ -23,27 +31,22 @@
                 <right>30</right>
                 <top>110</top>
                 <font>font_plotbox</font>
-                <height>360</height>
+                <height>560</height>
                 <align>left</align>
+                <pagecontrol>61</pagecontrol>
             </control>
 
             <control type="scrollbar" id="61">
                 <right>30</right>
                 <top>110</top>
                 <width>8</width>
-                <height>350</height>
-                <onleft>Close</onleft>
-                <onright>Close</onright>
+                <height>550</height>
                 <ondown>61</ondown>
                 <onup>61</onup>
-                <showonepage>true</showonepage>
                 <texturesliderbackground colordiffuse="00ffffff">common/white.png</texturesliderbackground>
                 <texturesliderbar colordiffuse="00ffffff">common/white.png</texturesliderbar>
                 <texturesliderbarfocus colordiffuse="00ffffff">common/white.png</texturesliderbarfocus>
             </control>
-
         </control>
-
     </controls>
-
 </window>
