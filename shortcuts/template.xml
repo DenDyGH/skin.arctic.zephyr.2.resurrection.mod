@@ -340,7 +340,8 @@
                 <param name="iconcondition" value="$PYTHON['true' if widgetAspect in 'Icon' else 'false']" />
                 <param name="bannercondition" value="$PYTHON['true' if widgetAspect in 'Banner' else 'false']" />
                 <onback>SetFocus($PYTHON[int(mainmenuid)]3101)</onback>
-                <onback>301</onback>
+                <onback condition="!Skin.HasSetting(HomeMultiFlixView)">301</onback>
+                <onback condition="Control.HasFocus($PYTHON[int(mainmenuid)]3101) + Skin.HasSetting(HomeMultiFlixView)">301</onback>
                 <visible>Integer.IsGreater(Container($PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]).NumItems,0) | Container($PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]).IsUpdating</visible>
                 <visible>String.IsEqual(Container(301).ListItem.Property(id),$SKINSHORTCUTS[mainmenuid])</visible>
                 <onfocus>SetProperty(widgetMovementId,$PYTHON[int(id)],Home)</onfocus>
@@ -373,7 +374,8 @@
                 <param name="iconcondition" value="$PYTHON['true' if widgetAspect in 'Icon' else 'false']" />
                 <param name="bannercondition" value="$PYTHON['true' if widgetAspect in 'Banner' else 'false']" />
                 <onback>SetFocus($PYTHON[int(mainmenuid)]3101)</onback>
-                <onback>301</onback>
+                <onback condition="!Skin.HasSetting(HomeMultiFlixView)">301</onback>
+                <onback condition="Control.HasFocus($PYTHON[int(mainmenuid)]3101) + Skin.HasSetting(HomeMultiFlixView)">301</onback>
                 <visible>Integer.IsGreater(Container($PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]).NumItems,0) | Container($PYTHON[int(mainmenuid)]$PYTHON[int(id) + 3100]).IsUpdating</visible>
                 <visible>String.IsEqual(Container(301).ListItem.Property(id),$SKINSHORTCUTS[mainmenuid])</visible>
                 <onfocus>SetProperty(widgetMovementId,$PYTHON[int(id)],Home)</onfocus>
