@@ -2203,8 +2203,8 @@
             <label>$LOCALIZE[30054]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(VerticalIconsOnly)</onclick>
-            <onclick>Skin.Reset(HomeTextAutoWidth)</onclick>
             <onclick>Skin.Reset(HomeIcons)</onclick>
+            <onclick>Skin.SetBool(HomeTextAutoWidth)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>ReloadSkin()</onclick>
             <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:00,silent)</onclick>
