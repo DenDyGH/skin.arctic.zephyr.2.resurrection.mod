@@ -1133,7 +1133,7 @@ msgstr "Top 250 filmów według IMDB"
 #: /shortcuts/overrides.xml
 msgctxt "#31278"
 msgid "Unwatched Movies"
-msgstr "Nie obejrzane filmy"
+msgstr "Nieobejrzane filmy"
 
 msgctxt "#31279"
 msgid "Video decoder"
@@ -1146,7 +1146,7 @@ msgstr "Format pixeli"
 #: /shortcuts/overrides.xml
 msgctxt "#31283"
 msgid "Unwatched Episodes"
-msgstr "Nie obejrzane sezony"
+msgstr "Nieobejrzane sezony"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31285"
