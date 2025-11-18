@@ -192,6 +192,7 @@
 
         <!-- Home Fanart Widgets -->
         <value condition="!String.IsEmpty(Container.ListItem.Art(fanart)) + Window.IsVisible(Home)">$INFO[Container.ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(5600).ListItem.Art(fanart)) + String.IsEmpty(Container(301).ListItem.Property(Background)) + String.IsEmpty(Container(301).ListItem.Property(backgroundPlaylist))">$INFO[Container(5600).ListItem.Art(fanart)]</value>
 
         <value condition="!String.IsEmpty(Container(13101).ListItem.Art(fanart)) + Control.IsVisible(13101) + !Control.HasFocus(13101) + String.IsEmpty(Container(301).ListItem.Property(background)) + Control.HasFocus(301) + Window.IsVisible(Home)">$INFO[Container(13101).ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container(23101).ListItem.Art(fanart)) + Control.IsVisible(23101) + !Control.HasFocus(23101) + String.IsEmpty(Container(301).ListItem.Property(background)) + Control.HasFocus(301) + Window.IsVisible(Home)">$INFO[Container(23101).ListItem.Art(fanart)]</value>
