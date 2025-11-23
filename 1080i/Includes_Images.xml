@@ -303,4 +303,9 @@
         <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
         <value>special://skin/extras/backgrounds/bg2.jpg</value>
     </variable>
+
+    <variable name="Image_Startup">
+        <value condition="!String.IsEmpty(Skin.String(StartupImage))">$INFO[Skin.String(StartupImage)]</value>
+        <value>special://skin/extras/backgrounds/bg2.jpg</value>
+    </variable>
 </includes>

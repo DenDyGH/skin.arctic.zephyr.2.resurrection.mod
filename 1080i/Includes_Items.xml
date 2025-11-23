@@ -2300,6 +2300,20 @@
             <onclick>Dialog.Close(1150)</onclick>
         </control>
     </include>
+    <include name="Items_SettingsDialog_CustomStartupImage">
+        <control type="button" id="9001">
+            <label>$LOCALIZE[571]</label>
+            <include>Dialog_Standard_Button</include>
+            <onclick>Skin.Reset(StartupImage)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9002">
+            <label>$LOCALIZE[31271]</label>
+            <include>Dialog_Standard_Button</include>
+            <onclick>Skin.SetImage(StartupImage)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+    </include>
     <include name="Items_SettingsDialog_TrailerDelay">
         <control type="button" id="9001">
             <label>$LOCALIZE[30039]</label>
