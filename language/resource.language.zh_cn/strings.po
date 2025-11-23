@@ -2288,3 +2288,8 @@ msgstr "白色"
 msgctxt "#31521"
 msgid "Highlight"
 msgstr "高亮"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31522"
+msgid "Startup image"
+msgstr ""

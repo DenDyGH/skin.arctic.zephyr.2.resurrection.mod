@@ -122,6 +122,11 @@
         <value>$LOCALIZE[31519]</value>
     </variable>
 
+    <variable name="Label_SkinSettings_StartupImage">
+        <value condition="String.IsEmpty(Skin.String(StartupImage))">$LOCALIZE[571]</value>
+        <value>$INFO[Skin.String(StartupImage)]</value>
+    </variable>
+
     <variable name="Label_ListItem_AudioChannels">
         <value condition="Integer.IsEqual(ListItem.AudioChannels,10)">9.1</value>
         <value condition="Integer.IsEqual(ListItem.AudioChannels,9)">8.1</value>

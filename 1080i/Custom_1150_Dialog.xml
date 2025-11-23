@@ -44,6 +44,7 @@
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),MenuStyle2)">Items_SettingsDialog_MenuStyle2</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),FallbackImage)">Items_SettingsDialog_FallbackImage</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),FallbackImage_Fanart)">Items_SettingsDialog_FallbackImage_Fanart</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),CustomStartupImage)">Items_SettingsDialog_CustomStartupImage</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),TrailerDelay)">Items_SettingsDialog_TrailerDelay</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),TimePerImage)">Items_SettingsDialog_TimePerImage</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),IconStyle)">Items_SettingsDialog_IconStyle</include>

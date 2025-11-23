@@ -297,6 +297,16 @@
                             <onclick>ActivateWindow(1150)</onclick>
                         </control>
 
+                        <control type="button" id="19824" description="Set startup image">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31522]</label>
+                            <label2>$VAR[Label_SkinSettings_StartupImage]</label2>
+                            <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31522],home)</onclick>
+                            <onclick>SetProperty(CustomDialogWindow.items,CustomStartupImage,home)</onclick>
+                            <onclick>ActivateWindow(1150)</onclick>
+                            <enable>!Skin.HasSetting(DisplaySplashOnStartup)</enable>
+                        </control>
+
                         <control type="radiobutton" id="19205" description="Show video in background">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31111]</label>
