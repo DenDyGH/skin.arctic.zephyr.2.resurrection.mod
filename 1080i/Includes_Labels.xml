@@ -91,7 +91,10 @@
     </variable>
 
     <variable name="Label_SkinSettings_CornerIcon">
-        <value condition="!String.IsEmpty(Skin.String(CornerIcon))">$INFO[Skin.String(CornerIcon)]</value>
+        <value condition="String.IsEqual(Skin.String(CornerIcon),Settings)">$LOCALIZE[5]</value>
+        <value condition="String.IsEqual(Skin.String(CornerIcon),Power)">$LOCALIZE[33060]</value>
+        <value condition="String.IsEqual(Skin.String(CornerIcon),Home)">$LOCALIZE[10000]</value>
+        <value condition="String.IsEqual(Skin.String(CornerIcon),Kodi)">Kodi</value>
         <value>$LOCALIZE[30060]</value>
     </variable>
 
