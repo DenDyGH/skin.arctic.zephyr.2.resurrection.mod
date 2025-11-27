@@ -2298,3 +2298,8 @@ msgstr ""
 msgctxt "#31523"
 msgid "Autoscroll"
 msgstr ""
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31524"
+msgid "Show \"more...\" folder in widgets"
+msgstr ""
