@@ -1474,10 +1474,16 @@
             <param name="icon" value="special://skin/extras/icons/power.png" />
             <onclick>ActivateWindow(shutdownmenu)</onclick>
         </include>
-        <include content="Home_CornerIcon_Template" condition="String.IsEqual(Skin.String(CornerIcon),Kodi)">
-            <param name="icon" value="special://skin/extras/icons/kodi.png" />
-            <onclick>ActivateWindow(settings)</onclick>
-        </include>
+        <control type="image">
+            <left>-18</left>
+            <height>70</height>
+            <width>70</width>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="main_fg_30">special://skin/extras/icons/kodi.png</texture>
+            <visible>![[!Control.HasFocus(302) + Container(301).HasPrevious] | [Control.HasFocus(302) + Container(302).HasPrevious]]</visible>
+            <visible>!Control.HasFocus(302)</visible>
+            <visible>String.IsEqual(Skin.String(CornerIcon),Kodi)</visible>
+        </control>
         <control type="image">
             <left>-18</left>
             <height>70</height>
