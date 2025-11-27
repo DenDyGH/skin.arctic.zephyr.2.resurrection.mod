@@ -336,6 +336,7 @@
                 <param name="limit" value="$SKINSHORTCUTS[widgetLimit]" />
                 <param name="sortby" value="$SKINSHORTCUTS[widgetSortby]" />
                 <param name="sortorder" value="$SKINSHORTCUTS[widgetSortorder]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="$PYTHON['true' if widgetAspect in 'Small Square' else 'false']" />
                 <param name="squarecondition" value="$PYTHON['true' if widgetAspect in 'Big Square' else 'false']" />
                 <param name="smalllandscapecondition" value="$PYTHON['true' if widgetAspect in 'Small Landscape' else 'false']" />
@@ -370,6 +371,7 @@
                 <param name="limit" value="$SKINSHORTCUTS[widgetLimit]" />
                 <param name="sortby" value="$SKINSHORTCUTS[widgetSortby]" />
                 <param name="sortorder" value="$SKINSHORTCUTS[widgetSortorder]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="$PYTHON['true' if widgetAspect in 'Small Square' else 'false']" />
                 <param name="squarecondition" value="$PYTHON['true' if widgetAspect in 'Big Square' else 'false']" />
                 <param name="smalllandscapecondition" value="$PYTHON['true' if widgetAspect in 'Small Landscape' else 'false']" />

@@ -2271,3 +2271,8 @@ msgstr "Obraz ekranu ładowania"
 msgctxt "#31523"
 msgid "Autoscroll"
 msgstr "Automatyczne przewijanie"
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31524"
+msgid "Show \"more...\" folder in widgets"
+msgstr "Pokazuj folder \"więcej...\" w widgetach"

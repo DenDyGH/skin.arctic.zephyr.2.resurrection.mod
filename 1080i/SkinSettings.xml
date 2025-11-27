@@ -215,6 +215,13 @@
                             <onclick>Skin.ToggleSetting(DisableAutoScrollWidgets)</onclick>
                         </control>
 
+                        <control type="radiobutton" id="19826" description="Show more items in widgets">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31524]</label>
+                            <selected>Skin.HasSetting(Widgets_Browse)</selected>
+                            <onclick>Skin.ToggleSetting(Widgets_Browse)</onclick>
+                        </control>
+
                         <control type="button" id="19539" description="Extended notification">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31515]</label>

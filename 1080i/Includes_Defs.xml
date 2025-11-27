@@ -874,4 +874,9 @@
         <centertop>$PARAM[centertop]</centertop>
         <bottom>$PARAM[bottom]</bottom>
     </include>
+
+    <variable name="Defs_Widgets_Browse">
+        <value condition="Skin.HasSetting(Widgets_Browse)">auto</value>
+        <value>never</value>
+    </variable>
 </includes>

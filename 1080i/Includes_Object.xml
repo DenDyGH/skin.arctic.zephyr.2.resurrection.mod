@@ -427,13 +427,14 @@
                     <param name="sortorder" value="$PARAM[sortorder]" />
                     <param name="limit" value="$PARAM[limit]" />
                     <param name="content" value="$PARAM[content]" />
+                    <param name="browse" value="$PARAM[browse]" />
                 </include>
             </control>
         </definition>
     </include>
 
     <include name="Object_Widget_ContentPath">
-        <content target="$PARAM[target]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]">$PARAM[content]</content>
+        <content target="$PARAM[target]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]" browse="$PARAM[browse]">$PARAM[content]</content>
     </include>
 
     <include name="Object_PVR_Icon">
