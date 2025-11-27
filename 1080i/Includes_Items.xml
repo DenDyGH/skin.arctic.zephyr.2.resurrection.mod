@@ -2482,6 +2482,98 @@
             <onclick>Dialog.Close(1150)</onclick>
         </control>
     </include>
+    <include name="Items_Dialog_BackgroundFade">
+        <control type="button" id="9001">
+            <height>item_list_height</height>
+            <label>80%</label>
+            <onclick>Skin.SetString(Background_Fade,80)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9002">
+            <height>item_list_height</height>
+            <label>75%</label>
+            <onclick>Skin.SetString(Background_Fade,75)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9003">
+            <height>item_list_height</height>
+            <label>70%</label>
+            <onclick>Skin.SetString(Background_Fade,70)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9004">
+            <height>item_list_height</height>
+            <label>65%</label>
+            <onclick>Skin.SetString(Background_Fade,65)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9005">
+            <height>item_list_height</height>
+            <label>60%</label>
+            <onclick>Skin.SetString(Background_Fade,60)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9006">
+            <height>item_list_height</height>
+            <label>55%</label>
+            <onclick>Skin.SetString(Background_Fade,55)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9007">
+            <height>item_list_height</height>
+            <label>50%</label>
+            <onclick>Skin.SetString(Background_Fade,50)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9008">
+            <height>item_list_height</height>
+            <label>45%</label>
+            <onclick>Skin.SetString(Background_Fade,45)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9009">
+            <height>item_list_height</height>
+            <label>40%</label>
+            <onclick>Skin.SetString(Background_Fade,40)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9010">
+            <height>item_list_height</height>
+            <label>35%</label>
+            <onclick>Skin.SetString(Background_Fade,35)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9011">
+            <height>item_list_height</height>
+            <label>30%</label>
+            <onclick>Skin.SetString(Background_Fade,30)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9012">
+            <height>item_list_height</height>
+            <label>25%</label>
+            <onclick>Skin.SetString(Background_Fade,25)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9013">
+            <height>item_list_height</height>
+            <label>20% ($LOCALIZE[30059])</label>
+            <onclick>Skin.SetString(Background_Fade,20)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9014">
+            <height>item_list_height</height>
+            <label>15%</label>
+            <onclick>Skin.SetString(Background_Fade,15)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+        <control type="button" id="9015">
+            <height>item_list_height</height>
+            <label>10%</label>
+            <onclick>Skin.SetString(Background_Fade,10)</onclick>
+            <onclick>Dialog.Close(1150)</onclick>
+        </control>
+    </include>
     <include name="Items_Dialog_AlphaValue">
         <control type="button" id="9001">
             <height>item_list_height</height>

@@ -134,7 +134,7 @@
                 <height>1080</height>
                 <aspectratio>scale</aspectratio>
                 <fadetime>600</fadetime>
-                <animation effect="fade" start="20" end="20" reversible="false" condition="true">Conditional</animation>
+                <include>Animation_Background_Fade</include>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
