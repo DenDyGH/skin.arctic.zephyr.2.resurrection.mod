@@ -682,8 +682,8 @@ msgstr "Dodatki i funkcje specjalne"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31139"
-msgid "Widgets and Layout"
-msgstr "Widgety i układ"
+msgid "Layout"
+msgstr "Ustawienia strony głównej"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31140"

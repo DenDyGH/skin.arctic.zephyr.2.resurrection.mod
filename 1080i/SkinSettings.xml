@@ -186,40 +186,11 @@
                             <visible>!Skin.HasSetting(HomeTextAutoWidth) + [Skin.HasSetting(HomeMultiHorizontal) | !Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(HomeIcons)</visible>
                         </control>
 
-                        <control type="button" id="19108" description="Widget movement">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[30048]</label>
-                            <label2>$VAR[Label_SkinSettings_WidgetMovement]</label2>
-                            <onclick>Skin.ToggleSetting(FixedWidgets)</onclick>
-                            <visible>Skin.HasSetting(HomeMulti)</visible>
-                        </control>
-
                         <control type="radiobutton" id="19104" description="Submenu Only">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31009]</label>
                             <selected>!Skin.HasSetting(SubmenuOnly)</selected>
                             <onclick>Skin.ToggleSetting(SubmenuOnly)</onclick>
-                        </control>
-
-                        <control type="button" id="19105" description="Global Widget">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31113]</label>
-                            <label2>$INFO[Skin.String(widgetPath)]</label2>
-                            <onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=widgetName&amp;skinWidgetTarget=widgetTarget&amp;skinWidgetPath=widgetPath)</onclick>
-                        </control>
-
-                        <control type="radiobutton" id="19107" description="Auto Scroll Single Widgets">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[30049]</label>
-                            <selected>!Skin.HasSetting(DisableAutoScrollWidgets)</selected>
-                            <onclick>Skin.ToggleSetting(DisableAutoScrollWidgets)</onclick>
-                        </control>
-
-                        <control type="radiobutton" id="19826" description="Show more items in widgets">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31524]</label>
-                            <selected>Skin.HasSetting(Widgets_Browse)</selected>
-                            <onclick>Skin.ToggleSetting(Widgets_Browse)</onclick>
                         </control>
 
                         <control type="button" id="19539" description="Extended notification">
@@ -234,6 +205,40 @@
                             <label>$LOCALIZE[30100]</label>
                             <selected>Skin.HasSetting(DisplaySplashOnStartup)</selected>
                             <onclick>Skin.ToggleSetting(DisplaySplashOnStartup)</onclick>
+                        </control>
+
+                        <control type="label" id="19181" description="LABEL">
+                            <include>Dialog_Standard_HintLabel</include>
+                            <label>$LOCALIZE[31099]</label>
+                        </control>
+
+                        <control type="button" id="19108" description="Widget movement">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[30048]</label>
+                            <label2>$VAR[Label_SkinSettings_WidgetMovement]</label2>
+                            <onclick>Skin.ToggleSetting(FixedWidgets)</onclick>
+                            <visible>Skin.HasSetting(HomeMulti)</visible>
+                        </control>
+
+                        <control type="button" id="19105" description="Global Widget">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31113]</label>
+                            <label2>$INFO[Skin.String(widgetPath)]</label2>
+                            <onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=widgetName&amp;skinWidgetTarget=widgetTarget&amp;skinWidgetPath=widgetPath)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19107" description="AutoScroll Widgets">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[30049]</label>
+                            <selected>!Skin.HasSetting(DisableAutoScrollWidgets)</selected>
+                            <onclick>Skin.ToggleSetting(DisableAutoScrollWidgets)</onclick>
+                        </control>
+
+                        <control type="radiobutton" id="19826" description="Show more items in widgets">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31524]</label>
+                            <selected>Skin.HasSetting(Widgets_Browse)</selected>
+                            <onclick>Skin.ToggleSetting(Widgets_Browse)</onclick>
                         </control>
                     </control>
 

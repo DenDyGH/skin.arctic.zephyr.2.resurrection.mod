@@ -683,7 +683,7 @@ msgstr "Extra e special features"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31139"
-msgid "Widgets and Layout"
+msgid "Layout"
 msgstr "Widgets e Layout"
 
 #: /1080i/SkinSettings.xml

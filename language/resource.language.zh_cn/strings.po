@@ -688,7 +688,7 @@ msgstr "特别收录与附加内容"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31139"
-msgid "Widgets and Layout"
+msgid "Layout"
 msgstr "小部件和布局"
 
 #: /1080i/SkinSettings.xml
