@@ -2293,3 +2293,8 @@ msgstr "高亮"
 msgctxt "#31522"
 msgid "Startup image"
 msgstr ""
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31523"
+msgid "Autoscroll"
+msgstr ""

@@ -357,6 +357,19 @@
                         <include>Dialog_Standard_Button</include>
                     </control>
 
+                    <control type="radiobutton" id="9906" description="Widget AutoScroll">
+                        <label>$LOCALIZE[31523]</label>
+                        <radioposx>1010</radioposx>
+                        <selected>!String.IsEmpty(Container(211).ListItem.Property(widgetAutoScroll))</selected>
+                        <onclick>SetProperty(customProperty,widgetAutoScroll)</onclick>
+                        <onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetAutoScroll))">SetProperty(customValue,True)</onclick>
+                        <onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetAutoScroll))">ClearProperty(customValue)</onclick>
+                        <onclick>SendClick(404)</onclick>
+                        <include>Dialog_Standard_Button</include>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
                     <control type="button" id="9312" description="Widget Path">
                         <label>$LOCALIZE[31039]</label>
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>

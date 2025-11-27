@@ -255,6 +255,9 @@
         <property name="widgetMovement" tag="property" attribute="name|widgetAspect" value="Landscape">2</property>
         <property name="widgetMovement">6</property>
 
+        <property name="isAutoScroll" tag="property" attribute="name|widgetAutoScroll">True</property>
+        <property name="isAutoScroll">False</property>
+
         <property name="mainmenuid" tag="property" attribute="name|mainmenuid" />
 
         <property name="id" tag="property" attribute="name|id" value="$NUMBER[1]">1</property>
@@ -347,8 +350,8 @@
                 <onfocus>SetProperty(widgetMovementId,$PYTHON[int(id)],Home)</onfocus>
                 <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PYTHON[int(id)]) + Skin.HasSetting(HomeMultiFlixView)">Conditional</animation>
                 <!-- <movement>$SKINSHORTCUTS[widgetMovement]</movement> -->
-                <include content="Defs_AutoScroll">
-                    <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets) + Integer.IsEqual(Container(3000).NumItems,1)" />
+                <include content="Defs_AutoScroll" condition="$SKINSHORTCUTS[isAutoScroll]">
+                    <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets)" />
                 </include>
             </include>
             <include content="Object_Widget_Spotlight" condition="Skin.HasSetting(FixedWidgets)">
@@ -381,8 +384,8 @@
                 <onfocus>SetProperty(widgetMovementId,$PYTHON[int(id)],Home)</onfocus>
                 <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PYTHON[int(id)]) + Skin.HasSetting(HomeMultiFlixView)">Conditional</animation>
                 <!-- <movement>$SKINSHORTCUTS[widgetMovement]</movement> -->
-                <include content="Defs_AutoScroll">
-                    <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets) + Integer.IsEqual(Container(3000).NumItems,1)" />
+                <include content="Defs_AutoScroll" condition="$SKINSHORTCUTS[isAutoScroll]">
+                    <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets)" />
                 </include>
             </include>
         </controls>
