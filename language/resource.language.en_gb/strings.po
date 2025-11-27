@@ -682,7 +682,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31139"
-msgid "Widgets and Layout"
+msgid "Layout"
 msgstr ""
 
 #: /1080i/SkinSettings.xml

@@ -682,7 +682,7 @@ msgstr "Extrák és speciális beállítások"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31139"
-msgid "Widgets and Layout"
+msgid "Layout"
 msgstr "Widgetek és elrendezés"
 
 #: /1080i/SkinSettings.xml
