@@ -39,6 +39,7 @@
                 <pagecontrol>61</pagecontrol>
                 <orientation>vertical</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),Background_Fade)">Items_Dialog_BackgroundFade</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),LayoutSettings)">Items_SettingsDialog_Layout</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),MenuStyle)">Items_SettingsDialog_MenuStyle</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),MenuStyle2)">Items_SettingsDialog_MenuStyle2</include>

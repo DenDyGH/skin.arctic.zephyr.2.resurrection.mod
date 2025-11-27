@@ -237,6 +237,24 @@
         <animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
     </include>
 
+    <include name="Animation_Background_Fade">
+        <animation effect="fade" start="10" end="10" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),10)">Conditional</animation>
+        <animation effect="fade" start="15" end="15" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),15)">Conditional</animation>
+        <animation effect="fade" start="20" end="20" reversible="false" condition="String.IsEmpty(Skin.String(Background_Fade)) | String.IsEqual(Skin.String(Background_Fade),20)">Conditional</animation>
+        <animation effect="fade" start="25" end="25" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),25)">Conditional</animation>
+        <animation effect="fade" start="30" end="30" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),30)">Conditional</animation>
+        <animation effect="fade" start="35" end="35" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),35)">Conditional</animation>
+        <animation effect="fade" start="40" end="40" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),40)">Conditional</animation>
+        <animation effect="fade" start="45" end="45" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),45)">Conditional</animation>
+        <animation effect="fade" start="50" end="50" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),50)">Conditional</animation>
+        <animation effect="fade" start="55" end="55" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),55)">Conditional</animation>
+        <animation effect="fade" start="60" end="60" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),60)">Conditional</animation>
+        <animation effect="fade" start="65" end="65" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),65)">Conditional</animation>
+        <animation effect="fade" start="70" end="70" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),70)">Conditional</animation>
+        <animation effect="fade" start="75" end="75" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),75)">Conditional</animation>
+        <animation effect="fade" start="80" end="80" reversible="false" condition="String.IsEqual(Skin.String(Background_Fade),80)">Conditional</animation>
+    </include>
+
     <include name="Animation_Flix_Widget_Slide">
         <animation effect="slide" end="0,-400" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,2)">Conditional</animation>
         <animation effect="slide" end="0,-220" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>

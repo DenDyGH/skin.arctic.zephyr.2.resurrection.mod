@@ -127,6 +127,11 @@
         <value>$INFO[Skin.String(StartupImage)]</value>
     </variable>
 
+    <variable name="Label_SkinSettings_BackgroundFade">
+        <value condition="!String.IsEmpty(Skin.String(Background_Fade))">$INFO[Skin.String(Background_Fade),,%]</value>
+        <value>20%</value>
+    </variable>
+
     <variable name="Label_ListItem_AudioChannels">
         <value condition="Integer.IsEqual(ListItem.AudioChannels,10)">9.1</value>
         <value condition="Integer.IsEqual(ListItem.AudioChannels,9)">8.1</value>
