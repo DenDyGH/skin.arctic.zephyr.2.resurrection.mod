@@ -28,7 +28,17 @@
                             <param name="visible" value="true" />
                             <param name="diffuse" value="diffuse/poster-big.png" />
                         </include>
-
+                        <control type="image">
+                            <top>370</top>
+                            <left>1350</left>
+                            <width>400</width>
+                            <height>400</height>
+                            <animation effect="slide" start="4000,0" end="0,0" tween="sine" easing="out" time="700" delay="300">WindowOpen</animation>
+                            <animation effect="slide" start="0,0" end="4000,0" tween="sine" easing="out" time="1000" delay="0">WindowClose</animation>
+                            <animation effect="rotate" end="-360" center="auto" time="12000" delay="2000" loop="true" reversible="false" condition="true">Conditional</animation>
+                            <visible>!String.IsEmpty(ListItem.Art(discart))</visible>
+                            <texture>$INFO[ListItem.Art(discart)]</texture>
+                        </control>
                         <!-- Info -->
                         <control type="group">
                             <top>-15</top>
