@@ -603,32 +603,32 @@ msgstr "背景图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31122"
-msgid "12 seconds"
+msgid "12 秒之前"
 msgstr "12秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31123"
-msgid "15 seconds"
+msgid "15 秒之前"
 msgstr "15 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31124"
-msgid "20 seconds"
+msgid "20 秒之前"
 msgstr "20 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31125"
-msgid "30 seconds"
+msgid "30 秒之前"
 msgstr "30 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31126"
-msgid "60 seconds"
+msgid "60 秒之前"
 msgstr "60 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31127"
-msgid "10 minutes"
+msgid "10 分钟之前"
 msgstr "10 分钟"
 
 #: /1080i/SkinSettings.xml
@@ -1875,12 +1875,12 @@ msgstr "设置 Flix 视图预告片播放延迟"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30112"
-msgid "4 seconds"
+msgid "4 秒之前"
 msgstr "4 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30113"
-msgid "7 seconds"
+msgid "7 秒之前"
 msgstr "7 秒"
 
 #: /1080i/SkinSettings.xml
@@ -2292,14 +2292,14 @@ msgstr "高亮"
 #: /1080i/SkinSettings.xml
 msgctxt "#31522"
 msgid "Startup image"
-msgstr ""
+msgstr "启动画面"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31523"
 msgid "Autoscroll"
-msgstr ""
+msgstr "自动滚动"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31524"
 msgid "Show \"more...\" folder in widgets"
-msgstr ""
+msgstr "在小部件中显示「更多...」文件夹"
