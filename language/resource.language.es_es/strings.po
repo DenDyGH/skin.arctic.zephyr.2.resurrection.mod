@@ -2271,3 +2271,18 @@ msgstr "Blanco"
 msgctxt "#31521"
 msgid "Highlight"
 msgstr "Resaltado"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31522"
+msgid "Startup image"
+msgstr "Imagen de inicio"
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31523"
+msgid "Autoscroll"
+msgstr "Desplazamiento automático"
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31524"
+msgid "Show \"more...\" folder in widgets"
+msgstr "Mostrar carpeta \"más...\" en widgets"
