@@ -1,4 +1,4 @@
- # Kodi Media Center language file
+# Kodi Media Center language file
 
 # Addon Name: Arctic: Zephyr
 # Addon id: skin.arctic.zephyr.2
@@ -37,12 +37,12 @@ msgstr "Condiciones actuales"
 #: Weather
 msgctxt "#31004"
 msgid "Sunset at"
-msgstr "Anochece a"
+msgstr "Anochece a las"
 
 #: Weather
 msgctxt "#31005"
 msgid "Sunrise at"
-msgstr "Amanece a"
+msgstr "Amanece a las"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31006"
@@ -52,7 +52,7 @@ msgstr "Colección"
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31007"
 msgid "Use local library info for recommendations"
-msgstr ""
+msgstr "Usar info. de biblioteca local para recomendaciones"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31008"
@@ -113,7 +113,7 @@ msgstr "Acceso directo común"
 #: /1080i/SkinSettings.xml
 msgctxt "#31019"
 msgid "Title label as"
-msgstr ""
+msgstr "Etiqueta de título como"
 
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"
@@ -198,7 +198,7 @@ msgstr "Abrir submenú"
 #: /1080i/Includes_Labels.xml
 msgctxt "#31036"
 msgid "hr"
-msgstr "hr"
+msgstr "h"
 
 #: /1080i/DialogSubtitles.xml
 msgctxt "#31037"
@@ -278,7 +278,7 @@ msgstr "Similar a"
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31052"
 msgid "Premiered in"
-msgstr "Del Director"
+msgstr "Estrenado en"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31053"
@@ -293,7 +293,7 @@ msgstr "Siguiente"
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31055"
 msgid "Cast Members Also Feature In"
-msgstr "Miembros del reparto también aparece en"
+msgstr "Miembros del reparto también aparecen en"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31056"
@@ -473,7 +473,7 @@ msgstr "Usar fuente Faune al mostrar argumento"
 #: /1080i/SkinSettings.xml
 msgctxt "#31093"
 msgid "Disable Slim PVR Guide"
-msgstr "Usar guía PVR delgada"
+msgstr "Deshabilitar guía PVR delgada"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31094"
@@ -687,7 +687,7 @@ msgstr "Extras y características especiales"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31139"
-msgid "Layout"
+msgid "Widgets and Layout"
 msgstr "Widget y diseño"
 
 #: /1080i/SkinSettings.xml
@@ -717,7 +717,7 @@ msgstr "Fuentes e ilustraciones"
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
 msgid "Always show info panel with seekbar"
-msgstr ""
+msgstr "Mostrar siempre panel de info con barra de búsqueda"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31146"
@@ -737,7 +737,7 @@ msgstr "Nombre de la sección"
 #: /1080i/SkinSettings.xml
 msgctxt "#31149"
 msgid "Clock and weather in all windows (except home)"
-msgstr "Reloj y clima"
+msgstr "Reloj y clima en todas las ventanas (excepto Inicio)"
 
 msgctxt "#31150"
 msgid "Home background image"
@@ -858,7 +858,7 @@ msgstr "Añadidos recientemente"
 #: /1080i/SkinSettings.xml
 msgctxt "#31174"
 msgid "Landscape art"
-msgstr ""
+msgstr "Arte de paisaje"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31175"
@@ -1220,7 +1220,7 @@ msgstr "Características especiales"
 #: /1080i/Includes_Labels.xml
 msgctxt "#31308"
 msgid "Player"
-msgstr ""
+msgstr "Reproductor"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31310"
@@ -1380,7 +1380,7 @@ msgstr "Ajustes subtítulos"
 #: /1080i/SkinSettings.xml
 msgctxt "#31409"
 msgid "Disable auto pop-up OSD dialogs"
-msgstr ""
+msgstr "Deshabilitar diálogos emergentes OSD automáticos"
 
 #: /1080i/DialogPVRChannelManager.xml
 msgctxt "#31412"
@@ -1410,7 +1410,7 @@ msgstr "TV en directo / PVR"
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
 msgid "MediaInfo Extended"
-msgstr ""
+msgstr "MediaInfo extendido"
 
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31424"
@@ -1494,15 +1494,15 @@ msgstr "Mostrar recuentos de páginas y elementos en páginas de lista"
 
 msgctxt "#30035"
 msgid "Continuar viendo en [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] segundos"
-msgstr ""
+msgstr "Continuar viendo en [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] segundos"
 
 msgctxt "#30036"
 msgid "a continuación en [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] segundos"
-msgstr ""
+msgstr "a continuación en [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] segundos"
 
 msgctxt "#30037"
 msgid "siguiente episodio in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr ""
+msgstr "siguiente episodio en [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] segundos"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30038"
@@ -1522,22 +1522,22 @@ msgstr "Restaurar a los valores predeterminados"
 #: /1080i/Includes_Info.xml
 msgctxt "#30041"
 msgid "TRAKT"
-msgstr ""
+msgstr "TRAKT"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30042"
 msgid "Recommendations"
-msgstr "recomendado"
+msgstr "Recomendaciones"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30043"
 msgid "Posters"
-msgstr ""
+msgstr "Pósters"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30044"
 msgid "Debugging"
-msgstr ""
+msgstr "Depuración"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30045"
@@ -1552,7 +1552,7 @@ msgstr "Estilo de menú"
 #: /1080i/SkinSettings.xml
 msgctxt "#30047"
 msgid "Corner icon"
-msgstr ""
+msgstr "Icono de esquina"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30048"
@@ -1562,12 +1562,12 @@ msgstr "Movimiento del widget"
 #: /1080i/SkinSettings.xml
 msgctxt "#30049"
 msgid "Auto-scroll single widgets"
-msgstr "desplazamiento automático de widgets individuales"
+msgstr "Desplazamiento automático de widgets individuales"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30050"
 msgid "Other"
-msgstr "otro"
+msgstr "Otro"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30051"
@@ -1597,12 +1597,12 @@ msgstr "Iconos"
 #: /1080i/Includes_Labels.xml
 msgctxt "#30056"
 msgid "Auto-width Text"
-msgstr ""
+msgstr "Texto de ancho automático"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30057"
 msgid "Fixed-width Text"
-msgstr ""
+msgstr "Texto de ancho fijo"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30058"
@@ -1612,7 +1612,7 @@ msgstr "Fijo"
 #: /1080i/Includes_Labels.xml
 msgctxt "#30059"
 msgid "Default"
-msgstr ""
+msgstr "Predeterminado"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30060"
@@ -1622,7 +1622,7 @@ msgstr "Buscar"
 #: /1080i/Includes_Labels.xml
 msgctxt "#30061"
 msgid "Basic"
-msgstr "Basico"
+msgstr "Básico"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#30062"
@@ -1652,37 +1652,37 @@ msgstr "Elegir entre tamaños de borde de selección"
 #: /1080i/SkinSettings.xml
 msgctxt "#30067"
 msgid "Bold"
-msgstr "grueso"
+msgstr "Grueso"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30068"
 msgid "Thin"
-msgstr "delgado"
+msgstr "Delgado"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30070"
 msgid "Year"
-msgstr ""
+msgstr "Año"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30071"
 msgid "Genre"
-msgstr ""
+msgstr "Género"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#30072"
 msgid "Crew"
-msgstr ""
+msgstr "Equipo"
 
 #: /1080i/Custom_1151_Wizard.xml
 msgctxt "#30073"
 msgid "Enable ratings for movies/tv shows"
-msgstr ""
+msgstr "Habilitar valoraciones para películas/series"
 
 #: /1080i/Custom_1151_Wizard.xml
 msgctxt "#30074"
 msgid "Enable blur (may impact on performance)"
-msgstr ""
+msgstr "Habilitar desenfoque (puede afectar rendimiento)"
 
 #: /1080i/Custom_1151_Wizard.xml
 msgctxt "#30075"
@@ -1707,12 +1707,12 @@ msgstr "Terminado de iniciar la piel"
 #: /1080i/Includes_Labels.xml
 msgctxt "#30079"
 msgid "Modern | Multiple widgets"
-msgstr "estilo Modern | Multiples widgets"
+msgstr "Estilo Modern | Multiples widgets"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30080"
 msgid "Modern (dark) | Multiple widgets"
-msgstr "estilo Modern (Oscuro) | Multiples widget"
+msgstr "Estilo Modern (Oscuro) | Multiples widgets"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#30081"
@@ -1747,37 +1747,37 @@ msgstr "Color del Degradado"
 #: /1080i/Custom_1117_ColorPicker.xml
 msgctxt "#30087"
 msgid "Creator"
-msgstr ""
+msgstr "Creador"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30088"
 msgid "Watched indicators"
-msgstr ""
+msgstr "Indicadores de visto"
 
 #: /1080i/Custom_1121_EnableIndicators.xml
 msgctxt "#30089"
 msgid "Watched progress colour"
-msgstr ""
+msgstr "Color de progreso de visto"
 
 #: /1080i/Custom_1121_EnableIndicators.xml
 msgctxt "#30090"
 msgid "Hide all indicators"
-msgstr ""
+msgstr "Ocultar todos los indicadores"
 
 #: /1080i/Custom_1121_EnableIndicators.xml
 msgctxt "#30091"
 msgid "Classic corner style indicators"
-msgstr ""
+msgstr "Indicadores estilo esquina clásico"
 
 #: /shortcuts/Custom_1121_EnableIndicators.xml
 msgctxt "#30092"
 msgid "In-progress"
-msgstr ""
+msgstr "En progreso"
 
 #: /1080i/Custom_1117_ColorPicker.xml
 msgctxt "#30093"
 msgid "Overlay"
-msgstr ""
+msgstr "Superposición"
 
 #: /1080i/Custom_1117_ColorPicker.xml
 msgctxt "#30094"
@@ -1812,12 +1812,12 @@ msgstr "Deshabilitar Logo de skin en el inicio"
 #: /1080i/SkinSettings.xml
 msgctxt "#30101"
 msgid "Flix View | Multiple widgets"
-msgstr "Flix View | Multiples widgets"
+msgstr "Vista Flix | Multiples widgets"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#30102"
 msgid "Trailer"
-msgstr ""
+msgstr "Tráiler"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#30103"
@@ -1837,7 +1837,7 @@ msgstr "Cambiar Perfil"
 #: /1080i/Includes_Object.xml
 msgctxt "#30106"
 msgid "Match"
-msgstr ""
+msgstr "de Interés"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30107"
@@ -1857,432 +1857,432 @@ msgstr "Habilitar zoom en las caratulas de inicio"
 #: /1080i/SkinSettings.xml
 msgctxt "#30111"
 msgid "Set delay to playing Trailers in Flix View"
-msgstr ""
+msgstr "Fijar retraso para reproducir tráilers en vista Flix"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30112"
 msgid "4 seconds"
-msgstr ""
+msgstr "4 segundos"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30113"
 msgid "7 seconds"
-msgstr ""
+msgstr "7 segundos"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30114"
 msgid "Don't blur Home screen"
-msgstr ""
+msgstr "No desenfocar pantalla de inicio"
 
 #: /1080i/Includes_View_54_AEL.xml
 msgctxt "#31440"
 msgid "ROM Info Wall Trailer"
-msgstr ""
+msgstr "Tráiler en muro de información ROM"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31441"
 msgid "Disable channel label in PVR Guide"
-msgstr ""
+msgstr "Deshabilitar etiqueta de canal en guía PVR"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31442"
 msgid "Show duration instead of rating in list view"
-msgstr ""
+msgstr "Mostrar duración en lugar de valoración en lista"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31443"
 msgid "Genre"
-msgstr ""
+msgstr "Género"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31444"
 msgid "Director"
-msgstr ""
+msgstr "Director"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31445"
 msgid "Writer"
-msgstr ""
+msgstr "Guionista"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31446"
 msgid "Tagline"
-msgstr ""
+msgstr "Lema"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31447"
 msgid "Premiered"
-msgstr ""
+msgstr "Estrenada"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31448"
 msgid "Fanart fallback image"
-msgstr ""
+msgstr "Imagen de respaldo Fanart"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31449"
 msgid "Favourites browser"
-msgstr ""
+msgstr "Navegador de favoritos"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31450"
 msgid "Allow to scroll seekbar"
-msgstr ""
+msgstr "Permitir desplazar barra de búsqueda"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31451"
 msgid "Hide forward/rewind button"
-msgstr ""
+msgstr "Ocultar botón de avance/retroceso"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31452"
 msgid "Hide chapters button"
-msgstr ""
+msgstr "Ocultar botón de capítulos"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31453"
 msgid "Hide settings button"
-msgstr ""
+msgstr "Ocultar botón de ajustes"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31454"
 msgid "Hide player process info button"
-msgstr ""
+msgstr "Ocultar botón de información de proceso"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31456"
 msgid "Show time remaining instead of end time"
-msgstr ""
+msgstr "Mostrar tiempo restante en lugar de hora final"
 
 #: /1080i/Includes_OSD.xml
 msgctxt "#31457"
 msgid "Remaining:"
-msgstr ""
+msgstr "Restante:"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31458"
 msgid "Hide channels icon in pvr guide"
-msgstr ""
+msgstr "Ocultar iconos de canales en guía PVR"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31459"
 msgid "Selection box: invert text color"
-msgstr ""
+msgstr "Cuadro de selección: invertir color texto"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31460"
 msgid "Debug: show arts path"
-msgstr ""
+msgstr "Depuración: mostrar ruta de arte"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31461"
 msgid "Alpha value for some dialogs"
-msgstr ""
+msgstr "Valor Alfa para algunos diálogos"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31463"
 msgid "Selection box: enable transparency"
-msgstr ""
+msgstr "Cuadro de selección: habilitar transparencia"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31464"
 msgid "Select a transparency value"
-msgstr ""
+msgstr "Seleccionar valor de transparencia"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31465"
 msgid "Series Premiere"
-msgstr ""
+msgstr "Estreno de serie"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31466"
 msgid "Season Premiere"
-msgstr ""
+msgstr "Estreno de temporada"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31467"
 msgid "Mid-Season Premiere"
-msgstr ""
+msgstr "Estreno mitad de temporada"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31468"
 msgid "Series Finale"
-msgstr ""
+msgstr "Final de serie"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31469"
 msgid "Season Finale"
-msgstr ""
+msgstr "Final de temporada"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31470"
 msgid "Mid-Season Finale"
-msgstr ""
+msgstr "Final mitad de temporada"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31471"
 msgid "Premiere and finale indicators for episodes"
-msgstr ""
+msgstr "Indicadores de estreno y final para episodios"
 
 #: /1080i/Includes_Object.xml
 msgctxt "#31472"
 msgid "Episode: "
-msgstr ""
+msgstr "Episodio: "
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31473"
 msgid "Hide genre in info line in some views"
-msgstr ""
+msgstr "Ocultar género en línea de info en algunas vistas"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31474"
 msgid "Hide play/pause button"
-msgstr ""
+msgstr "Ocultar botón reproducir/pausa"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31475"
 msgid "Hide stop button"
-msgstr ""
+msgstr "Ocultar botón parar"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31476"
 msgid "Hide MPAA classification"
-msgstr ""
+msgstr "Ocultar clasificación MPAA"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31477"
 msgid "Show date under clock"
-msgstr ""
+msgstr "Mostrar fecha bajo el reloj"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31478"
 msgid "Hide match info in widgets"
-msgstr ""
+msgstr "Ocultar info 'de Interés' en widgets"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31479"
 msgid "Hide bookmarks button"
-msgstr ""
+msgstr "Ocultar botón de marcadores"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31480"
 msgid "Lists"
-msgstr ""
+msgstr "Listas"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31481"
 msgid "Hide menu when focus is on widgets"
-msgstr ""
+msgstr "Ocultar menú al enfocar widgets"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31482"
 msgid "Configure viewtypes"
-msgstr ""
+msgstr "Configurar tipos de vista"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31483"
 msgid "Show episodes count"
-msgstr ""
+msgstr "Mostrar recuento de episodios"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31484"
 msgid "Indicators"
-msgstr ""
+msgstr "Indicadores"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31485"
 msgid "Title label in extended info dialog as"
-msgstr ""
+msgstr "Etiqueta de título en info extendida como"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31486"
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31487"
 msgid "Clearlogo"
-msgstr ""
+msgstr "Clearlogo"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31488"
 msgid "Cancelled"
-msgstr ""
+msgstr "Cancelada"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31489"
 msgid "Ended"
-msgstr ""
+msgstr "Terminada"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31490"
 msgid "Released"
-msgstr ""
+msgstr "Lanzada"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31491"
 msgid "In-Production"
-msgstr ""
+msgstr "En producción"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31492"
 msgid "Planned"
-msgstr ""
+msgstr "Planeada"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31493"
 msgid "Premiering"
-msgstr ""
+msgstr "Estrenando"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31494"
 msgid "Returning"
-msgstr ""
+msgstr "Regresando"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31495"
 msgid "Airing"
-msgstr ""
+msgstr "Emitiendo"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31496"
 msgid "Last aired"
-msgstr ""
+msgstr "Última emisión"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31497"
 msgid "Hide CD Spin"
-msgstr ""
+msgstr "Ocultar giro de CD"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31498"
 msgid "Show codecs as text"
-msgstr ""
+msgstr "Mostrar códecs como texto"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31499"
 msgid "Show codecs as text in OSD"
-msgstr ""
+msgstr "Mostrar códecs como texto en OSD"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31500"
 msgid "Hide CD Spin in VideoOSD"
-msgstr ""
+msgstr "Ocultar giro de CD en OSD de vídeo"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31501"
 msgid "Use TMDBHelper to crop clearlogo"
-msgstr ""
+msgstr "Usar TMDBHelper para recortar Clearlogo"
 
 msgctxt "#31502"
 msgid "Playback Speed"
-msgstr ""
+msgstr "Velocidad de reproducción"
 
 msgctxt "#31503"
 msgid "Codecs"
-msgstr ""
+msgstr "Códecs"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31504"
 msgid "Disable cast dialog in VideoOSD"
-msgstr ""
+msgstr "Deshabilitar diálogo de reparto en OSD de vídeo"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31505"
 msgid "Disable playlist/episodes dialog in VideoOSD"
-msgstr ""
+msgstr "Deshabilitar lista/episodios en OSD de vídeo"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31506"
 msgid "Show time remaining instead of duration"
-msgstr ""
+msgstr "Mostrar tiempo restante en lugar de duración"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31507"
 msgid "Hide info panel"
-msgstr ""
+msgstr "Ocultar panel de información"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31508"
 msgid "Flix2 Views: background blur"
-msgstr ""
+msgstr "Vistas Flix2: desenfoque de fondo"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31509"
 msgid "Hide header"
-msgstr ""
+msgstr "Ocultar encabezado"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31510"
 msgid "Clock and weather in home window"
-msgstr ""
+msgstr "Reloj y tiempo en ventana de inicio"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31511"
 msgid "Hide chapters mark"
-msgstr ""
+msgstr "Ocultar marcas de capítulos"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31512"
 msgid "Blur (Quality)"
-msgstr ""
+msgstr "Desenfoque (Calidad)"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31513"
 msgid "Blur (Performance)"
-msgstr ""
+msgstr "Desenfoque (Rendimiento)"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31514"
 msgid "Simple"
-msgstr ""
+msgstr "Simple"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31515"
 msgid "Notification style"
-msgstr ""
+msgstr "Estilo de notificación"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31516"
 msgid "Extended"
-msgstr ""
+msgstr "Extendido"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31517"
 msgid "Monochrome"
-msgstr ""
+msgstr "Monocromo"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31518"
 msgid "Colorful"
-msgstr ""
+msgstr "Colorido"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31519"
 msgid "Mix"
-msgstr ""
+msgstr "Mezcla"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31520"
 msgid "White"
-msgstr ""
+msgstr "Blanco"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31521"
 msgid "Highlight"
-msgstr ""
+msgstr "Resaltado"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31522"
 msgid "Startup image"
-msgstr ""
+msgstr "Imagen de inicio"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31523"
 msgid "Autoscroll"
-msgstr ""
+msgstr "Desplazamiento automático"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31524"
 msgid "Show \"more...\" folder in widgets"
-msgstr ""
+msgstr "Mostrar carpeta \"más...\" en widgets"
