@@ -2302,4 +2302,4 @@ msgstr "自动滚动"
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31524"
 msgid "Show \"more...\" folder in widgets"
-msgstr "在小组件中显示「更多...」文件夹"
+msgstr "在小组件中显示“更多...”文件夹"
