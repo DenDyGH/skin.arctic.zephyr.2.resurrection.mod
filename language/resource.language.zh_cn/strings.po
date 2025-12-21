@@ -159,7 +159,7 @@ msgstr "自定义电源菜单"
 #: /1080i/SkinSettings.xml
 msgctxt "#31028"
 msgid "Reset skin settings to defaults (WARNING: This will reset your home menu to skin defaults)"
-msgstr "重置默认皮肤设置（警告：这将会重置主页菜单至皮肤默认设置）"
+msgstr "重置默认皮肤设置（警告：这将会重置主界面菜单至皮肤默认设置）"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31029"
@@ -547,7 +547,7 @@ msgstr "轻量级加载器"
 
 msgctxt "#31109"
 msgid "Customise home menu"
-msgstr "自定义主页菜单"
+msgstr "自定义主界面菜单"
 
 msgctxt "#31110"
 msgid "Background"
@@ -738,11 +738,11 @@ msgstr "版块名称"
 #: /1080i/SkinSettings.xml
 msgctxt "#31149"
 msgid "Clock and weather in all windows (except home)"
-msgstr "时钟和天气（主页除外）"
+msgstr "时钟和天气（主界面除外）"
 
 msgctxt "#31150"
 msgid "Home background image"
-msgstr "主页背景图"
+msgstr "主界面背景图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31151"
@@ -1556,7 +1556,7 @@ msgstr "调试"
 #: /1080i/SkinSettings.xml
 msgctxt "#30045"
 msgid "Home layout"
-msgstr "主页布局"
+msgstr "主界面布局"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30046"
@@ -2232,7 +2232,7 @@ msgstr "隐藏页眉"
 #: /1080i/SkinSettings.xml
 msgctxt "#31510"
 msgid "Clock and weather in home window"
-msgstr "主页窗口中的时钟和天气"
+msgstr "主界面窗口中的时钟和天气"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31511"
