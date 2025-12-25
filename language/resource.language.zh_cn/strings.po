@@ -877,7 +877,7 @@ msgstr "确定要删除设置快捷方式吗？[CR]在删除此快捷方式之�
 #: /1080i/DialogPVRChannelsOSD.xml
 msgctxt "#31178"
 msgid "Up Next"
-msgstr "下一个"
+msgstr "下个播放"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31179"
@@ -1509,7 +1509,7 @@ msgstr "[COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR]秒后继续观
 
 msgctxt "#30036"
 msgid "Up next in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr "[COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR]秒后播放下一项"
+msgstr "[COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR]秒后播放下个"
 
 msgctxt "#30037"
 msgid "Next episode in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
