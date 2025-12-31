@@ -1885,7 +1885,7 @@ msgstr "7 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30114"
-msgid "Don't blur 主界面 screen"
+msgid "Don't blur Home screen"
 msgstr "不模糊主屏幕"
 
 #: /1080i/Includes_View_54_AEL.xml
