@@ -384,9 +384,9 @@
                             <left>40</left>
                             <width>975</width>
                             <aligny>top</aligny>
-                            <textcolor>ffededed</textcolor>
+                            <textcolor>$VAR[ColorHighlight]</textcolor>
                             <selectedcolor>ffededed</selectedcolor>
-                            <label>$INFO[VideoPlayer.Genre]</label>
+                            <label>$INFO[VideoPlayer.Genre,[COLOR=main_fg_100],[/COLOR]]$INFO[VideoPlayer.Year,  |  [COLOR=main_fg_100],[/COLOR]]</label>
                             <visible>String.IsEmpty(VideoPlayer.EpisodeName)</visible>
                         </control>
                         <control type="label">

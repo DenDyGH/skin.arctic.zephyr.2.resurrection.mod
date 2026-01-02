@@ -179,9 +179,8 @@
                                 <font>font_tiny</font>
                                 <top>140</top>
                                 <aligny>top</aligny>
-                                <textcolor>panel_fg_100</textcolor>
-                                <selectedcolor>panel_fg_100</selectedcolor>
-                                <label>$INFO[ListItem.Genre]</label>
+                                <textcolor>$VAR[ColorHighlight]</textcolor>
+                                <label>$INFO[ListItem.Genre,[COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]</label>
                             </control>
                             <control type="label">
                                 <font>font_tiny</font>
