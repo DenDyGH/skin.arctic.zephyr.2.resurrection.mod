@@ -1550,7 +1550,17 @@
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="  |  " />
                     <param name="textcolor" value="$VAR[ColorHighlight]" />
-                    <param name="visible" value="!String.IsEmpty(ListItem.Genre) + !String.IsEmpty(ListItem.Episode)" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Genre) + !String.IsEmpty(ListItem.Year)" />
+                </include>
+                <include content="Object_Info_Line_Label">
+                    <param name="label" value="$INFO[ListItem.Year]" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Year)" />
+                </include>
+                <include content="Object_Info_Line_Label">
+                    <param name="label" value="  |  " />
+                    <param name="textcolor" value="$VAR[ColorHighlight]" />
+                    <param name="visible" value="[!String.IsEmpty(ListItem.Genre) | [String.IsEmpty(ListItem.Genre) + !String.IsEmpty(ListItem.Year)]] + !String.IsEmpty(ListItem.Episode)" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$LOCALIZE[31472]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]" />
@@ -2161,12 +2171,20 @@
                 </control>
             </control>
             <control type="label">
-                <label>$INFO[ListItem.ChannelName,[COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]Genre,  | [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]StartTime,  | [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]EndTime,[COLOR=main_fg_100] - ,[/COLOR]]</label>
+                <label>$INFO[ListItem.ChannelName,[COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]Genre,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]StartTime,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]EndTime,[COLOR=main_fg_100] - ,[/COLOR]]</label>
                 <height>60</height>
                 <aligny>top</aligny>
                 <textcolor>$VAR[ColorHighlight]</textcolor>
                 <font>font_small</font>
-                <visible>!String.IsEmpty($PARAM[listitem]Title) | !String.IsEmpty($PARAM[listitem]ChannelNumber)</visible>
+                <visible>[!String.IsEmpty($PARAM[listitem]Title) | !String.IsEmpty($PARAM[listitem]ChannelNumber)] + !Control.HasFocus(9000)</visible>
+            </control>
+            <control type="label">
+                <label>$INFO[ListItem.ChannelName,[COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]Genre,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]StartTime,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]EndTime,[COLOR=main_fg_100] - ,[/COLOR]]</label>
+                <height>60</height>
+                <aligny>top</aligny>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
+                <font>font_small</font>
+                <visible>[!String.IsEmpty($PARAM[listitem]Title) | !String.IsEmpty($PARAM[listitem]ChannelNumber)] + Control.HasFocus(9000)</visible>
             </control>
             <control type="textbox">
                 <label fallback="19055">$INFO[$PARAM[listitem]Plot]</label>
