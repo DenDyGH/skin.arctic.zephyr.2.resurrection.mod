@@ -523,21 +523,13 @@
 
     <variable name="Label_SubTitle">
         <value condition="$EXP[InGameMode]">$INFO[ListItem.Property(platform),[COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Studio,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(nplayers),  |  [COLOR=main_fg_100], $LOCALIZE[31308][/COLOR]]$INFO[ListItem.Property(ESRB),  |  [COLOR=main_fg_100],[/COLOR]]</value>
-
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Genre)) + Container.Content(artists)">$INFO[Window(Home).Property(TMDbHelper.ListItem.AlbumCount),[COLOR=main_fg_100], $LOCALIZE[132][/COLOR]  |  ]$INFO[ListItem.Property(Artist_Genre),[COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(Artist_YearsActive),  |  [COLOR=main_fg_100],[/COLOR]]</value>
-        
         <value condition="!String.IsEmpty(ListItem.Artist) + [Container.Content(musicvideos) | Container.Content(albums) | Container.Content(songs) | [Window.IsVisible(MyPlaylist.xml) + String.IsEqual(ListItem.DBType,song)]]">$INFO[ListItem.Artist,[COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]</value>
-
         <value condition="[Window.IsVisible(DialogAddonInfo.xml) | Container.Content(addons)] + !String.IsEmpty(ListItem.AddonVersion)">$INFO[ListItem.AddonType,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.AddonVersion,[COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.AddonCreator,  |  [COLOR=main_fg_100],[/COLOR]]</value>
-
         <value condition="Container.Content(images) + !String.IsEmpty(ListItem.Size)">$INFO[ListItem.PictureDate ,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.PictureResolution ,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.Size,[COLOR=main_fg_100],[/COLOR]]</value>
-
         <value condition="Container.Content(seasons) + !String.IsEmpty(ListItem.Episode)">$INFO[ListItem.Property(WatchedEpisodes),[COLOR=main_fg_100]$LOCALIZE[16102] , $LOCALIZE[20163][/COLOR] ]$INFO[ListItem.Episode,[COLOR=main_fg_100], $LOCALIZE[20453][/COLOR]]</value>
-
         <value condition="Container.Content(episodes)">$INFO[ListItem.Studio,[COLOR=main_fg_100],[/COLOR]  ]$INFO[ListItem.Premiered,[COLOR=main_fg_100],[/COLOR]]</value>
-
-        <value condition="[Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRGuide.xml)]">$VAR[Label_SeasonEpisodeLabel_NoColon,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.EpisodeName,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.Genre,[COLOR=main_fg_100],[/COLOR]]</value>
-
+        <value condition="[Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRGuide.xml)]">$VAR[Label_SeasonEpisodeLabel_NoColon,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.EpisodeName,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.Genre,[COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]</value>
         <value condition="!String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre,[COLOR=main_fg_100],[/COLOR]]</value>
     </variable>
 
