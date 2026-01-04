@@ -29,7 +29,7 @@ msgstr "控件"
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31002"
 msgid "Hub node"
-msgstr "聚合中心节点"
+msgstr "分类中心节点"
 
 #: Weather
 msgctxt "#31003"
@@ -64,7 +64,7 @@ msgstr "安装天气背景图"
 #: /1080i/SkinSettings.xml
 msgctxt "#31009"
 msgid "Replace submenu with hub"
-msgstr "用聚合中心菜单替换子菜单"
+msgstr "用分类中心菜单替换子菜单"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31010"
@@ -209,7 +209,7 @@ msgstr "下载字幕"
 #: /1080i/Includes_Labels.xml
 msgctxt "#31038"
 msgid "Submenu hub widget"
-msgstr "子菜单聚合中心小组件"
+msgstr "子菜单分类中心小组件"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31039"
@@ -1451,7 +1451,7 @@ msgstr "加载中"
 #: /shortcuts/overrides.xml
 msgctxt "#31429"
 msgid "Submenu Hub"
-msgstr "子菜单聚合中心"
+msgstr "子菜单分类中心"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31430"
