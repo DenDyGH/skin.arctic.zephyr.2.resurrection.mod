@@ -1661,7 +1661,7 @@ msgstr "5 秒"
 #: /1080i/SkinSettings.xml
 msgctxt "#30066"
 msgid "Choose between focus border sizes"
-msgstr "选择焦点边框尺寸"
+msgstr "选择聚焦边框尺寸"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30067"
