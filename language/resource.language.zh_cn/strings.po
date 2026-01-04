@@ -543,7 +543,7 @@ msgstr "项目限制"
 #: /1080i/SkinSettings.xml
 msgctxt "#31108"
 msgid "Minimal busy loader"
-msgstr "轻量级加载器"
+msgstr "简约加载指示器"
 
 msgctxt "#31109"
 msgid "Customise home menu"
