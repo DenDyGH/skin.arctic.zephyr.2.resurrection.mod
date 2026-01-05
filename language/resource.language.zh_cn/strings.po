@@ -603,32 +603,32 @@ msgstr "背景图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31122"
-msgid "12 秒之前"
+msgid "12 seconds"
 msgstr "12秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31123"
-msgid "15 秒之前"
+msgid "15 seconds"
 msgstr "15 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31124"
-msgid "20 秒之前"
+msgid "20 seconds"
 msgstr "20 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31125"
-msgid "30 秒之前"
+msgid "30 seconds"
 msgstr "30 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31126"
-msgid "60 秒之前"
+msgid "60 seconds"
 msgstr "60 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31127"
-msgid "10 分钟之前"
+msgid "10 minutes"
 msgstr "10 分钟"
 
 #: /1080i/SkinSettings.xml
