@@ -29,7 +29,7 @@ msgstr "控件"
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31002"
 msgid "Hub node"
-msgstr "聚合中心节点"
+msgstr "节点"
 
 #: Weather
 msgctxt "#31003"
@@ -64,7 +64,7 @@ msgstr "安装天气背景图"
 #: /1080i/SkinSettings.xml
 msgctxt "#31009"
 msgid "Replace submenu with hub"
-msgstr "用聚合中心菜单替换子菜单"
+msgstr "用菜单替换子菜单"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31010"
@@ -209,7 +209,7 @@ msgstr "下载字幕"
 #: /1080i/Includes_Labels.xml
 msgctxt "#31038"
 msgid "Submenu hub widget"
-msgstr "子菜单聚合中心小组件"
+msgstr "子菜单分类中心小组件"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31039"
@@ -543,7 +543,7 @@ msgstr "项目限制"
 #: /1080i/SkinSettings.xml
 msgctxt "#31108"
 msgid "Minimal busy loader"
-msgstr "轻量级加载器"
+msgstr "简约加载指示器"
 
 msgctxt "#31109"
 msgid "Customise home menu"
@@ -603,32 +603,32 @@ msgstr "背景图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31122"
-msgid "12 秒之前"
+msgid "12 seconds"
 msgstr "12秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31123"
-msgid "15 秒之前"
+msgid "15 seconds"
 msgstr "15 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31124"
-msgid "20 秒之前"
+msgid "20 seconds"
 msgstr "20 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31125"
-msgid "30 秒之前"
+msgid "30 seconds"
 msgstr "30 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31126"
-msgid "60 秒之前"
+msgid "60 seconds"
 msgstr "60 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31127"
-msgid "10 分钟之前"
+msgid "10 minutes"
 msgstr "10 分钟"
 
 #: /1080i/SkinSettings.xml
@@ -877,7 +877,7 @@ msgstr "确定要删除设置快捷方式吗？[CR]在删除此快捷方式之�
 #: /1080i/DialogPVRChannelsOSD.xml
 msgctxt "#31178"
 msgid "Up Next"
-msgstr "下一个"
+msgstr "下个播放"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31179"
@@ -1451,7 +1451,7 @@ msgstr "加载中"
 #: /shortcuts/overrides.xml
 msgctxt "#31429"
 msgid "Submenu Hub"
-msgstr "子菜单聚合中心"
+msgstr "子菜单分类中心"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31430"
@@ -1509,7 +1509,7 @@ msgstr "[COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR]秒后继续观
 
 msgctxt "#30036"
 msgid "Up next in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr "[COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR]秒后播放下一项"
+msgstr "[COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR]秒后播放下个"
 
 msgctxt "#30037"
 msgid "Next episode in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
@@ -1661,7 +1661,7 @@ msgstr "5 秒"
 #: /1080i/SkinSettings.xml
 msgctxt "#30066"
 msgid "Choose between focus border sizes"
-msgstr "选择焦点边框尺寸"
+msgstr "选择聚焦边框尺寸"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30067"
