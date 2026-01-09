@@ -64,7 +64,7 @@ msgstr "安装天气背景图"
 #: /1080i/SkinSettings.xml
 msgctxt "#31009"
 msgid "Replace submenu with hub"
-msgstr "用分类中心菜单替换子菜单"
+msgstr "用分类中心替换子菜单"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31010"
@@ -543,7 +543,7 @@ msgstr "项目限制"
 #: /1080i/SkinSettings.xml
 msgctxt "#31108"
 msgid "Minimal busy loader"
-msgstr "轻量级加载器"
+msgstr "简约加载指示器"
 
 msgctxt "#31109"
 msgid "Customise home menu"
@@ -603,32 +603,32 @@ msgstr "背景图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31122"
-msgid "12 秒之前"
+msgid "12 seconds"
 msgstr "12秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31123"
-msgid "15 秒之前"
+msgid "15 seconds"
 msgstr "15 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31124"
-msgid "20 秒之前"
+msgid "20 seconds"
 msgstr "20 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31125"
-msgid "30 秒之前"
+msgid "30 seconds"
 msgstr "30 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31126"
-msgid "60 秒之前"
+msgid "60 seconds"
 msgstr "60 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31127"
-msgid "10 分钟之前"
+msgid "10 minutes"
 msgstr "10 分钟"
 
 #: /1080i/SkinSettings.xml
@@ -1661,7 +1661,7 @@ msgstr "5 秒"
 #: /1080i/SkinSettings.xml
 msgctxt "#30066"
 msgid "Choose between focus border sizes"
-msgstr "选择焦点边框尺寸"
+msgstr "选择聚焦边框尺寸"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#30067"
