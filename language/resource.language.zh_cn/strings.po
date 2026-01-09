@@ -29,7 +29,7 @@ msgstr "控件"
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31002"
 msgid "Hub node"
-msgstr "节点"
+msgstr "分类中心节点"
 
 #: Weather
 msgctxt "#31003"
@@ -64,7 +64,7 @@ msgstr "安装天气背景图"
 #: /1080i/SkinSettings.xml
 msgctxt "#31009"
 msgid "Replace submenu with hub"
-msgstr "用菜单替换子菜单"
+msgstr "用分类中心替换子菜单"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31010"
