@@ -777,7 +777,7 @@ msgstr "PVR 指南信息"
 #: /1080i/Custom_1120_EnableSearchLists.xml
 msgctxt "#31157"
 msgid "Artist's Albums"
-msgstr "艺人专辑"
+msgstr "艺术家专辑"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31158"
@@ -827,7 +827,7 @@ msgstr "选择搜索列表"
 #: /1080i/Custom_1120_EnableSearchLists.xml
 msgctxt "#31167"
 msgid "Music video artists"
-msgstr "音乐视频艺人"
+msgstr "音乐视频艺术家"
 
 msgctxt "#31168"
 msgid "Startup video or playlist"
