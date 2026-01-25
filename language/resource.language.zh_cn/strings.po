@@ -777,7 +777,7 @@ msgstr "PVR 指南信息"
 #: /1080i/Custom_1120_EnableSearchLists.xml
 msgctxt "#31157"
 msgid "Artist's Albums"
-msgstr "艺人专辑"
+msgstr "艺术家专辑"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31158"
@@ -827,7 +827,7 @@ msgstr "选择搜索列表"
 #: /1080i/Custom_1120_EnableSearchLists.xml
 msgctxt "#31167"
 msgid "Music video artists"
-msgstr "音乐视频艺人"
+msgstr "音乐视频艺术家"
 
 msgctxt "#31168"
 msgid "Startup video or playlist"
@@ -950,7 +950,7 @@ msgstr "选择艺术作品（Kodi）"
 #: /shortcuts/overrides.xml
 msgctxt "#31194"
 msgid "Recently Played TV Shows"
-msgstr "最近播放的电视节目"
+msgstr "最近播放的电视剧"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31195"
@@ -960,7 +960,7 @@ msgstr "选择艺术作品（Artwork Beef）"
 #: /shortcuts/overrides.xml
 msgctxt "#31196"
 msgid "In Progress TV Shows"
-msgstr "正在播出的电视节目"
+msgstr "正在播出的电视剧"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31197"
@@ -1038,7 +1038,7 @@ msgstr "正在播放的剧集"
 #: /shortcuts/overrides.xml
 msgctxt "#31222"
 msgid "Top Rated TV Shows"
-msgstr "最受好评的电视节目"
+msgstr "最受好评的电视剧"
 
 msgctxt "#31225"
 msgid "Top Rated Movies"
@@ -1057,7 +1057,7 @@ msgstr "爱情片"
 #: /shortcuts/overrides.xml
 msgctxt "#31233"
 msgid "Random TV Shows"
-msgstr "随机电视节目"
+msgstr "随机电视剧"
 
 msgctxt "#31236"
 msgid "Now playing..."
@@ -1196,7 +1196,7 @@ msgstr "音乐节点"
 #: /shortcuts/overrides.xml
 msgctxt "#31301"
 msgid "TV Shows"
-msgstr "电视节目"
+msgstr "电视剧"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31302"
@@ -1311,7 +1311,7 @@ msgstr "大海报"
 #: /shortcuts/overrides.xml
 msgctxt "#31367"
 msgid "Recently Added TV Shows"
-msgstr "最近添加的电视节目"
+msgstr "最近添加的电视剧"
 
 #: /1080i/EventLog.xml
 msgctxt "#31374"
@@ -1691,7 +1691,7 @@ msgstr "剧组"
 #: /1080i/Custom_1151_Wizard.xml
 msgctxt "#30073"
 msgid "Enable ratings for movies/tv shows"
-msgstr "启用电影/电视节目评分"
+msgstr "启用电影/电视剧评分"
 
 #: /1080i/Custom_1151_Wizard.xml
 msgctxt "#30074"
