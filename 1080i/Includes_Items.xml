@@ -1459,7 +1459,7 @@
                 <onclick>SendClick(6)</onclick>
             </item>
             <item>
-                <label>$LOCALIZE[30082]</label>
+                <label>$LOCALIZE[31566]</label>
                 <onclick>UpdateLibrary(video)</onclick>
                 <onclick>Dialog.Close(all,force)</onclick>
             </item>
@@ -1535,7 +1535,7 @@
                 <label>22006</label>
                 <onclick>subtitledelay</onclick>
             </item>
-            
+
         </content>
     </include>
 
@@ -1814,7 +1814,7 @@
                 <onclick>SendClick(2)</onclick>
                 <visible>Control.IsEnabled(2)</visible>
             </item>
-            
+
             <!-- Settings -->
             <item>
                 <label>$INFO[Control.GetLabel(9004)]</label>
@@ -1993,7 +1993,7 @@
                 <onclick>SendClick(14)</onclick>
                 <visible>Control.IsEnabled(14)</visible>
             </item>
-            
+
             <!-- Hide Foreign -->
             <item>
                 <label>$INFO[Control.GetLabel(7)]</label>
@@ -2037,14 +2037,14 @@
                 <visible>Control.IsEnabled(9)</visible>
                 <visible>!Skin.HasSetting(KioskMode)</visible>
             </item>
-            
+
             <!-- Playlist -->
             <item>
                 <icon>special://skin/extras/icons/playlist.png</icon>
                 <label>13350</label>
                 <onclick condition="!String.IsEqual(Playlist.Length(music),0) + String.IsEqual(Playlist.Length(video),0)">ActivateWindow(musicplaylist)</onclick>
                 <onclick condition="!String.IsEqual(Playlist.Length(video),0) + String.IsEqual(Playlist.Length(music),0)">ActivateWindow(videoplaylist)</onclick>
-                <visible>!String.IsEqual(Playlist.Length(music),0) | !String.IsEqual(Playlist.Length(video),0)</visible> 
+                <visible>!String.IsEqual(Playlist.Length(music),0) | !String.IsEqual(Playlist.Length(video),0)</visible>
             </item>
             <!-- Fullscreen -->
             <item>
@@ -2143,64 +2143,64 @@
 
     <include name="Items_SettingsDialog_Layout">
         <control type="button" id="9001">
-            <label>$LOCALIZE[30101]</label>
+            <label>$LOCALIZE[31584]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(HomeMultiNetflix)</onclick>
-            <onclick>Skin.Reset(HomeMultiVertical)</onclick> 
-            <onclick>Skin.Reset(HomeMultiHorizontal)</onclick> 
-            <onclick>Skin.Reset(HomeBasic)</onclick> 
-            <onclick>Skin.SetBool(HomeMulti)</onclick> 
+            <onclick>Skin.Reset(HomeMultiVertical)</onclick>
+            <onclick>Skin.Reset(HomeMultiHorizontal)</onclick>
+            <onclick>Skin.Reset(HomeBasic)</onclick>
+            <onclick>Skin.SetBool(HomeMulti)</onclick>
             <onclick>Skin.SetBool(HomeMultiFlixView)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9002">
-            <label>$LOCALIZE[30079]</label>
+            <label>$LOCALIZE[31564]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(HomeMultiFlixView)</onclick>
-            <onclick>Skin.Reset(HomeMultiVertical)</onclick> 
-            <onclick>Skin.Reset(HomeMultiHorizontal)</onclick> 
-            <onclick>Skin.Reset(HomeBasic)</onclick> 
-            <onclick>Skin.SetBool(HomeMulti)</onclick> 
+            <onclick>Skin.Reset(HomeMultiVertical)</onclick>
+            <onclick>Skin.Reset(HomeMultiHorizontal)</onclick>
+            <onclick>Skin.Reset(HomeBasic)</onclick>
+            <onclick>Skin.SetBool(HomeMulti)</onclick>
             <onclick>Skin.SetBool(HomeMultiNetflix)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9004">
-            <label>$LOCALIZE[30051]</label>
+            <label>$LOCALIZE[31541]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(HomeMultiNetflix)</onclick>
-            <onclick>Skin.Reset(HomeMultiFlixView)</onclick> 
-            <onclick>Skin.Reset(HomeMultiHorizontal)</onclick> 
-            <onclick>Skin.Reset(HomeBasic)</onclick> 
-            <onclick>Skin.SetBool(HomeMulti)</onclick> 
+            <onclick>Skin.Reset(HomeMultiFlixView)</onclick>
+            <onclick>Skin.Reset(HomeMultiHorizontal)</onclick>
+            <onclick>Skin.Reset(HomeBasic)</onclick>
+            <onclick>Skin.SetBool(HomeMulti)</onclick>
             <onclick>Skin.SetBool(HomeMultiVertical)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9005">
-            <label>$LOCALIZE[30052]</label>
+            <label>$LOCALIZE[31542]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(HomeMultiNetflix)</onclick>
-            <onclick>Skin.Reset(HomeMultiVertical)</onclick> 
-            <onclick>Skin.Reset(HomeMultiFlixView)</onclick> 
-            <onclick>Skin.Reset(HomeBasic)</onclick> 
-            <onclick>Skin.SetBool(HomeMulti)</onclick> 
+            <onclick>Skin.Reset(HomeMultiVertical)</onclick>
+            <onclick>Skin.Reset(HomeMultiFlixView)</onclick>
+            <onclick>Skin.Reset(HomeBasic)</onclick>
+            <onclick>Skin.SetBool(HomeMulti)</onclick>
             <onclick>Skin.SetBool(HomeMultiHorizontal)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9006">
-            <label>$LOCALIZE[30061]</label>
+            <label>$LOCALIZE[31551]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(HomeMultiNetflix)</onclick>
-            <onclick>Skin.Reset(HomeMultiVertical)</onclick> 
-            <onclick>Skin.Reset(HomeMultiHorizontal)</onclick> 
-            <onclick>Skin.Reset(HomeMultiFlixView)</onclick> 
-            <onclick>Skin.Reset(HomeMulti)</onclick> 
+            <onclick>Skin.Reset(HomeMultiVertical)</onclick>
+            <onclick>Skin.Reset(HomeMultiHorizontal)</onclick>
+            <onclick>Skin.Reset(HomeMultiFlixView)</onclick>
+            <onclick>Skin.Reset(HomeMulti)</onclick>
             <onclick>Skin.SetBool(HomeBasic)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
     </include>
     <include name="Items_SettingsDialog_MenuStyle">
         <control type="button" id="9001">
-            <label>$LOCALIZE[30054]</label>
+            <label>$LOCALIZE[31544]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(VerticalIconsOnly)</onclick>
             <onclick>Skin.Reset(HomeIcons)</onclick>
@@ -2211,7 +2211,7 @@
             <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
         </control>
         <control type="button" id="9002">
-            <label>$LOCALIZE[30053]</label>
+            <label>$LOCALIZE[31543]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(VerticalIconsOnly)</onclick>
             <onclick>Skin.Reset(HomeTextAutoWidth)</onclick>
@@ -2222,7 +2222,7 @@
             <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
         </control>
         <control type="button" id="9004">
-            <label>$LOCALIZE[30081]</label>
+            <label>$LOCALIZE[31565]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(HomeIcons)</onclick>
             <onclick>Skin.Reset(HomeTextAutoWidth)</onclick>
@@ -2235,7 +2235,7 @@
     </include>
     <include name="Items_SettingsDialog_MenuStyle2">
         <control type="button" id="9001">
-            <label>$LOCALIZE[30056]</label>
+            <label>$LOCALIZE[31546]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(HomeIcons)</onclick>
             <onclick>Skin.SetBool(HomeTextAutoWidth)</onclick>
@@ -2245,7 +2245,7 @@
             <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
         </control>
         <control type="button" id="9002">
-            <label>$LOCALIZE[30057]</label>
+            <label>$LOCALIZE[31547]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(VerticalIconsOnly)</onclick>
             <onclick>Skin.Reset(HomeTextAutoWidth)</onclick>
@@ -2256,7 +2256,7 @@
             <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
         </control>
         <control type="button" id="9004">
-            <label>$LOCALIZE[30055]</label>
+            <label>$LOCALIZE[31545]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(HomeTextAutoWidth)</onclick>
             <onclick>Skin.SetBool(HomeIcons)</onclick>
@@ -2316,19 +2316,19 @@
     </include>
     <include name="Items_SettingsDialog_TrailerDelay">
         <control type="button" id="9001">
-            <label>$LOCALIZE[30039]</label>
+            <label>$LOCALIZE[31529]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(Trailer_Delay)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9002">
-            <label>$LOCALIZE[30112]</label>
+            <label>$LOCALIZE[31594]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.SetString(Trailer_Delay,00:03)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9003">
-            <label>$LOCALIZE[30113]</label>
+            <label>$LOCALIZE[31595]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.SetString(Trailer_Delay,00:06)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
@@ -2428,21 +2428,21 @@
     </include>
     <include name="Items_SettingsDialog_OSD_Timeout">
         <control type="button" id="9001">
-            <label>$LOCALIZE[30039]</label>
+            <label>$LOCALIZE[31529]</label>
             <include>Dialog_Standard_Button</include>
             <onclick>Skin.Reset(OSD_Timeout)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9002">
-            <label>$LOCALIZE[30064]</label>
+            <label>$LOCALIZE[31554]</label>
             <include>Dialog_Standard_Button</include>
-            <onclick>Skin.SetString(OSD_Timeout,$LOCALIZE[30064])</onclick>
+            <onclick>Skin.SetString(OSD_Timeout,$LOCALIZE[31554])</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9003">
-            <label>$LOCALIZE[30065]</label>
+            <label>$LOCALIZE[31555]</label>
             <include>Dialog_Standard_Button</include>
-            <onclick>Skin.SetString(OSD_Timeout,$LOCALIZE[30065])</onclick>
+            <onclick>Skin.SetString(OSD_Timeout,$LOCALIZE[31555])</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
         <control type="button" id="9004">
@@ -2557,7 +2557,7 @@
         </control>
         <control type="button" id="9013">
             <height>item_list_height</height>
-            <label>20% ($LOCALIZE[30059])</label>
+            <label>20% ($LOCALIZE[31549])</label>
             <onclick>Skin.SetString(Background_Fade,20)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
         </control>
@@ -2697,7 +2697,7 @@
         </control>
         <control type="button" id="9022">
             <height>item_list_height</height>
-            <label>0% ($LOCALIZE[30059])</label>
+            <label>0% ($LOCALIZE[31549])</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue,0)</onclick>
         </control>
@@ -2825,7 +2825,7 @@
         </control>
         <control type="button" id="9022">
             <height>item_list_height</height>
-            <label>0% ($LOCALIZE[30059])</label>
+            <label>0% ($LOCALIZE[31549])</label>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>Skin.SetString(AlphaValue_Highlight,0)</onclick>
         </control>

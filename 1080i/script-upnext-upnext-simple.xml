@@ -28,7 +28,7 @@
                     <include content="Object_IconicButton">
                         <param name="id" value="10" />
                         <param name="groupid" value="9010" />
-                        <param name="label" value="$ADDON[service.upnext 30049]" />
+                        <param name="label" value="$ADDON[service.upnext 31539]" />
                         <param name="icon" value="special://skin/extras/icons/play3.png" />
                         <param name="visible" value="Integer.IsGreater(Player.TimeRemaining,59)" />
                         <onclick>SendClick(3012)</onclick>
@@ -36,7 +36,7 @@
                     <include content="Object_IconicButton">
                         <param name="id" value="11" />
                         <param name="groupid" value="9011" />
-                        <param name="label" value="$ADDON[service.upnext 30037]" />
+                        <param name="label" value="$ADDON[service.upnext 31527]" />
                         <param name="icon" value="special://skin/extras/icons/play3.png" />
                         <param name="visible" value="!Integer.IsGreater(Player.TimeRemaining,59)" />
                         <onclick>SendClick(3012)</onclick>
