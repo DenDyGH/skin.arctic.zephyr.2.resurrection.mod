@@ -43,7 +43,7 @@
                     <control type="label">
                         <height>30</height>
                         <font>font_title_small</font>
-                        <label>$ADDON[service.upnext 31527]</label>
+                        <label>$ADDON[service.upnext 30036]</label>
                         <textcolor>panel_fg_100</textcolor>
                         <visible>!Integer.IsGreater(Player.TimeRemaining,59)</visible>
                     </control>
@@ -110,13 +110,23 @@
                         <include content="Object_IconicButton">
                             <param name="id" value="3013" />
                             <param name="groupid" value="9013" />
-                            <param name="label" value="$ADDON[service.upnext 30034]" />
+                            <param name="label" value="$INFO[Window.Property(stop_close_label)]" />
                             <param name="icon" value="special://skin/extras/icons/disabled.png" />
                             <param name="visible" value="true" />
+                            <param name="onclick" value="RunPlugin($INFO[Window.Property(action_stop)])" />
                         </include>
+                        <control type="togglebutton" id="3015">
+                            <visible>String.IsEqual(Window.Property(shuffle_enable),True)</visible>
+                            <selected>String.IsEqual(Window.Property(shuffle_on),True)</selected>
+                            <texturenofocus colordiffuse="FF212121">shuffle.png</texturenofocus>
+                            <texturefocus colordiffuse="$INFO[Window.Property(accent_colour)]">shuffle.png</texturefocus>
+                            <alttexturenofocus colordiffuse="DDFFFFFF">shuffle.png</alttexturenofocus>
+                            <alttexturefocus colordiffuse="$INFO[Window.Property(accent_colour)]">shuffle.png</alttexturefocus>
+                            <width>56</width>
+                            <height>56</height>
+                        </control>
                     </control>
                 </control>
-
             </control>
         </control>
     </controls>
