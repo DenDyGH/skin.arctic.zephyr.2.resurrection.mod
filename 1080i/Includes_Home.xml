@@ -548,7 +548,7 @@
                     <onright>3000</onright>
                     <align>left</align>
                     <font>font_tiny</font>
-                    <label>$LOCALIZE[30105]</label>
+                    <label>$LOCALIZE[31588]</label>
                     <onclick>ActivateWindow(LoginScreen.xml)</onclick>
                     <focusedcolor>$VAR[Defs_Settings_ToggleButton_Text]</focusedcolor>
                     <texturefocus />

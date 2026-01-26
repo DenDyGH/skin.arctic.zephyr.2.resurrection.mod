@@ -1,7 +1,6 @@
 # Kodi Media Center language file
-# Addon Name: Horizon
-# Addon id: skin.horizon
-# Addon Provider: jurialmunkey
+# Addon Name: Arctic: Zephyr 2 - Resurrection
+# Addon id: skin.arctic.zephyr.2.resurrection
 msgid ""
 msgstr ""
 "MIME-Version: 1.0\n"
@@ -1497,388 +1496,6 @@ msgctxt "#31439"
 msgid "Show page and item counts on list pages"
 msgstr ""
 
-msgctxt "#30035"
-msgid "Continue watching in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr ""
-
-msgctxt "#30036"
-msgid "Up next in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr ""
-
-msgctxt "#30037"
-msgid "Next episode in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30038"
-msgid "This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations."
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30039"
-msgid "Reset"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30040"
-msgid "Restore to defaults"
-msgstr ""
-
-#: /1080i/Includes_Info.xml
-msgctxt "#30041"
-msgid "TRAKT"
-msgstr ""
-
-#: /1080i/Custom_1119_EnableInfoLists.xml
-msgctxt "#30042"
-msgid "Recommendations"
-msgstr ""
-
-#: /1080i/Custom_1119_EnableInfoLists.xml
-msgctxt "#30043"
-msgid "Posters"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30044"
-msgid "Debugging"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30045"
-msgid "Home layout"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30046"
-msgid "Menu style"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30047"
-msgid "Corner icon"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30048"
-msgid "Widget movement"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30049"
-msgid "Auto-scroll single widgets"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30050"
-msgid "Other"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30051"
-msgid "Vertical menu | Multiple widgets"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30052"
-msgid "Horizontal menu | Multiple widgets"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30053"
-msgid "Icons + Text"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30054"
-msgid "Text"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30055"
-msgid "Icons"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30056"
-msgid "Auto-width Text"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30057"
-msgid "Fixed-width Text"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30058"
-msgid "Fixed"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30059"
-msgid "Default"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30060"
-msgid "Search"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30061"
-msgid "Basic"
-msgstr ""
-
-#: /1080i/script-skinshortcuts.xml
-msgctxt "#30062"
-msgid "Customize Widgets"
-msgstr ""
-
-#: /1080i/script-skinshortcuts.xml
-msgctxt "#30063"
-msgid "Default search items"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30064"
-msgid "3 seconds"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30065"
-msgid "5 seconds"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30066"
-msgid "Choose between focus border sizes"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30067"
-msgid "Bold"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30068"
-msgid "Thin"
-msgstr ""
-
-#: /1080i/Custom_1119_EnableInfoLists.xml
-msgctxt "#30070"
-msgid "Year"
-msgstr ""
-
-#: /1080i/Custom_1119_EnableInfoLists.xml
-msgctxt "#30071"
-msgid "Genre"
-msgstr ""
-
-#: /1080i/Custom_1119_EnableInfoLists.xml
-msgctxt "#30072"
-msgid "Crew"
-msgstr ""
-
-#: /1080i/Custom_1151_Wizard.xml
-msgctxt "#30073"
-msgid "Enable ratings for movies/tv shows"
-msgstr ""
-
-#: /1080i/Custom_1151_Wizard.xml
-msgctxt "#30074"
-msgid "Enable blur (may impact on performance)"
-msgstr ""
-
-#: /1080i/Custom_1151_Wizard.xml
-msgctxt "#30075"
-msgid "This is a setup wizard. He is guide you through some basic settings you would like to set :)[CR]Keep in mind, some of this settings may impact on performance, so choose carefully what you want to use. After that, you should be ready to go.[CR][CR]Enjoy using Arctic: Zephyr 2 - Resurrection."
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30076"
-msgid "Initialising Services"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30077"
-msgid "Initialising Shortcuts"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30078"
-msgid "Finished Initialising Skin"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30079"
-msgid "Modern | Multiple widgets"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30080"
-msgid "Modern (dark) | Multiple widgets"
-msgstr ""
-
-#: /1080i/Includes_Labels.xml
-msgctxt "#30081"
-msgid "Icons only"
-msgstr ""
-
-#: /1080i/Includes_Items.xml
-msgctxt "#30082"
-msgid "Update Library"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30083"
-msgid "Choose between icons type"
-msgstr ""
-
-#: /1080i/Custom_1117_ColorPicker.xml
-msgctxt "#30084"
-msgid "Highlight"
-msgstr ""
-
-#: /1080i/Custom_1117_ColorPicker.xml
-msgctxt "#30085"
-msgid "Gradient"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30086"
-msgid "Gradient colour"
-msgstr ""
-
-#: /1080i/Custom_1117_ColorPicker.xml
-msgctxt "#30087"
-msgid "Creator"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30088"
-msgid "Watched indicators"
-msgstr ""
-
-#: /1080i/Custom_1121_EnableIndicators.xml
-msgctxt "#30089"
-msgid "Watched progress colour"
-msgstr ""
-
-#: /1080i/Custom_1121_EnableIndicators.xml
-msgctxt "#30090"
-msgid "Hide all indicators"
-msgstr ""
-
-#: /1080i/Custom_1121_EnableIndicators.xml
-msgctxt "#30091"
-msgid "Classic corner style indicators"
-msgstr ""
-
-#: /shortcuts/Custom_1121_EnableIndicators.xml
-msgctxt "#30092"
-msgid "In-progress"
-msgstr ""
-
-#: /1080i/Custom_1117_ColorPicker.xml
-msgctxt "#30093"
-msgid "Overlay"
-msgstr ""
-
-#: /1080i/Custom_1117_ColorPicker.xml
-msgctxt "#30094"
-msgid "Gradient preview"
-msgstr ""
-
-#: /1080i/Custom_1117_ColorPicker.xml
-msgctxt "#30095"
-msgid "Colour"
-msgstr ""
-
-#: /1080i/Custom_1117_ColorPicker.xml
-msgctxt "#30096"
-msgid "Value"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30097"
-msgid "Enable Monochrome Highlight"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30098"
-msgid "Color Highlight"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30100"
-msgid "Disable skin splash art on startup"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30101"
-msgid "Flix View | Multiple widgets"
-msgstr ""
-
-#: /1080i/Includes_Info.xml
-msgctxt "#30102"
-msgid "Trailer"
-msgstr ""
-
-#: /1080i/Includes_Info.xml
-msgctxt "#30103"
-msgid "Cast"
-msgstr ""
-
-#: /1080i/Includes_Info.xml
-msgctxt "#30104"
-msgid "Rating"
-msgstr ""
-
-#: /1080i/Includes_Home.xml
-msgctxt "#30105"
-msgid "Switch Profile"
-msgstr ""
-
-#: /1080i/Includes_Object.xml
-msgctxt "#30106"
-msgid "Match"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30107"
-msgid "Play Trailer in background in Flix View"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30108"
-msgid "Hide profile info in menu"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30109"
-msgid "Enable zoom on hover"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30111"
-msgid "Set delay to playing Trailers in Flix View"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30112"
-msgid "4 seconds"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30113"
-msgid "7 seconds"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#30114"
-msgid "Don't blur Home screen"
-msgstr ""
-
 #: /1080i/Includes_View_54_AEL.xml
 msgctxt "#31440"
 msgid "ROM Info Wall Trailer"
@@ -2290,4 +1907,358 @@ msgstr ""
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31524"
 msgid "Show \"more...\" folder in widgets"
+msgstr ""
+
+#: /1080i/script-upnext-stillwatching.xml
+msgctxt "#31525"
+msgid "Continue watching in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
+msgstr ""
+
+msgctxt "#31526"
+msgid "Up next in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
+msgstr ""
+
+#: /1080i/script-upnext-upnext.xml
+msgctxt "#31527"
+msgid "Next episode in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31528"
+msgid "This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations."
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31529"
+msgid "Reset"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31530"
+msgid "Restore to defaults"
+msgstr ""
+
+#: /1080i/Includes_Info.xml
+msgctxt "#31531"
+msgid "TRAKT"
+msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#31532"
+msgid "Recommendations"
+msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#31533"
+msgid "Posters"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31534"
+msgid "Debugging"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31535"
+msgid "Home layout"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31536"
+msgid "Menu style"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31537"
+msgid "Corner icon"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31538"
+msgid "Widget movement"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31539"
+msgid "Auto-scroll single widgets"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31540"
+msgid "Other"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31541"
+msgid "Vertical menu | Multiple widgets"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31542"
+msgid "Horizontal menu | Multiple widgets"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31543"
+msgid "Icons + Text"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31544"
+msgid "Text"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31545"
+msgid "Icons"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31546"
+msgid "Auto-width Text"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31547"
+msgid "Fixed-width Text"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31548"
+msgid "Fixed"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31549"
+msgid "Default"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31550"
+msgid "Search"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31551"
+msgid "Basic"
+msgstr ""
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31552"
+msgid "Customize Widgets"
+msgstr ""
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31553"
+msgid "Default search items"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31554"
+msgid "3 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31555"
+msgid "5 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31556"
+msgid "Choose between focus border sizes"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31557"
+msgid "Bold"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31558"
+msgid "Thin"
+msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#31559"
+msgid "Year"
+msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#31560"
+msgid "Genre"
+msgstr ""
+
+#: /1080i/Custom_1119_EnableInfoLists.xml
+msgctxt "#31561"
+msgid "Crew"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31562"
+msgid "Initialising Shortcuts"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31563"
+msgid "Finished Initialising Skin"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31564"
+msgid "Modern | Multiple widgets"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31565"
+msgid "Icons only"
+msgstr ""
+
+#: /1080i/Includes_Items.xml
+msgctxt "#31566"
+msgid "Update Library"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31567"
+msgid "Choose between icons type"
+msgstr ""
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#31568"
+msgid "Highlight"
+msgstr ""
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#31569"
+msgid "Gradient"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31570"
+msgid "Gradient colour"
+msgstr ""
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#31571"
+msgid "Creator"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31572"
+msgid "Watched indicators"
+msgstr ""
+
+#: /1080i/Custom_1121_EnableIndicators.xml
+msgctxt "#31573"
+msgid "Watched progress colour"
+msgstr ""
+
+#: /1080i/Custom_1121_EnableIndicators.xml
+msgctxt "#31574"
+msgid "Hide all indicators"
+msgstr ""
+
+#: /1080i/Custom_1121_EnableIndicators.xml
+msgctxt "#31575"
+msgid "Classic corner style indicators"
+msgstr ""
+
+#: /shortcuts/Custom_1121_EnableIndicators.xml
+msgctxt "#31576"
+msgid "In-progress"
+msgstr ""
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#31577"
+msgid "Overlay"
+msgstr ""
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#31578"
+msgid "Gradient preview"
+msgstr ""
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#31579"
+msgid "Colour"
+msgstr ""
+
+#: /1080i/Custom_1117_ColorPicker.xml
+msgctxt "#31580"
+msgid "Value"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31581"
+msgid "Enable Monochrome Highlight"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31582"
+msgid "Color Highlight"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31583"
+msgid "Disable skin splash art on startup"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31584"
+msgid "Flix View | Multiple widgets"
+msgstr ""
+
+#: /1080i/Includes_Info.xml
+msgctxt "#31585"
+msgid "Trailer"
+msgstr ""
+
+#: /1080i/Includes_Info.xml
+msgctxt "#31586"
+msgid "Cast"
+msgstr ""
+
+#: /1080i/Includes_Info.xml
+msgctxt "#31587"
+msgid "Rating"
+msgstr ""
+
+#: /1080i/Includes_Home.xml
+msgctxt "#31588"
+msgid "Switch Profile"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31589"
+msgid "Match"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31590"
+msgid "Play Trailer in background in Flix View"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31591"
+msgid "Hide profile info in menu"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31592"
+msgid "Enable zoom on hover"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31593"
+msgid "Set delay to playing Trailers in Flix View"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31594"
+msgid "4 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31595"
+msgid "7 seconds"
 msgstr ""

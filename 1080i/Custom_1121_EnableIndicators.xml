@@ -13,7 +13,7 @@
 
             <control type="label">
                 <description>Header Label</description>
-                <label>$LOCALIZE[30088]</label>
+                <label>$LOCALIZE[31572]</label>
                 <include>Dialog_Standard_Header</include>
             </control>
 
@@ -28,7 +28,7 @@
                 <orientation>vertical</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
                 <control type="button" id="9099">
-                    <label>$LOCALIZE[30089]</label>
+                    <label>$LOCALIZE[31573]</label>
                     <radioposx>730</radioposx>
                     <include>Dialog_Standard_Button</include>
                     <label2>$INFO[Skin.String(watchedprogresscolor.name)]</label2>
@@ -37,7 +37,7 @@
                     <enable>!Skin.HasSetting(EnableClassicIndicators) + !Skin.HasSetting(DisableWatchedOverlay)</enable>
                 </control>
                 <control type="radiobutton" id="9098">
-                    <label>$LOCALIZE[30090]</label>
+                    <label>$LOCALIZE[31574]</label>
                     <radioposx>730</radioposx>
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(DisableWatchedOverlay)</onclick>
@@ -45,7 +45,7 @@
                 </control>
 
                 <control type="radiobutton" id="9001">
-                    <label>$LOCALIZE[30091]</label>
+                    <label>$LOCALIZE[31575]</label>
                     <radioposx>730</radioposx>
                     <include>Dialog_Standard_Button</include>
                     <onclick>Skin.ToggleSetting(EnableClassicIndicators)</onclick>
@@ -90,7 +90,7 @@
                     <param name="id" value="9005" />
                     <param name="ondown" value="9006" />
                     <param name="group-id" value="9105" />
-                    <param name="label" value="$LOCALIZE[30092]" />
+                    <param name="label" value="$LOCALIZE[31576]" />
                     <param name="icon" value="indicator/inprogress-75.png" />
                     <param name="enable" value="!Skin.HasSetting(DisableWatchedOverlay)" />
                     <param name="onclick" value="Skin.ToggleSetting(DisableIndicator.Progress)" />

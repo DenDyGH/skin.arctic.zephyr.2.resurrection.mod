@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, heppen" version="1.1.2">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, heppen" version="1.1.3">
     <requires>
         <import addon="xbmc.gui" version="5.18.0" />
         <import addon="script.skinshortcuts"/>
@@ -15,13 +15,11 @@
         <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
     </extension>
     <extension point="xbmc.addon.metadata">
-        <news></news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
         <summary lang="en_AU">Clean, minimal, elegant, simple, light.</summary>
         <summary lang="en_US">Clean, minimal, elegant, simple, light.</summary>
         <summary lang="es">Limpio, minimalista, elegante, simple, ligero.</summary>
-        <summary lang="zh_CN">简洁、极简、雅致、简约、清爽。</summary>
         <summary lang="fr">Clair, minimaliste, élégant, simple et léger.</summary>
         <summary lang="fr_CA">Net, minimal, élégant, simple, léger.</summary>
         <summary lang="it">Pulita, minimale, elegante, semplice, leggera.</summary>
@@ -32,11 +30,12 @@
         <summary lang="pt_BR">Limpa, simplista, elegante, leve.</summary>
         <summary lang="ro">Curat, minimalist, elegant, simplu, ușor</summary>
         <summary lang="ru">Опрятный, минималистичный, элегантный, простой, светлый.</summary>
+        <summary lang="zh_CN">简洁、极简、雅致、简约、清爽。</summary>
 
-        <description lang="en">This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations.</description>
-        <description lang="es">Esta es una ligera modificación de Arctic Zephyr 2 realizada por heppen. Arctic Zephyr 2 es un skin minimalista creado por jurialmunkey y adaptado para funcionar con Kodi 19 Matrix por pkscout. El diseño es simple para que el usuario pueda centrarse en su contenido multimedia. Además del esquema de colores claros por defecto, el skin incluye varias variantes oscuras.</description>
-        <description lang="zh-CN">这是由 heppen 制作的 Arctic Zephyr 2 皮肤的轻量修改版。Arctic Zephyr 2 是一款由 jurialmunkey 创作的极简风格皮肤，经 pkscout 适配后可用于 Kodi 19 Matrix 版本。该皮肤采用简约设计，旨在让用户能专注于自身的媒体内容。除默认的浅色配色方案外，这款皮肤还包含多款深色变体。</description>
-        <description lang="pl">Jest to modyfikacja skórki Arctic Zephyr 2 autorstwa heppen. Arctic Zephyr 2 jest minimalistyczną skórką stworzoną przez jurialmunkey i zmodowaną do pracy z Kodi 19 Matrix przez pkscout. Skórka została zaprojektowana jako prosta, aby użytkownik mógł skupić się na swojej zawartości multimedialnej. Oprócz domyślnego jasnego schematu kolorów, skórka zawiera również kilka ciemniejszych wariantów.</description>
+        <description lang="en">This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content.</description>
+        <description lang="es">Esta es una ligera modificación de Arctic Zephyr 2 realizada por heppen. Arctic Zephyr 2 es un skin minimalista creado por jurialmunkey y adaptado para funcionar con Kodi 19 Matrix por pkscout. El diseño es simple para que el usuario pueda centrarse en su contenido multimedia.</description>
+        <description lang="pl">Jest to modyfikacja skórki Arctic Zephyr 2 autorstwa heppen. Arctic Zephyr 2 jest minimalistyczną skórką stworzoną przez jurialmunkey i zmodowaną do pracy z Kodi 19 Matrix przez pkscout. Skórka została zaprojektowana jako prosta, aby użytkownik mógł skupić się na swojej zawartości multimedialnej.</description>
+        <description lang="zh-CN">这是由 heppen 制作的 Arctic Zephyr 2 皮肤的轻量修改版。Arctic Zephyr 2 是一款由 jurialmunkey 创作的极简风格皮肤，经 pkscout 适配后可用于 Kodi 19 Matrix 版本。该皮肤采用简约设计，旨在让用户能专注于自身的媒体内容。</description>
         <platform>all</platform>
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
         <forum>https://forum.kodi.tv/showthread.php?tid=362941</forum>

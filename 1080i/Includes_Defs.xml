@@ -425,8 +425,8 @@
     </variable>
 
     <variable name="Def_Trailer_Delay">
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:03)">$LOCALIZE[30112]</value>
-        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:06)">$LOCALIZE[30113]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:03)">$LOCALIZE[31594]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:06)">$LOCALIZE[31595]</value>
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:09)">$LOCALIZE[31117]</value>
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:14)">$LOCALIZE[31123]</value>
         <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:19)">$LOCALIZE[31124]</value>

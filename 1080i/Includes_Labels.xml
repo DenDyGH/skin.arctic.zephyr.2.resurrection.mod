@@ -4,13 +4,13 @@
     <variable name="Label_Splash">
         <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ServiceStarted)) + !Skin.HasSetting(DisableTMDbHelperSplash)">$LOCALIZE[31306]...</value>
         <value condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Window.IsVisible(1151)">$LOCALIZE[31349]...</value>
-        <value condition="Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating">$LOCALIZE[30077]...</value>
-        <value>$LOCALIZE[30078]</value>
+        <value condition="Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating">$LOCALIZE[31562]...</value>
+        <value>$LOCALIZE[31563]</value>
     </variable>
 
     <variable name="Label_ColorValue">
-        <value condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) + !String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
-        <value condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085]) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568]) + !String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
+        <value condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569]) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
         <!-- <value condition="String.IsEqual(Window(Home).Property(colorpick),Overlay) + !String.IsEmpty(Skin.String(overlaycolor.name))">$INFO[Skin.String(overlaycolor.name)]</value> -->
         <!-- <value condition="String.IsEqual(Window(Home).Property(colorpick),Watched) + !String.IsEmpty(Skin.String(watchedprogresscolor.name))">$INFO[Skin.String(watchedprogresscolor.name)]</value> -->
         <value>$LOCALIZE[571]</value>
@@ -33,12 +33,12 @@
         <value condition="[Window.IsActive(tvtimerrules) | Window.IsActive(radiotimerrules)] + !ListItem.HasTimerSchedule">$INFO[ListItem.Timertype]</value>
         <value>$INFO[ListItem.EpisodeName]</value>
     </variable>
-    
+
     <variable name="Label_ChannelListEPGIconVar">
         <value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
-    
+
     <variable name="Label_SeasonEpisodeLabel">
         <value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E]</value>
         <value>$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E,: ]</value>
@@ -73,16 +73,16 @@
     </variable>
 
     <variable name="Label_SkinSettings_HomeLayout">
-        <value condition="Skin.HasSetting(HomeMultiFlixView)">$LOCALIZE[30101]</value>
-        <value condition="Skin.HasSetting(HomeMultiNetflix)">$LOCALIZE[30079]</value>
-        <value condition="Skin.HasSetting(HomeMultiVertical)">$LOCALIZE[30051]</value>
-        <value condition="Skin.HasSetting(HomeMultiHorizontal)">$LOCALIZE[30052]</value>
-        <value condition="Skin.HasSetting(HomeBasic)">$LOCALIZE[30061]</value>
+        <value condition="Skin.HasSetting(HomeMultiFlixView)">$LOCALIZE[31584]</value>
+        <value condition="Skin.HasSetting(HomeMultiNetflix)">$LOCALIZE[31564]</value>
+        <value condition="Skin.HasSetting(HomeMultiVertical)">$LOCALIZE[31541]</value>
+        <value condition="Skin.HasSetting(HomeMultiHorizontal)">$LOCALIZE[31542]</value>
+        <value condition="Skin.HasSetting(HomeBasic)">$LOCALIZE[31551]</value>
     </variable>
 
     <variable name="Label_SkinSettings_WidgetMovement">
-        <value condition="Skin.HasSetting(FixedWidgets)">$LOCALIZE[30058]</value>
-        <value>$LOCALIZE[30059]</value>
+        <value condition="Skin.HasSetting(FixedWidgets)">$LOCALIZE[31548]</value>
+        <value>$LOCALIZE[31549]</value>
     </variable>
 
     <variable name="Label_SkinSettings_ExtendedNotification">
@@ -95,16 +95,16 @@
         <value condition="String.IsEqual(Skin.String(CornerIcon),Power)">$LOCALIZE[33060]</value>
         <value condition="String.IsEqual(Skin.String(CornerIcon),Home)">$LOCALIZE[10000]</value>
         <value condition="String.IsEqual(Skin.String(CornerIcon),Kodi)">Kodi</value>
-        <value>$LOCALIZE[30060]</value>
+        <value>$LOCALIZE[31550]</value>
     </variable>
 
     <variable name="Label_SkinSettings_MenuStyle">
-        <value condition="Skin.HasSetting(VerticalIconsOnly)">$LOCALIZE[30081]</value>
-        <value condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeIcons)">$LOCALIZE[30053]</value>
-        <value condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeIcons)">$LOCALIZE[30054]</value>
-        <value condition="Skin.HasSetting(HomeIcons)">$LOCALIZE[30055]</value>
-        <value condition="Skin.HasSetting(HomeTextAutoWidth)">$LOCALIZE[30056]</value>
-        <value>$LOCALIZE[30057]</value>
+        <value condition="Skin.HasSetting(VerticalIconsOnly)">$LOCALIZE[31565]</value>
+        <value condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + Skin.HasSetting(HomeIcons)">$LOCALIZE[31543]</value>
+        <value condition="Skin.HasSetting(HomeMulti) + !Skin.HasSetting(HomeMultiHorizontal) + !Skin.HasSetting(HomeIcons)">$LOCALIZE[31544]</value>
+        <value condition="Skin.HasSetting(HomeIcons)">$LOCALIZE[31545]</value>
+        <value condition="Skin.HasSetting(HomeTextAutoWidth)">$LOCALIZE[31546]</value>
+        <value>$LOCALIZE[31547]</value>
     </variable>
 
     <variable name="Label_SkinSettings_Flix_Background_Blur">
@@ -114,8 +114,8 @@
     </variable>
 
     <variable name="Label_SkinSettings_SelectboxStyle">
-        <value condition="Skin.HasSetting(SelectBox.Thin)">$LOCALIZE[30068]</value>
-        <value>$LOCALIZE[30067]</value>
+        <value condition="Skin.HasSetting(SelectBox.Thin)">$LOCALIZE[31558]</value>
+        <value>$LOCALIZE[31557]</value>
     </variable>
 
     <variable name="Label_SkinSettings_SelectionHighlight">
@@ -382,7 +382,7 @@
         <value condition="Skin.HasSetting(ShowTimeRemaining2) + !String.IsEmpty(Player.TimeRemaining)">$INFO[Player.TimeRemaining]</value>
         <value>$INFO[Player.Duration]</value>
     </variable>
-    
+
     <variable name="Label_OSD_FinishTime">
         <value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.EndTime]</value>
         <value condition="!String.IsEmpty(Player.FinishTime)">$INFO[Player.FinishTime]</value>
@@ -457,7 +457,7 @@
     <variable name="Label_Filtered">
         <value condition="Container.Filtered">$LOCALIZE[16041]</value>
         <value>$LOCALIZE[351]</value>
-    </variable> 
+    </variable>
 
     <variable name="Label_Premiered">
         <value condition="!String.IsEmpty(ListItem.Premiered) + !String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Premiered]</value>
@@ -561,7 +561,7 @@
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Plot))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Tagline),[B],[/B][CR]]$INFO[Window(Home).Property(ListItem.Artist),[B],[/B][CR]]$INFO[Window(Home).Property(TMDbHelper.ListItem.Plot)]</value>
         <value>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Artist,[B],[/B][CR]]$VAR[Label_Plot]</value>
     </variable>
-    
+
     <variable name="Label_Plot">
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
