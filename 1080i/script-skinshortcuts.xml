@@ -5,7 +5,7 @@
         <include>Global_Overlay</include>
 
         <control type="group">
-            
+
             <include content="Dialog_Standard_Group">
                 <param name="width" value="1620" />
                 <param name="height" value="960" />
@@ -29,7 +29,7 @@
                 <font>font_medium_bold</font>
                 <align>left</align>
                 <textcolor>dialog_fg_70</textcolor>
-                <label>$LOCALIZE[30062]</label>
+                <label>$LOCALIZE[31552]</label>
                 <visible>[String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)]</visible>
             </control>
             <include content="Object_Control">
@@ -176,7 +176,7 @@
                         <usealttexture>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</usealttexture>
                         <include>Dialog_Standard_Button</include>
                     </control>
-                    
+
                     <control type="button" id="401" description="Choose Shortcut">
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <include>Dialog_Standard_Button</include>
@@ -235,7 +235,7 @@
                     </control>
 
                     <control type="button" id="4101" description="Choose Search Item">
-                        <label>$LOCALIZE[30063]</label>
+                        <label>$LOCALIZE[31553]</label>
                         <onclick>SetProperty(custom-grouping,customsearchdefaultitems)</onclick>
                         <onclick>SendClick(401)</onclick>
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
