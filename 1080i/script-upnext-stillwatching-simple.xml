@@ -4,7 +4,6 @@
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>
     <controls>
-
         <control type="group">
             <control type="image">
                 <height>300</height>
@@ -30,15 +29,15 @@
                         <param name="groupid" value="9010" />
                         <param name="label" value="$ADDON[service.upnext 30010]" />
                         <param name="icon" value="special://skin/extras/icons/play3.png" />
-                        <param name="visible" value="Integer.IsGreater(Player.TimeRemaining,59)" />
+                        <param name="visible" value="Integer.IsGreater(Window.Property(remaining),60)" />
                         <onclick>SendClick(3012)</onclick>
                     </include>
                     <include content="Object_IconicButton">
                         <param name="id" value="11" />
                         <param name="groupid" value="9011" />
-                        <param name="label" value="$ADDON[service.upnext 30010]" />
+                        <param name="label" value="$ADDON[service.upnext 30035]" />
                         <param name="icon" value="special://skin/extras/icons/play3.png" />
-                        <param name="visible" value="!Integer.IsGreater(Player.TimeRemaining,59)" />
+                        <param name="visible" value="Integer.IsLessOrEqual(Window.Property(remaining),60)" />
                         <onclick>SendClick(3012)</onclick>
                     </include>
                     <include content="Object_IconicButton">

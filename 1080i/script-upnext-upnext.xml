@@ -4,7 +4,6 @@
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>
     <controls>
-
         <control type="group">
             <control type="image">
                 <height>300</height>
@@ -36,24 +35,9 @@
                         <right>0</right>
                     </control>
                 </control>
-
                 <!-- Info and Buttons -->
                 <control type="group">
                     <left>330</left>
-                    <control type="label">
-                        <height>30</height>
-                        <font>font_title_small</font>
-                        <label>$ADDON[service.upnext 30036]</label>
-                        <textcolor>panel_fg_100</textcolor>
-                        <visible>!Integer.IsGreater(Player.TimeRemaining,59)</visible>
-                    </control>
-                    <control type="label">
-                        <height>30</height>
-                        <font>font_title_small</font>
-                        <label>$ADDON[service.upnext 30008]</label>
-                        <textcolor>panel_fg_100</textcolor>
-                        <visible>Integer.IsGreater(Player.TimeRemaining,59)</visible>
-                    </control>
                     <control type="grouplist">
                         <top>40</top>
                         <height>40</height>
@@ -101,11 +85,20 @@
                         <orientation>horizontal</orientation>
                         <itemgap>0</itemgap>
                         <include content="Object_IconicButton">
-                            <param name="id" value="3012" />
-                            <param name="groupid" value="9012" />
+                            <param name="id" value="10" />
+                            <param name="groupid" value="9010" />
                             <param name="label" value="$ADDON[service.upnext 30006]" />
                             <param name="icon" value="special://skin/extras/icons/play3.png" />
-                            <param name="visible" value="true" />
+                            <param name="visible" value="Integer.IsGreater(Window.Property(remaining),60)" />
+                            <onclick>SendClick(3012)</onclick>
+                        </include>
+                        <include content="Object_IconicButton">
+                            <param name="id" value="11" />
+                            <param name="groupid" value="9011" />
+                            <param name="label" value="$ADDON[service.upnext 30036]" />
+                            <param name="icon" value="special://skin/extras/icons/play3.png" />
+                            <param name="visible" value="Integer.IsLessOrEqual(Window.Property(remaining),60)" />
+                            <onclick>SendClick(3012)</onclick>
                         </include>
                         <include content="Object_IconicButton">
                             <param name="id" value="3013" />
