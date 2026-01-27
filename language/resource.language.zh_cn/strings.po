@@ -960,7 +960,7 @@ msgstr "选择艺术作品（Artwork Beef）"
 #: /shortcuts/overrides.xml
 msgctxt "#31196"
 msgid "In Progress TV Shows"
-msgstr "正在播出的电视剧"
+msgstr "正在观看的电视剧"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31197"
@@ -1023,7 +1023,7 @@ msgstr "最近添加的剧集"
 #: /shortcuts/overrides.xml
 msgctxt "#31216"
 msgid "In Progress Movies"
-msgstr "正在播放的电影"
+msgstr "正在观看的电影"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31217"
@@ -1033,7 +1033,7 @@ msgstr "更改位置"
 #: /shortcuts/overrides.xml
 msgctxt "#31218"
 msgid "In Progress Episodes"
-msgstr "正在播放的剧集"
+msgstr "正在观看的剧集"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31222"
