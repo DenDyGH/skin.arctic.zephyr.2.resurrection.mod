@@ -17,7 +17,7 @@
             <control type="label">
                 <left>dialog_pad</left>
                 <include>Dialog_Standard_Header</include>
-                <label>$LOCALIZE[30087]</label>
+                <label>$LOCALIZE[31571]</label>
             </control>
 
             <include content="Object_Control">
@@ -52,9 +52,9 @@
                         <scrolltime>200</scrolltime>
                         <orientation>vertical</orientation>
                         <preloaditems>2</preloaditems>
-                        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">Skin.SetString(focuscolor.name,$INFO[ListItem.Label])</onclick>
-                        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">Skin.SetString(gradientcolor.name,$INFO[ListItem.Label])</onclick>
-                        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">Skin.SetString(overlaycolor.name,$INFO[ListItem.Label])</onclick>
+                        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">Skin.SetString(focuscolor.name,$INFO[ListItem.Label])</onclick>
+                        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">Skin.SetString(gradientcolor.name,$INFO[ListItem.Label])</onclick>
+                        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])">Skin.SetString(overlaycolor.name,$INFO[ListItem.Label])</onclick>
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])">Skin.SetString(watchedprogresscolor.name,$INFO[ListItem.Label])</onclick>
                         <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
                         <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$VAR[ColorHighlight])</onclick>
@@ -122,7 +122,7 @@
                         <height>140</height>
                         <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])</visible>
                         <include content="Dialog_ColorPicker_SwatchLabel">
-                            <label>$LOCALIZE[30088]</label>
+                            <label>$LOCALIZE[31572]</label>
                         </include>
                         <include content="Dialog_ColorPicker_WatchedIndicator_Group">
                             <param name="colordiffuse" value="$VAR[ColorWatchedProgress]" />
@@ -139,9 +139,9 @@
                         <left>40</left>
                         <right>40</right>
                         <height>100</height>
-                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])</visible>
+                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])</visible>
                         <include content="Dialog_ColorPicker_SwatchLabel">
-                            <label>$LOCALIZE[30094]</label>
+                            <label>$LOCALIZE[31578]</label>
                         </include>
                         <control type="group">
                             <top>40</top>
@@ -155,19 +155,19 @@
                             <control type="group">
                                 <control type="image">
                                     <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/box.png</texture>
-                                    <visible>!Control.HasFocus(3110) | !String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])</visible>
+                                    <visible>!Control.HasFocus(3110) | !String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])</visible>
                                 </control>
                                 <control type="image">
                                     <texture colordiffuse="$INFO[Container(3110).ListItem.Label]" border="20">common/box.png</texture>
-                                    <visible>Control.HasFocus(3110) + String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])</visible>
+                                    <visible>Control.HasFocus(3110) + String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])</visible>
                                 </control>
                                 <control type="image">
                                     <texture colordiffuse="$VAR[ColorGradient]" border="20">common/box-gradient.png</texture>
-                                    <visible>!Control.HasFocus(3110) | !String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])</visible>
+                                    <visible>!Control.HasFocus(3110) | !String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])</visible>
                                 </control>
                                 <control type="image">
                                     <texture colordiffuse="$INFO[Container(3110).ListItem.Label]" border="20">common/box-gradient.png</texture>
-                                    <visible>Control.HasFocus(3110) + String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])</visible>
+                                    <visible>Control.HasFocus(3110) + String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])</visible>
                                 </control>
                             </control>
                             <control type="image">
@@ -176,7 +176,7 @@
                                 <width>16</width>
                                 <height>16</height>
                                 <texture>diffuse/circle.png</texture>
-                                <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])</visible>
+                                <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])</visible>
                             </control>
                             <control type="image">
                                 <centertop>50%</centertop>
@@ -184,7 +184,7 @@
                                 <width>16</width>
                                 <height>16</height>
                                 <texture>diffuse/circle.png</texture>
-                                <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])</visible>
+                                <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])</visible>
                             </control>
                         </control>
                     </control>
@@ -194,14 +194,14 @@
                         <left>80</left>
                         <right>80</right>
                         <height>110</height>
-                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])</visible>
+                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])</visible>
                         <include content="Dialog_ColorPicker_SwatchPreview">
                             <param name="id" value="3021" />
                             <param name="onleft" value="3023" />
                             <param name="onright" value="3022" />
                             <param name="left" value="0" />
-                            <param name="color" value="$LOCALIZE[30084]" />
-                            <param name="label" value="$LOCALIZE[30084]" />
+                            <param name="color" value="$LOCALIZE[31568]" />
+                            <param name="label" value="$LOCALIZE[31568]" />
                             <param name="color-var" value="ColorHighlight" />
                         </include>
                         <include content="Dialog_ColorPicker_SwatchPreview">
@@ -209,8 +209,8 @@
                             <param name="onleft" value="3021" />
                             <param name="onright" value="3023" />
                             <param name="left" value="106.67" />
-                            <param name="color" value="$LOCALIZE[30085]" />
-                            <param name="label" value="$LOCALIZE[30085]" />
+                            <param name="color" value="$LOCALIZE[31569]" />
+                            <param name="label" value="$LOCALIZE[31569]" />
                             <param name="color-var" value="ColorGradient" />
                         </include>
                     </control>
@@ -224,27 +224,27 @@
                         <onleft>3110</onleft>
                         <onright>3110</onright>
                         <height>350</height>
-                        <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">3021</onup>
-                        <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">3022</onup>
-                        <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">3023</onup>
-                        <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">3021</ondown>
-                        <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">3022</ondown>
-                        <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">3023</ondown>
+                        <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">3021</onup>
+                        <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">3022</onup>
+                        <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])">3023</onup>
+                        <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">3021</ondown>
+                        <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">3022</ondown>
+                        <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])">3023</ondown>
                         <control type="button" id="3015">
-                            <label>$LOCALIZE[30095]: $INFO[Window(Home).Property(colorpick)]</label>
+                            <label>$LOCALIZE[31579]: $INFO[Window(Home).Property(colorpick)]</label>
                             <include>Dialog_Standard_Right_Buttons</include>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">SetProperty(colorpick,$LOCALIZE[30085],Home)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">SetProperty(colorpick,$LOCALIZE[30084],Home)</onclick>
-                            <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])</visible>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">SetProperty(colorpick,$LOCALIZE[31569],Home)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">SetProperty(colorpick,$LOCALIZE[31568],Home)</onclick>
+                            <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])</visible>
                         </control>
                         <!-- EDIT -->
                         <control type="button" id="3010">
                             <textoffsetx>10</textoffsetx>
-                            <label>$LOCALIZE[30096]: $VAR[Label_ColorValue]</label>
+                            <label>$LOCALIZE[31580]: $VAR[Label_ColorValue]</label>
                             <include>Dialog_Standard_Right_Buttons</include>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">Skin.SetString(focuscolor.name)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">Skin.SetString(gradientcolor.name)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30093])">Skin.SetString(overlaycolor.name)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">Skin.SetString(focuscolor.name)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">Skin.SetString(gradientcolor.name)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])">Skin.SetString(overlaycolor.name)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])">Skin.SetString(watchedprogress.name)</onclick>
                             <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$INFO[Skin.String(focuscolor.name)],gradient=$INFO[Skin.String(gradientcolor.name)])</onclick>
                             <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$INFO[Skin.String(focuscolor.name)])</onclick>
@@ -262,8 +262,8 @@
                             <include>Dialog_Standard_Right_Buttons</include>
                             <onclick>ReloadSkin()</onclick>
                             <onclick>AlarmClock(refocus1,SetFocus(9000,2),00:00,silent)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30084])">AlarmClock(refocus2,SetFocus(19301),00:00,silent)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[30085])">AlarmClock(refocus2,SetFocus(19305),00:00,silent)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">AlarmClock(refocus2,SetFocus(19301),00:00,silent)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">AlarmClock(refocus2,SetFocus(19305),00:00,silent)</onclick>
                         </control>
                     </control>
                 </control>

@@ -1281,7 +1281,7 @@
                 <!-- First Items -->
                 <!-- Set a fallback so divider is not first item if blank -->
                 <include content="Flix_Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableMatch)">
-                    <param name="label" value="$VAR[Def_Percentage_Rating]% $LOCALIZE[30106]   " />
+                    <param name="label" value="$VAR[Def_Percentage_Rating]% $LOCALIZE[31589]   " />
                     <param name="font" value="font_title_mini" />
                     <param name="textcolor" value="$PARAM[green]" />
                     <param name="divider" value="false" />
