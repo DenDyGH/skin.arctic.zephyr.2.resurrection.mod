@@ -18,7 +18,7 @@
 
     <expression name="Exp_OSD_HasPlaylist">[VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv) | [VideoPlayer.Content(movies) + !Integer.IsEqual(VideoPlayer.PlaylistLength,1) + !Integer.IsEqual(VideoPlayer.PlaylistLength,0)]]</expression>
 
-    <expression name="RatingsVisiblity">
+    <!-- <expression name="RatingsVisiblity">
         [[!String.IsEmpty(ListItem.Rating) | !String.IsEmpty(VideoPlayer.Rating)] + !Skin.HasSetting(DisableStarRating)] |
         [!String.IsEmpty(ListItem.UserRating) + !Skin.HasSetting(Ratings.User)] |
         [[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.TMDb_Rating))] + !Skin.HasSetting(Ratings.TheMovieDB)] |
@@ -27,7 +27,10 @@
         [[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Metacritic_Rating))] + !Skin.HasSetting(Ratings.Metacritic)] |
         [[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.RottenTomatoes_Rating))] + !Skin.HasSetting(Ratings.RottenTomatoes)] |
         [String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won) + !Skin.HasSetting(Ratings.Oscars)]
-    </expression>
+    </expression> -->
+    <expression name="RatingsVisiblity">[$EXP[Exp_Ratings_ListItem] | $EXP[Exp_Ratings_Player]]</expression>
+    <expression name="Exp_Ratings_ListItem">[!String.IsEmpty(ListItem.Rating) | !String.IsEmpty(ListItem.UserRating)] | [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)) | !String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MDBList_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Letterboxd_Rating))]</expression>
+    <expression name="Exp_Ratings_Player">!String.IsEmpty(VideoPlayer.Rating) | [!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.TMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Trakt_Rating)) | !String.IsEmpty(Window(home).Property(TMDbHelper.Player.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Metacritic_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.RottenTomatoes_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.MDBList_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Letterboxd_Rating))]</expression>
 
     <!-- FONTS -->
     <expression name="FontSetIsDefault">String.IsEqual(Skin.Font,Default)</expression>
@@ -37,13 +40,13 @@
 
     <!-- GAMES -->
     <expression name="InGameMode">
-       [ String.Contains(Container.FolderPath,plugin://plugin.program.ael) 
-       | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.launcher) 
-       | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.emulator.launcher) 
-       | String.Contains(Container.FolderPath,plugin://plugin.program.akl) 
-       | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.MAME.launcher) 
-       | String.Contains(Container.FolderPath,plugin://plugin.program.iagl) 
-       | Window.IsActive(games) 
+       [ String.Contains(Container.FolderPath,plugin://plugin.program.ael)
+       | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.launcher)
+       | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.emulator.launcher)
+       | String.Contains(Container.FolderPath,plugin://plugin.program.akl)
+       | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.MAME.launcher)
+       | String.Contains(Container.FolderPath,plugin://plugin.program.iagl)
+       | Window.IsActive(games)
        | Container.Content(games) ]
     </expression>
     <expression name="InGameAEL">String.Contains(Container.FolderPath,plugin://plugin.program.ael) | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.launcher) | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.emulator.launcher) | String.Contains(Container.FolderPath,plugin://plugin.program.akl) | String.Contains(Container.FolderPath,plugin://plugin.program.advanced.MAME.launcher) | String.Contains(Container.FolderPath,plugin://plugin.program.iagl)</expression>

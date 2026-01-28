@@ -137,9 +137,6 @@
                         </include>
                         <include content="Object_Ratings_Content">
                             <param name="top" value="10" />
-                            <param name="imdbvotes" value="false" />
-                            <param name="top250" value="false" />
-                            <param name="oscars" value="false" />
                         </include>
                         <control type="textbox">
                             <visible>!$PARAM[isView2]</visible>
@@ -460,7 +457,7 @@
                         <left>425</left>
                         <top>35</top>
                     </include>
-                </control>               
+                </control>
             </control>
         </definition>
     </include>
