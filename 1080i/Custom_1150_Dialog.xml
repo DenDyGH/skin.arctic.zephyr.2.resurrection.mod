@@ -53,13 +53,15 @@
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),AlphaValue)">Items_Dialog_AlphaValue</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),AlphaValue_Highlight)">Items_Highlight_AlphaValue</include>
                 <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),Flix_Background_Blur)">Items_SettingsDialog_FlixBlur</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),Settings_RatingsMovies)">Items_Settings_RatingsMovies</include>
+                <include condition="String.IsEqual(Window(home).Property(CustomDialogWindow.items),Settings_RatingsTVShows)">Items_Settings_RatingsTVShows</include>
             </control>
 
             <include content="Dialog_Scrollbar">
                 <param name="onleft" value="9000" />
             </include>
-            
-           
+
+
             <control type="group">
                 <include>Dialog_Standard_Right_Group</include>
                 <control type="grouplist" id="8000">

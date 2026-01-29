@@ -537,15 +537,31 @@
                         <usecontrolcoords>true</usecontrolcoords>
                         <visible>Container(9000).HasFocus(4)</visible>
 
+                        <control type="label" id="19410" description="LABEL">
+                            <include>Dialog_Standard_HintLabel</include>
+                            <label>$LOCALIZE[31116]</label>
+                        </control>
+
+                        <control type="button" id="19540" description="Ratings Movies">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[342]</label>
+                            <label2>$INFO[Skin.String(CustomRating.Movies.Item01)]$INFO[Skin.String(CustomRating.Movies.Item02), • ,]$INFO[Skin.String(CustomRating.Movies.Item03), • ,]$INFO[Skin.String(CustomRating.Movies.Item04), • ,]$INFO[Skin.String(CustomRating.Movies.Item05), • ,]</label2>
+                            <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[342],Home)</onclick>
+                            <onclick>SetProperty(CustomDialogWindow.items,Settings_RatingsMovies,Home)</onclick>
+                            <onclick>ActivateWindow(1150)</onclick>
+                        </control>
+                        <control type="button" id="19541" description="Ratings TVShows">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[20343]</label>
+                            <label2>$INFO[Skin.String(CustomRating.TVShows.Item01)]$INFO[Skin.String(CustomRating.TVShows.Item02), • ,]$INFO[Skin.String(CustomRating.TVShows.Item03), • ,]$INFO[Skin.String(CustomRating.TVShows.Item04), • ,]$INFO[Skin.String(CustomRating.TVShows.Item05), • ,]</label2>
+                            <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[20343],Home)</onclick>
+                            <onclick>SetProperty(CustomDialogWindow.items,Settings_RatingsTVShows,Home)</onclick>
+                            <onclick>ActivateWindow(1150)</onclick>
+                        </control>
+
                         <control type="label" id="19483" description="LABEL">
                             <include>Dialog_Standard_HintLabel</include>
                             <label>$LOCALIZE[31146]</label>
-                        </control>
-
-                        <control type="button" id="19410" description="Ratings">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31116]</label>
-                            <onclick>ActivateWindow(1118)</onclick>
                         </control>
 
                         <control type="button" id="19414" description="Switch to colorful icons">

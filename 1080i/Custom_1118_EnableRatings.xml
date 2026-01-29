@@ -37,85 +37,53 @@
                 <pagecontrol>61</pagecontrol>
                 <orientation>vertical</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
-                <control type="radiobutton" id="9001">
-                    <label>Oscars</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.Oscars)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.Oscars)</selected>
-                </control>
-                <control type="radiobutton" id="9100">
-                    <label>Trakt</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.Trakt)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.Trakt)</selected>
-                </control>
-                <control type="radiobutton" id="9002">
-                    <label>Metacritic</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.Metacritic)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.Metacritic)</selected>
-                </control>
-                <control type="radiobutton" id="9003">
-                    <label>RottenTomatoes</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.RottenTomatoes)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.RottenTomatoes)</selected>
-                </control>
-                <control type="radiobutton" id="9004">
-                    <label>TheMovieDb</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.TheMovieDB)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.TheMovieDB)</selected>
-                </control>
-                <control type="radiobutton" id="9006">
-                    <label>IMDb</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.IMDB)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.IMDB)</selected>
-                </control>
-                <control type="radiobutton" id="9007">
-                    <label>IMDb Votes</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.IMDB.Votes)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.IMDB.Votes)</selected>
-                    <enable>!Skin.HasSetting(Ratings.IMDB)</enable>
-                </control>
-                <control type="radiobutton" id="9008">
-                    <label>IMDb $LOCALIZE[13409]</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.Top250)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.Top250)</selected>
-                    <enable>!Skin.HasSetting(Ratings.IMDB)</enable>
-                </control>
-                <control type="radiobutton" id="9009">
-                    <label>$LOCALIZE[31310]</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(Ratings.User)</onclick>
-                    <selected>!Skin.HasSetting(Ratings.User)</selected>
-                </control>
-                <control type="radiobutton" id="9099">
-                    <label>$LOCALIZE[33067]</label>
-                    <radioposx>730</radioposx>
-                    <include>Dialog_Standard_Button</include>
-                    <onclick>Skin.ToggleSetting(DisableStarRating)</onclick>
-                    <selected>!Skin.HasSetting(DisableStarRating)</selected>
-                </control>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item01) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),Movies)">
+                    <param name="item">Item01</param>
+                    <param name="content">Movies</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item02) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),Movies)">
+                    <param name="item">Item02</param>
+                    <param name="content">Movies</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item03) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),Movies)">
+                    <param name="item">Item03</param>
+                    <param name="content">Movies</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item04) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),Movies)">
+                    <param name="item">Item04</param>
+                    <param name="content">Movies</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item05) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),Movies)">
+                    <param name="item">Item05</param>
+                    <param name="content">Movies</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item01) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),TVShows)">
+                    <param name="item">Item01</param>
+                    <param name="content">TVShows</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item02) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),TVShows)">
+                    <param name="item">Item02</param>
+                    <param name="content">TVShows</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item03) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),TVShows)">
+                    <param name="item">Item03</param>
+                    <param name="content">TVShows</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item04) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),TVShows)">
+                    <param name="item">Item04</param>
+                    <param name="content">TVShows</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item05) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),TVShows)">
+                    <param name="item">Item05</param>
+                    <param name="content">TVShows</param>
+                </include>
             </control>
 
             <include content="Dialog_Scrollbar">
                 <param name="onleft" value="9000" />
             </include>
-            
-           
+
+
             <control type="group">
                 <include>Dialog_Standard_Right_Group</include>
                 <control type="grouplist" id="8000">

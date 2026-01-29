@@ -1785,18 +1785,20 @@
                     <param name="container" value="Container($PARAM[id])." />
                     <param name="uid" value="$PARAM[uid]" />
                 </include>
-                <control type="group">
+                <!-- <control type="group">
                     <top>-30</top>
                     <height>75</height>
-                    <visible>!Skin.HasSetting(DisableStarRating)</visible>
+                    <visible>String.IsEqual(Skin.String(CustomRating.Movies.Item01),Kodi) | String.IsEqual(Skin.String(CustomRating.Movies.Item02),Kodi)</visible>
                     <control type="group">
                         <left>-14</left>
                         <top>24</top>
                         <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Rating)</visible>
                         <control type="image">
-                            <width>64</width>
-                            <height>64</height>
-                            <texture colordiffuse="main_fg_100">flags/star10.png</texture>
+                            <top>15</top>
+                            <left>14</left>
+                            <width>32</width>
+                            <height>32</height>
+                            <texture colordiffuse="main_fg_100">flags/$VAR[IconsColor_Var]/ratings/kodi.png</texture>
                         </control>
                         <control type="label">
                             <left>61</left>
@@ -1809,7 +1811,7 @@
                             <label>$INFO[Container($PARAM[id]).ListItem.Rating,,   ]</label>
                         </control>
                     </control>
-                </control>
+                </control> -->
                 <include content="Object_Info_Plot">
                     <param name="label" value="$INFO[Container($PARAM[id]).ListItem.Plot]" />
                     <param name="maxheight" value="$PARAM[plotheight]" />

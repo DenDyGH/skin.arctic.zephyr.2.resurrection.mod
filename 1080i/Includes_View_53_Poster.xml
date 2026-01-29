@@ -29,8 +29,6 @@
                     <include condition="$EXP[InGameMode]">View_540_ROM_Details</include>
                     <include content="Object_Ratings_Content">
                         <param name="top" value="10" />
-                        <param name="top250" value="false" />
-                        <param name="oscars" value="false" />
                     </include>
                     <control type="textbox">
                         <top>5</top>
@@ -42,7 +40,7 @@
                     </control>
                 </control>
             </control>
-            
+
             <control type="fixedlist" id="53">
                 <left>-328</left>
                 <width>2500</width>

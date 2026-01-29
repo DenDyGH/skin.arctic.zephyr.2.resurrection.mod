@@ -662,8 +662,8 @@
                                 <visible>!Pvr.IsPlayingTv</visible>
                                 <include content="Object_Ratings_Content">
                                     <param name="align" value="left" />
-                                    <param name="imdbvotes" value="false" />
-                                    <param name="is_player" value="true" />
+                                    <param name="listitem">VideoPlayer</param>
+                                    <param name="service">Player</param>
                                 </include>
                             </control>
                             <control type="label">
