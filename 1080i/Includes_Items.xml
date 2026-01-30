@@ -2871,7 +2871,7 @@
         <control type="button" id="9001">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 01</label>
-            <label2>$INFO[Skin.String(CustomRating.Movies.Item01)]</label2>
+            <label2>$VAR[Label_CustomRating_Movies_01]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item01,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,Movies,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2879,7 +2879,7 @@
         <control type="button" id="9002">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 02</label>
-            <label2>$INFO[Skin.String(CustomRating.Movies.Item02)]</label2>
+            <label2>$VAR[Label_CustomRating_Movies_02]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item02,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,Movies,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2887,7 +2887,7 @@
         <control type="button" id="9003">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 03</label>
-            <label2>$INFO[Skin.String(CustomRating.Movies.Item03)]</label2>
+            <label2>$VAR[Label_CustomRating_Movies_03]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item03,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,Movies,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2895,7 +2895,7 @@
         <control type="button" id="9004">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 04</label>
-            <label2>$INFO[Skin.String(CustomRating.Movies.Item04)]</label2>
+            <label2>$VAR[Label_CustomRating_Movies_04]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item04,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,Movies,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2903,7 +2903,7 @@
         <control type="button" id="9005">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 05</label>
-            <label2>$INFO[Skin.String(CustomRating.Movies.Item05)]</label2>
+            <label2>$VAR[Label_CustomRating_Movies_05]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item05,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,Movies,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2914,7 +2914,7 @@
         <control type="button" id="9001">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 01</label>
-            <label2>$INFO[Skin.String(CustomRating.TVShows.Item01)]</label2>
+            <label2>$VAR[Label_CustomRating_TVShows_01]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item01,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,TVShows,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2922,7 +2922,7 @@
         <control type="button" id="9002">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 02</label>
-            <label2>$INFO[Skin.String(CustomRating.TVShows.Item02)]</label2>
+            <label2>$VAR[Label_CustomRating_TVShows_02]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item02,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,TVShows,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2930,7 +2930,7 @@
         <control type="button" id="9003">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 03</label>
-            <label2>$INFO[Skin.String(CustomRating.TVShows.Item03)]</label2>
+            <label2>$VAR[Label_CustomRating_TVShows_03]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item03,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,TVShows,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2938,7 +2938,7 @@
         <control type="button" id="9004">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 04</label>
-            <label2>$INFO[Skin.String(CustomRating.TVShows.Item04)]</label2>
+            <label2>$VAR[Label_CustomRating_TVShows_04]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item04,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,TVShows,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2946,7 +2946,7 @@
         <control type="button" id="9005">
             <include>Dialog_Standard_Button</include>
             <label>$LOCALIZE[563] 05</label>
-            <label2>$INFO[Skin.String(CustomRating.TVShows.Item05)]</label2>
+            <label2>$VAR[Label_CustomRating_TVShows_05]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item05,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,TVShows,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
@@ -2971,6 +2971,15 @@
     </include>
 
     <include name="Items_Dialog_RatingType">
+        <include content="Settings_Button">
+            <param name="id">9020</param>
+            <param name="control">radiobutton</param>
+            <label>$LOCALIZE[16018]</label>
+            <radioposx>730</radioposx>
+            <selected>Skin.String(CustomRating.$PARAM[content].$PARAM[item],None)</selected>
+            <onclick>Skin.SetString(CustomRating.$PARAM[content].$PARAM[item],None)</onclick>
+            <onclick>Close</onclick>
+        </include>
         <include content="Items_Dialog_RatingType_Template">
             <param name="id">9001</param>
             <param name="label">Kodi</param>
@@ -3036,26 +3045,17 @@
         </include>
         <include content="Items_Dialog_RatingType_Template">
             <param name="id">9010</param>
-            <param name="label">Awards</param>
+            <param name="label">$LOCALIZE[31596]</param>
             <param name="type">Awards</param>
             <param name="item">$PARAM[item]</param>
             <param name="content">$PARAM[content]</param>
         </include>
         <include content="Items_Dialog_RatingType_Template">
             <param name="id">9011</param>
-            <param name="label">User</param>
+            <param name="label">$LOCALIZE[858]</param>
             <param name="type">User</param>
             <param name="item">$PARAM[item]</param>
             <param name="content">$PARAM[content]</param>
-        </include>
-        <include content="Settings_Button">
-            <param name="id">9020</param>
-            <param name="control">radiobutton</param>
-            <label>$LOCALIZE[16018]</label>
-            <radioposx>730</radioposx>
-            <selected>Skin.String(CustomRating.$PARAM[content].$PARAM[item],None)</selected>
-            <onclick>Skin.SetString(CustomRating.$PARAM[content].$PARAM[item],None)</onclick>
-            <onclick>Close</onclick>
         </include>
     </include>
 </includes>
