@@ -1726,7 +1726,7 @@
         <param name="metacritic_prop" default="Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)" />
         <param name="imdb_prop" default="Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)" />
         <param name="rt_prop" default="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)" />
-        <param name="oscar_prop" default="Window(Home).Property(TMDbHelper.ListItem.Awards)" />
+        <param name="oscar_prop" default="Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)" />
         <param name="rt_audience_prop" default="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)" />
         <param name="tmdb_prop" default="Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating)" />
         <param name="top250_prop" default="Window(Home).Property(TMDbHelper.ListItem.Top250)" />
@@ -1739,7 +1739,7 @@
                 <control type="group">
                     <width>64</width>
                     <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)</visible>
-                    <visible>String.Contains($PARAM[oscar_prop],Oscar) + String.Contains($PARAM[oscar_prop],Won)</visible>
+                    <visible>!String.IsEmpty($PARAM[oscar_prop])</visible>
                     <visible>!Skin.HasSetting(Ratings.Oscars)</visible>
                     <control type="image">
                         <top>0</top>
@@ -1755,7 +1755,7 @@
                         <height>28</height>
                         <align>center</align>
                         <font>font_tiny_bold</font>
-                        <label>$VAR[Label_Oscars]</label>
+                        <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins),x,]</label>
                     </control>
                 </control>
                 <control type="group">
