@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="DialogVideoInfo">
-        <include condition="Window.IsVisible(1193)">OSD_ExtendedInfo_Background</include>
         <control type="group">
             <top>view_top</top>
             <left>view_pad</left>
@@ -341,7 +340,6 @@
     </include>
 
     <include name="DialogPersonInfo">
-        <include condition="Window.IsVisible(fullscreenvideo)">OSD_ExtendedInfo_Background</include>
         <!-- Person Info -->
         <control type="group">
             <top>view_top</top>
