@@ -431,29 +431,6 @@
         <!-- <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Last_Aired))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired)] ($INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Season)]x$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Episode)])</value> -->
     </variable>
 
-    <variable name="Label_Oscars">
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),20 Oscar)">x20</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),19 Oscar)">x19</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),18 Oscar)">x18</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),17 Oscar)">x17</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),16 Oscar)">x16</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),15 Oscar)">x15</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),14 Oscar)">x14</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),13 Oscar)">x13</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),12 Oscar)">x12</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),11 Oscar)">x11</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),10 Oscar)">x10</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),9 Oscar)">x9</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),8 Oscar)">x8</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),7 Oscar)">x7</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),6 Oscar)">x6</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),5 Oscar)">x5</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),4 Oscar)">x4</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),3 Oscar)">x3</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),2 Oscar)">x2</value>
-        <value condition="String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),1 Oscar)">x1</value>
-    </variable>
-
     <variable name="Label_Filtered">
         <value condition="Container.Filtered">$LOCALIZE[16041]</value>
         <value>$LOCALIZE[351]</value>
@@ -657,5 +634,67 @@
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.9.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director.9.job)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Director.9.job),Director)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director.9.Name)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Director)]</value>
         <value>$INFO[ListItem.Director]</value>
+    </variable>
+
+    <variable name="Label_CustomRating_Movies_01">
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item01),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item01),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item01),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.Movies.Item01)]</value>
+    </variable>
+    <variable name="Label_CustomRating_Movies_02">
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item02),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item02),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item02),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.Movies.Item02)]</value>
+    </variable>
+    <variable name="Label_CustomRating_Movies_03">
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item03),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item03),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item03),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.Movies.Item03)]</value>
+    </variable>
+    <variable name="Label_CustomRating_Movies_04">
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item04),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item04),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item04),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.Movies.Item04)]</value>
+    </variable>
+    <variable name="Label_CustomRating_Movies_05">
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item05),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item05),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item05),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.Movies.Item05)]</value>
+    </variable>
+
+    <variable name="Label_CustomRating_TVShows_01">
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item01),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item01),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item01),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.TVShows.Item01)]</value>
+    </variable>
+    <variable name="Label_CustomRating_TVShows_02">
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item02),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item02),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item02),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.TVShows.Item02)]</value>
+    </variable>
+    <variable name="Label_CustomRating_TVShows_03">
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item03),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item03),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item03),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.TVShows.Item03)]</value>
+    </variable>
+    <variable name="Label_CustomRating_TVShows_04">
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item04),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item04),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item04),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.TVShows.Item04)]</value>
+    </variable>
+    <variable name="Label_CustomRating_TVShows_05">
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item05),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item05),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item05),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.TVShows.Item05)]</value>
     </variable>
 </includes>

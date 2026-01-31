@@ -2262,3 +2262,8 @@ msgstr ""
 msgctxt "#31595"
 msgid "7 seconds"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31596"
+msgid "Awards"
+msgstr ""

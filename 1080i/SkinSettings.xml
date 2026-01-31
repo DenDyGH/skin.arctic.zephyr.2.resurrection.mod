@@ -545,7 +545,7 @@
                         <control type="button" id="19540" description="Ratings Movies">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[342]</label>
-                            <label2>$INFO[Skin.String(CustomRating.Movies.Item01)]$INFO[Skin.String(CustomRating.Movies.Item02), • ,]$INFO[Skin.String(CustomRating.Movies.Item03), • ,]$INFO[Skin.String(CustomRating.Movies.Item04), • ,]$INFO[Skin.String(CustomRating.Movies.Item05), • ,]</label2>
+                            <label2>$VAR[Label_CustomRating_Movies_01]$VAR[Label_CustomRating_Movies_02, • ,]$VAR[Label_CustomRating_Movies_03, • ,]$VAR[Label_CustomRating_Movies_04, • ,]$VAR[Label_CustomRating_Movies_05, • ,]</label2>
                             <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[342],Home)</onclick>
                             <onclick>SetProperty(CustomDialogWindow.items,Settings_RatingsMovies,Home)</onclick>
                             <onclick>ActivateWindow(1150)</onclick>
@@ -553,7 +553,7 @@
                         <control type="button" id="19541" description="Ratings TVShows">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[20343]</label>
-                            <label2>$INFO[Skin.String(CustomRating.TVShows.Item01)]$INFO[Skin.String(CustomRating.TVShows.Item02), • ,]$INFO[Skin.String(CustomRating.TVShows.Item03), • ,]$INFO[Skin.String(CustomRating.TVShows.Item04), • ,]$INFO[Skin.String(CustomRating.TVShows.Item05), • ,]</label2>
+                            <label2>$VAR[Label_CustomRating_TVShows_01]$VAR[Label_CustomRating_TVShows_02, • ,]$VAR[Label_CustomRating_TVShows_03, • ,]$VAR[Label_CustomRating_TVShows_04, • ,]$VAR[Label_CustomRating_TVShows_05, • ,]</label2>
                             <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[20343],Home)</onclick>
                             <onclick>SetProperty(CustomDialogWindow.items,Settings_RatingsTVShows,Home)</onclick>
                             <onclick>ActivateWindow(1150)</onclick>
