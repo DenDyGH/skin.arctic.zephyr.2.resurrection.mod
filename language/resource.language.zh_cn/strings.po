@@ -2274,3 +2274,8 @@ msgstr "4 秒"
 msgctxt "#31595"
 msgid "7 秒之前"
 msgstr "7 秒"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31596"
+msgid "Awards"
+msgstr ""
