@@ -84,6 +84,7 @@
                             <param name="groupid" value="5000" />
                             <param name="label" value="$LOCALIZE[206]" />
                             <param name="labelinclude" value="View_Cast_Label" />
+                            <param name="icon" value="$VAR[Image_Poster_ListItem]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                         </include>
@@ -92,6 +93,7 @@
                             <param name="groupid" value="5000" />
                             <param name="label" value="$LOCALIZE[206]" />
                             <param name="labelinclude" value="View_Cast_Label" />
+                            <param name="icon" value="$VAR[Image_Poster_ListItem]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <content target="videos">$VAR[Path_VideoInfo_OnlineCast]</content>
@@ -167,6 +169,7 @@
                             <param name="groupid" value="7504" />
                             <param name="label" value="$LOCALIZE[31052]$VAR[Label_FromDirector, ,]" />
                             <param name="labelinclude" value="View_Cast_Label" />
+                            <param name="icon" value="$VAR[Image_Poster_ListItem]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <content limit="1">$VAR[Path_FromDirector,plugin://plugin.video.themoviedb.helper/?info=details&amp;tmdb_type=person&amp;nextpage=false&amp;cacheonly=true&amp;length=1]</content>
@@ -179,6 +182,7 @@
                             <param name="groupid" value="7511" />
                             <param name="label" value="$LOCALIZE[31561]" />
                             <param name="labelinclude" value="View_Cast_Job_Label" />
+                            <param name="icon" value="$VAR[Image_Poster_ListItem]" />
                             <include>Defs_InfoList_OnClick</include>
                             <include>Defs_InfoList_OnBack</include>
                             <content target="videos">$VAR[Path_VideoInfo_OnlineCrew]</content>
