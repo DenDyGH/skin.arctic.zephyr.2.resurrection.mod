@@ -302,20 +302,9 @@
                         <label>$INFO[Container(5600).ListItem.Genre]</label>
                         <height>67</height>
                     </control>
-                    <!-- <include content="Object_Icon_Ratings">
-                        <param name="id" value="5600" />
-                    </include> -->
-                    <!-- Check if we're using TMDb Helper -->
-                    <include content="Object_Icon_Ratings" condition="!System.HasAddon(plugin.video.themoviedb.helper)">
-                        <param name="id" value="5600" />
-                    </include>
-                    <include content="Object_Icon_Ratings" condition="System.HasAddon(plugin.video.themoviedb.helper)">
-                        <param name="id" value="5600" />
-                        <param name="metacritic_prop" value="Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating)" />
-                        <param name="imdb_prop" value="Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)" />
-                        <param name="rt_prop" value="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)" />
-                        <param name="rt_audience_prop" value="Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)" />
-                        <param name="oscar_prop" value="Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)" />
+                    <include content="Object_Ratings_Content">
+                        <!-- <param name="id" value="5600" /> -->
+                        <param name="align" value="center" />
                     </include>
                 </control>
             </control>

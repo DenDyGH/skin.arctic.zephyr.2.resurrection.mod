@@ -10,6 +10,7 @@
     <onunload>ClearProperty(HasTrailer,Home)</onunload>
     <onload>ClearProperty(TMDbHelper.WidgetContainer)</onload>
     <controls>
+        <include condition="Window.IsVisible(fullscreenvideo)">OSD_ExtendedInfo_Background</include>
 
         <!-- Top Info -->
         <control type="group">

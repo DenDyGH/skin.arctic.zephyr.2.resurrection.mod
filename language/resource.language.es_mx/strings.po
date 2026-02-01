@@ -1903,20 +1903,6 @@ msgctxt "#31524"
 msgid "Show \"more...\" folder in widgets"
 msgstr ""
 
-#: /1080i/script-upnext-stillwatching.xml
-msgctxt "#31525"
-msgid "Continue watching in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr "Continuar viendo en [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] segundos"
-
-msgctxt "#31526"
-msgid "Up next in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr "a continuación en [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] segundos"
-
-#: /1080i/script-upnext-upnext.xml
-msgctxt "#31527"
-msgid "Next episode in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-msgstr "siguiente episodio in [COLOR FFFF4081]$INFO[Window.Property(remaining)][/COLOR] seconds"
-
 #: /1080i/SkinSettings.xml
 msgctxt "#31528"
 msgid "This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations."
