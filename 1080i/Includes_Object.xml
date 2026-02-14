@@ -509,161 +509,89 @@
                 <itemgap>20</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
                 <control type="image">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <include content="Object_Variable_Width">
-                        <param name="std" value="64" />
-                        <param name="alt" value="96" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <include content="Object_Variable_Height">
-                        <param name="std" value="56" />
-                        <param name="alt" value="84" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
+                    <texture background="true" colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/other/3D.png</texture>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/other/3D.png</texture>
-                    <visible>!Skin.HasSetting(TextCodecs)</visible>
-                    <visible>ListItem.IsStereoscopic</visible>
+                    <fadetime>100</fadetime>
+                    <height>48</height>
+                    <width>66</width>
+                    <centertop>50%</centertop>
+                    <visible>ListItem.IsStereoscopic + !Skin.HasSetting(TextCodecs)</visible>
                 </control>
                 <control type="image">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <include content="Object_Variable_Width">
-                        <param name="std" value="64" />
-                        <param name="alt" value="96" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <include content="Object_Variable_Height">
-                        <param name="std" value="56" />
-                        <param name="alt" value="84" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
+                    <texture background="true" colordiffuse="main_fg_100">$VAR[Image_HDRCodec]</texture>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">$VAR[Image_HDRCodec]</texture>
+                    <fadetime>100</fadetime>
+                    <height>48</height>
+                    <width>66</width>
+                    <centertop>50%</centertop>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>String.Contains(ListItem.FileNameAndPath,HDR) | !String.IsEmpty(Listitem.HdrType)</visible>
                 </control>
-                <control type="image" id="77881">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <include content="Object_Variable_Width">
-                        <param name="std" value="62" />
-                        <param name="alt" value="93" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <include content="Object_Variable_Height">
-                        <param name="std" value="56" />
-                        <param name="alt" value="84" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
+                <control type="image">
+                    <texture background="true" colordiffuse="main_fg_100">$VAR[Image_RipSource]</texture>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">$VAR[Image_RipSource]</texture>
+                    <fadetime>100</fadetime>
+                    <height>48</height>
+                    <width>66</width>
+                    <centertop>50%</centertop>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>$EXP[Exp_RipSource]</visible>
-                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77881))</visible> -->
                 </control>
-                <control type="image" id="77882">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <include content="Object_Variable_Width">
-                        <param name="std" value="64" />
-                        <param name="alt" value="96" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <include content="Object_Variable_Height">
-                        <param name="std" value="42" />
-                        <param name="alt" value="63" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
+                <control type="image">
+                    <texture background="true" colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[ListItem.VideoResolution].png</texture>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[ListItem.VideoResolution].png</texture>
+                    <fadetime>100</fadetime>
+                    <height>48</height>
+                    <width>66</width>
+                    <centertop>50%</centertop>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
-                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77882))</visible> -->
                 </control>
-                <control type="image" id="77883">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <include content="Object_Variable_Width">
-                        <param name="std" value="71" />
-                        <param name="alt" value="107" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <include content="Object_Variable_Height">
-                        <param name="std" value="48" />
-                        <param name="alt" value="72" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
+                <control type="image">
+                    <texture background="true" colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/source/$INFO[ListItem.VideoCodec].png</texture>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/source/$INFO[ListItem.VideoCodec].png</texture>
+                    <fadetime>100</fadetime>
+                    <height>48</height>
+                    <width>71</width>
+                    <centertop>50%</centertop>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
-                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77883))</visible> -->
                 </control>
-                <control type="image" id="77884">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <include content="Object_Variable_Width">
-                        <param name="std" value="71" />
-                        <param name="alt" value="107" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <include content="Object_Variable_Height">
-                        <param name="std" value="48" />
-                        <param name="alt" value="72" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
+                <control type="image">
+                    <texture background="true" colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/aspectratio/$INFO[ListItem.VideoAspect].png</texture>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/aspectratio/$INFO[ListItem.VideoAspect].png</texture>
+                    <fadetime>100</fadetime>
+                    <height>48</height>
+                    <width>71</width>
+                    <centertop>50%</centertop>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
-                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77884))</visible> -->
                 </control>
-                <control type="image" id="77885">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <include content="Object_Variable_Width">
-                        <param name="std" value="71" />
-                        <param name="alt" value="107" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <include content="Object_Variable_Height">
-                        <param name="std" value="48" />
-                        <param name="alt" value="72" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
+                <control type="image">
+                    <texture background="true" colordiffuse="main_fg_100">$VAR[Image_AudioCodec]</texture>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_100">$VAR[Image_AudioCodec]</texture>
+                    <fadetime>100</fadetime>
+                    <height>48</height>
+                    <width>71</width>
+                    <centertop>50%</centertop>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77885))</visible> -->
                 </control>
-                <control type="image" id="77886">
-                    <left>7</left>
+                <control type="image">
+                    <texture background="true" colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[ListItem.AudioChannels].png</texture>
+                    <aspectratio>keep</aspectratio>
                     <fadetime>100</fadetime>
                     <centertop>50%</centertop>
-                    <include content="Object_Variable_Width">
-                        <param name="std" value="32" />
-                        <param name="alt" value="48" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <include content="Object_Variable_Height">
-                        <param name="std" value="32" />
-                        <param name="alt" value="48" />
-                        <param name="usealt" value="$EXP[FontSetIsLarger]" />
-                    </include>
-                    <aspectratio>scale</aspectratio>
-                    <texture colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[ListItem.AudioChannels].png</texture>
+                    <height>48</height>
+                    <width>71</width>
                     <visible>!Skin.HasSetting(TextCodecs)</visible>
                     <visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
-                    <!-- <visible>!String.IsEmpty(Control.GetLabel(77886))</visible> -->
                 </control>
                 <control type="image">
                     <centertop>50%</centertop>
                     <height>24</height>
                     <width>24</width>
-                    <texture colordiffuse="main_fg_100">flags/video.png</texture>
+                    <texture background="true" colordiffuse="main_fg_100">flags/video.png</texture>
                     <visible>Skin.HasSetting(TextCodecs) + !String.IsEmpty(ListItem.VideoCodec)</visible>
                 </control>
                 <control type="label">
