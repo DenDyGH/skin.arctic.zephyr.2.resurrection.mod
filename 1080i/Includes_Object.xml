@@ -699,107 +699,83 @@
         </definition>
     </include>
 
-    <include name="Object_Codecs_OSD">
-        <param name="width">0</param>
+    <include name="Object_InfoCodecs">
+        <param name="colordiffuse">white</param>
+        <param name="infolabel_videoresolution">ListItem.VideoResolution</param>
+        <param name="infolabel_videoaspect">ListItem.VideoAspect</param>
+        <param name="infolabel_videocodec">ListItem.VideoCodec</param>
+        <param name="infolabel_audiocodec">ListItem.AudioCodec</param>
+        <param name="infolabel_audiochannels">ListItem.AudioChannels</param>
+        <param name="align">right</param>
+        <param name="itemgap">20</param>
+        <param name="top"/>
+        <param name="width"/>
+        <param name="extended">true</param>
+        <param name="textcodecs">false</param>
         <definition>
             <control type="grouplist">
-                <top>-10</top>
+                <visible>!String.IsEmpty($PARAM[infolabel_videoresolution]) + !$PARAM[textcodecs]</visible>
                 <orientation>horizontal</orientation>
+                <align>$PARAM[align]</align>
+                <itemgap>$PARAM[itemgap]</itemgap>
+                <top>$PARAM[top]</top>
                 <width>$PARAM[width]</width>
-                <align>right</align>
-                <itemgap>20</itemgap>
-                <usecontrolcoords>true</usecontrolcoords>
                 <control type="image">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <width>64</width>
-                    <height>56</height>
-                    <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/other/3D.png</texture>
-                    <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>VideoPlayer.IsStereoscopic</visible>
-                </control>
-                <control type="image" id="78880">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <width>62</width>
-                    <height>56</height>
-                    <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="panel_fg_100">$VAR[Image_HDRCodec]</texture>
-                    <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78880))</visible>
-                </control>
-                <control type="image" id="78881">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <width>62</width>
-                    <height>56</height>
-                    <aspectratio align="left">keep</aspectratio>
-                    <texture colordiffuse="panel_fg_100">$VAR[Image_VideoPlayer_RipSource]</texture>
-                    <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78881))</visible>
-                </control>
-                <control type="image" id="78882">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <width>64</width>
-                    <height>42</height>
+                    <texture background="true" colordiffuse="$PARAM[colordiffuse]">$VAR[Image_HDRCodec]</texture>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[VideoPlayer.VideoResolution].png</texture>
-                    <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78882))</visible>
-                </control>
-                <control type="image" id="78883">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <width>71</width>
                     <height>48</height>
+                    <width>66</width>
+                    <centertop>50%</centertop>
+                    <visible>$PARAM[extended]</visible>
+                </control>
+                <control type="image">
+                    <texture background="true" colordiffuse="$PARAM[colordiffuse]">flags/$INFO[Skin.String(Icons)]/resolution/$INFO[$PARAM[infolabel_videoresolution]].png</texture>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/source/$INFO[VideoPlayer.VideoCodec].png</texture>
-                    <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78883))</visible>
-                </control>
-                <control type="group">
-                    <width>71</width>
                     <height>48</height>
+                    <width>66</width>
                     <centertop>50%</centertop>
-                    <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Player.Process(VideoFPS)) + Integer.IsGreater(Player.Process(VideoFPS),0)</visible>
-                    <control type="image">
-                        <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/other/fps.png</texture>
-                        <aspectratio align="center">keep</aspectratio>
-                    </control>
-                    <control type="label">
-                        <height>24</height>
-                        <bottom>2</bottom>
-                        <textcolor>panel_fg_100</textcolor>
-                        <font>font_fps</font>
-                        <label>$INFO[Player.Process(VideoFPS)]</label>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                    </control>
+                    <visible>!String.IsEmpty($PARAM[infolabel_videoresolution])</visible>
                 </control>
-                <control type="image" id="78884">
-                    <fadetime>100</fadetime>
-                    <centertop>50%</centertop>
-                    <width>71</width>
-                    <height>48</height>
+                <control type="image">
+                    <texture background="true" colordiffuse="$PARAM[colordiffuse]">flags/$INFO[Skin.String(Icons)]/aspectratio/$INFO[$PARAM[infolabel_videoaspect]].png</texture>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="panel_fg_100">$VAR[Image_AudioCodec]</texture>
-                    <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78884))</visible>
-                </control>
-                <control type="image" id="78885">
-                    <left>7</left>
-                    <fadetime>100</fadetime>
+                    <height>48</height>
+                    <width>71</width>
                     <centertop>50%</centertop>
-                    <width>32</width>
-                    <height>32</height>
-                    <aspectratio>scale</aspectratio>
-                    <texture colordiffuse="panel_fg_100">flags/$INFO[Skin.String(Icons)]/channels/$INFO[VideoPlayer.AudioChannels].png</texture>
-                    <visible>!Skin.HasSetting(TextCodecs_OSD)</visible>
-                    <visible>!String.IsEmpty(Control.GetLabel(78885))</visible>
+                    <visible>!String.IsEmpty($PARAM[infolabel_videoaspect])</visible>
                 </control>
+                <control type="image">
+                    <texture background="true" colordiffuse="$PARAM[colordiffuse]">flags/$INFO[Skin.String(Icons)]/source/$INFO[$PARAM[infolabel_videocodec]].png</texture>
+                    <aspectratio>keep</aspectratio>
+                    <height>48</height>
+                    <width>71</width>
+                    <centertop>50%</centertop>
+                    <visible>!String.IsEmpty($PARAM[infolabel_videocodec])</visible>
+                </control>
+                <control type="image">
+                    <texture background="true" colordiffuse="$PARAM[colordiffuse]">$VAR[Image_AudioCodec]</texture>
+                    <aspectratio>keep</aspectratio>
+                    <height>48</height>
+                    <width>71</width>
+                    <centertop>50%</centertop>
+                    <visible>!String.IsEmpty($PARAM[infolabel_audiocodec])</visible>
+                </control>
+                <control type="image">
+                    <texture background="true" colordiffuse="$PARAM[colordiffuse]">flags/$INFO[Skin.String(Icons)]/channels/$INFO[$PARAM[infolabel_audiochannels]].png</texture>
+                    <aspectratio>keep</aspectratio>
+                    <height>48</height>
+                    <width>71</width>
+                    <centertop>50%</centertop>
+                    <visible>!String.IsEmpty($PARAM[infolabel_audiochannels])</visible>
+                </control>
+            </control>
+            <control type="grouplist">
+                <visible>!String.IsEmpty($PARAM[infolabel_videoresolution]) + $PARAM[textcodecs]</visible>
+                <orientation>horizontal</orientation>
+                <align>$PARAM[align]</align>
+                <itemgap>$PARAM[itemgap]</itemgap>
+                <top>$PARAM[top]</top>
+                <width>$PARAM[width]</width>
                 <control type="label">
                     <centertop>50%</centertop>
                     <align>left</align>
@@ -809,14 +785,13 @@
                     <textcolor>main_fg_90</textcolor>
                     <label max="350">$VAR[Label_VideoPlayer_VideoCodec, ,  •  ]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
                     <height>32</height>
-                    <visible>Skin.HasSetting(TextCodecs_OSD)</visible>
                 </control>
                 <control type="image">
                     <centertop>55%</centertop>
                     <height>32</height>
                     <width>32</width>
                     <texture colordiffuse="main_fg_100">flags/audio.png</texture>
-                    <visible>Skin.HasSetting(TextCodecs_OSD) + !String.IsEmpty(VideoPlayer.AudioCodec)</visible>
+                    <visible>!String.IsEmpty($PARAM[infolabel_audiocodec])</visible>
                 </control>
                 <control type="label">
                     <centertop>50%</centertop>
@@ -827,7 +802,6 @@
                     <textcolor>main_fg_90</textcolor>
                     <label max="350">$VAR[Label_AudioCodec]$VAR[Label_VideoPlayer_AudioChannels,  •  ,]</label>
                     <height>32</height>
-                    <visible>Skin.HasSetting(TextCodecs_OSD)</visible>
                 </control>
             </control>
         </definition>
