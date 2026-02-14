@@ -1791,7 +1791,7 @@
                 <right>20</right>
                 <include content="Object_Control" condition="$PARAM[selected]">
                     <param name="control">image</param>
-                    <texture border="40" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+                    <texture border="16" colordiffuse="$VAR[ColorHighlight]">common/dialog.png</texture>
                 </include>
                 <control type="group">
                     <left>40</left>
