@@ -676,7 +676,14 @@
                                 <font>font_small</font>
                                 <visible>Pvr.IsPlayingTv</visible>
                             </control>
-                            <include condition="!Skin.HasSetting(DisableOSDInfo)">Object_Codecs_OSD</include>
+                            <include content="Object_InfoCodecs" condition="!Skin.HasSetting(DisableOSDInfo)">
+                                <param name="infolabel_videoresolution">VideoPlayer.VideoResolution</param>
+                                <param name="infolabel_videoaspect">VideoPlayer.VideoAspect</param>
+                                <param name="infolabel_videocodec">VideoPlayer.VideoCodec</param>
+                                <param name="infolabel_audiocodec">VideoPlayer.AudioCodec</param>
+                                <param name="infolabel_audiochannels">VideoPlayer.AudioChannels</param>
+                                <param name="textcodecs">Skin.HasSetting(TextCodecs_OSD)</param>
+                            </include>
                         </control>
                         <control type="textbox">
                             <aligny>top</aligny>
@@ -765,8 +772,14 @@
                                 <textcolor>$VAR[ColorHighlight]</textcolor>
                                 <font>font_small</font>
                             </control>
-                            <include content="Object_Codecs_OSD" condition="Skin.HasSetting(DisableOSDInfo) + !Skin.HasSetting(HideOSDInfoPanel)">
-                                <param name="width" value="1760" />
+                            <include content="Object_InfoCodecs" condition="Skin.HasSetting(DisableOSDInfo) + !Skin.HasSetting(HideOSDInfoPanel)">
+                                <param name="infolabel_videoresolution">VideoPlayer.VideoResolution</param>
+                                <param name="infolabel_videoaspect">VideoPlayer.VideoAspect</param>
+                                <param name="infolabel_videocodec">VideoPlayer.VideoCodec</param>
+                                <param name="infolabel_audiocodec">VideoPlayer.AudioCodec</param>
+                                <param name="infolabel_audiochannels">VideoPlayer.AudioChannels</param>
+                                <param name="width">1760</param>
+                                <param name="textcodecs">Skin.HasSetting(TextCodecs_OSD)</param>
                             </include>
                         </control>
                     </control>
@@ -804,8 +817,13 @@
                         </control>
                         <control type="group">
                             <top>420</top>
-                            <include content="Object_Codecs_OSD" condition="Skin.HasSetting(DisableOSDInfo) + Skin.HasSetting(HideOSDInfoPanel)">
-                                <param name="width" value="1760" />
+                            <include content="Object_InfoCodecs" condition="Skin.HasSetting(DisableOSDInfo) + Skin.HasSetting(HideOSDInfoPanel)">
+                                <param name="infolabel_videoresolution">VideoPlayer.VideoResolution</param>
+                                <param name="infolabel_videoaspect">VideoPlayer.VideoAspect</param>
+                                <param name="infolabel_videocodec">VideoPlayer.VideoCodec</param>
+                                <param name="infolabel_audiocodec">VideoPlayer.AudioCodec</param>
+                                <param name="infolabel_audiochannels">VideoPlayer.AudioChannels</param>
+                                <param name="textcodecs">Skin.HasSetting(TextCodecs_OSD)</param>
                             </include>
                         </control>
                     </control>
@@ -1773,7 +1791,7 @@
                 <right>20</right>
                 <include content="Object_Control" condition="$PARAM[selected]">
                     <param name="control">image</param>
-                    <texture border="40" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+                    <texture border="16" colordiffuse="$VAR[ColorHighlight]">common/dialog.png</texture>
                 </include>
                 <control type="group">
                     <left>40</left>
@@ -1970,12 +1988,26 @@
     <include name="OSD_Codecs">
         <param name="textcolor_sub">panel_fg_70</param>
         <param name="textcolor_top">panel_fg_90</param>
+        <param name="itemgap">15</param>
+        <param name="align">center</param>
         <definition>
             <control type="group">
                 <centertop>50%</centertop>
                 <height>80</height>
-                <include content="Object_InfoCircle">
-                    <param name="name">[UPPERCASE]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoCodec, • ,]$VAR[Label_HDRType, • ,]$INFO[VideoPlayer.VideoAspect, • ,:1]$INFO[VideoPlayer.AudioCodec, • ,]$VAR[Label_VideoPlayer_AudioChannels, • ,][/UPPERCASE]</param>
+                <include content="Object_InfoCodecs" condition="!Skin.HasSetting(TextCodecs_OSD)">
+                    <param name="colordiffuse">$PARAM[textcolor_top]</param>
+                    <param name="infolabel_videoresolution">VideoPlayer.VideoResolution</param>
+                    <param name="infolabel_videoaspect">VideoPlayer.VideoAspect</param>
+                    <param name="infolabel_videocodec">VideoPlayer.VideoCodec</param>
+                    <param name="infolabel_audiocodec">VideoPlayer.AudioCodec</param>
+                    <param name="infolabel_audiochannels">VideoPlayer.AudioChannels</param>
+                    <param name="itemgap">$PARAM[itemgap]</param>
+                    <param name="align">$PARAM[align]</param>
+                    <param name="top">20</param>
+                    <param name="extended">false</param>
+                </include>
+                <include content="Object_InfoCircle" condition="Skin.HasSetting(TextCodecs_OSD)">
+                    <param name="name">[UPPERCASE]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoCodec, • ,]$VAR[Label_HDRType, • ,]$INFO[VideoPlayer.VideoAspect, • ,:1]$VAR[Label_AudioCodec, • ,]$VAR[Label_VideoPlayer_AudioChannels, • ,][/UPPERCASE]</param>
                     <param name="role">$INFO[VideoPlayer.VideoVersionName]</param>
                     <param name="fallback_role">$LOCALIZE[31503]</param>
                     <param name="textcolor_top">$PARAM[textcolor_top]</param>
