@@ -33,7 +33,7 @@
                 <visible>!Window.IsVisible(DialogSlider.xml)</visible>
                 <visible>!Window.IsVisible(VideoOSDBookmarks.xml)</visible>
                 <animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9605)">Conditional</animation>
-                    
+
                 <control type="grouplist" id="9000">
                     <include condition="!VideoPlayer.Content(musicvideos) + !VideoPlayer.Content(LiveTV)">OSD_VideoPosition</include>
                     <include condition="VideoPlayer.Content(musicvideos) + !VideoPlayer.Content(LiveTV)">OSD_MusicPosition</include>
@@ -122,6 +122,7 @@
                             <param name="control">button</param>
                             <label />
                             <font />
+                            <texturefocus border="16" colordiffuse="$VAR[ColorHighlight]">common/dialog.png</texturefocus>
                             <onclick>Action(PlayerProcessInfo)</onclick>
                         </include>
                         <control type="group" id="6895">
@@ -170,6 +171,7 @@
                             <onup>6805</onup>
                             <ondown>41</ondown>
                             <height>160</height>
+                            <texturefocus border="16" colordiffuse="$VAR[ColorHighlight]">common/dialog.png</texturefocus>
                             <onleft condition="Player.Paused">PlayerControl(Play)</onleft>
                             <onright condition="Player.Paused">PlayerControl(Play)</onright>
                             <onleft condition="Player.TempoEnabled">PlayerControl(TempoDown)</onleft>
@@ -259,7 +261,7 @@
                     <textureslidernib />
                     <textureslidernibfocus />
                     <visible>Control.HasFocus(6501) + !VideoPlayer.Content(LiveTV)</visible>
-                    <visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog)]</visible>	
+                    <visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(subtitlesearch) | Window.IsVisible(selectdialog)]</visible>
                 </control>
             </control>
         </control>
