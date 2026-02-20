@@ -251,10 +251,10 @@
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.1.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=tv&amp;with_networks=$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.1.TMDb_ID)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.2.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=tv&amp;with_networks=$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.2.TMDb_ID)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Network.3.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=tv&amp;with_networks=$INFO[Window(Home).Property(TMDbHelper.ListItem.Network.3.TMDb_ID)]</value>
-
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.2.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.2.TMDb_ID)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio.3.TMDb_ID))">plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.3.TMDb_ID)]</value>
+        <value>plugin://plugin.video.themoviedb.helper/?info=discover&amp;nextpage=false&amp;cacheonly=true&amp;length=1&amp;with_id=True&amp;tmdb_type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.TMDb_ID)]</value>
     </variable>
 
     <variable name="Path_VideoInfo_OnlinePoster">
