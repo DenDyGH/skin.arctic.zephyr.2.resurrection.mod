@@ -115,10 +115,22 @@
                             <label>$LOCALIZE[31139]</label>
                         </control>
 
-                        <control type="button" id="19101" description="Customise Home">
+                        <control type="button" id="19101" description="Skinshortcuts mainmenu">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31109]</label>
                             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+                        </control>
+
+                        <control type="button" id="19303" description="Skinshortcuts powermenu">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31027]</label>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+                        </control>
+
+                        <control type="button" id="19306" description="Skinshortcuts searchmenu">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31166]</label>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=searchmenu)</onclick>
                         </control>
 
                         <control type="button" id="19102" description="Home Layout">
@@ -467,29 +479,6 @@
                             <onclick>Skin.ToggleSetting(EnableHighContrastWidgetText)</onclick>
                         </control>
 
-                        <control type="label" id="19382" description="LABEL">
-                            <include>Dialog_Standard_HintLabel</include>
-                            <label>$LOCALIZE[31165]</label>
-                        </control>
-
-                        <control type="button" id="19303" description="Customise Shutdown Menu">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31027]</label>
-                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
-                        </control>
-
-                        <control type="button" id="19304" description="Info lists">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31015]</label>
-                            <onclick>ActivateWindow(1119)</onclick>
-                        </control>
-
-                        <control type="button" id="19306" description="Search lists">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31166]</label>
-                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=searchmenu)</onclick>
-                        </control>
-
                         <control type="label" id="19385" description="LABEL">
                             <include>Dialog_Standard_HintLabel</include>
                             <label>$LOCALIZE[31540]</label>
@@ -585,6 +574,12 @@
                             <label>$LOCALIZE[31439]</label>
                             <selected>Skin.HasSetting(EnableShowItemCount)</selected>
                             <onclick>Skin.ToggleSetting(EnableShowItemCount)</onclick>
+                        </control>
+
+                        <control type="button" id="19304" description="Recommendations dialog">
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31015]</label>
+                            <onclick>ActivateWindow(1119)</onclick>
                         </control>
 
                         <control type="label" id="19481" description="LABEL">

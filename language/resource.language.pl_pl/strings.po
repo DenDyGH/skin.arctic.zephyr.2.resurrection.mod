@@ -86,7 +86,7 @@ msgstr "Dodatkowy fanart"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31015"
-msgid "Customise recommendations window"
+msgid "Customise recommendations"
 msgstr "Dostosuj okno informacji"
 
 #: /1080i/SkinSettings.xml
@@ -808,14 +808,9 @@ msgid "Start-up"
 msgstr "Ładowanie"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31165"
-msgid "Custom lists"
-msgstr "Niestandardowe listy"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31166"
-msgid "Choose search lists"
-msgstr "Wybierz listy wyszukiwania"
+msgid "Customise search menu"
+msgstr "Dostosuj menu wyszukiwania"
 
 #: /1080i/Custom_1120_EnableSearchLists.xml
 msgctxt "#31167"
