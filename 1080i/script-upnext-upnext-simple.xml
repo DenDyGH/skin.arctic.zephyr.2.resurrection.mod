@@ -7,7 +7,7 @@
         <control type="group">
             <control type="image">
                 <height>300</height>
-                <top>0</top>
+                <top>-150</top>
                 <texture flipy="true">common/osd-dim.png</texture>
             </control>
             <control type="group">
