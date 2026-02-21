@@ -2248,12 +2248,12 @@ msgstr "设置 Flix 视图预告片播放延迟"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31594"
-msgid "4 秒之前"
+msgid "4 seconds"
 msgstr "4 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31595"
-msgid "7 秒之前"
+msgid "7 seconds"
 msgstr "7 秒"
 
 #: /1080i/SkinSettings.xml
