@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2003">
     <defaultcontrol always="true">300</defaultcontrol>
+    <onload>ClearProperty(TMDbHelper.WidgetContainer)</onload>
+    <onload>SetProperty(TMDbHelper.EnableExtendedProperties,True)</onload>
     <onload>ClearProperty(FilePath,home)</onload>
     <onload>ClearProperty(Header_Left_Text)</onload>
     <onload>ClearProperty(Header_Center_Text)</onload>
@@ -8,7 +10,6 @@
     <onunload>ClearProperty(FilePath,home)</onunload>
     <onunload>ClearProperty(OSD_Menu,Home)</onunload>
     <onunload>ClearProperty(HasTrailer,Home)</onunload>
-    <onload>ClearProperty(TMDbHelper.WidgetContainer)</onload>
     <controls>
         <include condition="Window.IsVisible(fullscreenvideo)">OSD_ExtendedInfo_Background</include>
 
