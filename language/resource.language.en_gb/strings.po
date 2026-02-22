@@ -86,7 +86,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31015"
-msgid "Customise recommendations window"
+msgid "Customise recommendations"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -808,13 +808,8 @@ msgid "Start-up"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31165"
-msgid "Custom lists"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31166"
-msgid "Choose search lists"
+msgid "Customise search menu"
 msgstr ""
 
 #: /1080i/Custom_1120_EnableSearchLists.xml

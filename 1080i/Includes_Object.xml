@@ -1235,9 +1235,9 @@
                 </include>
                 <include content="Flix_Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
                     <param name="id" value="$PARAM[uid]11" />
-                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)]" />
+                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.base_genre)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name))  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)]" />
+                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_genre))  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)]" />
                 </include>
                 <include content="Flix_Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]04" />
@@ -1369,9 +1369,9 @@
                 </include>
                 <include content="Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
                     <param name="id" value="$PARAM[uid]11" />
-                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)]" />
+                    <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.base_genre)]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name))  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)] + !$PARAM[fullgenre]" />
+                    <param name="visible" value="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_genre))  + [String.IsEqual($PARAM[container]ListItem.DBType,tvshow) | String.IsEqual($PARAM[container]ListItem.DBType,movie)] + !$PARAM[fullgenre]" />
                 </include>
                 <include content="Object_Info_Line_Label" condition="!Skin.HasSetting(Infoline.DisableGenre)">
                     <param name="id" value="$PARAM[uid]12" />

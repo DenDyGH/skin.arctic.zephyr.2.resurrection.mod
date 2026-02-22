@@ -6,8 +6,9 @@
     <!-- Start TMDbH service -->
     <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.Service)</onload>
     <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.UseLocalWidgetContainer)</onload>
-    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.Reset(TMDbHelper.MonitorContainer)</onload>
     <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.DirectCallAuto)</onload>
+    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.SetBool(TMDbHelper.DisableExtendedProperties)</onload>
+    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.Reset(TMDbHelper.MonitorContainer)</onload>
 
     <!-- Skin Init -->
     <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff283ba8)</onload>
