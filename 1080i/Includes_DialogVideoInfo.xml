@@ -154,7 +154,7 @@
                         <include content="Info_Widget_Poster" condition="!Skin.HasSetting(DisableInfoListSeasons) + String.IsEqual(ListItem.DBType,tvshow)">
                             <param name="id" value="5008" />
                             <param name="groupid" value="7508" />
-                            <param name="label" value="Seasons" />
+                            <param name="label" value="$LOCALIZE[33054]" />
                             <onclick>SetFocus(50)</onclick>
                             <onclick>SetFocus(300)</onclick>
                             <onclick>Dialog.Close(all,force)</onclick>

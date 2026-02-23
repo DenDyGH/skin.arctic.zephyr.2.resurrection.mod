@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">3012</defaultcontrol>
+    <defaultcontrol always="true">20</defaultcontrol>
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>
     <controls>
@@ -13,7 +13,7 @@
             <control type="group">
                 <left>view_pad</left>
                 <right>view_pad</right>
-                <top>view_pad</top>
+                <top>30</top>
                 <height>163</height>
                 <!-- Image -->
                 <control type="group">
@@ -78,7 +78,7 @@
                             <param name="visible" value="true" />
                         </include>
                     </control>
-                    <control type="grouplist">
+                    <control type="grouplist" id="20">
                         <left>-16</left>
                         <bottom>-16</bottom>
                         <height>90</height>

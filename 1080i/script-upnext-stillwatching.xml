@@ -13,7 +13,7 @@
             <control type="group">
                 <left>view_pad</left>
                 <right>view_pad</right>
-                <top>view_pad</top>
+                <top>40</top>
                 <height>163</height>
                 <!-- Image -->
                 <control type="group">
