@@ -7,13 +7,15 @@
         <control type="group">
             <control type="image">
                 <height>300</height>
-                <top>0</top>
-                <texture flipy="true">common/osd-dim.png</texture>
+                <top>-100</top>
+                <left>-380</left>
+                <width>1500</width>
+                <texture>common/shadowspot.png</texture>
             </control>
             <control type="group">
                 <left>view_pad</left>
                 <right>view_pad</right>
-                <top>view_pad</top>
+                <top>40</top>
                 <control type="button" id="3012">
                     <top>-1000</top>
                     <include>Defs_Hidden_Button</include>
