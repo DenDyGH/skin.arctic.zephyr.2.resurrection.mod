@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">20</defaultcontrol>
+    <defaultcontrol always="true">3012</defaultcontrol>
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>
     <controls>
@@ -16,10 +16,6 @@
                 <left>view_pad</left>
                 <right>view_pad</right>
                 <top>40</top>
-                <control type="button" id="3012">
-                    <top>-1000</top>
-                    <include>Defs_Hidden_Button</include>
-                </control>
                 <control type="grouplist" id="20">
                     <left>-16</left>
                     <top>-16</top>
@@ -27,27 +23,16 @@
                     <orientation>horizontal</orientation>
                     <itemgap>0</itemgap>
                     <include content="Object_IconicButton">
-                        <param name="id" value="10" />
+                        <param name="id" value="3012" />
                         <param name="groupid" value="9010" />
-                        <param name="label" value="$ADDON[service.upnext 30010]" />
+                        <param name="label" value="$VAR[Label_UpNext_StillWatching_Play]" />
                         <param name="icon" value="special://skin/extras/icons/play3.png" />
-                        <param name="visible" value="Integer.IsGreater(Window.Property(remaining),60)" />
-                        <onclick>SendClick(3012)</onclick>
-                    </include>
-                    <include content="Object_IconicButton">
-                        <param name="id" value="11" />
-                        <param name="groupid" value="9011" />
-                        <param name="label" value="$ADDON[service.upnext 30035]" />
-                        <param name="icon" value="special://skin/extras/icons/play3.png" />
-                        <param name="visible" value="Integer.IsLessOrEqual(Window.Property(remaining),60)" />
-                        <onclick>SendClick(3012)</onclick>
                     </include>
                     <include content="Object_IconicButton">
                         <param name="id" value="3013" />
                         <param name="groupid" value="9013" />
                         <param name="label" value="$ADDON[service.upnext 30034]" />
                         <param name="icon" value="special://skin/extras/icons/disabled.png" />
-                        <param name="visible" value="true" />
                     </include>
                 </control>
             </control>
