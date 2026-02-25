@@ -697,4 +697,13 @@
         <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item05),User)">$LOCALIZE[858]</value>
         <value>$INFO[Skin.String(CustomRating.TVShows.Item05)]</value>
     </variable>
+
+    <variable name="Label_UpNext_Play">
+        <value condition="Integer.IsGreater(Window.Property(remaining),60)">$ADDON[service.upnext 30006]</value>
+        <value condition="Integer.IsLessOrEqual(Window.Property(remaining),60)">$ADDON[service.upnext 30036]</value>
+    </variable>
+    <variable name="Label_UpNext_StillWatching_Play">
+        <value condition="Integer.IsGreater(Window.Property(remaining),60)">$ADDON[service.upnext 30010]</value>
+        <value condition="Integer.IsLessOrEqual(Window.Property(remaining),60)">$ADDON[service.upnext 30035]</value>
+    </variable>
 </includes>

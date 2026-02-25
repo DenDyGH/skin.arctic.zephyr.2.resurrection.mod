@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">20</defaultcontrol>
+    <defaultcontrol always="true">3012</defaultcontrol>
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>
     <controls>
@@ -84,10 +84,6 @@
                             <param name="visible" value="true" />
                         </include>
                     </control>
-                    <control type="button" id="3012">
-                        <top>-1000</top>
-                        <include>Defs_Hidden_Button</include>
-                    </control>
                     <control type="grouplist" id="20">
                         <left>-16</left>
                         <bottom>-16</bottom>
@@ -95,39 +91,17 @@
                         <orientation>horizontal</orientation>
                         <itemgap>0</itemgap>
                         <include content="Object_IconicButton">
-                            <param name="id" value="10" />
+                            <param name="id" value="3012" />
                             <param name="groupid" value="9010" />
-                            <param name="label" value="$ADDON[service.upnext 30010]" />
+                            <param name="label" value="$VAR[Label_UpNext_StillWatching_Play]" />
                             <param name="icon" value="special://skin/extras/icons/play3.png" />
-                            <param name="visible" value="Integer.IsGreater(Window.Property(remaining),60)" />
-                            <onclick>SendClick(3012)</onclick>
-                        </include>
-                        <include content="Object_IconicButton">
-                            <param name="id" value="11" />
-                            <param name="groupid" value="9011" />
-                            <param name="label" value="$ADDON[service.upnext 30035]" />
-                            <param name="icon" value="special://skin/extras/icons/play3.png" />
-                            <param name="visible" value="Integer.IsLessOrEqual(Window.Property(remaining),60)" />
-                            <onclick>SendClick(3012)</onclick>
                         </include>
                         <include content="Object_IconicButton">
                             <param name="id" value="3013" />
                             <param name="groupid" value="9013" />
-                            <param name="label" value="$INFO[Window.Property(stop_close_label)]" />
+                            <param name="label" value="$ADDON[service.upnext 30033]" />
                             <param name="icon" value="special://skin/extras/icons/disabled.png" />
-                            <param name="visible" value="true" />
-                            <param name="onclick" value="RunPlugin($INFO[Window.Property(action_stop)])" />
                         </include>
-                        <control type="togglebutton" id="3015">
-                            <visible>String.IsEqual(Window.Property(shuffle_enable),True)</visible>
-                            <selected>String.IsEqual(Window.Property(shuffle_on),True)</selected>
-                            <texturenofocus colordiffuse="FF212121">shuffle.png</texturenofocus>
-                            <texturefocus colordiffuse="$INFO[Window.Property(accent_colour)]">shuffle.png</texturefocus>
-                            <alttexturenofocus colordiffuse="DDFFFFFF">shuffle.png</alttexturenofocus>
-                            <alttexturefocus colordiffuse="$INFO[Window.Property(accent_colour)]">shuffle.png</alttexturefocus>
-                            <width>56</width>
-                            <height>56</height>
-                        </control>
                     </control>
                 </control>
             </control>
