@@ -2133,14 +2133,6 @@
         </content>
     </include>
 
-    <include name="Items_MainMenu">
-        <content><include>skinshortcuts-mainmenu</include></content>
-    </include>
-
-    <include name="Items_SubMenu">
-        <content><include>skinshortcuts-submenu</include></content>
-    </include>
-
     <include name="Items_SettingsDialog_Layout">
         <control type="button" id="9001">
             <label>$LOCALIZE[31584]</label>
