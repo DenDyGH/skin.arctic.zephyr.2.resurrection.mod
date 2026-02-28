@@ -1703,10 +1703,10 @@ msgctxt "#31482"
 msgid "Configure viewtypes"
 msgstr "配置视图类型"
 
-#: /1080i/Custom_1151_Wizard.xml
-msgctxt "#30073"
-msgid "Enable ratings for movies/tv shows"
-msgstr "启用电影/电视剧评分"
+#: /1080i/SkinSettings.xml
+msgctxt "#31483"
+msgid "Show episodes count"
+msgstr "显示剧集数量"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31484"
