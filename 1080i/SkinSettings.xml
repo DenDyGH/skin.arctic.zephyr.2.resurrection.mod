@@ -547,6 +547,12 @@
                             <onclick>SetProperty(CustomDialogWindow.items,Settings_RatingsTVShows,Home)</onclick>
                             <onclick>ActivateWindow(1150)</onclick>
                         </control>
+                        <control type="radiobutton" id="19542" description="Show rating for episodes">
+                            <include>Defs_Settings_Button</include>
+                            <label> - $LOCALIZE[31597]</label>
+                            <selected>Skin.HasSetting(ShowEpisodeRatings)</selected>
+                            <onclick>Skin.ToggleSetting(ShowEpisodeRatings)</onclick>
+                        </control>
 
                         <control type="label" id="19483" description="LABEL">
                             <include>Dialog_Standard_HintLabel</include>
