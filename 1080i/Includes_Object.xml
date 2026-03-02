@@ -1922,7 +1922,7 @@
                 <orientation>horizontal</orientation>
                 <align>$PARAM[align]</align>
                 <itemgap>12</itemgap>
-                <visible>String.IsEqual($PARAM[listitem].DBType,movie) | VideoPlayer.Content(movies) | String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</visible>
+                <visible>String.IsEqual($PARAM[listitem].DBType,movie) | VideoPlayer.Content(movies) | String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | [String.IsEqual($PARAM[listitem].DBType,episode) + Skin.HasSetting(ShowEpisodeRatings)] | VideoPlayer.Content(episodes)</visible>
                 <visible>$EXP[RatingsVisiblity]</visible>
 
                 <include content="Object_Info_Ratings">
@@ -1964,37 +1964,37 @@
                 <include content="Object_Info_Ratings">
                     <param name="content">TVShows</param>
                     <param name="item">Item01</param>
-                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
+                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | [String.IsEqual($PARAM[listitem].DBType,episode) + Skin.HasSetting(ShowEpisodeRatings)] | VideoPlayer.Content(episodes)</param>
                     <param name="service">$PARAM[service]</param>
                 </include>
                 <include content="Object_Info_Ratings">
                     <param name="content">TVShows</param>
                     <param name="item">Item02</param>
-                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
+                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | [String.IsEqual($PARAM[listitem].DBType,episode) + Skin.HasSetting(ShowEpisodeRatings)] | VideoPlayer.Content(episodes)</param>
                     <param name="service">$PARAM[service]</param>
                 </include>
                 <include content="Object_Info_Ratings">
                     <param name="content">TVShows</param>
                     <param name="item">Item03</param>
-                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
+                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | [String.IsEqual($PARAM[listitem].DBType,episode) + Skin.HasSetting(ShowEpisodeRatings)] | VideoPlayer.Content(episodes)</param>
                     <param name="service">$PARAM[service]</param>
                 </include>
                 <include content="Object_Info_Ratings">
                     <param name="content">TVShows</param>
                     <param name="item">Item04</param>
-                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
+                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | [String.IsEqual($PARAM[listitem].DBType,episode) + Skin.HasSetting(ShowEpisodeRatings)] | VideoPlayer.Content(episodes)</param>
                     <param name="service">$PARAM[service]</param>
                 </include>
                 <include content="Object_Info_Ratings">
                     <param name="content">TVShows</param>
                     <param name="item">Item05</param>
-                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
+                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | [String.IsEqual($PARAM[listitem].DBType,episode) + Skin.HasSetting(ShowEpisodeRatings)] | VideoPlayer.Content(episodes)</param>
                     <param name="service">$PARAM[service]</param>
                 </include>
                 <include content="Object_Info_Ratings">
                     <param name="content">TVShows</param>
                     <param name="item">Item06</param>
-                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
+                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | [String.IsEqual($PARAM[listitem].DBType,episode) + Skin.HasSetting(ShowEpisodeRatings)] | VideoPlayer.Content(episodes)</param>
                     <param name="service">$PARAM[service]</param>
                 </include>
             </control>

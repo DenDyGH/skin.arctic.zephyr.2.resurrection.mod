@@ -2242,3 +2242,8 @@ msgstr ""
 msgctxt "#31596"
 msgid "Awards"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31597"
+msgid "show rating for episodes"
+msgstr ""
