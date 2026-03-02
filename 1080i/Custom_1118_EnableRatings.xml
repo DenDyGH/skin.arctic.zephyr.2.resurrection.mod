@@ -57,6 +57,10 @@
                     <param name="item">Item05</param>
                     <param name="content">Movies</param>
                 </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item06) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),Movies)">
+                    <param name="item">Item06</param>
+                    <param name="content">Movies</param>
+                </include>
                 <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item01) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),TVShows)">
                     <param name="item">Item01</param>
                     <param name="content">TVShows</param>
@@ -75,6 +79,10 @@
                 </include>
                 <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item05) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),TVShows)">
                     <param name="item">Item05</param>
+                    <param name="content">TVShows</param>
+                </include>
+                <include content="Items_Dialog_RatingType" condition="String.IsEqual(Window(Home).Property(ConfigureRatingItem),Item06) + String.IsEqual(Window(Home).Property(ConfigureRatingContent),TVShows)">
+                    <param name="item">Item06</param>
                     <param name="content">TVShows</param>
                 </include>
             </control>

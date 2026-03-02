@@ -1956,6 +1956,12 @@
                     <param name="service">$PARAM[service]</param>
                 </include>
                 <include content="Object_Info_Ratings">
+                    <param name="content">Movies</param>
+                    <param name="item">Item06</param>
+                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,movie) | VideoPlayer.Content(movies)</param>
+                    <param name="service">$PARAM[service]</param>
+                </include>
+                <include content="Object_Info_Ratings">
                     <param name="content">TVShows</param>
                     <param name="item">Item01</param>
                     <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
@@ -1982,6 +1988,12 @@
                 <include content="Object_Info_Ratings">
                     <param name="content">TVShows</param>
                     <param name="item">Item05</param>
+                    <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
+                    <param name="service">$PARAM[service]</param>
+                </include>
+                <include content="Object_Info_Ratings">
+                    <param name="content">TVShows</param>
+                    <param name="item">Item06</param>
                     <param name="visible">String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season) | VideoPlayer.Content(episodes)</param>
                     <param name="service">$PARAM[service]</param>
                 </include>
@@ -2044,7 +2056,7 @@
             </include>
             <include content="Object_Rating_Line_Label" condition="Skin.String(CustomRating.$PARAM[content].$PARAM[item],IMDb)">
                 <param name="icon">flags/$PARAM[directory]/ratings/imdb.png</param>
-                <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[service].IMDb_Rating),,]$INFO[Window(Home).Property(TMDbHelper.$PARAM[service].Top250),  #,]</param>
+                <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[service].IMDb_Rating),,]</param>
                 <param name="icon_w">52</param>
                 <param name="visible">[$PARAM[visible]] + !String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[service].IMDb_Rating))</param>
             </include>
