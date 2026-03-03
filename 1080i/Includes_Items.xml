@@ -2900,6 +2900,14 @@
             <onclick>SetProperty(ConfigureRatingContent,Movies,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
         </control>
+        <control type="button" id="9006">
+            <include>Dialog_Standard_Button</include>
+            <label>$LOCALIZE[563] 06</label>
+            <label2>$VAR[Label_CustomRating_Movies_06]</label2>
+            <onclick>SetProperty(ConfigureRatingItem,Item06,Home)</onclick>
+            <onclick>SetProperty(ConfigureRatingContent,Movies,Home)</onclick>
+            <onclick>ActivateWindow(1118)</onclick>
+        </control>
     </include>
 
     <include name="Items_Settings_RatingsTVShows">
@@ -2940,6 +2948,14 @@
             <label>$LOCALIZE[563] 05</label>
             <label2>$VAR[Label_CustomRating_TVShows_05]</label2>
             <onclick>SetProperty(ConfigureRatingItem,Item05,Home)</onclick>
+            <onclick>SetProperty(ConfigureRatingContent,TVShows,Home)</onclick>
+            <onclick>ActivateWindow(1118)</onclick>
+        </control>
+        <control type="button" id="9006">
+            <include>Dialog_Standard_Button</include>
+            <label>$LOCALIZE[563] 06</label>
+            <label2>$VAR[Label_CustomRating_TVShows_06]</label2>
+            <onclick>SetProperty(ConfigureRatingItem,Item06,Home)</onclick>
             <onclick>SetProperty(ConfigureRatingContent,TVShows,Home)</onclick>
             <onclick>ActivateWindow(1118)</onclick>
         </control>
