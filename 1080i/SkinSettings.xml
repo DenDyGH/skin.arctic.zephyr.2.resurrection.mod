@@ -793,7 +793,15 @@
                             <label> - $LOCALIZE[31507]</label>
                             <selected>Skin.HasSetting(HideOSDInfoPanel)</selected>
                             <onclick>Skin.ToggleSetting(HideOSDInfoPanel)</onclick>
-                            <enable>Skin.HasSetting(DisableOSDInfo)</enable>
+                            <enable>Skin.HasSetting(DisableOSDInfo) + !Skin.HasSetting(SmallOSDInfoPoster)</enable>
+                        </control>
+
+                        <control type="radiobutton" id="19543" description="Small OSD with poster">
+                            <include>Defs_Settings_Button</include>
+                            <label> - $LOCALIZE[31598]</label>
+                            <selected>Skin.HasSetting(SmallOSDInfoPoster)</selected>
+                            <onclick>Skin.ToggleSetting(SmallOSDInfoPoster)</onclick>
+                            <enable>Skin.HasSetting(DisableOSDInfo) + !Skin.HasSetting(HideOSDInfoPanel)</enable>
                         </control>
 
                         <control type="radiobutton" id="19505" description="Auto pop-up OSD dialogs">
