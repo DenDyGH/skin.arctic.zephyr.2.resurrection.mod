@@ -664,6 +664,12 @@
         <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item05),User)">$LOCALIZE[858]</value>
         <value>$INFO[Skin.String(CustomRating.Movies.Item05)]</value>
     </variable>
+    <variable name="Label_CustomRating_Movies_06">
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item06),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item06),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.Movies.Item06),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.Movies.Item06)]</value>
+    </variable>
 
     <variable name="Label_CustomRating_TVShows_01">
         <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item01),None)">$LOCALIZE[16018]</value>
@@ -694,6 +700,12 @@
         <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item05),Awards)">$LOCALIZE[31596]</value>
         <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item05),User)">$LOCALIZE[858]</value>
         <value>$INFO[Skin.String(CustomRating.TVShows.Item05)]</value>
+    </variable>
+    <variable name="Label_CustomRating_TVShows_06">
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item06),None)">$LOCALIZE[16018]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item06),Awards)">$LOCALIZE[31596]</value>
+        <value condition="String.IsEqual(Skin.String(CustomRating.TVShows.Item06),User)">$LOCALIZE[858]</value>
+        <value>$INFO[Skin.String(CustomRating.TVShows.Item06)]</value>
     </variable>
 
     <variable name="Label_UpNext_Play">
