@@ -2048,7 +2048,7 @@ msgstr "默认搜索项"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31554"
-msgid "3 seconds"
+msgid "3 秒之前"
 msgstr "3 秒"
 
 #: /1080i/SkinSettings.xml
@@ -2264,4 +2264,9 @@ msgstr "奖项"
 #: /1080i/SkinSettings.xml
 msgctxt "#31597"
 msgid "show rating for episodes"
-msgstr ""
+msgstr "显示剧集评分"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31598"
+msgid "Simple OSD info with poster"
+msgstr "带海报的简易 OSD"
