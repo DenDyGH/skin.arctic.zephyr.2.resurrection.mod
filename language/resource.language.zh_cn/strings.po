@@ -2265,8 +2265,3 @@ msgstr "奖项"
 msgctxt "#31597"
 msgid "show rating for episodes"
 msgstr "显示剧集评分"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31598"
-msgid "Simple OSD info with poster"
-msgstr "带海报的简易 OSD"
