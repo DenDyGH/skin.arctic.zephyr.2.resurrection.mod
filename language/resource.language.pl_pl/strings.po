@@ -2238,3 +2238,8 @@ msgstr "Nagrody"
 msgctxt "#31597"
 msgid "show rating for episodes"
 msgstr "wyświetlaj oceny dla odcinków"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31598"
+msgid "Simple OSD info with poster"
+msgstr "Skrócone informacje z plakatem"
