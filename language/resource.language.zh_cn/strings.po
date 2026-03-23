@@ -1572,7 +1572,7 @@ msgstr "隐藏信息面板"
 #: /1080i/SkinSettings.xml
 msgctxt "#31508"
 msgid "Flix2 Views: background blur"
-msgstr "网飞2 视图：背景模糊"
+msgstr "网飞2视图：背景模糊"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31509"
