@@ -2258,3 +2258,148 @@ msgstr ""
 msgctxt "#31598"
 msgid "Simple OSD info with poster"
 msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31600"
+msgid "List"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31601"
+msgid "Poster Wall"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31602"
+msgid "Poster Showcase"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31603"
+msgid "Poster"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31604"
+msgid "List Square"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31605"
+msgid "MediaInfo"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31606"
+msgid "MediaInfo Extended"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31607"
+msgid "Banners"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31608"
+msgid "Tri Panel"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31609"
+msgid "Square Wall"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31610"
+msgid "Landscape Wall"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31611"
+msgid "Icon Wall"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31612"
+msgid "Circle Wall"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31613"
+msgid "Info Wall"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31614"
+msgid "Landscape Wall Small"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31615"
+msgid "Info Wall 2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31616"
+msgid "Square Wall2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31617"
+msgid "Showcase Square"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31618"
+msgid "Landscape Showcase"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31619"
+msgid "Showcase Seasons"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31620"
+msgid "Lovefilm"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31621"
+msgid "Showcase Seasons2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31622"
+msgid "Showcase Flix"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31623"
+msgid "Flix Poster"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31624"
+msgid "Showcase Square2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31625"
+msgid "Flix Poster2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31626"
+msgid "Flix Landscape"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31627"
+msgid "ROM Trailer"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31628"
+msgid "ROM Info Wall Trailer"
+msgstr ""
