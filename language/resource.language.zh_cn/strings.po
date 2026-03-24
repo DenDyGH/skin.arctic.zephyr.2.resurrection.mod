@@ -2264,4 +2264,74 @@ msgstr "奖项"
 #: /1080i/SkinSettings.xml
 msgctxt "#31597"
 msgid "show rating for episodes"
-msgstr ""
+msgstr "显示剧集评分"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31598"
+msgid "Simple OSD info with poster"
+msgstr "带有海报的简单 OSD 信息"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31611"
+msgid "List"
+msgstr "列表"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31612"
+msgid "List Square"
+msgstr "方形列表"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31613"
+msgid "Tri Panel"
+msgstr "三联面板"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31614"
+msgid "Square Wall2"
+msgstr "方形墙 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31615"
+msgid "Info Wall 2"
+msgstr "信息墙 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31616"
+msgid "Showcase Square"
+msgstr "方形展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31617"
+msgid "Showcase Seasons"
+msgstr "季展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31618"
+msgid "Showcase Seasons2"
+msgstr "剧集展示 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31619"
+msgid "Showcase Flix"
+msgstr "网飞展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31620"
+msgid "Flix Poster"
+msgstr "网飞海报"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31621"
+msgid "Flix Poster2"
+msgstr "网飞海报 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31622"
+msgid "Flix Landscape"
+msgstr "网飞横版"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31623"
+msgid "Showcase Square2"
+msgstr "方形展示 2"
