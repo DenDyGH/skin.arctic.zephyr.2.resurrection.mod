@@ -128,7 +128,7 @@ msgstr "颜色"
 #: /1080i/SkinSettings.xml
 msgctxt "#31022"
 msgid "Animated artwork"
-msgstr "动态艺术作品"
+msgstr "动态艺术图"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31023"
@@ -603,7 +603,7 @@ msgstr "背景图"
 #: /1080i/SkinSettings.xml
 msgctxt "#31122"
 msgid "12 seconds"
-msgstr "12秒"
+msgstr "12 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31123"
@@ -712,7 +712,7 @@ msgstr "杂项"
 #: /1080i/SkinSettings.xml
 msgctxt "#31144"
 msgid "Fonts and Artwork"
-msgstr "字体和艺术作品"
+msgstr "字体和艺术图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
@@ -939,7 +939,7 @@ msgstr "信息列表"
 #: /1080i/Includes_Items.xml
 msgctxt "#31193"
 msgid "Select Art (Kodi)"
-msgstr "选择艺术作品（Kodi）"
+msgstr "选择艺术图（Kodi）"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31194"
@@ -949,7 +949,7 @@ msgstr "最近播放的电视剧"
 #: /1080i/Includes_Items.xml
 msgctxt "#31195"
 msgid "Select Art (Artwork Beef)"
-msgstr "选择艺术作品（Artwork Beef）"
+msgstr "选择艺术图（Artwork Beef）"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31196"
@@ -959,7 +959,7 @@ msgstr "正在观看的电视剧"
 #: /1080i/Includes_Items.xml
 msgctxt "#31197"
 msgid "Download all art"
-msgstr "下载所有艺术作品"
+msgstr "下载所有艺术图"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31198"
@@ -987,7 +987,7 @@ msgstr "随机剧集"
 
 msgctxt "#31203"
 msgid "Artwork"
-msgstr "下载现有艺术作品"
+msgstr "下载现有艺术图"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31204"
@@ -1046,7 +1046,7 @@ msgstr "高分剧集"
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31231"
 msgid "Lovefilm"
-msgstr "爱情片"
+msgstr "Lovefilm"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31233"
@@ -1093,7 +1093,7 @@ msgstr "海报"
 
 msgctxt "#31267"
 msgid "Action"
-msgstr "动作片"
+msgstr "操作"
 
 msgctxt "#31268"
 msgid "Label"
@@ -1133,7 +1133,7 @@ msgstr "IMDB Top250 电影"
 #: /shortcuts/overrides.xml
 msgctxt "#31278"
 msgid "Unwatched Movies"
-msgstr "未观看电影"
+msgstr "未观看的电影"
 
 msgctxt "#31279"
 msgid "Video decoder"
@@ -1146,7 +1146,7 @@ msgstr "像素格式"
 #: /shortcuts/overrides.xml
 msgctxt "#31283"
 msgid "Unwatched Episodes"
-msgstr "未观看剧集"
+msgstr "未观看的剧集"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31285"
@@ -1280,7 +1280,7 @@ msgstr "海报墙"
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31359"
 msgid "Landscape Wall"
-msgstr "横向背景墙"
+msgstr "横版墙"
 
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31360"
@@ -1290,7 +1290,7 @@ msgstr "方形视图墙"
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31361"
 msgid "Landscape Showcase"
-msgstr "横向展示视图"
+msgstr "横版展示"
 
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31362"
@@ -1415,7 +1415,7 @@ msgstr "直播电视 / PVR"
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
 msgid "MediaInfo Extended"
-msgstr "媒体信息 2"
+msgstr "媒体信息：扩展"
 
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31424"
@@ -1455,12 +1455,12 @@ msgstr "已排队"
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31431"
 msgid "Landscape Wall Small"
-msgstr "小横向背景墙"
+msgstr "小横版墙"
 
 #: /1080i/Custom_1138_Search.xml
 msgctxt "#31432"
 msgid "Music Videos by Artist Named"
-msgstr "按艺术家名称搜索MV"
+msgstr "按艺术家名称搜索 MV"
 
 #: /1080i/script-skin_helper_service-ColorPicker.xml
 msgctxt "#31433"
@@ -1475,7 +1475,7 @@ msgstr "在进度条上叠加透明艺术图"
 #: /1080i/Includes_View_54_ROM_Simple.xml
 msgctxt "#31435"
 msgid "ROM Trailer"
-msgstr "ROM 预告片"
+msgstr "ROM 预览"
 
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31436"
@@ -1500,7 +1500,7 @@ msgstr "列表页显示页码和项目计数"
 #: /1080i/Includes_View_54_AEL.xml
 msgctxt "#31440"
 msgid "ROM Info Wall Trailer"
-msgstr "ROM 信息墙预告片"
+msgstr "ROM 信息墙预览"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31441"
@@ -1831,7 +1831,7 @@ msgstr "隐藏信息面板"
 #: /1080i/SkinSettings.xml
 msgctxt "#31508"
 msgid "Flix2 Views: background blur"
-msgstr "Flix2 视图：背景模糊"
+msgstr "网飞 2 视图：背景模糊"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31509"
@@ -2199,7 +2199,7 @@ msgstr "禁用启动画面"
 #: /1080i/SkinSettings.xml
 msgctxt "#31584"
 msgid "Flix View | Multiple widgets"
-msgstr "Flix 视图 | 多小组件"
+msgstr "网飞视图 | 多小组件"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#31585"
@@ -2229,7 +2229,7 @@ msgstr "匹配度"
 #: /1080i/SkinSettings.xml
 msgctxt "#31590"
 msgid "Play Trailer in background in Flix View"
-msgstr "在 Flix 视图后台播放预告片"
+msgstr "在网飞视图后台播放预告片"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31591"
@@ -2244,7 +2244,7 @@ msgstr "启用悬停缩放"
 #: /1080i/SkinSettings.xml
 msgctxt "#31593"
 msgid "Set delay to playing Trailers in Flix View"
-msgstr "设置 Flix 视图预告片播放延迟"
+msgstr "设置网飞视图预告片播放延迟"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31594"
