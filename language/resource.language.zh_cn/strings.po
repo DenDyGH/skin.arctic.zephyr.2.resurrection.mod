@@ -432,17 +432,17 @@ msgstr "音频设置"
 #: /1080i/Includes_Items.xml
 msgctxt "#31193"
 msgid "Select Art (Kodi)"
-msgstr "选择艺术作品（Kodi）"
+msgstr "选择艺术图（Kodi）"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31195"
 msgid "Select Art (Artwork Beef)"
-msgstr "选择艺术作品（Artwork Beef）"
+msgstr "选择艺术图（Artwork Beef）"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31197"
 msgid "Download all art"
-msgstr "下载所有艺术作品"
+msgstr "下载所有艺术图"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31204"
@@ -1012,7 +1012,7 @@ msgstr "颜色"
 #: /1080i/SkinSettings.xml
 msgctxt "#31022"
 msgid "Animated artwork"
-msgstr "动态艺术作品"
+msgstr "动态艺术图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31024"
@@ -1192,7 +1192,7 @@ msgstr "杂项"
 #: /1080i/SkinSettings.xml
 msgctxt "#31144"
 msgid "Fonts and Artwork"
-msgstr "字体和艺术作品"
+msgstr "字体和艺术图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
@@ -2214,7 +2214,7 @@ msgstr "信息亭模式"
 
 msgctxt "#31203"
 msgid "Artwork"
-msgstr "艺术作品"
+msgstr "艺术图"
 
 msgctxt "#31225"
 msgid "Top Rated Movies"
