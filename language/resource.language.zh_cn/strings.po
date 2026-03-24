@@ -2380,7 +2380,7 @@ msgstr "影视风格"
 #: /shortcuts/skinviewtypes.json
 msgctxt "#31621"
 msgid "Showcase Seasons2"
-msgstr "封面展示：剧集季2"
+msgstr "封面展示：剧集季 2"
 
 #: /shortcuts/skinviewtypes.json
 msgctxt "#31622"
@@ -2395,12 +2395,12 @@ msgstr "网飞：海报"
 #: /shortcuts/skinviewtypes.json
 msgctxt "#31624"
 msgid "Showcase Square2"
-msgstr "封面展示：方形2"
+msgstr "封面展示：方形 2"
 
 #: /shortcuts/skinviewtypes.json
 msgctxt "#31625"
 msgid "Flix Poster2"
-msgstr "网飞：海报2"
+msgstr "网飞：海报 2"
 
 #: /shortcuts/skinviewtypes.json
 msgctxt "#31626"
