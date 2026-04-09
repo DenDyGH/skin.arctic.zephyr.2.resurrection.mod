@@ -1093,7 +1093,7 @@ msgstr "海报"
 
 msgctxt "#31267"
 msgid "Action"
-msgstr "操作"
+msgstr "动作"
 
 msgctxt "#31268"
 msgid "Label"
