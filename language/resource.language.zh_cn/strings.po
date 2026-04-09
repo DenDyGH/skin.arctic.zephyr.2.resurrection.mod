@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: wabisai926\n"
+"Last-Translator: wabisabi926\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -997,7 +997,7 @@ msgstr "刷新信息"
 #: /1080i/SkinSettings.xml
 msgctxt "#31205"
 msgid "Animate background using Ken Burns effect"
-msgstr "使用 Ken Burns 效果动态背景"
+msgstr "使用 Ken Burns 效果（缓慢平移+缩放）动态背景"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31206"
