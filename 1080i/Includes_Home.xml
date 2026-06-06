@@ -1707,7 +1707,7 @@
                     <onup>301</onup>
                     <ondown>noop</ondown>
                     <scrolltime tween="quadratic">400</scrolltime>
-                    <height>view_height</height>
+                    <height>865</height>
                     <width>1800</width>
                     <orientation>vertical</orientation>
                     <itemgap>-52</itemgap>
@@ -1811,6 +1811,7 @@
                 <nested />
                 <animation effect="fade" end="50" condition="true">Conditional</animation>
                 <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Title) + !String.IsEmpty(Container($PARAM[id]).ListItem.ChannelName)</visible>
+                <top>15</top>
                 <orientation>vertical</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
                 <itemgap>0</itemgap>
