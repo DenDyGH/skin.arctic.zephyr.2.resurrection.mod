@@ -11,7 +11,7 @@
             <include>Global_Overlay</include>
             <include>Defs_BusySpinner</include>
         </control>
-        
+
         <control type="group">
             <visible>Skin.HasSetting(MinimalBusyLoader)</visible>
             <visible>!Window.IsVisible(DialogConfirm.xml)</visible>
@@ -170,7 +170,7 @@
                         <align>center</align>
                         <left>20</left>
                     </include>
-                    <control type="list" id="$PARAM[id]">
+                    <control type="grouplist" id="$PARAM[id]">
                         <onleft>Back</onleft>
                         <onright>Back</onright>
                         <include>Defs_Options_Grouplist</include>
@@ -616,7 +616,7 @@
         <height>30</height>
         <align>right</align>
         <textcolor>main_fg_70</textcolor>
-        <font>font_statusbar</font>                
+        <font>font_statusbar</font>
         <aligny>center</aligny>
     </include>
 

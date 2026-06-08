@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+    <!-- Video Library -->
+    <group name="video-library" label="$LOCALIZE[31183]" source="library">
+        <!-- Movies -->
+        <group name="movies-widgets" label="$LOCALIZE[342]">
+            <widget name="new-movies" label="$LOCALIZE[31185]" icon="DefaultRecentlyAddedMovies.png" type="movies" target="videos" source="playlist" visible="Library.HasContent(Movies)">
+                <path>special://skin/extras/playlists/NewMovies.xsp</path>
+            </widget>
+            <widget name="recent-movies" label="$LOCALIZE[31190]" icon="DefaultMusicRecentlyPlayed.png" type="movies" target="videos" source="playlist" visible="Library.HasContent(Movies)">
+                <path>special://skin/extras/playlists/RecentMovies.xsp</path>
+            </widget>
+            <widget name="random-movies" label="$LOCALIZE[31200]" icon="DefaultMovies.png" type="movies" target="videos" source="playlist" visible="Library.HasContent(Movies)">
+                <path>special://skin/extras/playlists/RandomMovies.xsp</path>
+            </widget>
+            <widget name="inprogress-movies" label="$LOCALIZE[31216]" icon="special://skin/extras/icons/timer.png" type="movies" target="videos" source="playlist" visible="Library.HasContent(Movies)">
+                <path>special://skin/extras/playlists/InProgressMovies.xsp</path>
+            </widget>
+            <widget name="top-rated-movies" label="$LOCALIZE[31225]" icon="DefaultMusicTop100Albums.png" type="movies" target="videos" source="playlist" visible="Library.HasContent(Movies)">
+                <path>special://skin/extras/playlists/TopRatedMovies.xsp</path>
+            </widget>
+            <widget name="top250-movies" label="$LOCALIZE[31276]" icon="DefaultMusicTop100Albums.png" type="movies" target="videos" source="playlist" visible="Library.HasContent(Movies)">
+                <path>special://skin/extras/playlists/Top250Movies.xsp</path>
+            </widget>
+            <widget name="unwatched-movies" label="$LOCALIZE[31278]" icon="DefaultMovies.png" type="movies" target="videos" source="playlist" visible="Library.HasContent(Movies)">
+                <path>special://skin/extras/playlists/UnwatchedMovies.xsp</path>
+            </widget>
+            <widget name="nodes-movies" label="$LOCALIZE[31296]" icon="special://skin/extras/icons/title.png" type="movies" target="videos" visible="Library.HasContent(Movies)">
+                <path>library://video/movies/</path>
+            </widget>
+            <widget name="genres-movies" label="$LOCALIZE[31257]" icon="DefaultGenre.png" type="genres" target="videos" visible="Library.HasContent(Movies)">
+                <path>library://video/movies/genres.xml/</path>
+            </widget>
+            <widget name="sets-movies" label="$LOCALIZE[31260]" icon="DefaultSets.png" type="sets" target="videos" visible="Library.HasContent(MovieSets)">
+                <path>library://video/movies/sets.xml/</path>
+            </widget>
+        </group>
+        <!-- TV Shows -->
+        <group name="tvshows-widgets" label="$LOCALIZE[31301]">
+            <widget name="new-tvshows" label="$LOCALIZE[31367]" icon="DefaultRecentlyAddedMovies.png" type="tvshows" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/NewShows.xsp</path>
+            </widget>
+            <widget name="recent-tvshows" label="$LOCALIZE[31194]" icon="DefaultMusicRecentlyPlayed.png" type="tvshows" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/RecentTvShows.xsp</path>
+            </widget>
+            <widget name="inprogress-tvshows-lib" label="$LOCALIZE[31196]" icon="special://skin/extras/icons/timer.png" type="tvshows" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>library://video/tvshows/inprogressshows.xml</path>
+            </widget>
+            <widget name="random-tvshows" label="$LOCALIZE[31233]" icon="DefaultTVShows.png" type="tvshows" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/RandomTvShows.xsp</path>
+            </widget>
+            <widget name="top-rated-tvshows" label="$LOCALIZE[31222]" icon="DefaultMusicTop100Albums.png" type="tvshows" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/TopRatedTvShows.xsp</path>
+            </widget>
+            <widget name="nodes-tvshows" label="$LOCALIZE[31297]" icon="special://skin/extras/icons/title.png" type="tvshows" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>library://video/tvshows/</path>
+            </widget>
+            <widget name="genres-tvshows" label="$LOCALIZE[31274]" icon="DefaultGenre.png" type="genres" target="videos" visible="Library.HasContent(TVShows)">
+                <path>library://video/tvshows/genres.xml/</path>
+            </widget>
+        </group>
+        <!-- Episodes -->
+        <group name="episodes-widgets" label="$LOCALIZE[20360]">
+            <widget name="new-episodes" label="$LOCALIZE[31214]" icon="DefaultRecentlyAddedMovies.png" type="episodes" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/NewEpisodes.xsp</path>
+            </widget>
+            <widget name="recent-episodes" label="$LOCALIZE[31198]" icon="DefaultMusicRecentlyPlayed.png" type="episodes" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/RecentEpisodes.xsp</path>
+            </widget>
+            <widget name="random-episodes" label="$LOCALIZE[31202]" icon="DefaultTVShows.png" type="episodes" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/RandomEpisodes.xsp</path>
+            </widget>
+            <widget name="unwatched-episodes" label="$LOCALIZE[31283]" icon="DefaultTVShows.png" type="episodes" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/UnwatchedEpisodes.xsp</path>
+            </widget>
+            <widget name="inprogress-episodes" label="$LOCALIZE[31218]" icon="special://skin/extras/icons/timer.png" type="episodes" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/InProgressEpisodes.xsp</path>
+            </widget>
+            <widget name="top-rated-episodes" label="$LOCALIZE[31230]" icon="DefaultMusicTop100Albums.png" type="episodes" target="videos" source="playlist" visible="Library.HasContent(TVShows)">
+                <path>special://skin/extras/playlists/TopRatedEpisodes.xsp</path>
+            </widget>
+        </group>
+        <!-- Video Sources -->
+        <group name="video-sources-widgets" label="$LOCALIZE[39031]">
+            <content source="sources" target="videos"/>
+        </group>
+        <!-- Video Playlists -->
+        <group name="video-playlists-widgets" label="$LOCALIZE[136]">
+            <content source="playlists" target="videos"/>
+        </group>
+    </group>
+    <!-- Music Library -->
+    <group name="music-library" label="$LOCALIZE[14237]" source="library">
+        <!-- Artists -->
+        <group name="artists-widgets" label="$LOCALIZE[133]">
+            <widget name="random-artists" label="$LOCALIZE[31295]" icon="DefaultMusicArtists.png" type="artists" target="music" source="playlist" visible="Library.HasContent(Music)">
+                <path>special://skin/extras/playlists/RandomArtists.xsp</path>
+            </widget>
+        </group>
+        <!-- Albums -->
+        <group name="albums-widgets" label="$LOCALIZE[249]">
+            <widget name="recentlyadded-albums" label="$LOCALIZE[359]" icon="DefaultMusicRecentlyAdded.png" type="albums" target="music" visible="Library.HasContent(Music)">
+                <path>musicdb://recentlyaddedalbums/</path>
+            </widget>
+            <widget name="recentlyplayed-albums" label="$LOCALIZE[517]" icon="DefaultMusicRecentlyPlayed.png" type="albums" target="music" visible="Library.HasContent(Music)">
+                <path>musicdb://recentlyplayedalbums/</path>
+            </widget>
+            <widget name="compilations-albums" label="$LOCALIZE[521]" icon="DefaultMusicAlbums.png" type="albums" target="music" visible="Library.HasContent(Music)">
+                <path>musicdb://compilations/</path>
+            </widget>
+            <widget name="top100-albums" label="$LOCALIZE[10505]" icon="DefaultMusicTop100Albums.png" type="albums" target="music" visible="Library.HasContent(Music)">
+                <path>musicdb://top100/albums/</path>
+            </widget>
+            <widget name="random-albums" label="$LOCALIZE[31187]" icon="DefaultMusicAlbums.png" type="albums" target="music" source="playlist" visible="Library.HasContent(Music)">
+                <path>special://skin/extras/playlists/RandomAlbums.xsp</path>
+            </widget>
+        </group>
+        <!-- Songs -->
+        <group name="songs-widgets" label="$LOCALIZE[134]">
+            <widget name="top100-songs" label="$LOCALIZE[10504]" icon="logos/kodi.png" type="songs" target="music" visible="Library.HasContent(Music)">
+                <path>musicdb://top100/songs/</path>
+            </widget>
+        </group>
+        <!-- Music Sources -->
+        <group name="music-sources-widgets" label="$LOCALIZE[39031]">
+            <content source="sources" target="music"/>
+        </group>
+        <!-- Music Playlists -->
+        <group name="music-playlists-widgets" label="$LOCALIZE[136]">
+            <content source="playlists" target="audio"/>
+        </group>
+    </group>
+    <!-- PVR/Live TV -->
+    <group name="pvr-widgets" label="$LOCALIZE[14204]" source="pvr" visible="PVR.HasTVChannels | PVR.HasRadioChannels">
+        <!-- TV Channels -->
+        <group name="pvr-tv-widgets" label="$LOCALIZE[31343]" visible="PVR.HasTVChannels">
+            <widget name="pvr-tv-allchannels" label="$LOCALIZE[19287]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://channels/tv/*</path>
+            </widget>
+            <widget name="pvr-tv-lastplayed" label="$LOCALIZE[31381]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://channels/tv/*?view=lastplayed</path>
+            </widget>
+            <widget name="pvr-tv-recordings" label="$LOCALIZE[31382]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://recordings/tv/active?view=flat</path>
+            </widget>
+            <widget name="pvr-tv-channelgroups" label="$LOCALIZE[19173]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://channels/tv</path>
+            </widget>
+        </group>
+    </group>
+    <!-- Pictures -->
+    <group name="pictures-widgets" label="$LOCALIZE[1]">
+        <!-- Picture Sources -->
+        <group name="picture-sources-widgets" label="$LOCALIZE[39031]">
+            <content source="sources" target="pictures" folder="$LOCALIZE[1]"/>
+        </group>
+    </group>
+    <!-- Add-ons -->
+    <group name="addons-widgets" label="$LOCALIZE[24001]" source="addon">
+        <!-- Video Add-ons -->
+        <group name="video-addons-widgets" label="$LOCALIZE[1037]">
+            <content source="addons" label="$LOCALIZE[1037]" icon="DefaultAddonVideo.png" target="videos"/>
+        </group>
+        <!-- Music Add-ons -->
+        <group name="music-addons-widgets" label="$LOCALIZE[1038]">
+            <content source="addons" label="$LOCALIZE[1038]" icon="DefaultAddonMusic.png" target="music"/>
+        </group>
+        <!-- Program Add-ons -->
+        <group name="program-addons-widgets" label="$LOCALIZE[1043]">
+            <widget name="android-apps" label="$LOCALIZE[20244]" icon="DefaultAddonProgram.png" type="addon" target="programs" visible="System.Platform.Android">
+                <path>androidapp://sources/apps</path>
+            </widget>
+            <content source="addons" label="$LOCALIZE[1043]" icon="DefaultAddonProgram.png" target="programs"/>
+        </group>
+        <!-- Picture Add-ons -->
+        <group name="picture-addons-widgets" label="$LOCALIZE[1039]">
+            <content source="addons" label="$LOCALIZE[1039]" icon="DefaultAddonPicture.png" target="pictures"/>
+        </group>
+        <!-- Game Add-ons -->
+        <group name="game-addons-widgets" label="$LOCALIZE[10821]">
+            <widget name="games-addons" label="$LOCALIZE[10821]" icon="DefaultAddonGame.png" type="addon" target="programs">
+                <path>addons://sources/game</path>
+            </widget>
+        </group>
+        <widget name="program-addons-shortcut" label="$LOCALIZE[10001]" type="program" target="programs" icon="special://skin/extras/icons/addons.png">
+            <path>addons://sources/executable/</path>
+        </widget>
+        <widget name="android-addons-shortcut" label="$LOCALIZE[20244]" type="program" target="programs" icon="DefaultAddonProgram.png" visible="System.Platform.Android">
+            <path>androidapp://sources/apps/</path>
+        </widget>
+        <widget name="video-addons-shortcut" label="$LOCALIZE[1037]" type="video" target="videos" icon="special://skin/extras/icons/video-addons.png">
+            <path>addons://sources/video/</path>
+        </widget>
+        <widget name="music-addons-shortcut" label="$LOCALIZE[1038]" type="music" target="music" icon="special://skin/extras/icons/songs.png">
+            <path>addons://sources/audio/</path>
+        </widget>
+        <widget name="picture-addons-shortcut" label="$LOCALIZE[1039]" type="picture" target="pictures" icon="special://skin/extras/icons/pictures.png">
+            <path>addons://sources/image/</path>
+        </widget>
+        <widget name="game-addons-shortcut" label="$LOCALIZE[35049]" type="game" target="games" icon="DefaultAddonGame.png">
+            <path>addons://sources/game/</path>
+        </widget>
+    </group>
+    <!-- Favourites -->
+    <widget name="favourites-widget" label="$LOCALIZE[1036]" type="favourite" icon="special://skin/extras/icons/favourites2.png">
+        <path>favourites://</path>
+    </widget>
+</widgets>

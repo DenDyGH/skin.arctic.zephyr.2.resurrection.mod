@@ -282,7 +282,7 @@
                         <align>center</align>
                         <font>font_byline</font>
                         <textcolor>main_fg_70</textcolor>
-                        <label fallback="31105">$INFO[Container(301).ListItem.Property(widgetName.backgroundWidget)]</label>
+                        <label fallback="31105">$INFO[Container(301).ListItem.Property(backgroundWidgetLabel)]</label>
                         <height>30</height>
                     </control>
                     <control type="label">
@@ -342,7 +342,7 @@
                     <param name="id" value="302" />
                 </include>
                 <content>
-                    <include>skinshortcuts-submenu</include>
+                    <include>skinshortcuts-mainmenu-submenu</include>
                 </content>
             </control>
 
@@ -758,7 +758,7 @@
                             </control>
                         </focusedlayout>
                         <content>
-                            <include>skinshortcuts-submenu</include>
+                            <include>skinshortcuts-mainmenu-submenu</include>
                         </content>
                     </control>
                 </control>
@@ -920,7 +920,7 @@
                                     </control>
                                 </focusedlayout>
                                 <content>
-                                    <include>skinshortcuts-submenu</include>
+                                    <include>skinshortcuts-mainmenu-submenu</include>
                                 </content>
                             </control>
                         </control>
@@ -1177,7 +1177,7 @@
                                     </control>
                                 </focusedlayout>
                                 <content>
-                                    <include>skinshortcuts-submenu</include>
+                                    <include>skinshortcuts-mainmenu-submenu</include>
                                 </content>
                             </control>
                         </control>
@@ -1363,7 +1363,7 @@
             <itemlayout width="100" />
             <focusedlayout width="100" />
             <content>
-                <include>skinshortcuts-submenu</include>
+                <include>skinshortcuts-mainmenu-submenu</include>
             </content>
         </control>
     </include>
@@ -1549,7 +1549,7 @@
                     <ondown>301</ondown>
                     <onback>301</onback>
                     <content>
-                        <include>skinshortcuts-submenu</include>
+                        <include>skinshortcuts-mainmenu-submenu</include>
                     </content>
                 </include>
             </control>
@@ -1565,7 +1565,7 @@
                 <param name="id" value="302" />
             </include>
             <content>
-                <include>skinshortcuts-submenu</include>
+                <include>skinshortcuts-mainmenu-submenu</include>
             </content>
         </control>
     </include>

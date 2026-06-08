@@ -538,6 +538,13 @@
         <font />
     </include>
 
+    <include name="Defs_Hidden_List">
+        <width>1</width>
+        <height>1</height>
+        <itemlayout width="1" height="1" />
+        <focusedlayout width="1" height="1" />
+    </include>
+
     <!-- Keyboard and Numeric Keys -->
     <include name="Defs_Keyboard_Button">
         <width>85</width>

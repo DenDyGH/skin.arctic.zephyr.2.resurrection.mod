@@ -2265,3 +2265,13 @@ msgstr "奖项"
 msgctxt "#31597"
 msgid "show rating for episodes"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31598"
+msgid "Simple OSD info with poster"
+msgstr ""
+
+#: /shortcuts/menus.xml
+msgctxt "#31599"
+msgid "Reboot to android"
+msgstr ""

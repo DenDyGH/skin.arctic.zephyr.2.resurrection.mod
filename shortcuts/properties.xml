@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <!-- Widget -->
+    <property name="widget" type="widget" />
+
+    <!-- Widget Aspect -->
+    <property name="widgetAspect" type="options" requires="widget">
+        <options>
+            <option value="Poster" label="Poster" />
+            <option value="BigSquare" label="Big Square" />
+            <option value="BigLandscape" label="Big Landscape" />
+            <option value="Banner" label="Banner" />
+            <option value="SmallSquare" label="Small Square" />
+            <option value="SmallLandscape" label="Small Landscape" />
+        </options>
+    </property>
+
+    <!-- Widget Target -->
+    <property name="widgetTarget" type="options" requires="widget">
+        <options>
+            <option value="videos" label="$LOCALIZE[3]" />
+            <option value="music" label="$LOCALIZE[2]" />
+            <option value="pictures" label="$LOCALIZE[1]" />
+            <option value="programs" label="$LOCALIZE[0]" />
+            <option value="pvr" label="$LOCALIZE[4]" />
+        </options>
+    </property>
+
+    <!-- Widget Sort -->
+    <property name="widgetSortby" type="options" requires="widget">
+        <options>
+            <option value="name" label="$LOCALIZE[551]" />
+            <option value="random" label="$LOCALIZE[590]" />
+            <option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType=pvr" />
+            <option value="lastplayed" label="$LOCALIZE[568]" />
+            <option value="playcount" label="$LOCALIZE[567]" />
+            <option value="year" label="$LOCALIZE[345]" condition="widgetType=movies|tvshows|musicvideos|albums" />
+            <option value="rating" label="$LOCALIZE[563]" />
+            <option value="genre" label="$LOCALIZE[515]" />
+            <option value="playlistorder" label="$LOCALIZE[559]" />
+            <option value="episodenumber" label="$LOCALIZE[20359]" condition="widgetType=episodes" />
+            <option value="season" label="$LOCALIZE[20373]" condition="widgetType=tvshows|episodes" />
+            <option value="tvshowtitle" label="$LOCALIZE[36902]" condition="widgetType=episodes" />
+            <option value="title" label="$LOCALIZE[369]" />
+            <option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType=songs" />
+            <option value="artist" label="$LOCALIZE[557]" condition="widgetType=musicvideos|artists|albums|songs" />
+            <option value="album" label="$LOCALIZE[558]" condition="widgetType=musicvideos|albums|songs" />
+            <option value="lastupdated" label="$LOCALIZE[12014]" />
+            <option value="lastused" label="$LOCALIZE[12012]" />
+            <option value="userpreference" label="$LOCALIZE[19349]" />
+        </options>
+    </property>
+
+    <!-- Widget Direction -->
+    <property name="widgetSortorder" type="options" requires="widget">
+        <options>
+            <option value="ascending" label="$LOCALIZE[584]" />
+            <option value="descending" label="$LOCALIZE[585]" />
+        </options>
+    </property>
+
+    <!-- Widget Limit -->
+    <property name="widgetLimit" type="options" requires="widget">
+        <options>
+            <option value="10" label="$NUMBER[10]" />
+            <option value="15" label="$NUMBER[15]" />
+            <option value="20" label="$NUMBER[20]" />
+            <option value="25" label="$NUMBER[25]" />
+            <option value="30" label="$NUMBER[30]" />
+            <option value="50" label="$NUMBER[50]" />
+        </options>
+    </property>
+
+    <!-- BUTTONS -->
+    <buttons>
+        <!-- Choose widget -->
+        <button id="309" property="widget" type="widget" />
+        <button id="4001" property="widget" type="widget" />
+
+        <!-- Widget buttons -->
+        <button id="9901" property="widgetAspect" title="Widget Aspect Ratio" requires="widget" />
+        <button id="9902" property="widgetTarget" title="Widget Content Type" requires="widget" />
+        <button id="9903" property="widgetSortby" title="Widget Sort Method" requires="widget" />
+        <button id="9904" property="widgetSortorder" title="Widget Sort Direction" requires="widget" />
+        <button id="9905" property="widgetLimit" title="Widget Item Limit" requires="widget" />
+        <button id="9906" property="widgetAutoScroll" type="toggle" title="$LOCALIZE[31523]" requires="widget" />
+        <button id="9312" property="backgroundWidget" type="widget" title="Background Widget" />
+
+        <!-- Non-widget buttons -->
+        <button id="310" property="background" type="background" title="$LOCALIZE[31110]" />
+    </buttons>
+</properties>

@@ -2,7 +2,7 @@
 <addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection" provider-name="jurialmunkey, pkscout, heppen" version="1.1.7">
     <requires>
         <import addon="xbmc.gui" version="5.18.0" />
-        <import addon="script.skinshortcuts"/>
+        <import addon="script.skinshortcuts" version="3.0.0" />
         <import addon="script.skinhelper" version="0.0.4" />
         <import addon="script.skinvariables" version="2.1.28" />
         <import addon="plugin.video.themoviedb.helper" version="5.5.11" />
@@ -11,7 +11,7 @@
         <import addon="resource.images.weathericons.white"/>
         <import addon="resource.images.moviecountryicons.maps"/>
     </requires>
-    <extension point="xbmc.gui.skin" debugging="false">
+    <extension point="xbmc.gui.skin" debugging="false" defaultthemename="Textures.xbt" effectslowdown="1">
         <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
     </extension>
     <extension point="xbmc.addon.metadata">

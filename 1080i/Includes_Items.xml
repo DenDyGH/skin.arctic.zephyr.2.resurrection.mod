@@ -1429,7 +1429,7 @@
         </content>
     </include>
 
-    <include name="Items_PowerMenu"><content><include>skinshortcuts-group-powermenu</include></content></include>
+    <include name="Items_PowerMenu"><include>skinshortcuts-powermenu</include></include>
 
     <include name="Items_Info_Manage">
         <content>

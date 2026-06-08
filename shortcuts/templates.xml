@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <presets>
+        <preset name="widgetMovement">
+            <values condition="widgetAspect=Square" widgetMovement="4" />
+            <values condition="widgetAspect=Icon" widgetMovement="4" />
+            <values condition="widgetAspect=Landscape" widgetMovement="2" />
+            <values widgetMovement="6" />
+        </preset>
+    </presets>
+
+    <!-- Spotlight widget -->
+    <template include="vertical-main" build="true">
+        <controls>
+            <include content="View_Cast_Toplabel">
+                <param name="groupid" value="997500" />
+                <param name="id" value="993100" />
+                <param name="label" value="$LOCALIZE[31105]" />
+                <param name="spinner-visible" value="String.IsEmpty(Container(993100).ListItem.Label)" />
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>Integer.IsEqual(Container(9989).NumItems,0)</visible>
+            </include>
+            <include content="Object_Widget_Spotlight" condition="!Skin.HasSetting(FixedWidgets)">
+                <param name="controltype" value="list" />
+                <param name="id" value="993100" />
+                <param name="top" value="52" />
+                <param name="left" value="0" />
+                <param name="right" value="-30" />
+                <param name="height" value="item_cast_height" />
+                <param name="orientation" value="horizontal" />
+                <param name="labelinclude" value="Defs_Null" />
+                <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
+                <param name="target" value="$VAR[Defs_Widget_Target]" />
+                <param name="content" value="$INFO[Skin.String(widgetPath)]" />
+                <param name="smallsquarecondition" value="false" />
+                <param name="squarecondition" value="false" />
+                <param name="smalllandscapecondition" value="false" />
+                <param name="landscapecondition" value="false" />
+                <param name="iconcondition" value="false" />
+                <param name="bannercondition" value="false" />
+                <include content="Defs_AutoScroll">
+                    <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets)" />
+                </include>
+                <onback>301</onback>
+                <visible>Integer.IsGreater(Container(993100).NumItems,0) | Container(993100).IsUpdating</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>Integer.IsEqual(Container(9989).NumItems,0)</visible>
+            </include>
+            <include content="Object_Widget_Spotlight" condition="Skin.HasSetting(FixedWidgets)">
+                <param name="controltype" value="fixedlist" />
+                <param name="id" value="993100" />
+                <param name="top" value="52" />
+                <param name="left" value="0" />
+                <param name="right" value="-30" />
+                <param name="height" value="item_cast_height" />
+                <param name="orientation" value="horizontal" />
+                <param name="labelinclude" value="Defs_Null" />
+                <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
+                <param name="label2" value="ListItem.TvShowTitle" />
+                <param name="target" value="$VAR[Defs_Widget_Target]" />
+                <param name="content" value="$INFO[Skin.String(widgetPath)]" />
+                <param name="smallsquarecondition" value="false" />
+                <param name="squarecondition" value="false" />
+                <param name="smalllandscapecondition" value="false" />
+                <param name="landscapecondition" value="false" />
+                <param name="iconcondition" value="false" />
+                <param name="bannercondition" value="false" />
+                <include content="Defs_AutoScroll">
+                    <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets)" />
+                </include>
+                <onback>301</onback>
+                <visible>Integer.IsGreater(Container(993100).NumItems,0) | Container(993100).IsUpdating</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>Integer.IsEqual(Container(9989).NumItems,0)</visible>
+            </include>
+        </controls>
+    </template>
+
+    <template items="widgets" source="widgets">
+        <property name="widgetIndex" from="index" />
+        <property name="widgetPath" from="widgetPath" />
+        <property name="widgetTarget" from="widgetTarget" />
+        <property name="widgetLabel" from="label" />
+        <property name="widgetLimit" from="widgetLimit" />
+        <property name="widgetSortby" from="widgetSortby" />
+        <property name="widgetSortorder" from="widgetSortorder" />
+        <property name="widgetAspect" from="widgetAspect" />
+
+        <property name="isAutoScroll" condition="widgetAutoScroll=True">True</property>
+        <property name="isAutoScroll">False</property>
+
+        <preset content="widgetMovement" />
+
+        <controls>
+            <include content="View_Cast_Toplabel">
+                <param name="groupid" value="$PARENT[index]$MATH[widgetIndex + 7500]" />
+                <param name="id" value="$PARENT[index]$MATH[widgetIndex + 3100]" />
+                <param name="label" value="$PROPERTY[widgetLabel]" />
+                <param name="spinner-visible" value="true" />
+                <visible>String.IsEqual(Container(301).ListItem.Property(name),$PARENT[name])</visible>
+                <onfocus>SetProperty(widgetMovementId,$PROPERTY[widgetIndex],Home)</onfocus>
+                <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PROPERTY[widgetIndex]) + Skin.HasSetting(HomeMultiFlixView)">Conditional</animation>
+            </include>
+            <include content="Object_Widget_Spotlight" condition="!Skin.HasSetting(FixedWidgets)">
+                <param name="controltype" value="list" />
+                <param name="id" value="$PARENT[index]$MATH[widgetIndex + 3100]" />
+                <param name="top" value="52" />
+                <param name="left" value="0" />
+                <param name="right" value="-30" />
+                <param name="height" value="380.5" />
+                <param name="orientation" value="horizontal" />
+                <param name="labelinclude" value="Defs_Null" />
+                <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
+                <param name="target" value="$PROPERTY[widgetTarget]" />
+                <param name="content" value="$PROPERTY[widgetPath]" />
+                <param name="limit" value="$PROPERTY[widgetLimit]" />
+                <param name="sortby" value="$PROPERTY[widgetSortby]" />
+                <param name="sortorder" value="$PROPERTY[widgetSortorder]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
+                <param name="smallsquarecondition" value="$IF[widgetAspect=SmallSquare THEN true ELSE false]" />
+                <param name="squarecondition" value="$IF[widgetAspect=BigSquare THEN true ELSE false]" />
+                <param name="smalllandscapecondition" value="$IF[widgetAspect=SmallLandscape THEN true ELSE false]" />
+                <param name="landscapecondition" value="$IF[widgetAspect=BigLandscape THEN true ELSE false]" />
+                <param name="iconcondition" value="$IF[widgetAspect=Icon THEN true ELSE false]" />
+                <param name="bannercondition" value="$IF[widgetAspect=Banner THEN true ELSE false]" />
+                <onback>SetFocus($PARENT[index]3101)</onback>
+                <onback condition="!Skin.HasSetting(HomeMultiFlixView)">301</onback>
+                <onback condition="Skin.HasSetting(HomeMultiFlixView)">AlarmClock(BackDelay,SetFocus(301),00:00,silent)</onback>
+                <visible>Integer.IsGreater(Container($PARENT[index]$MATH[widgetIndex + 3100]).NumItems,0) | Container($PARENT[index]$MATH[widgetIndex + 3100]).IsUpdating</visible>
+                <visible>String.IsEqual(Container(301).ListItem.Property(name),$PARENT[name])</visible>
+                <onfocus>SetProperty(widgetMovementId,$PROPERTY[widgetIndex],Home)</onfocus>
+                <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PROPERTY[widgetIndex]) + Skin.HasSetting(HomeMultiFlixView)">Conditional</animation>
+                <include content="Defs_AutoScroll" condition="$PROPERTY[isAutoScroll]">
+                    <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets)" />
+                </include>
+            </include>
+            <include content="Object_Widget_Spotlight" condition="Skin.HasSetting(FixedWidgets)">
+                <param name="controltype" value="fixedlist" />
+                <param name="id" value="$PARENT[index]$MATH[widgetIndex + 3100]" />
+                <param name="top" value="52" />
+                <param name="left" value="0" />
+                <param name="right" value="-30" />
+                <param name="height" value="380.5" />
+                <param name="orientation" value="horizontal" />
+                <param name="labelinclude" value="Defs_Null" />
+                <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
+                <param name="target" value="$PROPERTY[widgetTarget]" />
+                <param name="content" value="$PROPERTY[widgetPath]" />
+                <param name="limit" value="$PROPERTY[widgetLimit]" />
+                <param name="sortby" value="$PROPERTY[widgetSortby]" />
+                <param name="sortorder" value="$PROPERTY[widgetSortorder]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
+                <param name="smallsquarecondition" value="$IF[widgetAspect=SmallSquare THEN true ELSE false]" />
+                <param name="squarecondition" value="$IF[widgetAspect=BigSquare THEN true ELSE false]" />
+                <param name="smalllandscapecondition" value="$IF[widgetAspect=SmallLandscape THEN true ELSE false]" />
+                <param name="landscapecondition" value="$IF[widgetAspect=BigLandscape THEN true ELSE false]" />
+                <param name="iconcondition" value="$IF[widgetAspect=Icon THEN true ELSE false]" />
+                <param name="bannercondition" value="$IF[widgetAspect=Banner THEN true ELSE false]" />
+                <onback>SetFocus($PARENT[index]3101)</onback>
+                <onback condition="!Skin.HasSetting(HomeMultiFlixView)">301</onback>
+                <onback condition="Skin.HasSetting(HomeMultiFlixView)">AlarmClock(BackDelay,SetFocus(301),00:00,silent)</onback>
+                <visible>Integer.IsGreater(Container($PARENT[index]$MATH[widgetIndex + 3100]).NumItems,0) | Container($PARENT[index]$MATH[widgetIndex + 3100]).IsUpdating</visible>
+                <visible>String.IsEqual(Container(301).ListItem.Property(name),$PARENT[name])</visible>
+                <onfocus>SetProperty(widgetMovementId,$PROPERTY[widgetIndex],Home)</onfocus>
+                <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PROPERTY[widgetIndex]) + Skin.HasSetting(HomeMultiFlixView)">Conditional</animation>
+                <include content="Defs_AutoScroll" condition="$PROPERTY[isAutoScroll]">
+                    <param name="condition" value="!ControlGroup(3000).HasFocus() + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets)" />
+                </include>
+            </include>
+            <content limit="$PROPERTY[limit]" target="$PROPERTY[widgetTarget]" sortby="$PROPERTY[widgetSortby]" sortorder="$PROPERTY[widgetSortorder]" browse="never">$PROPERTY[widgetPath]</content>
+        </controls>
+    </template>
+
+    <template include="widgets-submenu" menu="mainmenu">
+        <controls>
+            <skinshortcuts insert="menuitems" />
+        </controls>
+    </template>
+
+    <template items="menuitems" source="widgets" filter="widgetPath">
+        <property name="id" from="index" />
+        <controls>
+            <item id="$PARENT[index]$PROPERTY[id]">
+                <visible>String.IsEqual(Container(301).ListItem.Property(submenuVisibility),$PARENT[submenuVisibility])</visible>
+            </item>
+        </controls>
+    </template>
+
+    <template include="vertical-submenu" menu="mainmenu">
+        <controls>
+            <skinshortcuts insert="widgets" />
+        </controls>
+    </template>
+
+    <template include="vertical-info" menu="mainmenu">
+        <controls>
+            <include content="Home_Vertical_Info">
+                <param name="font" value="font_title" />
+                <param name="plotheight" value="160" />
+                <param name="titleheight" value="60" />
+                <param name="id" value="$PROPERTY[id]3101" />
+                <param name="uid" value="9$PROPERTY[id]" />
+                <skinshortcuts>visibility</skinshortcuts>
+            </include>
+        </controls>
+    </template>
+
+    <template include="flix-info" menu="mainmenu">
+        <controls>
+            <include content="Home_Flix_Info">
+                <param name="font" value="font_title" />
+                <param name="plotheight" value="160" />
+                <param name="titleheight" value="60" />
+                <param name="id" value="$PROPERTY[id]3101" />
+                <param name="uid" value="9$PROPERTY[id]" />
+                <skinshortcuts>visibility</skinshortcuts>
+            </include>
+        </controls>
+    </template>
+
+    <!-- TO DO: NOT WORKING YET? -->
+    <template include="spotlight-submenu" menu="mainmenu">
+        <property name="widgetPath" from="widgetPath" />
+        <property name="widgetTarget" from="widgetTarget" />
+        <property name="widgetLabel" from="label" />
+        <property name="widgetLimit" from="widgetLimit" />
+        <property name="widgetSortby" from="widgetSortby" />
+        <property name="widgetSortorder" from="widgetSortorder" />
+        <property name="widgetAspect" from="widgetAspect" />
+        <controls>
+            <include content="Object_Widget_Spotlight">
+                <param name="labelinclude" value="Defs_Null" />
+                <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
+                <param name="label2" value="ListItem.TvShowTitle" />
+                <param name="target" value="$PROPERTY[widgetTarget]" />
+                <param name="content" value="$PROPERTY[widgetPath]" />
+                <param name="smallsquarecondition" value="$IF[widgetAspect=SmallSquare THEN true ELSE false]" />
+                <param name="squarecondition" value="$IF[widgetAspect=BigSquare THEN true ELSE false]" />
+                <param name="smalllandscapecondition" value="$IF[widgetAspect=SmallLandscape THEN true ELSE false]" />
+                <param name="landscapecondition" value="$IF[widgetAspect=BigLandscape THEN true ELSE false]" />
+                <param name="iconcondition" value="$IF[widgetAspect=Icon THEN true ELSE false]" />
+                <param name="bannercondition" value="$IF[widgetAspect=Banner THEN true ELSE false]" />
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>String.IsEqual(Container(302).ListItem.Property(id),$PROPERTY[id])</visible>
+                <onup>302</onup>
+                <onback condition="Window.IsVisible(Home)">301</onback>
+                <ondown>noop</ondown>
+            </include>
+        </controls>
+    </template>
+
+    <template include="spotlight-mainmenu" menu="mainmenu">
+        <property name="widgetLabel" from="label" />
+        <property name="widgetLimit" from="widgetLimit" />
+        <property name="widgetSortby" from="widgetSortby" />
+        <property name="widgetSortorder" from="widgetSortorder" />
+        <property name="widgetAspect" from="widgetAspect" />
+
+        <property name="widgetTarget" condition="widgetTarget" from="widgetTarget" />
+        <property name="widgetTarget">$INFO[Skin.String(widgetTarget)]</property>
+        <property name="widgetPath" condition="widgetPath" from="widgetPath" />
+        <property name="widgetPath">$INFO[Skin.String(widgetPath)]</property>
+        <controls>
+            <include content="Object_Widget_Spotlight">
+                <param name="labelinclude" value="Defs_Null" />
+                <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
+                <param name="label2" value="ListItem.TvShowTitle" />
+                <param name="target" value="$PROPERTY[widgetTarget]" />
+                <param name="content" value="$PROPERTY[widgetPath]" />
+                <param name="smallsquarecondition" value="false" />
+                <param name="squarecondition" value="false" />
+                <param name="smalllandscapecondition" value="false" />
+                <param name="landscapecondition" value="false" />
+                <param name="iconcondition" value="false" />
+                <param name="bannercondition" value="false" />
+                <skinshortcuts>visibility</skinshortcuts>
+                <onup>302</onup>
+                <onback condition="Window.IsVisible(Home)">301</onback>
+                <ondown>noop</ondown>
+                <visible>String.IsEmpty(Container(302).ListItem.Property(widgetPath))</visible>
+            </include>
+        </controls>
+    </template>
+
+    <template include="global" build="true" menu="mainmenu">
+        <property name="widgetTarget" condition="backgroundWidgetTarget" from="backgroundWidgetTarget" />
+        <property name="widgetPath" condition="backgroundWidgetPath" from="backgroundWidgetPath" />
+        <property name="widgetTarget">$INFO[Skin.String(widgetTarget)]</property>
+        <property name="widgetPath">$INFO[Skin.String(widgetPath)]</property>
+        <controls>
+            <control type="wraplist" id="5600">
+                <height>100</height>
+                <top>0</top>
+                <onfocus>SetProperty(TMDbHelper.WidgetContainer,5600,Home)</onfocus>
+                <onup>301</onup>
+                <ondown>301</ondown>
+                <onback>301</onback>
+                <include content="Defs_AutoScroll">
+                    <param name="condition" value="[Control.HasFocus(301) | Control.HasFocus(302)] + System.IdleTime(1) + !Skin.HasSetting(DisableAutoScrollWidgets)" />
+                </include>
+                <orientation>horizontal</orientation>
+                <itemlayout />
+                <focusedlayout />
+                <content limit="25" target="$PROPERTY[widgetTarget]">$PROPERTY[widgetPath]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </template>
+
+    <template include="search" menu="searchmenu">
+        <property name="id" from="index" />
+        <property name="name" from="path" />
+        <property name="label" from="label" />
+        <property name="limit" from="widgetLimit" />
+
+        <property name="path" condition="name=DefaultSearch-Movies">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Movies">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-TvShows">videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-TvShows">%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Episodes">videodb://tvshows/titles/-1/-1/-1/-1/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Episodes">%22%5D%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Genres">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Genres">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Year">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22year%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Year">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Plot">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22plot%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Plot">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-PlotOutline">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22plotoutline%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-PlotOutline">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Tagline">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22tagline%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Tagline">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Tags">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22tag%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Tags">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Rating">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22rating%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Rating">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Studio">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Studio">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Country">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22country%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Country">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Actor">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Actor">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Director">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22director%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Director">%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Albums">musicdb://albums/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Albums">%22%5D%7D%5D%7D%2C%22type%22%3A%22albums%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-Artists">musicdb://artists/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22</property>
+        <property name="path2" condition="name=DefaultSearch-Artists">%22%5D%7D%5D%7D%2C%22type%22%3A%22artists%22%7D</property>
+
+        <property name="path" condition="name=DefaultSearch-MusicVideos">videodb://musicvideos/titles/?xsp=%7b%22order%22%3a%7b%22direction%22%3a%22ascending%22%2c%22ignorefolders%22%3a0%2c%22method%22%3a%22sorttitle%22%7d%2c%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22title%22%2c%22operator%22%3a%22contains%22%2c%22value%22%3a%5b%22</property>
+        <property name="path2" condition="name=DefaultSearch-MusicVideos">%22%5d%7d%5d%7d%2c%22type%22%3a%22musicvideos%22%7d</property>
+
+        <property name="path" condition="name=DefaultSearch-MusicVideoArtists">videodb://musicvideos/titles/?xsp=%7b%22order%22%3a%7b%22direction%22%3a%22ascending%22%2c%22ignorefolders%22%3a0%2c%22method%22%3a%22sorttitle%22%7d%2c%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22artist%22%2c%22operator%22%3a%22contains%22%2c%22value%22%3a%5b%22</property>
+        <property name="path2" condition="name=DefaultSearch-MusicVideoArtists">%22%5d%7d%5d%7d%2c%22type%22%3a%22musicvideos%22%7d</property>
+
+        <property name="path" condition="name=DefaultSearch-Youtube">plugin://plugin.video.youtube/search/?q=</property>
+        <property name="path2" condition="name=DefaultSearch-Youtube">&amp;search_type=notvalid</property>
+
+        <property name="path" condition="name=DefaultSearch-Netflix">plugin://plugin.video.netflix/directory/search/search/</property>
+        <property name="path2" condition="name=DefaultSearch-Netflix">/</property>
+
+        <property name="path" condition="name=DefaultSearch-Addons">addons://search/</property>
+        <property name="path" condition="name=DefaultSearch-SpotifyArtists">plugin://plugin.audio.spotify/?action=search_artists&amp;artistid=</property>
+        <property name="path" condition="name=DefaultSearch-SpotifyAlbums">plugin://plugin.audio.spotify/?action=search_albums&amp;albumid=</property>
+        <property name="path" condition="name=DefaultSearch-SpotifySongs">plugin://plugin.audio.spotify/?action=search_songs&amp;playlistid=</property>
+        <property name="path" condition="name=DefaultSearch-SpotifyPlaylists">plugin://plugin.audio.spotify/?action=search_playlists&amp;playlistid=</property>
+
+        <property name="path" condition="name=DefaultSearch-TMDBMovies">plugin://plugin.video.themoviedb.helper?info=search&amp;tmdb_type=movie&amp;query=</property>
+        <property name="path" condition="name=DefaultSearch-TMDBShows">plugin://plugin.video.themoviedb.helper?info=search&amp;tmdb_type=tv&amp;query=</property>
+        <property name="path" condition="name=DefaultSearch-TMDBPeople">plugin://plugin.video.themoviedb.helper?info=search&amp;tmdb_type=person&amp;query=</property>
+
+        <property name="path" from="path" />
+
+        <property name="target" condition="name=DefaultSearch-Albums">music</property>
+        <property name="target" condition="name=DefaultSearch-Artists">music</property>
+        <property name="target" condition="name=DefaultSearch-Addons">addons</property>
+        <property name="target" condition="name=DefaultSearch-SpotifyArtists">music</property>
+        <property name="target" condition="name=DefaultSearch-SpotifyAlbums">music</property>
+        <property name="target" condition="name=DefaultSearch-SpotifySongs">music</property>
+        <property name="target" condition="name=DefaultSearch-SpotifyPlaylists">music</property>
+        <property name="target" condition="widgetTarget" from="widgetTarget" />
+        <property name="target">videos</property>
+
+        <property name="widgetAspect" condition="widgetAspect" from="widgetAspect" />
+        <property name="widgetAspect">Poster</property>
+        <controls>
+            <include content="Object_SearchList_Template">
+                <param name="id" value="$MATH[id + 5040]" />
+                <param name="groupid" value="$MATH[id + 7540]" />
+                <param name="path" value="$PROPERTY[path]" />
+                <param name="path2" value="$PROPERTY[path2]" />
+                <param name="label" value="$PROPERTY[label]" />
+                <param name="limit" value="$PROPERTY[limit]" />
+                <param name="target" value="$PROPERTY[target]" />
+                <param name="smallsquarecondition" value="$IF[widgetAspect=SmallSquare THEN true ELSE false]" />
+                <param name="squarecondition" value="$IF[widgetAspect=BigSquare THEN true ELSE false]" />
+                <param name="smalllandscapecondition" value="$IF[widgetAspect=SmallLandscape THEN true ELSE false]" />
+                <param name="landscapecondition" value="$IF[widgetAspect=BigLandscape THEN true ELSE false]" />
+                <param name="iconcondition" value="$IF[widgetAspect=Icon THEN true ELSE false]" />
+                <param name="bannercondition" value="$IF[widgetAspect=Banner THEN true ELSE false]" />
+            </include>
+        </controls>
+    </template>
+</templates>

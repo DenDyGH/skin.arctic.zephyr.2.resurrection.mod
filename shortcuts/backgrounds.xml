@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<backgrounds>
+    <!-- Custom Image (user browses for single image) -->
+    <background name="custom-image" label="$LOCALIZE[31271]" type="browse">
+        <icon>DefaultFolder.png</icon>
+        <source label="$LOCALIZE[1024]">browse</source>
+        <source label="Skin Backgrounds">special://skin/extras/backgrounds/</source>
+    </background>
+    <!-- Custom Folder (slideshow from folder) -->
+    <background name="custom-folder" label="$LOCALIZE[31272]" type="multi">
+        <icon>DefaultFolder.png</icon>
+        <source label="$LOCALIZE[1024]">browse</source>
+        <source label="Skin Backgrounds">special://skin/extras/backgrounds/</source>
+    </background>
+</backgrounds>

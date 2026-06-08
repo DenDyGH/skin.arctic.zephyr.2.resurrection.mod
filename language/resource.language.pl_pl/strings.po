@@ -2243,3 +2243,8 @@ msgstr "wyświetlaj oceny dla odcinków"
 msgctxt "#31598"
 msgid "Simple OSD info with poster"
 msgstr "Skrócone informacje z plakatem"
+
+#: /shortcuts/menus.xml
+msgctxt "#31599"
+msgid "Reboot to android"
+msgstr "Uruchom androida"

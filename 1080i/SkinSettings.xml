@@ -1,7 +1,6 @@
 <window>
     <defaultcontrol always="true">300</defaultcontrol>
     <include>Defs_Settings_OnLoad</include>
-    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=301&amp;levels=1&amp;group=mainmenu|powermenu|searchmenu)</onunload>
     <controls>
 
         <include>Global_Background</include>
@@ -118,19 +117,19 @@
                         <control type="button" id="19101" description="Skinshortcuts mainmenu">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31109]</label>
-                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;menu=mainmenu)</onclick>
                         </control>
 
                         <control type="button" id="19303" description="Skinshortcuts powermenu">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31027]</label>
-                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;menu=powermenu)</onclick>
                         </control>
 
                         <control type="button" id="19306" description="Skinshortcuts searchmenu">
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31166]</label>
-                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=searchmenu)</onclick>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;menu=searchmenu)</onclick>
                         </control>
 
                         <control type="button" id="19102" description="Home Layout">
@@ -236,7 +235,7 @@
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31113]</label>
                             <label2>$INFO[Skin.String(widgetPath)]</label2>
-                            <onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=widgetName&amp;skinWidgetTarget=widgetTarget&amp;skinWidgetPath=widgetPath)</onclick>
+                            <onclick>RunScript(script.skinshortcuts,type=skinstring&amp;skinLabel=widgetLabel&amp;skinTarget=widgetTarget&amp;skinPath=widgetPath)</onclick>
                         </control>
 
                         <control type="radiobutton" id="19107" description="AutoScroll Widgets">

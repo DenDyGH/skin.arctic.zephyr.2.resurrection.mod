@@ -286,14 +286,48 @@
     </variable>
 
     <variable name="Label_SkinShortcuts_SubmenuWidget">
-        <value condition="String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)">$LOCALIZE[31011]</value>
+        <value condition="String.EndsWith(Window.Property(menuname),.widgets) | String.IsEqual(Window.Property(menuname),searchmenu)">$LOCALIZE[31011]</value>
         <value>$LOCALIZE[31038] - $LOCALIZE[31011]</value>
     </variable>
 
     <variable name="Label_WidgetName">
-        <value condition="!String.IsEmpty(Container(302).ListItem.Property(widgetPath))">$INFO[Container(302).ListItem.Property(widgetName)]</value>
-        <value condition="!String.IsEmpty(Container(301).ListItem.Property(widgetPath))">$INFO[Container(301).ListItem.Property(widgetName)]</value>
+        <value condition="!String.IsEmpty(Container(302).ListItem.Property(widgetPath))">$INFO[Container(302).ListItem.Property(widgetLabel)]</value>
+        <value condition="!String.IsEmpty(Container(301).ListItem.Property(widgetPath))">$INFO[Container(301).ListItem.Property(widgetLabel)]</value>
         <value>$LOCALIZE[31105]</value>
+    </variable>
+
+    <variable name="Label_WidgetAction">
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPath))">$INFO[Container(211).ListItem.Property(widgetPath)]</value>
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(Path))">$INFO[Container(211).ListItem.Property(Path)]</value>
+    </variable>
+
+    <variable name="Label_WidgetAspect">
+        <value condition="String.IsEmpty(Container(211).ListItem.Property(widgetAspect))">$LOCALIZE[20021]</value>
+        <value>$INFO[Container(211).ListItem.Property(widgetAspect)]</value>
+    </variable>
+
+    <variable name="Label_WidgetTarget">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(widgetTarget),videos)">$LOCALIZE[3]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(widgetTarget),music)">$LOCALIZE[2]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(widgetTarget),pictures)">$LOCALIZE[1]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(widgetTarget),programs)">$LOCALIZE[0]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(widgetTarget),pvr)">$LOCALIZE[4]</value>
+        <value>$INFO[Container(211).ListItem.Property(widgetTarget)]</value>
+    </variable>
+
+    <variable name="Label_WidgetSortBy">
+        <value condition="String.IsEmpty(Container(211).ListItem.Property(widgetSortby))">$LOCALIZE[571]</value>
+        <value>$INFO[Container(211).ListItem.Property(widgetSortby)]</value>
+    </variable>
+
+    <variable name="Label_WidgetSortorder">
+        <value condition="String.IsEmpty(Container(211).ListItem.Property(widgetSortorder))">$LOCALIZE[571]</value>
+        <value>$INFO[Container(211).ListItem.Property(widgetSortorder)]</value>
+    </variable>
+
+    <variable name="Label_WidgetLimit">
+        <value condition="Integer.IsGreater(Container(211).ListItem.Property(widgetLimit),0)">$INFO[Container(211).ListItem.Property(widgetLimit)]</value>
+        <value>$LOCALIZE[37030]</value>
     </variable>
 
     <variable name="Label_List_Left">
