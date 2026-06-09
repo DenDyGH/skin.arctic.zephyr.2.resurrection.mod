@@ -2248,3 +2248,13 @@ msgstr "Skrócone informacje z plakatem"
 msgctxt "#31599"
 msgid "Reboot to android"
 msgstr "Uruchom androida"
+
+#: /shortcuts/menus.xml
+msgctxt "#31600"
+msgid "Commands"
+msgstr "Polecenia"
+
+#: /shortcuts/menus.xml
+msgctxt "#31601"
+msgid "Altering this shortcut may prevent access to the Main Menu customiser and several skin options.[CR]Are you sure you want to perform the requested changes to this shortcut?"
+msgstr "Zmiana tego skrótu może uniemożliwić dostęp do menu głównego i kilku opcji skórki.[CR]Czy na pewno chcesz dokonać zmian?"

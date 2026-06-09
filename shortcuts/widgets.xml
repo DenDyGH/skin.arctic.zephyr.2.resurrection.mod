@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widgets>
-    <!-- Video Library -->
-    <group name="video-library" label="$LOCALIZE[31183]" source="library">
+    <!-- Common -->
+    <group name="common" label="$LOCALIZE[31183]" source="library">
         <!-- Movies -->
         <group name="movies-widgets" label="$LOCALIZE[342]">
             <widget name="new-movies" label="$LOCALIZE[31185]" icon="DefaultRecentlyAddedMovies.png" type="movies" target="videos" source="playlist" visible="Library.HasContent(Movies)">
@@ -89,8 +89,15 @@
             <content source="playlists" target="videos"/>
         </group>
     </group>
+    <!-- Video Library -->
+    <group name="video-library" label="$LOCALIZE[14236]" icon="DefaultVideo.png" source="library">
+        <content source="nodes" target="videos" />
+        <group name="video-sources" label="32075" icon="special://skin/extras/icons/files.png">
+            <content source="sources" target="videos" />
+        </group>
+    </group>
     <!-- Music Library -->
-    <group name="music-library" label="$LOCALIZE[14237]" source="library">
+    <group name="music-library" label="$LOCALIZE[14237]" icon="DefaultAddonMusic.png" source="library">
         <!-- Artists -->
         <group name="artists-widgets" label="$LOCALIZE[133]">
             <widget name="random-artists" label="$LOCALIZE[31295]" icon="DefaultMusicArtists.png" type="artists" target="music" source="playlist" visible="Library.HasContent(Music)">
@@ -149,14 +156,14 @@
         </group>
     </group>
     <!-- Pictures -->
-    <group name="pictures-widgets" label="$LOCALIZE[1]">
+    <group name="pictures-widgets" label="$LOCALIZE[1]" icon="DefaultPicture.png">
         <!-- Picture Sources -->
         <group name="picture-sources-widgets" label="$LOCALIZE[39031]">
             <content source="sources" target="pictures" folder="$LOCALIZE[1]"/>
         </group>
     </group>
     <!-- Add-ons -->
-    <group name="addons-widgets" label="$LOCALIZE[24001]" source="addon">
+    <group name="addons-widgets" label="$LOCALIZE[24001]" icon="DefaultAddon.png" source="addon">
         <!-- Video Add-ons -->
         <group name="video-addons-widgets" label="$LOCALIZE[1037]">
             <content source="addons" label="$LOCALIZE[1037]" icon="DefaultAddonVideo.png" target="videos"/>

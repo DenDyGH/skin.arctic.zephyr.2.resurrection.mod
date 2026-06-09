@@ -2254,3 +2254,13 @@ msgstr ""
 msgctxt "#31599"
 msgid "Reboot to android"
 msgstr ""
+
+#: /shortcuts/menus.xml
+msgctxt "#31600"
+msgid "Commands"
+msgstr ""
+
+#: /shortcuts/menus.xml
+msgctxt "#31601"
+msgid "Altering this shortcut may prevent access to the Main Menu customiser and several skin options.[CR]Are you sure you want to perform the requested changes to this shortcut?"
+msgstr ""

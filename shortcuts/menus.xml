@@ -61,7 +61,7 @@
             <label>$LOCALIZE[5]</label>
             <action>ActivateWindow(Settings)</action>
             <icon>special://skin/extras/icons/settings.png</icon>
-            <protect type="all" heading="$LOCALIZE[19098]" message="$LOCALIZE[31377]"/>
+            <protect type="all" heading="$LOCALIZE[19098]" message="$LOCALIZE[31601]"/>
         </item>
         <item name="power" submenu="power">
             <label>$LOCALIZE[13012]</label>
@@ -739,7 +739,7 @@
         </group>
         <!-- System/Settings -->
         <group name="settings" label="$LOCALIZE[13000]" icon="DefaultAddonService.png">
-            <group name="commands" label="$LOCALIZE[31531]" icon="DefaultAddonNone.png">
+            <group name="commands" label="$LOCALIZE[31600]" icon="DefaultAddonProgram.png">
                 <content source="commands" target=""/>
                 <shortcut name="reload-skin" label="$LOCALIZE[20183]" icon="DefaultAddonService.png">
                     <action>ReloadSkin()</action>
