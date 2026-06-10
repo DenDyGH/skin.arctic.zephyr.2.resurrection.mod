@@ -180,9 +180,11 @@
 
     <template items="menuitems" source="widgets" filter="widgetPath">
         <property name="id" from="index" />
+        <property name="widgetPath" from="widgetPath" />
         <controls>
             <item id="$PARENT[index]$PROPERTY[id]">
                 <visible>String.IsEqual(Container(301).ListItem.Property(submenuVisibility),$PARENT[submenuVisibility])</visible>
+                <property name="list">$PROPERTY[widgetPath]</property>
             </item>
         </controls>
     </template>

@@ -88,6 +88,13 @@
         <group name="video-playlists-widgets" label="$LOCALIZE[136]">
             <content source="playlists" target="videos"/>
         </group>
+        <!-- Others -->
+        <widget name="settings" label="5" icon="special://skin/extras/icons/settings.png">
+            <path>Settings</path>
+        </widget>
+        <widget name="weather" label="8" icon="special://skin/extras/icons/sun.png">
+            <path>Weather</path>
+        </widget>
     </group>
     <!-- Video Library -->
     <group name="video-library" label="$LOCALIZE[14236]" icon="DefaultVideo.png" source="library">
@@ -144,14 +151,29 @@
             <widget name="pvr-tv-allchannels" label="$LOCALIZE[19287]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
                 <path>pvr://channels/tv/*</path>
             </widget>
+            <widget name="pvr-tv-channelgroups" label="$LOCALIZE[19173]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://channels/tv</path>
+            </widget>
             <widget name="pvr-tv-lastplayed" label="$LOCALIZE[31381]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
                 <path>pvr://channels/tv/*?view=lastplayed</path>
             </widget>
             <widget name="pvr-tv-recordings" label="$LOCALIZE[31382]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
                 <path>pvr://recordings/tv/active?view=flat</path>
             </widget>
-            <widget name="pvr-tv-channelgroups" label="$LOCALIZE[19173]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
-                <path>pvr://channels/tv</path>
+            <widget name="pvr-tv-activerecordings" label="$LOCALIZE[31383]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://recordings/tv/active?view=grouped</path>
+            </widget>
+            <widget name="pvr-tv-deletedrecordings" label="$LOCALIZE[19184]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://recordings/tv/deleted?view=flat</path>
+            </widget>
+            <widget name="pvr-tv-groupeddeletedrecordings" label="$LOCALIZE[31384]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://recordings/tv/deleted?view=grouped</path>
+            </widget>
+            <widget name="pvr-tv-timers" label="$LOCALIZE[19040]" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>pvr://timers/tv/timers</path>
+            </widget>
+            <widget name="pvr-tv-recodingwidget" label="TV PVR Recording Widget (must be in first position)" icon="DefaultAddonPVRClient.png" type="pvr" target="pvr">
+                <path>TV PVR Recording Widget</path>
             </widget>
         </group>
     </group>

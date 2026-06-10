@@ -61,7 +61,7 @@
             <label>$LOCALIZE[5]</label>
             <action>ActivateWindow(Settings)</action>
             <icon>special://skin/extras/icons/settings.png</icon>
-            <protect type="all" heading="$LOCALIZE[19098]" message="$LOCALIZE[31601]"/>
+            <protect type="all" heading="$LOCALIZE[19098]" message="$LOCALIZE[31177]"/>
         </item>
         <item name="power" submenu="power">
             <label>$LOCALIZE[13012]</label>
