@@ -216,7 +216,6 @@
                     <control type="button" id="3007" description="Action">
                         <label>$LOCALIZE[31267]</label>
                         <label2>$VAR[Label_WidgetAction]</label2>
-                        <onclick>SendClick(307)</onclick>
                         <include>Dialog_Standard_Button</include>
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <visible>String.EndsWith(Window.Property(menuname),.widgets) | String.IsEqual(Window.Property(menuname),searchmenu)</visible>

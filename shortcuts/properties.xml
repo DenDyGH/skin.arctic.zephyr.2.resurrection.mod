@@ -78,6 +78,7 @@
         <button id="4001" property="widget" type="widget" />
 
         <!-- Widget buttons -->
+        <button id="3007" property="widgetPath" type="text" title="Enter action" requires="widget" />
         <button id="9901" property="widgetAspect" title="Widget Aspect Ratio" requires="widget" />
         <button id="9902" property="widgetTarget" title="Widget Content Type" requires="widget" />
         <button id="9903" property="widgetSortby" title="Widget Sort Method" requires="widget" />
