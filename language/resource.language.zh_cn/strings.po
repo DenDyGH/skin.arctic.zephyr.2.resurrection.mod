@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: wabisai926\n"
+"Last-Translator: wabisabi926\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -128,7 +128,7 @@ msgstr "颜色"
 #: /1080i/SkinSettings.xml
 msgctxt "#31022"
 msgid "Animated artwork"
-msgstr "动态艺术作品"
+msgstr "动态艺术图"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31023"
@@ -603,7 +603,7 @@ msgstr "背景图"
 #: /1080i/SkinSettings.xml
 msgctxt "#31122"
 msgid "12 seconds"
-msgstr "12秒"
+msgstr "12 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31123"
@@ -712,7 +712,7 @@ msgstr "杂项"
 #: /1080i/SkinSettings.xml
 msgctxt "#31144"
 msgid "Fonts and Artwork"
-msgstr "字体和艺术作品"
+msgstr "字体和艺术图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
@@ -939,7 +939,7 @@ msgstr "信息列表"
 #: /1080i/Includes_Items.xml
 msgctxt "#31193"
 msgid "Select Art (Kodi)"
-msgstr "选择艺术作品（Kodi）"
+msgstr "选择艺术图（Kodi）"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31194"
@@ -949,7 +949,7 @@ msgstr "最近播放的电视剧"
 #: /1080i/Includes_Items.xml
 msgctxt "#31195"
 msgid "Select Art (Artwork Beef)"
-msgstr "选择艺术作品（Artwork Beef）"
+msgstr "选择艺术图（Artwork Beef）"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31196"
@@ -959,7 +959,7 @@ msgstr "正在观看的电视剧"
 #: /1080i/Includes_Items.xml
 msgctxt "#31197"
 msgid "Download all art"
-msgstr "下载所有艺术作品"
+msgstr "下载所有艺术图"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31198"
@@ -987,7 +987,7 @@ msgstr "随机剧集"
 
 msgctxt "#31203"
 msgid "Artwork"
-msgstr "下载现有艺术作品"
+msgstr "下载现有艺术图"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31204"
@@ -997,7 +997,7 @@ msgstr "刷新信息"
 #: /1080i/SkinSettings.xml
 msgctxt "#31205"
 msgid "Animate background using Ken Burns effect"
-msgstr "使用 Ken Burns 效果动态背景"
+msgstr "使用 Ken Burns 效果（缓慢平移+缩放）动态背景"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31206"
@@ -1046,7 +1046,7 @@ msgstr "高分剧集"
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31231"
 msgid "Lovefilm"
-msgstr "爱情片"
+msgstr "Lovefilm"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31233"
@@ -1093,7 +1093,7 @@ msgstr "海报"
 
 msgctxt "#31267"
 msgid "Action"
-msgstr "动作片"
+msgstr "动作"
 
 msgctxt "#31268"
 msgid "Label"
@@ -1133,7 +1133,7 @@ msgstr "IMDB Top250 电影"
 #: /shortcuts/overrides.xml
 msgctxt "#31278"
 msgid "Unwatched Movies"
-msgstr "未观看电影"
+msgstr "未观看的电影"
 
 msgctxt "#31279"
 msgid "Video decoder"
@@ -1146,7 +1146,7 @@ msgstr "像素格式"
 #: /shortcuts/overrides.xml
 msgctxt "#31283"
 msgid "Unwatched Episodes"
-msgstr "未观看剧集"
+msgstr "未观看的剧集"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31285"
@@ -1280,7 +1280,7 @@ msgstr "海报墙"
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31359"
 msgid "Landscape Wall"
-msgstr "横向背景墙"
+msgstr "横版墙"
 
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31360"
@@ -1290,7 +1290,7 @@ msgstr "方形视图墙"
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31361"
 msgid "Landscape Showcase"
-msgstr "横向展示视图"
+msgstr "横版展示"
 
 #: /1080i/Includes_View_Posters.xml
 msgctxt "#31362"
@@ -1415,7 +1415,7 @@ msgstr "直播电视 / PVR"
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
 msgid "MediaInfo Extended"
-msgstr "媒体信息 2"
+msgstr "媒体信息：扩展"
 
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31424"
@@ -1455,7 +1455,7 @@ msgstr "已排队"
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31431"
 msgid "Landscape Wall Small"
-msgstr "小横向背景墙"
+msgstr "小横版墙"
 
 #: /1080i/Custom_1138_Search.xml
 msgctxt "#31432"
@@ -1475,7 +1475,7 @@ msgstr "在进度条上叠加透明艺术图"
 #: /1080i/Includes_View_54_ROM_Simple.xml
 msgctxt "#31435"
 msgid "ROM Trailer"
-msgstr "ROM 预告片"
+msgstr "ROM 预览"
 
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31436"
@@ -1500,7 +1500,7 @@ msgstr "列表页显示页码和项目计数"
 #: /1080i/Includes_View_54_AEL.xml
 msgctxt "#31440"
 msgid "ROM Info Wall Trailer"
-msgstr "ROM 信息墙预告片"
+msgstr "ROM 信息墙预览"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31441"
@@ -1831,7 +1831,7 @@ msgstr "隐藏信息面板"
 #: /1080i/SkinSettings.xml
 msgctxt "#31508"
 msgid "Flix2 Views: background blur"
-msgstr "Flix2 视图：背景模糊"
+msgstr "网飞 2 视图：背景模糊"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31509"
@@ -1916,10 +1916,7 @@ msgstr "在小组件中显示“更多...”文件夹"
 #: /1080i/SkinSettings.xml
 msgctxt "#31528"
 msgid "This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations."
-msgstr ""
-"该皮肤为 heppen 制作的 Arctic Zephyr 2 轻量修改版。\n"
-"原版由 jurialmunkey 创作，pkscout 适配 Matrix 及以上。\n"
-"该皮肤采用简约设计，旨在让用户能专注于自身的媒体内容。除默认的浅色配色方案外，这款皮肤还包含多款深色变体。"
+msgstr "该皮肤为 heppen 制作的 Arctic Zephyr 2 轻量修改版。Arctic Zephyr 2 是由 jurialmunkey 创建的极简皮肤，由 pkscout 修改以适用于 Kodi 19 Matrix。该皮肤设计简洁，让用户能够专注于他们的媒体内容。除了默认的浅色配色方案外，该皮肤还包含多种深色变体。"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31529"
@@ -2199,7 +2196,7 @@ msgstr "禁用启动画面"
 #: /1080i/SkinSettings.xml
 msgctxt "#31584"
 msgid "Flix View | Multiple widgets"
-msgstr "Flix 视图 | 多小组件"
+msgstr "网飞视图 | 多小组件"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#31585"
@@ -2229,7 +2226,7 @@ msgstr "匹配度"
 #: /1080i/SkinSettings.xml
 msgctxt "#31590"
 msgid "Play Trailer in background in Flix View"
-msgstr "在 Flix 视图后台播放预告片"
+msgstr "在网飞视图后台播放预告片"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31591"
@@ -2244,7 +2241,7 @@ msgstr "启用悬停缩放"
 #: /1080i/SkinSettings.xml
 msgctxt "#31593"
 msgid "Set delay to playing Trailers in Flix View"
-msgstr "设置 Flix 视图预告片播放延迟"
+msgstr "设置网飞视图预告片播放延迟"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31594"
@@ -2264,19 +2261,89 @@ msgstr "奖项"
 #: /1080i/SkinSettings.xml
 msgctxt "#31597"
 msgid "show rating for episodes"
-msgstr ""
+msgstr "显示剧集评分"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31598"
 msgid "Simple OSD info with poster"
-msgstr ""
+msgstr "带有海报的简单 OSD 信息"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31611"
+msgid "List"
+msgstr "列表"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31612"
+msgid "List Square"
+msgstr "方形列表"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31613"
+msgid "Tri Panel"
+msgstr "三联面板"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31614"
+msgid "Square Wall2"
+msgstr "方形墙 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31615"
+msgid "Info Wall 2"
+msgstr "信息墙 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31616"
+msgid "Showcase Square"
+msgstr "方形展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31617"
+msgid "Showcase Seasons"
+msgstr "季展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31618"
+msgid "Showcase Seasons2"
+msgstr "剧集展示 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31619"
+msgid "Showcase Flix"
+msgstr "网飞展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31620"
+msgid "Flix Poster"
+msgstr "网飞海报"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31621"
+msgid "Flix Poster2"
+msgstr "网飞海报 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31622"
+msgid "Flix Landscape"
+msgstr "网飞横版"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31623"
+msgid "Showcase Square2"
+msgstr "方形展示 2"
 
 #: /shortcuts/menus.xml
 msgctxt "#31599"
 msgid "Reboot to android"
-msgstr ""
+msgstr "重启到安卓"
 
 #: /shortcuts/menus.xml
 msgctxt "#31600"
 msgid "Commands"
-msgstr ""
+msgstr "命令"
+
+#: /shortcuts/menus.xml
+msgctxt "#31601"
+msgid "Altering this shortcut may prevent access to the Main Menu customiser and several skin options.[CR]Are you sure you want to perform the requested changes to this shortcut?"
+msgstr "修改此快捷方式可能会阻止访问主菜单自定义器和多个皮肤选项。[CR]确定要对此快捷方式执行所请求的更改吗？"
