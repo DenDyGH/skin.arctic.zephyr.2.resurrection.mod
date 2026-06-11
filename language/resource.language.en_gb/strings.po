@@ -2259,6 +2259,71 @@ msgctxt "#31598"
 msgid "Simple OSD info with poster"
 msgstr ""
 
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31611"
+msgid "List"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31612"
+msgid "List Square"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31613"
+msgid "Tri Panel"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31614"
+msgid "Square Wall2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31615"
+msgid "Info Wall 2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31616"
+msgid "Showcase Square"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31617"
+msgid "Showcase Seasons"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31618"
+msgid "Showcase Seasons2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31619"
+msgid "Showcase Flix"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31620"
+msgid "Flix Poster"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31621"
+msgid "Flix Poster2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31622"
+msgid "Flix Landscape"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31623"
+msgid "Showcase Square2"
+msgstr ""
+
 #: /shortcuts/menus.xml
 msgctxt "#31599"
 msgid "Reboot to android"
