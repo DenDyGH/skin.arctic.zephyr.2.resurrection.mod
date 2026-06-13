@@ -1037,7 +1037,7 @@ msgctxt "#31230"
 msgid "Top Rated Episodes"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31231"
 msgid "Lovefilm"
 msgstr ""
@@ -1266,32 +1266,32 @@ msgctxt "#31356"
 msgid "Years Old"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31358"
 msgid "Poster Wall"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31359"
 msgid "Landscape Wall"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31360"
 msgid "Square Wall"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31361"
 msgid "Landscape Showcase"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31362"
 msgid "Square Showcase"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31363"
 msgid "Big Posters"
 msgstr ""
@@ -1408,7 +1408,7 @@ msgstr ""
 
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
-msgid "MediaInfo Extended"
+msgid "Media Info Extended"
 msgstr ""
 
 #: /1080i/Includes_View_51_Wall.xml
@@ -2257,4 +2257,9 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31598"
 msgid "Simple OSD info with poster"
+msgstr ""
+
+#: /shortcuts/powermenu.DATA.xml
+msgctxt "#31599"
+msgid "Reboot to android"
 msgstr ""
