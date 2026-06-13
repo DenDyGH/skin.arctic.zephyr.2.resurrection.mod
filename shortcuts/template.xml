@@ -192,6 +192,7 @@
                 <param name="label2" value="ListItem.TvShowTitle" />
                 <param name="target" value="$SKINSHORTCUTS[widgetTarget]" />
                 <param name="content" value="$SKINSHORTCUTS[widgetPath]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="$PYTHON['true' if widgetAspect in 'Small Square' else 'false']" />
                 <param name="squarecondition" value="$PYTHON['true' if widgetAspect in 'Big Square' else 'false']" />
                 <param name="smalllandscapecondition" value="$PYTHON['true' if widgetAspect in 'Small Landscape' else 'false']" />
@@ -220,6 +221,7 @@
                 <param name="label2" value="ListItem.TvShowTitle" />
                 <param name="target" value="$SKINSHORTCUTS[widgetTarget]" />
                 <param name="content" value="$SKINSHORTCUTS[widgetPath]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="$PYTHON['true' if widgetAspect in 'Small Square' else 'false']" />
                 <param name="squarecondition" value="$PYTHON['true' if widgetAspect in 'Big Square' else 'false']" />
                 <param name="smalllandscapecondition" value="$PYTHON['true' if widgetAspect in 'Small Landscape' else 'false']" />
@@ -535,6 +537,7 @@
                 <param name="label2" value="ListItem.TvShowTitle" />
                 <param name="target" value="$SKINSHORTCUTS[widgetTarget]" />
                 <param name="content" value="$SKINSHORTCUTS[widgetPath]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="$PYTHON['true' if widgetAspect in 'Small Square' else 'false']" />
                 <param name="squarecondition" value="$PYTHON['true' if widgetAspect in 'Big Square' else 'false']" />
                 <param name="smalllandscapecondition" value="$PYTHON['true' if widgetAspect in 'Small Landscape' else 'false']" />
@@ -564,6 +567,7 @@
                 <param name="label2" value="ListItem.TvShowTitle" />
                 <param name="target" value="$SKINSHORTCUTS[widgetTarget]" />
                 <param name="content" value="$SKINSHORTCUTS[widgetPath]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="$PYTHON['true' if widgetAspect in 'Small Square' else 'false']" />
                 <param name="squarecondition" value="$PYTHON['true' if widgetAspect in 'Big Square' else 'false']" />
                 <param name="smalllandscapecondition" value="$PYTHON['true' if widgetAspect in 'Small Landscape' else 'false']" />
@@ -598,7 +602,7 @@
                 <orientation>horizontal</orientation>
                 <itemlayout />
                 <focusedlayout />
-                <content limit="25" target="$SKINSHORTCUTS[widgetTarget]">$SKINSHORTCUTS[widgetPath]</content>
+                <content limit="25" target="$SKINSHORTCUTS[widgetTarget]" browse="$VAR[Defs_Widgets_Browse]">$SKINSHORTCUTS[widgetPath]</content>
                 <skinshortcuts>visibility</skinshortcuts>
             </control>
         </controls>
