@@ -33,6 +33,7 @@
                 <param name="landscapelabelinclude" value="View_Widget_LandscapeLabel" />
                 <param name="target" value="$VAR[Defs_Widget_Target]" />
                 <param name="content" value="$INFO[Skin.String(widgetPath)]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="false" />
                 <param name="squarecondition" value="false" />
                 <param name="smalllandscapecondition" value="false" />
@@ -60,6 +61,7 @@
                 <param name="label2" value="ListItem.TvShowTitle" />
                 <param name="target" value="$VAR[Defs_Widget_Target]" />
                 <param name="content" value="$INFO[Skin.String(widgetPath)]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="false" />
                 <param name="squarecondition" value="false" />
                 <param name="smalllandscapecondition" value="false" />
@@ -237,6 +239,7 @@
                 <param name="label2" value="ListItem.TvShowTitle" />
                 <param name="target" value="$PROPERTY[widgetTarget]" />
                 <param name="content" value="$PROPERTY[widgetPath]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="$IF[widgetAspect=SmallSquare THEN true ELSE false]" />
                 <param name="squarecondition" value="$IF[widgetAspect=BigSquare THEN true ELSE false]" />
                 <param name="smalllandscapecondition" value="$IF[widgetAspect=SmallLandscape THEN true ELSE false]" />
@@ -270,6 +273,7 @@
                 <param name="label2" value="ListItem.TvShowTitle" />
                 <param name="target" value="$PROPERTY[widgetTarget]" />
                 <param name="content" value="$PROPERTY[widgetPath]" />
+                <param name="browse" value="$VAR[Defs_Widgets_Browse]" />
                 <param name="smallsquarecondition" value="false" />
                 <param name="squarecondition" value="false" />
                 <param name="smalllandscapecondition" value="false" />
@@ -304,7 +308,7 @@
                 <orientation>horizontal</orientation>
                 <itemlayout />
                 <focusedlayout />
-                <content limit="25" target="$PROPERTY[widgetTarget]">$PROPERTY[widgetPath]</content>
+                <content limit="25" target="$PROPERTY[widgetTarget]" browse="$VAR[Defs_Widgets_Browse]">$PROPERTY[widgetPath]</content>
                 <skinshortcuts>visibility</skinshortcuts>
             </control>
         </controls>
