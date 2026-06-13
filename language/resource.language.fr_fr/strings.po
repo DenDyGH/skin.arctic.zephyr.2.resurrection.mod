@@ -1040,7 +1040,7 @@ msgctxt "#31230"
 msgid "Top Rated Episodes"
 msgstr "Episodes les mieux notés"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31231"
 msgid "Lovefilm"
 msgstr "Film d'amour"
@@ -1268,32 +1268,32 @@ msgctxt "#31356"
 msgid "Years Old"
 msgstr "Ans"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31358"
 msgid "Poster Wall"
 msgstr "Mur d'affiches"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31359"
 msgid "Landscape Wall"
 msgstr "Mur de paysages"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31360"
 msgid "Square Wall"
 msgstr "Mur de carrés"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31361"
 msgid "Landscape Showcase"
 msgstr "Vitrine de paysages"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31362"
 msgid "Square Showcase"
 msgstr "Vitrine de carrés"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31363"
 msgid "Big Posters"
 msgstr "Grandes affiches"
@@ -1400,7 +1400,7 @@ msgstr "TV en direct / Enregistreur"
 
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
-msgid "MediaInfo Extended"
+msgid "Media Info Extended"
 msgstr ""
 
 #: /1080i/Includes_View_51_Wall.xml
@@ -2259,4 +2259,59 @@ msgstr ""
 #: /shortcuts/menus.xml
 msgctxt "#31600"
 msgid "Commands"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31601"
+msgid "List Square"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31602"
+msgid "Tri Panel"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31603"
+msgid "Square Wall2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31604"
+msgid "Showcase Square"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31605"
+msgid "Showcase Seasons"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31606"
+msgid "Showcase Seasons2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31607"
+msgid "Showcase Flix"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31608"
+msgid "Flix Poster"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31609"
+msgid "Flix Poster2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31610"
+msgid "Flix Landscape"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31611"
+msgid "Showcase Square2"
 msgstr ""

@@ -1037,7 +1037,7 @@ msgctxt "#31230"
 msgid "Top Rated Episodes"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31231"
 msgid "Lovefilm"
 msgstr ""
@@ -1266,32 +1266,32 @@ msgctxt "#31356"
 msgid "Years Old"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31358"
 msgid "Poster Wall"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31359"
 msgid "Landscape Wall"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31360"
 msgid "Square Wall"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31361"
 msgid "Landscape Showcase"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31362"
 msgid "Square Showcase"
 msgstr ""
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31363"
 msgid "Big Posters"
 msgstr ""
@@ -1408,7 +1408,7 @@ msgstr ""
 
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
-msgid "MediaInfo Extended"
+msgid "Media Info Extended"
 msgstr ""
 
 #: /1080i/Includes_View_51_Wall.xml
@@ -2259,71 +2259,6 @@ msgctxt "#31598"
 msgid "Simple OSD info with poster"
 msgstr ""
 
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31611"
-msgid "List"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31612"
-msgid "List Square"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31613"
-msgid "Tri Panel"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31614"
-msgid "Square Wall2"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31615"
-msgid "Info Wall 2"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31616"
-msgid "Showcase Square"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31617"
-msgid "Showcase Seasons"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31618"
-msgid "Showcase Seasons2"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31619"
-msgid "Showcase Flix"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31620"
-msgid "Flix Poster"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31621"
-msgid "Flix Poster2"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31622"
-msgid "Flix Landscape"
-msgstr ""
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31623"
-msgid "Showcase Square2"
-msgstr ""
-
 #: /shortcuts/menus.xml
 msgctxt "#31599"
 msgid "Reboot to android"
@@ -2334,7 +2269,57 @@ msgctxt "#31600"
 msgid "Commands"
 msgstr ""
 
-#: /shortcuts/menus.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31601"
-msgid "Altering this shortcut may prevent access to the Main Menu customiser and several skin options.[CR]Are you sure you want to perform the requested changes to this shortcut?"
+msgid "List Square"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31602"
+msgid "Tri Panel"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31603"
+msgid "Square Wall2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31604"
+msgid "Showcase Square"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31605"
+msgid "Showcase Seasons"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31606"
+msgid "Showcase Seasons2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31607"
+msgid "Showcase Flix"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31608"
+msgid "Flix Poster"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31609"
+msgid "Flix Poster2"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31610"
+msgid "Flix Landscape"
+msgstr ""
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31611"
+msgid "Showcase Square2"
 msgstr ""

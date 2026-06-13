@@ -1043,7 +1043,7 @@ msgctxt "#31230"
 msgid "Top Rated Episodes"
 msgstr "高分剧集"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31231"
 msgid "Lovefilm"
 msgstr "Lovefilm"
@@ -1272,32 +1272,32 @@ msgctxt "#31356"
 msgid "Years Old"
 msgstr "年份"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31358"
 msgid "Poster Wall"
 msgstr "海报墙"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31359"
 msgid "Landscape Wall"
 msgstr "横版墙"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31360"
 msgid "Square Wall"
 msgstr "方形视图墙"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31361"
 msgid "Landscape Showcase"
 msgstr "横版展示"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31362"
 msgid "Square Showcase"
 msgstr "方形展示"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31363"
 msgid "Big Posters"
 msgstr "大海报"
@@ -1414,7 +1414,7 @@ msgstr "直播电视 / PVR"
 
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
-msgid "MediaInfo Extended"
+msgid "Media Info Extended"
 msgstr "媒体信息：扩展"
 
 #: /1080i/Includes_View_51_Wall.xml
@@ -2268,71 +2268,6 @@ msgctxt "#31598"
 msgid "Simple OSD info with poster"
 msgstr "带有海报的简单 OSD 信息"
 
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31611"
-msgid "List"
-msgstr "列表"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31612"
-msgid "List Square"
-msgstr "方形列表"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31613"
-msgid "Tri Panel"
-msgstr "三联面板"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31614"
-msgid "Square Wall2"
-msgstr "方形墙 2"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31615"
-msgid "Info Wall 2"
-msgstr "信息墙 2"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31616"
-msgid "Showcase Square"
-msgstr "方形展示"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31617"
-msgid "Showcase Seasons"
-msgstr "季展示"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31618"
-msgid "Showcase Seasons2"
-msgstr "剧集展示 2"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31619"
-msgid "Showcase Flix"
-msgstr "网飞展示"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31620"
-msgid "Flix Poster"
-msgstr "网飞海报"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31621"
-msgid "Flix Poster2"
-msgstr "网飞海报 2"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31622"
-msgid "Flix Landscape"
-msgstr "网飞横版"
-
-#: /shortcuts/skinviewtypes.json
-msgctxt "#31623"
-msgid "Showcase Square2"
-msgstr "方形展示 2"
-
 #: /shortcuts/menus.xml
 msgctxt "#31599"
 msgid "Reboot to android"
@@ -2343,7 +2278,57 @@ msgctxt "#31600"
 msgid "Commands"
 msgstr "命令"
 
-#: /shortcuts/menus.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31601"
-msgid "Altering this shortcut may prevent access to the Main Menu customiser and several skin options.[CR]Are you sure you want to perform the requested changes to this shortcut?"
-msgstr "修改此快捷方式可能会阻止访问主菜单自定义器和多个皮肤选项。[CR]确定要对此快捷方式执行所请求的更改吗？"
+msgid "List Square"
+msgstr "方形列表"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31602"
+msgid "Tri Panel"
+msgstr "三联面板"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31603"
+msgid "Square Wall2"
+msgstr "方形墙 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31604"
+msgid "Showcase Square"
+msgstr "方形展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31605"
+msgid "Showcase Seasons"
+msgstr "季展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31606"
+msgid "Showcase Seasons2"
+msgstr "剧集展示 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31607"
+msgid "Showcase Flix"
+msgstr "网飞展示"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31608"
+msgid "Flix Poster"
+msgstr "网飞海报"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31609"
+msgid "Flix Poster2"
+msgstr "网飞海报 2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31610"
+msgid "Flix Landscape"
+msgstr "网飞横版"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31611"
+msgid "Showcase Square2"
+msgstr "方形展示 2"

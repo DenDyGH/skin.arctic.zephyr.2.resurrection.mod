@@ -212,7 +212,7 @@ msgstr "Widget tła"
 #: /1080i/Custom_1117_EnableViews.xml
 msgctxt "#31040"
 msgid "Poster Showcase"
-msgstr "Pokaz plakatu"
+msgstr "Poster Showcase"
 
 #: /1080i/Custom_1138_Search.xml
 msgctxt "#31041"
@@ -1037,7 +1037,7 @@ msgctxt "#31230"
 msgid "Top Rated Episodes"
 msgstr "Sezony najwyżej oceniane"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31231"
 msgid "Lovefilm"
 msgstr ""
@@ -1174,7 +1174,7 @@ msgstr "Węzły serialu"
 #: /1080i/Includes_View_List.xml
 msgctxt "#31298"
 msgid "Media Info"
-msgstr "Informacje o mediach"
+msgstr "Media Info"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31300"
@@ -1261,32 +1261,32 @@ msgctxt "#31356"
 msgid "Years Old"
 msgstr "Lat"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31358"
 msgid "Poster Wall"
-msgstr "Sciana plakatu"
+msgstr "Poster Wall"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31359"
 msgid "Landscape Wall"
-msgstr "Sciana krajobrazu"
+msgstr "Landscape Wall"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31360"
 msgid "Square Wall"
-msgstr "Kwadratowa sciana"
+msgstr "Square Wall"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31361"
 msgid "Landscape Showcase"
-msgstr "Pokaz krajobrazowy"
+msgstr "Landscape Showcase"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31362"
 msgid "Square Showcase"
-msgstr "Pokaz kwadratowy"
+msgstr "Square Showcase"
 
-#: /1080i/Includes_View_Posters.xml
+#: /shortcuts/skinviewtypes.json
 msgctxt "#31363"
 msgid "Big Posters"
 msgstr "Duze plakaty"
@@ -1403,8 +1403,8 @@ msgstr ""
 
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31423"
-msgid "MediaInfo Extended"
-msgstr "MediaInfo Rozszerzony"
+msgid "Media Info Extended"
+msgstr "Media Info Rozszerzony"
 
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31424"
@@ -1419,7 +1419,7 @@ msgstr "Sciana okręgów"
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31426"
 msgid "Info Wall"
-msgstr "Sciana informacji"
+msgstr "Info Wall"
 
 #: /1080i/Includes_View_52_Showcase.xml
 msgctxt "#31427"
@@ -1444,7 +1444,7 @@ msgstr "Zakolejkowane"
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31431"
 msgid "Landscape Wall Small"
-msgstr "Mniejsza sciana krajobrazów"
+msgstr "Landscape Wall Small"
 
 #: /1080i/Custom_1138_Search.xml
 msgctxt "#31432"
@@ -1469,7 +1469,7 @@ msgstr "Żwiestun ROMu"
 #: /1080i/Includes_View_51_Wall.xml
 msgctxt "#31436"
 msgid "Info Wall 2"
-msgstr "Sciana informacji 2"
+msgstr "Info Wall 2"
 
 #: /1080i/Includes_DialogMusicInfo.xml
 msgctxt "#31437"
@@ -2253,3 +2253,58 @@ msgstr "Uruchom androida"
 msgctxt "#31600"
 msgid "Commands"
 msgstr "Polecenia"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31601"
+msgid "List Square"
+msgstr "List Square"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31602"
+msgid "Tri Panel"
+msgstr "Tri Panel"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31603"
+msgid "Square Wall2"
+msgstr "Square Wall2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31604"
+msgid "Showcase Square"
+msgstr "Showcase Square"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31605"
+msgid "Showcase Seasons"
+msgstr "Showcase Seasons"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31606"
+msgid "Showcase Seasons2"
+msgstr "Showcase Seasons2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31607"
+msgid "Showcase Flix"
+msgstr "Showcase Flix"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31608"
+msgid "Flix Poster"
+msgstr "Flix Poster"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31609"
+msgid "Flix Poster2"
+msgstr "Flix Poster2"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31610"
+msgid "Flix Landscape"
+msgstr "Flix Landscape"
+
+#: /shortcuts/skinviewtypes.json
+msgctxt "#31611"
+msgid "Showcase Square2"
+msgstr "Showcase Square2"
