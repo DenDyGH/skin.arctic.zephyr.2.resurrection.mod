@@ -140,12 +140,12 @@
                         </include>
                         <control type="textbox">
                             <visible>!$PARAM[isView2]</visible>
-                            <top>8</top>
+                            <top>10</top>
                             <font>font_plotbox</font>
                             <textcolor>main_fg_70</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
-                            <height>240</height>
+                            <height>230</height>
                             <label>$PARAM[plot]</label>
                         </control>
                         <control type="grouplist">
