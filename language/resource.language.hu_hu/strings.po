@@ -460,11 +460,6 @@ msgid "This section contains playback settings."
 msgstr "Ez a rész tartalmazza a lejátszó beállításokat"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31092"
-msgid "Plot boxes use Faune font"
-msgstr "A tartalom Faune betűtípust használ"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31093"
 msgid "Disable Slim PVR Guide"
 msgstr "Keskeny PVR menü"
@@ -702,11 +697,6 @@ msgstr "Gördülő szöveg"
 msgctxt "#31143"
 msgid "Miscellaneous"
 msgstr "Egyebek"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31144"
-msgid "Fonts and Artwork"
-msgstr "Betűtípusok és képek"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"

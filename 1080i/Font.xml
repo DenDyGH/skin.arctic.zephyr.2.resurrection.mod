@@ -3,9 +3,6 @@
 <fonts>
     <fontset id="Default" unicode="true">
 
-        <include condition="Skin.HasSetting(FauneFonts)">Defaults_FauneFonts</include>
-        <include condition="!Skin.HasSetting(FauneFonts)">Defaults_RobotoFonts</include>
-
         <!-- Standard Fonts -->
         <font>
             <name>font_medium</name>
@@ -71,7 +68,7 @@
         <font>
             <name>font_button</name>
             <style>uppercase</style>
-            <filename>RobotoCondensed-Regular-Caps.ttf</filename>
+            <filename>RobotoCondensed-Regular.ttf</filename>
             <size>24</size>
         </font>
         <font>
@@ -96,7 +93,7 @@
         </font>
         <font>
             <name>font_info_buttons</name>
-            <filename>RobotoCondensed-Bold-Caps.ttf</filename>
+            <filename>RobotoCondensed-Bold.ttf</filename>
             <size>20</size>
             <style>uppercase</style>
         </font>
@@ -108,8 +105,13 @@
         <font>
             <name>font_mini</name>
             <style>uppercase</style>
-            <filename>RobotoCondensed-Regular-Caps.ttf</filename>
+            <filename>RobotoCondensed-Regular.ttf</filename>
             <size>20</size>
+        </font>
+        <font>
+            <name>font_mini_bold</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>22</size>
         </font>
 
         <!-- Music visualisation scrolling text -->
@@ -142,6 +144,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
+
         <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
@@ -155,16 +158,42 @@
             <size>38</size>
             <style>bold</style>
         </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>26</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.17</linespacing>
+        </font>
 
         <!-- Plot info overlay -->
         <font>
             <name>font_overlay_title</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>100</size>
-            <aspect>0.9</aspect>
             <style>bold</style>
+            <aspect>0.9</aspect>
         </font>
-
+        <font>
+            <name>font_plotbox</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>29</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.17</linespacing>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>48</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.65</linespacing>
+        </font>
+        <font>
+            <name>font_info_display</name>
+            <style>bold</style>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>64</size>
+        </font>
 
         <!-- Showcase title font -->
         <font>
@@ -238,7 +267,7 @@
         <font>
             <name>font_byline</name>
             <style>uppercase</style>
-            <filename>RobotoCondensed-Spaced-Caps.ttf</filename>
+            <filename>RobotoCondensed-Spaced.ttf</filename>
             <size>22</size>
         </font>
         <font>
@@ -299,9 +328,6 @@
 
     <fontset id="Roboto Regular" unicode="true">
 
-        <include condition="Skin.HasSetting(FauneFonts)">Defaults_FauneFonts</include>
-        <include condition="!Skin.HasSetting(FauneFonts)">Defaults_RobotoRegularFonts</include>
-
         <!-- Standard Fonts -->
         <font>
             <name>font_medium</name>
@@ -367,7 +393,7 @@
         <font>
             <name>font_button</name>
             <style>uppercase</style>
-            <filename>Roboto-Regular-Caps.ttf</filename>
+            <filename>Roboto-Regular.ttf</filename>
             <size>24</size>
         </font>
         <font>
@@ -392,7 +418,7 @@
         </font>
         <font>
             <name>font_info_buttons</name>
-            <filename>Roboto-Bold-Caps.ttf</filename>
+            <filename>Roboto-Bold.ttf</filename>
             <size>20</size>
             <style>uppercase</style>
         </font>
@@ -404,8 +430,13 @@
         <font>
             <name>font_mini</name>
             <style>uppercase</style>
-            <filename>Roboto-Regular-Caps.ttf</filename>
+            <filename>Roboto-Regular.ttf</filename>
             <size>20</size>
+        </font>
+        <font>
+            <name>font_mini_bold</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>22</size>
         </font>
 
         <!-- Music visualisation scrolling text -->
@@ -438,6 +469,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
+
         <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
@@ -451,6 +483,13 @@
             <size>38</size>
             <style>bold</style>
         </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>26</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.17</linespacing>
+        </font>
 
         <!-- Plot info overlay -->
         <font>
@@ -460,7 +499,26 @@
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
-
+        <font>
+            <name>font_plotbox</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>29</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.17</linespacing>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>48</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.65</linespacing>
+        </font>
+        <font>
+            <name>font_info_display</name>
+            <style>bold</style>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>64</size>
+        </font>
 
         <!-- Showcase title font -->
         <font>
@@ -534,7 +592,7 @@
         <font>
             <name>font_byline</name>
             <style>uppercase</style>
-            <filename>Roboto-Spaced-Caps.ttf</filename>
+            <filename>Roboto-Spaced.ttf</filename>
             <size>22</size>
         </font>
         <font>
@@ -582,14 +640,18 @@
             <size>130</size>
         </font>
 
+        <font>
+            <name>font_infotag_bold</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>22</size>
+            <style>uppercase</style>
+        </font>
+
         <include>VideoLyrics_Fonts</include>
 
     </fontset>
 
     <fontset id="Roboto Regular Larger" unicode="true">
-
-        <include condition="Skin.HasSetting(FauneFonts)">Defaults_FauneFonts</include>
-        <include condition="!Skin.HasSetting(FauneFonts)">Defaults_RobotoRegularLargerFonts</include>
 
         <!-- Standard Fonts -->
         <font>
@@ -619,9 +681,34 @@
             <size>33</size>
         </font>
         <font>
+            <name>font_small_29</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>32</size>
+        </font>
+        <font>
+            <name>font_small_bold_29</name>
+            <filename>Roboto-Medium.ttf</filename>
+            <size>32</size>
+        </font>
+        <font>
+            <name>font_small_28</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>31</size>
+        </font>
+        <font>
+            <name>font_small_bold_28</name>
+            <filename>Roboto-Medium.ttf</filename>
+            <size>31</size>
+        </font>
+        <font>
             <name>font_tiny</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>29</size>
+        </font>
+        <font>
+            <name>font_tiny_23</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>26</size>
         </font>
         <font>
             <name>font_tiny_bold</name>
@@ -631,7 +718,7 @@
         <font>
             <name>font_button</name>
             <style>uppercase</style>
-            <filename>Roboto-Regular-Caps.ttf</filename>
+            <filename>Roboto-Regular.ttf</filename>
             <size>26</size>
         </font>
         <font>
@@ -656,7 +743,7 @@
         </font>
         <font>
             <name>font_info_buttons</name>
-            <filename>Roboto-Bold-Caps.ttf</filename>
+            <filename>Roboto-Bold.ttf</filename>
             <size>22</size>
             <style>uppercase</style>
         </font>
@@ -668,8 +755,13 @@
         <font>
             <name>font_mini</name>
             <style>uppercase</style>
-            <filename>Roboto-Regular-Caps.ttf</filename>
+            <filename>Roboto-Regular.ttf</filename>
             <size>20</size>
+        </font>
+        <font>
+            <name>font_mini_bold</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>22</size>
         </font>
 
         <!-- Music visualisation scrolling text -->
@@ -702,6 +794,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
+
         <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
@@ -715,6 +808,13 @@
             <size>38</size>
             <style>bold</style>
         </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>29</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.17</linespacing>
+        </font>
 
         <!-- Plot info overlay -->
         <font>
@@ -724,7 +824,26 @@
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
-
+        <font>
+            <name>font_plotbox</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>32</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.17</linespacing>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>48</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.65</linespacing>
+        </font>
+        <font>
+            <name>font_info_display</name>
+            <style>bold</style>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>64</size>
+        </font>
 
         <!-- Showcase title font -->
         <font>
@@ -798,7 +917,7 @@
         <font>
             <name>font_byline</name>
             <style>uppercase</style>
-            <filename>Roboto-Spaced-Caps.ttf</filename>
+            <filename>Roboto-Spaced.ttf</filename>
             <size>24</size>
         </font>
         <font>
@@ -810,14 +929,47 @@
 
         <!-- Required for system -->
         <font>
+            <name>font10</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
+            <name>font12</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>29</size>
+        </font>
+        <font>
             <name>font13</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>33</size>
         </font>
         <font>
+            <name>font14</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>37</size>
+        </font>
+        <font>
+            <name>font45</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>48</size>
+        </font>
+        <font>
+            <name>font60</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>63</size>
+        </font>
+
+        <font>
             <name>Clock</name>
             <filename>Roboto-Bold.ttf</filename>
             <size>130</size>
+        </font>
+
+        <font>
+            <name>font_infotag_bold</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>25</size>
+            <style>uppercase</style>
         </font>
 
         <include>VideoLyrics_Fonts</include>
@@ -828,9 +980,6 @@
 
     <fontset id="Arial" unicode="true">
 
-        <include condition="Skin.HasSetting(FauneFonts)">Defaults_FauneFonts</include>
-        <include condition="!Skin.HasSetting(FauneFonts)">Defaults_ArialFonts</include>
-
         <!-- Standard Fonts -->
         <font>
             <name>font_medium</name>
@@ -889,6 +1038,11 @@
             <size>26</size>
         </font>
         <font>
+            <name>font_tiny_23</name>
+            <filename>arial.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
             <name>font_tiny_bold</name>
             <filename>arial.ttf</filename>
             <size>26</size>
@@ -939,6 +1093,12 @@
             <filename>arial.ttf</filename>
             <size>20</size>
         </font>
+        <font>
+            <name>font_mini_bold</name>
+            <filename>arial.ttf</filename>
+            <size>22</size>
+            <style>bold</style>
+        </font>
 
         <!-- Music visualisation scrolling text -->
         <font>
@@ -971,6 +1131,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
+
         <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
@@ -984,6 +1145,12 @@
             <size>38</size>
             <style>bold</style>
         </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>arial.ttf</filename>
+            <size>26</size>
+            <aspect>0.9</aspect>
+        </font>
 
         <!-- Plot info overlay -->
         <font>
@@ -993,7 +1160,26 @@
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
-
+        <font>
+            <name>font_plotbox</name>
+            <filename>arial.ttf</filename>
+            <size>30</size>
+            <aspect>0.9</aspect>
+            <linespacing>1.12</linespacing>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>arial.ttf</filename>
+            <aspect>0.9</aspect>
+            <size>48</size>
+            <linespacing>1.4</linespacing>
+        </font>
+        <font>
+            <name>font_info_display</name>
+            <filename>arial.ttf</filename>
+            <size>64</size>
+            <style>bold</style>
+        </font>
 
         <!-- Showcase title font -->
         <font>
@@ -1114,6 +1300,13 @@
             <filename>arial.ttf</filename>
             <size>130</size>
             <style>bold</style>
+        </font>
+
+        <font>
+            <name>font_infotag_bold</name>
+            <filename>arial.ttf</filename>
+            <size>22</size>
+            <style>uppercase</style>
         </font>
 
         <include>VideoLyrics_Fonts</include>
@@ -1124,9 +1317,6 @@
 
     <fontset id="Amazon Ember" unicode="true">
 
-        <include condition="Skin.HasSetting(FauneFonts)">Defaults_FauneFonts</include>
-        <include condition="!Skin.HasSetting(FauneFonts)">Defaults_AmazonEmberFonts</include>
-
         <!-- Standard Fonts -->
         <font>
             <name>font_medium</name>
@@ -1185,6 +1375,11 @@
             <size>26</size>
         </font>
         <font>
+            <name>font_tiny_23</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
             <name>font_tiny_bold</name>
             <filename>AmazonEmberDisplay_Rg.ttf</filename>
             <size>26</size>
@@ -1235,6 +1430,12 @@
             <filename>AmazonEmberDisplay_Rg.ttf</filename>
             <size>20</size>
         </font>
+        <font>
+            <name>font_mini_bold</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>22</size>
+            <style>bold</style>
+        </font>
 
         <!-- Music visualisation scrolling text -->
         <font>
@@ -1267,6 +1468,7 @@
             <size>80</size>
             <style>bold</style>
         </font>
+
         <!-- Big weather temp -->
         <font>
             <name>font_weather_currenttemp</name>
@@ -1280,6 +1482,11 @@
             <size>38</size>
             <style>bold</style>
         </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>26</size>
+        </font>
 
         <!-- Plot info overlay -->
         <font>
@@ -1289,7 +1496,24 @@
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
-
+        <font>
+            <name>font_plotbox</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>29</size>
+            <linespacing>1.14</linespacing>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>48</size>
+            <linespacing>1.14</linespacing>
+        </font>
+        <font>
+            <name>font_info_display</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>64</size>
+            <style>bold</style>
+        </font>
 
         <!-- Showcase title font -->
         <font>
@@ -1412,8 +1636,14 @@
             <style>bold</style>
         </font>
 
+        <font>
+            <name>font_infotag_bold</name>
+            <filename>AmazonEmberDisplay_Rg.ttf</filename>
+            <size>22</size>
+            <style>uppercase</style>
+        </font>
+
         <include>VideoLyrics_Fonts</include>
 
     </fontset>
-
 </fonts>

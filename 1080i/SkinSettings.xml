@@ -672,6 +672,13 @@
                             <visible>Skin.HasSetting(HomeMultiFlixView)</visible>
                         </control>
 
+                        <control type="radiobutton" id="19431">
+                            <label>$LOCALIZE[31174]</label>
+                            <include>Defs_Settings_Button</include>
+                            <selected>!Skin.HasSetting(LandscapeArt)</selected>
+                            <onclick>Skin.ToggleSetting(LandscapeArt)</onclick>
+                        </control>
+
                         <control type="label" id="19950" description="LABEL">
                             <include>Dialog_Standard_HintLabel</include>
                             <label>$LOCALIZE[31484]</label>
@@ -696,26 +703,6 @@
                             <label>$LOCALIZE[31471]</label>
                             <selected>Skin.HasSetting(SeriesIndicators)</selected>
                             <onclick>Skin.ToggleSetting(SeriesIndicators)</onclick>
-                        </control>
-
-                        <control type="label" id="19482" description="LABEL">
-                            <include>Dialog_Standard_HintLabel</include>
-                            <label>$LOCALIZE[31144]</label>
-                        </control>
-
-                        <control type="radiobutton" id="19431">
-                            <label>$LOCALIZE[31174]</label>
-                            <include>Defs_Settings_Button</include>
-                            <selected>!Skin.HasSetting(LandscapeArt)</selected>
-                            <onclick>Skin.ToggleSetting(LandscapeArt)</onclick>
-                        </control>
-
-                        <control type="radiobutton" id="19407" description="Roboto Fonts">
-                            <include>Defs_Settings_Button</include>
-                            <label>$LOCALIZE[31092]</label>
-                            <selected>Skin.HasSetting(FauneFonts)</selected>
-                            <onclick>Skin.ToggleSetting(FauneFonts)</onclick>
-                            <onclick>ReloadSkin()</onclick>
                         </control>
                     </control>
 

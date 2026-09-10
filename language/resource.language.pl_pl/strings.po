@@ -460,11 +460,6 @@ msgid "This section contains playback settings."
 msgstr "Ta sekcja zawiera ustawienia odtwarzania"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31092"
-msgid "Plot boxes use Faune font"
-msgstr "Okno opisu używa czcionki Faune"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31093"
 msgid "Disable Slim PVR Guide"
 msgstr "Wyłącz wąski tryb przewodnika"
@@ -702,11 +697,6 @@ msgstr "Przewijany tekst"
 msgctxt "#31143"
 msgid "Miscellaneous"
 msgstr "Różnorodne"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31144"
-msgid "Fonts and Artwork"
-msgstr "Czcionki i grafiki"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"

@@ -466,11 +466,6 @@ msgid "This section contains playback settings."
 msgstr "本节包含播放设置。"
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31092"
-msgid "Plot boxes use Faune font"
-msgstr "剧情简介使用 Faune 字体"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31093"
 msgid "Disable Slim PVR Guide"
 msgstr "禁用精简 PVR 指南"
@@ -708,11 +703,6 @@ msgstr "滚动文本"
 msgctxt "#31143"
 msgid "Miscellaneous"
 msgstr "杂项"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31144"
-msgid "Fonts and Artwork"
-msgstr "字体和艺术图"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
