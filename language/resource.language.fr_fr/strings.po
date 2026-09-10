@@ -463,11 +463,6 @@ msgid "This section contains playback settings."
 msgstr "Cette section contient les paramètres de relecture.""
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31092"
-msgid "Plot boxes use Faune font"
-msgstr "Les encadrés utilisent la police Faune"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31093"
 msgid "Disable Slim PVR Guide"
 msgstr "Guide TV compact"
@@ -705,11 +700,6 @@ msgstr "Déffilement du texte"
 msgctxt "#31143"
 msgid "Miscellaneous"
 msgstr "Divers"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31144"
-msgid "Fonts and Artwork"
-msgstr "Polices de caractère et illustrations"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"

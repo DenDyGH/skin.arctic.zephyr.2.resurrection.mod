@@ -461,11 +461,6 @@ msgid "This section contains playback settings."
 msgstr "Questa sezione contiene le impostazioni di riproduzione."
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31092"
-msgid "Plot boxes use Faune font"
-msgstr "Le caselle della trama utilizzano il font Faune"
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31093"
 msgid "Disable Slim PVR Guide"
 msgstr "Guida PVR sottile"
@@ -703,11 +698,6 @@ msgstr "Testo scorrevole"
 msgctxt "#31143"
 msgid "Miscellaneous"
 msgstr "Varie"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31144"
-msgid "Fonts and Artwork"
-msgstr "Fonts e Artwork"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31145"
