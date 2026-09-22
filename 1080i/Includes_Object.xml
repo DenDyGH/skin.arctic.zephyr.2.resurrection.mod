@@ -601,7 +601,7 @@
                     <width>auto</width>
                     <font>font_mini</font>
                     <textcolor>main_fg_70</textcolor>
-                    <label max="350">$VAR[Label_ListItem_VideoCodec, ,  •  ]$INFO[ListItem.VideoResolution]$INFO[ListItem.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
+                    <label max="350">$VAR[Label_VideoCodec, ,  •  ]$INFO[ListItem.VideoResolution]$INFO[ListItem.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
                     <height>32</height>
                     <visible>Skin.HasSetting(TextCodecs)</visible>
                 </control>

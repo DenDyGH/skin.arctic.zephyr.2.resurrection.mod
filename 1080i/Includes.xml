@@ -24,6 +24,7 @@
     <include file="Includes_Images_Background_FakeBlur.xml" condition="!Skin.HasSetting(EnableBlur.FlixViews)" />
     <include file="Includes_Images.xml" />
     <include file="Includes_Labels.xml" />
+    <include file="Includes_Maps.xml" />
     <include file="Includes_Object.xml" />
     <include file="Includes_Variable_Object.xml" />
     <include file="Includes_OSD.xml" />
