@@ -924,6 +924,10 @@ msgctxt "#31191"
 msgid "Info List"
 msgstr "Lista Información"
 
+msgctxt "#31192"
+msgid "item"
+msgstr ""
+
 #: /1080i/Includes_Items.xml
 msgctxt "#31193"
 msgid "Select Art (Kodi)"

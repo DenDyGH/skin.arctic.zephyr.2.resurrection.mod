@@ -18,6 +18,8 @@
 
     <expression name="Exp_OSD_HasPlaylist">[VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv) | [VideoPlayer.Content(movies) + !Integer.IsEqual(VideoPlayer.PlaylistLength,1) + !Integer.IsEqual(VideoPlayer.PlaylistLength,0)]]</expression>
 
+    <expression name="Exp_HasLabel2">[String.IsEqual(Window(home).Property(skinshortcuts-picker),shortcut) | String.IsEqual(Window(home).Property(skinshortcuts-picker),widget) | String.IsEqual(Window(home).Property(skinshortcuts-picker),browse)] + [!String.isEmpty(ListItem.Property(path)) | !String.IsEmpty(ListItem.Property(count))] | !String.IsEmpty(ListItem.Label2)</expression>
+
     <!-- <expression name="RatingsVisiblity">
         [[!String.IsEmpty(ListItem.Rating) | !String.IsEmpty(VideoPlayer.Rating)] + !Skin.HasSetting(DisableStarRating)] |
         [!String.IsEmpty(ListItem.UserRating) + !Skin.HasSetting(Ratings.User)] |

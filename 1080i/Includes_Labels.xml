@@ -246,6 +246,15 @@
         <value condition="Skin.HasSetting(ItemDuration_ListView) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration]</value>
         <value>$INFO[ListItem.Label2]</value>
     </variable>
+    <variable name="Label2_List">
+        <value condition="[String.IsEqual(Window(home).Property(skinshortcuts-picker),shortcut) | String.IsEqual(Window(home).Property(skinshortcuts-picker),widget) | String.IsEqual(Window(home).Property(skinshortcuts-picker),browse)] + !String.isEmpty(ListItem.Property(path))">$INFO[ListItem.Property(path)]</value>
+        <value condition="[String.IsEqual(Window(home).Property(skinshortcuts-picker),shortcut) | String.IsEqual(Window(home).Property(skinshortcuts-picker),widget) | String.IsEqual(Window(home).Property(skinshortcuts-picker),browse)] + !String.isEmpty(ListItem.Property(count))">$INFO[ListItem.Property(count)] $VAR[Label2_List_CountLocalize]</value>
+        <value>$INFO[ListItem.Label2]</value>
+    </variable>
+    <variable name="Label2_List_CountLocalize">
+        <value condition="Integer.IsEqual(ListItem.Property(count),1)">$LOCALIZE[31192]</value>
+        <value>$LOCALIZE[31101]</value>
+    </variable>
 
     <variable name="Label_IconWall">
         <value condition="Container.Content(directors)">$INFO[ListItem.Appearances,, item(s)]</value>

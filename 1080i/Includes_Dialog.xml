@@ -1203,7 +1203,7 @@
                 <control type="group">
                     <left>item_biglist_height</left>
                     <control type="label">
-                        <centertop>35%</centertop>
+                        <centertop>30%</centertop>
                         <left>30</left>
                         <right>30</right>
                         <font>font_small_bold</font>
@@ -1211,16 +1211,16 @@
                         <aligny>center</aligny>
                         <info>ListItem.Label</info>
                         <selectedcolor>$PARAM[color_highlight]</selectedcolor>
-                        <animation effect="slide" end="0,18" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
+                        <animation effect="slide" end="0,18" condition="!$EXP[Exp_HasLabel2]">Conditional</animation>
                     </control>
                     <control type="label">
-                        <centerbottom>35%</centerbottom>
+                        <centerbottom>30%</centerbottom>
                         <left>30</left>
                         <right>30</right>
                         <font>font_tiny</font>
                         <textcolor>$PARAM[color_70]</textcolor>
                         <aligny>center</aligny>
-                        <info>ListItem.Label2</info>
+                        <label>$VAR[Label2_List]</label>
                         <selectedcolor>$PARAM[color_highlight]</selectedcolor>
                     </control>
                 </control>

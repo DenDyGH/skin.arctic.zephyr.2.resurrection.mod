@@ -59,27 +59,24 @@
                 <scrolltime>0</scrolltime>
                 <itemlayout width="550" height="item_list_height">
                     <control type="label">
-                        <left>30</left>
+                        <left>78</left>
                         <right>30</right>
                         <info>ListItem.Label</info>
                         <animation effect="fade" start="100" end="50" condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">Conditional</animation>
-                        <animation effect="slide" end="48" condition="!String.IsEqual(Window.Property(menuname),powermenu)">Conditional</animation>
                     </control>
                     <control type="image">
                         <bordersize>10</bordersize>
                         <width>item_list_height</width>
                         <height>item_list_height</height>
                         <texture colordiffuse="dialog_fg_30">$INFO[ListItem.Icon]</texture>
-                        <visible>String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
-                        <visible>!String.IsEqual(Window.Property(menuname),powermenu)</visible>
+                        <visible>String.IsEmpty(ListItem.Icon) | String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
                     </control>
                     <control type="image">
                         <bordersize>10</bordersize>
                         <width>item_list_height</width>
                         <height>item_list_height</height>
                         <texture>$INFO[ListItem.Icon]</texture>
-                        <visible>!String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
-                        <visible>!String.IsEqual(Window.Property(menuname),powermenu)</visible>
+                        <visible>String.IsEmpty(ListItem.Icon) | !String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout width="550" height="item_list_height">
@@ -87,20 +84,18 @@
                         <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
                     </control>
                     <control type="label">
-                        <left>30</left>
-                        <right>260</right>
+                        <left>78</left>
+                        <right>210</right>
                         <scroll>false</scroll>
                         <info>ListItem.Label</info>
                         <textcolor>$VAR[ColorSelected]</textcolor>
                         <animation effect="fade" start="100" end="50" condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">Conditional</animation>
-                        <animation effect="slide" end="48" condition="!String.IsEqual(Window.Property(menuname),powermenu)">Conditional</animation>
                     </control>
                     <control type="image">
                         <bordersize>10</bordersize>
                         <width>item_list_height</width>
                         <height>item_list_height</height>
                         <texture colordiffuse="$VAR[ColorSelected]">$INFO[ListItem.Icon]</texture>
-                        <visible>!String.IsEqual(Window.Property(menuname),powermenu)</visible>
                     </control>
                 </focusedlayout>
             </control>
