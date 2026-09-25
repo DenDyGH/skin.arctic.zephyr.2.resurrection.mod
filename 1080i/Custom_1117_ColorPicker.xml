@@ -54,8 +54,6 @@
                         <preloaditems>2</preloaditems>
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">Skin.SetString(focuscolor.name,$INFO[ListItem.Label])</onclick>
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">Skin.SetString(gradientcolor.name,$INFO[ListItem.Label])</onclick>
-                        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])">Skin.SetString(overlaycolor.name,$INFO[ListItem.Label])</onclick>
-                        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])">Skin.SetString(watchedprogresscolor.name,$INFO[ListItem.Label])</onclick>
                         <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient])</onclick>
                         <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$VAR[ColorHighlight])</onclick>
                         <onclick>SetFocus(3010)</onclick>
@@ -121,7 +119,7 @@
                         <left>40</left>
                         <right>40</right>
                         <height>100</height>
-                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])</visible>
+                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568]) | String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])</visible>
                         <include content="Dialog_ColorPicker_SwatchLabel">
                             <label>$LOCALIZE[31578]</label>
                         </include>
@@ -208,10 +206,8 @@
                         <height>350</height>
                         <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">3021</onup>
                         <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">3022</onup>
-                        <onup condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])">3023</onup>
                         <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">3021</ondown>
                         <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">3022</ondown>
-                        <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])">3023</ondown>
                         <control type="button" id="3015">
                             <label>$LOCALIZE[31579]: $INFO[Window(Home).Property(colorpick)]</label>
                             <include>Dialog_Standard_Right_Buttons</include>
@@ -226,8 +222,6 @@
                             <include>Dialog_Standard_Right_Buttons</include>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">Skin.SetString(focuscolor.name)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">Skin.SetString(gradientcolor.name)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31577])">Skin.SetString(overlaycolor.name)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])">Skin.SetString(watchedprogress.name)</onclick>
                             <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$INFO[Skin.String(focuscolor.name)],gradient=$INFO[Skin.String(gradientcolor.name)])</onclick>
                             <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$INFO[Skin.String(focuscolor.name)])</onclick>
                         </control>
@@ -242,20 +236,15 @@
                         <control type="button" id="3012">
                             <label>$LOCALIZE[15067]</label>
                             <include>Dialog_Standard_Right_Buttons</include>
+                            <onclick>Close</onclick>
                             <onclick>ReloadSkin()</onclick>
-                            <onclick>AlarmClock(refocus1,SetFocus(9000,2),00:00,silent)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">AlarmClock(refocus2,SetFocus(19301),00:00,silent)</onclick>
-                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">AlarmClock(refocus2,SetFocus(19305),00:00,silent)</onclick>
+                            <onclick>AlarmClock(refocus1,SetFocus(9000,2),00:01,silent)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31568])">AlarmClock(refocus2,SetFocus(19301),00:01,silent)</onclick>
+                            <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31569])">AlarmClock(refocus2,SetFocus(19305),00:01,silent)</onclick>
                         </control>
                     </control>
                 </control>
-
             </control>
-
-
-
-
         </control>
-
     </controls>
 </window>
