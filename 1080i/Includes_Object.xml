@@ -711,7 +711,7 @@
                     <width>auto</width>
                     <font>font_small</font>
                     <textcolor>main_fg_90</textcolor>
-                    <label max="350">$VAR[Label_VideoPlayer_VideoCodec, ,  •  ]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
+                    <label max="350">$VAR[Label_VideoCodec, ,  •  ]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
                     <height>32</height>
                 </control>
                 <control type="image">
