@@ -79,12 +79,6 @@
         <value condition="String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),Highlight)">$VAR[ColorHighlight]</value>
     </variable>
 
-    <!-- Watched / Progress Color -->
-    <variable name="ColorWatchedProgress">
-        <value condition="!String.IsEmpty(Skin.String(watchedprogresscolor.name))">$INFO[Skin.String(watchedprogresscolor.name)]</value>
-        <value>WatchedProgress</value>
-    </variable>
-
     <variable name="IconsColor_Var">
         <value condition="String.IsEmpty(Skin.String(Icons))">monochrome</value>
         <value>$INFO[Skin.String(Icons)]</value>

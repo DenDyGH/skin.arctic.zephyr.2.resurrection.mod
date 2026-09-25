@@ -43,20 +43,6 @@
         </definition>
     </include>
 
-    <include name="Object_Variable_Height">
-        <param name="std" default="" />
-        <param name="alt" default="" />
-        <param name="usealt" default="false" />
-        <definition>
-            <include content="Object_Height" condition="!$PARAM[usealt]">
-                <param name="item" value="$PARAM[std]" />
-            </include>
-            <include content="Object_Height" condition="$PARAM[usealt]">
-                <param name="item" value="$PARAM[alt]" />
-            </include>
-        </definition>
-    </include>
-
     <include name="Object_Font">
         <definition>
             <font>$PARAM[item]</font>

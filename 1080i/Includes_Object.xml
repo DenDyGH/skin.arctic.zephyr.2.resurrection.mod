@@ -735,37 +735,6 @@
         </definition>
     </include>
 
-    <include name="Object_Info_Artwork">
-        <control type="group">
-            <include>Animation_Info_Fade_Delay</include>
-            <visible>$PARAM[visible]</visible>
-            <width>1920</width>
-            <height>1080</height>
-            <control type="button" id="$PARAM[id]">
-                <include>Defs_Hidden_Button</include>
-                <onleft>$PARAM[onleft]</onleft>
-                <onright>$PARAM[onright]</onright>
-                <onback>SetFocus(5000)</onback>
-                <onback>8000</onback>
-                <onclick condition="!System.HasAddon(script.artwork.dump) | ![String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,movie)]">SendClick(10)</onclick>
-                <onclick condition="String.IsEqual(ListItem.DBType,episode) + System.HasAddon(script.artwork.dump)">RunScript(script.artwork.dump, mode=gui, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
-                <onclick condition="String.IsEqual(ListItem.DBType,tvshow) + System.HasAddon(script.artwork.dump)">RunScript(script.artwork.dump, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-                <onclick condition="String.IsEqual(ListItem.DBType,movie) + System.HasAddon(script.artwork.dump)">RunScript(script.artwork.dump, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-                <nested />
-            </control>
-            <control type="group">
-                <include>View_Pad</include>
-                <include content="Object_Geometric">
-                    <param name="pad" value="-15" />
-                </include>
-                <control type="image">
-                    <texture background="true">$PARAM[artwork]</texture>
-                    <aspectratio>scale</aspectratio>
-                </control>
-            </control>
-        </control>
-    </include>
-
     <include name="Object_Languages_Items">
         <control type="image">
             <top>5</top>
@@ -1703,34 +1672,6 @@
                 <font>font_info_buttons</font>
                 <visible>Control.HasFocus($PARAM[id])</visible>
                 <visible>$PARAM[visible]</visible>
-            </control>
-        </definition>
-    </include>
-
-    <include name="Object_VideoInfo_InfoSection">
-        <param name="haspath" default="false" />
-        <param name="label3" default="" />
-        <definition>
-            <control type="group">
-                <height>32</height>
-                <visible>!String.IsEmpty($PARAM[label2])</visible>
-                <control type="label">
-                    <width>150</width>
-                    <align>left</align>
-                    <font>font_tiny</font>
-                    <textcolor>main_fg_30</textcolor>
-                    <label>$PARAM[label]</label>
-                    <scroll>true</scroll>
-                </control>
-                <control type="label">
-                    <left>150</left>
-                    <align>left</align>
-                    <font>font_tiny</font>
-                    <textcolor>main_fg_70</textcolor>
-                    <label>$INFO[$PARAM[label2],, ]$PARAM[label3]</label>
-                    <haspath>$PARAM[haspath]</haspath>
-                    <scroll>true</scroll>
-                </control>
             </control>
         </definition>
     </include>
