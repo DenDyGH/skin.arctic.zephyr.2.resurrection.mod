@@ -115,24 +115,6 @@
                     <orientation>vertical</orientation>
                     <itemgap>0</itemgap>
                     <usecontrolcoords>true</usecontrolcoords>
-                    <!-- Watched Preview -->
-                    <!-- <control type="group">
-                        <left>40</left>
-                        <right>40</right>
-                        <height>140</height>
-                        <visible>String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[16102])</visible>
-                        <include content="Dialog_ColorPicker_SwatchLabel">
-                            <label>$LOCALIZE[31572]</label>
-                        </include>
-                        <include content="Dialog_ColorPicker_WatchedIndicator_Group">
-                            <param name="colordiffuse" value="$VAR[ColorWatchedProgress]" />
-                            <visible>!Control.HasFocus(3110)</visible>
-                        </include>
-                        <include content="Dialog_ColorPicker_WatchedIndicator_Group">
-                            <param name="colordiffuse" value="$INFO[Container(3110).ListItem.Label]" />
-                            <visible>Control.HasFocus(3110)</visible>
-                        </include>
-                    </control> -->
 
                     <!-- Gradient Preview -->
                     <control type="group">
@@ -202,7 +184,7 @@
                             <param name="left" value="0" />
                             <param name="color" value="$LOCALIZE[31568]" />
                             <param name="label" value="$LOCALIZE[31568]" />
-                            <param name="color-var" value="ColorHighlight" />
+                            <param name="color-var" value="$VAR[ColorHighlight]" />
                         </include>
                         <include content="Dialog_ColorPicker_SwatchPreview">
                             <param name="id" value="3022" />
@@ -211,7 +193,7 @@
                             <param name="left" value="106.67" />
                             <param name="color" value="$LOCALIZE[31569]" />
                             <param name="label" value="$LOCALIZE[31569]" />
-                            <param name="color-var" value="ColorGradient" />
+                            <param name="color-var" value="$VAR[ColorGradient]" />
                         </include>
                     </control>
 

@@ -1200,7 +1200,7 @@
     <include name="View_Selectbox_Thin">
         <param name="overlay" default="true" />
         <param name="pad" default="0" />
-        <param name="colordiffuse" default="$VAR[ColorHighlight2]" />
+        <param name="colordiffuse" default="$VAR[ColorHighlight]" />
         <param name="focusbounce" default="true" />
         <definition>
             <control type="group">
