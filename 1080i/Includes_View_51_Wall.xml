@@ -358,7 +358,7 @@
         <definition>
             <control type="group">
                 <right>10</right>
-                <animation effect="zoom" time="350" end="110,110" center="120,120" ease="inout" condition="Skin.HasSetting(EnableZoomOnHover)">Focus</animation>
+                <animation effect="zoom" time="350" end="110,110" center="120,120" easing="inout" condition="Skin.HasSetting(EnableZoomOnHover)">Focus</animation>
                 <control type="group">
                     <height>$PARAM[iconheight]</height>
                     <include condition="$PARAM[circle]" content="View_51_Wall_Circle">

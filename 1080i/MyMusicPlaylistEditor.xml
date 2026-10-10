@@ -32,7 +32,6 @@
                 </item>
             </content>
         </control>
-        <include>Topbar_Info</include>
 
         <control type="label" id="12">
             <visible>false</visible>
@@ -245,7 +244,7 @@
                             </control>
                         </focusedlayout>
                     </control>
-                    
+
                 </control>
             </control>
         </control>
@@ -264,7 +263,7 @@
             <label>192</label>
             <description>Clear</description>
             <include>Defs_Hidden_Button</include>
-        </control> 
+        </control>
 
     </controls>
 

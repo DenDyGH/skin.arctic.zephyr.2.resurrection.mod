@@ -249,8 +249,6 @@
                     <onright condition="Player.Paused">PlayerControl(FrameAdvance(1))</onright>
                     <onleft>StepBack</onleft>
                     <onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
-                    <lefttexture />
-                    <midtexture />
                 </control>
                 <control type="slider" id="6501">
                     <description>Seekbar</description>
