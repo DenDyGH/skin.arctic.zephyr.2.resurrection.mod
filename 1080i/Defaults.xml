@@ -196,7 +196,7 @@
         <colorwidth>96</colorwidth>
         <colorheight>30</colorheight>
         <texturecolormask>common/white.png</texturecolormask>
-        <texturecolordisabledmask colordiffuse="disabled">common/white.png</texturecolordisabledmask>
+        <texturecolordisabledmask colordiffuse="dialog_fg_30">common/white.png</texturecolordisabledmask>
         <textoffsetx>30</textoffsetx>
         <textcolor>dialog_fg_70</textcolor>
         <focusedcolor>Selected</focusedcolor>

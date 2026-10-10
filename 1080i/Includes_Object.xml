@@ -599,10 +599,10 @@
                     <centertop>50%</centertop>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <width>auto</width>
+                    <width max="420">auto</width>
                     <font>font_mini</font>
                     <textcolor>main_fg_70</textcolor>
-                    <label max="350">$VAR[Label_ListItem_VideoCodec, ,  •  ]$INFO[ListItem.VideoResolution]$INFO[ListItem.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
+                    <label>$VAR[Label_ListItem_VideoCodec, ,  •  ]$INFO[ListItem.VideoResolution]$INFO[ListItem.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
                     <height>32</height>
                     <visible>Skin.HasSetting(TextCodecs)</visible>
                 </control>
@@ -617,10 +617,10 @@
                     <centertop>50%</centertop>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <width>auto</width>
+                    <width max="350">auto</width>
                     <font>font_mini</font>
                     <textcolor>main_fg_70</textcolor>
-                    <label max="350">$VAR[Label_AudioCodec]$VAR[Label_ListItem_AudioChannels,  •  ,]</label>
+                    <label>$VAR[Label_AudioCodec]$VAR[Label_ListItem_AudioChannels,  •  ,]</label>
                     <height>32</height>
                     <visible>Skin.HasSetting(TextCodecs)</visible>
                 </control>
@@ -709,10 +709,10 @@
                     <centertop>50%</centertop>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <width>auto</width>
+                    <width max="450">auto</width>
                     <font>font_small</font>
                     <textcolor>main_fg_90</textcolor>
-                    <label max="350">$VAR[Label_VideoPlayer_VideoCodec, ,  •  ]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
+                    <label>$VAR[Label_VideoPlayer_VideoCodec, ,  •  ]$INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
                     <height>32</height>
                 </control>
                 <control type="image">
@@ -726,10 +726,10 @@
                     <centertop>50%</centertop>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <width>auto</width>
+                    <width max="350">auto</width>
                     <font>font_small</font>
                     <textcolor>main_fg_90</textcolor>
-                    <label max="350">$VAR[Label_AudioCodec]$VAR[Label_VideoPlayer_AudioChannels,  •  ,]</label>
+                    <label>$VAR[Label_AudioCodec]$VAR[Label_VideoPlayer_AudioChannels,  •  ,]</label>
                     <height>32</height>
                 </control>
             </control>
@@ -751,10 +751,10 @@
             <left>-20</left>
             <align>left</align>
             <aligny>center</aligny>
-            <width>auto</width>
+            <width max="350">auto</width>
             <font>font_mini</font>
             <textcolor>main_fg_70</textcolor>
-            <label max="350">$INFO[ListItem.VideoCodec]$INFO[ListItem.VideoResolution,  •  ,]$INFO[ListItem.VideoAspect,  •  ,]</label>
+            <label>$INFO[ListItem.VideoCodec]$INFO[ListItem.VideoResolution,  •  ,]$INFO[ListItem.VideoAspect,  •  ,]</label>
             <height>32</height>
             <visible>Skin.HasSetting(DisableCodecs)</visible>
             <visible>!Skin.HasSetting(Tags.DisableCodecs)</visible>
@@ -773,10 +773,10 @@
             <left>-20</left>
             <align>left</align>
             <aligny>center</aligny>
-            <width>auto</width>
+            <width max="350">auto</width>
             <font>font_mini</font>
             <textcolor>main_fg_70</textcolor>
-            <label max="350">$INFO[ListItem.AudioCodec]$VAR[Label_ListItem_AudioChannels,  •  ,]</label>
+            <label>$INFO[ListItem.AudioCodec]$VAR[Label_ListItem_AudioChannels,  •  ,]</label>
             <height>32</height>
             <visible>Skin.HasSetting(DisableCodecs)</visible>
             <visible>!Skin.HasSetting(Tags.DisableCodecs)</visible>
@@ -795,10 +795,10 @@
             <top>0</top>
             <align>left</align>
             <aligny>center</aligny>
-            <width>auto</width>
+            <width max="350">auto</width>
             <font>font_mini</font>
             <textcolor>main_fg_70</textcolor>
-            <label max="350">$INFO[ListItem.Property(AudioLanguage.1)]$INFO[ListItem.Property(AudioLanguage.2), / ,]$INFO[ListItem.Property(AudioLanguage.3), / ,]$INFO[ListItem.Property(AudioLanguage.4), / ,]$INFO[ListItem.Property(AudioLanguage.5), / ,]</label>
+            <label>$INFO[ListItem.Property(AudioLanguage.1)]$INFO[ListItem.Property(AudioLanguage.2), / ,]$INFO[ListItem.Property(AudioLanguage.3), / ,]$INFO[ListItem.Property(AudioLanguage.4), / ,]$INFO[ListItem.Property(AudioLanguage.5), / ,]</label>
             <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
             <visible>!Skin.HasSetting(Tags.DisableLanguages)</visible>
             <height>32</height>
@@ -816,10 +816,10 @@
             <left>-20</left>
             <align>left</align>
             <aligny>center</aligny>
-            <width>auto</width>
+            <width max="350">auto</width>
             <font>font_mini</font>
             <textcolor>main_fg_70</textcolor>
-            <label max="350">$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ,]$INFO[ListItem.Property(SubtitleLanguage.3), / ,]$INFO[ListItem.Property(SubtitleLanguage.4), / ,]$INFO[ListItem.Property(SubtitleLanguage.5), / ,]</label>
+            <label>$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ,]$INFO[ListItem.Property(SubtitleLanguage.3), / ,]$INFO[ListItem.Property(SubtitleLanguage.4), / ,]$INFO[ListItem.Property(SubtitleLanguage.5), / ,]</label>
             <height>32</height>
             <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
             <visible>!Skin.HasSetting(Tags.DisableLanguages)</visible>
@@ -1133,8 +1133,6 @@
     </include>
 
     <include name="Flix_Object_Info_Line">
-        <param name="label" default="$VAR[Label_InfoLine_01]" />
-        <param name="hdsd" default="Skin.HasSetting(Hide_Codecs)" />
         <param name="nextaired" default="true" />
         <param name="textcolor" default="main_fg_100" />
         <param name="container" default="" />
@@ -1264,8 +1262,6 @@
     </include>
 
     <include name="Object_Info_Line">
-        <param name="label" default="$VAR[Label_InfoLine_01]" />
-        <param name="hdsd" default="Skin.HasSetting(Hide_Codecs)" />
         <param name="nextaired" default="true" />
         <param name="textcolor" default="main_fg_100" />
         <param name="container" default="" />

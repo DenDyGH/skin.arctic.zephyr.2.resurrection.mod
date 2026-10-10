@@ -21,7 +21,6 @@
                     <top>39</top>
                     <width>dialog_side_grouplist</width>
                     <height>702</height>
-                    <itemgap>0</itemgap>
                     <onright>12111</onright>
                     <include>Defs_Settings_OnLeft</include>
 
@@ -741,11 +740,9 @@
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31386]</label>
                             <label2>$INFO[Skin.String(OSD_Timeout),,]</label2>
-
                             <onclick>SetProperty(CustomDialogWindow.header,$LOCALIZE[31386],home)</onclick>
                             <onclick>SetProperty(CustomDialogWindow.items,OSD_Timeout,home)</onclick>
                             <onclick>ActivateWindow(1150)</onclick>
-                            <selected>!String.IsEmpty(Skin.String(OSD_Timeout))</selected>
                         </control>
 
                         <control type="radiobutton" id="19522" description="Autohide seekbar after pausing">

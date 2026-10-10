@@ -1770,7 +1770,7 @@
     </include>
 
     <include name="OSD_Menu_List">
-        <param name="content" default="Items_OSD_Subtitles" />
+        <param name="content" default="Items_OSD_Settings" />
         <param name="slide" default="0" />
         <param name="height" default="710" />
         <param name="id" default="3111" />
