@@ -79,11 +79,11 @@
 
         <!-- Widget buttons -->
         <button id="3007" property="widgetPath" type="text" title="Enter action" requires="widget" />
-        <button id="9901" property="widgetAspect" title="Widget Aspect Ratio" requires="widget" />
-        <button id="9902" property="widgetTarget" title="Widget Content Type" requires="widget" />
-        <button id="9903" property="widgetSortby" title="Widget Sort Method" requires="widget" />
-        <button id="9904" property="widgetSortorder" title="Widget Sort Direction" requires="widget" />
-        <button id="9905" property="widgetLimit" title="Widget Item Limit" requires="widget" />
+        <button id="9901" property="widgetAspect" title="Widget Aspect Ratio" showNone="false" showIcons="false" requires="widget" />
+        <button id="9902" property="widgetTarget" title="Widget Content Type" showIcons="false" requires="widget" />
+        <button id="9903" property="widgetSortby" title="Widget Sort Method" showIcons="false" requires="widget" />
+        <button id="9904" property="widgetSortorder" title="Widget Sort Direction" showIcons="false" requires="widget" />
+        <button id="9905" property="widgetLimit" title="Widget Item Limit" showIcons="false" requires="widget" />
         <button id="9906" property="widgetAutoScroll" type="toggle" title="$LOCALIZE[31523]" requires="widget" />
         <button id="9312" property="backgroundWidget" type="widget" title="Background Widget" />
 
