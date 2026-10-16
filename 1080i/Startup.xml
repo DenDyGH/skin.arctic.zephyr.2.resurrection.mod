@@ -28,11 +28,8 @@
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(PosterHighlight,Mix)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(SkinInit)</onload>
 
-
     <onload condition="!String.IsEmpty(Skin.String(StartupPlaylist))">ReplaceWindow(1113)</onload>
     <onload condition="String.IsEmpty(Skin.String(StartupPlaylist))">ReplaceWindow($INFO[System.StartupWindow])</onload>
-
-    <onload condition="String.IsEmpty(Window.Property(ReloadDone))">RunScript(script.skinvariables,action=buildviews,no_reload)</onload>
 
     <onload>SetProperty(ReloadDone,1)</onload>
     <onload>SetProperty(ReloadDone,1,Home)</onload>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Action_BuildShortcuts">
+        <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=301&amp;levels=1&amp;group=mainmenu|powermenu|searchmenu)</onload>
+    </include>
+</includes>
