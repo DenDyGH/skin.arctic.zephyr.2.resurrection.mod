@@ -2008,6 +2008,12 @@
                 <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[service].Letterboxd_Rating)]</param>
                 <param name="visible">[$PARAM[visible]] + !String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[service].Letterboxd_Rating))</param>
             </include>
+            <include content="Object_Rating_Line_Label" condition="Skin.String(CustomRating.$PARAM[content].$PARAM[item],MyAnimeList)">
+                <param name="icon">flags/$PARAM[directory]/ratings/mal.png</param>
+                <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[service].MyAnimeList_Rating)]</param>
+                <param name="icon_w">52</param>
+                <param name="visible">[$PARAM[visible]] + !String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[service].MyAnimeList_Rating))</param>
+            </include>
         </definition>
     </include>
 
