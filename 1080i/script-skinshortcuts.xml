@@ -216,7 +216,8 @@
                         <visible>String.EndsWith(Window.Property(menuname),.widgets) | String.IsEqual(Window.Property(menuname),searchmenu)</visible>
                     </control>
 
-                    <control type="button" id="19312" description="Custom Hub Node">
+                    <!-- Migrate to v3, maybe one day -->
+                    <!-- <control type="button" id="19312" description="Custom Hub Node">
                         <label>$LOCALIZE[31002]</label>
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <visible>String.IsEqual(Container(211).ListItem.Property(path),ActivateWindow(1134))</visible>
@@ -234,7 +235,7 @@
 
                         <include>Dialog_Standard_Button</include>
                         <visible>![String.EndsWith(Window.Property(menuname),.widgets) | String.IsEqual(Window.Property(menuname),searchmenu)]</visible>
-                    </control>
+                    </control> -->
 
                     <!-- Set label -->
                     <control type="button" id="305" description="Label">
