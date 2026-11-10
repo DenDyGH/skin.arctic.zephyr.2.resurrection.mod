@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-
     <controls>
         <control type="group">
             <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
@@ -24,7 +23,6 @@
                 <height>1</height>
                 <width>1370</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
                 <left>25</left>
                 <right>25</right>
             </include>
@@ -46,8 +44,7 @@
             <include content="Dialog_Scrollbar">
                 <param name="onleft" value="5" />
             </include>
-            
-           
+
             <control type="group">
                 <include>Dialog_Standard_Right_Group</include>
                 <control type="grouplist" id="8000">
@@ -71,5 +68,4 @@
         </control>
         <include>Dialog_Default_Buttons</include>
     </controls>
-
 </window>

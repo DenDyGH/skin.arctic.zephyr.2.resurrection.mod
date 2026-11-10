@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <fonts>
-    <fontset id="Default" unicode="true">
+    <fontset id="Default">
 
         <!-- Standard Fonts -->
         <font>
@@ -326,7 +325,7 @@
 
     </fontset>
 
-    <fontset id="Roboto Regular" unicode="true">
+    <fontset id="Roboto Regular">
 
         <!-- Standard Fonts -->
         <font>
@@ -651,7 +650,7 @@
 
     </fontset>
 
-    <fontset id="Roboto Regular Larger" unicode="true">
+    <fontset id="Roboto Regular Larger">
 
         <!-- Standard Fonts -->
         <font>
@@ -978,7 +977,7 @@
 
     <!-- Arial -->
 
-    <fontset id="Arial" unicode="true">
+    <fontset id="Arial">
 
         <!-- Standard Fonts -->
         <font>
@@ -1314,8 +1313,7 @@
     </fontset>
 
     <!-- AmazonEmberDisplay_Rg -->
-
-    <fontset id="Amazon Ember" unicode="true">
+    <fontset id="Amazon Ember">
 
         <!-- Standard Fonts -->
         <font>

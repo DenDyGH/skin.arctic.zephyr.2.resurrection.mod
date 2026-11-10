@@ -5,7 +5,6 @@
     <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
     <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
     <onload>SetFocus(91506)</onload>
-    <!-- <onload condition="!Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetFocus(3000)</onload> -->
 
     <onunload>ClearProperty(fanart,Home)</onunload>
     <onunload>ClearProperty(fanart1,Home)</onunload>
@@ -20,27 +19,7 @@
     <onunload>ClearProperty(fanart10,Home)</onunload>
 
     <controls>
-
-        <!-- <control type="group">
-            <visible>!Skin.HasSetting(SkinHelper.EnableExtraFanart)</visible>
-            <control type="image">
-                <include>Dimensions_Fullscreen</include>
-                <aspectratio>scale</aspectratio>
-                <texture>colors/black.png</texture>
-            </control>
-            <control type="image">
-                <include>Dimensions_Fullscreen</include>
-                <aspectratio>keep</aspectratio>
-                <texture>$INFO[Window(home).Property(fanart)]</texture>
-            </control>
-            <control type="button" id="3000">
-                <include>Defs_Hidden_Button</include>
-                <onclick>Action(close)</onclick>
-            </control>
-        </control> -->
-
         <control type="group">
-            <!-- <visible>Skin.HasSetting(SkinHelper.EnableExtraFanart)</visible> -->
             <control type="list" id="9105">
                 <itemlayout />
                 <focusedlayout />
@@ -160,7 +139,7 @@
                     <top>1000</top>
                     <width>34</width>
                     <height>34</height>
-                    <texture flipx="false" colordiffuse="$VAR[ColorHighlight]">icons/spin-left.png</texture>
+                    <texture flipx="false" colordiffuse="$VAR[ColorHighlight]">buttons/spin-left.png</texture>
                     <animation effect="fade" time="1000" start="100" end="0" condition="System.IdleTime(2)">Conditional</animation>
                 </control>
                 <control type="image">
@@ -169,11 +148,10 @@
                     <top>1000</top>
                     <width>34</width>
                     <height>34</height>
-                    <texture flipx="true" colordiffuse="$VAR[ColorHighlight]">icons/spin-left.png</texture>
+                    <texture flipx="true" colordiffuse="$VAR[ColorHighlight]">buttons/spin-left.png</texture>
                     <animation effect="fade" time="1000" start="100" end="0" condition="System.IdleTime(2)">Conditional</animation>
                 </control>
             </control>
         </control>
-
     </controls>
 </window>

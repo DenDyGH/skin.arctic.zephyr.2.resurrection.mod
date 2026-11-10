@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window type="dialog" id="1118">
     <defaultcontrol always="true">9000</defaultcontrol>
     <controls>
@@ -22,7 +21,6 @@
                 <height>1</height>
                 <width>1130</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
                 <left>25</left>
                 <right>25</right>
             </include>
@@ -90,7 +88,6 @@
             <include content="Dialog_Scrollbar">
                 <param name="onleft" value="9000" />
             </include>
-
 
             <control type="group">
                 <include>Dialog_Standard_Right_Group</include>

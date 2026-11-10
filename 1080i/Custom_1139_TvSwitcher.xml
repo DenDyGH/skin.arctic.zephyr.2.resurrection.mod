@@ -19,7 +19,6 @@
                 <height>924</height>
                 <orientation>vertical</orientation>
                 <focusposition>2</focusposition>
-                <movement>0</movement>
                 <itemlayout width="1764" height="231">
                     <control type="group">
                         <left>0</left>

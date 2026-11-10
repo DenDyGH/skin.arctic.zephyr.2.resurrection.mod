@@ -9,15 +9,13 @@
             <visible>!Player.HasVideo</visible>
             <visible>!String.IsEmpty(Window(home).Property(SkinInitStarted))</visible>
             <include>Global_Background</include>
-            
+
             <control type="list" id="52">
                 <visible>!Window.IsVisible(ProfileSettings.xml)</visible>
                 <left>635</left>
                 <top>360</top>
                 <width>650</width>
                 <height>360</height>
-                <onleft>9400</onleft>
-                <onright>9400</onright>
                 <onup>52</onup>
                 <ondown>52</ondown>
                 <pagecontrol>61</pagecontrol>

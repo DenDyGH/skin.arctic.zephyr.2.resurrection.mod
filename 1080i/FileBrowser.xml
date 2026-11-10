@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="126">
     <defaultcontrol always="true">450</defaultcontrol>
-
-
     <controls>
-
         <include>Global_Overlay</include>
-
         <control type="group">
             <include content="Dialog_Standard_Group">
                 <param name="width" value="1336" />
@@ -23,7 +18,6 @@
                 <height>1</height>
                 <width>1280</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
                 <left>25</left>
                 <right>25</right>
             </include>

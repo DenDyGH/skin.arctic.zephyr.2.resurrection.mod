@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <variable name="Image_Home_CornerIcon">
-        <value condition="String.IsEqual(Skin.String(CornerIcon),Settings)">special://skin/extras/icons/settings.png</value>
-        <value condition="String.IsEqual(Skin.String(CornerIcon),Power)">special://skin/extras/icons/power.png</value>
-        <value condition="String.IsEqual(Skin.String(CornerIcon),Home)">special://skin/extras/icons/home.png</value>
-        <value condition="String.IsEqual(Skin.String(CornerIcon),Kodi)">special://skin/extras/icons/kodi.png</value>
-        <value>special://skin/extras/icons/search.png</value>
-    </variable>
-
     <variable name="Image_UpNext">
         <value condition="!String.IsEmpty(Window.Property(landscape))">$INFO[Window.Property(landscape)]</value>
         <value condition="!String.IsEmpty(Window.Property(fanart))">$INFO[Window.Property(fanart)]</value>
@@ -241,7 +233,6 @@
         <value condition="!String.IsEmpty(Container.Property(fanart))">$INFO[Container.Property(fanart)]</value>
         <value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container.Thumb)">$INFO[Container.Thumb]</value>
         <value condition="!String.IsEmpty(Container.Art(thumb))">$INFO[Container.Art(thumb)]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
@@ -261,7 +252,6 @@
         <value condition="!String.IsEmpty(Container.Property(fanart))">$INFO[Container.Property(fanart)]</value>
         <value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container.Thumb)">$INFO[Container.Thumb]</value>
         <value condition="!String.IsEmpty(Container.Art(thumb))">$INFO[Container.Art(thumb)]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>

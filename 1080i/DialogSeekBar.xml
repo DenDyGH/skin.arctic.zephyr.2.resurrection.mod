@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="115">
     <defaultcontrol always="true">901</defaultcontrol>
     <zorder>0</zorder>
@@ -46,7 +45,6 @@
                     <bottom>0</bottom>
                     <width>720</width>
                     <height>100</height>
-                    <aligny>center</aligny>
                     <align>center</align>
                     <label>$LOCALIZE[439] $INFO[Player.CacheLevel,, %]</label>
                     <textcolor>ffededed</textcolor>
@@ -82,7 +80,6 @@
                 <font>font_tiny</font>
                 <label>Seek to $INFO[Player.SeekNumeric]</label>
                 <width>auto</width>
-                <aligny>center</aligny>
                 <visible>!String.IsEmpty(Player.SeekNumeric)</visible>
             </control>
         </control>
@@ -101,7 +98,6 @@
                 <textcolor>panel_fg_100</textcolor>
                 <label>$INFO[PVR.ChannelNumberInput]</label>
                 <width>auto</width>
-                <aligny>center</aligny>
                 <font>font_title</font>
                 <visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
             </control>

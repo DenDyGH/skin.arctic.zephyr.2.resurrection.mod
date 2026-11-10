@@ -4,7 +4,6 @@
     <onload>SetProperty(Header_Center_Text,$LOCALIZE[1034])</onload>
     <onload>SetProperty(Header_Left_Text,$INFO[Window(Home).Property(leftHeader)])</onload>
     <controls>
-
         <control type="list" id="301">
             <itemlayout />
             <focusedlayout />
@@ -19,7 +18,7 @@
                 </item>
             </content>
         </control>
-        
+
         <include>Global_Background</include>
         <include>Topbar</include>
 
@@ -29,10 +28,8 @@
             <include>View_Group</include>
             <include content="Home_Hub_Widget">
                 <onup condition="!Skin.HasSetting(SubmenuOnly) | [Skin.HasSetting(HomeMulti) + Skin.HasSetting(HomeMultiHorizontal)]">Back</onup>
-                <ondown>5610</ondown>
             </include>
         </control>
-
         <include>Object_PlotOverlay</include>
     </controls>
 </window>

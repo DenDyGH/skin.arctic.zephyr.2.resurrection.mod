@@ -17,7 +17,6 @@
                 <height>1</height>
                 <width>1340</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
                 <left>25</left>
                 <right>25</right>
             </include>

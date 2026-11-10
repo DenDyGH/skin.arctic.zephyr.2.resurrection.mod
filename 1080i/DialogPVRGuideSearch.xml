@@ -30,8 +30,6 @@
                     <include>Dialog_Standard_Button</include>
                     <onright>8000</onright>
                     <ondown>8001</ondown>
-                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">diffuse/box.png</texturefocus>
-                    <texturenofocus colordiffuse="dialog_fg_12" border="5">diffuse/box.png</texturenofocus>
                 </control>
                 <control type="label">
                     <top>39</top>
@@ -40,7 +38,6 @@
                     <left>30</left>
                     <right>430</right>
                     <textcolor>Selected</textcolor>
-                    <aligny>center</aligny>
                     <label>$LOCALIZE[19001][CR]$LOCALIZE[19002]</label>
                     <font>font_statusbar</font>
                     <visible>Control.HasFocus(9)</visible>
@@ -52,7 +49,7 @@
                     <label>$LOCALIZE[33063]</label>
                     <include>Dialog_Standard_HintLabel</include>
                 </control>
-                
+
 
                 <!-- Left Side -->
                 <control type="grouplist" description="Playlist Options" id="8001">
@@ -155,8 +152,6 @@
                     </control>
                 </control>
 
-                
-
                 <control type="group">
                     <top>item_list_height</top>
                     <right>dialog_side_grouplist</right>
@@ -198,7 +193,6 @@
                 <top>39</top>
                 <include>Dialog_Separator_Right</include>
             </control>
-
         </control>
     </controls>
 </window>

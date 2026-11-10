@@ -20,7 +20,6 @@
                 <height>1</height>
                 <width>1770</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
                 <left>25</left>
                 <right>25</right>
             </include>
@@ -29,11 +28,9 @@
                 <description>Path</description>
                 <bottom>10</bottom>
                 <height>60</height>
-                <aligny>center</aligny>
                 <left>30</left>
                 <right>30</right>
                 <font>font_tiny</font>
-                <textcolor>dialog_fg_70</textcolor>
                 <label>$INFO[Control.GetLabel(140),,   ]$INFO[Player.FileName]</label>
                 <scroll>true</scroll>
             </control>
@@ -48,8 +45,6 @@
                 <height>690</height>
                 <onleft>8000</onleft>
                 <onright>61</onright>
-                <onup>450</onup>
-                <ondown>450</ondown>
                 <pagecontrol>61</pagecontrol>
                 <itemlayout height="item_list_height" width="1420">
                     <control type="image">
@@ -103,13 +98,9 @@
                         <left>250</left>
                         <right>30</right>
                         <height>item_list_height</height>
-                        <aligny>center</aligny>
                         <label>$INFO[ListItem.Label,,  •  ]$INFO[ListItem.Label2]</label>
-                        <textcolor>dialog_fg_70</textcolor>
-                        <font>font_small</font>
                         <scroll>false</scroll>
                     </control>
-
                 </itemlayout>
 
                 <focusedlayout height="item_list_height" width="1420">
@@ -167,10 +158,8 @@
                         <left>250</left>
                         <right>30</right>
                         <height>item_list_height</height>
-                        <aligny>center</aligny>
                         <label>$INFO[ListItem.Label,,  •  ]$INFO[ListItem.Label2]</label>
                         <textcolor>$VAR[ColorSelected]</textcolor>
-                        <font>font_small</font>
                         <scroll>true</scroll>
                     </control>
 
@@ -249,7 +238,6 @@
                 <width>2</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
             </control>
-
         </control>
     </controls>
 </window>

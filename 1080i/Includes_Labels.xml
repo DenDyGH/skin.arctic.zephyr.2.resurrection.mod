@@ -49,11 +49,6 @@
         <value>$INFO[ListItem.Genre]</value>
     </variable>
 
-    <variable name="Label_SmallLandscapeWidget_Sublabel2">
-        <value condition="!String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]</value>
-        <value>$INFO[ListItem.Premiered]</value>
-    </variable>
-
     <variable name="Label_SkinSettings_HomeLayout">
         <value condition="Skin.HasSetting(HomeMultiFlixView)">$LOCALIZE[31584]</value>
         <value condition="Skin.HasSetting(HomeMultiNetflix)">$LOCALIZE[31564]</value>
@@ -373,14 +368,12 @@
         <value condition="!String.IsEmpty(MusicPlayer.Album)">$INFO[MusicPlayer.Album]</value>
         <value condition="!String.IsEmpty(VideoPlayer.TvShowTitle)">$INFO[VideoPlayer.TvShowTitle]</value>
         <value condition="!String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
-        <value condition="!String.IsEmpty(VideoPlayer.Label)">$INFO[VideoPlayer.Label]</value>
         <value condition="!String.IsEmpty(Player.Title)">$INFO[Player.Title]</value>
-        <value condition="!String.IsEmpty(Player.Label)">$INFO[Player.Label]</value>
         <value condition="!String.IsEmpty(VideoPlayer.ChannelName)">$INFO[VideoPlayer.ChannelName]</value>
     </variable>
 
     <variable name="Label_OSD_InfoLine">
-        <value condition="[!String.IsEmpty(VideoPlayer.EpgEventTitle) | !String.IsEmpty(VideoPlayer.EpisodeName)] + VideoPlayer.Content(livetv)">$INFO[VideoPlayer.EpisodeName,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.EpgEventTitle,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.Year,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.MPAA,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.Genre,[COLOR=panel_fg_100],[/COLOR]]</value>
+        <value condition="!String.IsEmpty(VideoPlayer.EpisodeName) + VideoPlayer.Content(livetv)">$INFO[VideoPlayer.EpisodeName,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.Year,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.MPAA,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.Genre,[COLOR=panel_fg_100],[/COLOR]]</value>
         <value condition="!String.IsEmpty(VideoPlayer.Season) + !String.IsEmpty(VideoPlayer.Episode) + !Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Title,[COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Season,  |  [COLOR=panel_fg_100],x[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR=panel_fg_100]0,[/COLOR]]$INFO[VideoPlayer.Premiered,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.MPAA,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Genre,  |  [COLOR=panel_fg_100],[/COLOR]]</value>
         <value condition="!String.IsEmpty(VideoPlayer.Season) + !String.IsEmpty(VideoPlayer.Episode) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Title,[COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Season,  |  [COLOR=panel_fg_100],x[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Premiered,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.MPAA,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Genre,  |  [COLOR=panel_fg_100],[/COLOR]]</value>
         <value>$INFO[VideoPlayer.Year,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.MPAA,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.Genre,[COLOR=panel_fg_100],[/COLOR]]</value>
@@ -570,9 +563,6 @@
         <value>$INFO[ListItem.Duration,$LOCALIZE[180]: ][CR]$VAR[Label_ListItem_VideoCodec,, ]$INFO[ListItem.VideoResolution,| , ]$VAR[Label_ListItem_VideoResolution,, ]$VAR[Label_HDRType,| , ]$INFO[ListItem.VideoAspect,| ,:1 ]$VAR[Label_AudioCodec,| , ]$VAR[Label_ListItem_AudioChannels]</value>
     </variable>
 
-    <variable name="Label_OSD_SubtitlesLanguage">
-        <value condition="VideoPlayer.SubtitlesEnabled">$INFO[VideoPlayer.SubtitlesLanguage,[UPPERCASE],[/UPPERCASE]]</value>
-    </variable>
     <variable name="Label_StreamLanguage">
         <value condition="!String.IsEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
         <value>UNK</value>

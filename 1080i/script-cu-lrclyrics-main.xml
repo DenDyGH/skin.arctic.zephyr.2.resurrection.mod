@@ -17,7 +17,6 @@
                             <left>240</left>
                             <right>240</right>
                             <font>font_title_small</font>
-                            <aligny>center</aligny>
                             <align>center</align>
                             <textcolor>panel_fg_30</textcolor>
                             <label>$INFO[ListItem.Label]</label>
@@ -27,7 +26,6 @@
                             <left>240</left>
                             <right>240</right>
                             <font>font_title_small</font>
-                            <aligny>center</aligny>
                             <align>center</align>
                             <textcolor>panel_fg_30</textcolor>
                             <label>$INFO[ListItem.Label]</label>

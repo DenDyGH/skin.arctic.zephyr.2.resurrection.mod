@@ -28,7 +28,6 @@
                 <height>90</height>
                 <font>font_medium_bold</font>
                 <align>left</align>
-                <textcolor>dialog_fg_70</textcolor>
                 <label>$LOCALIZE[31552]</label>
                 <visible>[String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)]</visible>
             </control>
@@ -38,7 +37,6 @@
                 <height>1</height>
                 <width>1570</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
                 <left>25</left>
                 <right>25</right>
             </include>

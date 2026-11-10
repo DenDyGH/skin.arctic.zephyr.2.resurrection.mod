@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="7">
     <defaultcontrol always="true">300</defaultcontrol>
     <include>Defs_Settings_OnLoad</include>
     <controls>
-
         <include>Global_Background</include>
         <include>Defs_Settings_Background</include>
         <control type="group">
             <include>Dialog_Settings_Group</include>
-    
+
             <include content="Defs_Settings_Changer">
                 <onright>50</onright>
             </include>
@@ -99,7 +97,6 @@
                     <usecontrolcoords>true</usecontrolcoords>
                     <control type="label">
                         <description>Label 52</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -112,7 +109,6 @@
                         <aligny>top</aligny>
                         <height>50</height>
                         <label fallback="19055">$INFO[system.memory(used.percent),$LOCALIZE[31104]: ,]</label>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <visible>!Control.IsVisible(30)</visible>
                     </control>
@@ -131,7 +127,6 @@
                         <aligny>top</aligny>
                         <height>50</height>
                         <label fallback="19055">$INFO[System.CPUUsage,$LOCALIZE[13271] ,]</label>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <visible>!Control.IsVisible(30)</visible>
                     </control>
@@ -150,11 +145,9 @@
                         <height>24</height>
                         <visible>!Control.IsVisible(30)</visible>
                     </control>
-                    
 
                     <control type="label" id="2">
                         <description>Label 2</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -162,7 +155,6 @@
 
                     <control type="label" id="3">
                         <description>Label 3</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -170,7 +162,6 @@
 
                     <control type="label" id="4">
                         <description>Label 4</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -178,7 +169,6 @@
 
                     <control type="label" id="5">
                         <description>Label 5</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -186,7 +176,6 @@
 
                     <control type="label" id="6">
                         <description>Label 6</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -194,7 +183,6 @@
 
                     <control type="label" id="7">
                         <description>Label 7</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -202,7 +190,6 @@
 
                     <control type="label" id="8">
                         <description>Label 8</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -210,7 +197,6 @@
 
                     <control type="label" id="9">
                         <description>Label 9</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -218,7 +204,6 @@
 
                     <control type="label" id="10">
                         <description>Label 10</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -226,7 +211,6 @@
 
                     <control type="label" id="11">
                         <description>Label 11</description>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_small_mono</font>
                         <height>60</height>
                         <include>Defs_Settings_Button</include>
@@ -238,5 +222,4 @@
             <visible>false</visible>
         </control>
     </controls>
-
 </window>

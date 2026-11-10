@@ -88,7 +88,7 @@
 
     <include name="Global_Visualisation">
         <control type="group">
-            <visible>String.IsEmpty(Window(10025).Property(PlayingBackgroundMedia)) + Player.HasAudio</visible>
+            <visible>String.IsEmpty(Window(videos).Property(PlayingBackgroundMedia)) + Player.HasAudio</visible>
 
             <control type="visualisation">
                 <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [Skin.HasSetting(ArtistSlideShow.Disabled)]]</visible>

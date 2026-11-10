@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="129">
     <defaultcontrol always="true">10</defaultcontrol>
-
-
     <controls>
 
         <include>Global_Overlay</include>
@@ -68,7 +65,6 @@
                     <top>672</top>
                     <label/>
                     <align>left</align>
-                    <textoffsetx>30</textoffsetx>
                     <onup>10</onup>
                     <onleft>12</onleft>
                     <onright>18</onright>
@@ -96,9 +92,6 @@
                     </control>
                 </control>
             </control>
-
-            
         </control>
     </controls>
-
 </window>

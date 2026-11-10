@@ -36,7 +36,6 @@
                         <right>30</right>
                         <height>130</height>
                         <font>font_tiny</font>
-                        <textcolor>dialog_fg_70</textcolor>
                     </control>
                     <control type="gamecontroller" id="1102">
                         <centerleft>50%</centerleft>
@@ -51,7 +50,6 @@
                         <height>40</height>
                         <aligny>top</aligny>
                         <font>font_tiny</font>
-                        <textcolor>dialog_fg_70</textcolor>
                         <label>$LOCALIZE[35236]</label>
                     </control>
                 </control>
@@ -87,7 +85,6 @@
                         <width>458</width>
                         <height>80</height>
                         <left>8</left>
-                        <textcolor>dialog_fg_70</textcolor>
                         <font>font_medium_bold</font>
                         <label>$LOCALIZE[35221]</label>
                         <align>left</align>
@@ -107,7 +104,6 @@
                         <width>420</width>
                         <height>1</height>
                         <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                        <align>center</align>
                         <left>25</left>
                     </include>
                     <control type="list" id="1103">
@@ -120,8 +116,6 @@
                                 <font>font_tiny</font>
                                 <align>left</align>
                                 <left>30</left>
-                                <aligny>center</aligny>
-                                <textcolor>dialog_fg_70</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>
@@ -133,7 +127,6 @@
                                 <font>font_tiny</font>
                                 <align>left</align>
                                 <left>30</left>
-                                <aligny>center</aligny>
                                 <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
