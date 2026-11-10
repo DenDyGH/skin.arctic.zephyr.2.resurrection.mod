@@ -35,11 +35,9 @@
             <top>0</top>
             <width>1</width>
             <height>1</height>
-            <onload condition="!String.IsEmpty(ListItem.Trailer)">PlayerControl(Repeat)</onload>
             <onfocus condition="!String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.trailer],1)</onfocus>
             <onunfocus condition="Player.HasVideo">PlayerControl(Stop)</onunfocus>
-            <texturefocus>-</texturefocus>
-            <texturenofocus>-</texturenofocus>
+            <texturefocus/>
             <animation type="Focus">
                 <effect type="fade" delay="3500" start="0" end="100" />
             </animation>

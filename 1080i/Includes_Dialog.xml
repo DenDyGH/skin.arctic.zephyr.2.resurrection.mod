@@ -174,29 +174,6 @@
                         <onleft>Back</onleft>
                         <onright>Back</onright>
                         <include>Defs_Options_Grouplist</include>
-                        <itemlayout width="450" height="item_list_height">
-                            <control type="label">
-                                <font>font_tiny</font>
-                                <align>left</align>
-                                <left>30</left>
-                                <aligny>center</aligny>
-                                <textcolor>dialog_fg_70</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                        </itemlayout>
-                        <focusedlayout width="450" height="item_list_height">
-                            <control type="image">
-                                <texture>special://userdata/addon_data/script.skinhelper/button_texture.png</texture>
-                            </control>
-                            <control type="label">
-                                <font>font_tiny</font>
-                                <align>left</align>
-                                <left>30</left>
-                                <aligny>center</aligny>
-                                <textcolor>$VAR[ColorSelected]</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                        </focusedlayout>
                         <include>$PARAM[items]</include>
                     </control>
                 </control>

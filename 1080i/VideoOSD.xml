@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="2901">
     <onload condition="!Player.PauseEnabled">SetFocus(15)</onload>
     <onload condition="Player.PauseEnabled + !Skin.HasSetting(HidePlayPauseButton)">SetFocus(14)</onload>
@@ -22,7 +21,6 @@
             <width>100%</width>
             <bottom>200</bottom>
             <texturefocus />
-            <texturenofocus />
             <onclick>Action(close)</onclick>
         </control>
 
@@ -32,7 +30,6 @@
             <control type="group">
                 <visible>!Window.IsVisible(DialogSlider.xml)</visible>
                 <visible>!Window.IsVisible(VideoOSDBookmarks.xml)</visible>
-                <animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9605)">Conditional</animation>
 
                 <control type="grouplist" id="9000">
                     <include condition="!VideoPlayer.Content(musicvideos) + !VideoPlayer.Content(LiveTV)">OSD_VideoPosition</include>
@@ -263,7 +260,5 @@
                 </control>
             </control>
         </control>
-
     </controls>
-
 </window>

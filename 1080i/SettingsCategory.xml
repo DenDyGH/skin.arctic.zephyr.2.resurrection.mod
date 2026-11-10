@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="12">
     <defaultcontrol always="true">300</defaultcontrol>
     <include>Defs_Settings_OnLoad</include>
@@ -108,7 +107,7 @@
         </control>
 
         <include>Object_Settings_Info</include>
-     
+
         <control type="button" id="7">
             <description>Default Button</description>
             <include>Defs_Settings_Button</include>
@@ -133,7 +132,6 @@
         <control type="sliderex" id="13">
             <description>Default Slider</description>
             <include>Defs_Settings_Button</include>
-            <aligny>center</aligny>
             <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
         </control>
 
@@ -145,7 +143,5 @@
             <description>Default ColorButton</description>
             <include>Defs_Settings_Button</include>
         </control>
-
     </controls>
-
 </window>

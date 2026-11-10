@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="34">
     <defaultcontrol always="true">300</defaultcontrol>
     <include>Defs_Settings_OnLoad</include>
     <controls>
-
         <include>Global_Background</include>
         <include>Defs_Settings_Background</include>
         <control type="group">
             <include>Dialog_Settings_Group</include>
-    
+
             <include content="Defs_Settings_Changer">
                 <onright>4</onright>
             </include>
@@ -51,7 +49,6 @@
                         <control type="label">
                             <right>50</right>
                             <left>50</left>
-                            <textcolor>dialog_fg_70</textcolor>
                             <info>ListItem.Label</info>
                         </control>
                         <control type="label">
@@ -59,7 +56,6 @@
                             <left>50</left>
                             <align>right</align>
                             <font>font_tiny</font>
-                            <textcolor>dialog_fg_70</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
                     </itemlayout>
@@ -88,7 +84,5 @@
                 </control>
             </control>
         </control>
-        
     </controls>
-
 </window>

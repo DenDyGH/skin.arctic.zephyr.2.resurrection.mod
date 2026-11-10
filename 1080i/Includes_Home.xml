@@ -1438,7 +1438,6 @@
             <width>70</width>
             <onleft>SetFocus(301,9999,absolute)</onleft>
             <onright>SetFocus(301,0,absolute)</onright>
-            <aspectratio>keep</aspectratio>
             <texturenofocus colordiffuse="main_fg_30">$PARAM[icon]</texturenofocus>
             <texturefocus colordiffuse="main_fg_100">$PARAM[icon]</texturefocus>
             <onfocus>ClearProperty(WidgetFocus,Home)</onfocus>

@@ -2,7 +2,6 @@
     <defaultcontrol always="true">300</defaultcontrol>
     <include>Defs_Settings_OnLoad</include>
     <controls>
-
         <include>Global_Background</include>
         <include>Defs_Settings_Background</include>
         <control type="group">
@@ -28,7 +27,6 @@
                             <width>550</width>
                             <height>item_list_height</height>
                             <align>left</align>
-                            <font>font_small</font>
                             <textoffsetx>30</textoffsetx>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
@@ -43,7 +41,6 @@
                             <width>400</width>
                             <height>item_list_height</height>
                             <align>left</align>
-                            <font>font_small</font>
                             <textoffsetx>30</textoffsetx>
                             <textcolor>$VAR[Defs_Settings_ToggleButton_Text]</textcolor>
                             <label>$INFO[ListItem.Label]</label>
@@ -1378,10 +1375,6 @@
                     <param name="left" value="0" />
                 </include>
             </control>
-
-
-
         </control>
-
     </controls>
 </window>

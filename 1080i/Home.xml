@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="0">
     <defaultcontrol always="false">301</defaultcontrol>
 
-    <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(refocus,SetFocus(301),00:01,silent,false)</onload>
-    <onload condition="String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
+    <onload condition="!Skin.HasSetting(DisplaySplashOnStartup) + String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(refocus,SetFocus(301),00:01,silent,false)</onload>
+    <onload condition="!Skin.HasSetting(DisplaySplashOnStartup) + String.IsEmpty(Window(Home).Property(SkinSplashStarted))">AlarmClock(SkinSplashStarted,SetProperty(SkinSplashStarted,1,home),00:01,silent,false)</onload>
 
     <include>Action_BuildShortcuts</include>
     <include>Action_BuildViews</include>
+    <include>Action_Blur_Onload</include>
 
-    <onload>SetProperty(TMDbHelper.Blur.SourceImage,Art(fanart),Home)</onload>
-    <onload>SetProperty(TMDbHelper.Blur.Fallback,$VAR[Image_SimpleBackground],Home)</onload>
-    <onload condition="String.IsEqual(Skin.String(HomeBackgroundImage),special://skin/media/common/bg2.jpg)">Skin.Reset(HomeBackgroundImage)</onload>
-    <onload condition="String.IsEqual(Skin.String(fanart.fallback),special://skin/media/common/bg2.jpg)">Skin.Reset(fanart.fallback)</onload>
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,Home)</onunload>
-
     <controls>
         <control type="button" id="6000">
             <description>Weather Jump</description>
@@ -33,10 +28,6 @@
             <width>1</width>
             <height>1</height>
             <visible>true</visible>
-            <onup>50</onup>
-            <ondown>50</ondown>
-            <onleft>50</onleft>
-            <onright>50</onright>
             <include content="Defs_AutoScroll">
                 <param name="condition" value="true" />
             </include>
@@ -73,7 +64,6 @@
                 <description>Loading</description>
                 <include>Dimensions_Fullscreen</include>
                 <align>center</align>
-                <aligny>center</aligny>
                 <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR]</label>
                 <font>font_splash</font>
                 <textcolor>main_fg_100</textcolor>
@@ -86,7 +76,6 @@
                 <top>150</top>
                 <left>370</left>
                 <align>center</align>
-                <aligny>center</aligny>
                 <label>[COLOR=$VAR[ColorHighlight]]Resurrection[/COLOR]</label>
                 <font>font_splash</font>
                 <textcolor>main_fg_100</textcolor>

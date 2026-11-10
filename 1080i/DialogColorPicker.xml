@@ -23,7 +23,6 @@
                 <height>1</height>
                 <width>1230</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
                 <left>25</left>
                 <right>25</right>
             </include>
@@ -35,7 +34,6 @@
                 <bottom>26</bottom>
                 <onup>6</onup>
                 <ondown>6</ondown>
-                <onleft>9001</onleft>
                 <onright>61</onright>
                 <orientation>vertical</orientation>
                 <pagecontrol>61</pagecontrol>
@@ -79,11 +77,9 @@
             <control type="scrollbar" id="61">
                 <left>930</left>
                 <top>100</top>
-                <width>8</width>
                 <bottom>26</bottom>
                 <onleft condition="Control.IsVisible(6)">6</onleft>
                 <onright>9000</onright>
-                <orientation>vertical</orientation>
             </control>
             <control type="grouplist" id="9000">
                 <left>950</left>

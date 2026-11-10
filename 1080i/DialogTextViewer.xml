@@ -20,7 +20,6 @@
                 <height>1</height>
                 <width>1370</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
-                <align>center</align>
                 <left>25</left>
                 <right>25</right>
             </include>
@@ -39,7 +38,6 @@
             <control type="scrollbar" id="61">
                 <right>30</right>
                 <top>110</top>
-                <width>8</width>
                 <height>550</height>
                 <ondown>61</ondown>
                 <onup>61</onup>

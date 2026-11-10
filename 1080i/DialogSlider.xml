@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window id="145">
     <defaultcontrol always="true">11</defaultcontrol>
-
     <zorder>5</zorder>
-
     <controls>
         <control type="group">
             <include>Animation_FadeIn_Slide</include>
@@ -21,14 +18,13 @@
                 <bordersize>24</bordersize>
                 <texture border="16" colordiffuse="dialog_bg_100">common/rounded-dialog.png</texture>
             </control>
-            
+
             <control type="label" id="10">
                 <description>Heading</description>
                 <top>20</top>
                 <left>30</left>
                 <right>30</right>
                 <font>font_medium_bold</font>
-                <textcolor>dialog_fg_70</textcolor>
                 <height>70</height>
             </control>
 
@@ -38,7 +34,6 @@
                 <left>30</left>
                 <right>30</right>
                 <font>font_small_bold</font>
-                <textcolor>dialog_fg_70</textcolor>
                 <height>70</height>
                 <align>right</align>
             </control>
@@ -99,16 +94,12 @@
                 <top>120</top>
                 <left>30</left>
                 <width>720</width>
-                <height>12</height>
                 <onleft>11</onleft>
                 <onright>11</onright>
                 <texturesliderbar colordiffuse="dialog_fg_12" border="4">diffuse/progress-bg.png</texturesliderbar>
                 <textureslidernibfocus colordiffuse="$VAR[ColorHighlight]" border="4">diffuse/progress-nib.png</textureslidernibfocus>
                 <textureslidernib colordiffuse="dialog_fg_30" border="4">diffuse/progress-nib.png</textureslidernib>
             </control>
-
         </control>
-
     </controls>
-
 </window>

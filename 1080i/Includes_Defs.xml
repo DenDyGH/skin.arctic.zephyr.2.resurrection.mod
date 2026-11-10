@@ -731,10 +731,6 @@
         </definition>
     </include>
     <!-- Settings Buttons -->
-    <variable name="Defs_Settings_ToggleButton_Color">
-        <value condition="Control.HasFocus(300) | Control.HasFocus(20)">00ffffff</value>
-        <value>$VAR[ColorGradient]</value>
-    </variable>
     <variable name="Defs_Settings_ToggleButton_Text">
         <value condition="Control.HasFocus(300) | Control.HasFocus(20)">dialog_fg_70</value>
         <value condition="Skin.HasSetting(InvertTextColor)">ff333333</value>

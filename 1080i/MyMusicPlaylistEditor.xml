@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <window>
     <defaultcontrol allways="true">50</defaultcontrol>
     <onload>ClearProperty(oldfocus)</onload>
@@ -41,33 +40,25 @@
         </control>
 
         <control type="scrollbar" id="62">
-            <showonepage>false</showonepage>
-            <orientation>vertical</orientation>
             <left>0</left>
-            <width>8</width>
             <top>0</top>
             <height>1080</height>
             <onleft>300</onleft>
             <onright>50</onright>
             <texturesliderbackground colordiffuse="main_fg_12" border="4">common/white.png</texturesliderbackground>
             <texturesliderbar colordiffuse="main_fg_30" border="4">scrollbar/scrollv.png</texturesliderbar>
-            <texturesliderbarfocus colordiffuse="$VAR[ColorHighlight]" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
             <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(62) + !Container(50).Scrolling">Conditional</animation>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
         </control>
         <control type="scrollbar" id="61">
-            <showonepage>false</showonepage>
-            <orientation>vertical</orientation>
             <right>0</right>
-            <width>8</width>
             <top>0</top>
             <height>1080</height>
             <onleft>100</onleft>
             <onright>300</onright>
             <texturesliderbackground colordiffuse="main_fg_12" border="4">common/white.png</texturesliderbackground>
             <texturesliderbar colordiffuse="main_fg_30" border="4">scrollbar/scrollv.png</texturesliderbar>
-            <texturesliderbarfocus colordiffuse="$VAR[ColorHighlight]" border="4">scrollbar/scrollv.png</texturesliderbarfocus>
             <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(61) + !Container(100).Scrolling">Conditional</animation>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
@@ -97,7 +88,6 @@
                         <align>left</align>
                         <font>font_small_bold</font>
                         <haspath>true</haspath>
-                        <textcolor>dialog_fg_70</textcolor>
                         <label>$LOCALIZE[2]$INFO[Control.GetLabel(12),  -  ,]</label>
                     </control>
                     <control type="list" id="50">
@@ -117,7 +107,6 @@
                                 <left>30</left>
                                 <width>720</width>
                                 <align>left</align>
-                                <textcolor>dialog_fg_70</textcolor>
                                 <info>ListItem.Label</info>
                             </control>
 
@@ -126,14 +115,11 @@
                                 <width>150</width>
                                 <align>right</align>
                                 <font>font_tiny</font>
-                                <textcolor>dialog_fg_70</textcolor>
                                 <info>ListItem.Label2</info>
                             </control>
-
                         </itemlayout>
 
                         <focusedlayout height="75" width="890">
-
                             <control type="group">
                                 <width>100%</width>
                                 <height>100%</height>
@@ -159,7 +145,6 @@
                                 <font>font_tiny</font>
                                 <info>ListItem.Label2</info>
                             </control>
-
                         </focusedlayout>
                     </control>
                 </control>
@@ -185,7 +170,6 @@
                         <align>left</align>
                         <haspath>true</haspath>
                         <font>font_small_bold</font>
-                        <textcolor>dialog_fg_70</textcolor>
                         <label>$LOCALIZE[559]$INFO[Control.GetLabel(101),  -  ,]</label>
                     </control>
 
@@ -206,7 +190,6 @@
                                 <left>30</left>
                                 <width>720</width>
                                 <align>left</align>
-                                <textcolor>dialog_fg_70</textcolor>
                                 <info>ListItem.Label</info>
                             </control>
                             <control type="label">
@@ -214,7 +197,6 @@
                                 <width>150</width>
                                 <align>right</align>
                                 <font>font_tiny</font>
-                                <textcolor>dialog_fg_70</textcolor>
                                 <info>ListItem.Label2</info>
                             </control>
                         </itemlayout>
@@ -264,7 +246,5 @@
             <description>Clear</description>
             <include>Defs_Hidden_Button</include>
         </control>
-
     </controls>
-
 </window>

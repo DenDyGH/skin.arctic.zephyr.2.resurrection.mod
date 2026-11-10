@@ -83,7 +83,6 @@
             <top>40</top>
             <height>40</height>
             <align>center</align>
-            <font>font_small</font>
             <textcolor>main_fg_100</textcolor>
             <label/>
         </control>
@@ -94,7 +93,6 @@
             <top>100</top>
             <width>1860</width>
             <align>center</align>
-            <font>font_small</font>
             <textcolor>main_fg_100</textcolor>
             <label/>
         </control>
@@ -105,9 +103,6 @@
             <top>210</top>
             <width>100%</width>
             <align>center</align>
-            <font>font_small</font>
         </control>
-
     </controls>
-
 </window>

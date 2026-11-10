@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <includes>
     <default type="label">
         <aligny>center</aligny>
@@ -89,7 +88,6 @@
         <textureradioofffocus colordiffuse="$VAR[ColorSelected]">buttons/radio-off.png</textureradioofffocus>
         <textureradioonnofocus colordiffuse="dialog_fg_70">buttons/radio-on.png</textureradioonnofocus>
         <textureradiooffnofocus colordiffuse="dialog_fg_30">buttons/radio-off.png</textureradiooffnofocus>
-        <textoffsetx>30</textoffsetx>
         <pulseonselect>false</pulseonselect>
     </default>
 
@@ -118,14 +116,9 @@
 
     <default type="spincontrol">
         <font>font_small</font>
-        <spinwidth>32</spinwidth>
-        <spinheight>32</spinheight>
         <textcolor>dialog_fg_70</textcolor>
         <focusedcolor>$VAR[ColorSelected]</focusedcolor>
         <disabledcolor>dialog_fg_12</disabledcolor>
-        <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-        <texturefocus>special://userdata/addon_data/script.skinhelper/button_texture.png</texturefocus>
-        <texturenofocus/>
         <textureup flipy="true" colordiffuse="dialog_fg_30">buttons/spin-down.png</textureup>
         <texturedown colordiffuse="dialog_fg_30">buttons/spin-down.png</texturedown>
         <textureupfocus flipy="true" colordiffuse="Selected">buttons/spin-down.png</textureupfocus>
@@ -136,7 +129,6 @@
         <align>left</align>
         <aligny>center</aligny>
         <reverse>yes</reverse>
-        <pulseonselect>false</pulseonselect>
     </default>
 
     <default type="progress">
@@ -151,16 +143,12 @@
         <width>360</width>
         <height>12</height>
         <orientation>horizontal</orientation>
-        <texturefocus/>
-        <texturenofocus/>
-        <pulseonselect>false</pulseonselect>
         <texturesliderbar colordiffuse="dialog_fg_12" border="6">slider/slider_bg.png</texturesliderbar>
         <textureslidernib colordiffuse="dialog_fg_30" border="6">slider/slider_nib.png</textureslidernib>
         <textureslidernibfocus colordiffuse="Selected" border="6">slider/slider_nib.png</textureslidernibfocus>
     </default>
 
     <default type="sliderex">
-        <orientation>horizontal</orientation>
         <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
         <sliderwidth>192</sliderwidth>
         <sliderheight>12</sliderheight>

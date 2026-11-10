@@ -41,7 +41,7 @@
                         <param name="width" value="400" />
                     </include>
                 </control>
-                
+
             </control>
 
             <control type="group">
@@ -99,8 +99,6 @@
                 <itemgap>0</itemgap>
                 <onleft>11</onleft>
                 <onright>13</onright>
-                <onup>7000</onup>
-                <ondown>7000</ondown>
                 <control type="radiobutton" id="25">
                     <description>Hide group</description>
                     <label>19289</label>
@@ -133,10 +131,6 @@
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
             </control>
-
-
         </control>
-
-        
     </controls>
 </window>

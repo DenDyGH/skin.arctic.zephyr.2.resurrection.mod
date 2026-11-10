@@ -6,14 +6,12 @@
     <zorder>3</zorder>
     <controls>
         <control type="button" id="9001">
-            <texturefocus />
-            <texturenofocus />
+            <texturefocus/>
             <onfocus>AlarmClock(RepWin,SetFocus(9002),00:01,silent)</onfocus>
         </control>
 
         <control type="button" id="9002">
-            <texturefocus />
-            <texturenofocus />
+            <texturefocus/>
             <onfocus condition="!Container(50).IsUpdating + !Integer.IsEqual(Container(50).NumItems,0)">SetFocus(50)</onfocus>
             <onfocus condition="!Container(50).IsUpdating + Integer.IsEqual(Container(50).NumItems,0)">PreviousMenu</onfocus>
             <onfocus condition="Container(50).IsUpdating">AlarmClock(ReFocus,SetFocus(9001),00:00,silent)</onfocus>

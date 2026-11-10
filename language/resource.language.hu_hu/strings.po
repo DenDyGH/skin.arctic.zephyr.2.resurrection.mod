@@ -1,4 +1,4 @@
- Kodi Media Center language file
+# Kodi Media Center language file
 # Addon Name: Arctic: Zephyr 2 - Resurrection
 # Addon id: skin.arctic.zephyr.2.resurrection
 msgid ""
@@ -819,7 +819,7 @@ msgstr "Saját keresőlista szerkesztése"
 #: /1080i/SkinSettings.xml
 msgctxt "#31170"
 msgid "Clearlogo"
-msgstr Clearlogo""
+msgstr "Clearlogo"
 
 #: /1080i/Includes_View_52_Showcase.xml
 msgctxt "#31171"
@@ -1578,7 +1578,7 @@ msgstr "Kiválasztóbox szövegszín invertálás"
 #: /1080i/SkinSettings.xml
 msgctxt "#31460"
 msgid "Debug: show arts path"
-msgstr "Hibakeresés: mutasd az "art" elérési utat"
+msgstr "Hibakeresés: mutasd az art elérési utat"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31461"

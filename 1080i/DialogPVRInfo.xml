@@ -2,7 +2,6 @@
 <window id="2003">
     <defaultcontrol always="true">9000</defaultcontrol>
     <controls>
-
         <!-- Top Info -->
         <control type="group">
             <animation effect="fade" condition="Window.IsVisible(Home.xml)" time="1" delay="350" start="0" end="100">WindowOpen</animation>
@@ -81,7 +80,6 @@
                                 <include>Object_Info_Details_PVR</include>
                             </control>
                             <control type="grouplist" id="300">
-                                <onup>50</onup>
                                 <include>Defs_ButtonList</include>
                                 <!-- Switch -->
                                 <include content="Object_Info_Button">
@@ -134,10 +132,6 @@
                 </control>
             </control>
         </control>
-
-       
         <include>Object_PlotOverlay</include>
-
     </controls>
-
 </window>
