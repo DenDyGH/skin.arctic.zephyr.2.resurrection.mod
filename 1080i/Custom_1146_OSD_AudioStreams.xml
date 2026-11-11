@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1146">
+    <defaultcontrol always="true">10018</defaultcontrol>
+    <controls>
+        <control type="group">
+            <left>30</left>
+            <right>30</right>
+
+            <visible>!Window.IsActive(DialogPlayerProcessInfo.xml)</visible>
+            <visible>!Window.IsVisible(DialogSlider.xml)</visible>
+
+            <control type="group">
+                <include content="OSD_Stream_Selector">
+                    <param name="id">6206</param>
+                    <param name="buttonid">10018</param>
+                    <param name="stream_type">audio</param>
+                    <param name="header">$LOCALIZE[292]</param>
+                    <param name="nibpos">300</param>
+                    <param name="method">set_player_audiostream</param>
+                    <param name="icon">special://skin/extras/icons/volume.png</param>
+                </include>
+            </control>
+
+            <control type="grouplist">
+                <height>120</height>
+                <centerbottom>80</centerbottom>
+                <orientation>horizontal</orientation>
+                <itemgap>32</itemgap>
+                <align>center</align>
+
+                <onup>CancelAlarm(osd_timeout,true)</onup>
+                <onup>SetFocus(6206)</onup>
+
+                <control type="button" id="18">
+                    <include>Defs_Hidden_Button</include>
+                    <onfocus>Close</onfocus>
+                    <onfocus>SetFocus(18)</onfocus>
+                </control>
+
+                <control type="button" id="10018">
+                    <include>Defs_Hidden_Button</include>
+                    <onclick>ActivateWindow(osdaudiosettings)</onclick>
+                </control>
+
+                <control type="button" id="41">
+                    <include>Defs_Hidden_Button</include>
+                    <onfocus>Close</onfocus>
+                    <onfocus>SetFocus(41)</onfocus>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>
