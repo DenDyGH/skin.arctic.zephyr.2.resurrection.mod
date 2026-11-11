@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1147">
+    <defaultcontrol always="true">18</defaultcontrol>
+    <controls>
+        <control type="group">
+            <left>30</left>
+            <right>30</right>
+
+            <visible>!Window.IsActive(DialogPlayerProcessInfo.xml)</visible>
+            <visible>!Window.IsVisible(DialogSlider.xml)</visible>
+
+            <control type="group">
+                <include content="OSD_Stream_Selector">
+                    <param name="id">6207</param>
+                    <param name="buttonid">18</param>
+                    <param name="stream_type">subtitle</param>
+                    <param name="header">$LOCALIZE[287]</param>
+                    <param name="nibpos">180</param>
+                    <param name="width">640</param>
+                    <param name="method">set_player_subtitle</param>
+                    <param name="enabled">VideoPlayer.SubtitlesEnabled</param>
+                    <param name="toggle">true</param>
+                    <param name="icon">special://skin/extras/icons/quote.png</param>
+                </include>
+            </control>
+
+            <control type="grouplist">
+                <height>120</height>
+                <centerbottom>80</centerbottom>
+                <orientation>horizontal</orientation>
+                <itemgap>32</itemgap>
+                <align>center</align>
+
+                <onup>CancelAlarm(osd_timeout,true)</onup>
+                <onup>SetFocus(6207)</onup>
+
+                <control type="button" id="16">
+                    <include>Defs_Hidden_Button</include>
+                    <onfocus>Close</onfocus>
+                    <onfocus condition="!Skin.HasSetting(HideForwardRewindButton)">SetFocus(16)</onfocus>
+                    <onfocus condition="Skin.HasSetting(HideForwardRewindButton)">SetFocus(15)</onfocus>
+                    <onfocus condition="Skin.HasSetting(HideForwardRewindButton) + Skin.HasSetting(HideStopButton)">SetFocus(14)</onfocus>
+                    <onfocus condition="VideoPlayer.Content(livetv)">SetFocus(26)</onfocus>
+                </control>
+
+                <control type="button" id="18">
+                    <include>Defs_Hidden_Button</include>
+                    <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
+                </control>
+
+                <control type="button" id="10018">
+                    <include>Defs_Hidden_Button</include>
+                    <onfocus>Close</onfocus>
+                    <onfocus>SetFocus(10018)</onfocus>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

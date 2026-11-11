@@ -1277,6 +1277,7 @@
             <textoffsetx>0</textoffsetx>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/subs.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/subs.png</texturenofocus>
+            <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1147)</onfocus>
             <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
@@ -1299,6 +1300,7 @@
             <textoffsetx>0</textoffsetx>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/audio-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
+            <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1146)</onfocus>
             <onclick>ActivateWindow(osdaudiosettings)</onclick>
             <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
@@ -1314,6 +1316,7 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
+            <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1148)</onfocus>
             <onclick>ActivateWindow(osdvideosettings)</onclick>
             <visible>!VideoPlayer.Content(musicvideos) + !Window.IsVisible(musicosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -1688,10 +1691,10 @@
             <textoffsetx>0</textoffsetx>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/subs.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/subs.png</texturenofocus>
-            <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-            <include>OSD_Button_OnFocus</include>
+            <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1147)</onfocus>
             <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6207)</onup>
+            <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
+            <include>OSD_Button_OnFocus</include>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
@@ -1711,9 +1714,10 @@
             <textoffsetx>0</textoffsetx>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/audio-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
+            <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1146)</onfocus>
+            <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6206)</onup>
             <onclick>ActivateWindow(osdaudiosettings)</onclick>
             <include>OSD_Button_OnFocus</include>
-            <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6206)</onup>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
@@ -1728,8 +1732,9 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
-            <onclick>ActivateWindow(osdvideosettings)</onclick>
+            <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1148)</onfocus>
             <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(7800)</onup>
+            <onclick>ActivateWindow(osdvideosettings)</onclick>
             <visible>VideoPlayer.Content(livetv) | VideoPlayer.Content(musicvideos)</visible>
         </control>
 

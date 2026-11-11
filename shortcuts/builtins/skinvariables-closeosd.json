@@ -4,6 +4,9 @@
         "Dialog.Close(videoosd)",
         "Dialog.Close(1142)",
         "Dialog.Close(1143)",
+        "Dialog.Close(1146)",
+        "Dialog.Close(1147)",
+        "Dialog.Close(1148)",
         "{command}"
     ]
 }
