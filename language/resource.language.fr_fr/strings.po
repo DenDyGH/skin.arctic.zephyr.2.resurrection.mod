@@ -2309,3 +2309,8 @@ msgstr ""
 msgctxt "#31611"
 msgid "Showcase Square2"
 msgstr ""
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31612"
+msgid "Prevent reload"
+msgstr ""

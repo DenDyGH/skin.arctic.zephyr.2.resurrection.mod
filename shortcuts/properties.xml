@@ -23,11 +23,13 @@
             <option value="pictures" label="$LOCALIZE[1]" />
             <option value="programs" label="$LOCALIZE[0]" />
             <option value="pvr" label="$LOCALIZE[4]" />
+		    <option value="favouritesbrowser" label="$LOCALIZE[1036]" />
+		    <option value="games" label="$LOCALIZE[10821]" />
         </options>
     </property>
 
     <!-- Widget Sort -->
-    <property name="widgetSortby" type="options" requires="widget">
+    <property name="widgetSortby" templateonly="true" value="userpreference" requires="widget">
         <options>
             <option value="name" label="$LOCALIZE[551]" />
             <option value="random" label="$LOCALIZE[590]" />
@@ -52,7 +54,7 @@
     </property>
 
     <!-- Widget Direction -->
-    <property name="widgetSortorder" type="options" requires="widget">
+    <property name="widgetSortorder" type="options" templateonly="true" requires="widget">
         <options>
             <option value="ascending" label="$LOCALIZE[584]" />
             <option value="descending" label="$LOCALIZE[585]" />
@@ -72,20 +74,21 @@
     </property>
 
     <!-- BUTTONS -->
-    <buttons>
+    <buttons suffix="true">
         <!-- Choose widget -->
         <button id="309" property="widget" type="widget" />
         <button id="4001" property="widget" type="widget" />
 
         <!-- Widget buttons -->
-        <button id="3007" property="widgetPath" type="text" title="Enter action" requires="widget" />
-        <button id="9901" property="widgetAspect" title="Widget Aspect Ratio" showNone="false" showIcons="false" requires="widget" />
-        <button id="9902" property="widgetTarget" title="Widget Content Type" showIcons="false" requires="widget" />
-        <button id="9903" property="widgetSortby" title="Widget Sort Method" showIcons="false" requires="widget" />
-        <button id="9904" property="widgetSortorder" title="Widget Sort Direction" showIcons="false" requires="widget" />
-        <button id="9905" property="widgetLimit" title="Widget Item Limit" showIcons="false" requires="widget" />
-        <button id="9906" property="widgetAutoScroll" type="toggle" title="$LOCALIZE[31523]" requires="widget" />
+        <button id="3007" property="widgetPath" type="text" title="Enter action" />
+        <button id="9901" property="widgetAspect" title="Widget Aspect Ratio" showNone="false" showIcons="false" />
+        <button id="9902" property="widgetTarget" title="Widget Content Type" showIcons="false" />
+        <button id="9903" property="widgetSortby" title="Widget Sort Method" showIcons="false" />
+        <button id="9904" property="widgetSortorder" title="Widget Sort Direction" showIcons="false" />
+        <button id="9905" property="widgetLimit" title="Widget Item Limit" showIcons="false" />
+        <button id="9906" property="widgetAutoScroll" type="toggle" title="$LOCALIZE[31523]" />
         <button id="9312" property="backgroundWidget" type="widget" title="Background Widget" />
+        <button id="9907" property="widgetSortby" type="toggle" />
 
         <!-- Non-widget buttons -->
         <button id="310" property="background" type="background" title="$LOCALIZE[31110]" />

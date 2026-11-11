@@ -344,6 +344,16 @@
                         <visible>![String.EndsWith(Window.Property(menuname),.widgets) | String.IsEqual(Window.Property(menuname),searchmenu)]</visible>
                     </control>
 
+                    <control type="radiobutton" id="9907" description="Prevent reload">
+                        <label>$LOCALIZE[31612]</label>
+                        <radioposx>1010</radioposx>
+                        <include>Dialog_Standard_Button</include>
+                        <selected>String.IsEqual(Container(211).ListItem.Property(widgetSortby),userpreference)</selected>
+                        <enable>String.IsEmpty(Container(211).ListItem.Property(widgetSortby)) | String.IsEqual(Container(211).ListItem.Property(widgetSortby),userpreference)</enable>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
+                    </control>
+
                     <control type="button" id="310" description="Background">
                         <label>$LOCALIZE[31110]</label>
                         <label2>$INFO[Container(211).ListItem.Property(background)]</label2>

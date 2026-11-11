@@ -178,7 +178,7 @@
 
     <variable name="Label_WidgetAspect">
         <value condition="String.IsEmpty(Container(211).ListItem.Property(widgetAspect))">$LOCALIZE[20021]</value>
-        <value>$INFO[Container(211).ListItem.Property(widgetAspect)]</value>
+        <value>$INFO[Container(211).ListItem.Property(widgetAspectLabel)]</value>
     </variable>
 
     <variable name="Label_WidgetTarget">
@@ -192,12 +192,12 @@
 
     <variable name="Label_WidgetSortBy">
         <value condition="String.IsEmpty(Container(211).ListItem.Property(widgetSortby))">$LOCALIZE[571]</value>
-        <value>$INFO[Container(211).ListItem.Property(widgetSortby)]</value>
+        <value>$INFO[Container(211).ListItem.Property(widgetSortbyLabel)]</value>
     </variable>
 
     <variable name="Label_WidgetSortorder">
         <value condition="String.IsEmpty(Container(211).ListItem.Property(widgetSortorder))">$LOCALIZE[571]</value>
-        <value>$INFO[Container(211).ListItem.Property(widgetSortorder)]</value>
+        <value>$INFO[Container(211).ListItem.Property(widgetSortorderLabel)]</value>
     </variable>
 
     <variable name="Label_WidgetLimit">

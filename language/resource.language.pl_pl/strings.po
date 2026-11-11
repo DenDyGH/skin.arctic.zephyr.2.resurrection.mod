@@ -1976,7 +1976,7 @@ msgstr "Dostosuj Widgety"
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31553"
 msgid "Default search items"
-msgstr "Domyślne przedmioty wyszukiwania"
+msgstr "Domyślne pozycje wyszukiwania"
 
 #: /1080i/Includes_View.xml
 msgctxt "#31312"
@@ -2302,3 +2302,8 @@ msgstr "Flix Landscape"
 msgctxt "#31611"
 msgid "Showcase Square2"
 msgstr "Showcase Square2"
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31612"
+msgid "Prevent reload"
+msgstr "Zapobiegaj przeładowaniu"
