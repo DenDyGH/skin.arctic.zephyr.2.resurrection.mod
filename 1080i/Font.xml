@@ -22,7 +22,6 @@
             <name>font_small_mono</name>
             <filename>RobotoMono-Bold.ttf</filename>
             <size>30</size>
-            <aspect>0.8</aspect>
         </font>
         <font>
             <name>font_small_bold</name>
@@ -161,7 +160,6 @@
             <name>font_weather_small</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>26</size>
-            <aspect>0.9</aspect>
             <linespacing>1.17</linespacing>
         </font>
 
@@ -171,20 +169,17 @@
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>100</size>
             <style>bold</style>
-            <aspect>0.9</aspect>
         </font>
         <font>
             <name>font_plotbox</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>29</size>
-            <aspect>0.9</aspect>
             <linespacing>1.17</linespacing>
         </font>
         <font>
             <name>font_overlay_plotbox</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>48</size>
-            <aspect>0.9</aspect>
             <linespacing>1.65</linespacing>
         </font>
         <font>
@@ -199,35 +194,30 @@
             <name>font_title_large</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>64</size>
-            <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_title_medium</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>52</size>
-            <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_title</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>48</size>
-            <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_title_small</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>40</size>
-            <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
             <name>font_title_mini</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>30</size>
-            <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
@@ -246,7 +236,6 @@
             <name>font_submenu</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>30</size>
-            <aspect>0.9</aspect>
             <style>bold</style>
         </font>
         <font>
@@ -258,7 +247,6 @@
             <name>font_notification</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>30</size>
-            <aspect>0.9</aspect>
             <style>bold</style>
         </font>
 
