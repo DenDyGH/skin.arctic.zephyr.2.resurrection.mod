@@ -273,7 +273,18 @@
                     </include>
 
                     <control type="group">
-                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://) + ![!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster)) | !String.IsEmpty(ListItem.Art(season.poster))]</visible>
+                        <height>$PARAM[icononlyheight]</height>
+                        <include content="Object_Poster">
+                            <param name="icon" value="$PARAM[icon]" />
+                            <param name="aspectratio" value="keep" />
+                            <param name="bordersize" value="$PARAM[bordersize]" />
+                            <param name="diffuse" value="$PARAM[diffuse]" />
+                        </include>
+                    </control>
+
+                    <control type="group">
+                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://) + [!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster)) | !String.IsEmpty(ListItem.Art(season.poster))]</visible>
                         <height>$PARAM[icononlyheight]</height>
 
                         <include content="Object_Poster">
@@ -372,7 +383,18 @@
                     </include>
 
                     <control type="group">
-                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://) + ![!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster)) | !String.IsEmpty(ListItem.Art(season.poster))]</visible>
+                        <height>$PARAM[icononlyheight]</height>
+                        <include content="Object_Poster">
+                            <param name="icon" value="$PARAM[icon]" />
+                            <param name="aspectratio" value="keep" />
+                            <param name="bordersize" value="$PARAM[bordersize]" />
+                            <param name="diffuse" value="$PARAM[diffuse]" />
+                        </include>
+                    </control>
+
+                    <control type="group">
+                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://) + [!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster)) | !String.IsEmpty(ListItem.Art(season.poster))]</visible>
                         <height>$PARAM[icononlyheight]</height>
 
                         <include content="Object_Poster">
