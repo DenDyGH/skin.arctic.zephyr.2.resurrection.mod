@@ -11,7 +11,6 @@
 
         <control type="group">
             <visible allowhiddenfocus="true">!$EXP[Exp_ShowPlotOverlay]</visible>
-            <visible>$EXP[MyVideoNav_Ready]</visible>
             <include>Animation_FadeInOut</include>
             <include>View_50_List</include>
             <include>View_525_Showcase_Flix</include>

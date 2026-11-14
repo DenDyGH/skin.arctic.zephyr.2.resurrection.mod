@@ -1410,9 +1410,7 @@
 
     <!-- Live TV OSD Controls -->
     <include name="OSD_Controls_LiveTV">
-
         <control type="togglebutton" id="11">
-            <!-- <centertop>50%</centertop> -->
             <description>Record</description>
             <centertop>50%</centertop>
             <width>48</width>
@@ -1424,12 +1422,11 @@
             <usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
             <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/record-on.png</alttexturefocus>
             <alttexturenofocus colordiffuse="panel_fg_70">osd/record-on.png</alttexturenofocus>
+            <animation effect="fade" start="100" end="33" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
+            <include>OSD_Button_OnFocus</include>
             <onclick>PVR.ToggleRecordPlayingChannel</onclick>
             <enable>PVR.CanRecordPlayingChannel</enable>
             <visible>VideoPlayer.Content(LiveTV)</visible>
-            <animation effect="fade" start="100" end="33" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-            <include>OSD_Button_OnFocus</include>
         </control>
 
         <!-- <control type="button" id="12">
@@ -1477,11 +1474,10 @@
             <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
             <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/play.png</alttexturefocus>
             <alttexturenofocus colordiffuse="panel_fg_70">osd/play.png</alttexturenofocus>
+            <animation effect="fade" start="100" end="33" time="100" condition="!Player.PauseEnabled">Conditional</animation>
+            <include>OSD_Button_OnFocus</include>
             <onclick>PlayerControl(Play)</onclick>
             <visible>Player.PauseEnabled</visible>
-            <animation effect="fade" start="100" end="33" time="100" condition="!Player.PauseEnabled">Conditional</animation>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-            <include>OSD_Button_OnFocus</include>
             <visible>VideoPlayer.Content(LiveTV)</visible>
         </control>
 
@@ -1494,9 +1490,8 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/stop.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/stop.png</texturenofocus>
-            <onclick>PlayerControl(Stop)</onclick>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
+            <onclick>PlayerControl(Stop)</onclick>
             <visible>VideoPlayer.Content(LiveTV)</visible>
         </control>
 
@@ -1541,11 +1536,9 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">special://skin/extras/icons/list-ol.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">special://skin/extras/icons/list-ol.png</texturenofocus>
+            <include>OSD_Button_OnFocus</include>
             <onclick>Close</onclick>
             <onclick>ActivateWindow(pvrosdchannels)</onclick>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-            <include>OSD_Button_OnFocus</include>
-            <visible>Window.IsVisible(videoosd)</visible>
             <visible>VideoPlayer.Content(livetv)</visible>
         </control>
         <control type="button" id="26">
@@ -1557,11 +1550,9 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/playlist.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/playlist.png</texturenofocus>
+            <include>OSD_Button_OnFocus</include>
             <onclick>Close</onclick>
             <onclick>ActivateWindow(tvguide,,return)</onclick>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-            <include>OSD_Button_OnFocus</include>
-            <visible>Window.IsVisible(videoosd)</visible>
             <visible>VideoPlayer.Content(livetv)</visible>
         </control>
         <control type="button" id="18">
@@ -1579,13 +1570,11 @@
             <textoffsetx>0</textoffsetx>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/subs.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/subs.png</texturenofocus>
+            <include>OSD_Button_OnFocus</include>
             <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1147)</onfocus>
             <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6207)</onup>
             <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
-            <include>OSD_Button_OnFocus</include>
-            <visible>Window.IsVisible(videoosd)</visible>
             <visible>VideoPlayer.Content(LiveTV)</visible>
-            <visible>!VideoPlayer.Content(musicvideos)</visible>
         </control>
         <control type="button" id="10018">
             <centertop>50%</centertop>
@@ -1602,13 +1591,11 @@
             <textoffsetx>0</textoffsetx>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/audio-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
+            <include>OSD_Button_OnFocus</include>
             <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1146)</onfocus>
             <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6206)</onup>
             <onclick>ActivateWindow(osdaudiosettings)</onclick>
-            <include>OSD_Button_OnFocus</include>
-            <visible>Window.IsVisible(videoosd)</visible>
             <visible>VideoPlayer.Content(LiveTV)</visible>
-            <visible>!VideoPlayer.Content(musicvideos)</visible>
         </control>
 
         <control type="button" id="41">
@@ -1620,10 +1607,11 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
+            <include>OSD_Button_OnFocus</include>
             <onfocus condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">ActivateWindow(1148)</onfocus>
             <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(7800)</onup>
             <onclick>ActivateWindow(osdvideosettings)</onclick>
-            <visible>VideoPlayer.Content(livetv) | VideoPlayer.Content(musicvideos)</visible>
+            <visible>VideoPlayer.Content(livetv)</visible>
         </control>
 
         <control type="button" id="25">
@@ -1635,10 +1623,10 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/settings.png</texturenofocus>
+            <include>OSD_Button_OnFocus</include>
             <onclick>SetFocus(3112,9)</onclick>
             <onup>SetFocus(3112,9)</onup>
             <visible>!Skin.HasSetting(HideSettingsButton)</visible>
-            <visible>!VideoPlayer.Content(musicvideos)</visible>
             <visible>VideoPlayer.Content(LiveTV)</visible>
         </control>
 
@@ -1651,12 +1639,11 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">DefaultAddonScreensaver.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">DefaultAddonScreensaver.png</texturenofocus>
+            <include>OSD_Button_OnFocus</include>
             <onclick>ActivateWindow(playerprocessinfo)</onclick>
             <visible>!Skin.HasSetting(HidePlayerInfoButton)</visible>
-            <visible>Window.IsVisible(videoosd)</visible>
             <visible>VideoPlayer.Content(LiveTV)</visible>
         </control>
-
     </include>
 
     <include name="OSD_Menu_List">
