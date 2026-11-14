@@ -3,6 +3,7 @@
     <defaultcontrol always="true">18</defaultcontrol>
     <controls>
         <control type="group">
+            <include>OSD_HideControls</include>
             <left>30</left>
             <right>30</right>
 

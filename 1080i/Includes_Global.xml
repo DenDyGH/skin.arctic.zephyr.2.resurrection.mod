@@ -117,17 +117,16 @@
     </include>
 
     <include name="Global_Background">
-        <include condition="Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView) | [Skin.HasSetting(HomeMultiFlixView) + !Window.IsVisible(Home.xml)]">Global_Videowindow</include>
-        <include condition="!Skin.HasSetting(global.showvideo) + !Skin.HasSetting(HomeMultiFlixView)">Global_Videowindow_Hidden</include>
+        <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
+        <include condition="!Skin.HasSetting(global.showvideo)">Global_Videowindow_Hidden</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
         <control type="group">
             <visible>$EXP[Exp_GlobalBackground]</visible>
-            <visible>[!Skin.HasSetting(HomeMultiFlixView) | [Skin.HasSetting(HomeMultiFlixView) + !Window.IsVisible(Home.xml)]]</visible>
             <control type="image">
                 <texture colordiffuse="Background">special://skin/extras/backgrounds/bg.jpg</texture>
             </control>
             <control type="multiimage">
-                <visible>[[!Control.IsVisible(528) + !Control.IsVisible(529)] | [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]</visible>
+                <visible>!$EXP[Exp_FlixViews] | $EXP[Exp_InfoDialogs]</visible>
                 <include>Defs_TimePerImage</include>
                 <randomize>true</randomize>
                 <width>1920</width>
@@ -141,26 +140,23 @@
             </control>
         </control>
 
-        <include condition="Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView) + !Skin.HasSetting(EnableBlur.FlixViews) + Window.IsVisible(Home.xml)">Flix_Global_Videowindow</include>
-        <include condition="!Skin.HasSetting(global.showvideo) + Skin.HasSetting(HomeMultiFlixView) + !Skin.HasSetting(EnableBlur.FlixViews) + Window.IsVisible(Home.xml)">Flix_Global_Videowindow_Hidden</include>
-
         <control type="group">
-            <visible>Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)</visible>
-            <include condition="Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_Main</include>
-            <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_Main</include>
-            <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + Skin.HasSetting(FlixViews.Simple) + Skin.HasSetting(HomeMultiFlixView) + Window.IsVisible(Home.xml)">Background_FlixArt_Basic_Home</include>
-        </control>
-
-        <control type="group">
-            <visible>[Control.IsVisible(528) | Control.IsVisible(529)] + ![Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)] + $EXP[Exp_GlobalBackground]</visible>
-            <include condition="Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple)">Background_Main</include>
-            <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + !Skin.HasSetting(FlixViews.Simple)">Background_Main</include>
-            <include condition="Skin.HasSetting(FlixViews.Simple) + !Skin.HasSetting(EnableBlur.FlixViews)">Background_FlixArt_Basic</include>
+            <visible>$EXP[Exp_FlixViews] + !$EXP[Exp_InfoDialogs] + $EXP[Exp_GlobalBackground]</visible>
+            <include condition="[Skin.HasSetting(EnableBlur.FlixViews) | !Skin.HasSetting(EnableBlur.FlixViews)] + !Skin.HasSetting(FlixViews.Simple)">Background_Main</include>
+            <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + Skin.HasSetting(FlixViews.Simple)">Background_FlixArt_Basic</include>
         </control>
 
         <include>Object_NowPlaying</include>
-        <include condition="!Skin.HasSetting(HomeMultiFlixView) | [Skin.HasSetting(HomeMultiFlixView) + !Window.IsVisible(Home.xml)]">Object_Codecs</include>
+        <include>Object_Codecs</include>
         <include>Object_Languages</include>
+    </include>
+
+    <include name="Global_Background_Flix">
+        <include condition="Skin.HasSetting(global.showvideo) + !Skin.HasSetting(EnableBlur.FlixViews)">Flix_Global_Videowindow</include>
+        <include condition="!Skin.HasSetting(global.showvideo) + !Skin.HasSetting(EnableBlur.FlixViews)">Flix_Global_Videowindow_Hidden</include>
+
+        <include condition="[Skin.HasSetting(EnableBlur.FlixViews) | !Skin.HasSetting(EnableBlur.FlixViews)] + !Skin.HasSetting(FlixViews.Simple)">Background_Main</include>
+        <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + Skin.HasSetting(FlixViews.Simple)">Background_FlixArt_Basic_Home</include>
     </include>
 
     <variable name="Global_Background_Image_NoFanart">

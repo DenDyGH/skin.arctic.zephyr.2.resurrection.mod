@@ -204,7 +204,6 @@
             <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
             <visible>!Window.IsVisible(DialogNotification.xml)</visible>
             <visible>![$EXP[Exp_InfoVisible] + !String.IsEmpty(Window(Home).Property(FilePath))]</visible>
-            <visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
             <include>Animation_FadeIn_Delay</include>
             <include>Animation_FadeOut</include>
             <include content="Dialog_Notification_Group">
@@ -895,7 +894,6 @@
                 <visible>!Control.HasFocus(62)</visible>
                 <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
                 <visible>!Window.IsVisible(DialogNotification.xml)</visible>
-                <visible>[!Skin.HasSetting(HomeMultiFlixView) | !Window.IsVisible(Home.xml)]</visible>
                 <visible>Skin.HasSetting(EnableLanguages)</visible>
                 <height>view_bottom</height>
                 <bottom>0</bottom>

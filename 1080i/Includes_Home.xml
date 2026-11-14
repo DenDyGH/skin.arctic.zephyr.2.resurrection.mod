@@ -365,7 +365,7 @@
     </include>
 
     <include name="Home_Multi_Flix_View">
-        <include>Global_Background</include>
+        <include>Global_Background_Flix</include>
 
         <control type="group">
             <control type="group">

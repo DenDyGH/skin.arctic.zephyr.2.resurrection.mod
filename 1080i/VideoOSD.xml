@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2901">
+    <defaultcontrol always="true">14</defaultcontrol>
     <onload condition="!Player.PauseEnabled">SetFocus(15)</onload>
     <onload condition="Player.PauseEnabled + !Skin.HasSetting(HidePlayPauseButton)">SetFocus(14)</onload>
     <onload condition="Player.PauseEnabled + [Skin.HasSetting(HidePlayPauseButton) + !Skin.HasSetting(HideStopButton)]">SetFocus(15)</onload>
@@ -25,11 +26,10 @@
         </control>
 
         <control type="group">
-            <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
-            <visible>!Window.IsVisible(1142) + !Window.IsVisible(1143)</visible>
+            <include>OSD_HideControls</include>
             <control type="group">
+                <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
                 <visible>!Window.IsVisible(DialogSlider.xml)</visible>
-                <visible>!Window.IsVisible(VideoOSDBookmarks.xml)</visible>
 
                 <control type="grouplist" id="9000">
                     <include condition="!VideoPlayer.Content(musicvideos) + !VideoPlayer.Content(LiveTV)">OSD_VideoPosition</include>
@@ -65,12 +65,6 @@
                 <param name="label" value="$LOCALIZE[33063]" />
                 <param name="position" value="330,116" />
             </include>
-
-            <control type="group">
-                <visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
-                <include>Global_Background</include>
-                <include>Topbar</include>
-            </control>
 
             <control type="progress">
                 <centerleft>50%</centerleft>

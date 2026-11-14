@@ -2193,6 +2193,11 @@
         </definition>
     </include>
 
+    <include name="OSD_HideControls">
+        <animation effect="fade" time="200" start="100" end="0" condition="$EXP[Exp_OSD_HideControls]" reversible="false">Conditional</animation>
+        <animation effect="fade" time="200" delay="200" end="100" start="0" condition="!$EXP[Exp_OSD_HideControls]" reversible="false">Conditional</animation>
+    </include>
+
     <variable name="Action_OSD_Main_OnDown">
         <value condition="!Skin.HasSetting(OSD.DisableCastDialog)">ActivateWindow(1142)</value>
         <value condition="$EXP[Exp_OSD_HasPlaylist] + !Skin.HasSetting(OSD.DisableEpisodesDialog)">ActivateWindow(1143)</value>
