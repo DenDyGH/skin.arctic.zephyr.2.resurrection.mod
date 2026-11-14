@@ -3,7 +3,9 @@
 
     <expression name="Exp_SortLetterIsNumber">[String.IsEqual(ListItem.SortLetter,$NUMBER[0]) | String.IsEqual(ListItem.SortLetter,$NUMBER[1]) | String.IsEqual(ListItem.SortLetter,$NUMBER[2]) | String.IsEqual(ListItem.SortLetter,$NUMBER[3]) | String.IsEqual(ListItem.SortLetter,$NUMBER[4]) | String.IsEqual(ListItem.SortLetter,$NUMBER[5]) | String.IsEqual(ListItem.SortLetter,$NUMBER[6]) | String.IsEqual(ListItem.SortLetter,$NUMBER[7]) | String.IsEqual(ListItem.SortLetter,$NUMBER[8]) | String.IsEqual(ListItem.SortLetter,$NUMBER[9])]</expression>
 
+    <expression name="Exp_InfoDialogs">[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]</expression>
     <expression name="Exp_InfoVisible">[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(1140) | Window.IsVisible(DialogPVRInfo.xml)]</expression>
+    <expression name="Exp_FlixViews">[Control.IsVisible(528) | Control.IsVisible(529)]</expression>
 
     <expression name="Exp_ShowPlotOverlay">[Control.HasFocus(9601) | [System.IdleTime(4) + Skin.HasSetting(AutoPlotOverlay) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,video) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + ![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(1190) | Window.IsVisible(1140)]]]</expression>
 
@@ -17,6 +19,7 @@
     <expression name="Exp_HasAutoCompletion">[System.HasAddon(plugin.program.autocompletion) + System.AddonIsEnabled(plugin.program.autocompletion)]</expression>
 
     <expression name="Exp_OSD_HasPlaylist">[VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv) | [VideoPlayer.Content(movies) + !Integer.IsEqual(VideoPlayer.PlaylistLength,1) + !Integer.IsEqual(VideoPlayer.PlaylistLength,0)]]</expression>
+    <expression name="Exp_OSD_HideControls">[Window.IsActive(1142) | Window.IsActive(1143) | Window.IsActive(videobookmarks) | Window.IsActive(pvrosdguide) | Window.IsActive(pvrosdchannels) | Window.IsActive(script-upnext-stillwatching.xml) | Window.IsActive(script-upnext-upnext.xml)]</expression>
 
     <expression name="Exp_HasLabel2">[String.IsEqual(Window(home).Property(skinshortcuts-picker),shortcut) | String.IsEqual(Window(home).Property(skinshortcuts-picker),widget) | String.IsEqual(Window(home).Property(skinshortcuts-picker),browse)] + [!String.isEmpty(ListItem.Property(path)) | !String.IsEmpty(ListItem.Property(count))] | !String.IsEmpty(ListItem.Label2)</expression>
 

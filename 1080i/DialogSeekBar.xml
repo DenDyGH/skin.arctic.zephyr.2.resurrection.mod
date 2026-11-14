@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="115">
-    <defaultcontrol always="true">901</defaultcontrol>
     <zorder>0</zorder>
     <visible>Window.IsActive(VideoFullScreen.xml) | Window.IsActive(MusicVisualisation.xml)</visible>
     <visible>[Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Player.Caching | Player.ShowInfo | Player.Seeking | Player.HasPerformedSeek(2) | [Player.Paused + [!System.IdleTime(3) | !Skin.HasSetting(OSD.AutoHideOnPause)]] | Player.Forwarding | Player.Rewinding | Window.IsActive(DialogFullScreenInfo.xml) | !String.IsEmpty(Window(Home).Property(OSDInfo)) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput) | [!Skin.HasSetting(DisableMusicVideoAutoInfo) + Window.IsVisible(VideoFullScreen.xml) + VideoPlayer.Content(musicvideos)]]</visible>
