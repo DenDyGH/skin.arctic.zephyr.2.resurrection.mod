@@ -29,7 +29,6 @@
     <include file="Includes_Variable_Object.xml" />
     <include file="Includes_OSD.xml" />
     <include file="Includes_Topbar.xml" />
-    <include file="Includes_VideoLyrics.xml" />
     <include file="Includes_Weather.xml" />
     <include file="Includes_AEL.xml" />
     <include file="Includes_PVRWidgets.xml" />

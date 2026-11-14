@@ -308,9 +308,6 @@
             <size>22</size>
             <style>uppercase</style>
         </font>
-
-        <include>VideoLyrics_Fonts</include>
-
     </fontset>
 
     <fontset id="Roboto Regular">
@@ -633,9 +630,6 @@
             <size>22</size>
             <style>uppercase</style>
         </font>
-
-        <include>VideoLyrics_Fonts</include>
-
     </fontset>
 
     <fontset id="Roboto Regular Larger">
@@ -958,9 +952,6 @@
             <size>25</size>
             <style>uppercase</style>
         </font>
-
-        <include>VideoLyrics_Fonts</include>
-
     </fontset>
 
     <!-- Arial -->
@@ -1295,9 +1286,6 @@
             <size>22</size>
             <style>uppercase</style>
         </font>
-
-        <include>VideoLyrics_Fonts</include>
-
     </fontset>
 
     <!-- AmazonEmberDisplay_Rg -->
@@ -1628,8 +1616,5 @@
             <size>22</size>
             <style>uppercase</style>
         </font>
-
-        <include>VideoLyrics_Fonts</include>
-
     </fontset>
 </fonts>
