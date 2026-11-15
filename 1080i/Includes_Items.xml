@@ -2199,8 +2199,8 @@
             <onclick>Skin.SetBool(HomeTextAutoWidth)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>ReloadSkin()</onclick>
-            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:00,silent)</onclick>
-            <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:01,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19109),00:01,silent)</onclick>
         </control>
         <control type="button" id="9002">
             <label>$LOCALIZE[31543]</label>
@@ -2210,8 +2210,8 @@
             <onclick>Skin.SetBool(HomeIcons)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>ReloadSkin()</onclick>
-            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:00,silent)</onclick>
-            <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:01,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19109),00:01,silent)</onclick>
         </control>
         <control type="button" id="9004">
             <label>$LOCALIZE[31565]</label>
@@ -2221,8 +2221,8 @@
             <onclick>Skin.SetBool(VerticalIconsOnly)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>ReloadSkin()</onclick>
-            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:00,silent)</onclick>
-            <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:01,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19109),00:01,silent)</onclick>
         </control>
     </include>
     <include name="Items_SettingsDialog_MenuStyle2">
@@ -2233,8 +2233,8 @@
             <onclick>Skin.SetBool(HomeTextAutoWidth)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>ReloadSkin()</onclick>
-            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:00,silent)</onclick>
-            <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:01,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19109),00:01,silent)</onclick>
         </control>
         <control type="button" id="9002">
             <label>$LOCALIZE[31547]</label>
@@ -2244,8 +2244,8 @@
             <onclick>Skin.Reset(HomeIcons)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>ReloadSkin()</onclick>
-            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:00,silent)</onclick>
-            <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:01,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19109),00:01,silent)</onclick>
         </control>
         <control type="button" id="9004">
             <label>$LOCALIZE[31545]</label>
@@ -2254,8 +2254,8 @@
             <onclick>Skin.SetBool(HomeIcons)</onclick>
             <onclick>Dialog.Close(1150)</onclick>
             <onclick>ReloadSkin()</onclick>
-            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:00,silent)</onclick>
-            <onclick>AlarmClock(refocus2,SetFocus(19109),00:00,silent)</onclick>
+            <onclick>AlarmClock(refocus1,SetFocus(9000,0),00:01,silent)</onclick>
+            <onclick>AlarmClock(refocus2,SetFocus(19109),00:01,silent)</onclick>
         </control>
     </include>
     <include name="Items_SettingsDialog_FallbackImage">

@@ -418,6 +418,8 @@
                             <onclick>Skin.ToggleSetting(EnableMonochromeHighlight)</onclick>
                             <onclick condition="!Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,monochrome=true,highlight=$VAR[ColorHighlight],reload=true)</onclick>
                             <onclick condition="Skin.HasSetting(EnableMonochromeHighlight)">RunScript(script.skinhelper,gradient=true,highlight=$VAR[ColorHighlight],gradient=$VAR[ColorGradient],reload=true)</onclick>
+                            <onclick>AlarmClock(refocus1,SetFocus(9000,2),00:01,silent)</onclick>
+                            <onclick>AlarmClock(refocus2,SetFocus(19308),00:01,silent)</onclick>
                         </control>
 
                         <control type="button" id="19302" description="Color Highlight">
