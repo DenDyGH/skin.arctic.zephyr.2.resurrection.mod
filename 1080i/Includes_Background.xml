@@ -116,7 +116,7 @@
     <include name="Background_NotVideo">
         <param name="fade_end">0</param>
         <definition>
-            <visible>!Player.HasVideo</visible>
+            <visible>!Player.HasVideo | !Skin.HasSetting(global.showvideo)</visible>
             <animation effect="fade" start="100" end="0" time="400" tween="sine" easing="in" reversible="false">Hidden</animation>
             <animation effect="fade" start="0" end="100" time="400" tween="sine" easing="in" reversible="false">Visible</animation>
         </definition>
