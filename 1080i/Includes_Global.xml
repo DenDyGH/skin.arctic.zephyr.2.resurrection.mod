@@ -117,9 +117,8 @@
     </include>
 
     <include name="Global_Background">
-        <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
-        <include condition="!Skin.HasSetting(global.showvideo)">Global_Videowindow_Hidden</include>
-        <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
+        <include condition="Player.HasVideo + Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
+        <include condition="Player.HasAudio + Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
         <control type="group">
             <visible>$EXP[Exp_GlobalBackground]</visible>
             <control type="image">
@@ -152,9 +151,6 @@
     </include>
 
     <include name="Global_Background_Flix">
-        <include condition="Skin.HasSetting(global.showvideo) + !Skin.HasSetting(EnableBlur.FlixViews)">Flix_Global_Videowindow</include>
-        <include condition="!Skin.HasSetting(global.showvideo) + !Skin.HasSetting(EnableBlur.FlixViews)">Flix_Global_Videowindow_Hidden</include>
-
         <include condition="[Skin.HasSetting(EnableBlur.FlixViews) | !Skin.HasSetting(EnableBlur.FlixViews)] + !Skin.HasSetting(FlixViews.Simple)">Background_Main</include>
         <include condition="!Skin.HasSetting(EnableBlur.FlixViews) + Skin.HasSetting(FlixViews.Simple)">Background_FlixArt_Basic_Home</include>
     </include>
