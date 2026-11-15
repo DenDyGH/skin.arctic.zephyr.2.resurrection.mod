@@ -647,11 +647,6 @@ msgctxt "#31132"
 msgid "Use short music osd"
 msgstr "Utiliser un OSD réduit pour la musique"
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31133"
-msgid "Prefer poster image for blur"
-msgstr "Préférez l'image d'affiche pour le floutage"
-
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31134"
 msgid "Tri-Panel"
@@ -1078,9 +1073,29 @@ msgctxt "#31260"
 msgid "Movie Sets"
 msgstr "Collections de film"
 
+msgctxt "#31261"
+msgid "Small Landscape"
+msgstr ""
+
 msgctxt "#31262"
 msgid "Poster"
 msgstr "Affiche"
+
+msgctxt "#31263"
+msgid "Big Square"
+msgstr ""
+
+msgctxt "#31264"
+msgid "Big Landscape"
+msgstr ""
+
+msgctxt "#31265"
+msgid "Banner"
+msgstr ""
+
+msgctxt "#31266"
+msgid "Small Square"
+msgstr ""
 
 msgctxt "#31267"
 msgid "Action"

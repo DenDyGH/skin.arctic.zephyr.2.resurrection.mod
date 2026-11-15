@@ -6,12 +6,12 @@
     <!-- Widget Aspect -->
     <property name="widgetAspect" type="options" requires="widget">
         <options>
-            <option value="Poster" label="Poster" />
-            <option value="BigSquare" label="Big Square" />
-            <option value="BigLandscape" label="Big Landscape" />
-            <option value="Banner" label="Banner" />
-            <option value="SmallSquare" label="Small Square" />
-            <option value="SmallLandscape" label="Small Landscape" />
+            <option value="Poster" label="$LOCALIZE[31262]" />
+            <option value="BigSquare" label="$LOCALIZE[31263]" />
+            <option value="BigLandscape" label="$LOCALIZE[31264]" />
+            <option value="Banner" label="$LOCALIZE[31265]" />
+            <option value="SmallSquare" label="$LOCALIZE[31266]" />
+            <option value="SmallLandscape" label="$LOCALIZE[31261]" />
         </options>
     </property>
 
@@ -72,6 +72,15 @@
             <option value="50" label="$NUMBER[50]" />
         </options>
     </property>
+
+    <!-- FALLBACKS -->
+    <fallbacks>
+        <fallback property="widgetAspect">
+            <when condition="widgetType=episodes">SmallLandscape</when>
+            <when condition="widgetType=musicvideos | songs | albums | artists">BigSquare</when>
+            <default>Poster</default>
+        </fallback>
+    </fallbacks>
 
     <!-- BUTTONS -->
     <buttons suffix="true">

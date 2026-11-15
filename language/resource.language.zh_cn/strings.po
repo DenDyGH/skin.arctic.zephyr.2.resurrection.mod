@@ -650,11 +650,6 @@ msgctxt "#31132"
 msgid "Use long music osd"
 msgstr "使用长音乐 OSD"
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31133"
-msgid "Prefer poster image for blur"
-msgstr "优先使用海报图像进行模糊"
-
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31134"
 msgid "Tri-Panel"
@@ -1081,9 +1076,29 @@ msgctxt "#31260"
 msgid "Movie Sets"
 msgstr "电影合集"
 
+msgctxt "#31261"
+msgid "Small Landscape"
+msgstr ""
+
 msgctxt "#31262"
 msgid "Poster"
 msgstr "海报"
+
+msgctxt "#31263"
+msgid "Big Square"
+msgstr ""
+
+msgctxt "#31264"
+msgid "Big Landscape"
+msgstr ""
+
+msgctxt "#31265"
+msgid "Banner"
+msgstr ""
+
+msgctxt "#31266"
+msgid "Small Square"
+msgstr ""
 
 msgctxt "#31267"
 msgid "Action"

@@ -112,7 +112,7 @@
             </widget>
         </group>
         <!-- Albums -->
-        <group name="albums-widgets" label="$LOCALIZE[249]">
+        <group name="albums-widgets" label="$LOCALIZE[132]">
             <widget name="recentlyadded-albums" label="$LOCALIZE[359]" icon="DefaultMusicRecentlyAdded.png" type="albums" target="music" visible="Library.HasContent(Music)">
                 <path>musicdb://recentlyaddedalbums/</path>
             </widget>
@@ -135,13 +135,17 @@
                 <path>musicdb://top100/songs/</path>
             </widget>
         </group>
+        <!-- Music Playlists -->
+        <group name="music-playlists-widgets" label="$LOCALIZE[136]">
+            <content source="playlists" target="music"/>
+        </group>
         <!-- Music Sources -->
         <group name="music-sources-widgets" label="$LOCALIZE[39031]">
             <content source="sources" target="music"/>
         </group>
-        <!-- Music Playlists -->
-        <group name="music-playlists-widgets" label="$LOCALIZE[136]">
-            <content source="playlists" target="audio"/>
+        <!-- Music Nodes -->
+        <group name="music-nodes-widgets" label="$LOCALIZE[2]">
+            <content source="nodes" target="music" />
         </group>
     </group>
     <!-- PVR/Live TV -->

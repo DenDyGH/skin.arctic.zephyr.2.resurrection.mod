@@ -627,12 +627,12 @@ msgstr "Ustaw automatyczne przewijanie i czas pomiędzy obrazami"
 #: /1080i/SkinSettings.xml
 msgctxt "#31129"
 msgid "Use square artist image on music osd"
-msgstr "Używaj kwadratowego zdjęcie artysty na wyświetlaczu muzyki"
+msgstr "Używaj kwadratowe zdjęcie artysty w OSD"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31130"
 msgid "Display artist image on music osd"
-msgstr "Wyświetl zdjęcie artysty na wyświetlaczu muzyki"
+msgstr "Wyświetl zdjęcie artysty w OSD"
 
 #: /1080i/MusicOSD.xml
 msgctxt "#31131"
@@ -642,12 +642,7 @@ msgstr "Kolor nakładki"
 #: /1080i/SkinSettings.xml
 msgctxt "#31132"
 msgid "Use long music osd"
-msgstr "Uzywaj długiego wyświetlacza muzyki"
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31133"
-msgid "Prefer poster image for blur"
-msgstr "Preferuj zdjecie plakatu dla rozmycia"
+msgstr "Używaj rozszerzone OSD muzyczne"
 
 #: /1080i/Includes_View_50_List.xml
 msgctxt "#31134"
@@ -765,7 +760,7 @@ msgstr "Albumy artysty"
 #: /1080i/SkinSettings.xml
 msgctxt "#31158"
 msgid "Automatically open visualisation after starting a song"
-msgstr "Automaycznie otwórz wizualizacje po starcie piosenki"
+msgstr "Automatycznie otwórz wizualizacje po starcie piosenki"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31159"
@@ -952,7 +947,7 @@ msgstr "Pobierz wszystkie obrazy"
 #: /shortcuts/overrides.xml
 msgctxt "#31198"
 msgid "Recently Played Episodes"
-msgstr "Ostatnio odtwarzane sezony"
+msgstr "Ostatnio odtwarzane odcinki"
 
 msgctxt "#31199"
 msgid "Kiosk mode"
@@ -971,7 +966,7 @@ msgstr "Wyświetlaj skrócone informacje (bez plakatu i opisu)"
 #: /shortcuts/overrides.xml
 msgctxt "#31202"
 msgid "Random Episodes"
-msgstr "Losowe sezony"
+msgstr "Losowe odcinki"
 
 msgctxt "#31203"
 msgid "Artwork"
@@ -1000,12 +995,12 @@ msgstr "Koniec:"
 #: /shortcuts/overrides.xml
 msgctxt "#31214"
 msgid "Recently Added Episodes"
-msgstr "Ostatnio dodane sezony"
+msgstr "Ostatnio dodane odcinki"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31216"
 msgid "In Progress Movies"
-msgstr "Filmy w trakcie odtwarzania"
+msgstr "Filmy w trakcie oglądania"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31217"
@@ -1015,21 +1010,21 @@ msgstr "Zmień lokacje"
 #: /shortcuts/overrides.xml
 msgctxt "#31218"
 msgid "In Progress Episodes"
-msgstr "Sezony w trakcie odtwarzania"
+msgstr "Odcinki w trakcie oglądania"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31222"
 msgid "Top Rated TV Shows"
-msgstr "Seriale najwyżej oceniane"
+msgstr "Najwyżej oceniane seriale"
 
 msgctxt "#31225"
 msgid "Top Rated Movies"
-msgstr "Filmy najwyżej oceniane"
+msgstr "Najwyżej oceniane filmy"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31230"
 msgid "Top Rated Episodes"
-msgstr "Sezony najwyżej oceniane"
+msgstr "Najwyżej oceniane odcinki"
 
 #: /shortcuts/skinviewtypes.json
 msgctxt "#31231"
@@ -1075,9 +1070,29 @@ msgctxt "#31260"
 msgid "Movie Sets"
 msgstr "Sety filmowe"
 
+msgctxt "#31261"
+msgid "Small Landscape"
+msgstr "Mały landscape"
+
 msgctxt "#31262"
 msgid "Poster"
 msgstr "Plakat"
+
+msgctxt "#31263"
+msgid "Big Square"
+msgstr "Duży kwadrat"
+
+msgctxt "#31264"
+msgid "Big Landscape"
+msgstr "Duży landscape"
+
+msgctxt "#31265"
+msgid "Banner"
+msgstr "Baner"
+
+msgctxt "#31266"
+msgid "Small Square"
+msgstr "Mały kwadrat"
 
 msgctxt "#31267"
 msgid "Action"
@@ -1134,7 +1149,7 @@ msgstr "Format pixeli"
 #: /shortcuts/overrides.xml
 msgctxt "#31283"
 msgid "Unwatched Episodes"
-msgstr "Nieobejrzane sezony"
+msgstr "Nieobejrzane odcinki"
 
 #: /1080i/Includes_Home.xml
 msgctxt "#31285"
